@@ -1,0 +1,5 @@
+
+# docs*
+
+# ignores intermediate folders in themes folder
+themes/*/

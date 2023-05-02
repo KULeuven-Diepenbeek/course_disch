@@ -1,0 +1,10 @@
+{{ $filename := .Get 0 }}
+{{ $type := .Get 1 }}
+{{ $file := printf "%s/%s" $.Site.Params.repoName $filename }}
+
+```vhdl
+{{ os.ReadFile $file }}
+```
+
+
+<div class="source-footer">source file: {{ $file }}</div>
