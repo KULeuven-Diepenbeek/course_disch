@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1. Eerste project on Digitale Elektronische Schakelingen</title>
+    <link>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/</link>
+    <description>Recent content in 1. Eerste project on Digitale Elektronische Schakelingen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster><atom:link href="https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Eerste project</title>
+      <link>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/010_eerste_project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/010_eerste_project/</guid>
+      <description>Maak een project We starten met een eerste vivado project maken. We beginnen natuurlijk met vivado op te starten en te klikken op create project. Je geeft het project een naam en zorgt dat je het op een plaats zet waar je het nog kan terugvinden. Bij project type zeggen we RTL project en vinken we &amp;ldquo;Do not specify sources at this time&amp;rdquo; aan.
+De volgende keuze die gemaakt moet worden is het type van FPGA.</description>
+    </item>
+    
+    <item>
+      <title>NAND poort</title>
+      <link>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/020_nand/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/020_nand/</guid>
+      <description>De volgende stap is de beschrijving van een logisch AND poort. Hiervoor maak je een nieuwe component aan in het Vivado project. Het grootste deel van de code van de invertor kunnen we overnemen als startpunt voor deze beschrijving.
+We passen de entity aan zodat we 2 inputs hebben in plaats van 1. De behuizing van de nieuwe component zegt nu dat er 3 pinnen zijn: 2 input pinnen en 1 output pin.</description>
+    </item>
+    
+    <item>
+      <title>AND poort</title>
+      <link>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/025_and/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/025_and/</guid>
+      <description>Heb géén schrik van deze titel. We gaan zeker niet alle componenten 1-voor-1 afgaan 😃.
+Uiteraard gaan design moeilijk te beschrijven zijn in 1 bestand. Componenten kunnen hergebruikt worden in andere componenten. Laat ons als voorbeel een AND poort bouwen met behulp van de eerder geziene NAND poort en de invertor. het schema van ons design ziet er dus al volgt uit.
+ AND gate   -- gebruik de package STD_LOGIC_1164 uit de library IEEE library IEEE; use IEEE.</description>
+    </item>
+    
+    <item>
+      <title>Simulatie</title>
+      <link>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/030_simulatie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/030_simulatie/</guid>
+      <description>Hoe zijn we nu zeker dat onze nand poort correct werkt? We zouden een ASIC kunnen maken, maar dat zou een veel te dure en tijdrovende manier zijn.
+Een realistischer stap is om het design te implementeren op een FPGA, maar er is nog een gemakkelijkere en nuttigere manier: testbenches.
+Het idee achter een testbench is dat er &amp;ldquo;machines&amp;rdquo; zijn die inputs (ook stimuli) kunnen genereren. Vervolgens kunnen de waveforms van het hele design geanalyseerd worden én kan de output van een component geverifieerd worden.</description>
+    </item>
+    
+    <item>
+      <title>Opdracht 1: OR gate</title>
+      <link>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/040_opdracht/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/040_opdracht/</guid>
+      <description>Als eerste opdracht in deze labo&amp;rsquo;s gaan jullie zelf een OR gate maken. Maak hiervoor een nieuw bestand aan waarin je de beschrijving kwijt kan. Om te weten of de implementatie werkt, moet er ook een testbench geschreven worden. Deze kunnen dan gebruiken om het design te simuleren.
+De schematic voor de OR poort (voor zij die het vergeten zouden zijn) is:  OR gate  
+Opleveren Om deze opdracht op te leveren moeten jullie volgende bestanden indienen via Toledo:</description>
+    </item>
+    
+  </channel>
+</rss>

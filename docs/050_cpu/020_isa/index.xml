@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ISA on Digitale Elektronische Schakelingen</title>
+    <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/</link>
+    <description>Recent content in ISA on Digitale Elektronische Schakelingen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster><atom:link href="https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A instructie</title>
+      <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/010_a_instructie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/010_a_instructie/</guid>
+      <description>Een A instructie wordt aangegeven door dat de eerste bit van de 16-bit instructie 0 is. Dan zetten we de waarde van deze instructie in register A.
+A instructie  Bron: nand2tetris 
+ div.image_courtesy { text-align: center; font-size: 100%; font-style: italic; }  </description>
+    </item>
+    
+    <item>
+      <title>C instructie</title>
+      <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/020_c_instructie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/020_c_instructie/</guid>
+      <description>Een C instructie wordt aangegeven door dat de eerste bit van de 16-bit instructie 1 is. Dan hebben we 4 delen genaamd a,c, d en j. In het a en c stuk wordt er bepaald wat er berekend moet worden. Het d stuk beschrijft waar het resultaat naar toe moet en het j stuk bepaald welke instructie als volgende uitgevoerd moet worden.
+C instructie  Bron: nand2tetris 
+ div.image_courtesy { text-align: center; font-size: 100%; font-style: italic; }  </description>
+    </item>
+    
+    <item>
+      <title>C instructie compute</title>
+      <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/030_c_instructie_comp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/030_c_instructie_comp/</guid>
+      <description>In onderstaande figuur zien u de waarheidstabel van het c en a stuk van de instructie. Wanneer het a stuk gelijk is aan 1 dan gebruikt het een stuk geheugen van het geheugen address. Dit is de input inM van het schema.
+C instructie compute waarheidstabel  Bron: nand2tetris 
+ div.image_courtesy { text-align: center; font-size: 100%; font-style: italic; }  </description>
+    </item>
+    
+    <item>
+      <title>C instructie destination</title>
+      <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/040_c_instructie_destination/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/040_c_instructie_destination/</guid>
+      <description>In onderstaande tabel staat beschreven waar de uitkomst van de bewerking wordt opgeslagen.
+C instructie aankomst waarheidstabel  Bron: nand2tetris 
+ div.image_courtesy { text-align: center; font-size: 100%; font-style: italic; }  </description>
+    </item>
+    
+    <item>
+      <title>C instructie jump</title>
+      <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/050_c_instructie_jmp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/050_c_instructie_jmp/</guid>
+      <description>In onderstaande tabel staat beschreven wanneer er een jump gedaan moet worden. Het address waar naar toe gesprongen moet worden staat in het A register.
+C instructie spring waarheidstabel  Bron: nand2tetris 
+ div.image_courtesy { text-align: center; font-size: 100%; font-style: italic; }  </description>
+    </item>
+    
+  </channel>
+</rss>

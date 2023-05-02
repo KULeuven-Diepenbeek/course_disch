@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5. CPU on Digitale Elektronische Schakelingen</title>
+    <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/</link>
+    <description>Recent content in 5. CPU on Digitale Elektronische Schakelingen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster><atom:link href="https://kuleuven-diepenbeek.github.io/disch/050_cpu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Een CPU maken</title>
+      <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/010_intro_cpu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/disch/050_cpu/010_intro_cpu/</guid>
+      <description>De CPU die we maken heeft onderstaand schema. Bij de ingang van de ALU, de bovenkant (register D) is ALU ingang x en de onderkant is ALU ingang Y.
+Bron: nand2tetris 
+ div.image_courtesy { text-align: center; font-size: 100%; font-style: italic; }  </description>
+    </item>
+    
+    <item>
+      <title>Opdracht 5: CPU</title>
+      <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/100_opdracht/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/disch/050_cpu/100_opdracht/</guid>
+      <description>De opdracht is om een CPU te maken met de hierboven besproken functies. Het is bedoeling dat je de ALU en de program counter gebruikt die je al hebt gemaakt.
+Alles is combinatorisch behalve de registers en de program counter.
+ Bron: nand2tetris 
+ div.image_courtesy { text-align: center; font-size: 100%; font-style: italic; }  </description>
+    </item>
+    
+    <item>
+      <title>Opdracht testbench</title>
+      <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/110_testbench/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/disch/050_cpu/110_testbench/</guid>
+      <description>library IEEE; use IEEE.STD_LOGIC_1164.ALL; -- Uncomment the following library declaration if using -- arithmetic functions with Signed or Unsigned values --use IEEE.NUMERIC_STD.ALL; -- Uncomment the following library declaration if instantiating -- any Xilinx leaf cells in this code. --library UNISIM; --use UNISIM.VComponents.all; entity tb_cpu is -- Port ( ); end tb_cpu; architecture Behavioral of tb_cpu is component hack_cpu is Port (instruction, inM: in std_logic_vector(15 downto 0); clock, reset: in std_logic; outM, addressM, PC: out std_logic_vector(15 downto 0); writeM: out std_logic); end component; signal instruction, inM: std_logic_vector(15 downto 0); signal clock, reset: std_logic; signal outM, addressM, PC: std_logic_vector(15 downto 0); signal writeM: std_logic; constant clock_period : time := 10 ns; begin DUT: hack_cpu port map( instruction =&amp;gt; instruction, inM =&amp;gt; inM, clock =&amp;gt; clock, reset =&amp;gt; reset, outM =&amp;gt; outM, addressM =&amp;gt; addressM, PC =&amp;gt; PC, writeM =&amp;gt; writeM); CLK: process begin clock &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/2; clock &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period/2; end process; PSTIM: process begin instruction &amp;lt;= &amp;#34;0000000000000000&amp;#34;; inM &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/4; instruction &amp;lt;= &amp;#34;0000000000000000&amp;#34;; inM &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (PC = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; instruction &amp;lt;= &amp;#34;0000000000000010&amp;#34;; --load reg A inM &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; --111accccccdddjjj  instruction &amp;lt;= &amp;#34;1--0110000011000&amp;#34;; --kopie naar reg D inM &amp;lt;= &amp;#34;----------------&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; assert (outM = &amp;#34;0000000000000010&amp;#34;) report &amp;#34;A register save and load werkt niet&amp;#34; severity failure; --111accccccdddjjj  instruction &amp;lt;= &amp;#34;1--0010011011000&amp;#34;; --D-A = 0 inM &amp;lt;= &amp;#34;----------------&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/8; assert (outM = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;compute werkt niet&amp;#34; severity failure; --moet voor de stijgende flank van de clock gecheckd worden.</description>
+    </item>
+    
+  </channel>
+</rss>

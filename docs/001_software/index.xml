@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ontwikkel omgeving on Digitale Elektronische Schakelingen</title>
+    <link>https://kuleuven-diepenbeek.github.io/disch/001_software/</link>
+    <description>Recent content in Ontwikkel omgeving on Digitale Elektronische Schakelingen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster><atom:link href="https://kuleuven-diepenbeek.github.io/disch/001_software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alternatieve omgeving</title>
+      <link>https://kuleuven-diepenbeek.github.io/disch/001_software/010_alternatief/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/disch/001_software/010_alternatief/</guid>
+      <description>Alternatief voor thuis Als het niet mogellijk is om Vivado te installaren op je eigen laptop, dan kan je de site edaplayground om toch thuis verder te kunnen werken. Je kan hierop inloggen met je Google account (van de UHasselt). Zorg dat je bij testbench + design VHDL hebt geselecteerd. Nu kan je de code in de testbench (links) en het design (rechts) zetten. Als de code er in zit moet je ook de top entity van het design aangeven, deze naam moet je bij Top entity invulllen.</description>
+    </item>
+    
+  </channel>
+</rss>
