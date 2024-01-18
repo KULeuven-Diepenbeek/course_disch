@@ -1,5 +1,6 @@
 
 # docs*
+.hugo_build.lock
 
 # ignores intermediate folders in themes folder
 themes/*/
