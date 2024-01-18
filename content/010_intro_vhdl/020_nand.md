@@ -59,7 +59,7 @@ end Behavioral;
 {{% /column %}}
 {{% /multiHcolumn %}}
 
-Nog enkele bijkomende opmerkingen:
+### Nog enkele bijkomende opmerkingen:
 
 * VHDL is case-insensitive. Je mag dus hoofdletters en kleine letters verwisselen.
 * commentaar wordt vooraf gegaan van 2 min-tekens ```--```
