@@ -6,7 +6,7 @@ weight: 40
 draft: false
 ---
 
-Als eerste opdracht in deze labo's gaan jullie zelf een **OR gate** maken. Maak hiervoor een nieuw bestand aan waarin je de beschrijving kwijt kan. Om te weten of de implementatie werkt, moet er ook een **testbench** geschreven worden. Deze kunnen dan gebruiken om het design te simuleren.
+Als eerste opdracht in deze labo's gaan jullie zelf een **OR gate** maken. Maak hiervoor een nieuw bestand aan waarin je de beschrijving kwijt kan. Om te weten of de implementatie werkt, moet er ook een **testbench** geschreven worden. Deze kan dan gebruiken om het design te simuleren.
 
 De schematic voor de OR poort (voor zij die het vergeten zouden zijn) is:
 {{% figure src="/images/intro/OR_gate.png" title="OR gate"  %}}

@@ -6,86 +6,118 @@ weight: 30
 draft: false
 ---
 
-Hoe zijn we nu zeker dat onze nand poort correct werkt? We zouden een ASIC kunnen maken, maar dat zou een veel te dure en tijdrovende manier zijn. 
+Hoe kan er nu getest worden of onze **nand** poort correct werkt? We zouden een ASIC kunnen maken, maar dat zou een veel te dure en tijdrovende manier zijn. 
 
-Een realistischer stap is om het design te implementeren op een FPGA, maar er is nog een gemakkelijkere en nuttigere manier: **testbenches**.
+Een realistischere manier is om het design te implementeren op een FPGA, maar er is nog een gemakkelijkere en nuttigere manier: **testbenches**.
 
-Het idee achter een testbench is dat er "machines" zijn die inputs (ook stimuli) kunnen genereren. Vervolgens kunnen de waveforms van het hele design geanalyseerd worden én kan de output van een component geverifieerd worden.
+Het idee achter een testbench is dat er "toestellen" zijn die inputs (ook stimuli genoemd) kunnen genereren. Vervolgens kunnen de waveforms van het hele design visueel geanalyseerd worden én kan de output van een component geverifieerd worden.
 
-In dit opleidingsonderdeel *krijgen* jullie vaak de testbenches, maar soms kan het handig zijn om deze zelf aan te passen of uit te breiden.
+In dit opleidingsonderdeel *krijgen* jullie vaak de testbenches, maar het is goed om deze zelf aan te passen of uit te breiden.
 
 
 ## Voorbeeld: testbench voor een NAND poort
 
 
 ### Maken van een testbench
-Met **onderstaande testbench** kunnen we **testen** of onze **nand poort werkt**. Je moet een nieuwe simulation file maken en onderstaande testbench erin plakken. Merk op dat **ook de testbench** geschreven is in (V)HDL.
+Met onderstaande testbench kunnen we testen of onze nand poort werkt. Er moet een nieuwe **simulation source** aangemaakt worden en onderstaande testbench dient hierin geplakt te worden. Merk op dat **ook de testbench** geschreven is in (V)HDL.
 
 {{% multiHcolumn %}}
 {{% column %}}
-{{< highlight vhdl >}}
-library IEEE;
-    use IEEE.STD_LOGIC_1164.ALL;
+#### Commentaar
+Alhoewel dit geen verplicht stuk is, is het altijd nuttig om commentaar te voorzien. 
 
-entity tb_nand is
-  -- let op ... hier zijn GEEN poorten
-end tb_nand;
+#### Gebruik packages
+Deze testbench begint, net zoals de componenten, met het gebruiken van een **package** (STD_LOGIC_1164) uit een **library** (IEEE). Dit is uiteraard nodig omdat we anders geen definitie hebben van wat een STD_LOGIC type is.
 
-architecture Behavioral of tb_nand is
-    component nand_gate is
-      Port (
-          A : in std_logic; 
-          B : in std_logic;
-          Y : out std_logic
-      );
-    end component;
+#### Een lege entitity
 
-    signal input1, input2, output : std_logic;
+Vervolgens is er ook een **entity** block. Merk hier zeker bij op dat een testbench typisch **GEEN** input en/of output poorten heeft.
 
-begin
-    DUT: nand_gate port map(
-        A => input1,
-        B => input2,
-        Y => output
-    );
+#### Declaraties
+In de architecture gebeuren opnieuw eerst enkele declaraties. Zowel de component als de gebruikte signalen dienen gedeclareerd te worden.
 
-    PSTIM: process
-    begin
-        input1 <= '0';
-        input2 <= '0';
-        wait for 10ns;
 
-        input1 <= '1';
-        input2 <= '0';
-        wait for 10ns;
+#### DUT
+Er wordt een component **instantiatie** gemaakt van de *nand_gate* in deze testbench. De naam van deze instantie is DUT, wat een acronym is van *Device Under Test*. UUT (Unit Under Test) wordt ook soms gebruikt
 
-        input1 <= '0';
-        input2 <= '1';
-        wait for 10ns;
+#### Stimuli
+Tenslotte is er nog één blok dat de stimuli beschrijft. Dit is een speciaal soort blok (een **process**) waar we later nog op terug komen. Wat er tussen de begin en end van een process beschreven staat, wordt sequentieel overlopen (hiermee wordt bedoeld: zoals bij een C-programma). Wees er echter van bewust dat de hele process-block **TEGELIJKERTIJD** loopt met de DUT.
 
-        input1 <= '1';
-        input2 <= '1';
-        wait for 10ns;
+De correcte werking van de NAND poort wordt in deze testbench nagegaan door alle mogelijke logische combinaties aan te leggen aan de ingangen van nullen en enen.
 
-    end process;
-
-end Behavioral;
-{{< /highlight >}}
 {{% /column %}}
 {{% column %}}
-Deze testbench begint, net zoals de componenten, met het gebruiken van een **package** (STD_LOGIC_1164) uit een **library** (IEEE).
+{{< highlight vhdl >}}
+--------------------------------
+-- KU Leuven - ESAT/COSIC - ES&S
+--------------------------------
+-- Module Name:     nand_tb - Behavioural
+-- Project Name:    Digitale eletronische schakelingen
+-- Description:     Testbench for nand
+--
+-- Revision     Date       Author     Comments
+-- v1.0         20240118   VlJo       Initial version
+--
+--------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+-- use IEEE.NUMERIC_STD.ALL;
 
-Vervolgens is er ook een **entity** block. Merk hier zeker bij op dat een testbench **GEEN** input en/of output poorten heeft.
+entity nand_tb is
+end entity nand_tb;
 
-In de architecture gebeuren er weer declaraties van de component en van signalen.
+architecture Behavioural of nand_tb is
 
-Er wordt 1 component **instantiatie** gemaakt van de *nand_gate* in deze testbench. De naam van deze instantie is DUT, wat een acronym is van *Device Under Test*.
+    component nand_gate is
+        port(
+            A: IN STD_LOGIC;
+            B: IN STD_LOGIC;
+            Z: OUT STD_LOGIC
+        );
+    end component nand_gate;
 
-Tenslotte is er nog 1 blok dat de stimuli beschrijft. Dit is een speciaal soort blok (een **process**) waar we later nog op terug komen. Wat er tussen de begin en end van een process beschreven staat, wordt sequentieel overlopen. Wees er echte van bewust dat de hele process-block **TEGELIJKERTIJD** loopt met de DUT.
+    signal input_a, input_b : STD_LOGIC;
+    signal output_z : STD_LOGIC;
 
-De correcte werking van de NAND poort wordt in deze testbench nagegaan door alle mogelijke logische combinatie aan te leggen aan de ingangen.
+begin
+    --------------------------------
+    -- STIMULI
+    --------------------------------
+    PSTIM: process
+    begin
+        input_a <= '0';
+        input_b <= '0';
+        wait for 10 ns;
 
+        input_a <= '1';
+        input_b <= '0';
+        wait for 10 ns;
+
+        input_a <= '0';
+        input_b <= '1';
+        wait for 10 ns;
+
+        input_a <= '1';
+        input_b <= '1';
+        wait for 10 ns;
+        
+        wait;
+    end process;
+
+    --------------------------------
+    -- DUT
+    --------------------------------
+    DUT: component nand_gate port map(
+        A => input_a,
+        B => input_b,
+        Z => output_z
+    );
+
+end Behavioural;
+
+{{< /highlight >}}
 {{% /column %}}
+
 {{% /multiHcolumn %}}
 
 Om een testbench toe te voegen aan het Vivado project is het belangrijk erop te letten dat je een **Simulation** source toevoegd. In deze testbench kan je vervolgens bovenstaande code plakken.
@@ -93,30 +125,15 @@ Om een testbench toe te voegen aan het Vivado project is het belangrijk erop te 
 
 ### Runnen van een testbench
 
-Als alle code beschreven is, kan de bovenstaante simulatie uitgevoerd worden. Er zijn meerdere manieren om een simulatie te starten en deze zul je (mogelijks) ontdekken doorheen de labs.
+Als alle code beschreven is, kan de bovenstaante simulatie uitgevoerd worden. Er zijn meerdere manieren om een simulatie te starten en deze zul je ontdekken doorheen de labs.
 
 De gemakkelijkste manier is om in de **Flow Navigator** (de verticale balk aan de linkerkant van het scherm) te klikken op: **Run simulation**. Als alles goed loop zou je (ongeveer) onderstaand scherm moeten krijgen.
 
-![Wave forms](/images/intro/simulation.png)
+{{% figure src="/images/intro/simulation.png" title="Simulatie van de nand gate met Vivado"  %}}
 
-Je ziet hierin de inputs en de outputs van de DUT. De tijd verstrijkt over de X-as. Als beide inputs of één van beide inputs 'hoog' is, is de uitgang ook 'hoog'. Indien beide ingangen 'hoog' zijn, is de uitgang 'laag'.
+Je ziet hierin de inputs en de output van de DUT. De tijd verstrijkt over de X-as. Als beide inputs of één van beide inputs 'hoog' is, is de uitgang ook 'hoog'. Indien beide ingangen 'hoog' zijn, is de uitgang 'laag'.
 
 Dat is exact wat een NAND poort moet doen !! *(gelukkig)*
 
-### synthesisable subset
-
-Het is belangrijk om te weten dat **niet alle VHDL code synthesisable** is. Maar een subset van de VHDL kan worden omgezet in hardware. Hierdoor hebben we meer mogellijkheden in bv. testbenches.
-
-![Screenshot Vivado](/images/intro/VHDL_synth_subset.svg)
-
-#### Enkele Voorbeelden van functies enkel mogellijk in testbench:
-{{% highlight vhdl %}}
-wait for 10ns;
-wait until ready = '1';
-
-for i in 1 to 10 loop
-    test_signaal <= NOT test_signaal;
-    wait for 10ns;
-end loop;
-...
-{{% /highlight %}}
+Als het design gesimuleerd wordt met een open-source simulator krijgen we een identiek resultaat.
+{{% figure src="/images/screenshots/sim_nand.png" title="Simulatie van de nand gate met GHDL en GTKWave"  %}}

@@ -1,8 +1,8 @@
 ---
-title: 'Digitaal elektronische schakelingen'
+title: 'Digitale elektronische schakelingen'
 ---
 
-# Digitaal elektronische schakelingen
+# Digitale elektronische schakelingen
 
 ![Code](/images/pexels/pexels-pixabay-159220.jpg)
 
