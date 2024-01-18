@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="generator" content="Hugo 0.111.3">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>Eerste project :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1683017774" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/hybrid.css?1683017774" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1683017774" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1683017774" rel="stylesheet">
-    <link href="../../css/theme.css?1683017774" rel="stylesheet">
-    <link href="../../css/tabs.css?1683017774" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1683017774" rel="stylesheet">
+    <link href="../../css/nucleus.css?1705579012" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/hybrid.css?1705579012" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1705579012" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1705579012" rel="stylesheet">
+    <link href="../../css/theme.css?1705579012" rel="stylesheet">
+    <link href="../../css/tabs.css?1705579012" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1705579012" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1683017774" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1705579012" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1683017774"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1705579012"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1683017774"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1683017774"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1705579012"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1705579012"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/disch\/";
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1683017774"></script>
+<script type="text/javascript" src="../../js/search.js?1705579012"></script>
 
     
   </div>
@@ -261,6 +261,27 @@
       <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item ">
         <a href="../../010_intro_vhdl/030_simulatie/">
         <i class='fas fa-book'></i> Simulatie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/031_synthesisable/" title="Synthetiseerbaar" class="dd-item ">
+        <a href="../../010_intro_vhdl/031_synthesisable/">
+        <i class='fas fa-book'></i> Synthetiseerbaar
         
         </a>
     </li>
@@ -1471,7 +1492,7 @@
         <ul>
           
               <li>
-                  <a class="padding" href="https://uhintra03.uhasselt.be/studiegidswww/opleidingsonderdeel.aspx?a=2022&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
               </li>
           
               <li>
@@ -1524,7 +1545,7 @@
             
           
           
-            <a href='../../'>Digitaal elektronische schakelingen</a> > <a href='../../010_intro_vhdl/'>1. Eerste project</a> > Eerste project
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../010_intro_vhdl/'>1. Eerste project</a> > Eerste project
           
         
           
@@ -1538,16 +1559,14 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#maak-een-project">Maak een project</a></li>
-<li><a href="#voeg-hdl-code-toe">Voeg HDL code toe</a>
-<ul>
-<li><a href="#std-logic">std_logic</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#maak-een-project">Maak een project</a></li>
+    <li><a href="#voeg-hdl-code-toe">Voeg HDL code toe</a>
+      <ul>
+        <li><a href="#std_logic">std_logic</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1571,123 +1590,97 @@
         
 
 
-
-
 <h2 id="maak-een-project">Maak een project</h2>
-
 <p>We starten met een  <strong>eerste vivado project</strong> maken. We beginnen natuurlijk met vivado op te starten en te klikken op <strong>create project</strong>. Je geeft het project  een naam en zorgt dat je het op een plaats zet waar je het nog kan terugvinden. Bij project type zeggen we <strong>RTL project</strong> en vinken we <strong>&ldquo;Do not specify sources at this time&rdquo;</strong> aan.</p>
-
 <p>De volgende keuze die gemaakt moet worden is het type van FPGA. Als <em>part</em> maakt het niet veel uit wat we kiezen. Het beste is om een <strong>FPGA</strong> te kiezen die <strong>gratis</strong> is te gebruiken met Vivado zoals de <strong>xc7z020</strong>.</p>
-
 
 <div class="notices tip" ><p>Let er op dat je in het pad naar je Vivado project <b>geen spaties</b> hebt!! Dus, geen paden zoals <b>&ldquo;C:\school\2e jaar\disch&rdquo;</b> of <b>&ldquo;C:\mijn documenten\demo&rdquo;</b></p>
 </div>
 
-
 <p>Nu krijgen we een omgeving die er zo uit ziet.
-<img src="../../images/software/screenshot_vivado.png" alt="Screenshot Vivado" /></p>
-
+<img src="../../images/software/screenshot_vivado.png" alt="Screenshot Vivado"></p>
 <h2 id="voeg-hdl-code-toe">Voeg HDL code toe</h2>
-
 <p>Na het maken van een project, kunnen we HDL code toevoegen. Dit kan via de link <strong>add sources</strong>. Vervolgens komt er een keuze om een <strong>nieuw</strong> bestand te maken of om een <strong>reeds bestaande</strong> file toe te voegen. Kies voor een <strong>nieuwe file</strong> en voeg een <strong>vhdl</strong> design source toe. De tool vraagt vervolgens voor I/O port definitions, die kan je al instellen bij het maken van de vhdl file, maar kunnen later ook nog aangepast worden in de code.</p>
-
 <p>Merk op dat Vivado al een kleine aanzet geeft om van te beginnen. Onderstaande VHDL-code geeft een beschrijving zorgt voor een <strong>invertor</strong> die, zoals verwacht, de ingang geïnverteerd doorgeeft aan de uitgang.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">library</span> IEEE;
-<span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
-
-<span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
-    <span style="color:#66d9ef">Port</span> (
-        A<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
-        Z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>
-    );
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">invertor</span>;
-
-<span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
-<span style="color:#66d9ef">begin</span>
-
-    Z <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">NOT</span> A;
-
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;</code></pre></div>
-<p>Dit is een eenvoudige VHDL beschrijving en we zullen deze in detail onder de loep nemen.</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Port</span> (
+</span></span><span style="display:flex;"><span>        A<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span>        Z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">invertor</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Z <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">NOT</span> A;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;
+</span></span></code></pre></div><p>Dit is een eenvoudige VHDL beschrijving en we zullen deze in detail onder de loep nemen.</p>
 <div class="multiHcolumn">
-    
 <div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
-    <span style="color:#66d9ef">Port</span> (
-        A<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
-        Z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>
-    );
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">invertor</span>;</code></pre></div>
-
-<p></div><br />
-<div class="column">
-    <p>De <strong>entity</strong> definieert de input en de outputs van het (sub-)design dat we beschrijven. Het design heeft als <strong>naam</strong> gekregen: invertor. Vervolgens zien in de <strong>lijst van poorten</strong> dat deze component 2 poorten heeft: een <strong>ingang</strong> A en een uitgang <strong>Z</strong>.</p></p>
-
-<p>Deze component is dus een IC met twee pinnen en de <strong>entity</strong> blok omschrijft als het ware enkel de behuizing.</p>
-
-<p></div></p>
-
-<p></div></p>
-
-<div class="multiHcolumn">
-    
-<div class="column">
-    <p>De tweede blok <strong>architecture</strong> beschrijft wat er IN de behuizing zit. Ook deze beschrijving kunnen we een naam geven: <strong>Behavioural</strong>. Alles wat er vervolgens beschreven wordt tussen de <strong>begin</strong> en <strong>end</strong> definieert het gedrag van de component.</p>
-
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Port</span> (
+</span></span><span style="display:flex;"><span>        A<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span>        Z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">invertor</span>;</span></span></code></pre></div>
 </div>    
 <div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
-<span style="color:#66d9ef">begin</span>
-
-    Z <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">NOT</span> A;
-
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;</code></pre></div>
-
-<p></div></p>
-
-<p></div></p>
-
+    <p>De <strong>entity</strong> definieert de input en de outputs van het (sub-)design dat we beschrijven. Het design heeft als <strong>naam</strong> gekregen: invertor. Vervolgens zien in de <strong>lijst van poorten</strong> dat deze component 2 poorten heeft: een <strong>ingang</strong> A en een uitgang <strong>Z</strong>.</p>
+<p>Deze component is dus een IC met twee pinnen en de <strong>entity</strong> blok omschrijft als het ware enkel de behuizing.</p>
+</div>    
+</div>
 <div class="multiHcolumn">
-    
 <div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">library</span> IEEE;
-<span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;</code></pre></div>
-
-<p></div><br />
+    <p>De tweede blok <strong>architecture</strong> beschrijft wat er IN de behuizing zit. Ook deze beschrijving kunnen we een naam geven: <strong>Behavioural</strong>. Alles wat er vervolgens beschreven wordt tussen de <strong>begin</strong> en <strong>end</strong> definieert het gedrag van de component.</p>
+</div>    
 <div class="column">
-    <p>Tenslotte zijn er nog de eerste twee regels van de beschrijving. De eerste regel zegt dat er een library genaamd <strong>IEEE</strong> gebruikt wordt in deze component. De tweede regel zegt dat er uit deze library de <strong>package</strong> STD_LOGIC_1164 <strong>volledig</strong> (.ALL) gebruikt wordt. Wat dit precies wilt zeggen daar wordt later op teruggekomen.</p></p>
-
-<p></div></p>
-
-<p></div></p>
-
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Z <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">NOT</span> A;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;</span></span></code></pre></div>
+</div>    
+</div>
+<div class="multiHcolumn">
+<div class="column">
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;</span></span></code></pre></div>
+</div>    
+<div class="column">
+    <p>Tenslotte zijn er nog de eerste twee regels van de beschrijving. De eerste regel zegt dat er een library genaamd <strong>IEEE</strong> gebruikt wordt in deze beschrijving. De tweede regel zegt dat er uit deze library de <strong>package</strong> STD_LOGIC_1164 <strong>volledig</strong> (.ALL) gebruikt wordt. Wat dit precies wilt zeggen, daar wordt later op teruggekomen.</p>
+</div>    
+</div>
 
 <div class="notices note" ><p>Het is uitermate belangrijk dat het besef blijft dat VHDL (of iedere andere HDL) louter een beschrijving geeft van een hardware design. Dit wilt zeggen dat het mogelijk moet zijn een <strong>schema</strong> te tekenen !!!</p>
 </div>
 
-
 <p>De beschrijving van de de component hierboven is in een schema te tekenen als een <strong>invertor</strong> of <strong>NIET-poort</strong>.</p>
-
-<figure><img src="../../images/intro/NOT_gate.png"/><figcaption>
+<!-- <figure><img src="../../images/intro/NOT_gate.png"/><figcaption>
             <h4>NOT gate</h4>
         </figcaption>
 </figure>
-
-<h3 id="std-logic">std_logic</h3>
-
-<p>Omdat we de package <strong>IEEE.STD_LOGIC_1164</strong> gebruiken kunnen we het typen <strong>std_logic</strong> gebruiken. Dit is het type dat we meestal gebruiken wanneer we met signalen werken in een hardware beschrijving. <strong>std_logic</strong> kan <strong>9 verschillende waardes</strong> aannemen. Meestal gebruiken we &lsquo;0&rsquo; en &lsquo;1&rsquo;. Hieronder zijn de mogellijke waardes opgelijst met uitleg. Meer uitleg over mogelijke types vindt je in de <a href="../../900_zelfstudie_vhdl/060_packages/">zelfstudie</a>.</p>
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#e6db74">&#39;U&#39;</span>,  <span style="color:#75715e">-- Uninitialized : flipflop waar nog nooit in is geschreven</span>
-<span style="color:#e6db74">&#39;X&#39;</span>,  <span style="color:#75715e">-- Forcing Unknown</span>
-<span style="color:#e6db74">&#39;0&#39;</span>,  <span style="color:#75715e">-- Forcing 0 : rechtstreeks aan grond</span>
-<span style="color:#e6db74">&#39;1&#39;</span>,  <span style="color:#75715e">-- Forcing 1 : rechtstreeks aan voeding</span>
-<span style="color:#e6db74">&#39;Z&#39;</span>,  <span style="color:#75715e">-- High Impedance</span>
-<span style="color:#e6db74">&#39;W&#39;</span>,  <span style="color:#75715e">-- Weak Unknown</span>
-<span style="color:#e6db74">&#39;L&#39;</span>,  <span style="color:#75715e">-- Weak 0 : via weerstand aan grond</span>
-<span style="color:#e6db74">&#39;H&#39;</span>,  <span style="color:#75715e">-- Weak 1 : via weerstand aan voeding</span>
-<span style="color:#e6db74">&#39;-&#39;</span>,  <span style="color:#75715e">-- Don&#39;t Care</span></code></pre></div>
-
+ -->
+<figure><img src="../../images/drawio_new_invertor.png"/><figcaption>
+            <h4>The entity and architecture of the invertor</h4>
+        </figcaption>
+</figure>
+<p><img src="../../images/drawio_new_invertor.png%22" alt="bla"></p>
+<h3 id="std_logic">std_logic</h3>
+<p>Omdat we de package <strong>IEEE.STD_LOGIC_1164</strong> gebruiken kunnen we het typen <strong>std_logic</strong> gebruiken. Dit is het type dat we meestal gebruiken wanneer we met signalen werken in een hardware beschrijving. <strong>std_logic</strong> kan <strong>9 verschillende waardes</strong> aannemen. Meestal gebruiken we &lsquo;0&rsquo; en &lsquo;1&rsquo;. Hieronder zijn de mogellijke waardes opgelijst met uitleg. Meer uitleg over mogelijke types vind je in de <a href="../../900_zelfstudie_vhdl/060_packages/#std_logic_1164--package">zelfstudie</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#e6db74">&#39;U&#39;</span>,  <span style="color:#75715e">-- Uninitialized : flipflop waar nog nooit in is geschreven</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;X&#39;</span>,  <span style="color:#75715e">-- Forcing Unknown</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;0&#39;</span>,  <span style="color:#75715e">-- Forcing 0 : rechtstreeks aan grond</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;1&#39;</span>,  <span style="color:#75715e">-- Forcing 1 : rechtstreeks aan voeding</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;Z&#39;</span>,  <span style="color:#75715e">-- High Impedance</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;W&#39;</span>,  <span style="color:#75715e">-- Weak Unknown</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;L&#39;</span>,  <span style="color:#75715e">-- Weak 0 : via weerstand aan grond</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;H&#39;</span>,  <span style="color:#75715e">-- Weak 1 : via weerstand aan voeding</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;-&#39;</span>,  <span style="color:#75715e">-- Don&#39;t Care</span></span></span></code></pre></div>
 
 <footer class="footline">
 	
@@ -1808,6 +1801,22 @@
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2697,19 +2706,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1683017774"></script>
-    <script src="../../js/jquery.sticky.js?1683017774"></script>
-    <script src="../../js/featherlight.min.js?1683017774"></script>
-    <script src="../../js/highlight.pack.js?1683017774"></script>
+    <script src="../../js/clipboard.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1705579012"></script>
+    <script src="../../js/jquery.sticky.js?1705579012"></script>
+    <script src="../../js/featherlight.min.js?1705579012"></script>
+    <script src="../../js/highlight.pack.js?1705579012"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1683017774"></script>
-    <script src="../../js/learn.js?1683017774"></script>
-    <script src="../../js/hugo-learn.js?1683017774"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1705579012"></script>
+    <script src="../../js/learn.js?1705579012"></script>
+    <script src="../../js/hugo-learn.js?1705579012"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1683017774"></script>
+            <script src="../../mermaid/mermaid.js?1705579012"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

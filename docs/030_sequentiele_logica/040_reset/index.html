@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="generator" content="Hugo 0.111.3">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>Reset :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1683017774" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/hybrid.css?1683017774" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1683017774" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1683017774" rel="stylesheet">
-    <link href="../../css/theme.css?1683017774" rel="stylesheet">
-    <link href="../../css/tabs.css?1683017774" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1683017774" rel="stylesheet">
+    <link href="../../css/nucleus.css?1705579012" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/hybrid.css?1705579012" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1705579012" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1705579012" rel="stylesheet">
+    <link href="../../css/theme.css?1705579012" rel="stylesheet">
+    <link href="../../css/tabs.css?1705579012" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1705579012" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1683017774" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1705579012" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1683017774"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1705579012"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1683017774"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1683017774"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1705579012"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1705579012"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/disch\/";
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1683017774"></script>
+<script type="text/javascript" src="../../js/search.js?1705579012"></script>
 
     
   </div>
@@ -261,6 +261,27 @@
       <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item ">
         <a href="../../010_intro_vhdl/030_simulatie/">
         <i class='fas fa-book'></i> Simulatie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/031_synthesisable/" title="Synthetiseerbaar" class="dd-item ">
+        <a href="../../010_intro_vhdl/031_synthesisable/">
+        <i class='fas fa-book'></i> Synthetiseerbaar
         
         </a>
     </li>
@@ -1471,7 +1492,7 @@
         <ul>
           
               <li>
-                  <a class="padding" href="https://uhintra03.uhasselt.be/studiegidswww/opleidingsonderdeel.aspx?a=2022&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
               </li>
           
               <li>
@@ -1524,7 +1545,7 @@
             
           
           
-            <a href='../../'>Digitaal elektronische schakelingen</a> > <a href='../../030_sequentiele_logica/'>3. Sequentiële logica</a> > Reset
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../030_sequentiele_logica/'>3. Sequentiële logica</a> > Reset
           
         
           
@@ -1537,7 +1558,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1561,84 +1582,77 @@
 
 
 <p>Vaak is het gewenst om een <strong>reset</strong> knop te hebben om alles terug naar een <strong>geweten begintoestand</strong> te brengen. Hier zijn typisch 2 manier om dit te doen, een <strong>synchrone</strong> reset of een <strong>asynchrone</strong> reset.</p>
-
 <div class="multicolumn">
     <div class="column">
-
 <h2> asynchrone reset </h2>
 Onderstaand voorbeeld is van een D flip-flop met asynchrone reset, Je ziet hier dat de reset onderdeel is van de sensitivity list. De reset staat hier als eerste in het process.      
     </div>
     <div class="column">
-
 <h2> synchrone reset </h2>
 Onderstaand voorbeeld is van een D flip-flop met synchrone reset, Je ziet hier dat de reset geen onderdeel is van de sensitivity list. De reset staat hier na de if van de stijgende flank van de clock.   
     </div>
 </div>
-
 <div class="multicolumn">
     <div class="column">
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">library</span> IEEE;
-<span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
-
-
-<span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">asynchronous_reset</span> <span style="color:#66d9ef">is</span>
-<span style="color:#66d9ef">Port</span> (input, clock, reset<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
-        output<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>);
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">asynchronous_reset</span>;
-
-<span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">asynchronous_reset</span> <span style="color:#66d9ef">is</span>
-
-<span style="color:#66d9ef">begin</span>
-
-<span style="color:#a6e22e">SEQ</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(clock,reset)
-<span style="color:#66d9ef">begin</span>
-
-    <span style="color:#66d9ef">if</span> reset <span style="color:#f92672">=</span>  <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
-        output <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    <span style="color:#66d9ef">else</span>
-        <span style="color:#66d9ef">if</span> clock<span style="color:#a6e22e">&#39;event</span> <span style="color:#66d9ef">and</span> clock <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
-            output <span style="color:#f92672">&lt;=</span> input;    
-        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
-
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;
-        </code></pre></div>
-
-    </div>
-    <div class="column">      
-            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">library</span> IEEE;
-<span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
-
-
-<span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">synchronous_reset</span> <span style="color:#66d9ef">is</span>
-  <span style="color:#66d9ef">Port</span> (input, clock, reset<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
-        output<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>);
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">synchronous_reset</span>;
-
-<span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">synchronous_reset</span> <span style="color:#66d9ef">is</span>
-
-<span style="color:#66d9ef">begin</span>
-
-<span style="color:#a6e22e">SEQ</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(clock)
-<span style="color:#66d9ef">begin</span>
- 
-   <span style="color:#66d9ef">if</span> clock<span style="color:#a6e22e">&#39;event</span> <span style="color:#66d9ef">and</span> clock <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
-       <span style="color:#66d9ef">if</span> reset <span style="color:#f92672">=</span>  <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
-            output <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-        <span style="color:#66d9ef">else</span>
-            output <span style="color:#f92672">&lt;=</span> input;    
-        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
-
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;
-        </code></pre></div>        
-    </div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">asynchronous_reset</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Port</span> (input, clock, reset<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span>        output<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">asynchronous_reset</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">asynchronous_reset</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">SEQ</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(clock,reset)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> reset <span style="color:#f92672">=</span>  <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        output <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> clock<span style="color:#a6e22e">&#39;event</span> <span style="color:#66d9ef">and</span> clock <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>            output <span style="color:#f92672">&lt;=</span> input;    
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;
+</span></span><span style="display:flex;"><span>        </span></span></code></pre></div>
+<pre><code>&lt;/div&gt;
+&lt;div class=&quot;column&quot;&gt;      
+        <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">synchronous_reset</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Port</span> (input, clock, reset<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span>        output<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">synchronous_reset</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">synchronous_reset</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">SEQ</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(clock)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">if</span> clock<span style="color:#a6e22e">&#39;event</span> <span style="color:#66d9ef">and</span> clock <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">if</span> reset <span style="color:#f92672">=</span>  <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>output <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>output <span style="color:#f92672">&lt;=</span> input;    
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;
+</span></span><span style="display:flex;"><span>        </span></span></code></pre></div>        
+&lt;/div&gt;
+</code></pre>
 </div>
-  
-
 
 <div class="notices warning" ><p>Voor sequentiële processen zijn er maximaal 2 signalen (clock en eventueel reset) die in de sensitivity list staan. Bij combinatorische processen zijn het alle signalen.</p>
 </div>
@@ -1738,6 +1752,22 @@ Onderstaand voorbeeld is van een D flip-flop met synchrone reset, Je ziet hier d
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -2656,19 +2686,19 @@ Onderstaand voorbeeld is van een D flip-flop met synchrone reset, Je ziet hier d
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1683017774"></script>
-    <script src="../../js/jquery.sticky.js?1683017774"></script>
-    <script src="../../js/featherlight.min.js?1683017774"></script>
-    <script src="../../js/highlight.pack.js?1683017774"></script>
+    <script src="../../js/clipboard.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1705579012"></script>
+    <script src="../../js/jquery.sticky.js?1705579012"></script>
+    <script src="../../js/featherlight.min.js?1705579012"></script>
+    <script src="../../js/highlight.pack.js?1705579012"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1683017774"></script>
-    <script src="../../js/learn.js?1683017774"></script>
-    <script src="../../js/hugo-learn.js?1683017774"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1705579012"></script>
+    <script src="../../js/learn.js?1705579012"></script>
+    <script src="../../js/hugo-learn.js?1705579012"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1683017774"></script>
+            <script src="../../mermaid/mermaid.js?1705579012"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="generator" content="Hugo 0.111.3">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>AND poort :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1683017774" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/hybrid.css?1683017774" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1683017774" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1683017774" rel="stylesheet">
-    <link href="../../css/theme.css?1683017774" rel="stylesheet">
-    <link href="../../css/tabs.css?1683017774" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1683017774" rel="stylesheet">
+    <link href="../../css/nucleus.css?1705579012" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/hybrid.css?1705579012" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1705579012" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1705579012" rel="stylesheet">
+    <link href="../../css/theme.css?1705579012" rel="stylesheet">
+    <link href="../../css/tabs.css?1705579012" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1705579012" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1683017774" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1705579012" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1683017774"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1705579012"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1683017774"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1683017774"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1705579012"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1705579012"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/disch\/";
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1683017774"></script>
+<script type="text/javascript" src="../../js/search.js?1705579012"></script>
 
     
   </div>
@@ -261,6 +261,27 @@
       <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item ">
         <a href="../../010_intro_vhdl/030_simulatie/">
         <i class='fas fa-book'></i> Simulatie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/031_synthesisable/" title="Synthetiseerbaar" class="dd-item ">
+        <a href="../../010_intro_vhdl/031_synthesisable/">
+        <i class='fas fa-book'></i> Synthetiseerbaar
         
         </a>
     </li>
@@ -1471,7 +1492,7 @@
         <ul>
           
               <li>
-                  <a class="padding" href="https://uhintra03.uhasselt.be/studiegidswww/opleidingsonderdeel.aspx?a=2022&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
               </li>
           
               <li>
@@ -1524,7 +1545,7 @@
             
           
           
-            <a href='../../'>Digitaal elektronische schakelingen</a> > <a href='../../010_intro_vhdl/'>1. Eerste project</a> > AND poort
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../010_intro_vhdl/'>1. Eerste project</a> > AND poort
           
         
           
@@ -1538,12 +1559,9 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#alle-lijnen-tegelijk">Alle lijnen &hellip; tegelijk</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#alle-lijnen--tegelijk">Alle lijnen &hellip; tegelijk</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1567,99 +1585,114 @@
         
 
 
-
-
 <p>Heb géén schrik van deze titel. We gaan zeker niet alle componenten 1-voor-1 afgaan 😃.</p>
-
-<p>Uiteraard gaan design moeilijk te beschrijven zijn in 1 bestand. Componenten kunnen hergebruikt worden in andere componenten. Laat ons als voorbeel een AND poort bouwen met behulp van de eerder geziene <strong>NAND</strong> poort en de <strong>invertor</strong>. het schema van ons design ziet er dus al volgt uit.</p>
-
-<figure><img src="../../images/intro/AND_gate_NAND_NOT.svg"/><figcaption>
+<p>Uiteraard gaan complexere designs moeilijk te beschrijven zijn in één enkel bestand. Componenten kunnen hergebruikt worden in andere componenten. Laat ons als voorbeeld een AND poort bouwen met behulp van de eerder geziene <strong>NAND</strong> poort en de <strong>invertor</strong>. Het schema van ons design ziet er dus als volgt uit.</p>
+<!-- <figure><img src="../../images/intro/AND_gate_NAND_NOT.svg"/><figcaption>
             <h4>AND gate</h4>
         </figcaption>
 </figure>
-
+ -->
+<figure><img src="../../images/drawio_new_and.png"/><figcaption>
+            <h4>De AND gate, gebouwd met behulp van een NAND en een invertor</h4>
+        </figcaption>
+</figure>
 <div class="multiHcolumn">
-    
 <div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#75715e">-- gebruik de package STD_LOGIC_1164 uit de library IEEE</span>
-<span style="color:#66d9ef">library</span> IEEE;
-    <span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
-
-<span style="color:#75715e">-- poorten van de component</span>
-<span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">and_gate</span> <span style="color:#66d9ef">is</span>
-    <span style="color:#66d9ef">Port</span> (
-        ingang_A <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>; 
-        ingang_B <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
-        uitgang_Z <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>
-    );
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">and_gate</span>;
-
-<span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">and_gate</span> <span style="color:#66d9ef">is</span>
-
-    <span style="color:#75715e">-- declaraties van componenten die gebruikt worden</span>
-    <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">nand_gate</span> <span style="color:#66d9ef">is</span>
-      <span style="color:#66d9ef">Port</span> (
-          A <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>; 
-          B <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
-          Y <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>
-      );
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span>;
-
-    <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
-        <span style="color:#66d9ef">Port</span> (
-            A<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
-            Z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>
-        );
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span>;
-
-    <span style="color:#75715e">-- declaratie van signalen die IN het design gebruikt worden</span>
-    <span style="color:#66d9ef">signal</span> componenten_verbindings_draad <span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic</span>;
-
-<span style="color:#66d9ef">begin</span>
-
-    mijn_mooie_NAND<span style="color:#f92672">:</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">nand_gate</span> <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
-        A <span style="color:#f92672">=&gt;</span> ingang_A,
-        B <span style="color:#f92672">=&gt;</span> ingang_B,
-        Y <span style="color:#f92672">=&gt;</span> componenten_verbindings_draad
-    );
-
-    mijn_ijskoude_invertor<span style="color:#f92672">:</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
-        A <span style="color:#f92672">=&gt;</span> componenten_verbindings_draad,
-        Z <span style="color:#f92672">=&gt;</span> uitgang_Z
-    );
-
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;</code></pre></div>
-
-<p></div><br />
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- KU Leuven - ESAT/COSIC - ES&amp;S</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Module Name:     and_gate - Behavioural</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Project Name:    Digitale elektronische schakelingen </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Description:     Een voorbeeld van een and-gate, gebouwd </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--                  met een nand en een invertor.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Revision     Date       Author     Comments</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- v0.1         20240118   VlJo       Initial version</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- gebruik de package STD_LOGIC_1164 uit de library </span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">and_gate</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(
+</span></span><span style="display:flex;"><span>        A<span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>        B<span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>        Z<span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC</span>
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">and_gate</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioural</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">and_gate</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- COMPONENT DECLARATIONS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">inverter</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">port</span>(
+</span></span><span style="display:flex;"><span>            A<span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>            Z<span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC</span>
+</span></span><span style="display:flex;"><span>        );
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">inverter</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">nand_gate</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">port</span>(
+</span></span><span style="display:flex;"><span>            A<span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>            B<span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>            Z<span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC</span>
+</span></span><span style="display:flex;"><span>        );
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">nand_gate</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- (DE-)LOCALISING IN/OUTPUTS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> A_i <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> B_i <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> Z_i <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- INTERNAL SIGNALS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> x <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- (DE-)LOCALISING IN/OUTPUTS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span>    A_i <span style="color:#f92672">&lt;=</span> A;
+</span></span><span style="display:flex;"><span>    B_i <span style="color:#f92672">&lt;=</span> B;
+</span></span><span style="display:flex;"><span>    Z <span style="color:#f92672">&lt;=</span> Z_i;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- COMBINATORIAL</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span>    nand_gate_inst00<span style="color:#f92672">:</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">nand_gate</span> <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
+</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">=&gt;</span> A_i,
+</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">=&gt;</span> B_i,
+</span></span><span style="display:flex;"><span>        Z <span style="color:#f92672">=&gt;</span> X
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    inverter_inst00<span style="color:#f92672">:</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">inverter</span> <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
+</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">=&gt;</span> X,
+</span></span><span style="display:flex;"><span>        Z <span style="color:#f92672">=&gt;</span> Z_i     
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioural</span>;</span></span></code></pre></div>
+</div>    
 <div class="column">
-    <p>De beschrijving van deze AND poort begint met het gebruiken van een <strong>package</strong> (STD_LOGIC_1164) uit een <strong>library</strong> (IEEE).</p></p>
-
-<p>Vervolgens is er weer de <strong>entity</strong> block die aangeeft dat dit design 2 ingangspinnen heeft en 1 uitgangspin.</p>
-
-<p>In de architecture verschijnt er iets nieuws. Tussen de <strong>architecture</strong> en de <strong>begin</strong> kunnen er declaraties gebeuren. Dit kunnen zowel declaraties zijn van signalen als van compontenten.</p>
-
-<p>Componenten zijn de entities van andere design die gebruikt worden. Volgens ons schema gaan we gebruik maken van een NAND poort van en van invertor. In deze component declaraties geven we aan wat de <em>behuizing</em> is van de componenten die we gebruiken.</p>
-
-<div class="notices tip" ><p>Merk op dat een component exact hetzelfde geschreven wordt als de entity van de component zelf. Vervang het wordje <em>entity</em> door <em>component</em>; en eindig met &ldquo;end <em>component</em>&rdquo; in plaats van &ldquo;end &lt;entity_name&gt;&rdquo;</p>
+    <p>De beschrijving van deze AND poort begint met het gebruiken van een <strong>package</strong> (STD_LOGIC_1164) uit een <strong>library</strong> (IEEE).</p>
+<p>Vervolgens is er opnieuw de <strong>entity</strong> block die aangeeft dat dit design 2 ingangspinnen heeft en 1 uitgangspin.</p>
+<p>In de architecture verschijnt er iets nieuws. Tussen <strong>architecture</strong> en <strong>begin</strong> kunnen er declaraties gebeuren. Dit kunnen zowel declaraties zijn van signalen als van compontenten.</p>
+<p>Als er andere <em>entities</em> gebruikt gaan worden, dan moeten we aangeven hoe deze er uit zien. Volgens ons schema gaan we gebruik maken van een NAND poort van en van een invertor. Deze twee component dienen dus gedeclareerd te worden.</p>
+<div class="notices tip" ><p>Merk op dat een component-declaratie exact hetzelfde beschreven wordt als de entity van de component zelf. Vervang het woordje <em>entity</em> door <em>component</em>.</p>
 </div>
-
-<p>Signalen kun je zien als &ldquo;draadje op een breadboard&rdquo;. In de beschrijving van de <em>and_gate</em> is er 1 signal gedeclareerd: <strong>componenten_verbindings_draad</strong>. Zoals je merkt, ben je vrij om je signalen een naam te geven.</p>
-
-<p>Tenslotte bevat het design tussen de begin en end van de architecture de beschrijving van het gedrag van de component. Hier worden er twee <strong>instantiaties</strong> gemaakt, 1 van elke component. Een instantiatie mag je ook zelf benoemen (bv: mijn_mooie_NAND en mijn_ijskoude_invertor). Na de naamgeving en de specificatie van de component begint de <strong>port mapping</strong>.</p>
-
-<p><center><b>LINKS =&gt; RECHTS (komma)</b></center>
-Voor iedere poort van de component schrijven we links de naam van de poort. Hierachter komen symbolen <strong>=&gt;</strong> waarna vervolgens de signaalnaam komt van het huidige design. Zoals je kan zien in het voorbeeld, kun je <strong>RECHTS</strong> ook een poortnaam schrijven van de entity die we aan het beschrijven zijn.</p>
-
-<p></div></p>
-
-<p></div></p>
-
-<p>Met dit voorbeeld wordt er weergegeven hoe je component instantiatie kan doen. Uiteraard kan je ook een de <strong>nand_gate.vhd</strong> file kopiëren en de regel <code>Y &lt;= A NAND B;</code> vervangen door <code>Y &lt;= A AND B;</code>.</p>
-
-<h2 id="alle-lijnen-tegelijk">Alle lijnen &hellip; tegelijk</h2>
-
-<p>In tegenstelling tot alle software die jullie tot hier toe geschreven hebben, is er 1 heel belangrijk verschil met deze hardware beschrijving. Iedere lijn tussen de <em>begin</em> en <em>end</em> van de architecture wordt <strong>TEGELIJKERTIJD</strong> uitgevoerd. Het kan uiteraard (zoals in dit voorbeeld) het resultaat van één blok afhangt van het resultaat van een ander blok, maar zowel de NAND-gate als de invertor zijn tegelijkertijd aan het werken.</p>
-
+<p>De declaratie van een signaal is simpelweg duidelijk maken dat er een <em>draadje</em> gebruikt gaat worden, van een bepaald type en met een bepaalde naam.</p>
+<h2 id="een-component-instantiëren">Een component instantiëren</h2>
+<p>Volgens het design dienen we 2 componenten te gebruiken. Beide zijn hierboven reeds gedeclareerd. Deze <strong>declaratie</strong> is enkel om de tools duidelijk te maken <em>hoe deze component er uit ziet</em>.</p>
+<p>Tussen de <em>begin</em> en <em>end</em> van de architecture kan er een <strong>instantiatie</strong> gemaakt worden van reeds gedeclareerde componenten.</p>
+<p>Bi het instantieren kan er een naam gegeven worden aan de instantiatie. In het voorbeeld zijn de anmen <em>nand_gate_inst00</em> en <em>inverter_inst00</em>. Na de naamgeving wordt duidelijk gemaakt over welke component het gaat (<em>component nand_gate</em>). Uiteindelijk moet er <strong>port map</strong> gebeuren. Iedere in- en uitgang moet ergens aan gehangen worden. Dit kan soms een beetje verwarrend lijken, maar het idee is dat er voor iedere in- en uitgang het volgende staat:</p>
+<center><b>LINKS => RECHTS (komma)</b></center>
+<p>LINKS staat de naam van de poort van de component, RECHTS staat de naam van het signaal dat hierop aangesloten wordt.</p>
+<p>Verschillende poorten worden gescheiden door een komma (,). Dit wilt dus zeggen dat er na de laatste mapping geen komma meer mag volgen.</p>
+</div>    
+</div>
+<p>In de bovenstaande beschrijving van de AND poort gebruiken we een NAND en een INV. Voor de volledigheid geven we nog even mee dat er ook een keyword <strong>AND</strong> bestaat: <code>Z_i &lt;= A_i AND B_i;</code> was dus een perfect alternatief geweest 😉.</p>
+<h2 id="alle-lijnen--tegelijk">Alle lijnen &hellip; tegelijk</h2>
+<p>In tegenstelling tot alle <strong>software</strong> die jullie tot hier toe geprogrameerd hebben, is er één heel belangrijk, conceptueel verschil met deze hardware beschrijving. Iedere lijn tussen de <em>begin</em> en <em>end</em> van de architecture wordt <strong>TEGELIJKERTIJD</strong> uitgevoerd. Het kan uiteraard (zoals in dit voorbeeld) dat het resultaat van één blok afhangt van het resultaat van een ander blok, maar zowel de NAND-gate als de invertor zijn <u>tegelijkertijd</u> aan het werken.</p>
 <p>Denk nog eens terug aan de beschrijving op de MUDEC. Het IC met de AND poort werkt ook simultaan met het IC met de invertor.</p>
 
 
@@ -1817,6 +1850,22 @@ Voor iedere poort van de component schrijven we links de naam van de poort. Hier
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2674,19 +2723,19 @@ Voor iedere poort van de component schrijven we links de naam van de poort. Hier
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1683017774"></script>
-    <script src="../../js/jquery.sticky.js?1683017774"></script>
-    <script src="../../js/featherlight.min.js?1683017774"></script>
-    <script src="../../js/highlight.pack.js?1683017774"></script>
+    <script src="../../js/clipboard.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1705579012"></script>
+    <script src="../../js/jquery.sticky.js?1705579012"></script>
+    <script src="../../js/featherlight.min.js?1705579012"></script>
+    <script src="../../js/highlight.pack.js?1705579012"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1683017774"></script>
-    <script src="../../js/learn.js?1683017774"></script>
-    <script src="../../js/hugo-learn.js?1683017774"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1705579012"></script>
+    <script src="../../js/learn.js?1705579012"></script>
+    <script src="../../js/hugo-learn.js?1705579012"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1683017774"></script>
+            <script src="../../mermaid/mermaid.js?1705579012"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

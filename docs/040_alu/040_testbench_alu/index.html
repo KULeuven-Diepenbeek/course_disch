@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="generator" content="Hugo 0.111.3">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>Testbench ALU :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1683017774" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/hybrid.css?1683017774" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1683017774" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1683017774" rel="stylesheet">
-    <link href="../../css/theme.css?1683017774" rel="stylesheet">
-    <link href="../../css/tabs.css?1683017774" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1683017774" rel="stylesheet">
+    <link href="../../css/nucleus.css?1705579012" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/hybrid.css?1705579012" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1705579012" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1705579012" rel="stylesheet">
+    <link href="../../css/theme.css?1705579012" rel="stylesheet">
+    <link href="../../css/tabs.css?1705579012" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1705579012" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1683017774" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1705579012" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1683017774"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1705579012"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1683017774"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1683017774"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1705579012"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1705579012"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/disch\/";
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1683017774"></script>
+<script type="text/javascript" src="../../js/search.js?1705579012"></script>
 
     
   </div>
@@ -261,6 +261,27 @@
       <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item ">
         <a href="../../010_intro_vhdl/030_simulatie/">
         <i class='fas fa-book'></i> Simulatie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/031_synthesisable/" title="Synthetiseerbaar" class="dd-item ">
+        <a href="../../010_intro_vhdl/031_synthesisable/">
+        <i class='fas fa-book'></i> Synthetiseerbaar
         
         </a>
     </li>
@@ -1471,7 +1492,7 @@
         <ul>
           
               <li>
-                  <a class="padding" href="https://uhintra03.uhasselt.be/studiegidswww/opleidingsonderdeel.aspx?a=2022&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
               </li>
           
               <li>
@@ -1524,7 +1545,7 @@
             
           
           
-            <a href='../../'>Digitaal elektronische schakelingen</a> > <a href='../../040_alu/'>4. ALU</a> > Testbench ALU
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../040_alu/'>4. ALU</a> > Testbench ALU
           
         
           
@@ -1537,7 +1558,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1561,249 +1582,251 @@
 
 
 <p>De testbench om te testen of de ALU werkt is deze. Deze testbench wordt ook gebruikt om de opdracht te verbeteren!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">library</span> IEEE;
-<span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
-
-<span style="color:#75715e">-- Uncomment the following library declaration if using</span>
-<span style="color:#75715e">-- arithmetic functions with Signed or Unsigned values</span>
-<span style="color:#75715e">--use IEEE.NUMERIC_STD.ALL;</span>
-
-<span style="color:#75715e">-- Uncomment the following library declaration if instantiating</span>
-<span style="color:#75715e">-- any Xilinx leaf cells in this code.</span>
-<span style="color:#75715e">--library UNISIM;</span>
-<span style="color:#75715e">--use UNISIM.VComponents.all;</span>
-
-<span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">tb_ALU</span> <span style="color:#66d9ef">is</span>
-<span style="color:#75715e">--  Port ( );</span>
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">tb_ALU</span>;
-
-<span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">tb_ALU</span> <span style="color:#66d9ef">is</span>
-    <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">ALU</span> <span style="color:#66d9ef">is</span>
-      <span style="color:#66d9ef">Port</span> (zx, nx, zy, ny, f, no<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span> ;
-            x, y<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
-            z <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
-            zr, ng<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>);
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span>;
-    
-    <span style="color:#66d9ef">signal</span> zx, nx, zy, ny, f, no<span style="color:#f92672">:</span>  <span style="color:#66d9ef">std_logic</span> ;
-    <span style="color:#66d9ef">signal</span> x, y<span style="color:#f92672">:</span>  <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
-    <span style="color:#66d9ef">signal</span> z <span style="color:#f92672">:</span>  <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
-    <span style="color:#66d9ef">signal</span> zr, ng<span style="color:#f92672">:</span>  <span style="color:#66d9ef">std_logic</span>;
-
-    
-<span style="color:#66d9ef">begin</span>
-
-DUT<span style="color:#f92672">:</span> ALU <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
-    zx <span style="color:#f92672">=&gt;</span> zx,
-    nx <span style="color:#f92672">=&gt;</span> nx,
-    zy <span style="color:#f92672">=&gt;</span> zy,
-    ny <span style="color:#f92672">=&gt;</span> ny,
-    f <span style="color:#f92672">=&gt;</span> f,
-    no <span style="color:#f92672">=&gt;</span> no,
-    x <span style="color:#f92672">=&gt;</span> x,
-    y <span style="color:#f92672">=&gt;</span> y,
-    z <span style="color:#f92672">=&gt;</span> z,
-    zr <span style="color:#f92672">=&gt;</span> zr,
-    ng <span style="color:#f92672">=&gt;</span> ng
-);
-
-<span style="color:#a6e22e">PROC</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span> <span style="color:#66d9ef">begin</span>
-    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>;
-    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>;
-    
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    
-    
-    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>) report <span style="color:#e6db74">&#34;0 werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">assert</span> (zr <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span>) report <span style="color:#e6db74">&#34;zr werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    
-    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000011111111&#34;</span>;
-    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011100111100110&#34;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000001&#34;</span>) report <span style="color:#e6db74">&#34;1 werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    
-    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000011111111&#34;</span>;
-    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011100111100110&#34;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1111111111111111&#34;</span>) report <span style="color:#e6db74">&#34;-1 werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    
-    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000110111111110&#34;</span>;
-    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011100111100110&#34;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000110111111110&#34;</span>) report <span style="color:#e6db74">&#34;x doorlaten werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    
-    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000110111111110&#34;</span>;
-    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011100101100110&#34;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0011100101100110&#34;</span>) report <span style="color:#e6db74">&#34;y doorlaten werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;    
-    
-    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011111111111111&#34;</span>;
-    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011100101100110&#34;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1100000000000000&#34;</span>) report <span style="color:#e6db74">&#34;niet x werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns; 
-        
-    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011111000001111&#34;</span>;
-    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011011111111110&#34;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1100100000000001&#34;</span>) report <span style="color:#e6db74">&#34;niet y werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;     
-    
-    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000111&#34;</span>;
-    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011011111111110&#34;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1111111111111001&#34;</span>) report <span style="color:#e6db74">&#34;min x werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;    
-    
-    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000111&#34;</span>;
-    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0111111111111110&#34;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1000000000000010&#34;</span>) report <span style="color:#e6db74">&#34;min y werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;      
-    
-    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000111&#34;</span>;
-    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0111111111110110&#34;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000001000&#34;</span>) report <span style="color:#e6db74">&#34;x+1 werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;    
-    
-    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000111&#34;</span>;
-    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0111111111111110&#34;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0111111111111111&#34;</span>) report <span style="color:#e6db74">&#34;y+1 werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;   
-    
-    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000111&#34;</span>;
-    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0111111111100000&#34;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0111111111100111&#34;</span>) report <span style="color:#e6db74">&#34;x+y werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;     
-    
-    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000111000000111&#34;</span>;
-    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0111111111100000&#34;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000111000000000&#34;</span>) report <span style="color:#e6db74">&#34;x&amp;y werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;     
-    
-    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000111000000111&#34;</span>;
-    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0111111111100000&#34;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0111111111100111&#34;</span>) report <span style="color:#e6db74">&#34;x|y werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;       
-    
-    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000010&#34;</span>;
-    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000100&#34;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1111111111111110&#34;</span>) report <span style="color:#e6db74">&#34;x-y werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">assert</span> (ng <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span>) report <span style="color:#e6db74">&#34;ng werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;      
-    
-    <span style="color:#66d9ef">wait</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Uncomment the following library declaration if using</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- arithmetic functions with Signed or Unsigned values</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--use IEEE.NUMERIC_STD.ALL;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Uncomment the following library declaration if instantiating</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- any Xilinx leaf cells in this code.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--library UNISIM;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--use UNISIM.VComponents.all;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">tb_ALU</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--  Port ( );</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">tb_ALU</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">tb_ALU</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">ALU</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">Port</span> (zx, nx, zy, ny, f, no<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span> ;
+</span></span><span style="display:flex;"><span>            x, y<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            z <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            zr, ng<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> zx, nx, zy, ny, f, no<span style="color:#f92672">:</span>  <span style="color:#66d9ef">std_logic</span> ;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> x, y<span style="color:#f92672">:</span>  <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> z <span style="color:#f92672">:</span>  <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> zr, ng<span style="color:#f92672">:</span>  <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DUT<span style="color:#f92672">:</span> ALU <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">=&gt;</span> zx,
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">=&gt;</span> nx,
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">=&gt;</span> zy,
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">=&gt;</span> ny,
+</span></span><span style="display:flex;"><span>    f <span style="color:#f92672">=&gt;</span> f,
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">=&gt;</span> no,
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">=&gt;</span> x,
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">=&gt;</span> y,
+</span></span><span style="display:flex;"><span>    z <span style="color:#f92672">=&gt;</span> z,
+</span></span><span style="display:flex;"><span>    zr <span style="color:#f92672">=&gt;</span> zr,
+</span></span><span style="display:flex;"><span>    ng <span style="color:#f92672">=&gt;</span> ng
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">PROC</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span> <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>;
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>) report <span style="color:#e6db74">&#34;0 werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (zr <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span>) report <span style="color:#e6db74">&#34;zr werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000011111111&#34;</span>;
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011100111100110&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000001&#34;</span>) report <span style="color:#e6db74">&#34;1 werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000011111111&#34;</span>;
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011100111100110&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1111111111111111&#34;</span>) report <span style="color:#e6db74">&#34;-1 werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000110111111110&#34;</span>;
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011100111100110&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000110111111110&#34;</span>) report <span style="color:#e6db74">&#34;x doorlaten werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000110111111110&#34;</span>;
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011100101100110&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0011100101100110&#34;</span>) report <span style="color:#e6db74">&#34;y doorlaten werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;    
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011111111111111&#34;</span>;
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011100101100110&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1100000000000000&#34;</span>) report <span style="color:#e6db74">&#34;niet x werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns; 
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011111000001111&#34;</span>;
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011011111111110&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1100100000000001&#34;</span>) report <span style="color:#e6db74">&#34;niet y werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;     
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000111&#34;</span>;
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0011011111111110&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1111111111111001&#34;</span>) report <span style="color:#e6db74">&#34;min x werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;    
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000111&#34;</span>;
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0111111111111110&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1000000000000010&#34;</span>) report <span style="color:#e6db74">&#34;min y werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;      
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000111&#34;</span>;
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0111111111110110&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000001000&#34;</span>) report <span style="color:#e6db74">&#34;x+1 werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;    
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000111&#34;</span>;
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0111111111111110&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0111111111111111&#34;</span>) report <span style="color:#e6db74">&#34;y+1 werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;   
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000111&#34;</span>;
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0111111111100000&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0111111111100111&#34;</span>) report <span style="color:#e6db74">&#34;x+y werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;     
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000111000000111&#34;</span>;
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0111111111100000&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000111000000000&#34;</span>) report <span style="color:#e6db74">&#34;x&amp;y werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;     
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000111000000111&#34;</span>;
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0111111111100000&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0111111111100111&#34;</span>) report <span style="color:#e6db74">&#34;x|y werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;       
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    zx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    nx <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    zy <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    ny <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    f  <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    no <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000010&#34;</span>;
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000100&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (z <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1111111111111110&#34;</span>) report <span style="color:#e6db74">&#34;x-y werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (ng <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span>) report <span style="color:#e6db74">&#34;ng werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;      
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;
+</span></span></code></pre></div>
 
 <footer class="footline">
 	
@@ -1898,6 +1921,22 @@ DUT<span style="color:#f92672">:</span> ALU <span style="color:#66d9ef">port</sp
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -2816,19 +2855,19 @@ DUT<span style="color:#f92672">:</span> ALU <span style="color:#66d9ef">port</sp
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1683017774"></script>
-    <script src="../../js/jquery.sticky.js?1683017774"></script>
-    <script src="../../js/featherlight.min.js?1683017774"></script>
-    <script src="../../js/highlight.pack.js?1683017774"></script>
+    <script src="../../js/clipboard.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1705579012"></script>
+    <script src="../../js/jquery.sticky.js?1705579012"></script>
+    <script src="../../js/featherlight.min.js?1705579012"></script>
+    <script src="../../js/highlight.pack.js?1705579012"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1683017774"></script>
-    <script src="../../js/learn.js?1683017774"></script>
-    <script src="../../js/hugo-learn.js?1683017774"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1705579012"></script>
+    <script src="../../js/learn.js?1705579012"></script>
+    <script src="../../js/hugo-learn.js?1705579012"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1683017774"></script>
+            <script src="../../mermaid/mermaid.js?1705579012"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

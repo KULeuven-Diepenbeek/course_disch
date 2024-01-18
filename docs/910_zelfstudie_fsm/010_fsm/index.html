@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="generator" content="Hugo 0.111.3">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>Finite State Machine (FSM) :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1683017774" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/hybrid.css?1683017774" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1683017774" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1683017774" rel="stylesheet">
-    <link href="../../css/theme.css?1683017774" rel="stylesheet">
-    <link href="../../css/tabs.css?1683017774" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1683017774" rel="stylesheet">
+    <link href="../../css/nucleus.css?1705579012" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/hybrid.css?1705579012" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1705579012" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1705579012" rel="stylesheet">
+    <link href="../../css/theme.css?1705579012" rel="stylesheet">
+    <link href="../../css/tabs.css?1705579012" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1705579012" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1683017774" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1705579012" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1683017774"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1705579012"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1683017774"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1683017774"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1705579012"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1705579012"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/disch\/";
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1683017774"></script>
+<script type="text/javascript" src="../../js/search.js?1705579012"></script>
 
     
   </div>
@@ -261,6 +261,27 @@
       <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item ">
         <a href="../../010_intro_vhdl/030_simulatie/">
         <i class='fas fa-book'></i> Simulatie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/031_synthesisable/" title="Synthetiseerbaar" class="dd-item ">
+        <a href="../../010_intro_vhdl/031_synthesisable/">
+        <i class='fas fa-book'></i> Synthetiseerbaar
         
         </a>
     </li>
@@ -1471,7 +1492,7 @@
         <ul>
           
               <li>
-                  <a class="padding" href="https://uhintra03.uhasselt.be/studiegidswww/opleidingsonderdeel.aspx?a=2022&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
               </li>
           
               <li>
@@ -1524,7 +1545,7 @@
             
           
           
-            <a href='../../'>Digitaal elektronische schakelingen</a> > <a href='../../910_zelfstudie_fsm/'>Zelfstudie FSM</a> > Finite State Machine (FSM)
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../910_zelfstudie_fsm/'>Zelfstudie FSM</a> > Finite State Machine (FSM)
           
         
           
@@ -1538,26 +1559,26 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#voorbeeld-fsm">Voorbeeld FSM</a></li>
-</ul></li>
-<li><a href="#aanpak-van-een-digitaal-ontwerp">Aanpak van een digitaal ontwerp</a>
-<ul>
-<li><a href="#datapad">datapad</a></li>
-<li><a href="#controlepad">controlepad</a></li>
-<li><a href="#controle-a-d-h-v-een-fsm">Controle a.d.h.v. een FSM</a></li>
-</ul></li>
-<li><a href="#moore-en-mealy-fsm">Moore en Mealy FSM</a>
-<ul>
-<li><a href="#toestandsencodering">Toestandsencodering</a></li>
-</ul></li>
-<li><a href="#fsm-in-vhdl">FSM in VHDL</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#voorbeeld-fsm">Voorbeeld FSM</a></li>
+      </ul>
+    </li>
+    <li><a href="#aanpak-van-een-digitaal-ontwerp">Aanpak van een digitaal ontwerp</a>
+      <ul>
+        <li><a href="#datapad">datapad</a></li>
+        <li><a href="#controlepad">controlepad</a></li>
+        <li><a href="#controle-adhv-een-fsm">Controle a.d.h.v. een FSM</a></li>
+      </ul>
+    </li>
+    <li><a href="#moore-en-mealy-fsm">Moore en Mealy FSM</a>
+      <ul>
+        <li><a href="#toestandsencodering">Toestandsencodering</a></li>
+      </ul>
+    </li>
+    <li><a href="#fsm-in-vhdl">FSM in VHDL</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1581,278 +1602,212 @@
         
 
 
-
-
 <p>Een FSM is een <strong>controle structuur</strong> die zich in een <strong>eindig aantal toestanden</strong> kan bevinden. Onder invloed van ingangssignalen kan een FSM overgaan naar een andere toestand. In elke toestand wordt er een waarde toegekend aan de uitgangssignalen. De toestand wordt opgeslagen in een toestandsregister.</p>
-
 <div class="multicolumn">
     <div class="column">
-
 <figure><img src="../../images/zelfstudie_FSM/FSM_block.png"/>
 </figure>
-
-
 </div>
 <div class="column">
-
 <figure><img src="../../images/zelfstudie_FSM/FSM_schematic.png"/>
 </figure>
-
-
 </div>
 </div>
-
 <h3 id="voorbeeld-fsm">Voorbeeld FSM</h3>
-
 <p>De meest <strong>eenvoudige FSM</strong> is een <strong>teller</strong>. Er is geen enkel ingangssignaal en de uitgang is de waarde van de toestand.</p>
-
 <figure><img src="../../images/zelfstudie_FSM/FSM_teller.png"/>
 </figure>
-
 <p>Een eerste ingangssignaal dat de telcyclus kan beïnvloeden, is een <strong>enable</strong> signaal.</p>
-
 <figure><img src="../../images/zelfstudie_FSM/FSM_teller_en.png"/>
 </figure>
-
 <p>Een ander ingangssignaal zou een <strong>up/down (UD)</strong> signaal kunnen zijn.</p>
-
 <figure><img src="../../images/zelfstudie_FSM/FSM_teller_UD.png"/>
 </figure>
-
 
 <div class="notices warning" ><p>Werkelijke toestandsdiagrammen kunnen heel wat complexer zijn.</p>
 </div>
 
-
 <h2 id="aanpak-van-een-digitaal-ontwerp">Aanpak van een digitaal ontwerp</h2>
-
 <ul>
-<li><p>Opdelen in functionele bouwblokken.</p>
-
+<li>
+<p>Opdelen in functionele bouwblokken.</p>
 <ul>
 <li>Onderscheid maken tussen datapad en controle.</li>
 <li>Steeds dieper verfijnen tot basisblokken.</li>
 <li>Duidelijk beschrijven wat elk bouwblok moet doen.</li>
 <li>Duidelijk beschrijven welke signalen toekomen en  vertrekken.
-
 <ul>
 <li>Na deze stap kan de entity van de verschillende bouwblokken geschreven worden. Wanneer het ontwerp met meerdere personen zal gemaakt worden, is dit het moment om de taken te verdelen.</li>
-</ul></li>
-</ul></li>
-
-<li><p>Datapad opsplitsen in registers en combinatorische blokken.</p></li>
-
-<li><p>Controle implementeren als FSM.</p></li>
 </ul>
-
+</li>
+</ul>
+</li>
+<li>
+<p>Datapad opsplitsen in registers en combinatorische blokken.</p>
+</li>
+<li>
+<p>Controle implementeren als FSM.</p>
+</li>
+</ul>
 <figure><img src="../../images/zelfstudie_FSM/data_controle_pad.png"/>
 </figure>
-
 <h3 id="datapad">datapad</h3>
-
 <div class="multicolumn">
     <div class="column">
-
-
 <h4 id="entity-van-het-datapad">Entity van het datapad</h4>
-
 <p>Ingangssignalen zijn:</p>
-
 <ul>
-<li>data ingangen (te verwerken)</li>
-
-<li><p>controle signalen (bepalen wat er moet gebeuren met de ingangsdata)
-Uitgangssignalen zijn:</p></li>
-
-<li><p>data uitgangen</p></li>
-
-<li><p>status signalen (zijn nodig voor het controleblok om beslissingen te nemen)</p></li>
+<li>
+<p>data ingangen (te verwerken)</p>
+</li>
+<li>
+<p>controle signalen (bepalen wat er moet gebeuren met de ingangsdata)
+Uitgangssignalen zijn:</p>
+</li>
+<li>
+<p>data uitgangen</p>
+</li>
+<li>
+<p>status signalen (zijn nodig voor het controleblok om beslissingen te nemen)</p>
+</li>
 </ul>
-
 <h4 id="uitwerken-van-het-datapad">Uitwerken van het datapad</h4>
-
 <p>De bouwblokken van het datapad zijn vaak goed gekende blokken:</p>
-
 <ul>
 <li>combinatorische blokken (optellers, decoders,&hellip;)</li>
 <li>registers</li>
 </ul>
-
 <p>Combinatorische blokken kunnen snel ontworpen worden op basis van Booleaanse vergelijkingen.</p>
-
-
 </div>
 <div class="column" style="width:50%">
-
 <figure><img src="../../images/zelfstudie_FSM/data_pad.png"/>
 </figure>
-
-
-
 </div>
 </div>
-
 <h3 id="controlepad">controlepad</h3>
-
 <div class="multicolumn">
     <div class="column">
-
-
 <h4 id="entity-van-de-controle">Entity van de controle</h4>
-
 <p>Ingangssignalen zijn:</p>
-
 <ul>
 <li>status signalen (zijn nodig voor het controleblok om beslissingen te
 nemen)</li>
 <li>controle ingangen (controle van een ander controleblok)
-
 <ul>
 <li>Het kloksignaal hoort hier ook bij.</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p>Uitgangssignalen zijn:</p>
-
 <ul>
 <li>controle signalen (bepalen wat er moet gebeuren met de ingangsdata)</li>
 <li>controle uitgangen (controle voor een ander controleblok)</li>
 </ul>
-
-
 </div>
 <div class="column" style="width:50%">
-
 <figure><img src="../../images/zelfstudie_FSM/controle_pad.png"/>
 </figure>
-
-
-
 </div>
 </div>
-
-<h3 id="controle-a-d-h-v-een-fsm">Controle a.d.h.v. een FSM</h3>
-
+<h3 id="controle-adhv-een-fsm">Controle a.d.h.v. een FSM</h3>
 <ul>
-<li>Teken het bouwblok met alle signalen.</li>
-
-<li><p>Teken het toestandsdiagramma.</p>
-
+<li>
+<p>Teken het bouwblok met alle signalen.</p>
+</li>
+<li>
+<p>Teken het toestandsdiagramma.</p>
 <ul>
 <li>Elk van de verschillende stappen die ondernomen worden, vormen een verschillende toestand.</li>
 <li>Indien de uitgang verschillend is, moet de toestand zeker verschillen.</li>
-</ul></li>
-
-<li><p>Minimaliseer het aantal toestanden.</p>
-
+</ul>
+</li>
+<li>
+<p>Minimaliseer het aantal toestanden.</p>
 <ul>
 <li>Twee toestanden kunnen samengenomen worden als hun uitgangssignalen gelijk zijn en als de volgende toestand gelijk is.</li>
-</ul></li>
-
-<li><p>Controleer de volledigheid van het toestandsdiagramma.</p>
-
+</ul>
+</li>
+<li>
+<p>Controleer de volledigheid van het toestandsdiagramma.</p>
 <ul>
 <li>Alle mogelijke combinaties van ingangssignalen zijn in principe mogelijk in elke toestand.</li>
 <li>Voorzie wat er vanuit elke toestand moet gebeuren onder alle mogelijke combinaties.</li>
 <li>Voorkom dubbele toewijzingen.</li>
-</ul></li>
-
-<li><p>Bepaal de next state functie in functie van de huidige toestand en alle ingangssignalen (behalve de klok).</p>
-
+</ul>
+</li>
+<li>
+<p>Bepaal de next state functie in functie van de huidige toestand en alle ingangssignalen (behalve de klok).</p>
 <ul>
 <li>Het resultaat van de next state functie wordt in de volgende klokpuls opgeslagen in het state register. De next state functie is een combinatorisch bouwblok.</li>
-</ul></li>
-
-<li><p>Bepaal de output functie in functie van de huidige toestand (en eventueel de ingangssignalen).</p>
-
+</ul>
+</li>
+<li>
+<p>Bepaal de output functie in functie van de huidige toestand (en eventueel de ingangssignalen).</p>
 <ul>
 <li>De output functie is al dan niet afhankelijk van de ingangssignalen. De output functie is een combinatorisch bouwblok.</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <div class="multicolumn">
     <div class="column">
-
 <figure><img src="../../images/zelfstudie_FSM/FSM_block.png"/>
 </figure>
-
 <figure><img src="../../images/zelfstudie_FSM/FSM_block_diagram.png"/>
 </figure>
-
-
 </div>
 <div class="column">
-
 <figure><img src="../../images/zelfstudie_FSM/FSM_schematic.png"/>
 </figure>
-
-
 </div>
 </div>
-
 <h2 id="moore-en-mealy-fsm">Moore en Mealy FSM</h2>
-
 <p>Het is belangrijk een onderscheid te maken tussen een Moore en een Mealy FSM.</p>
-
 <ul>
 <li>Een Moore FSM heeft een output functie die enkel afhangt van de toestand.</li>
 <li>Een Mealy FSM heeft een output functie die afhangt van de toestand en de ingangen.
-
 <ul>
 <li>Mealy FSMs mogen niet rondgekoppeld worden.</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <div class="multicolumn">
     <div class="column">
-
 <figure><img src="../../images/zelfstudie_FSM/moore_FSM.png"/><figcaption>
             <h4>Moore FSM</h4>
         </figcaption>
 </figure>
-
-
-
 </div>
 <div class="column">
-
 <figure><img src="../../images/zelfstudie_FSM/mealy_FSM.png"/><figcaption>
             <h4>Mealy FSM</h4>
         </figcaption>
 </figure>
-
-
 </div>
 </div>
-
 <h3 id="toestandsencodering">Toestandsencodering</h3>
-
 <p>Encoderen van de toestanden in een FSM:</p>
-
 <ul>
 <li>willekeurig
-
 <ul>
 <li>bv. 000, 111, 011, 110, 101</li>
-</ul></li>
+</ul>
+</li>
 <li>minimale bitverandering (= Gray encodering)
-
 <ul>
 <li>bv. 00, 01, 11, 10</li>
-</ul></li>
+</ul>
+</li>
 <li>one-hot
-
 <ul>
 <li>bv. 0001, 0010, 0100, 1000</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h2 id="fsm-in-vhdl">FSM in VHDL</h2>
-
 <p>Definieer de toestand als een opsommingstype en maak twee signalen aan van dit type. Deze signalen vormen de ingang en de uitgang van het state register.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">type</span> my_state <span style="color:#66d9ef">is</span> (rst_state, green_state, yellow_state, red_state);
-<span style="color:#66d9ef">signal</span> next_state, state<span style="color:#f92672">:</span> my_state;</code></pre></div>
-<p>Ontwerp de next state functie, het state register en de
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> my_state <span style="color:#66d9ef">is</span> (rst_state, green_state, yellow_state, red_state);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> next_state, state<span style="color:#f92672">:</span> my_state;
+</span></span></code></pre></div><p>Ontwerp de next state functie, het state register en de
 output functie in drie verschillende processen. Voorzie alle mogelijkheden in de next state functie en de output functie, anders ontstaan er latches in deze bouwblokken.</p>
 
 
@@ -1949,6 +1904,22 @@ output functie in drie verschillende processen. Voorzie alle mogelijkheden in de
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -2864,19 +2835,19 @@ output functie in drie verschillende processen. Voorzie alle mogelijkheden in de
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1683017774"></script>
-    <script src="../../js/jquery.sticky.js?1683017774"></script>
-    <script src="../../js/featherlight.min.js?1683017774"></script>
-    <script src="../../js/highlight.pack.js?1683017774"></script>
+    <script src="../../js/clipboard.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1705579012"></script>
+    <script src="../../js/jquery.sticky.js?1705579012"></script>
+    <script src="../../js/featherlight.min.js?1705579012"></script>
+    <script src="../../js/highlight.pack.js?1705579012"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1683017774"></script>
-    <script src="../../js/learn.js?1683017774"></script>
-    <script src="../../js/hugo-learn.js?1683017774"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1705579012"></script>
+    <script src="../../js/learn.js?1705579012"></script>
+    <script src="../../js/hugo-learn.js?1705579012"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1683017774"></script>
+            <script src="../../mermaid/mermaid.js?1705579012"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="generator" content="Hugo 0.111.3">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>Opdracht testbench :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1683017774" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/hybrid.css?1683017774" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1683017774" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1683017774" rel="stylesheet">
-    <link href="../../css/theme.css?1683017774" rel="stylesheet">
-    <link href="../../css/tabs.css?1683017774" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1683017774" rel="stylesheet">
+    <link href="../../css/nucleus.css?1705579012" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/hybrid.css?1705579012" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1705579012" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1705579012" rel="stylesheet">
+    <link href="../../css/theme.css?1705579012" rel="stylesheet">
+    <link href="../../css/tabs.css?1705579012" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1705579012" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1683017774" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1705579012" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1683017774"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1705579012"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1683017774"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1683017774"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1705579012"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1705579012"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/disch\/";
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1683017774"></script>
+<script type="text/javascript" src="../../js/search.js?1705579012"></script>
 
     
   </div>
@@ -261,6 +261,27 @@
       <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item ">
         <a href="../../010_intro_vhdl/030_simulatie/">
         <i class='fas fa-book'></i> Simulatie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/031_synthesisable/" title="Synthetiseerbaar" class="dd-item ">
+        <a href="../../010_intro_vhdl/031_synthesisable/">
+        <i class='fas fa-book'></i> Synthetiseerbaar
         
         </a>
     </li>
@@ -1471,7 +1492,7 @@
         <ul>
           
               <li>
-                  <a class="padding" href="https://uhintra03.uhasselt.be/studiegidswww/opleidingsonderdeel.aspx?a=2022&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
               </li>
           
               <li>
@@ -1524,7 +1545,7 @@
             
           
           
-            <a href='../../'>Digitaal elektronische schakelingen</a> > <a href='../../030_sequentiele_logica/'>3. Sequentiële logica</a> > Opdracht testbench
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../030_sequentiele_logica/'>3. Sequentiële logica</a> > Opdracht testbench
           
         
           
@@ -1537,7 +1558,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1561,188 +1582,189 @@
 
 
 <p>Deze testbench wordt gebruikt voor de evaluatie.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">library</span> IEEE;
-<span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
-
-<span style="color:#75715e">-- Uncomment the following library declaration if using</span>
-<span style="color:#75715e">-- arithmetic functions with Signed or Unsigned values</span>
-<span style="color:#75715e">--use IEEE.NUMERIC_STD.ALL;</span>
-
-<span style="color:#75715e">-- Uncomment the following library declaration if instantiating</span>
-<span style="color:#75715e">-- any Xilinx leaf cells in this code.</span>
-<span style="color:#75715e">--library UNISIM;</span>
-<span style="color:#75715e">--use UNISIM.VComponents.all;</span>
-
-<span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">tb_counter</span> <span style="color:#66d9ef">is</span>
-<span style="color:#75715e">--  Port ( );</span>
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">tb_counter</span>;
-
-<span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">tb_counter</span> <span style="color:#66d9ef">is</span>
-
-<span style="color:#66d9ef">component</span> <span style="color:#a6e22e">counter</span> <span style="color:#66d9ef">is</span>
-  <span style="color:#66d9ef">Port</span> (clock,reset, load, inc<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
-        data_in <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
-        data_out <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>) );
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span>;
-
-<span style="color:#66d9ef">constant</span> clock_period <span style="color:#f92672">:</span> <span style="color:#66d9ef">time</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">10</span> ns;
-
-<span style="color:#66d9ef">signal</span> clock,reset, load, inc<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic</span>;
-<span style="color:#66d9ef">signal</span> data_in <span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
-<span style="color:#66d9ef">signal</span> data_out <span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
-
-<span style="color:#66d9ef">begin</span>
-
-DUT<span style="color:#f92672">:</span> counter
-    <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(   data_in <span style="color:#f92672">=&gt;</span> data_in,
-                data_out <span style="color:#f92672">=&gt;</span> data_out,
-                clock <span style="color:#f92672">=&gt;</span> clock,
-                reset <span style="color:#f92672">=&gt;</span> reset,
-                load <span style="color:#f92672">=&gt;</span> load,
-                inc <span style="color:#f92672">=&gt;</span> inc);
-              
-<span style="color:#a6e22e">CLK</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span> <span style="color:#66d9ef">begin</span>
-    clock <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>;
-    clock <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>; 
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;                
-                
-<span style="color:#a6e22e">PSTIM</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span> <span style="color:#66d9ef">begin</span>
-    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>;
-    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">/</span><span style="color:#ae81ff">8</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>;
-    
-    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>;
-    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>;
-    
-    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>) report <span style="color:#e6db74">&#34;reset werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    
-    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>;
-    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;
-    
-    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000001&#34;</span>) report <span style="color:#e6db74">&#34;increment werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">*</span><span style="color:#ae81ff">10</span>;
-    
-    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000001011&#34;</span>) report <span style="color:#e6db74">&#34;increment werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    
-    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000111000000000&#34;</span>;
-    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;    
-    
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;    
-    
-    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000111000000000&#34;</span>) report <span style="color:#e6db74">&#34;load werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    
-    
-    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000111000000000&#34;</span>;
-    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;      
-    
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;    
-    
-    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000111000000001&#34;</span>) report <span style="color:#e6db74">&#34;inc na load werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    
-    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1111111111111111&#34;</span>;
-    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;  
-    
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;    
-    
-    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1111111111111111&#34;</span>) report <span style="color:#e6db74">&#34;load werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;      
- 
-    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1111110011111111&#34;</span>;
-    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;  
-    
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;
-    
-    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1111110011111111&#34;</span>) report <span style="color:#e6db74">&#34;load before increment werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-    
-    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1111111111111111&#34;</span>;
-    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;  
-    
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;    
-    
-    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1111111111111111&#34;</span>) report <span style="color:#e6db74">&#34;load werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;      
- 
-    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1100110011110011&#34;</span>;
-    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;  
-    
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;
-    
-    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>) report <span style="color:#e6db74">&#34;overflow werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;           
-    
-    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1100110011111111&#34;</span>;
-    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;  
-    
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;
-    
-    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>) report <span style="color:#e6db74">&#34;reset werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;   
-    
-    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1100110011111111&#34;</span>;
-    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;H&#39;</span>;
-    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;L&#39;</span>;
-    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;L&#39;</span>;  
-    
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;
-    
-    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>) report <span style="color:#e6db74">&#34;reset werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;         
-    
-    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1100110011111111&#34;</span>;
-    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;L&#39;</span>;
-    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;  
-    
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;
-    
-    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000001&#34;</span>) report <span style="color:#e6db74">&#34;iets werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;                
-    
-    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1100110011111111&#34;</span>;
-    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;X&#39;</span>;
-    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;L&#39;</span>;
-    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;H&#39;</span>;  
-    
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;
-    
-    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1100110011111111&#34;</span>;
-    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;W&#39;</span>;
-    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;Z&#39;</span>;  
-    
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;
-    
-    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>) report <span style="color:#e6db74">&#34;reset werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;              
-    
-    <span style="color:#66d9ef">wait</span>;        
-       
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;                
-
-
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Uncomment the following library declaration if using</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- arithmetic functions with Signed or Unsigned values</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--use IEEE.NUMERIC_STD.ALL;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Uncomment the following library declaration if instantiating</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- any Xilinx leaf cells in this code.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--library UNISIM;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--use UNISIM.VComponents.all;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">tb_counter</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--  Port ( );</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">tb_counter</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">tb_counter</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">component</span> <span style="color:#a6e22e">counter</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Port</span> (clock,reset, load, inc<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span>        data_in <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        data_out <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>) );
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">constant</span> clock_period <span style="color:#f92672">:</span> <span style="color:#66d9ef">time</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">10</span> ns;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> clock,reset, load, inc<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> data_in <span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> data_out <span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DUT<span style="color:#f92672">:</span> counter
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(   data_in <span style="color:#f92672">=&gt;</span> data_in,
+</span></span><span style="display:flex;"><span>                data_out <span style="color:#f92672">=&gt;</span> data_out,
+</span></span><span style="display:flex;"><span>                clock <span style="color:#f92672">=&gt;</span> clock,
+</span></span><span style="display:flex;"><span>                reset <span style="color:#f92672">=&gt;</span> reset,
+</span></span><span style="display:flex;"><span>                load <span style="color:#f92672">=&gt;</span> load,
+</span></span><span style="display:flex;"><span>                inc <span style="color:#f92672">=&gt;</span> inc);
+</span></span><span style="display:flex;"><span>              
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">CLK</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span> <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    clock <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>    clock <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>; 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;                
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">PSTIM</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span> <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>;
+</span></span><span style="display:flex;"><span>    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">/</span><span style="color:#ae81ff">8</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>;
+</span></span><span style="display:flex;"><span>    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>) report <span style="color:#e6db74">&#34;reset werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>;
+</span></span><span style="display:flex;"><span>    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000001&#34;</span>) report <span style="color:#e6db74">&#34;increment werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">*</span><span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000001011&#34;</span>) report <span style="color:#e6db74">&#34;increment werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000111000000000&#34;</span>;
+</span></span><span style="display:flex;"><span>    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;    
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;    
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000111000000000&#34;</span>) report <span style="color:#e6db74">&#34;load werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;0000111000000000&#34;</span>;
+</span></span><span style="display:flex;"><span>    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;      
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;    
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000111000000001&#34;</span>) report <span style="color:#e6db74">&#34;inc na load werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1111111111111111&#34;</span>;
+</span></span><span style="display:flex;"><span>    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;  
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;    
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1111111111111111&#34;</span>) report <span style="color:#e6db74">&#34;load werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;      
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1111110011111111&#34;</span>;
+</span></span><span style="display:flex;"><span>    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;  
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1111110011111111&#34;</span>) report <span style="color:#e6db74">&#34;load before increment werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1111111111111111&#34;</span>;
+</span></span><span style="display:flex;"><span>    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;  
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;    
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1111111111111111&#34;</span>) report <span style="color:#e6db74">&#34;load werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;      
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1100110011110011&#34;</span>;
+</span></span><span style="display:flex;"><span>    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;  
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>) report <span style="color:#e6db74">&#34;overflow werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;           
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1100110011111111&#34;</span>;
+</span></span><span style="display:flex;"><span>    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;  
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>) report <span style="color:#e6db74">&#34;reset werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;   
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1100110011111111&#34;</span>;
+</span></span><span style="display:flex;"><span>    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;H&#39;</span>;
+</span></span><span style="display:flex;"><span>    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;L&#39;</span>;
+</span></span><span style="display:flex;"><span>    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;L&#39;</span>;  
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>) report <span style="color:#e6db74">&#34;reset werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;         
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1100110011111111&#34;</span>;
+</span></span><span style="display:flex;"><span>    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;L&#39;</span>;
+</span></span><span style="display:flex;"><span>    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;  
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000001&#34;</span>) report <span style="color:#e6db74">&#34;iets werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;                
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1100110011111111&#34;</span>;
+</span></span><span style="display:flex;"><span>    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;X&#39;</span>;
+</span></span><span style="display:flex;"><span>    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;L&#39;</span>;
+</span></span><span style="display:flex;"><span>    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;H&#39;</span>;  
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    data_in <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;1100110011111111&#34;</span>;
+</span></span><span style="display:flex;"><span>    reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    load <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;W&#39;</span>;
+</span></span><span style="display:flex;"><span>    inc <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;Z&#39;</span>;  
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (data_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0000000000000000&#34;</span>) report <span style="color:#e6db74">&#34;reset werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;              
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span>;        
+</span></span><span style="display:flex;"><span>       
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;                
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;
+</span></span></code></pre></div>
 
 <footer class="footline">
 	
@@ -1837,6 +1859,22 @@ DUT<span style="color:#f92672">:</span> counter
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -2755,19 +2793,19 @@ DUT<span style="color:#f92672">:</span> counter
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1683017774"></script>
-    <script src="../../js/jquery.sticky.js?1683017774"></script>
-    <script src="../../js/featherlight.min.js?1683017774"></script>
-    <script src="../../js/highlight.pack.js?1683017774"></script>
+    <script src="../../js/clipboard.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1705579012"></script>
+    <script src="../../js/jquery.sticky.js?1705579012"></script>
+    <script src="../../js/featherlight.min.js?1705579012"></script>
+    <script src="../../js/highlight.pack.js?1705579012"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1683017774"></script>
-    <script src="../../js/learn.js?1683017774"></script>
-    <script src="../../js/hugo-learn.js?1683017774"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1705579012"></script>
+    <script src="../../js/learn.js?1705579012"></script>
+    <script src="../../js/hugo-learn.js?1705579012"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1683017774"></script>
+            <script src="../../mermaid/mermaid.js?1705579012"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

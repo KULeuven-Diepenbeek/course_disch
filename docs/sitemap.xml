@@ -2,186 +2,188 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/000_intro/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/000_intro/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/001_software/010_alternatief/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/001_software/010_alternatief/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/001_software/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/001_software/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/010_a_instructie/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/010_a_instructie/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/050_cpu/010_intro_cpu/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/010_intro_cpu/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/010_eerste_project/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/010_eerste_project/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/910_zelfstudie_fsm/010_fsm/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/910_zelfstudie_fsm/010_fsm/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/010_hw_vs_sw/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/010_hw_vs_sw/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/010_intro_sequentieel/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/010_intro_sequentieel/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/030_shift_registers/siso/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/030_shift_registers/siso/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/040_alu/010_intro_alu/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/040_alu/010_intro_alu/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/020_next_step/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/020_c_instructie/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/020_c_instructie/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/020_ent_arch/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/020_ent_arch/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/020_nand/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/020_nand/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/020_registers/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/020_registers/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/030_shift_registers/sipo/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/030_shift_registers/sipo/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/040_alu/020_status_codes/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/040_alu/020_status_codes/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/910_zelfstudie_fsm/020_voorbeeld_verkeerslicht/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/910_zelfstudie_fsm/020_voorbeeld_verkeerslicht/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/025_and/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/025_and/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/040_alu/025_2scompliment/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/040_alu/025_2scompliment/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/030_c_instructie_comp/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/030_c_instructie_comp/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/030_hierachie/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/030_hierachie/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/040_alu/030_opdracht_alu/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/040_alu/030_opdracht_alu/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/030_shift_registers/piso/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/030_shift_registers/piso/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/030_shift_registers/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/030_shift_registers/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/030_simulatie/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/030_simulatie/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/910_zelfstudie_fsm/030_voorbeeld_timer/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/910_zelfstudie_fsm/030_voorbeeld_timer/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/040_alu/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/031_synthesisable/</loc>
+  </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/040_alu/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/040_c_instructie_destination/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/040_c_instructie_destination/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/040_libraries/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/040_libraries/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/040_opdracht/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/040_opdracht/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/030_shift_registers/pipo/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/030_shift_registers/pipo/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/040_reset/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/040_reset/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/040_alu/040_testbench_alu/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/040_alu/040_testbench_alu/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/020_next_step/040_vectors/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/040_vectors/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/050_cpu/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/050_arrays/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/050_arrays/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/050_c_instructie_jmp/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/050_c_instructie_jmp/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/020_next_step/050_signals/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/050_signals/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/060_packages/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/060_packages/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/020_next_step/060_processen/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/060_processen/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/070_processen/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/070_processen/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/020_next_step/080_generate/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/080_generate/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/080_signalen_variablen/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/080_signalen_variablen/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/090_flipflop_latch/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/090_flipflop_latch/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/020_next_step/090_opdracht/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/090_opdracht/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/020_next_step/100_generic/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/100_generic/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/100_opdracht/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/100_opdracht/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/050_cpu/100_opdracht/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/100_opdracht/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/100_voorbeelden/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/100_voorbeelden/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/110_lfsr/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/110_lfsr/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/110_tb_opdracht/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/110_tb_opdracht/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/050_cpu/110_testbench/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/110_testbench/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/910_zelfstudie_fsm/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/910_zelfstudie_fsm/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/</loc>
     <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/disch/tags/</loc>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/tags/</loc>
   </url>
 </urlset>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="generator" content="Hugo 0.111.3">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>Signalen vs. variabelen :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1683017774" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/hybrid.css?1683017774" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1683017774" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1683017774" rel="stylesheet">
-    <link href="../../css/theme.css?1683017774" rel="stylesheet">
-    <link href="../../css/tabs.css?1683017774" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1683017774" rel="stylesheet">
+    <link href="../../css/nucleus.css?1705579012" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/hybrid.css?1705579012" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1705579012" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1705579012" rel="stylesheet">
+    <link href="../../css/theme.css?1705579012" rel="stylesheet">
+    <link href="../../css/tabs.css?1705579012" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1705579012" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1683017774" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1705579012" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1683017774"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1705579012"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1683017774"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1683017774"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1705579012"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1705579012"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/disch\/";
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1683017774"></script>
+<script type="text/javascript" src="../../js/search.js?1705579012"></script>
 
     
   </div>
@@ -261,6 +261,27 @@
       <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item ">
         <a href="../../010_intro_vhdl/030_simulatie/">
         <i class='fas fa-book'></i> Simulatie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/031_synthesisable/" title="Synthetiseerbaar" class="dd-item ">
+        <a href="../../010_intro_vhdl/031_synthesisable/">
+        <i class='fas fa-book'></i> Synthetiseerbaar
         
         </a>
     </li>
@@ -1471,7 +1492,7 @@
         <ul>
           
               <li>
-                  <a class="padding" href="https://uhintra03.uhasselt.be/studiegidswww/opleidingsonderdeel.aspx?a=2022&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
               </li>
           
               <li>
@@ -1524,7 +1545,7 @@
             
           
           
-            <a href='../../'>Digitaal elektronische schakelingen</a> > <a href='../../900_zelfstudie_vhdl/'>Zelfstudie VHDL</a> > Signalen vs. variabelen
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../900_zelfstudie_vhdl/'>Zelfstudie VHDL</a> > Signalen vs. variabelen
           
         
           
@@ -1538,18 +1559,16 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#signalen">signalen</a></li>
-<li><a href="#resolutie-functie">Resolutie-functie</a></li>
-<li><a href="#variabelen">variabelen</a></li>
-</ul></li>
-<li><a href="#ongewenste-registers">Ongewenste registers</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#signalen">signalen</a></li>
+        <li><a href="#resolutie-functie">Resolutie-functie</a></li>
+        <li><a href="#variabelen">variabelen</a></li>
+      </ul>
+    </li>
+    <li><a href="#ongewenste-registers">Ongewenste registers</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1573,191 +1592,144 @@
         
 
 
-
-
 <div class="multicolumn">
-
 <div class="column">
-
 <p><strong>Signalen</strong>:</p>
-
 <ul>
 <li>nemen de nieuwe waarde aan na een vertraging,</li>
 <li>hebben een hardware equivalent,</li>
-<li>worden toegekend met &ldquo; &lt;=&rdquo; .</li>
+<li>worden toegekend met &quot; &lt;=&quot; .</li>
 </ul>
-
-
 </div>
-
 <div class="column">
-
 <p><strong>Variabelen</strong>:</p>
-
 <ul>
 <li>nemen de nieuwe waarde onmiddellijk aan,</li>
 <li>hebben geen hardware equivalent,</li>
-<li>worden toegekend met &ldquo; :=&rdquo; ,</li>
+<li>worden toegekend met &quot; :=&quot; ,</li>
 <li>komen enkel voor in een proces.</li>
 </ul>
-
-
 </div>
-
-<p></div></p>
-
+</div>
 <h3 id="signalen">signalen</h3>
-
 <p>Volgende beschrijvingen leiden tot <strong>dezelfde implementatie</strong>:</p>
-
 <div class="multicolumn">
-
 <div class="column">
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb1</span> <span style="color:#66d9ef">is</span>
-    <span style="color:#66d9ef">signal</span> o1, o2, o3<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic</span>;
-<span style="color:#66d9ef">begin</span>
-    <span style="color:#a6e22e">p</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, c, d, o1, o2, o3)
-    <span style="color:#66d9ef">begin</span>
-        q <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">not</span> o3;
-        o1 <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">and</span> b;
-        o2 <span style="color:#f92672">&lt;=</span> c <span style="color:#66d9ef">and</span> d;
-        o3 <span style="color:#f92672">&lt;=</span> o1 <span style="color:#66d9ef">or</span> o2;
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;</code></pre></div>
-
-<p></div></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb1</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> o1, o2, o3<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, c, d, o1, o2, o3)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        q <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">not</span> o3;
+</span></span><span style="display:flex;"><span>        o1 <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">and</span> b;
+</span></span><span style="display:flex;"><span>        o2 <span style="color:#f92672">&lt;=</span> c <span style="color:#66d9ef">and</span> d;
+</span></span><span style="display:flex;"><span>        o3 <span style="color:#f92672">&lt;=</span> o1 <span style="color:#66d9ef">or</span> o2;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;
+</span></span></code></pre></div>
+</div>
 <div class="column">
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb2</span> <span style="color:#66d9ef">is</span>
-    <span style="color:#66d9ef">signal</span> o1, o2, o3<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic</span>;
-<span style="color:#66d9ef">begin</span>
-    q <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">not</span> o3;
-    o1 <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">and</span> b;
-    o2 <span style="color:#f92672">&lt;=</span> c <span style="color:#66d9ef">and</span> d;
-    o3 <span style="color:#f92672">&lt;=</span> o1 <span style="color:#66d9ef">or</span> o2;
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;</code></pre></div>
-
-<p></div></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb2</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> o1, o2, o3<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    q <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">not</span> o3;
+</span></span><span style="display:flex;"><span>    o1 <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">and</span> b;
+</span></span><span style="display:flex;"><span>    o2 <span style="color:#f92672">&lt;=</span> c <span style="color:#66d9ef">and</span> d;
+</span></span><span style="display:flex;"><span>    o3 <span style="color:#f92672">&lt;=</span> o1 <span style="color:#66d9ef">or</span> o2;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;
+</span></span></code></pre></div>
+</div>
 <div class="column">
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb3</span> <span style="color:#66d9ef">is</span>
-<span style="color:#66d9ef">begin</span>
-    q <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">not</span> ((a <span style="color:#66d9ef">and</span> b) <span style="color:#66d9ef">or</span> (c <span style="color:#66d9ef">and</span> d));
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;</code></pre></div>
-
-<p></div></p>
-
-<p></div></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb3</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    q <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">not</span> ((a <span style="color:#66d9ef">and</span> b) <span style="color:#66d9ef">or</span> (c <span style="color:#66d9ef">and</span> d));
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;
+</span></span></code></pre></div>
+</div>
+</div>
 <p>Als we de tussenliggende signalen o1, o2 en o3 vergeten in de sensitivity list, is het gedrag niet meer zuiver combinatorisch. Volgend proces leidt dus <strong>niet</strong> tot dezelfde implementatie als de vorige voorbeelden:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb4</span> <span style="color:#66d9ef">is</span>
-    <span style="color:#66d9ef">signal</span> o1, o2, o3<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic</span>;
-<span style="color:#66d9ef">begin</span>
-    <span style="color:#a6e22e">p</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, c, d)
-    <span style="color:#66d9ef">begin</span>
-        q <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">not</span> o3;
-        o1 <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">and</span> b;
-        o2 <span style="color:#f92672">&lt;=</span> c <span style="color:#66d9ef">and</span> d;
-        o3 <span style="color:#f92672">&lt;=</span> o1 <span style="color:#66d9ef">or</span> o2;
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;</code></pre></div>
-<p><br/></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb4</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> o1, o2, o3<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, c, d)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        q <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">not</span> o3;
+</span></span><span style="display:flex;"><span>        o1 <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">and</span> b;
+</span></span><span style="display:flex;"><span>        o2 <span style="color:#f92672">&lt;=</span> c <span style="color:#66d9ef">and</span> d;
+</span></span><span style="display:flex;"><span>        o3 <span style="color:#f92672">&lt;=</span> o1 <span style="color:#66d9ef">or</span> o2;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;
+</span></span></code></pre></div><br/>
 <h3 id="resolutie-functie">Resolutie-functie</h3>
-
 <div class="multicolumn">
     <div class="column">
 In het volgende voorbeeld worden er twee toekenningen gedaan aan hetzelfde signaal:
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">signal</span> a, b, z<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic</span>;
-...
-z <span style="color:#f92672">&lt;=</span> a;
-z <span style="color:#f92672">&lt;=</span> b;</code></pre></div>
-
-<p></div>
-<div class="column"></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> a, b, z<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>z <span style="color:#f92672">&lt;=</span> a;
+</span></span><span style="display:flex;"><span>z <span style="color:#f92672">&lt;=</span> b;</span></span></code></pre></div>
+</div>
+<div class="column">
 <figure><img src="../../images/zelfstudie/resolutie_functie.png"/>
 </figure>
-
-<p></div>
-</div></p>
-
+</div>
+</div>
 <div class="multicolumn">
     <div class="column" style="width:50%">
 De resolutie functie die voorzien is in het type std_logic maakt een keuze tussen a en b op basis van de waarde van a en b.
 
-
 <div class="notices note" ><p>De resolutie-functie sluit niet uit dat de synthesetool die de code omzet in hardware een foutmelding kan geven.</p>
 </div>
 
-
 </div>
 <div class="column" style="width:50%">
-
 <figure><img src="../../images/zelfstudie/resolutie_functie_tabel.png"/>
 </figure>
-
-
 </div>
 </div>
-
 <h3 id="variabelen">variabelen</h3>
-
 <p>Als we variabelen gebruiken i.p.v. signalen, krijgen we opnieuw dezelfde implementatie:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb5</span> <span style="color:#66d9ef">is</span>
-<span style="color:#66d9ef">begin</span>
-    <span style="color:#a6e22e">p</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, c, d)
-        <span style="color:#66d9ef">variable</span> o1, o2, o3;
-    <span style="color:#66d9ef">begin</span>
-        q <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">not</span> o3;
-        o1 <span style="color:#f92672">:=</span> a <span style="color:#66d9ef">and</span> b;
-        o2 <span style="color:#f92672">:=</span> c <span style="color:#66d9ef">and</span> d;
-        o3 <span style="color:#f92672">:=</span> o1 <span style="color:#66d9ef">or</span> o2;
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;</code></pre></div>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb5</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, c, d)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">variable</span> o1, o2, o3;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        q <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">not</span> o3;
+</span></span><span style="display:flex;"><span>        o1 <span style="color:#f92672">:=</span> a <span style="color:#66d9ef">and</span> b;
+</span></span><span style="display:flex;"><span>        o2 <span style="color:#f92672">:=</span> c <span style="color:#66d9ef">and</span> d;
+</span></span><span style="display:flex;"><span>        o3 <span style="color:#f92672">:=</span> o1 <span style="color:#66d9ef">or</span> o2;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;
+</span></span></code></pre></div>
 <div class="notices warning" ><p>Voor code dat <strong>hardware beschrijft</strong> gebruiken we <strong>std_logic</strong> gebruikt. <br/>
 In een testbench kunnen we wel variabelen gebruiken.</p>
 </div>
 
-
 <h2 id="ongewenste-registers">Ongewenste registers</h2>
-
 <p>Indien we voor een bepaald signaal geen register willen implementeren, moet dat signaal buiten het proces geplaatst worden.</p>
-
 <div class="multicolumn">
 <div class="column">
-
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#a6e22e">seq</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(clk)
-<span style="color:#66d9ef">begin</span>
-    <span style="color:#66d9ef">if</span> clk<span style="color:#a6e22e">&#39;event</span> <span style="color:#66d9ef">and</span> clk <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
-        j <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">and</span> b; <span style="color:#75715e">--register voor j</span>
-        i <span style="color:#f92672">&lt;=</span> j <span style="color:#66d9ef">xor</span> k;
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</code></pre></div>
-
-<p></div></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">seq</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(clk)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> clk<span style="color:#a6e22e">&#39;event</span> <span style="color:#66d9ef">and</span> clk <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        j <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">and</span> b; <span style="color:#75715e">--register voor j</span>
+</span></span><span style="display:flex;"><span>        i <span style="color:#f92672">&lt;=</span> j <span style="color:#66d9ef">xor</span> k;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span></code></pre></div>
+</div>
 <div class="column">
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#a6e22e">seq</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(clk)
-<span style="color:#66d9ef">begin</span>
-    <span style="color:#66d9ef">if</span> clk<span style="color:#a6e22e">&#39;event</span> <span style="color:#66d9ef">and</span> clk <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
-        i <span style="color:#f92672">&lt;=</span> j <span style="color:#66d9ef">xor</span> k;
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-
-j <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">and</span> b; <span style="color:#75715e">--geen register voor j</span></code></pre></div>
-
-<p></div></p>
-
-<p></div></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">seq</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(clk)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> clk<span style="color:#a6e22e">&#39;event</span> <span style="color:#66d9ef">and</span> clk <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        i <span style="color:#f92672">&lt;=</span> j <span style="color:#66d9ef">xor</span> k;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>j <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">and</span> b; <span style="color:#75715e">--geen register voor j</span>
+</span></span></code></pre></div>
+</div>
+</div>
 
 <footer class="footline">
 	
@@ -1852,6 +1824,22 @@ j <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">and</sp
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -2770,19 +2758,19 @@ j <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">and</sp
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1683017774"></script>
-    <script src="../../js/jquery.sticky.js?1683017774"></script>
-    <script src="../../js/featherlight.min.js?1683017774"></script>
-    <script src="../../js/highlight.pack.js?1683017774"></script>
+    <script src="../../js/clipboard.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1705579012"></script>
+    <script src="../../js/jquery.sticky.js?1705579012"></script>
+    <script src="../../js/featherlight.min.js?1705579012"></script>
+    <script src="../../js/highlight.pack.js?1705579012"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1683017774"></script>
-    <script src="../../js/learn.js?1683017774"></script>
-    <script src="../../js/hugo-learn.js?1683017774"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1705579012"></script>
+    <script src="../../js/learn.js?1705579012"></script>
+    <script src="../../js/hugo-learn.js?1705579012"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1683017774"></script>
+            <script src="../../mermaid/mermaid.js?1705579012"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

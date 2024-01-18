@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="generator" content="Hugo 0.111.3">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>Ontwikkel omgeving :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../css/nucleus.css?1683017774" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1683017774" rel="stylesheet">
-    <link href="../css/hybrid.css?1683017774" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1683017774" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1683017774" rel="stylesheet">
-    <link href="../css/auto-complete.css?1683017774" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1683017774" rel="stylesheet">
-    <link href="../css/theme.css?1683017774" rel="stylesheet">
-    <link href="../css/tabs.css?1683017774" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1683017774" rel="stylesheet">
+    <link href="../css/nucleus.css?1705579012" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1705579012" rel="stylesheet">
+    <link href="../css/hybrid.css?1705579012" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1705579012" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1705579012" rel="stylesheet">
+    <link href="../css/auto-complete.css?1705579012" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1705579012" rel="stylesheet">
+    <link href="../css/theme.css?1705579012" rel="stylesheet">
+    <link href="../css/tabs.css?1705579012" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1705579012" rel="stylesheet">
     
-    <link href="../css/theme-kul.css?1683017774" rel="stylesheet">
+    <link href="../css/theme-kul.css?1705579012" rel="stylesheet">
     
     
 
-    <script src="../js/jquery-3.3.1.min.js?1683017774"></script>
+    <script src="../js/jquery-3.3.1.min.js?1705579012"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1683017774"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1683017774"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1705579012"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1705579012"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/disch\/";
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1683017774"></script>
+<script type="text/javascript" src="../js/search.js?1705579012"></script>
 
     
   </div>
@@ -114,7 +114,7 @@
   
     
     <li data-nav-id="/001_software/" title="Ontwikkel omgeving" class="dd-item
-        parent
+        
         active
         
         ">
@@ -261,6 +261,27 @@
       <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item ">
         <a href="../010_intro_vhdl/030_simulatie/">
         <i class='fas fa-book'></i> Simulatie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/031_synthesisable/" title="Synthetiseerbaar" class="dd-item ">
+        <a href="../010_intro_vhdl/031_synthesisable/">
+        <i class='fas fa-book'></i> Synthetiseerbaar
         
         </a>
     </li>
@@ -1471,7 +1492,7 @@
         <ul>
           
               <li>
-                  <a class="padding" href="https://uhintra03.uhasselt.be/studiegidswww/opleidingsonderdeel.aspx?a=2022&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
               </li>
           
               <li>
@@ -1518,7 +1539,7 @@
             
           
           
-            <a href='../'>Digitaal elektronische schakelingen</a> > Ontwikkel omgeving
+            <a href='../'>Digitale elektronische schakelingen</a> > Ontwikkel omgeving
           
         
           
@@ -1543,20 +1564,14 @@
 
 
 
-	
-
-<h1 id="ontwikkel-omgeving">Ontwikkel omgeving</h1>
-
+	<h1 id="ontwikkel-omgeving">Ontwikkel omgeving</h1>
 <p>Naast de &ldquo;integrated circuits&rdquo; (in de volksmond ook wel &ldquo;chips&rdquo; genoemd 😃) die een vaste functionaliteit hebben, bestaan er ook speciale IC&rsquo;s waarvan je de functionaliteit kan aanpassen. De logische poorten (Gates, in het Engels) in die IC&rsquo;s zijn configureerbaar of programmeerbaar (Programmable, in het Engels). Als er zo een groot aantal gates gebundeld worden (in een Array, in het Engels) en deze kunnen ter plaatste (in the Field, in het Engels) geherprogrammeerd worden, noemen we deze IC&rsquo;s <strong>F</strong>ield <strong>P</strong>rogrammable <strong>G</strong>ate <strong>A</strong>rrays, oftewel FPGAs.</p>
+<p>De FPGA-markt wordt gedomineerd door 2 grote fabrikanten van FPGA&rsquo;s: <a href="https://www.amd.com/en.html">AMD</a> en <a href="https://www.intel.com/content/www/us/en/products/programmable.html">Intel</a>. Beide spelers samen leveren meer dan 85% van alle FPGAs wereldwijd. Het simuleren en configureren van FPGAs gebeurt in een speciale ontwikkelomgeving: <a href="https://fpgasoftware.intel.com/">Quartus</a> voor Intel FPGA&rsquo;s en <a href="https://www.xilinx.com/support/download.html">Vivado</a> (vroeger <a href="https://www.xilinx.com/products/design-tools/ise-design-suite.html">ISE</a>) voor AMD FPGA&rsquo;s.</p>
+<p>Ter info &hellip; de originele FPGA producenten waren <strong>Xilinx</strong> en <strong>Altera</strong>. AMD nam Xilinx over (2022) en Intel nam Altera over (2015).</p>
+<h2 id="vivado">Vivado</h2>
+<p>Wij schrijven de HDL-code voor dit opleidingsonderdeel in Vivado. Vivado is de omgeving van AMD en wordt gebruik voor de huidige families van FPGAs. Je kan de software downloaden van de site van <a href="https://www.xilinx.com/support/download.html">AMD</a>. Je moet wel een (gratis) account aanmaken om de software te kunnen downloaden. Deze software is enkel beschikbaar voor Windows en Linux.</p>
 
-<p>De FPGA-markt wordt gedomineerd door 2 grote fabrikanten van FPGA&rsquo;s: <a href="https://www.xilinx.com/" target="_blank">Xilinx</a> en <a href="https://www.intel.com/content/www/us/en/products/programmable.html" target="_blank">Intel</a>. Beide spelers samen leveren meer dan 85% van alle FPGAs wereldwijd. Het simuleren en programmeren van FPGAs gebeurt in een speciale ontwikkelomgeving: <a href="https://fpgasoftware.intel.com/" target="_blank">Quartus</a> voor Intel FPGA&rsquo;s en <a href="https://www.xilinx.com/support/download.html" target="_blank">Vivado</a> (vroeger <a href="https://www.xilinx.com/products/design-tools/ise-design-suite.html" target="_blank">ISE</a>) voor Xilinx FPGA&rsquo;s.</p>
-
-<h2 id="xilinx-vivado">Xilinx Vivado</h2>
-
-<p>Wij schrijven de HDL-code voor dit opleidingsonderdeel in Vivado. Vivado is de omgeving van Xilinx en wordt gebruik voor de huidige families van FPGAs. Je kan de software downloaden van de site van <a href="https://www.xilinx.com/support/download.html" target="_blank">Xilinx</a>. Je moet wel een (gratis) account aanmaken om de software te kunnen downloaden. Deze software is enkel beschikbaar voor Windows en Linux.</p>
-
-
-<div class="notices warning" ><p>Vivado vereist veel opslagruimte om te installeren <strong>&gt;100 GB</strong>.</p>
+<div class="notices warning" ><p>Vivado vereist veel opslagruimte om te installeren <strong>&gt;100 GB</strong>. Door minder types van FPGA&rsquo;s te ondersteunen kan hier wel wat bij bespaard worden!</p>
 </div>
 
 
@@ -1663,6 +1678,22 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -2573,19 +2604,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1683017774"></script>
-    <script src="../js/perfect-scrollbar.min.js?1683017774"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1683017774"></script>
-    <script src="../js/jquery.sticky.js?1683017774"></script>
-    <script src="../js/featherlight.min.js?1683017774"></script>
-    <script src="../js/highlight.pack.js?1683017774"></script>
+    <script src="../js/clipboard.min.js?1705579012"></script>
+    <script src="../js/perfect-scrollbar.min.js?1705579012"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1705579012"></script>
+    <script src="../js/jquery.sticky.js?1705579012"></script>
+    <script src="../js/featherlight.min.js?1705579012"></script>
+    <script src="../js/highlight.pack.js?1705579012"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1683017774"></script>
-    <script src="../js/learn.js?1683017774"></script>
-    <script src="../js/hugo-learn.js?1683017774"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1705579012"></script>
+    <script src="../js/learn.js?1705579012"></script>
+    <script src="../js/hugo-learn.js?1705579012"></script>
     
         
-            <script src="../mermaid/mermaid.js?1683017774"></script>
+            <script src="../mermaid/mermaid.js?1705579012"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

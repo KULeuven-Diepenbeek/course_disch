@@ -1,326 +1,333 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Digitaal elektronische schakelingen on Digitale Elektronische Schakelingen</title>
-    <link>https://kuleuven-diepenbeek.github.io/disch/</link>
-    <description>Recent content in Digitaal elektronische schakelingen on Digitale Elektronische Schakelingen</description>
+    <title>Digitale elektronische schakelingen on Digitale Elektronische Schakelingen</title>
+    <link>https://kuleuven-diepenbeek.github.io/course_disch/</link>
+    <description>Recent content in Digitale elektronische schakelingen on Digitale Elektronische Schakelingen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
-    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster><atom:link href="https://kuleuven-diepenbeek.github.io/disch/index.xml" rel="self" type="application/rss+xml" />
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster><atom:link href="https://kuleuven-diepenbeek.github.io/course_disch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Alternatieve omgeving</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/001_software/010_alternatief/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/001_software/010_alternatief/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/001_software/010_alternatief/</guid>
-      <description>Alternatief voor thuis Als het niet mogellijk is om Vivado te installaren op je eigen laptop, dan kan je de site edaplayground om toch thuis verder te kunnen werken. Je kan hierop inloggen met je Google account (van de UHasselt). Zorg dat je bij testbench + design VHDL hebt geselecteerd. Nu kan je de code in de testbench (links) en het design (rechts) zetten. Als de code er in zit moet je ook de top entity van het design aangeven, deze naam moet je bij Top entity invulllen.</description>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/001_software/010_alternatief/</guid>
+      <description>Alternatief voor thuis Als het niet mogellijk is om Vivado te installaren op je eigen laptop, dan kan je de site EDA playground om toch thuis verder te kunnen werken. Je kan hierop inloggen met je Google account (van UHasselt). Zorg dat je bij testbench + design VHDL hebt geselecteerd. Nu kan je de code in de testbench (links) en het design (rechts) zetten. Als de code er in zit moet je ook de top entity van het design aangeven, deze naam moet je bij Top entity invulllen.</description>
     </item>
     
     <item>
       <title>A instructie</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/010_a_instructie/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/010_a_instructie/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/010_a_instructie/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/010_a_instructie/</guid>
       <description>Een A instructie wordt aangegeven door dat de eerste bit van de 16-bit instructie 0 is. Dan zetten we de waarde van deze instructie in register A.
-A instructie  Bron: nand2tetris 
- div.image_courtesy { text-align: center; font-size: 100%; font-style: italic; }  </description>
+A instructie Bron: nand2tetris </description>
     </item>
     
     <item>
       <title>Een CPU maken</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/010_intro_cpu/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/010_intro_cpu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/050_cpu/010_intro_cpu/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/010_intro_cpu/</guid>
       <description>De CPU die we maken heeft onderstaand schema. Bij de ingang van de ALU, de bovenkant (register D) is ALU ingang x en de onderkant is ALU ingang Y.
-Bron: nand2tetris 
- div.image_courtesy { text-align: center; font-size: 100%; font-style: italic; }  </description>
+Bron: nand2tetris </description>
     </item>
     
     <item>
       <title>Eerste project</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/010_eerste_project/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/010_eerste_project/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/010_eerste_project/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/010_eerste_project/</guid>
       <description>Maak een project We starten met een eerste vivado project maken. We beginnen natuurlijk met vivado op te starten en te klikken op create project. Je geeft het project een naam en zorgt dat je het op een plaats zet waar je het nog kan terugvinden. Bij project type zeggen we RTL project en vinken we &amp;ldquo;Do not specify sources at this time&amp;rdquo; aan.
 De volgende keuze die gemaakt moet worden is het type van FPGA.</description>
     </item>
     
     <item>
       <title>Finite State Machine (FSM)</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/910_zelfstudie_fsm/010_fsm/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/910_zelfstudie_fsm/010_fsm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/910_zelfstudie_fsm/010_fsm/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/910_zelfstudie_fsm/010_fsm/</guid>
       <description>Een FSM is een controle structuur die zich in een eindig aantal toestanden kan bevinden. Onder invloed van ingangssignalen kan een FSM overgaan naar een andere toestand. In elke toestand wordt er een waarde toegekend aan de uitgangssignalen. De toestand wordt opgeslagen in een toestandsregister.
-     Voorbeeld FSM De meest eenvoudige FSM is een teller. Er is geen enkel ingangssignaal en de uitgang is de waarde van de toestand.</description>
+Voorbeeld FSM De meest eenvoudige FSM is een teller. Er is geen enkel ingangssignaal en de uitgang is de waarde van de toestand.
+Een eerste ingangssignaal dat de telcyclus kan beïnvloeden, is een enable signaal.</description>
     </item>
     
     <item>
       <title>Hardware vs software</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/010_hw_vs_sw/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/010_hw_vs_sw/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/010_hw_vs_sw/</guid>
-      <description>Hardware vs software   beschrijvingstaal voor hardware &amp;ne; programmeertaal   programmeertaal (bv. C):    hardware = processor   hardware is reeds ontworpen   code: beschrijft hoe hardware gebruikt moet worden   code wordt gecompileerd voor een specifieke processor    hardware beschrijvingstaal (bv. VHDL)    hardware = ontwerp op FPGA of ASIC   hardware moet ontworpen worden   code: beschrijft welke hardware ontworpen moet worden   code wordt gesynthetiseerd voor een specifieke FPGA of ASIC technologie    voorbeeld hardware c &amp;lt;= a and b; e &amp;lt;= c or d; betekent hetzelfde als</description>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/010_hw_vs_sw/</guid>
+      <description>Hardware vs software beschrijvingstaal voor hardware &amp;ne; programmeertaal programmeertaal (bv. C): hardware = processor hardware is reeds ontworpen code: beschrijft hoe hardware gebruikt moet worden code wordt gecompileerd voor een specifieke processor hardware beschrijvingstaal (bv. VHDL) hardware = ontwerp op FPGA of ASIC hardware moet ontworpen worden code: beschrijft welke hardware ontworpen moet worden code wordt gesynthetiseerd voor een specifieke FPGA of ASIC technologie voorbeeld hardware c &amp;lt;= a and b; e &amp;lt;= c or d; betekent hetzelfde als</description>
     </item>
     
     <item>
       <title>Intro Sequentiële logica</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/010_intro_sequentieel/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/010_intro_sequentieel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/010_intro_sequentieel/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/010_intro_sequentieel/</guid>
       <description>Vaak hebben we een clock in een design en is timing essentieel. Als we bij combinatorische logica de ingang veranderen duurt het een onbepaalde tijd eer dat de uitgang veranderd. Bij Sequentiële logica gaan we wachten met de ingang uit te lezen tot de stijgende flank van de clock. Als de timings van het design goed zijn dan is de ingang van een systeem altijd stabiel op het moment dat er een stijgende flank van een clock is.</description>
     </item>
     
     <item>
       <title>SISO</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/030_shift_registers/siso/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/030_shift_registers/siso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/030_shift_registers/siso/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/030_shift_registers/siso/</guid>
       <description>SISO Bij een serial in, serial out shift register komt de data erin en iedere clock cyclus wordt het 1 plaats verder geshift. Dus in onderstaand voorbeeld komt de data er na 4 clock cycli terug uit.
- SISO shift register   Natuurlijk zijn er verschillende manier op dit te beschrijven in VHDL. Onderstaande beschrijving is een voorbeeld.
+SISO shift register Natuurlijk zijn er verschillende manier op dit te beschrijven in VHDL. Onderstaande beschrijving is een voorbeeld.
 library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity SISO_shift_register is Port (clk: in std_logic; D: in std_logic; Y: out std_logic); end SISO_shift_register; architecture Behavioral of SISO_shift_register is signal buf: std_logic_vector(3 downto 0); begin SEQ: process(clk) begin if clk&amp;#39;event and clk = &amp;#39;1&amp;#39; then buf(0) &amp;lt;= D; buf(3 downto 1) &amp;lt;= buf(2 downto 0); end if; end process; Y &amp;lt;= buf(3); end Behavioral; De volgorde dat we de buffer instellen maakt niet uit, want alles wordt tegelijk uitgevoerd in hardware.</description>
     </item>
     
     <item>
       <title>Wat is een ALU</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/040_alu/010_intro_alu/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/040_alu/010_intro_alu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/040_alu/010_intro_alu/</guid>
-      <description>Het doel van dit labo is om uiteindelijk een werkende microprocessor te maken, al is het in een simpele vorm. Het doel is om de &amp;ldquo; hack processor&amp;rdquo; te maken van de cursus &amp;ldquo; nand2tetris&amp;rdquo; . Wij doen dit wel in VHDL doen.
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/040_alu/010_intro_alu/</guid>
+      <description>Het doel van dit labo is om uiteindelijk een werkende microprocessor te maken, al is het in een simpele vorm. Het doel is om de &amp;quot; hack processor&amp;quot; te maken van de cursus &amp;quot; nand2tetris&amp;quot; . Wij doen dit wel in VHDL doen.
 Een van de componenten dat in iedere processor zit is een ALU (Arithmetic logic unit). Een ALU neemt 2 getallen binnen en een instructie wat er mee gedaan moet worden.</description>
     </item>
     
     <item>
       <title>C instructie</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/020_c_instructie/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/020_c_instructie/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/020_c_instructie/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/020_c_instructie/</guid>
       <description>Een C instructie wordt aangegeven door dat de eerste bit van de 16-bit instructie 1 is. Dan hebben we 4 delen genaamd a,c, d en j. In het a en c stuk wordt er bepaald wat er berekend moet worden. Het d stuk beschrijft waar het resultaat naar toe moet en het j stuk bepaald welke instructie als volgende uitgevoerd moet worden.
-C instructie  Bron: nand2tetris 
- div.image_courtesy { text-align: center; font-size: 100%; font-style: italic; }  </description>
+C instructie Bron: nand2tetris </description>
     </item>
     
     <item>
       <title>Entiteiten en architecturen</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/020_ent_arch/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/020_ent_arch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/020_ent_arch/</guid>
-      <description>De VHDL code van elk bouwblok bevat een   interface beschrijving: entity,  functie beschrijving: architecture. 
-Voorbeeld entity and_or_poort is port( a, b, d: in bit; e: out bit); end and_or_poort; architecture arch of and_or_poort is signal c: bit; begin c &amp;lt;= a and b; e &amp;lt;= c or d; end arch; entity entity = beschrijving van de interface
-entity and_or_poort is port( a, b, d: in bit; e: out bit); end and_or_poort;  entity   entity ports Elke poort heeft:   een naam in dit voorbeeld: a,b,d,e  een mode in dit voorbeeld: in, out  een type in dit voorbeeld: bit</description>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/020_ent_arch/</guid>
+      <description>De VHDL code van elk bouwblok bevat een
+interface beschrijving: entity, functie beschrijving: architecture. Voorbeeld entity and_or_poort is port( a, b, d: in bit; e: out bit); end and_or_poort; architecture arch of and_or_poort is signal c: bit; begin c &amp;lt;= a and b; e &amp;lt;= c or d; end arch; entity entity = beschrijving van de interface
+entity and_or_poort is port( a, b, d: in bit; e: out bit); end and_or_poort; entity entity ports Elke poort heeft:</description>
     </item>
     
     <item>
       <title>NAND poort</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/020_nand/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/020_nand/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/020_nand/</guid>
-      <description>De volgende stap is de beschrijving van een logisch AND poort. Hiervoor maak je een nieuwe component aan in het Vivado project. Het grootste deel van de code van de invertor kunnen we overnemen als startpunt voor deze beschrijving.
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/020_nand/</guid>
+      <description>De volgende stap is de beschrijving van een logisch NAND poort. Hiervoor maak je een nieuwe component aan in het Vivado project. Het grootste deel van de code van de invertor kunnen we overnemen als startpunt voor deze beschrijving.
 We passen de entity aan zodat we 2 inputs hebben in plaats van 1. De behuizing van de nieuwe component zegt nu dat er 3 pinnen zijn: 2 input pinnen en 1 output pin.</description>
     </item>
     
     <item>
       <title>Registers</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/020_registers/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/020_registers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/020_registers/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/020_registers/</guid>
       <description>Een register wordt meestal gebruikt om data op te slaan. Een simpel register is een waar je data in kan laden en dan de data kunt uitlezen. Wanneer het load signaal hoog is wordt op de stijgende flank van de clock de data van de D ingang op de uitgang Q gezet.
- Register Parallel in, parallel out   </description>
+Register Parallel in, parallel out </description>
     </item>
     
     <item>
       <title>SIPO</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/030_shift_registers/sipo/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/030_shift_registers/sipo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/030_shift_registers/sipo/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/030_shift_registers/sipo/</guid>
       <description>Serial in, parallel out is een shift register dat gebruikt wordt voor data ontvangst. Meestal komt de data serieel binnen en vaak heeft de volgende stap de data parallel nodig.
- SIPO shift register   Je kan zelf proberen de beschrijving te maken in VHDL
- </description>
+SIPO shift register Je kan zelf proberen de beschrijving te maken in VHDL</description>
     </item>
     
     <item>
       <title>Status codes ALU</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/040_alu/020_status_codes/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/040_alu/020_status_codes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/040_alu/020_status_codes/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/040_alu/020_status_codes/</guid>
       <description>In werkelijkheid gaat men niet rechtstreeks instructies aan een ALU geven, maar meer de status wat de ALU moet hebben.
 Onze ALU heeft 2 ingang van 16-bit registers. Onze ALU geeft ook status codes uit die we later in de processor nog gebruiken. </description>
     </item>
     
     <item>
       <title>Voorbeeld verkeerslicht</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/910_zelfstudie_fsm/020_voorbeeld_verkeerslicht/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/910_zelfstudie_fsm/020_voorbeeld_verkeerslicht/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/910_zelfstudie_fsm/020_voorbeeld_verkeerslicht/</guid>
-      <description>Voorbeeld Moore FSM: verkeerslichten  In rst_state zijn alle uitgangen laag (geen enkel licht brandt). In green_state is de green uitgang hoog en de rest laag (het groen licht brandt). In yellow_state is de yellow uitgang hoog en de rest laag (het oranje licht brandt). In red_state is de red uitgang hoog en de rest laag (het rood licht brandt). We kiezen ervoor om enkel vanuit red_state de mogelijkheid te voorzien om naar rst_state te gaan.</description>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/910_zelfstudie_fsm/020_voorbeeld_verkeerslicht/</guid>
+      <description>Voorbeeld Moore FSM: verkeerslichten In rst_state zijn alle uitgangen laag (geen enkel licht brandt). In green_state is de green uitgang hoog en de rest laag (het groen licht brandt). In yellow_state is de yellow uitgang hoog en de rest laag (het oranje licht brandt). In red_state is de red uitgang hoog en de rest laag (het rood licht brandt). We kiezen ervoor om enkel vanuit red_state de mogelijkheid te voorzien om naar rst_state te gaan.</description>
     </item>
     
     <item>
       <title>AND poort</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/025_and/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/025_and/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/025_and/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/025_and/</guid>
       <description>Heb géén schrik van deze titel. We gaan zeker niet alle componenten 1-voor-1 afgaan 😃.
-Uiteraard gaan design moeilijk te beschrijven zijn in 1 bestand. Componenten kunnen hergebruikt worden in andere componenten. Laat ons als voorbeel een AND poort bouwen met behulp van de eerder geziene NAND poort en de invertor. het schema van ons design ziet er dus al volgt uit.
- AND gate   -- gebruik de package STD_LOGIC_1164 uit de library IEEE library IEEE; use IEEE.</description>
+Uiteraard gaan complexere designs moeilijk te beschrijven zijn in één enkel bestand. Componenten kunnen hergebruikt worden in andere componenten. Laat ons als voorbeeld een AND poort bouwen met behulp van de eerder geziene NAND poort en de invertor. Het schema van ons design ziet er dus als volgt uit.
+De AND gate, gebouwd met behulp van een NAND en een invertor -------------------------------- -- KU Leuven - ESAT/COSIC - ES&amp;amp;S -------------------------------- -- Module Name: and_gate - Behavioural -- Project Name: Digitale elektronische schakelingen -- Description: Een voorbeeld van een and-gate, gebouwd -- met een nand en een invertor.</description>
     </item>
     
     <item>
       <title>2s Compliments</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/040_alu/025_2scompliment/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/040_alu/025_2scompliment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/040_alu/025_2scompliment/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/040_alu/025_2scompliment/</guid>
       <description>Het is belangrijk om te weten dat 2&amp;rsquo;s compliment wordt gebruikt zodat ge met dezelfde hardware kan optellen als aftrekken. Om bij 2&amp;rsquo;s compliment van een positief naar negatief getal te gaan of andersom moet je alles inverteren en +1 doen.
 Wikipedia heeft ook goede uitleg over 2&amp;rsquo;s compliment.</description>
     </item>
     
     <item>
       <title>C instructie compute</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/030_c_instructie_comp/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/030_c_instructie_comp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/030_c_instructie_comp/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/030_c_instructie_comp/</guid>
       <description>In onderstaande figuur zien u de waarheidstabel van het c en a stuk van de instructie. Wanneer het a stuk gelijk is aan 1 dan gebruikt het een stuk geheugen van het geheugen address. Dit is de input inM van het schema.
-C instructie compute waarheidstabel  Bron: nand2tetris 
- div.image_courtesy { text-align: center; font-size: 100%; font-style: italic; }  </description>
+C instructie compute waarheidstabel Bron: nand2tetris </description>
     </item>
     
     <item>
       <title>hiërarchie</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/030_hierachie/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/030_hierachie/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/030_hierachie/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/030_hierachie/</guid>
       <description>het is mogelijk om een hiërarchie in te bouwen. Een bouwblok kan een instantie van een andere bouwblok bevatten.
-entity and_or_xor_poort is port( a, b, c, d: in bit; e: out bit); end and_or_xor_poort; architecture arch of and_or_xor_poort is component and_or_poort is --declaratie van and_or poort port( a, b, d: in bit; e: out bit); end component; signal f: bit; begin inst_and_or_poort: and_or_poort --instantie van and_or poort port map( a =&amp;gt; b, b =&amp;gt; a, d =&amp;gt; c, e =&amp;gt; f); e &amp;lt;= d xor f; end arch;     Een component moet eerst gedeclareerd zijn alvorens hem te instantiëren.</description>
+entity and_or_xor_poort is port( a, b, c, d: in bit; e: out bit); end and_or_xor_poort; architecture arch of and_or_xor_poort is component and_or_poort is --declaratie van and_or poort port( a, b, d: in bit; e: out bit); end component; signal f: bit; begin inst_and_or_poort: and_or_poort --instantie van and_or poort port map( a =&amp;gt; b, b =&amp;gt; a, d =&amp;gt; c, e =&amp;gt; f); e &amp;lt;= d xor f; end arch; &amp;lt;figure&amp;gt;&amp;lt;img src=&amp;quot;/images/zelfstudie/and_or_xor.</description>
     </item>
     
     <item>
       <title>Opdracht 4: ALU</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/040_alu/030_opdracht_alu/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/040_alu/030_opdracht_alu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/040_alu/030_opdracht_alu/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/040_alu/030_opdracht_alu/</guid>
       <description>De ALU die je moet maken voor deze opdracht ziet er zo uit. Ingangen x en y zijn 16 bits. De input status bits zijn zx (zero x) ,nx (negate x), zy (zero y), ny (negate y), f (function), no (negate output). De output status zijn zr (zero) en ng (negativee).
 Later zetten we de input status code juist op basis van de binnenkomende instructie en optioneel doen we iets met de output status codes.</description>
     </item>
     
     <item>
       <title>PISO</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/030_shift_registers/piso/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/030_shift_registers/piso/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/030_shift_registers/piso/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/030_shift_registers/piso/</guid>
       <description>Een parallel in, serial out shift register wordt gebruikt als ge parallel data hebt en het serieel wil doorsturen. Hier hebben we wel een load signal nodig om de data in te laden en multiplexer om te zorgen dat de data ook in de flip-flops kan geraken.
- PISO shift register   library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity PISO_shift_register is Port (clk, load: in std_logic; D_Vector: in std_logic_vector(3 downto 0); Y: out std_logic); end PISO_shift_register; architecture Behavioral of PISO_shift_register is signal buf: std_logic_vector(3 downto 0); begin SEQ: process(clk) begin if clk&amp;#39;event and clk = &amp;#39;1&amp;#39; then if load = &amp;#39;1&amp;#39; then buf &amp;lt;= D_vector; else buf(3 downto 1) &amp;lt;= buf(2 downto 0); buf(0) &amp;lt;= &amp;#39;-&amp;#39;; --in de meeste toepassingen maakt het niet uit welke bit er uit komt als de buffer leeg is end if; end if; end process; Y &amp;lt;= buf(3); end Behavioral; VHDL heeft onderstaande waardes voor std_logic &amp;lsquo;U&amp;rsquo; Uninitialized &amp;lsquo;X&amp;rsquo; Forcing Unknown &amp;lsquo;0&amp;rsquo; Forcing 0 &amp;lsquo;1&amp;rsquo; Forcing 1 &amp;lsquo;Z&amp;rsquo; High Impedance &amp;lsquo;W&amp;rsquo; Weak Unknown &amp;lsquo;L&amp;rsquo; Weak 0 &amp;lsquo;H&amp;rsquo; Weak 1 &amp;lsquo;-&amp;rsquo; Don&amp;rsquo;t Care</description>
+PISO shift register library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity PISO_shift_register is Port (clk, load: in std_logic; D_Vector: in std_logic_vector(3 downto 0); Y: out std_logic); end PISO_shift_register; architecture Behavioral of PISO_shift_register is signal buf: std_logic_vector(3 downto 0); begin SEQ: process(clk) begin if clk&amp;#39;event and clk = &amp;#39;1&amp;#39; then if load = &amp;#39;1&amp;#39; then buf &amp;lt;= D_vector; else buf(3 downto 1) &amp;lt;= buf(2 downto 0); buf(0) &amp;lt;= &amp;#39;-&amp;#39;; --in de meeste toepassingen maakt het niet uit welke bit er uit komt als de buffer leeg is end if; end if; end process; Y &amp;lt;= buf(3); end Behavioral; VHDL heeft onderstaande waardes voor std_logic &amp;lsquo;U&amp;rsquo; Uninitialized &amp;lsquo;X&amp;rsquo; Forcing Unknown &amp;lsquo;0&amp;rsquo; Forcing 0 &amp;lsquo;1&amp;rsquo; Forcing 1 &amp;lsquo;Z&amp;rsquo; High Impedance &amp;lsquo;W&amp;rsquo; Weak Unknown &amp;lsquo;L&amp;rsquo; Weak 0 &amp;lsquo;H&amp;rsquo; Weak 1 &amp;lsquo;-&amp;rsquo; Don&amp;rsquo;t Care</description>
     </item>
     
     <item>
       <title>Simulatie</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/030_simulatie/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/030_simulatie/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/030_simulatie/</guid>
-      <description>Hoe zijn we nu zeker dat onze nand poort correct werkt? We zouden een ASIC kunnen maken, maar dat zou een veel te dure en tijdrovende manier zijn.
-Een realistischer stap is om het design te implementeren op een FPGA, maar er is nog een gemakkelijkere en nuttigere manier: testbenches.
-Het idee achter een testbench is dat er &amp;ldquo;machines&amp;rdquo; zijn die inputs (ook stimuli) kunnen genereren. Vervolgens kunnen de waveforms van het hele design geanalyseerd worden én kan de output van een component geverifieerd worden.</description>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/030_simulatie/</guid>
+      <description>Hoe kan er nu getest worden of onze nand poort correct werkt? We zouden een ASIC kunnen maken, maar dat zou een veel te dure en tijdrovende manier zijn.
+Een realistischere manier is om het design te implementeren op een FPGA, maar er is nog een gemakkelijkere en nuttigere manier: testbenches.
+Het idee achter een testbench is dat er &amp;ldquo;toestellen&amp;rdquo; zijn die inputs (ook stimuli genoemd) kunnen genereren. Vervolgens kunnen de waveforms van het hele design visueel geanalyseerd worden én kan de output van een component geverifieerd worden.</description>
     </item>
     
     <item>
       <title>Voorbeeld verkeerslicht timer</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/910_zelfstudie_fsm/030_voorbeeld_timer/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/910_zelfstudie_fsm/030_voorbeeld_timer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/910_zelfstudie_fsm/030_voorbeeld_timer/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/910_zelfstudie_fsm/030_voorbeeld_timer/</guid>
       <description>Voorbeeld Mealy FSM: verkeerslichten met timer We voegen twee tellers toe om ervoor te zorgen dat de verkeerslichten langer rood en groen blijven dan oranje.
- We veronderstellen dat de tellers op nul blijven staan zolang het start signaal hoog is. Als het start signaal laag wordt, telt de overeenkomstige teller op totdat een maximum is bereikt. Bij de korte teller is dit maximum (&amp;ldquo;0111&amp;rdquo;) kleiner dan bij de lange teller (&amp;ldquo;1111&amp;rdquo;).</description>
+We veronderstellen dat de tellers op nul blijven staan zolang het start signaal hoog is. Als het start signaal laag wordt, telt de overeenkomstige teller op totdat een maximum is bereikt. Bij de korte teller is dit maximum (&amp;ldquo;0111&amp;rdquo;) kleiner dan bij de lange teller (&amp;ldquo;1111&amp;rdquo;).</description>
+    </item>
+    
+    <item>
+      <title>Synthetiseerbaar</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/031_synthesisable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/031_synthesisable/</guid>
+      <description>Synthesisable subset Tot hier hebben we gekeken naar de beschrijving van enkele discrete componenten. Deze componenten hebben beschreven in VHDL. Daarnaast hebben we een eerste testbench gemaakt ter verificatie van het ontwerp. Ook deze testbench is beschreven in VHDL. Dit is wellicht een goed moment om even aan te halen dat er ook andere HDL (hardware description languages) bestaan. Wellicht is de meest bekende (en meest gebruikte) taal verilog. De meest recente, wijd-verspreide taal is SystemVerilog, welke (zoals de naam doet vermoeden) gebaseeerd is op verilog.</description>
     </item>
     
     <item>
       <title>C instructie destination</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/040_c_instructie_destination/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/040_c_instructie_destination/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/040_c_instructie_destination/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/040_c_instructie_destination/</guid>
       <description>In onderstaande tabel staat beschreven waar de uitkomst van de bewerking wordt opgeslagen.
-C instructie aankomst waarheidstabel  Bron: nand2tetris 
- div.image_courtesy { text-align: center; font-size: 100%; font-style: italic; }  </description>
+C instructie aankomst waarheidstabel Bron: nand2tetris </description>
     </item>
     
     <item>
       <title>Libraries</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/040_libraries/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/040_libraries/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/040_libraries/</guid>
-      <description>Een library kan meerdere packages bevatten. Een package bevat 1 of meer van onderstaande middelen.   types   constanten   functies   procedures   Een VHDL module kan gebruik maken van 1 of meerdere packages  Voorbeeld: library library1; use library1.pack2.all; library library2; use library2.pack4.all; entity ... architecture...    
-&amp;ldquo;std&amp;rdquo; library Een verwijzing naar de package &amp;ldquo;standard&amp;rdquo; in de library &amp;ldquo;std&amp;rdquo; is steeds impliciet aanwezig.</description>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/040_libraries/</guid>
+      <description>Een library kan meerdere packages bevatten.
+Een package bevat 1 of meer van onderstaande middelen.
+types constanten functies procedures Een VHDL module kan gebruik maken van 1 of meerdere packages Voorbeeld:
+library library1; use library1.pack2.all; library library2; use library2.pack4.all; entity ... architecture... &amp;ldquo;std&amp;rdquo; library Een verwijzing naar de package &amp;ldquo;standard&amp;rdquo; in de library &amp;ldquo;std&amp;rdquo; is steeds impliciet aanwezig. Volgende twee codes zijn identiek.
+entity and_or_poort is port( a, b, d: in bit; e: out bit); end and_or_poort; architecture arch of and_or_poort is signal c: bit; begin c &amp;lt;= a and b; e &amp;lt;= c or d; end arch; library std; use std.</description>
     </item>
     
     <item>
       <title>Opdracht 1: OR gate</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/040_opdracht/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/040_opdracht/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/010_intro_vhdl/040_opdracht/</guid>
-      <description>Als eerste opdracht in deze labo&amp;rsquo;s gaan jullie zelf een OR gate maken. Maak hiervoor een nieuw bestand aan waarin je de beschrijving kwijt kan. Om te weten of de implementatie werkt, moet er ook een testbench geschreven worden. Deze kunnen dan gebruiken om het design te simuleren.
-De schematic voor de OR poort (voor zij die het vergeten zouden zijn) is:  OR gate  
-Opleveren Om deze opdracht op te leveren moeten jullie volgende bestanden indienen via Toledo:</description>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/040_opdracht/</guid>
+      <description>Als eerste opdracht in deze labo&amp;rsquo;s gaan jullie zelf een OR gate maken. Maak hiervoor een nieuw bestand aan waarin je de beschrijving kwijt kan. Om te weten of de implementatie werkt, moet er ook een testbench geschreven worden. Deze kan dan gebruiken om het design te simuleren.
+De schematic voor de OR poort (voor zij die het vergeten zouden zijn) is:
+OR gate Opleveren Om deze opdracht op te leveren moeten jullie volgende bestanden indienen via Toledo:</description>
     </item>
     
     <item>
       <title>PIPO</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/030_shift_registers/pipo/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/030_shift_registers/pipo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/030_shift_registers/pipo/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/030_shift_registers/pipo/</guid>
       <description>Bij parallel in, parallel out register (PIPO) komt op de ingang op de uitgang met 1 clock cyclus vertraging.
- PIPO shift register   Bron: electronics-club   div.image_courtesy { text-align: center; font-size: 100%; font-style: italic; }  </description>
+PIPO shift register Bron: electronics-club </description>
     </item>
     
     <item>
       <title>Reset</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/040_reset/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/040_reset/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/040_reset/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/040_reset/</guid>
       <description>Vaak is het gewenst om een reset knop te hebben om alles terug naar een geweten begintoestand te brengen. Hier zijn typisch 2 manier om dit te doen, een synchrone reset of een asynchrone reset.
- asynchrone reset  Onderstaand voorbeeld is van een D flip-flop met asynchrone reset, Je ziet hier dat de reset onderdeel is van de sensitivity list. De reset staat hier als eerste in het process.   synchrone reset  Onderstaand voorbeeld is van een D flip-flop met synchrone reset, Je ziet hier dat de reset geen onderdeel is van de sensitivity list.</description>
+asynchrone reset Onderstaand voorbeeld is van een D flip-flop met asynchrone reset, Je ziet hier dat de reset onderdeel is van de sensitivity list. De reset staat hier als eerste in het process. synchrone reset Onderstaand voorbeeld is van een D flip-flop met synchrone reset, Je ziet hier dat de reset geen onderdeel is van de sensitivity list.</description>
     </item>
     
     <item>
       <title>Testbench ALU</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/040_alu/040_testbench_alu/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/040_alu/040_testbench_alu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/040_alu/040_testbench_alu/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/040_alu/040_testbench_alu/</guid>
       <description>De testbench om te testen of de ALU werkt is deze. Deze testbench wordt ook gebruikt om de opdracht te verbeteren!
-library IEEE; use IEEE.STD_LOGIC_1164.ALL; -- Uncomment the following library declaration if using -- arithmetic functions with Signed or Unsigned values --use IEEE.NUMERIC_STD.ALL; -- Uncomment the following library declaration if instantiating -- any Xilinx leaf cells in this code. --library UNISIM; --use UNISIM.VComponents.all; entity tb_ALU is -- Port ( ); end tb_ALU; architecture Behavioral of tb_ALU is component ALU is Port (zx, nx, zy, ny, f, no: in std_logic ; x, y: in std_logic_vector(15 downto 0); z : out std_logic_vector(15 downto 0); zr, ng: out std_logic); end component; signal zx, nx, zy, ny, f, no: std_logic ; signal x, y: std_logic_vector(15 downto 0); signal z : std_logic_vector(15 downto 0); signal zr, ng: std_logic; begin DUT: ALU port map( zx =&amp;gt; zx, nx =&amp;gt; nx, zy =&amp;gt; zy, ny =&amp;gt; ny, f =&amp;gt; f, no =&amp;gt; no, x =&amp;gt; x, y =&amp;gt; y, z =&amp;gt; z, zr =&amp;gt; zr, ng =&amp;gt; ng ); PROC: process begin zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;0&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;0&amp;#39;; no &amp;lt;= &amp;#39;0&amp;#39;; x &amp;lt;= &amp;#34;0000000000000000&amp;#34;; y &amp;lt;= &amp;#34;0000000000000000&amp;#34;; wait for 10ns; zx &amp;lt;= &amp;#39;1&amp;#39;; nx &amp;lt;= &amp;#39;0&amp;#39;; zy &amp;lt;= &amp;#39;1&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;0&amp;#39;; wait for 10ns; assert (z = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;0 werkt niet&amp;#34; severity failure; assert (zr = &amp;#39;1&amp;#39;) report &amp;#34;zr werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;1&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;1&amp;#39;; ny &amp;lt;= &amp;#39;1&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0000000011111111&amp;#34;; y &amp;lt;= &amp;#34;0011100111100110&amp;#34;; wait for 10ns; assert (z = &amp;#34;0000000000000001&amp;#34;) report &amp;#34;1 werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;1&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;1&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;0&amp;#39;; x &amp;lt;= &amp;#34;0000000011111111&amp;#34;; y &amp;lt;= &amp;#34;0011100111100110&amp;#34;; wait for 10ns; assert (z = &amp;#34;1111111111111111&amp;#34;) report &amp;#34;-1 werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;0&amp;#39;; zy &amp;lt;= &amp;#39;1&amp;#39;; ny &amp;lt;= &amp;#39;1&amp;#39;; f &amp;lt;= &amp;#39;0&amp;#39;; no &amp;lt;= &amp;#39;0&amp;#39;; x &amp;lt;= &amp;#34;0000110111111110&amp;#34;; y &amp;lt;= &amp;#34;0011100111100110&amp;#34;; wait for 10ns; assert (z = &amp;#34;0000110111111110&amp;#34;) report &amp;#34;x doorlaten werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;1&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;0&amp;#39;; no &amp;lt;= &amp;#39;0&amp;#39;; x &amp;lt;= &amp;#34;0000110111111110&amp;#34;; y &amp;lt;= &amp;#34;0011100101100110&amp;#34;; wait for 10ns; assert (z = &amp;#34;0011100101100110&amp;#34;) report &amp;#34;y doorlaten werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;0&amp;#39;; zy &amp;lt;= &amp;#39;1&amp;#39;; ny &amp;lt;= &amp;#39;1&amp;#39;; f &amp;lt;= &amp;#39;0&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0011111111111111&amp;#34;; y &amp;lt;= &amp;#34;0011100101100110&amp;#34;; wait for 10ns; assert (z = &amp;#34;1100000000000000&amp;#34;) report &amp;#34;niet x werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;1&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;0&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0011111000001111&amp;#34;; y &amp;lt;= &amp;#34;0011011111111110&amp;#34;; wait for 10ns; assert (z = &amp;#34;1100100000000001&amp;#34;) report &amp;#34;niet y werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;0&amp;#39;; zy &amp;lt;= &amp;#39;1&amp;#39;; ny &amp;lt;= &amp;#39;1&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0000000000000111&amp;#34;; y &amp;lt;= &amp;#34;0011011111111110&amp;#34;; wait for 10ns; assert (z = &amp;#34;1111111111111001&amp;#34;) report &amp;#34;min x werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;1&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0000000000000111&amp;#34;; y &amp;lt;= &amp;#34;0111111111111110&amp;#34;; wait for 10ns; assert (z = &amp;#34;1000000000000010&amp;#34;) report &amp;#34;min y werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;1&amp;#39;; ny &amp;lt;= &amp;#39;1&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0000000000000111&amp;#34;; y &amp;lt;= &amp;#34;0111111111110110&amp;#34;; wait for 10ns; assert (z = &amp;#34;0000000000001000&amp;#34;) report &amp;#34;x+1 werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;1&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;1&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0000000000000111&amp;#34;; y &amp;lt;= &amp;#34;0111111111111110&amp;#34;; wait for 10ns; assert (z = &amp;#34;0111111111111111&amp;#34;) report &amp;#34;y+1 werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;0&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;0&amp;#39;; x &amp;lt;= &amp;#34;0000000000000111&amp;#34;; y &amp;lt;= &amp;#34;0111111111100000&amp;#34;; wait for 10ns; assert (z = &amp;#34;0111111111100111&amp;#34;) report &amp;#34;x+y werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;0&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;0&amp;#39;; no &amp;lt;= &amp;#39;0&amp;#39;; x &amp;lt;= &amp;#34;0000111000000111&amp;#34;; y &amp;lt;= &amp;#34;0111111111100000&amp;#34;; wait for 10ns; assert (z = &amp;#34;0000111000000000&amp;#34;) report &amp;#34;x&amp;amp;y werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;1&amp;#39;; f &amp;lt;= &amp;#39;0&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0000111000000111&amp;#34;; y &amp;lt;= &amp;#34;0111111111100000&amp;#34;; wait for 10ns; assert (z = &amp;#34;0111111111100111&amp;#34;) report &amp;#34;x|y werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0000000000000010&amp;#34;; y &amp;lt;= &amp;#34;0000000000000100&amp;#34;; wait for 10ns; assert (z = &amp;#34;1111111111111110&amp;#34;) report &amp;#34;x-y werkt niet&amp;#34; severity failure; assert (ng = &amp;#39;1&amp;#39;) report &amp;#34;ng werkt niet&amp;#34; severity failure; wait for 10ns; wait; end process; end Behavioral;</description>
+library IEEE; use IEEE.STD_LOGIC_1164.ALL; -- Uncomment the following library declaration if using -- arithmetic functions with Signed or Unsigned values --use IEEE.NUMERIC_STD.ALL; -- Uncomment the following library declaration if instantiating -- any Xilinx leaf cells in this code. --library UNISIM; --use UNISIM.VComponents.all; entity tb_ALU is -- Port ( ); end tb_ALU; architecture Behavioral of tb_ALU is component ALU is Port (zx, nx, zy, ny, f, no: in std_logic ; x, y: in std_logic_vector(15 downto 0); z : out std_logic_vector(15 downto 0); zr, ng: out std_logic); end component; signal zx, nx, zy, ny, f, no: std_logic ; signal x, y: std_logic_vector(15 downto 0); signal z : std_logic_vector(15 downto 0); signal zr, ng: std_logic; begin DUT: ALU port map( zx =&amp;gt; zx, nx =&amp;gt; nx, zy =&amp;gt; zy, ny =&amp;gt; ny, f =&amp;gt; f, no =&amp;gt; no, x =&amp;gt; x, y =&amp;gt; y, z =&amp;gt; z, zr =&amp;gt; zr, ng =&amp;gt; ng ); PROC: process begin zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;0&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;0&amp;#39;; no &amp;lt;= &amp;#39;0&amp;#39;; x &amp;lt;= &amp;#34;0000000000000000&amp;#34;; y &amp;lt;= &amp;#34;0000000000000000&amp;#34;; wait for 10ns; zx &amp;lt;= &amp;#39;1&amp;#39;; nx &amp;lt;= &amp;#39;0&amp;#39;; zy &amp;lt;= &amp;#39;1&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;0&amp;#39;; wait for 10ns; assert (z = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;0 werkt niet&amp;#34; severity failure; assert (zr = &amp;#39;1&amp;#39;) report &amp;#34;zr werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;1&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;1&amp;#39;; ny &amp;lt;= &amp;#39;1&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0000000011111111&amp;#34;; y &amp;lt;= &amp;#34;0011100111100110&amp;#34;; wait for 10ns; assert (z = &amp;#34;0000000000000001&amp;#34;) report &amp;#34;1 werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;1&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;1&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;0&amp;#39;; x &amp;lt;= &amp;#34;0000000011111111&amp;#34;; y &amp;lt;= &amp;#34;0011100111100110&amp;#34;; wait for 10ns; assert (z = &amp;#34;1111111111111111&amp;#34;) report &amp;#34;-1 werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;0&amp;#39;; zy &amp;lt;= &amp;#39;1&amp;#39;; ny &amp;lt;= &amp;#39;1&amp;#39;; f &amp;lt;= &amp;#39;0&amp;#39;; no &amp;lt;= &amp;#39;0&amp;#39;; x &amp;lt;= &amp;#34;0000110111111110&amp;#34;; y &amp;lt;= &amp;#34;0011100111100110&amp;#34;; wait for 10ns; assert (z = &amp;#34;0000110111111110&amp;#34;) report &amp;#34;x doorlaten werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;1&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;0&amp;#39;; no &amp;lt;= &amp;#39;0&amp;#39;; x &amp;lt;= &amp;#34;0000110111111110&amp;#34;; y &amp;lt;= &amp;#34;0011100101100110&amp;#34;; wait for 10ns; assert (z = &amp;#34;0011100101100110&amp;#34;) report &amp;#34;y doorlaten werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;0&amp;#39;; zy &amp;lt;= &amp;#39;1&amp;#39;; ny &amp;lt;= &amp;#39;1&amp;#39;; f &amp;lt;= &amp;#39;0&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0011111111111111&amp;#34;; y &amp;lt;= &amp;#34;0011100101100110&amp;#34;; wait for 10ns; assert (z = &amp;#34;1100000000000000&amp;#34;) report &amp;#34;niet x werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;1&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;0&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0011111000001111&amp;#34;; y &amp;lt;= &amp;#34;0011011111111110&amp;#34;; wait for 10ns; assert (z = &amp;#34;1100100000000001&amp;#34;) report &amp;#34;niet y werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;0&amp;#39;; zy &amp;lt;= &amp;#39;1&amp;#39;; ny &amp;lt;= &amp;#39;1&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0000000000000111&amp;#34;; y &amp;lt;= &amp;#34;0011011111111110&amp;#34;; wait for 10ns; assert (z = &amp;#34;1111111111111001&amp;#34;) report &amp;#34;min x werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;1&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0000000000000111&amp;#34;; y &amp;lt;= &amp;#34;0111111111111110&amp;#34;; wait for 10ns; assert (z = &amp;#34;1000000000000010&amp;#34;) report &amp;#34;min y werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;1&amp;#39;; ny &amp;lt;= &amp;#39;1&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0000000000000111&amp;#34;; y &amp;lt;= &amp;#34;0111111111110110&amp;#34;; wait for 10ns; assert (z = &amp;#34;0000000000001000&amp;#34;) report &amp;#34;x+1 werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;1&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;1&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0000000000000111&amp;#34;; y &amp;lt;= &amp;#34;0111111111111110&amp;#34;; wait for 10ns; assert (z = &amp;#34;0111111111111111&amp;#34;) report &amp;#34;y+1 werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;0&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;0&amp;#39;; x &amp;lt;= &amp;#34;0000000000000111&amp;#34;; y &amp;lt;= &amp;#34;0111111111100000&amp;#34;; wait for 10ns; assert (z = &amp;#34;0111111111100111&amp;#34;) report &amp;#34;x+y werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;0&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;0&amp;#39;; no &amp;lt;= &amp;#39;0&amp;#39;; x &amp;lt;= &amp;#34;0000111000000111&amp;#34;; y &amp;lt;= &amp;#34;0111111111100000&amp;#34;; wait for 10ns; assert (z = &amp;#34;0000111000000000&amp;#34;) report &amp;#34;x&amp;amp;y werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;1&amp;#39;; f &amp;lt;= &amp;#39;0&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0000111000000111&amp;#34;; y &amp;lt;= &amp;#34;0111111111100000&amp;#34;; wait for 10ns; assert (z = &amp;#34;0111111111100111&amp;#34;) report &amp;#34;x|y werkt niet&amp;#34; severity failure; wait for 10ns; zx &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;1&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;1&amp;#39;; x &amp;lt;= &amp;#34;0000000000000010&amp;#34;; y &amp;lt;= &amp;#34;0000000000000100&amp;#34;; wait for 10ns; assert (z = &amp;#34;1111111111111110&amp;#34;) report &amp;#34;x-y werkt niet&amp;#34; severity failure; assert (ng = &amp;#39;1&amp;#39;) report &amp;#34;ng werkt niet&amp;#34; severity failure; wait for 10ns; wait; end process; end Behavioral; </description>
     </item>
     
     <item>
       <title>Vectors</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/020_next_step/040_vectors/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/040_vectors/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/020_next_step/040_vectors/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/040_vectors/</guid>
       <description>Soms moet of wil je met arrays of groepen van bits werken. Natuurlijk gaat dit ook in VHDL en dit noemt dan vectors. Als we een array van 8 bits willen dan doen we dat zoals in onderstaande regel.
 std_logic_vector(7 downto 0); Als illustratie hoe vectors werken kan je onderstaand voorbeeldje bekijken.
 library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity vector_example is Port (A_vector: in std_logic_vector(7 downto 0); Y_vector: out std_logic_vector(7 downto 0)); end vector_example; architecture Behavioral of vector_example is begin Y_vector(7) &amp;lt;= A_vector(0) AND A_vector(1); Y_vector(6 downto 0) &amp;lt;= A_vector(7 downto 1); end Behavioral; Iedere beschrijving die gemaakt wordt in VHDL (of Verilog) kan een hardware schema van gemaakt worden.</description>
@@ -328,179 +335,178 @@ library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity vector_example is Port (A_vect
     
     <item>
       <title>Arrays</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/050_arrays/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/050_arrays/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/050_arrays/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/050_arrays/</guid>
       <description>Een range kan stijgend of dalend gekozen worden:
- x(2 to 6) y(7 downto 0)  We kunnen verwijzen naar individuele elementen door een index te gebruiken:
- x(4) y(7)  Voorbeeld: entity and_or_poort is port( a_vec: in bit_vector(2 downto 0); c_vec: out bit_vector(0 to 1)); end and_or_poort; architecture arch of and_or_poort is signal c_intern: bit; begin c_intern &amp;lt;= a_vec(2) and a_vec(1); c_vec(1) &amp;lt;= c_intern or a_vec(0); c_vec(0) &amp;lt;= c_intern: end arch;</description>
+x(2 to 6) y(7 downto 0) We kunnen verwijzen naar individuele elementen door een index te gebruiken:
+x(4) y(7) Voorbeeld:
+entity and_or_poort is port( a_vec: in bit_vector(2 downto 0); c_vec: out bit_vector(0 to 1)); end and_or_poort; architecture arch of and_or_poort is signal c_intern: bit; begin c_intern &amp;lt;= a_vec(2) and a_vec(1); c_vec(1) &amp;lt;= c_intern or a_vec(0); c_vec(0) &amp;lt;= c_intern: end arch; Toekenning van arrays Toekenning gebeurt op basis van positie, niet op basis van index.</description>
     </item>
     
     <item>
       <title>C instructie jump</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/050_c_instructie_jmp/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/050_c_instructie_jmp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/050_cpu/020_isa/050_c_instructie_jmp/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/050_c_instructie_jmp/</guid>
       <description>In onderstaande tabel staat beschreven wanneer er een jump gedaan moet worden. Het address waar naar toe gesprongen moet worden staat in het A register.
-C instructie spring waarheidstabel  Bron: nand2tetris 
- div.image_courtesy { text-align: center; font-size: 100%; font-style: italic; }  </description>
+C instructie spring waarheidstabel Bron: nand2tetris </description>
     </item>
     
     <item>
       <title>Signals</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/020_next_step/050_signals/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/050_signals/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/020_next_step/050_signals/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/050_signals/</guid>
       <description>Natuurlijk hebben we soms ook tussensingalen nodig in ons project/code. Hiervoor gebruiken we signals. Signals beschrijf je na de architecture maar voor het begin keyword. Zoals in het voorbeeld hieronder.
-library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity signal_example is Port (A_vector: in std_logic_vector(7 downto 0); Y_vector: out std_logic_vector(7 downto 0)); end signal_example; architecture Behavioral of signal_example is signal tussenresultaat: std_logic; begin tussenresultaat &amp;lt;= A_vector(0) AND A_vector(1); Y_vector(7) &amp;lt;= tussenresultaat; Y_vector(6 downto 0) &amp;lt;= A_vector(7 downto 1); end Behavioral;</description>
+library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity signal_example is Port (A_vector: in std_logic_vector(7 downto 0); Y_vector: out std_logic_vector(7 downto 0)); end signal_example; architecture Behavioral of signal_example is signal tussenresultaat: std_logic; begin tussenresultaat &amp;lt;= A_vector(0) AND A_vector(1); Y_vector(7) &amp;lt;= tussenresultaat; Y_vector(6 downto 0) &amp;lt;= A_vector(7 downto 1); end Behavioral; </description>
     </item>
     
     <item>
       <title>Packages</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/060_packages/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/060_packages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/060_packages/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/060_packages/</guid>
       <description>Zelf-gedefinieerde packages Per default worden zelfgemaakte bouwblokken opgeslagen in de library work. In deze library kunnen we zelf packages definiëren.
 Voorbeeld van een zelf-gedefinieerde package: package and_or_xor_pack is component and_or_poort is port( a, b, d: in bit; e: out bit); end component; end package; Als we deze package toevoegen, hoeven we de component declaratie niet meer te doen.
-library work; use work.and_or_xor_pack.all; entity and_or_xor_poort ... architecture ... -- zonder component declaratie &amp;ldquo;std_logic_1164&amp;rdquo; package De package &amp;ldquo; std_logic_1164&amp;rdquo; in library &amp;ldquo; ieee&amp;rdquo; bevat o.</description>
+library work; use work.and_or_xor_pack.all; entity and_or_xor_poort ... architecture ... -- zonder component declaratie &amp;ldquo;std_logic_1164&amp;rdquo; package De package &amp;quot; std_logic_1164&amp;quot; in library &amp;quot; ieee&amp;quot; bevat o.</description>
     </item>
     
     <item>
       <title>Processen</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/020_next_step/060_processen/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/060_processen/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/020_next_step/060_processen/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/060_processen/</guid>
       <description>Vaak wil je if gebruiken in de code en als dat het geval is kunnen we een process maken. We kunnen niet los zonder process een if statement zetten.
 Processen hebben een naam in dit geval p1 en een sensitivity list. De sensitivity list is hetgeen dat tussen haakjes staat. Dit geeft aan wanneer het process moet worden uitgevoerd. Voor combinatorische logica moeten daar alle ingangen en tussensignalen van het process staan.</description>
     </item>
     
     <item>
       <title>Processen</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/070_processen/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/070_processen/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/070_processen/</guid>
-      <description>Structuur van een proces Een proces wordt uitgevoerd wanneer een signaal in de sensitivity lijst van waarde verandert.  Signalen worden geupdated aan het einde van het proces.  Voorbeeld van een proces met een if-then-else statement: multiplexer.
-library ieee; use ieee.std_logic_1164.all; entity mux is port( a, b, s: in std_logic; z: out std_logic); end mux; architecture arch of mux is begin p1: process(a, b, s) -- a, b, s is de sensitiviy lijst begin if s = &amp;#39;1&amp;#39; then z &amp;lt;= a; else z &amp;lt;= b; end if; end process; end arch;</description>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/070_processen/</guid>
+      <description>Structuur van een proces Een proces wordt uitgevoerd wanneer een signaal in de sensitivity lijst van waarde verandert. Signalen worden geupdated aan het einde van het proces. Voorbeeld van een proces met een if-then-else statement: multiplexer.
+library ieee; use ieee.std_logic_1164.all; entity mux is port( a, b, s: in std_logic; z: out std_logic); end mux; architecture arch of mux is begin p1: process(a, b, s) -- a, b, s is de sensitiviy lijst begin if s = &amp;#39;1&amp;#39; then z &amp;lt;= a; else z &amp;lt;= b; end if; end process; end arch; Toekenningen in processen Volgende processen leiden tot dezelfde implementatie:</description>
     </item>
     
     <item>
       <title>Generate</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/020_next_step/080_generate/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/080_generate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/020_next_step/080_generate/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/080_generate/</guid>
       <description>Een generate is handig als je vaak code moet herhalen. Meestal kan je dan een generate statement gebruiken om te voorkomen dat je te veel moet kopiëren en plakken.
 De generate gaat in dit voorbeeld van 0 tot 6 omdat 6+1 al 7 is, wat het laatste element van de array is.
-library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity generate_example is Port (A_vector: in std_logic_vector(7 downto 0); Y_vector: out std_logic_vector(7 downto 0)); end generate_example; architecture Behavioral of generate_example is begin GEN : for i in 0 to 6 generate Y_vector(i) &amp;lt;= A_vector(i) AND A_vector(i+1); end generate; end Behavioral;  Schematische voorstelling   Vivado kan een schematische voorstelling maken van de hardware beschrijving met RTL analysis elaborate design.</description>
+library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity generate_example is Port (A_vector: in std_logic_vector(7 downto 0); Y_vector: out std_logic_vector(7 downto 0)); end generate_example; architecture Behavioral of generate_example is begin GEN : for i in 0 to 6 generate Y_vector(i) &amp;lt;= A_vector(i) AND A_vector(i+1); end generate; end Behavioral; Schematische voorstelling Vivado kan een schematische voorstelling maken van de hardware beschrijving met RTL analysis elaborate design.</description>
     </item>
     
     <item>
       <title>Signalen vs. variabelen</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/080_signalen_variablen/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/080_signalen_variablen/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/080_signalen_variablen/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/080_signalen_variablen/</guid>
       <description>Signalen:
- nemen de nieuwe waarde aan na een vertraging, hebben een hardware equivalent, worden toegekend met &amp;ldquo; &amp;lt;=&amp;rdquo; .   Variabelen:
- nemen de nieuwe waarde onmiddellijk aan, hebben geen hardware equivalent, worden toegekend met &amp;ldquo; :=&amp;rdquo; , komen enkel voor in een proces.   
-signalen Volgende beschrijvingen leiden tot dezelfde implementatie:
-architecture arch of vb1 is signal o1, o2, o3: std_logic; begin p: process(a, b, c, d, o1, o2, o3) begin q &amp;lt;= not o3; o1 &amp;lt;= a and b; o2 &amp;lt;= c and d; o3 &amp;lt;= o1 or o2; end process; end arch;</description>
+nemen de nieuwe waarde aan na een vertraging, hebben een hardware equivalent, worden toegekend met &amp;quot; &amp;lt;=&amp;quot; . Variabelen:
+nemen de nieuwe waarde onmiddellijk aan, hebben geen hardware equivalent, worden toegekend met &amp;quot; :=&amp;quot; , komen enkel voor in een proces. signalen Volgende beschrijvingen leiden tot dezelfde implementatie:
+architecture arch of vb1 is signal o1, o2, o3: std_logic; begin p: process(a, b, c, d, o1, o2, o3) begin q &amp;lt;= not o3; o1 &amp;lt;= a and b; o2 &amp;lt;= c and d; o3 &amp;lt;= o1 or o2; end process; end arch; architecture arch of vb2 is signal o1, o2, o3: std_logic; begin q &amp;lt;= not o3; o1 &amp;lt;= a and b; o2 &amp;lt;= c and d; o3 &amp;lt;= o1 or o2; end arch; architecture arch of vb3 is begin q &amp;lt;= not ((a and b) or (c and d)); end arch; Als we de tussenliggende signalen o1, o2 en o3 vergeten in de sensitivity list, is het gedrag niet meer zuiver combinatorisch.</description>
     </item>
     
     <item>
       <title>Flipflop en latches</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/090_flipflop_latch/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/090_flipflop_latch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/090_flipflop_latch/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/090_flipflop_latch/</guid>
       <description>D-flipflop De D-flip-flop is het basiselement van synchrone logica. De data bit wordt opgenomen in het geheugenelement op de stijgende of dalende flank van de klok. De data bit blijft in het geheugenelement aanwezig tot de volgende stijgende of dalende flank van de klok.
 Engelse benamingen:
- positive/negative edge triggered D-type flip-flop rising/falling edge triggered D-type flip-flop  Positieve flank getriggerde D-FF in VHDL Proces met enkel de klok in de sensitivity list.</description>
+positive/negative edge triggered D-type flip-flop rising/falling edge triggered D-type flip-flop Positieve flank getriggerde D-FF in VHDL Proces met enkel de klok in de sensitivity list.</description>
     </item>
     
     <item>
       <title>Opdracht 2: Ripple carry adder</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/020_next_step/090_opdracht/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/090_opdracht/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/020_next_step/090_opdracht/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/090_opdracht/</guid>
       <description>De bedoeling is nu om een 8 bit ripple-carry adder te maken. Voor als je vergeten bent hoe een full adder en half adder eruit ziet, kan je kijken naar onderstaande schema&amp;rsquo;s. Bij een ripple-carry adder wordt de C out van de eerste adder doorgegeven aan de tweede adder. We werken in little endian.
-Het is niet de bedoeling dat je de + operator gebruikt van &amp;ldquo;std_logic_unsigned&amp;rdquo; of &amp;ldquo;std_logic_signed&amp;rdquo;!</description>
+Het is niet de bedoeling dat je de + operator gebruikt van &amp;ldquo;std_logic_unsigned&amp;rdquo; of &amp;ldquo;std_logic_signed&amp;rdquo;!
+Half adder Full adder ripple carry adder Het is altijd een goed idee om eerst een tekening te maken voordat je begint met typen.</description>
     </item>
     
     <item>
       <title>Generic</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/020_next_step/100_generic/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/100_generic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/020_next_step/100_generic/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/100_generic/</guid>
       <description>Oplettende studenten hebben door dat de ripple carry adder niet goed schaalbaar is. Wat als de getallen nu 16 of 32 bits worden in een andere toepassing? Dit kunnen we oplossen door generics te gebruiken. Als voorbeeld hebben we een 8-bit AND poort die generic is en kan schalen.
- Generic AND voorstelling   Je kan deze AND poort beschrijven met onderstaand code. De variable N wordt gebruikt als het aantal inputs.</description>
+Generic AND voorstelling Je kan deze AND poort beschrijven met onderstaand code. De variable N wordt gebruikt als het aantal inputs.</description>
     </item>
     
     <item>
       <title>Opdracht 3: Program counter</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/100_opdracht/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/100_opdracht/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/100_opdracht/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/100_opdracht/</guid>
       <description>program counter De bedoeling van deze opdracht is om de program counter van de processor te maken. De program counter heeft 5 input signalen. data_in, clock, reset, load en inc (increment). Als output heeft het data_out. Data_in en Data_out zijn beide 16 bit vectoren. Als de reset hoog wordt moet de program counter synchroon resetten naar 0. load zorgt er voor dat ook weer synchroon de data van data_in wordt ingeladen.</description>
     </item>
     
     <item>
       <title>Opdracht 5: CPU</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/100_opdracht/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/100_opdracht/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/050_cpu/100_opdracht/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/100_opdracht/</guid>
       <description>De opdracht is om een CPU te maken met de hierboven besproken functies. Het is bedoeling dat je de ALU en de program counter gebruikt die je al hebt gemaakt.
 Alles is combinatorisch behalve de registers en de program counter.
- Bron: nand2tetris 
- div.image_courtesy { text-align: center; font-size: 100%; font-style: italic; }  </description>
+Bron: nand2tetris </description>
     </item>
     
     <item>
       <title>Voorbeelden</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/100_voorbeelden/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/100_voorbeelden/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/100_voorbeelden/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/100_voorbeelden/</guid>
       <description>Binair-naar-decimaal decoder entity bin_to_dec is port( binair: in std_logic_vector(2 downto 0); decimaal: out std_logic_vector(0 to 7)); end bin_to_dec; architecture arch of bin_to_dec is begin p: process(binair) begin case binair is when &amp;#34;000&amp;#34; =&amp;gt; decimaal &amp;lt;= &amp;#34;10000000&amp;#34; ; when &amp;#34;001&amp;#34; =&amp;gt; decimaal &amp;lt;= &amp;#34;01000000&amp;#34; ; when &amp;#34;010&amp;#34; =&amp;gt; decimaal &amp;lt;= &amp;#34;00100000&amp;#34; ; when &amp;#34;011&amp;#34; =&amp;gt; decimaal &amp;lt;= &amp;#34;00010000&amp;#34; ; when &amp;#34;100&amp;#34; =&amp;gt; decimaal &amp;lt;= &amp;#34;00001000&amp;#34; ; when &amp;#34;101&amp;#34; =&amp;gt; decimaal &amp;lt;= &amp;#34;00000100&amp;#34; ; when &amp;#34;110&amp;#34; =&amp;gt; decimaal &amp;lt;= &amp;#34;00000010&amp;#34; ; when others =&amp;gt; decimaal &amp;lt;= &amp;#34;00000001&amp;#34; ; end case; end process; end arch; BCD-naar-7-segment decoder entity bcd_to_7seg is port( bcd: in std_logic_vector(3 downto 0); seg7: out std_logic_vector(1 to 7)); end bcd_to_7seg; architecture arch of bin_to_7seg is begin p: process(bcd) begin case bcd is when &amp;#34;0000&amp;#34; =&amp;gt; seg7 &amp;lt;= &amp;#34;1111110&amp;#34; ; when &amp;#34;0001&amp;#34; =&amp;gt; seg7 &amp;lt;= &amp;#34;0110000&amp;#34; ; when &amp;#34;0010&amp;#34; =&amp;gt; seg7 &amp;lt;= &amp;#34;1101101&amp;#34; ; when &amp;#34;0011&amp;#34; =&amp;gt; seg7 &amp;lt;= &amp;#34;1111001&amp;#34; ; when &amp;#34;0100&amp;#34; =&amp;gt; seg7 &amp;lt;= &amp;#34;0110011&amp;#34; ; when &amp;#34;0101&amp;#34; =&amp;gt; seg7 &amp;lt;= &amp;#34;1011011&amp;#34; ; when &amp;#34;0110&amp;#34; =&amp;gt; seg7 &amp;lt;= &amp;#34;1011111&amp;#34; ; when &amp;#34;0111&amp;#34; =&amp;gt; seg7 &amp;lt;= &amp;#34;1110000&amp;#34; ; when &amp;#34;1000&amp;#34; =&amp;gt; seg7 &amp;lt;= &amp;#34;1111111&amp;#34; ; when &amp;#34;1001&amp;#34; =&amp;gt; seg7 &amp;lt;= &amp;#34;1111011&amp;#34; ; when others =&amp;gt; seg7 &amp;lt;= &amp;#34;-------&amp;#34; ; end case; end process; end arch; Conditionele toekenning m.</description>
     </item>
     
     <item>
       <title>Linear feedback shift register</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/110_lfsr/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/110_lfsr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/900_zelfstudie_vhdl/110_lfsr/</guid>
-      <description>Als we een sequentie van getallen willen genereren, kunnen we een LFSR (linear feedback shift register) gebruiken. Een LFSR is een shift register, waarbij de inschuivende bit elke klokcyclus gelijk is aan de XOR van een aantal bits in de interne toestand. Op wikipedia  staat uitgelegd welke bits er genomen moeten worden bij iedere grootte van LFSR.
- Voorbeeld 16 bit LFSR. Bron: Wikipedia   library ieee; use ieee.</description>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/110_lfsr/</guid>
+      <description>Als we een sequentie van getallen willen genereren, kunnen we een LFSR (linear feedback shift register) gebruiken. Een LFSR is een shift register, waarbij de inschuivende bit elke klokcyclus gelijk is aan de XOR van een aantal bits in de interne toestand. Op wikipedia staat uitgelegd welke bits er genomen moeten worden bij iedere grootte van LFSR.
+Voorbeeld 16 bit LFSR. Bron: Wikipedia library ieee; use ieee.std_logic_1164.all; entity LFSR is port( clk: in std_logic; load_data: in std_logic; reset: in std_logic; data_out: out std_logic_vector(15 downto 0)); end LFSR; architecture arch_LFSR of LFSR is signal shift_register: std_logic_vector(15 downto 0); begin p_comb_reg: process(clk) begin if clk&amp;#39;event and clk = &amp;#39;1&amp;#39; then if reset = &amp;#39;1&amp;#39; then shift_register &amp;lt;= (others =&amp;gt; &amp;#39;1&amp;#39;); --we resetten naar 1, anders loopt de LFSR vast else shift_register(0) &amp;lt;= shift_register(10) XOR shift_register(12) XOR shift_register(13) XOR shift_register(15); shift_register(15 downto 1) &amp;lt;= shift_register(14 downto 0); end if; end if; end process; data_out &amp;lt;= shift_register; end arch_LFSR; Een LFSR gebaseerd op XOR blijft stilstaan als alle bits 0 zijn.</description>
     </item>
     
     <item>
       <title>Opdracht testbench</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/110_tb_opdracht/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/110_tb_opdracht/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/030_sequentiele_logica/110_tb_opdracht/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/030_sequentiele_logica/110_tb_opdracht/</guid>
       <description>Deze testbench wordt gebruikt voor de evaluatie.
-library IEEE; use IEEE.STD_LOGIC_1164.ALL; -- Uncomment the following library declaration if using -- arithmetic functions with Signed or Unsigned values --use IEEE.NUMERIC_STD.ALL; -- Uncomment the following library declaration if instantiating -- any Xilinx leaf cells in this code. --library UNISIM; --use UNISIM.VComponents.all; entity tb_counter is -- Port ( ); end tb_counter; architecture Behavioral of tb_counter is component counter is Port (clock,reset, load, inc: in std_logic; data_in : in std_logic_vector(15 downto 0); data_out : out std_logic_vector(15 downto 0) ); end component; constant clock_period : time := 10 ns; signal clock,reset, load, inc: std_logic; signal data_in : std_logic_vector(15 downto 0); signal data_out : std_logic_vector(15 downto 0); begin DUT: counter port map( data_in =&amp;gt; data_in, data_out =&amp;gt; data_out, clock =&amp;gt; clock, reset =&amp;gt; reset, load =&amp;gt; load, inc =&amp;gt; inc); CLK: process begin clock &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/2; clock &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period/2; end process; PSTIM: process begin data_in &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/8; wait for clock_period*2; data_in &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;1&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period*2; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000001&amp;#34;) report &amp;#34;increment werkt niet&amp;#34; severity failure; wait for clock_period*10; assert (data_out = &amp;#34;0000000000001011&amp;#34;) report &amp;#34;increment werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;0000111000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000111000000000&amp;#34;) report &amp;#34;load werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;0000111000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000111000000001&amp;#34;) report &amp;#34;inc na load werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1111111111111111&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;1111111111111111&amp;#34;) report &amp;#34;load werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1111110011111111&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;1111110011111111&amp;#34;) report &amp;#34;load before increment werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1111111111111111&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;1111111111111111&amp;#34;) report &amp;#34;load werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011110011&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;overflow werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;1&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;H&amp;#39;; load &amp;lt;= &amp;#39;L&amp;#39;; inc &amp;lt;= &amp;#39;L&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;L&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000001&amp;#34;) report &amp;#34;iets werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;X&amp;#39;; load &amp;lt;= &amp;#39;L&amp;#39;; inc &amp;lt;= &amp;#39;H&amp;#39;; wait for clock_period; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;1&amp;#39;; load &amp;lt;= &amp;#39;W&amp;#39;; inc &amp;lt;= &amp;#39;Z&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; wait; end process; end Behavioral;</description>
+library IEEE; use IEEE.STD_LOGIC_1164.ALL; -- Uncomment the following library declaration if using -- arithmetic functions with Signed or Unsigned values --use IEEE.NUMERIC_STD.ALL; -- Uncomment the following library declaration if instantiating -- any Xilinx leaf cells in this code. --library UNISIM; --use UNISIM.VComponents.all; entity tb_counter is -- Port ( ); end tb_counter; architecture Behavioral of tb_counter is component counter is Port (clock,reset, load, inc: in std_logic; data_in : in std_logic_vector(15 downto 0); data_out : out std_logic_vector(15 downto 0) ); end component; constant clock_period : time := 10 ns; signal clock,reset, load, inc: std_logic; signal data_in : std_logic_vector(15 downto 0); signal data_out : std_logic_vector(15 downto 0); begin DUT: counter port map( data_in =&amp;gt; data_in, data_out =&amp;gt; data_out, clock =&amp;gt; clock, reset =&amp;gt; reset, load =&amp;gt; load, inc =&amp;gt; inc); CLK: process begin clock &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/2; clock &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period/2; end process; PSTIM: process begin data_in &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/8; wait for clock_period*2; data_in &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;1&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period*2; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000001&amp;#34;) report &amp;#34;increment werkt niet&amp;#34; severity failure; wait for clock_period*10; assert (data_out = &amp;#34;0000000000001011&amp;#34;) report &amp;#34;increment werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;0000111000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000111000000000&amp;#34;) report &amp;#34;load werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;0000111000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000111000000001&amp;#34;) report &amp;#34;inc na load werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1111111111111111&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;1111111111111111&amp;#34;) report &amp;#34;load werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1111110011111111&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;1111110011111111&amp;#34;) report &amp;#34;load before increment werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1111111111111111&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;1111111111111111&amp;#34;) report &amp;#34;load werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011110011&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;overflow werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;1&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;H&amp;#39;; load &amp;lt;= &amp;#39;L&amp;#39;; inc &amp;lt;= &amp;#39;L&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;L&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000001&amp;#34;) report &amp;#34;iets werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;X&amp;#39;; load &amp;lt;= &amp;#39;L&amp;#39;; inc &amp;lt;= &amp;#39;H&amp;#39;; wait for clock_period; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;1&amp;#39;; load &amp;lt;= &amp;#39;W&amp;#39;; inc &amp;lt;= &amp;#39;Z&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; wait; end process; end Behavioral; </description>
     </item>
     
     <item>
       <title>Opdracht testbench</title>
-      <link>https://kuleuven-diepenbeek.github.io/disch/050_cpu/110_testbench/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/110_testbench/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/disch/050_cpu/110_testbench/</guid>
-      <description>library IEEE; use IEEE.STD_LOGIC_1164.ALL; -- Uncomment the following library declaration if using -- arithmetic functions with Signed or Unsigned values --use IEEE.NUMERIC_STD.ALL; -- Uncomment the following library declaration if instantiating -- any Xilinx leaf cells in this code. --library UNISIM; --use UNISIM.VComponents.all; entity tb_cpu is -- Port ( ); end tb_cpu; architecture Behavioral of tb_cpu is component hack_cpu is Port (instruction, inM: in std_logic_vector(15 downto 0); clock, reset: in std_logic; outM, addressM, PC: out std_logic_vector(15 downto 0); writeM: out std_logic); end component; signal instruction, inM: std_logic_vector(15 downto 0); signal clock, reset: std_logic; signal outM, addressM, PC: std_logic_vector(15 downto 0); signal writeM: std_logic; constant clock_period : time := 10 ns; begin DUT: hack_cpu port map( instruction =&amp;gt; instruction, inM =&amp;gt; inM, clock =&amp;gt; clock, reset =&amp;gt; reset, outM =&amp;gt; outM, addressM =&amp;gt; addressM, PC =&amp;gt; PC, writeM =&amp;gt; writeM); CLK: process begin clock &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/2; clock &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period/2; end process; PSTIM: process begin instruction &amp;lt;= &amp;#34;0000000000000000&amp;#34;; inM &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/4; instruction &amp;lt;= &amp;#34;0000000000000000&amp;#34;; inM &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (PC = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; instruction &amp;lt;= &amp;#34;0000000000000010&amp;#34;; --load reg A inM &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; --111accccccdddjjj  instruction &amp;lt;= &amp;#34;1--0110000011000&amp;#34;; --kopie naar reg D inM &amp;lt;= &amp;#34;----------------&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; assert (outM = &amp;#34;0000000000000010&amp;#34;) report &amp;#34;A register save and load werkt niet&amp;#34; severity failure; --111accccccdddjjj  instruction &amp;lt;= &amp;#34;1--0010011011000&amp;#34;; --D-A = 0 inM &amp;lt;= &amp;#34;----------------&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/8; assert (outM = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;compute werkt niet&amp;#34; severity failure; --moet voor de stijgende flank van de clock gecheckd worden.</description>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/110_testbench/</guid>
+      <description>library IEEE; use IEEE.STD_LOGIC_1164.ALL; -- Uncomment the following library declaration if using -- arithmetic functions with Signed or Unsigned values --use IEEE.NUMERIC_STD.ALL; -- Uncomment the following library declaration if instantiating -- any Xilinx leaf cells in this code. --library UNISIM; --use UNISIM.VComponents.all; entity tb_cpu is -- Port ( ); end tb_cpu; architecture Behavioral of tb_cpu is component hack_cpu is Port (instruction, inM: in std_logic_vector(15 downto 0); clock, reset: in std_logic; outM, addressM, PC: out std_logic_vector(15 downto 0); writeM: out std_logic); end component; signal instruction, inM: std_logic_vector(15 downto 0); signal clock, reset: std_logic; signal outM, addressM, PC: std_logic_vector(15 downto 0); signal writeM: std_logic; constant clock_period : time := 10 ns; begin DUT: hack_cpu port map( instruction =&amp;gt; instruction, inM =&amp;gt; inM, clock =&amp;gt; clock, reset =&amp;gt; reset, outM =&amp;gt; outM, addressM =&amp;gt; addressM, PC =&amp;gt; PC, writeM =&amp;gt; writeM); CLK: process begin clock &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/2; clock &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period/2; end process; PSTIM: process begin instruction &amp;lt;= &amp;#34;0000000000000000&amp;#34;; inM &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/4; instruction &amp;lt;= &amp;#34;0000000000000000&amp;#34;; inM &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (PC = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; instruction &amp;lt;= &amp;#34;0000000000000010&amp;#34;; --load reg A inM &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; --111accccccdddjjj instruction &amp;lt;= &amp;#34;1--0110000011000&amp;#34;; --kopie naar reg D inM &amp;lt;= &amp;#34;----------------&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; assert (outM = &amp;#34;0000000000000010&amp;#34;) report &amp;#34;A register save and load werkt niet&amp;#34; severity failure; --111accccccdddjjj instruction &amp;lt;= &amp;#34;1--0010011011000&amp;#34;; --D-A = 0 inM &amp;lt;= &amp;#34;----------------&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/8; assert (outM = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;compute werkt niet&amp;#34; severity failure; --moet voor de stijgende flank van de clock gecheckd worden.</description>
     </item>
     
   </channel>

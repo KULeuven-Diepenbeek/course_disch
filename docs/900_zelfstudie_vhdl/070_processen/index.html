@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="generator" content="Hugo 0.111.3">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>Processen :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1683017774" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/hybrid.css?1683017774" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1683017774" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1683017774" rel="stylesheet">
-    <link href="../../css/theme.css?1683017774" rel="stylesheet">
-    <link href="../../css/tabs.css?1683017774" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1683017774" rel="stylesheet">
+    <link href="../../css/nucleus.css?1705579012" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/hybrid.css?1705579012" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1705579012" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1705579012" rel="stylesheet">
+    <link href="../../css/theme.css?1705579012" rel="stylesheet">
+    <link href="../../css/tabs.css?1705579012" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1705579012" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1683017774" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1705579012" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1683017774"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1705579012"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1683017774"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1683017774"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1705579012"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1705579012"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/disch\/";
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1683017774"></script>
+<script type="text/javascript" src="../../js/search.js?1705579012"></script>
 
     
   </div>
@@ -261,6 +261,27 @@
       <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item ">
         <a href="../../010_intro_vhdl/030_simulatie/">
         <i class='fas fa-book'></i> Simulatie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/031_synthesisable/" title="Synthetiseerbaar" class="dd-item ">
+        <a href="../../010_intro_vhdl/031_synthesisable/">
+        <i class='fas fa-book'></i> Synthetiseerbaar
         
         </a>
     </li>
@@ -1471,7 +1492,7 @@
         <ul>
           
               <li>
-                  <a class="padding" href="https://uhintra03.uhasselt.be/studiegidswww/opleidingsonderdeel.aspx?a=2022&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
               </li>
           
               <li>
@@ -1524,7 +1545,7 @@
             
           
           
-            <a href='../../'>Digitaal elektronische schakelingen</a> > <a href='../../900_zelfstudie_vhdl/'>Zelfstudie VHDL</a> > Processen
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../900_zelfstudie_vhdl/'>Zelfstudie VHDL</a> > Processen
           
         
           
@@ -1538,33 +1559,16 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#structuur-van-een-proces">Structuur van een proces</a></li>
-<li><a href="#toekenningen-in-processen">Toekenningen in processen</a>
-<ul>
-<li>
-<ul>
-<li><a href="#modelleren-van-combinatorische-processen">Modelleren van combinatorische processen</a></li>
-</ul></li>
-<li><a href="#meerdere-processen-binnen-een-ontwerp">Meerdere processen binnen een ontwerp</a>
-<ul>
-<li><a href="#voorbeeld-if-statement">Voorbeeld if statement</a></li>
-</ul></li>
-<li><a href="#case-statement">Case statement</a>
-<ul>
-<li><a href="#structuur-case-statement">Structuur case statement</a></li>
-<li><a href="#voorbeeld-case-statement">Voorbeeld case statement</a></li>
-<li><a href="#concurrente-selectieve-signaaltoekenning">Concurrente selectieve signaaltoekenning</a></li>
-<li><a href="#concurrente-statements">Concurrente statements</a></li>
-<li><a href="#sequentiële-statements">Sequentiële statements</a></li>
-<li><a href="#verschil-tussen-sensitivity-list-en-wait">Verschil tussen sensitivity list en wait</a></li>
-<li><a href="#wait-statements">Wait statements</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#structuur-van-een-proces">Structuur van een proces</a></li>
+    <li><a href="#toekenningen-in-processen">Toekenningen in processen</a>
+      <ul>
+        <li></li>
+        <li><a href="#meerdere-processen-binnen-een-ontwerp">Meerdere processen binnen een ontwerp</a></li>
+        <li><a href="#case-statement">Case statement</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1588,283 +1592,229 @@
         
 
 
-
-
 <h2 id="structuur-van-een-proces">Structuur van een proces</h2>
-
 <p>Een proces wordt uitgevoerd wanneer een signaal in de sensitivity lijst van  waarde verandert. <br/>
 Signalen worden geupdated aan het einde van het proces. <br/>
 Voorbeeld van een proces met een if-then-else statement: multiplexer.</p>
-
 <div class="multicolumn">
     <div class="column" style="width:60%">
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">library</span> ieee;
-<span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
-
-<span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">mux</span> <span style="color:#66d9ef">is</span>
-    <span style="color:#66d9ef">port</span>(   a, b, s<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
-            z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>);
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">mux</span>;
-
-<span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">mux</span> <span style="color:#66d9ef">is</span>
-<span style="color:#66d9ef">begin</span>
-    <span style="color:#a6e22e">p1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, s) <span style="color:#75715e">-- a, b, s is de sensitiviy lijst</span>
-    <span style="color:#66d9ef">begin</span>
-        <span style="color:#66d9ef">if</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
-            z <span style="color:#f92672">&lt;=</span> a;
-        <span style="color:#66d9ef">else</span>
-            z <span style="color:#f92672">&lt;=</span> b;
-        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;</code></pre></div>
-
-<p></div>
-<div class="column" style="width:40%"></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> ieee;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">mux</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(   a, b, s<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span>            z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">mux</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">mux</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, s) <span style="color:#75715e">-- a, b, s is de sensitiviy lijst</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>            z <span style="color:#f92672">&lt;=</span> a;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>            z <span style="color:#f92672">&lt;=</span> b;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;</span></span></code></pre></div>
+</div>
+<div class="column" style="width:40%">
 <figure><img src="../../images/zelfstudie/mux.png"/>
 </figure>
-
-<p></div>
-</div></p>
-
+</div>
+</div>
 <h2 id="toekenningen-in-processen">Toekenningen in processen</h2>
-
 <p>Volgende processen leiden tot dezelfde implementatie:</p>
-
 <div class="multicolumn">
     <div class="column" style="width:50%">
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#a6e22e">p1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b)
-<span style="color:#66d9ef">begin</span>
-    y <span style="color:#f92672">&lt;=</span> a;
-    y <span style="color:#f92672">&lt;=</span> b;
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</code></pre></div>
-
-<p></div>
-<div class="column" style="width:50%"></p>
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#a6e22e">p1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(b)
-<span style="color:#66d9ef">begin</span>
-    y <span style="color:#f92672">&lt;=</span> b;
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</code></pre></div>
-
-<p></div>
-</div></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">p1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> a;
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> b;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</span></span></code></pre></div>
+</div>
+<div class="column" style="width:50%">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">p1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(b)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">&lt;=</span> b;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</span></span></code></pre></div>
+</div>
+</div>
 <p>Wanneer een van de signalen in de sensitivity list van het proces verandert, wordt het proces van begin tot einde doorlopen. Wanneer het proces helemaal doorlopen is, wacht het op een nieuwe verandering van de signalen in de sensitity list. Pas wanneer het proces in deze wachtfase terechtkomt, gebeurt de eigenlijke toekenning van de signalen. Daarom overschrijft de tweede uitdrukking de eerste in process p1.</p>
-
 <p>Volgende processen leiden <strong>niet</strong> tot dezelfde implementatie:</p>
-
 <div class="multicolumn">
     <div class="column" style="width:50%">
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#a6e22e">p1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(b)
-<span style="color:#66d9ef">begin</span>
-    a <span style="color:#f92672">&lt;=</span> b;
-    c <span style="color:#f92672">&lt;=</span> a;
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</code></pre></div>
-
-<p></div>
-<div class="column" style="width:50%"></p>
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#a6e22e">p2</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b)
-<span style="color:#66d9ef">begin</span>
-    a <span style="color:#f92672">&lt;=</span> b;
-    c <span style="color:#f92672">&lt;=</span> a;
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</code></pre></div>
-
-<p></div>
-</div></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">p1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(b)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    a <span style="color:#f92672">&lt;=</span> b;
+</span></span><span style="display:flex;"><span>    c <span style="color:#f92672">&lt;=</span> a;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</span></span></code></pre></div>
+</div>
+<div class="column" style="width:50%">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">p2</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    a <span style="color:#f92672">&lt;=</span> b;
+</span></span><span style="display:flex;"><span>    c <span style="color:#f92672">&lt;=</span> a;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</span></span></code></pre></div>
+</div>
+</div>
 <p>Wat gebeurt er wanneer b van waarde verandert?</p>
-
 <ul>
-<li><p>In p1: Het proces wordt doorlopen. Daarna gebeuren alle toekenningen. In dit geval wordt b toegekend aan a en op hetzelfde moment wordt de oude waarde van a toegekend aan c. Er wordt dus een geheugenwerking gecreëerd.</p></li>
-
-<li><p>In p2: Het proces wordt doorlopen. Daarna gebeuren alle toekenningen. In dit geval wordt b toegekend aan a en op hetzelfde moment wordt de oude waarde van a toegekend aan c. Omdat a in de sensitivity list staat, wordt het proces opnieuw doorlopen en wordt daarna b opnieuw toegekend aan a en wordt de nieuwe waarde van a toegekend aan c. Deze werking is zuiver combinatorisch.</p></li>
+<li>
+<p>In p1: Het proces wordt doorlopen. Daarna gebeuren alle toekenningen. In dit geval wordt b toegekend aan a en op hetzelfde moment wordt de oude waarde van a toegekend aan c. Er wordt dus een geheugenwerking gecreëerd.</p>
+</li>
+<li>
+<p>In p2: Het proces wordt doorlopen. Daarna gebeuren alle toekenningen. In dit geval wordt b toegekend aan a en op hetzelfde moment wordt de oude waarde van a toegekend aan c. Omdat a in de sensitivity list staat, wordt het proces opnieuw doorlopen en wordt daarna b opnieuw toegekend aan a en wordt de nieuwe waarde van a toegekend aan c. Deze werking is zuiver combinatorisch.</p>
+</li>
 </ul>
-
 <h4 id="modelleren-van-combinatorische-processen">Modelleren van combinatorische processen</h4>
-
 <p>Volgende processen leiden to dezelfde implementatie:</p>
-
 <div class="multicolumn">
     <div class="column" style="width:50%">
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#a6e22e">p1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b)
-<span style="color:#66d9ef">begin</span>
-    c <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;00&#34;</span>;
-    <span style="color:#66d9ef">if</span> a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
-        c <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;01&#34;</span>;
-    <span style="color:#66d9ef">elsif</span> b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
-        c <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;11&#34;</span>;
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</code></pre></div>
-
-<p></div>
-<div class="column" style="width:50%"></p>
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#a6e22e">p2</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b)
-<span style="color:#66d9ef">begin</span>
-    <span style="color:#66d9ef">if</span> a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
-        c <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;01&#34;</span>;
-    <span style="color:#66d9ef">elsif</span> b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
-        c <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;11&#34;</span>;
-    <span style="color:#66d9ef">else</span>
-        c <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;00&#34;</span>;    
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</code></pre></div>
-
-<p></div>
-</div></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">p1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    c <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;00&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        c <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;01&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elsif</span> b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        c <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;11&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</span></span></code></pre></div>
+</div>
+<div class="column" style="width:50%">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">p2</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        c <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;01&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elsif</span> b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        c <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;11&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        c <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;00&#34;</span>;    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</span></span></code></pre></div>
+</div>
+</div>
 <h3 id="meerdere-processen-binnen-een-ontwerp">Meerdere processen binnen een ontwerp</h3>
-
 <div class="multicolumn">
     <div class="column" style="width:50%">
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch_example</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">example</span> <span style="color:#66d9ef">is</span>
-<span style="color:#66d9ef">begin</span>
-    <span style="color:#a6e22e">p1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(<span style="color:#75715e">-- sensitivity list)</span>
-    <span style="color:#66d9ef">begin</span>
-        <span style="color:#75715e">-- sequentiële statements</span>
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-    <span style="color:#a6e22e">p2</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(<span style="color:#75715e">-- sensitivity list)</span>
-    <span style="color:#66d9ef">begin</span>
-        <span style="color:#75715e">-- sequentiële statements</span>
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-    <span style="color:#a6e22e">p3</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(<span style="color:#75715e">-- sensitivity list)</span>
-    <span style="color:#66d9ef">begin</span>
-        <span style="color:#75715e">-- sequentiële statements</span>
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch_example</span>;</code></pre></div>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch_example</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">example</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(<span style="color:#75715e">-- sensitivity list)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">-- sequentiële statements</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p2</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(<span style="color:#75715e">-- sensitivity list)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">-- sequentiële statements</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p3</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(<span style="color:#75715e">-- sensitivity list)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">-- sequentiële statements</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch_example</span>;</span></span></code></pre></div>
 <p>Een ingang van een proces kan een uitgang van een ander proces zijn.</p>
-
-<p></div>
-<div class="column" style="width:35%"></p>
-
+</div>
+<div class="column" style="width:35%">
 <figure><img src="../../images/zelfstudie/meerdere_processen.png"/>
 </figure>
-
-<p></div>
-</div></p>
-
+</div>
+</div>
 <h4 id="voorbeeld-if-statement">Voorbeeld if statement</h4>
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">library</span> ieee;
-<span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
-<span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">if_example</span> <span style="color:#66d9ef">is</span>
-    <span style="color:#66d9ef">port</span>(   a, b, c, x<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
-            z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>));
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">if_example</span>;
-
-<span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch_if_example</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">if_example</span> <span style="color:#66d9ef">is</span>
-<span style="color:#66d9ef">begin</span>
-    <span style="color:#a6e22e">p_if</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, c, x)
-    <span style="color:#66d9ef">begin</span>
-        <span style="color:#66d9ef">if</span> x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; 0000&#34;</span>  <span style="color:#66d9ef">then</span>
-            z <span style="color:#f92672">&lt;=</span> a;
-        <span style="color:#66d9ef">elsif</span> x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; 0101&#34;</span>  <span style="color:#66d9ef">then</span>
-            z <span style="color:#f92672">&lt;=</span> b;
-        <span style="color:#66d9ef">else</span>
-            z <span style="color:#f92672">&lt;=</span> c;
-        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch_if_example</span>;</code></pre></div>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> ieee;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">if_example</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(   a, b, c, x<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>));
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">if_example</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch_if_example</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">if_example</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p_if</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, c, x)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; 0000&#34;</span>  <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>            z <span style="color:#f92672">&lt;=</span> a;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elsif</span> x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; 0101&#34;</span>  <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>            z <span style="color:#f92672">&lt;=</span> b;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>            z <span style="color:#f92672">&lt;=</span> c;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch_if_example</span>;</span></span></code></pre></div>
 <h3 id="case-statement">Case statement</h3>
-
 <h4 id="structuur-case-statement">Structuur case statement</h4>
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">case</span> expression <span style="color:#66d9ef">is</span>
-    <span style="color:#66d9ef">when</span> value_1 <span style="color:#f92672">=&gt;</span>
-    <span style="color:#75715e">-- toekenning</span>
-    <span style="color:#66d9ef">when</span> value_2 <span style="color:#f92672">|</span> value_3 <span style="color:#f92672">=&gt;</span>
-    <span style="color:#75715e">-- toekenning</span>
-    <span style="color:#66d9ef">when</span> value_M <span style="color:#66d9ef">to</span> value_N <span style="color:#f92672">=&gt;</span>
-    <span style="color:#75715e">-- toekenning</span>
-    <span style="color:#66d9ef">when</span> <span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span>
-    <span style="color:#75715e">-- toekenning</span>
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">case</span>;</code></pre></div>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">case</span> expression <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">when</span> value_1 <span style="color:#f92672">=&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- toekenning</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">when</span> value_2 <span style="color:#f92672">|</span> value_3 <span style="color:#f92672">=&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- toekenning</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">when</span> value_M <span style="color:#66d9ef">to</span> value_N <span style="color:#f92672">=&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- toekenning</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">when</span> <span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- toekenning</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">case</span>;</span></span></code></pre></div>
 <h4 id="voorbeeld-case-statement">Voorbeeld case statement</h4>
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">library</span> ieee;
-<span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
-
-<span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">case_example</span> <span style="color:#66d9ef">is</span>
-    <span style="color:#66d9ef">port</span>(   a, b, c, x<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">integer</span> <span style="color:#66d9ef">range</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">15</span>;
-            z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">integer</span> <span style="color:#66d9ef">range</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">15</span>);
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">case_example</span>;
-
-<span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch_case_example</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">case_example</span> <span style="color:#66d9ef">is</span>
-<span style="color:#66d9ef">begin</span>
-    <span style="color:#a6e22e">p_case</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, c, x)
-    <span style="color:#66d9ef">begin</span>
-        <span style="color:#66d9ef">case</span> x <span style="color:#66d9ef">is</span>
-            <span style="color:#66d9ef">when</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">=&gt;</span>
-                z <span style="color:#f92672">&lt;=</span> b;
-            <span style="color:#66d9ef">when</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">=&gt;</span>
-                z <span style="color:#f92672">&lt;=</span> c;
-            <span style="color:#66d9ef">when</span> <span style="color:#ae81ff">7</span><span style="color:#f92672">|</span><span style="color:#ae81ff">9</span> <span style="color:#f92672">=&gt;</span>
-                z <span style="color:#f92672">&lt;=</span> a;
-            <span style="color:#66d9ef">when</span> <span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span>
-                z <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span>;
-        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">case</span>;
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch_case_example</span>;</code></pre></div>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> ieee;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">case_example</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(   a, b, c, x<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">integer</span> <span style="color:#66d9ef">range</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">15</span>;
+</span></span><span style="display:flex;"><span>            z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">integer</span> <span style="color:#66d9ef">range</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">15</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">case_example</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch_case_example</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">case_example</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p_case</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, c, x)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> x <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">when</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">=&gt;</span>
+</span></span><span style="display:flex;"><span>                z <span style="color:#f92672">&lt;=</span> b;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">when</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">=&gt;</span>
+</span></span><span style="display:flex;"><span>                z <span style="color:#f92672">&lt;=</span> c;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">when</span> <span style="color:#ae81ff">7</span><span style="color:#f92672">|</span><span style="color:#ae81ff">9</span> <span style="color:#f92672">=&gt;</span>
+</span></span><span style="display:flex;"><span>                z <span style="color:#f92672">&lt;=</span> a;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">when</span> <span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span>
+</span></span><span style="display:flex;"><span>                z <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">case</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch_case_example</span>;</span></span></code></pre></div>
 <h4 id="concurrente-selectieve-signaaltoekenning">Concurrente selectieve signaaltoekenning</h4>
-
 <p>with-select statement: concurrente versie van de case statement. <br/>
 Verschil: slechts één bestemming mogelijk. <br/>
 Zelfde regels als bij de case statement</p>
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">example</span> <span style="color:#66d9ef">is</span>
-    <span style="color:#66d9ef">port</span>(   a, b, c, x<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">integer</span> <span style="color:#66d9ef">range</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">7</span>;
-            z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">integer</span> <span style="color:#66d9ef">range</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">7</span>);
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">example</span>;</code></pre></div>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">example</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(   a, b, c, x<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">integer</span> <span style="color:#66d9ef">range</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">7</span>;
+</span></span><span style="display:flex;"><span>            z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">integer</span> <span style="color:#66d9ef">range</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">7</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">example</span>;</span></span></code></pre></div>
 <div class="multicolumn">
     <div class="column" style="width:50%">
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch_example</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">example</span> <span style="color:#66d9ef">is</span>
-<span style="color:#66d9ef">begin</span>
-    <span style="color:#a6e22e">p</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, c, x)
-    <span style="color:#66d9ef">begin</span>
-        <span style="color:#66d9ef">case</span> x <span style="color:#66d9ef">is</span> <span style="color:#75715e">-- case in process</span>
-            <span style="color:#66d9ef">when</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">=&gt;</span>
-                z <span style="color:#f92672">&lt;=</span> b;
-            <span style="color:#66d9ef">when</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">=&gt;</span>
-                z <span style="color:#f92672">&lt;=</span> c;
-            <span style="color:#66d9ef">when</span> <span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span>
-                z <span style="color:#f92672">&lt;=</span> a;
-        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">case</span>;
-    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch_example</span>;</code></pre></div>
-
-<p></div>
-<div class="column" style="width:50%"></p>
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch_example</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">example</span> <span style="color:#66d9ef">is</span>
-<span style="color:#66d9ef">begin</span>
-    <span style="color:#66d9ef">with</span> x <span style="color:#66d9ef">select</span> <span style="color:#75715e">-- with-select buiten process</span>
-        z <span style="color:#f92672">&lt;=</span>    b <span style="color:#66d9ef">when</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">4</span>,
-                c <span style="color:#66d9ef">when</span> <span style="color:#ae81ff">5</span>,
-                a <span style="color:#66d9ef">when</span> <span style="color:#66d9ef">others</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch_example</span>;</code></pre></div>
-
-<p></div>
-</div></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch_example</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">example</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, c, x)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> x <span style="color:#66d9ef">is</span> <span style="color:#75715e">-- case in process</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">when</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">=&gt;</span>
+</span></span><span style="display:flex;"><span>                z <span style="color:#f92672">&lt;=</span> b;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">when</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">=&gt;</span>
+</span></span><span style="display:flex;"><span>                z <span style="color:#f92672">&lt;=</span> c;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">when</span> <span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span>
+</span></span><span style="display:flex;"><span>                z <span style="color:#f92672">&lt;=</span> a;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">case</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch_example</span>;</span></span></code></pre></div>
+</div>
+<div class="column" style="width:50%">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch_example</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">example</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> x <span style="color:#66d9ef">select</span> <span style="color:#75715e">-- with-select buiten process</span>
+</span></span><span style="display:flex;"><span>        z <span style="color:#f92672">&lt;=</span>    b <span style="color:#66d9ef">when</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">4</span>,
+</span></span><span style="display:flex;"><span>                c <span style="color:#66d9ef">when</span> <span style="color:#ae81ff">5</span>,
+</span></span><span style="display:flex;"><span>                a <span style="color:#66d9ef">when</span> <span style="color:#66d9ef">others</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch_example</span>;</span></span></code></pre></div>
+</div>
+</div>
 <h4 id="concurrente-statements">Concurrente statements</h4>
-
 <p>Concurrente statements komen voor buiten een proces.</p>
-
 <p>Voorbeelden van concurrente statements:</p>
-
 <ul>
 <li>concurrente signaaltoekenning (bv. a &lt;= b),</li>
 <li>conditionele signaaltoekenning (when-else),</li>
@@ -1873,14 +1823,10 @@ Zelfde regels als bij de case statement</p>
 <li>generate statement,</li>
 <li>component instantiatie.</li>
 </ul>
-
 <h4 id="sequentiële-statements">Sequentiële statements</h4>
-
 <p>Sequentiële statements komen steeds voor binnen een
 proces.</p>
-
 <p>Voorbeelden van sequentiële statements:</p>
-
 <ul>
 <li>case,</li>
 <li>if,</li>
@@ -1888,9 +1834,7 @@ proces.</p>
 <li>toekenning van een variabele,</li>
 <li>wait statement.</li>
 </ul>
-
 <h4 id="verschil-tussen-sensitivity-list-en-wait">Verschil tussen sensitivity list en wait</h4>
-
 <ul>
 <li>Een proces met een sensitivity list mag geen wait opdracht hebben.</li>
 <li>Een proces met een wait opdracht mag geen sensitivity list hebben.</li>
@@ -1898,38 +1842,31 @@ proces.</p>
 <li>VHDL-code die op een FPGA geïmplementeerd wordt.</li>
 <li>Een wait statement mag bijvoorbeeld wel in een testbench gebruikt worden.</li>
 </ul>
-
 <div class="multicolumn">
     <div class="column" style="width:50%">
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#a6e22e">p_optelling</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, cin) <span style="color:#75715e">-- sensitivity list</span>
-<span style="color:#66d9ef">begin</span>
-    som <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">xor</span> b <span style="color:#66d9ef">xor</span> cin;
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</code></pre></div>
-
-<p></div>
-<div class="column" style="width:50%"></p>
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#a6e22e">p_optelling</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>
-<span style="color:#66d9ef">begin</span>
-    som <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">xor</span> b <span style="color:#66d9ef">xor</span> cin;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">on</span> a, b, cin; <span style="color:#75715e">-- wait opdracht</span>
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</code></pre></div>
-
-<p></div>
-</div></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">p_optelling</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, cin) <span style="color:#75715e">-- sensitivity list</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    som <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">xor</span> b <span style="color:#66d9ef">xor</span> cin;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</span></span></code></pre></div>
+</div>
+<div class="column" style="width:50%">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">p_optelling</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    som <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">xor</span> b <span style="color:#66d9ef">xor</span> cin;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">on</span> a, b, cin; <span style="color:#75715e">-- wait opdracht</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</span></span></code></pre></div>
+</div>
+</div>
 <h4 id="wait-statements">Wait statements</h4>
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#a6e22e">p</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>
-<span style="color:#66d9ef">begin</span>
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">on</span> a;
-    b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span> ns;
-    b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">until</span> (a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span>);
-    b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">p</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">on</span> a;
+</span></span><span style="display:flex;"><span>    b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span> ns;
+</span></span><span style="display:flex;"><span>    b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">until</span> (a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span>);
+</span></span><span style="display:flex;"><span>    b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;</span></span></code></pre></div>
 
 
 <footer class="footline">
@@ -2025,6 +1962,22 @@ proces.</p>
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -2943,19 +2896,19 @@ proces.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1683017774"></script>
-    <script src="../../js/jquery.sticky.js?1683017774"></script>
-    <script src="../../js/featherlight.min.js?1683017774"></script>
-    <script src="../../js/highlight.pack.js?1683017774"></script>
+    <script src="../../js/clipboard.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1705579012"></script>
+    <script src="../../js/jquery.sticky.js?1705579012"></script>
+    <script src="../../js/featherlight.min.js?1705579012"></script>
+    <script src="../../js/highlight.pack.js?1705579012"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1683017774"></script>
-    <script src="../../js/learn.js?1683017774"></script>
-    <script src="../../js/hugo-learn.js?1683017774"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1705579012"></script>
+    <script src="../../js/learn.js?1705579012"></script>
+    <script src="../../js/hugo-learn.js?1705579012"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1683017774"></script>
+            <script src="../../mermaid/mermaid.js?1705579012"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

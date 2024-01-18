@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="generator" content="Hugo 0.111.3">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>NAND poort :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1683017774" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/hybrid.css?1683017774" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1683017774" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1683017774" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1683017774" rel="stylesheet">
-    <link href="../../css/theme.css?1683017774" rel="stylesheet">
-    <link href="../../css/tabs.css?1683017774" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1683017774" rel="stylesheet">
+    <link href="../../css/nucleus.css?1705579012" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/hybrid.css?1705579012" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1705579012" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1705579012" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1705579012" rel="stylesheet">
+    <link href="../../css/theme.css?1705579012" rel="stylesheet">
+    <link href="../../css/tabs.css?1705579012" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1705579012" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1683017774" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1705579012" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1683017774"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1705579012"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1683017774"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1683017774"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1705579012"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1705579012"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/disch\/";
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1683017774"></script>
+<script type="text/javascript" src="../../js/search.js?1705579012"></script>
 
     
   </div>
@@ -261,6 +261,27 @@
       <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item ">
         <a href="../../010_intro_vhdl/030_simulatie/">
         <i class='fas fa-book'></i> Simulatie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/031_synthesisable/" title="Synthetiseerbaar" class="dd-item ">
+        <a href="../../010_intro_vhdl/031_synthesisable/">
+        <i class='fas fa-book'></i> Synthetiseerbaar
         
         </a>
     </li>
@@ -1471,7 +1492,7 @@
         <ul>
           
               <li>
-                  <a class="padding" href="https://uhintra03.uhasselt.be/studiegidswww/opleidingsonderdeel.aspx?a=2022&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
               </li>
           
               <li>
@@ -1524,7 +1545,7 @@
             
           
           
-            <a href='../../'>Digitaal elektronische schakelingen</a> > <a href='../../010_intro_vhdl/'>1. Eerste project</a> > NAND poort
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../010_intro_vhdl/'>1. Eerste project</a> > NAND poort
           
         
           
@@ -1537,7 +1558,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1560,44 +1581,63 @@
         
 
 
-<p>De volgende stap is de beschrijving van een logisch AND poort. Hiervoor maak je een nieuwe component aan in het Vivado project. Het grootste deel van de code van de invertor kunnen we overnemen als startpunt voor deze beschrijving.</p>
-
+<p>De volgende stap is de beschrijving van een logisch NAND poort. Hiervoor maak je een nieuwe component aan in het Vivado project. Het grootste deel van de code van de invertor kunnen we overnemen als startpunt voor deze beschrijving.</p>
 <p>We passen de entity aan zodat we <strong>2 inputs</strong> hebben in plaats van 1. De behuizing van de nieuwe component zegt nu dat er 3 pinnen zijn: 2 input pinnen en 1 output pin.</p>
-
 <p>Uiteraard moet het gedrag van deze component ook aangepast worden. In de architecture schrijven we dat we een NAND operatie willen doen. De basis poort <strong>NAND</strong> is ook beschikbaar als keyword in VHDL.</p>
-
 <div class="multiHcolumn">
-    
 <div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vhdl" data-lang="vhdl"><span style="color:#66d9ef">library</span> IEEE;
-<span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
-
-<span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">nand_gate</span> <span style="color:#66d9ef">is</span>
-    <span style="color:#66d9ef">Port</span> (
-        A <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>; 
-        B <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
-        Y <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>
-    );
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">nand_gate</span>;
-
-<span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">nand_gate</span> <span style="color:#66d9ef">is</span>
-<span style="color:#66d9ef">begin</span>
-
-    Y <span style="color:#f92672">&lt;=</span> A <span style="color:#66d9ef">NAND</span> B;
-
-<span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;</code></pre></div>
-
-<p></div><br />
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Revision     Date       Author     Comments</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- v0.2         20240118   VlJo       Initial version</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">nand_gate</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Port</span> (
+</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>; 
+</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span>        Z <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">nand_gate</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">nand_gate</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- (DE-)LOCALISING IN/OUTPUTS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> A_i <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> B_i <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> Z_i <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- (DE-)LOCALISING IN/OUTPUTS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span>    A_i <span style="color:#f92672">&lt;=</span> A;
+</span></span><span style="display:flex;"><span>    B_i <span style="color:#f92672">&lt;=</span> B;
+</span></span><span style="display:flex;"><span>    Z <span style="color:#f92672">&lt;=</span> Z_i;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- COMBINATORIAL</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span>    Z_i <span style="color:#f92672">&lt;=</span> A_i <span style="color:#66d9ef">nand</span> B_i;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;</span></span></code></pre></div>
+</div>    
 <div class="column">
-    <figure><img src="../../images/intro/NAND_gate.png"/><figcaption>
+    <figure><img src="../../images/drawio_new_nand.png"/><figcaption>
             <h4>NAND gate</h4>
         </figcaption>
-</figure></p>
-
-<p></div></p>
-
-<p></div></p>
-
+</figure>
+</div>    
+</div>
+<p>Nog enkele bijkomende opmerkingen:</p>
+<ul>
+<li>VHDL is case-insensitive. Je mag dus hoofdletters en kleine letters verwisselen.</li>
+<li>commentaar wordt vooraf gegaan van 2 min-tekens <code>--</code></li>
+<li>Het is good-practice om niet meteen te werken met de in- en uitgangen, maar met lokale signalen. Daarom wordt in dit voorbeeld deze &ldquo;vertaalslag&rdquo; gemaakt.</li>
+<li><strong>commentaar kan NOOIT kwaad</strong></li>
+</ul>
 
 <div class="notices tip" ><p>Voor deze simpele voorbeelden lijkt het banaal om de link met de discrete component (en de bijhorende schematic) te leggen. Een goede designer verliest echter het volledige schema <strong>NOOIT</strong> uit het oog.</p>
 </div>
@@ -1742,6 +1782,22 @@
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2615,19 +2671,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1683017774"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1683017774"></script>
-    <script src="../../js/jquery.sticky.js?1683017774"></script>
-    <script src="../../js/featherlight.min.js?1683017774"></script>
-    <script src="../../js/highlight.pack.js?1683017774"></script>
+    <script src="../../js/clipboard.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1705579012"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1705579012"></script>
+    <script src="../../js/jquery.sticky.js?1705579012"></script>
+    <script src="../../js/featherlight.min.js?1705579012"></script>
+    <script src="../../js/highlight.pack.js?1705579012"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1683017774"></script>
-    <script src="../../js/learn.js?1683017774"></script>
-    <script src="../../js/hugo-learn.js?1683017774"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1705579012"></script>
+    <script src="../../js/learn.js?1705579012"></script>
+    <script src="../../js/hugo-learn.js?1705579012"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1683017774"></script>
+            <script src="../../mermaid/mermaid.js?1705579012"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
