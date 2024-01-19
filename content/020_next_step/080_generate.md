@@ -6,7 +6,7 @@ weight: 80
 draft: false
 ---
 
-Een generate is handig als je vaak code moet herhalen. Meestal kan je dan een generate statement gebruiken om te voorkomen dat je te veel moet kopiëren en plakken.
+Een generate is handig als je vaak VHDL-code moet herhalen. Meestal kan je dan een generate statement gebruiken om te voorkomen dat je te veel moet kopiëren en plakken.
 
 De generate gaat in dit voorbeeld van 0 tot 6 omdat 6+1 al 7 is, wat het laatste element van de array is.
 
