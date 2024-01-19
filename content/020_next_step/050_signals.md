@@ -3,11 +3,11 @@ title: 'Signals'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
 weight: 50
-draft: false
+draft: true
 ---
 
-Natuurlijk hebben we soms ook **tussensingalen** nodig in ons project/code. Hiervoor gebruiken we **signals**.
-Signals beschrijf je **na** de **architecture** maar **voor** het **begin** keyword. Zoals in het voorbeeld hieronder.
+Natuurlijk hebben we soms ook **tussensignalen** nodig in ons project/code. Hiervoor gebruiken we **signals**.
+Signals declareer je **na** de **architecture** maar **voor** het **begin** keyword, zoals in het voorbeeld hieronder.
 
 
 ```vhdl
