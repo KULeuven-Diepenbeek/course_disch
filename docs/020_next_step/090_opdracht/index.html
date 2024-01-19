@@ -12,22 +12,22 @@
     <title>Opdracht 2: Ripple carry adder :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1705579012" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1705579012" rel="stylesheet">
-    <link href="../../css/hybrid.css?1705579012" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1705579012" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1705579012" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1705579012" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1705579012" rel="stylesheet">
-    <link href="../../css/theme.css?1705579012" rel="stylesheet">
-    <link href="../../css/tabs.css?1705579012" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1705579012" rel="stylesheet">
+    <link href="../../css/nucleus.css?1705653311" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1705653311" rel="stylesheet">
+    <link href="../../css/hybrid.css?1705653311" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1705653311" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1705653311" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1705653311" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1705653311" rel="stylesheet">
+    <link href="../../css/theme.css?1705653311" rel="stylesheet">
+    <link href="../../css/tabs.css?1705653311" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1705653311" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1705579012" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1705653311" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1705579012"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1705653311"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1705579012"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1705579012"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1705653311"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1705653311"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1705579012"></script>
+<script type="text/javascript" src="../../js/search.js?1705653311"></script>
 
     
   </div>
@@ -376,27 +376,6 @@
  
   
     
-      <li data-nav-id="/020_next_step/050_signals/" title="Signals" class="dd-item ">
-        <a href="../../020_next_step/050_signals/">
-        <i class='fas fa-book'></i> Signals
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
       <li data-nav-id="/020_next_step/060_processen/" title="Processen" class="dd-item ">
         <a href="../../020_next_step/060_processen/">
         <i class='fas fa-book'></i> Processen
@@ -439,9 +418,9 @@
  
   
     
-      <li data-nav-id="/020_next_step/090_opdracht/" title="Opdracht 2: Ripple carry adder" class="dd-item active">
-        <a href="../../020_next_step/090_opdracht/">
-        <i class='fas fa-pen-square'></i> Opdracht 2: Ripple carry adder
+      <li data-nav-id="/020_next_step/085_generic/" title="Generic" class="dd-item ">
+        <a href="../../020_next_step/085_generic/">
+        <i class='fas fa-book'></i> Generic
         
         </a>
     </li>
@@ -460,9 +439,9 @@
  
   
     
-      <li data-nav-id="/020_next_step/100_generic/" title="Generic" class="dd-item ">
-        <a href="../../020_next_step/100_generic/">
-        <i class='fas fa-book'></i> Generic
+      <li data-nav-id="/020_next_step/090_opdracht/" title="Opdracht 2: Ripple carry adder" class="dd-item active">
+        <a href="../../020_next_step/090_opdracht/">
+        <i class='fas fa-pen-square'></i> Opdracht 2: Ripple carry adder
         
         </a>
     </li>
@@ -1560,7 +1539,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#testbench">testbench</a></li>
+    <li><a href="#testbench">Testbench</a></li>
   </ul>
 </nav>
     </div>
@@ -1585,98 +1564,125 @@
         
 
 
-<p>De bedoeling is nu om een <strong>8 bit ripple-carry adder</strong> te maken. Voor als je vergeten bent hoe een full adder en half adder eruit ziet, kan je kijken naar onderstaande schema&rsquo;s. Bij een ripple-carry adder wordt de C out van de eerste adder doorgegeven aan de tweede adder. We werken in little endian.</p>
+<p>In deze opdracht moet je een <strong>8 bit ripple-carry adder</strong> te maken. Indien je vergeten bent hoe een full adder en een half adder eruit zien, kan je kijken naar onderstaande schema&rsquo;s. Bij een ripple-carry adder wordt de C out van de eerste adder doorgegeven aan de tweede adder. We werken in little endian.</p>
 <p>Het is <strong>niet</strong> de bedoeling dat je de + operator gebruikt van &ldquo;std_logic_unsigned&rdquo;  of &ldquo;std_logic_signed&rdquo;!</p>
 <figure><img src="../../images/half_adder.png"/><figcaption>
-            <h4>Half adder</h4>
+            <h4>Half adder, met S = A &amp;oplus; B</h4>
         </figcaption>
 </figure>
 <figure><img src="../../images/full_adder.png"/><figcaption>
             <h4>Full adder</h4>
         </figcaption>
 </figure>
-<figure><img src="../../images/ripple_carry_adder.png"/><figcaption>
+<!-- <figure><img src="../../images/ripple_carry_adder.png"/><figcaption>
             <h4>ripple carry adder</h4>
         </figcaption>
 </figure>
+ -->
 
 <div class="notices warning" ><p>Het is altijd een goed idee om eerst een tekening te maken voordat je begint met typen.</p>
 </div>
 
-<h2 id="testbench">testbench</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
+<h2 id="testbench">Testbench</h2>
+<p>Hieronder staat een voorbeeld van een testbench. Vaak is het interesant om enkele specifieke stimuli te hebben tijdens de ontwikkeling. Indien het mogelijk is (zoals hier het geval is), is het ook een optie om simpelweg ALLE opties te verifiëren. Omdat dergelijk bestand nogal groot wordt, is hieronder een verkorte versie weergegeven. De volledige testbench kan <a href="../../hdlsrc/rca_tb.vhd">hier</a> gedownload worden.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#75715e">--------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- KU Leuven - ESAT/COSIC - Emerging technologies, Systems &amp; Security</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Module Name:     rca_tb - Behavioural</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Project Name:    Digitale eletronische schakelingen</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Description:     Testbench for rca</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Revision     Date       Author     Comments</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- v0.1         20140119   VlJo       Initial version</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">tb_adder</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">--  Port ( );</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">tb_adder</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">rca_tb</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">generic</span>(
+</span></span><span style="display:flex;"><span>        WIDTH <span style="color:#f92672">:</span> <span style="color:#66d9ef">natural</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">rca_tb</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">tb_adder</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioural</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">rca_tb</span> <span style="color:#66d9ef">is</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">component</span> <span style="color:#a6e22e">adder</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Port</span> (A_vector<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
-</span></span><span style="display:flex;"><span>        B_vector<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
-</span></span><span style="display:flex;"><span>        Y_vector<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>));
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">rca</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">generic</span>(
+</span></span><span style="display:flex;"><span>            WIDTH <span style="color:#f92672">:</span> <span style="color:#66d9ef">natural</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>        );
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">port</span>(
+</span></span><span style="display:flex;"><span>            A <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            B <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            S <span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            C <span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC</span>
+</span></span><span style="display:flex;"><span>        );
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">rca</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> A_vector, B_vector, Y_vector <span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> A <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> B <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> S <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> C <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>DUT<span style="color:#f92672">:</span> adder <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
-</span></span><span style="display:flex;"><span>    A_vector <span style="color:#f92672">=&gt;</span> A_vector,
-</span></span><span style="display:flex;"><span>    B_vector <span style="color:#f92672">=&gt;</span> B_vector,
-</span></span><span style="display:flex;"><span>    Y_vector <span style="color:#f92672">=&gt;</span> Y_vector
-</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- STIMULI</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">PSTIM</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">-- waardes bij het begin</span>
+</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;00&#34;</span>;
+</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;00&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">3</span> ns;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (S <span style="color:#f92672">=</span> <span style="color:#ae81ff">x&#34;00&#34;</span>) report <span style="color:#e6db74">&#34;Error in sum&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (C <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span>) report <span style="color:#e6db74">&#34;Error in carry&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">2</span> ns;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">PSTIM</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>    A_vector <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;00000000&#34;</span>;
-</span></span><span style="display:flex;"><span>    B_vector <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;00000000&#34;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (Y_vector <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;00000000&#34;</span>) report <span style="color:#e6db74">&#34;ADDER werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;    
-</span></span><span style="display:flex;"><span>    A_vector <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;00000001&#34;</span>;
-</span></span><span style="display:flex;"><span>    B_vector <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;00000000&#34;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (Y_vector <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;00000001&#34;</span>) report <span style="color:#e6db74">&#34;ADDER werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;    
-</span></span><span style="display:flex;"><span>    A_vector <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;00000000&#34;</span>;
-</span></span><span style="display:flex;"><span>    B_vector <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;00000001&#34;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (Y_vector <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;00000001&#34;</span>) report <span style="color:#e6db74">&#34;ADDER werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;    
-</span></span><span style="display:flex;"><span>    A_vector <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;00000001&#34;</span>;
-</span></span><span style="display:flex;"><span>    B_vector <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;00000001&#34;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (Y_vector <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;00000010&#34;</span>) report <span style="color:#e6db74">&#34;ADDER werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;    
-</span></span><span style="display:flex;"><span>    A_vector <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;11111111&#34;</span>;
-</span></span><span style="display:flex;"><span>    B_vector <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;00000001&#34;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (Y_vector <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;00000000&#34;</span>) report <span style="color:#e6db74">&#34;ADDER werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;    
-</span></span><span style="display:flex;"><span>    A_vector <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;11111111&#34;</span>;
-</span></span><span style="display:flex;"><span>    B_vector <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;00000001&#34;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (Y_vector <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;00000000&#34;</span>) report <span style="color:#e6db74">&#34;ADDER werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;    
-</span></span><span style="display:flex;"><span>    A_vector <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;11111111&#34;</span>;
-</span></span><span style="display:flex;"><span>    B_vector <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;11111111&#34;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>ns;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> (Y_vector <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;11111110&#34;</span>) report <span style="color:#e6db74">&#34;ADDER werkt niet&#34;</span> <span style="color:#66d9ef">severity</span> failure;
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">wait</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">-- waardes interessant voor ontwikkeling</span>
+</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;03&#34;</span>;
+</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;27&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">3</span> ns;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (S <span style="color:#f92672">=</span> <span style="color:#ae81ff">x&#34;2A&#34;</span>) report <span style="color:#e6db74">&#34;Error in sum&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (C <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span>) report <span style="color:#e6db74">&#34;Error in carry&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">2</span> ns;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">-- waardes om &#39;alles&#39; te coveren</span>
+</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;00&#34;</span>;
+</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;00&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">3</span> ns;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (S <span style="color:#f92672">=</span> <span style="color:#ae81ff">x&#34;00&#34;</span>) report <span style="color:#e6db74">&#34;Error in sum&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (C <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span>) report <span style="color:#e6db74">&#34;Error in carry&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">2</span> ns;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;01&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">3</span> ns;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (S <span style="color:#f92672">=</span> <span style="color:#ae81ff">x&#34;01&#34;</span>) report <span style="color:#e6db74">&#34;Error in sum&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (C <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span>) report <span style="color:#e6db74">&#34;Error in carry&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">2</span> ns;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;02&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">3</span> ns;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (S <span style="color:#f92672">=</span> <span style="color:#ae81ff">x&#34;02&#34;</span>) report <span style="color:#e6db74">&#34;Error in sum&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (C <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span>) report <span style="color:#e6db74">&#34;Error in carry&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">2</span> ns;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        ...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- DUT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    DUT<span style="color:#f92672">:</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">rca</span> <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
+</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">=&gt;</span> A,
+</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">=&gt;</span> B,
+</span></span><span style="display:flex;"><span>        S <span style="color:#f92672">=&gt;</span> S,
+</span></span><span style="display:flex;"><span>        C <span style="color:#f92672">=&gt;</span> C
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioural</span>;
 </span></span></code></pre></div>
 
 <footer class="footline">
@@ -1970,25 +1976,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1996,6 +1983,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2693,10 +2683,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../020_next_step/080_generate/" title="Generate"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../020_next_step/085_generic/" title="Generic"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../020_next_step/100_generic/" title="Generic" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../030_sequentiele_logica/" title="3. Sequentiële logica" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2706,19 +2696,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1705579012"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1705579012"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1705579012"></script>
-    <script src="../../js/jquery.sticky.js?1705579012"></script>
-    <script src="../../js/featherlight.min.js?1705579012"></script>
-    <script src="../../js/highlight.pack.js?1705579012"></script>
+    <script src="../../js/clipboard.min.js?1705653311"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1705653311"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1705653311"></script>
+    <script src="../../js/jquery.sticky.js?1705653311"></script>
+    <script src="../../js/featherlight.min.js?1705653311"></script>
+    <script src="../../js/highlight.pack.js?1705653311"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1705579012"></script>
-    <script src="../../js/learn.js?1705579012"></script>
-    <script src="../../js/hugo-learn.js?1705579012"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1705653311"></script>
+    <script src="../../js/learn.js?1705653311"></script>
+    <script src="../../js/hugo-learn.js?1705653311"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1705579012"></script>
+            <script src="../../mermaid/mermaid.js?1705653311"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

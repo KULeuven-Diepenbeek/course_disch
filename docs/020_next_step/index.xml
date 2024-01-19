@@ -14,19 +14,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/040_vectors/</guid>
-      <description>Soms moet of wil je met arrays of groepen van bits werken. Natuurlijk gaat dit ook in VHDL en dit noemt dan vectors. Als we een array van 8 bits willen dan doen we dat zoals in onderstaande regel.
-std_logic_vector(7 downto 0); Als illustratie hoe vectors werken kan je onderstaand voorbeeldje bekijken.
-library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity vector_example is Port (A_vector: in std_logic_vector(7 downto 0); Y_vector: out std_logic_vector(7 downto 0)); end vector_example; architecture Behavioral of vector_example is begin Y_vector(7) &amp;lt;= A_vector(0) AND A_vector(1); Y_vector(6 downto 0) &amp;lt;= A_vector(7 downto 1); end Behavioral; Iedere beschrijving die gemaakt wordt in VHDL (of Verilog) kan een hardware schema van gemaakt worden.</description>
-    </item>
-    
-    <item>
-      <title>Signals</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/050_signals/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/050_signals/</guid>
-      <description>Natuurlijk hebben we soms ook tussensingalen nodig in ons project/code. Hiervoor gebruiken we signals. Signals beschrijf je na de architecture maar voor het begin keyword. Zoals in het voorbeeld hieronder.
-library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity signal_example is Port (A_vector: in std_logic_vector(7 downto 0); Y_vector: out std_logic_vector(7 downto 0)); end signal_example; architecture Behavioral of signal_example is signal tussenresultaat: std_logic; begin tussenresultaat &amp;lt;= A_vector(0) AND A_vector(1); Y_vector(7) &amp;lt;= tussenresultaat; Y_vector(6 downto 0) &amp;lt;= A_vector(7 downto 1); end Behavioral; </description>
+      <description>Soms moet of wil je met arrays of groepen van bits werken. Natuurlijk gaat dit ook in VHDL en in VHDL worden dit vectors genoemd. Als we een array van 8 bits willen dan beschrijven we dat in één van de twee onderstaande opties.
+signal result: std_logic_vector(7 downto 0); signal outcome: std_logic_vector(0 to 7); Een vector van 8 bits, Little Endian, met LSB en MSB aanduiding Stel dat we het getal 213 willen voorstellen.</description>
     </item>
     
     <item>
@@ -35,8 +24,8 @@ library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity signal_example is Port (A_vect
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/060_processen/</guid>
-      <description>Vaak wil je if gebruiken in de code en als dat het geval is kunnen we een process maken. We kunnen niet los zonder process een if statement zetten.
-Processen hebben een naam in dit geval p1 en een sensitivity list. De sensitivity list is hetgeen dat tussen haakjes staat. Dit geeft aan wanneer het process moet worden uitgevoerd. Voor combinatorische logica moeten daar alle ingangen en tussensignalen van het process staan.</description>
+      <description>Een basis component die vaak voorkomt is een multiplexer.
+2-naar-1 multiplexer ... architecture Behavioral of ... ... signal rotate_left : STD_LOGIC_VECTOR(7 downto 0); signal rotate_right : STD_LOGIC_VECTOR(7 downto 0); signal MUX_select : STD_LOGIC; signal transformed : STD_LOGIC_VECTOR(7 downto 0); ... begin ... -- optie 1 transformed &amp;lt;= rotate_left when MUX_select = &amp;#39;0&amp;#39; else rotate_right; -- optie 2 with MUX_select select transformed &amp;lt;= rotate_left when &amp;#39;0&amp;#39;, rotate_right when others; -- optie 3 PMUX: process(rotate_left, rotate_right, MUX_select) begin if MUX_select = &amp;#39;1&amp;#39; then transformed &amp;lt;= rotate_right; else transformed &amp;lt;= rotate_left; end if; end process; .</description>
     </item>
     
     <item>
@@ -45,9 +34,19 @@ Processen hebben een naam in dit geval p1 en een sensitivity list. De sensitivit
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/080_generate/</guid>
-      <description>Een generate is handig als je vaak code moet herhalen. Meestal kan je dan een generate statement gebruiken om te voorkomen dat je te veel moet kopiëren en plakken.
+      <description>Een generate is handig als je vaak VHDL-code moet herhalen. Meestal kan je dan een generate statement gebruiken om te voorkomen dat je te veel moet kopiëren en plakken.
 De generate gaat in dit voorbeeld van 0 tot 6 omdat 6+1 al 7 is, wat het laatste element van de array is.
 library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity generate_example is Port (A_vector: in std_logic_vector(7 downto 0); Y_vector: out std_logic_vector(7 downto 0)); end generate_example; architecture Behavioral of generate_example is begin GEN : for i in 0 to 6 generate Y_vector(i) &amp;lt;= A_vector(i) AND A_vector(i+1); end generate; end Behavioral; Schematische voorstelling Vivado kan een schematische voorstelling maken van de hardware beschrijving met RTL analysis elaborate design.</description>
+    </item>
+    
+    <item>
+      <title>Generic</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/085_generic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/085_generic/</guid>
+      <description>Sommige studenten hebben misschien al door dat de componenten tot hiertoe niet goed schaalbaar zijn. Wat als er nu nood is aan een 6-bit XOR poort? Moeten we dan voor iedere mogelijke breedte een nieuwe component maken? Nee! Dit kunnen we oplossen door generics te gebruiken. Als voorbeeld hebben we een 8-bit AND poort die generic is en kan schalen.
+Generic AND voorstelling Je kan deze AND poort beschrijven met onderstaand code.</description>
     </item>
     
     <item>
@@ -56,19 +55,9 @@ library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity generate_example is Port (A_ve
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/090_opdracht/</guid>
-      <description>De bedoeling is nu om een 8 bit ripple-carry adder te maken. Voor als je vergeten bent hoe een full adder en half adder eruit ziet, kan je kijken naar onderstaande schema&amp;rsquo;s. Bij een ripple-carry adder wordt de C out van de eerste adder doorgegeven aan de tweede adder. We werken in little endian.
+      <description>In deze opdracht moet je een 8 bit ripple-carry adder te maken. Indien je vergeten bent hoe een full adder en een half adder eruit zien, kan je kijken naar onderstaande schema&amp;rsquo;s. Bij een ripple-carry adder wordt de C out van de eerste adder doorgegeven aan de tweede adder. We werken in little endian.
 Het is niet de bedoeling dat je de + operator gebruikt van &amp;ldquo;std_logic_unsigned&amp;rdquo; of &amp;ldquo;std_logic_signed&amp;rdquo;!
-Half adder Full adder ripple carry adder Het is altijd een goed idee om eerst een tekening te maken voordat je begint met typen.</description>
-    </item>
-    
-    <item>
-      <title>Generic</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/100_generic/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/020_next_step/100_generic/</guid>
-      <description>Oplettende studenten hebben door dat de ripple carry adder niet goed schaalbaar is. Wat als de getallen nu 16 of 32 bits worden in een andere toepassing? Dit kunnen we oplossen door generics te gebruiken. Als voorbeeld hebben we een 8-bit AND poort die generic is en kan schalen.
-Generic AND voorstelling Je kan deze AND poort beschrijven met onderstaand code. De variable N wordt gebruikt als het aantal inputs.</description>
+Half adder, met S = A &amp;amp;oplus; B Full adder Het is altijd een goed idee om eerst een tekening te maken voordat je begint met typen.</description>
     </item>
     
   </channel>

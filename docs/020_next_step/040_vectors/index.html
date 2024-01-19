@@ -12,22 +12,22 @@
     <title>Vectors :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1705579012" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1705579012" rel="stylesheet">
-    <link href="../../css/hybrid.css?1705579012" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1705579012" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1705579012" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1705579012" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1705579012" rel="stylesheet">
-    <link href="../../css/theme.css?1705579012" rel="stylesheet">
-    <link href="../../css/tabs.css?1705579012" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1705579012" rel="stylesheet">
+    <link href="../../css/nucleus.css?1705653311" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1705653311" rel="stylesheet">
+    <link href="../../css/hybrid.css?1705653311" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1705653311" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1705653311" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1705653311" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1705653311" rel="stylesheet">
+    <link href="../../css/theme.css?1705653311" rel="stylesheet">
+    <link href="../../css/tabs.css?1705653311" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1705653311" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1705579012" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1705653311" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1705579012"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1705653311"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1705579012"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1705579012"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1705653311"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1705653311"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1705579012"></script>
+<script type="text/javascript" src="../../js/search.js?1705653311"></script>
 
     
   </div>
@@ -376,27 +376,6 @@
  
   
     
-      <li data-nav-id="/020_next_step/050_signals/" title="Signals" class="dd-item ">
-        <a href="../../020_next_step/050_signals/">
-        <i class='fas fa-book'></i> Signals
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
       <li data-nav-id="/020_next_step/060_processen/" title="Processen" class="dd-item ">
         <a href="../../020_next_step/060_processen/">
         <i class='fas fa-book'></i> Processen
@@ -439,9 +418,9 @@
  
   
     
-      <li data-nav-id="/020_next_step/090_opdracht/" title="Opdracht 2: Ripple carry adder" class="dd-item ">
-        <a href="../../020_next_step/090_opdracht/">
-        <i class='fas fa-pen-square'></i> Opdracht 2: Ripple carry adder
+      <li data-nav-id="/020_next_step/085_generic/" title="Generic" class="dd-item ">
+        <a href="../../020_next_step/085_generic/">
+        <i class='fas fa-book'></i> Generic
         
         </a>
     </li>
@@ -460,9 +439,9 @@
  
   
     
-      <li data-nav-id="/020_next_step/100_generic/" title="Generic" class="dd-item ">
-        <a href="../../020_next_step/100_generic/">
-        <i class='fas fa-book'></i> Generic
+      <li data-nav-id="/020_next_step/090_opdracht/" title="Opdracht 2: Ripple carry adder" class="dd-item ">
+        <a href="../../020_next_step/090_opdracht/">
+        <i class='fas fa-pen-square'></i> Opdracht 2: Ripple carry adder
         
         </a>
     </li>
@@ -1558,7 +1537,16 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+        <li><a href="#voorbeeld">Voorbeeld</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1581,31 +1569,131 @@
         
 
 
-<p>Soms moet of wil je met <strong>arrays</strong> of <strong>groepen van bits</strong> werken. Natuurlijk gaat dit ook in <strong>VHDL</strong> en dit noemt dan <strong>vectors</strong>. Als we een array van 8 bits willen dan doen we dat zoals in onderstaande regel.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
-</span></span></code></pre></div><p>Als illustratie hoe vectors werken kan je onderstaand voorbeeldje bekijken.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>
+<p>Soms moet of wil je met <strong>arrays</strong> of <strong>groepen van bits</strong> werken. Natuurlijk gaat dit ook in <strong>VHDL</strong> en in VHDL worden dit <strong>vectors</strong> genoemd. Als we een array van 8 bits willen dan beschrijven we dat in één van de twee onderstaande opties.</p>
+<div class="multiHcolumn">
+<div class="column">
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> result<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);</span></span></code></pre></div>
+</div>    
+<div class="column">
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> outcome<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">7</span>);</span></span></code></pre></div>
+</div>    
+</div>
+<figure><img src="../../images/drawio_new_vectors.png"/><figcaption>
+            <h4>Een vector van 8 bits, Little Endian, met LSB en MSB aanduiding</h4>
+        </figcaption>
+</figure>
+<p>Stel dat we het getal 213 willen voorstellen. Hexadecimaal wordt dit 0xD5 en in binaire notatie is dit 0b11010101. Zoals in de meeste moderne Europese talen, lezen we van links naar rechts. Het cijfer <strong>3</strong> in 213 geeft het aantal eenheden mee. Dit cijfer heeft het minste <em>gewicht</em> en wordt het minst beduidend genoemd. De meest rechtse bit noemen we deze bit de minst-beduidende bit, of least significant bit (<strong>LSB</strong>), en deze staat rechts. Deze afspraak wordt <strong>Little endian</strong> genoemd. Indien we de LSB links zetten, spreken we van <strong>Big endiann</strong>.</p>
+<h4 id="is-het-sop-de-kool-waard">Is het sop de kool waard?</h4>
+<p>Waarom zouden we daar nu moeilijk over doen? Denk eens na over de volgende twee regels C-code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> value_x[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> value_y <span style="color:#f92672">=</span> <span style="color:#ae81ff">213</span>;
+</span></span></code></pre></div><p>Hieronder is een mooie illustratie van het verschil. <strong>Laat u niet ver(r)assen door het Endian-monster!</strong>
+<img src="https://media.licdn.com/dms/image/D4E22AQGZAvDcKoCWBw/feedshare-shrink_800/0/1704128198851?e=2147483647&amp;v=beta&amp;t=lbP1Y2y3Q41cM0YtPwNrSgNEH5u0h6dNzAknCCq_3BU" alt="Mooie illustratie">
+<div class="image_courtesy">
+  Image courtesy: 
+  <a href="https://www.pexels.com" target="_blank">LinkedIn</a>
+   - 
+   <a href="https://www.linkedin.com/posts/alexxubyte_systemdesign-coding-interviewtips-activity-7147631723344797696-1PXp/" target="_blank">ByteByteGo</a>
+</div>
+
+<style>
+  div.image_courtesy {
+    text-align: center;
+    font-size: 100%;
+    font-style: italic;
+  }
+</style></p>
+<h4 id="wat-is-nu-het-verschil-tussen-result-en-outcome-van-de-hierboven-gedeclareerde-signalen">Wat is nu het verschil tussen <em>result</em> en <em>outcome</em> van de hierboven gedeclareerde signalen?</h4>
+<p>De binaire vector 11010101 blijft altijd hetzelfde, bv de voorlaatste bit is een &lsquo;0&rsquo;. Het verschil zit hem in het indexeren. Deze bit is result(1) ofwel outcome(6). De waarde in de vector verandert niet!!</p>
+<h3 id="voorbeeld">Voorbeeld</h3>
+<p>Als voorbeeld van het gebruik van vectoren wordt hieronder de code gegeven voor een 4-bit AND poort</p>
+<div class="multiHcolumn">
+<div class="column">
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- KU Leuven - ESAT/COSIC - ES&amp;S</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Module Name:     4-bit and_gate - Behavioural</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Project Name:    Digitale elektronische schakelingen </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Description:     Een voorbeeld van een 4-bit and-gate.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--                  X geeft een bits-gewijze AND van A en B</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--                  Z geeft een 4-bit and van A</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Revision     Date       Author     Comments</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- v0.1         20240118   VlJo       Initial version</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">vector_example</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Port</span> (A_vector<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
-</span></span><span style="display:flex;"><span>        Y_vector<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>));
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">vector_example</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">fourbit_and_gate</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(
+</span></span><span style="display:flex;"><span>        A<span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        B<span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        X<span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        Z<span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC</span>
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">fourbit_and_gate</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vector_example</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioural</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">fourbit_and_gate</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- (DE-)LOCALISING IN/OUTPUTS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> A_i <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> B_i <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> X_i <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> Z_i <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    Y_vector(<span style="color:#ae81ff">7</span>) <span style="color:#f92672">&lt;=</span> A_vector(<span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">AND</span> A_vector(<span style="color:#ae81ff">1</span>);
-</span></span><span style="display:flex;"><span>    Y_vector(<span style="color:#ae81ff">6</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">&lt;=</span> A_vector(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">1</span>);
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- (DE-)LOCALISING IN/OUTPUTS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span>    A_i <span style="color:#f92672">&lt;=</span> A;
+</span></span><span style="display:flex;"><span>    B_i <span style="color:#f92672">&lt;=</span> B;
+</span></span><span style="display:flex;"><span>    X <span style="color:#f92672">&lt;=</span> X_i;
+</span></span><span style="display:flex;"><span>    Z <span style="color:#f92672">&lt;=</span> Z_i;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- COMBINATORIAL</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
+</span></span><span style="display:flex;"><span>    Z <span style="color:#f92672">&lt;=</span> A_i(<span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">AND</span> A_i(<span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">AND</span> A_i(<span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">AND</span> A_i(<span style="color:#ae81ff">3</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    X_i(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">&lt;=</span> A_i(<span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">AND</span> B_i(<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    X_i(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">&lt;=</span> A_i(<span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">AND</span> B_i(<span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    X_i(<span style="color:#ae81ff">2</span>) <span style="color:#f92672">&lt;=</span> A_i(<span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">AND</span> B_i(<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>    X_i(<span style="color:#ae81ff">3</span>) <span style="color:#f92672">&lt;=</span> A_i(<span style="color:#ae81ff">3</span>) <span style="color:#66d9ef">AND</span> B_i(<span style="color:#ae81ff">3</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- wat ook mag is:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--X_i &lt;= A_i AND B_i;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioural</span>;
 </span></span></code></pre></div>
-<div class="notices note" ><p>Iedere beschrijving die gemaakt wordt in VHDL (of Verilog) kan een hardware schema van gemaakt worden.</p>
+</div>    
+<div class="column">
+    <h3 id="nog-enkele-bijkomende-opmerkingen">Nog enkele bijkomende opmerkingen:</h3>
+<ul>
+<li>een 4-bit vector moét niet altijd index 0 bevatten: signal voorbeeld : STD_LOGIC_VECTOR(4 downto 1) is ook geldig</li>
+<li>indexen worden geselecteerd met gewone haakjes &lsquo;(&rsquo; en &lsquo;)&rsquo;</li>
+<li>namen (van poorten, signalen, variabelen, entities, &hellip;) moeten aan bepaalde voorwaarden voldoen:
+<ul>
+<li>beginnen met een letter</li>
+<li>mogen voor de rest letters of cijfers bevatten</li>
+<li>mogen géén spaties of &lsquo;-&rsquo;-tekens bevatten</li>
+<li>een underscore (&rsquo;_&rsquo;) is toegestaan, maar niet als laatste karakter</li>
+<li>twee opeenvolgende underscores is niet toegestaan</li>
+<li>zijn hoofdletter-ongevoelig</li>
+<li>mogen geen keyword (signal, begin, procedure, &hellip;) zijn</li>
+</ul>
+</li>
+<li>er bestaan verschillende manieren om toekenningen te doen: bv &ldquo;0001&rdquo; aan Q_i
+<ul>
+<li>Q_i &lt;= &ldquo;0001&rdquo;; &ndash; handig voor hardcoding</li>
+<li>Q_i &lt;= (0 =&gt; &lsquo;1&rsquo;, others =&gt; &lsquo;0&rsquo;); &ndash; handig voor langere vectoren</li>
+<li>Q_i(0) &lt;= &lsquo;1&rsquo;; Q_i(1) &lt;= &lsquo;0&rsquo;; Q_i(2) &lt;= &lsquo;0&rsquo;; Q_i(3) &lt;= &lsquo;0&rsquo;; &ndash; handig bij ingewikkeldere designs</li>
+</ul>
+</li>
+</ul>
+</div>    
 </div>
-
-
 
 <footer class="footline">
 	
@@ -1838,22 +1926,6 @@
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2621,7 +2693,7 @@
 			<a class="nav nav-prev" href="../../020_next_step/" title="2. Volgende stap"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../020_next_step/050_signals/" title="Signals" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../020_next_step/060_processen/" title="Processen" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2631,19 +2703,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1705579012"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1705579012"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1705579012"></script>
-    <script src="../../js/jquery.sticky.js?1705579012"></script>
-    <script src="../../js/featherlight.min.js?1705579012"></script>
-    <script src="../../js/highlight.pack.js?1705579012"></script>
+    <script src="../../js/clipboard.min.js?1705653311"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1705653311"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1705653311"></script>
+    <script src="../../js/jquery.sticky.js?1705653311"></script>
+    <script src="../../js/featherlight.min.js?1705653311"></script>
+    <script src="../../js/highlight.pack.js?1705653311"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1705579012"></script>
-    <script src="../../js/learn.js?1705579012"></script>
-    <script src="../../js/hugo-learn.js?1705579012"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1705653311"></script>
+    <script src="../../js/learn.js?1705653311"></script>
+    <script src="../../js/hugo-learn.js?1705653311"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1705579012"></script>
+            <script src="../../mermaid/mermaid.js?1705653311"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
