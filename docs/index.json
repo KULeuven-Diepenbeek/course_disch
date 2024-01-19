@@ -165,7 +165,7 @@
 	"title": "3. Sequentiële logica",
 	"tags": [],
 	"description": "",
-	"content": "Sequentiële logica Clock Vanaf nu gaan we met een clock werken. Alles gebeurd op een stijgende (of dalende) flank van een clock.\nAls je een computer of laptop koopt staat er vaak x.yGHz. Dat is de klok van de processor.\n"
+	"content": "Sequentiële logica Clock Vanaf nu gaan we met een clock werken. Alles gebeurt op een stijgende (of dalende) flank van een clock.\nAls je een computer of laptop koopt staat er vaak x.yGHz. Dat is de klok van de processor.\n"
 },
 {
 	"uri": "https://kuleuven-diepenbeek.github.io/course_disch/050_cpu/020_isa/030_c_instructie_comp/",
