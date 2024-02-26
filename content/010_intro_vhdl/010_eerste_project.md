@@ -89,7 +89,8 @@ De beschrijving van de de component hierboven is in een schema te tekenen als ee
 
 ### std_logic
 
-Omdat we de package **IEEE.STD_LOGIC_1164** gebruiken kunnen we het typen **std_logic** gebruiken. Dit is het type dat we meestal gebruiken wanneer we met signalen werken in een hardware beschrijving. **std_logic** kan **9 verschillende waardes** aannemen. Meestal gebruiken we '0' en '1'. Hieronder zijn de mogellijke waardes opgelijst met uitleg. Meer uitleg over mogelijke types vind je in de [zelfstudie](/900_zelfstudie_vhdl/060_packages/#std_logic_1164--package).
+Omdat we de package **IEEE.STD_LOGIC_1164** gebruiken kunnen we het typen **std_logic** gebruiken. Dit is het type dat we meestal gebruiken wanneer we met signalen werken in een hardware beschrijving. **std_logic** kan **9 verschillende waardes** aannemen. Meestal gebruiken we '0' en '1'. Hieronder zijn de mogellijke waardes opgelijst met uitleg. 
+<!-- Meer uitleg over mogelijke types vind je in de [zelfstudie](/900_zelfstudie_vhdl/060_packages/#std_logic_1164--package). -->
 
 {{% highlight vhdl %}}
 'U',  -- Uninitialized : flipflop waar nog nooit in is geschreven

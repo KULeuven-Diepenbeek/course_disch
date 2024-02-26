@@ -65,9 +65,8 @@ Het idee achter een testbench is dat er &amp;ldquo;toestellen&amp;rdquo; zijn di
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/040_opdracht/</guid>
-      <description>Als eerste opdracht in deze labo&amp;rsquo;s gaan jullie zelf een OR gate maken. Maak hiervoor een nieuw bestand aan waarin je de beschrijving kwijt kan. Om te weten of de implementatie werkt, moet er ook een testbench geschreven worden. Deze kan dan gebruiken om het design te simuleren.
-De schematic voor de OR poort (voor zij die het vergeten zouden zijn) is:
-OR gate Opleveren Om deze opdracht op te leveren moeten jullie volgende bestanden indienen via Toledo:</description>
+      <description>Als eerste opdracht in deze labo&amp;rsquo;s gaan jullie zelf een OR gate maken. In plaats van gebruik te maken van het OR keyword, moét deze gate gemaakt worden met uitsluitend NAND poorten. Maak hiervoor een nieuw bestand aan waarin je de beschrijving kwijt kan. Om te weten of de implementatie werkt, moet er ook een testbench geschreven worden. Deze kan dan gebruiken om het design te simuleren.
+De schematic voor de OR poort (voor zij die het vergeten zouden zijn) is:</description>
     </item>
     
   </channel>
