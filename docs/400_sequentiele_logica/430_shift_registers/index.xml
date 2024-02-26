@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shift registers on Digitale Elektronische Schakelingen</title>
+    <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/</link>
+    <description>Recent content in Shift registers on Digitale Elektronische Schakelingen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster><atom:link href="https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SISO</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/siso/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/siso/</guid>
+      <description>SISO Bij een serial in, serial out shift register komt de data erin en iedere clock cyclus wordt het 1 plaats verder geshift. Dus in onderstaand voorbeeld komt de data er na 4 clock cycli terug uit.
+SISO shift register Natuurlijk zijn er verschillende manier op dit te beschrijven in VHDL. Onderstaande beschrijving is een voorbeeld.
+library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity SISO_shift_register is Port (clk: in std_logic; D: in std_logic; Y: out std_logic); end SISO_shift_register; architecture Behavioral of SISO_shift_register is signal buf: std_logic_vector(3 downto 0); begin SEQ: process(clk) begin if clk&amp;#39;event and clk = &amp;#39;1&amp;#39; then buf(0) &amp;lt;= D; buf(3 downto 1) &amp;lt;= buf(2 downto 0); end if; end process; Y &amp;lt;= buf(3); end Behavioral; De volgorde dat we de buffer instellen maakt niet uit, want alles wordt tegelijk uitgevoerd in hardware.</description>
+    </item>
+    
+    <item>
+      <title>SIPO</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/sipo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/sipo/</guid>
+      <description>Serial in, parallel out is een shift register dat gebruikt wordt voor data ontvangst. Meestal komt de data serieel binnen en vaak heeft de volgende stap de data parallel nodig.
+SIPO shift register Je kan zelf proberen de beschrijving te maken in VHDL</description>
+    </item>
+    
+    <item>
+      <title>PISO</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/piso/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/piso/</guid>
+      <description>Een parallel in, serial out shift register wordt gebruikt als ge parallel data hebt en het serieel wil doorsturen. Hier hebben we wel een load signal nodig om de data in te laden en multiplexer om te zorgen dat de data ook in de flip-flops kan geraken.
+PISO shift register library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity PISO_shift_register is Port (clk, load: in std_logic; D_Vector: in std_logic_vector(3 downto 0); Y: out std_logic); end PISO_shift_register; architecture Behavioral of PISO_shift_register is signal buf: std_logic_vector(3 downto 0); begin SEQ: process(clk) begin if clk&amp;#39;event and clk = &amp;#39;1&amp;#39; then if load = &amp;#39;1&amp;#39; then buf &amp;lt;= D_vector; else buf(3 downto 1) &amp;lt;= buf(2 downto 0); buf(0) &amp;lt;= &amp;#39;-&amp;#39;; --in de meeste toepassingen maakt het niet uit welke bit er uit komt als de buffer leeg is end if; end if; end process; Y &amp;lt;= buf(3); end Behavioral; VHDL heeft onderstaande waardes voor std_logic &amp;lsquo;U&amp;rsquo; Uninitialized &amp;lsquo;X&amp;rsquo; Forcing Unknown &amp;lsquo;0&amp;rsquo; Forcing 0 &amp;lsquo;1&amp;rsquo; Forcing 1 &amp;lsquo;Z&amp;rsquo; High Impedance &amp;lsquo;W&amp;rsquo; Weak Unknown &amp;lsquo;L&amp;rsquo; Weak 0 &amp;lsquo;H&amp;rsquo; Weak 1 &amp;lsquo;-&amp;rsquo; Don&amp;rsquo;t Care</description>
+    </item>
+    
+    <item>
+      <title>PIPO</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/pipo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/pipo/</guid>
+      <description>Bij parallel in, parallel out register (PIPO) komt op de ingang op de uitgang met 1 clock cyclus vertraging.
+PIPO shift register Bron: electronics-club </description>
+    </item>
+    
+  </channel>
+</rss>

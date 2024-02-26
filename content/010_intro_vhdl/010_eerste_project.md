@@ -25,25 +25,7 @@ Na het maken van een project, kunnen we HDL code toevoegen. Dit kan via de link 
 
 Merk op dat Vivado al een kleine aanzet geeft om van te beginnen. Onderstaande VHDL-code geeft een beschrijving zorgt voor een **invertor** die, zoals verwacht, de ingang geïnverteerd doorgeeft aan de uitgang.
 
-
-```vhdl
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-
-entity invertor is
-    Port (
-        A: in std_logic;
-        Z: out std_logic
-    );
-end invertor;
-
-architecture Behavioral of invertor is
-begin
-
-    Z <= NOT A;
-
-end Behavioral;
-```
+{{< include_file "/static/hdlsrc/100/invertor.vhd" "vhdl" >}}
 
 Dit is een eenvoudige VHDL beschrijving en we zullen deze in detail onder de loep nemen.
 
@@ -102,9 +84,7 @@ Het is uitermate belangrijk dat het besef blijft dat VHDL (of iedere andere HDL)
 
 De beschrijving van de de component hierboven is in een schema te tekenen als een **invertor** of **NIET-poort**.
 
-<!-- {{% figure src="/images/intro/NOT_gate.png" title="NOT gate"  %}} -->
 {{% figure src="/images/drawio_new_invertor.png" title="The entity and architecture of the invertor"  %}}
-![bla](/images/drawio_new_invertor.png")
 
 
 ### std_logic
