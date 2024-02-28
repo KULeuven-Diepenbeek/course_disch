@@ -3,7 +3,7 @@ title: 'Signals'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
 weight: 250
-draft: true
+draft: false
 ---
 
 Natuurlijk hebben we soms ook **tussensignalen** nodig in ons project/code. Hiervoor gebruiken we **signals**.
