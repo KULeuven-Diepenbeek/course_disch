@@ -2,7 +2,7 @@
 title: '2. Volgende stap'
 chapter: true
 weight: 200
-draft: true
+draft: false
 ---
 
 # Volgende stap
