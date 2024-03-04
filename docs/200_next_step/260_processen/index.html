@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Eerste project :: Digitale Elektronische Schakelingen</title>
+    <title>Processen :: Digitale Elektronische Schakelingen</title>
 
     
     <link href="../../css/nucleus.css?1709565772" rel="stylesheet">
@@ -42,7 +42,7 @@
     
 
   </head>
-  <body class="" data-url="../../010_intro_vhdl/010_eerste_project/">
+  <body class="" data-url="../../200_next_step/260_processen/">
     <nav id="sidebar" class="">
 
 
@@ -169,7 +169,7 @@
   
     
     <li data-nav-id="/010_intro_vhdl/" title="1. Eerste project" class="dd-item
-        parent
+        
         
         
         ">
@@ -195,7 +195,7 @@
  
   
     
-      <li data-nav-id="/010_intro_vhdl/010_eerste_project/" title="Eerste project" class="dd-item active">
+      <li data-nav-id="/010_intro_vhdl/010_eerste_project/" title="Eerste project" class="dd-item ">
         <a href="../../010_intro_vhdl/010_eerste_project/">
         <i class='fas fa-book'></i> Eerste project
         
@@ -329,7 +329,7 @@
   
     
     <li data-nav-id="/200_next_step/" title="2. Volgende stap" class="dd-item
-        
+        parent
         
         
         ">
@@ -397,7 +397,7 @@
  
   
     
-      <li data-nav-id="/200_next_step/260_processen/" title="Processen" class="dd-item ">
+      <li data-nav-id="/200_next_step/260_processen/" title="Processen" class="dd-item active">
         <a href="../../200_next_step/260_processen/">
         <i class='fas fa-book'></i> Processen
         
@@ -567,7 +567,7 @@
             
           
           
-            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../010_intro_vhdl/'>1. Eerste project</a> > Eerste project
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../200_next_step/'>2. Volgende stap</a> > Processen
           
         
           
@@ -582,12 +582,12 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#maak-een-project">Maak een project</a></li>
-    <li><a href="#voeg-hdl-code-toe">Voeg HDL code toe</a>
+    <li>
       <ul>
-        <li><a href="#std_logic">std_logic</a></li>
+        <li><a href="#een-subtiliteitje">Een subtiliteitje</a></li>
       </ul>
     </li>
+    <li><a href="#welke-manier-van-beschrijven-is-het-beste">Welke manier van beschrijven is het beste?</a></li>
   </ul>
 </nav>
     </div>
@@ -605,102 +605,80 @@
           
             <h1>
               
-              Eerste project
+              Processen
             </h1>
           
 
         
 
 
-<h2 id="maak-een-project">Maak een project</h2>
-<p>We starten met een  <strong>eerste vivado project</strong> maken. We beginnen natuurlijk met vivado op te starten en te klikken op <strong>create project</strong>. Je geeft het project  een naam en zorgt dat je het op een plaats zet waar je het nog kan terugvinden. Bij project type zeggen we <strong>RTL project</strong> en vinken we <strong>&ldquo;Do not specify sources at this time&rdquo;</strong> aan.</p>
-<p>De volgende keuze die gemaakt moet worden is het type van FPGA. Als <em>part</em> maakt het niet veel uit wat we kiezen. Het beste is om een <strong>FPGA</strong> te kiezen die <strong>gratis</strong> is te gebruiken met Vivado zoals de <strong>xc7z020</strong>.</p>
-
-<div class="notices tip" ><p>Let er op dat je in het pad naar je Vivado project <b>geen spaties</b> hebt!! Dus, geen paden zoals <b>&ldquo;C:\school\2e jaar\disch&rdquo;</b> of <b>&ldquo;C:\mijn documenten\demo&rdquo;</b></p>
-</div>
-
-<p>Nu krijgen we een omgeving die er zo uit ziet.
-<img src="../../images/software/screenshot_vivado.png" alt="Screenshot Vivado"></p>
-<h2 id="voeg-hdl-code-toe">Voeg HDL code toe</h2>
-<p>Na het maken van een project, kunnen we HDL code toevoegen. Dit kan via de link <strong>add sources</strong>. Vervolgens komt er een keuze om een <strong>nieuw</strong> bestand te maken of om een <strong>reeds bestaande</strong> file toe te voegen. Kies voor een <strong>nieuwe file</strong> en voeg een <strong>vhdl</strong> design source toe. De tool vraagt vervolgens voor I/O port definitions, die kan je al instellen bij het maken van de vhdl file, maar kunnen later ook nog aangepast worden in de code.</p>
-<p>Merk op dat Vivado al een kleine aanzet geeft om van te beginnen. Onderstaande VHDL-code geeft een beschrijving zorgt voor een <strong>invertor</strong> die, zoals verwacht, de ingang geïnverteerd doorgeeft aan de uitgang.</p>
-
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Port</span> (
-</span></span><span style="display:flex;"><span>        A<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
-</span></span><span style="display:flex;"><span>        Z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">invertor</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    Z <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">NOT</span> A;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;
-</span></span></code></pre></div>
-<p>Dit is een eenvoudige VHDL beschrijving en we zullen deze in detail onder de loep nemen.</p>
+<p>Een basis component die vaak voorkomt is een multiplexer.</p>
 <div class="multiHcolumn">
 <div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Port</span> (
-</span></span><span style="display:flex;"><span>        A<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
-</span></span><span style="display:flex;"><span>        Z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">invertor</span>;</span></span></code></pre></div>
+    <figure><img src="../../images/drawio_new_mux.png"/><figcaption>
+            <h4>2-naar-1 multiplexer</h4>
+        </figcaption>
+</figure>
 </div>    
 <div class="column">
-    <p>De <strong>entity</strong> definieert de input en de outputs van het (sub-)design dat we beschrijven. Het design heeft als <strong>naam</strong> gekregen: invertor. Vervolgens zien in de <strong>lijst van poorten</strong> dat deze component 2 poorten heeft: een <strong>ingang</strong> A en een uitgang <strong>Z</strong>.</p>
-<p>Deze component is dus een IC met twee pinnen en de <strong>entity</strong> blok omschrijft als het ware enkel de behuizing.</p>
-</div>    
-</div>
-<div class="multiHcolumn">
-<div class="column">
-    <p>De tweede blok <strong>architecture</strong> beschrijft wat er IN de behuizing zit. Ook deze beschrijving kunnen we een naam geven: <strong>Behavioural</strong>. Alles wat er vervolgens beschreven wordt tussen de <strong>begin</strong> en <strong>end</strong> definieert het gedrag van de component.</p>
-</div>    
-<div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> Behavioral <span style="color:#66d9ef">of</span> ...
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> rotate_left <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> rotate_right <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> MUX_select <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> transformed <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    ...
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- optie 1</span>
+</span></span><span style="display:flex;"><span>    transformed <span style="color:#f92672">&lt;=</span> rotate_left <span style="color:#66d9ef">when</span> MUX_select <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#66d9ef">else</span> rotate_right;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    Z <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">NOT</span> A;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- optie 2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> MUX_select <span style="color:#66d9ef">select</span>
+</span></span><span style="display:flex;"><span>        transformed <span style="color:#f92672">&lt;=</span> rotate_left <span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#39;0&#39;</span>,
+</span></span><span style="display:flex;"><span>        rotate_right <span style="color:#66d9ef">when</span> <span style="color:#66d9ef">others</span>;
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- optie 3</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">PMUX</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(rotate_left, rotate_right, MUX_select)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> MUX_select <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span> 
+</span></span><span style="display:flex;"><span>            transformed <span style="color:#f92672">&lt;=</span> rotate_right;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>            transformed <span style="color:#f92672">&lt;=</span> rotate_left;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span>    ...
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;</span></span></code></pre></div>
 </div>    
 </div>
-<div class="multiHcolumn">
-<div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;</span></span></code></pre></div>
-</div>    
-<div class="column">
-    <p>Tenslotte zijn er nog de eerste twee regels van de beschrijving. De eerste regel zegt dat er een library genaamd <strong>IEEE</strong> gebruikt wordt in deze beschrijving. De tweede regel zegt dat er uit deze library de <strong>package</strong> STD_LOGIC_1164 <strong>volledig</strong> (.ALL) gebruikt wordt. Wat dit precies wilt zeggen, daar wordt later op teruggekomen.</p>
-</div>    
+<p>In het voorbeeld hierboven zijn er twee signalen <strong>rotate_left</strong> en <strong>rotate_right</strong>. Eén van beide wordt doorverbonden met het signaal <strong>transformed</strong>. Welke van beide mogelijkheden doorgegeven wordt, wordt bepaald door de waarde van het signaal <strong>MUX_select</strong> (&lsquo;0&rsquo;: rotate_left en &lsquo;1&rsquo;: rotate_right). Note that <strong>select</strong> is a keyword.</p>
+<p>Alle drie de opties zijn geldige VHDL constructies. Met de netlist (die gegenereerd wordt door de synthese-tool) in achterhoofd, is er <strong>geen</strong> verschil tussen de drie opties.</p>
+<ul>
+<li><strong>Optie 1</strong> geeft een handige manier handige manier indien er maar 2 opties zijn.</li>
+<li><strong>Optie 2</strong> geeft een handige manier handige manier indien er meer dan 2 opties zijn.</li>
+<li><strong>Optie 3</strong> geeft een handige manier handige manier indien er meer complexiteit nodig is.</li>
+</ul>
+<p>De derde optie vergt nog een extra woordje uitleg. Een process is een set van instructies, tussen <em>begin</em> en <em>end</em> die <strong>sequentieel</strong> uitgevoerd wordt. De vraag die zich dan stelt is: <strong>&ldquo;Wanneer wordt deze lijst van instructies uitgevoerd ?&rdquo;</strong>. Om dit te definiëren is er de <strong>sensitiviy list</strong>. Dit is een oplijsting van signalen die, wanneer ze veranderen van waarde, het proces triggeren.</p>
+<p>Tenslotte dient er nog vermeld te worden dat een process een naam kan hebben. In het voorbeeld is dit: <strong>PMUX</strong>.</p>
+
+<div class="notices note" ><p>Merk op dat de regels tussen <strong>begin</strong> en <strong>end</strong> van het process eigenlijk niet-synthetiseerbaar zijn. In het geheel van het process, wordt het wel <strong>synthetiseerbaar</strong>.</p>
 </div>
 
-<div class="notices note" ><p>Het is uitermate belangrijk dat het besef blijft dat VHDL (of iedere andere HDL) louter een beschrijving geeft van een hardware design. Dit wilt zeggen dat het mogelijk moet zijn een <strong>schema</strong> te tekenen !!!</p>
-</div>
+<p>Een tweede opmerking is er (bewust) een mismatch is tussen de schematic en de code, met name: de breedte van de signalen. Als er twee <em>draden</em> zijn die naar 1 draad moeten gaan, volstaat een 2-naar-1 multiplexer. Indien er echter 2 <em>bussen</em> zijn die naar 1 <em>bus</em> moeten gaan, zijn er meerdere multiplexers nodig. In het geval van een 8-bit bus, worden het <strong>acht</strong> 2-naar-1 multiplexers.</p>
+<h3 id="een-subtiliteitje">Een subtiliteitje</h3>
+<p><strong>Q:</strong> Wat zijn de mogelijke waardes die <strong>MUX_select</strong> kan hebben ?</p>
+<h2 id="welke-manier-van-beschrijven-is-het-beste">Welke manier van beschrijven is het beste?</h2>
+<p>Dat is een simpele vraag en het eenvoudige antwoord hierop is: het maakt niet uit. &ldquo;<strong>Waarom ?</strong>&rdquo;, hoor ik je zeggen?</p>
+<p>Laat ons even teruggaan naar het begin:</p>
+<ul>
+<li>we willen hardware ontwerpen die een bepaalde functionaliteit bekomt</li>
+<li>wij, als hardware designers, denken hard na (LOL, sorry) en komen op de proppen met een ontwerp</li>
+<li>op een of andere manier moeten we dit ontwerp duidelijk maken aan de computer, meer bepaald de design tools</li>
+<li>om dit te behalen gebruiken we een HDL</li>
+<li><strong>Zolang de tools weten, in dit geval, dat we een multiplexer bedoelen, maakt de hoeveelheid schrijfwerk NIETS uit</strong></li>
+</ul>
 
-<p>De beschrijving van de de component hierboven is in een schema te tekenen als een <strong>invertor</strong> of <strong>NIET-poort</strong>.</p>
-<figure><img src="../../images/drawio_new_invertor.png"/><figcaption>
-            <h4>The entity and architecture of the invertor</h4>
-        </figcaption>
-</figure>
-<h3 id="std_logic">std_logic</h3>
-<p>Omdat we de package <strong>IEEE.STD_LOGIC_1164</strong> gebruiken kunnen we het typen <strong>std_logic</strong> gebruiken. Dit is het type dat we meestal gebruiken wanneer we met signalen werken in een hardware beschrijving. <strong>std_logic</strong> kan <strong>9 verschillende waardes</strong> aannemen. Meestal gebruiken we &lsquo;0&rsquo; en &lsquo;1&rsquo;. Hieronder zijn de mogellijke waardes opgelijst met uitleg.</p>
-<!-- Meer uitleg over mogelijke types vind je in de [zelfstudie](/900_zelfstudie_vhdl/060_packages/#std_logic_1164--package). -->
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#e6db74">&#39;U&#39;</span>,  <span style="color:#75715e">-- Uninitialized : flipflop waar nog nooit in is geschreven</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;X&#39;</span>,  <span style="color:#75715e">-- Forcing Unknown</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;0&#39;</span>,  <span style="color:#75715e">-- Forcing 0 : rechtstreeks aan grond</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;1&#39;</span>,  <span style="color:#75715e">-- Forcing 1 : rechtstreeks aan voeding</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;Z&#39;</span>,  <span style="color:#75715e">-- High Impedance</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;W&#39;</span>,  <span style="color:#75715e">-- Weak Unknown</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;L&#39;</span>,  <span style="color:#75715e">-- Weak 0 : via weerstand aan grond</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;H&#39;</span>,  <span style="color:#75715e">-- Weak 1 : via weerstand aan voeding</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;-&#39;</span>,  <span style="color:#75715e">-- Don&#39;t Care</span></span></span></code></pre></div>
 
 <footer class="footline">
 	
@@ -788,7 +766,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -801,26 +778,6 @@
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -897,22 +854,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -929,10 +870,30 @@
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -965,6 +926,26 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1037,10 +1018,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../010_intro_vhdl/" title="1. Eerste project"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../200_next_step/250_signals/" title="Signals"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../010_intro_vhdl/020_nand/" title="NAND poort" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../200_next_step/280_generate/" title="Generate" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

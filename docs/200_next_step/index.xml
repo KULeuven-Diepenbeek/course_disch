@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2. Volgende stap on Digitale Elektronische Schakelingen</title>
+    <link>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/</link>
+    <description>Recent content in 2. Volgende stap on Digitale Elektronische Schakelingen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster><atom:link href="https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vectors</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/240_vectors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/240_vectors/</guid>
+      <description>Soms moet of wil je met arrays of groepen van bits werken. Natuurlijk gaat dit ook in VHDL en in VHDL worden dit vectors genoemd. Als we een array van 8 bits willen dan beschrijven we dat in één van de twee onderstaande opties.
+signal result: std_logic_vector(7 downto 0); signal outcome: std_logic_vector(0 to 7); Een vector van 8 bits, Little Endian, met LSB en MSB aanduiding Stel dat we het getal 213 willen voorstellen.</description>
+    </item>
+    
+    <item>
+      <title>Signals</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/250_signals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/250_signals/</guid>
+      <description>Natuurlijk hebben we soms ook tussensignalen nodig in ons project/code. Hiervoor gebruiken we signals. Signals declareer je na de architecture maar voor het begin keyword, zoals in het voorbeeld hieronder.
+library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity signal_example is Port (A_vector: in std_logic_vector(7 downto 0); Y_vector: out std_logic_vector(7 downto 0)); end signal_example; architecture Behavioral of signal_example is signal tussenresultaat: std_logic; begin tussenresultaat &amp;lt;= A_vector(0) AND A_vector(1); Y_vector(7) &amp;lt;= tussenresultaat; Y_vector(6 downto 0) &amp;lt;= A_vector(7 downto 1); end Behavioral; </description>
+    </item>
+    
+    <item>
+      <title>Processen</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/260_processen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/260_processen/</guid>
+      <description>Een basis component die vaak voorkomt is een multiplexer.
+2-naar-1 multiplexer ... architecture Behavioral of ... ... signal rotate_left : STD_LOGIC_VECTOR(7 downto 0); signal rotate_right : STD_LOGIC_VECTOR(7 downto 0); signal MUX_select : STD_LOGIC; signal transformed : STD_LOGIC_VECTOR(7 downto 0); ... begin ... -- optie 1 transformed &amp;lt;= rotate_left when MUX_select = &amp;#39;0&amp;#39; else rotate_right; -- optie 2 with MUX_select select transformed &amp;lt;= rotate_left when &amp;#39;0&amp;#39;, rotate_right when others; -- optie 3 PMUX: process(rotate_left, rotate_right, MUX_select) begin if MUX_select = &amp;#39;1&amp;#39; then transformed &amp;lt;= rotate_right; else transformed &amp;lt;= rotate_left; end if; end process; .</description>
+    </item>
+    
+    <item>
+      <title>Generate</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/280_generate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/280_generate/</guid>
+      <description>Een generate is handig als je vaak VHDL-code moet herhalen. Meestal kan je dan een generate statement gebruiken om te voorkomen dat je te veel moet kopiëren en plakken.
+De generate gaat in dit voorbeeld van 0 tot 6 omdat 6+1 al 7 is, wat het laatste element van de array is.
+library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity generate_example is Port (A_vector: in std_logic_vector(7 downto 0); Y_vector: out std_logic_vector(7 downto 0)); end generate_example; architecture Behavioral of generate_example is begin GEN : for i in 0 to 6 generate Y_vector(i) &amp;lt;= A_vector(i) AND A_vector(i+1); end generate; end Behavioral; Schematische voorstelling Vivado kan een schematische voorstelling maken van de hardware beschrijving met RTL analysis elaborate design.</description>
+    </item>
+    
+    <item>
+      <title>Generic</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/285_generic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/285_generic/</guid>
+      <description>Sommige studenten hebben misschien al door dat de componenten tot hiertoe niet goed schaalbaar zijn. Wat als er nu nood is aan een 6-bit XOR poort? Moeten we dan voor iedere mogelijke breedte een nieuwe component maken? Nee! Dit kunnen we oplossen door generics te gebruiken. Als voorbeeld hebben we een 8-bit AND poort die generic is en kan schalen.
+Generic AND voorstelling Je kan deze AND poort beschrijven met onderstaand code.</description>
+    </item>
+    
+    <item>
+      <title>Opdracht 2: Ripple carry adder</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/290_opdracht/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/290_opdracht/</guid>
+      <description>In deze opdracht moet je een 16 bit ripple-carry adder te maken. Indien je vergeten bent hoe een full adder en een half adder eruit zien, kan je kijken naar onderstaande schema&amp;rsquo;s. Bij een ripple-carry adder wordt de C out van de eerste adder doorgegeven aan de tweede adder. We werken in little endian.
+Het is niet de bedoeling dat je de + operator gebruikt van &amp;ldquo;std_logic_unsigned&amp;rdquo; of &amp;ldquo;std_logic_signed&amp;rdquo;!
+Half adder, met S = A &amp;amp;oplus; B Full adder Het is altijd een goed idee om eerst een tekening te maken voordat je begint met typen.</description>
+    </item>
+    
+  </channel>
+</rss>

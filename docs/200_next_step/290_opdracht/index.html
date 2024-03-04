@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Eerste project :: Digitale Elektronische Schakelingen</title>
+    <title>Opdracht 2: Ripple carry adder :: Digitale Elektronische Schakelingen</title>
 
     
     <link href="../../css/nucleus.css?1709565772" rel="stylesheet">
@@ -42,7 +42,7 @@
     
 
   </head>
-  <body class="" data-url="../../010_intro_vhdl/010_eerste_project/">
+  <body class="" data-url="../../200_next_step/290_opdracht/">
     <nav id="sidebar" class="">
 
 
@@ -169,7 +169,7 @@
   
     
     <li data-nav-id="/010_intro_vhdl/" title="1. Eerste project" class="dd-item
-        parent
+        
         
         
         ">
@@ -195,7 +195,7 @@
  
   
     
-      <li data-nav-id="/010_intro_vhdl/010_eerste_project/" title="Eerste project" class="dd-item active">
+      <li data-nav-id="/010_intro_vhdl/010_eerste_project/" title="Eerste project" class="dd-item ">
         <a href="../../010_intro_vhdl/010_eerste_project/">
         <i class='fas fa-book'></i> Eerste project
         
@@ -329,7 +329,7 @@
   
     
     <li data-nav-id="/200_next_step/" title="2. Volgende stap" class="dd-item
-        
+        parent
         
         
         ">
@@ -460,7 +460,7 @@
  
   
     
-      <li data-nav-id="/200_next_step/290_opdracht/" title="Opdracht 2: Ripple carry adder" class="dd-item ">
+      <li data-nav-id="/200_next_step/290_opdracht/" title="Opdracht 2: Ripple carry adder" class="dd-item active">
         <a href="../../200_next_step/290_opdracht/">
         <i class='fas fa-pen-square'></i> Opdracht 2: Ripple carry adder
         
@@ -567,7 +567,7 @@
             
           
           
-            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../010_intro_vhdl/'>1. Eerste project</a> > Eerste project
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../200_next_step/'>2. Volgende stap</a> > Opdracht 2: Ripple carry adder
           
         
           
@@ -582,12 +582,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#maak-een-project">Maak een project</a></li>
-    <li><a href="#voeg-hdl-code-toe">Voeg HDL code toe</a>
-      <ul>
-        <li><a href="#std_logic">std_logic</a></li>
-      </ul>
-    </li>
+    <li><a href="#testbench">Testbench</a></li>
   </ul>
 </nav>
     </div>
@@ -605,102 +600,119 @@
           
             <h1>
               
-              Eerste project
+              Opdracht 2: Ripple carry adder
             </h1>
           
 
         
 
 
-<h2 id="maak-een-project">Maak een project</h2>
-<p>We starten met een  <strong>eerste vivado project</strong> maken. We beginnen natuurlijk met vivado op te starten en te klikken op <strong>create project</strong>. Je geeft het project  een naam en zorgt dat je het op een plaats zet waar je het nog kan terugvinden. Bij project type zeggen we <strong>RTL project</strong> en vinken we <strong>&ldquo;Do not specify sources at this time&rdquo;</strong> aan.</p>
-<p>De volgende keuze die gemaakt moet worden is het type van FPGA. Als <em>part</em> maakt het niet veel uit wat we kiezen. Het beste is om een <strong>FPGA</strong> te kiezen die <strong>gratis</strong> is te gebruiken met Vivado zoals de <strong>xc7z020</strong>.</p>
-
-<div class="notices tip" ><p>Let er op dat je in het pad naar je Vivado project <b>geen spaties</b> hebt!! Dus, geen paden zoals <b>&ldquo;C:\school\2e jaar\disch&rdquo;</b> of <b>&ldquo;C:\mijn documenten\demo&rdquo;</b></p>
-</div>
-
-<p>Nu krijgen we een omgeving die er zo uit ziet.
-<img src="../../images/software/screenshot_vivado.png" alt="Screenshot Vivado"></p>
-<h2 id="voeg-hdl-code-toe">Voeg HDL code toe</h2>
-<p>Na het maken van een project, kunnen we HDL code toevoegen. Dit kan via de link <strong>add sources</strong>. Vervolgens komt er een keuze om een <strong>nieuw</strong> bestand te maken of om een <strong>reeds bestaande</strong> file toe te voegen. Kies voor een <strong>nieuwe file</strong> en voeg een <strong>vhdl</strong> design source toe. De tool vraagt vervolgens voor I/O port definitions, die kan je al instellen bij het maken van de vhdl file, maar kunnen later ook nog aangepast worden in de code.</p>
-<p>Merk op dat Vivado al een kleine aanzet geeft om van te beginnen. Onderstaande VHDL-code geeft een beschrijving zorgt voor een <strong>invertor</strong> die, zoals verwacht, de ingang geïnverteerd doorgeeft aan de uitgang.</p>
-
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Port</span> (
-</span></span><span style="display:flex;"><span>        A<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
-</span></span><span style="display:flex;"><span>        Z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">invertor</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    Z <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">NOT</span> A;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;
-</span></span></code></pre></div>
-<p>Dit is een eenvoudige VHDL beschrijving en we zullen deze in detail onder de loep nemen.</p>
-<div class="multiHcolumn">
-<div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Port</span> (
-</span></span><span style="display:flex;"><span>        A<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
-</span></span><span style="display:flex;"><span>        Z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">invertor</span>;</span></span></code></pre></div>
-</div>    
-<div class="column">
-    <p>De <strong>entity</strong> definieert de input en de outputs van het (sub-)design dat we beschrijven. Het design heeft als <strong>naam</strong> gekregen: invertor. Vervolgens zien in de <strong>lijst van poorten</strong> dat deze component 2 poorten heeft: een <strong>ingang</strong> A en een uitgang <strong>Z</strong>.</p>
-<p>Deze component is dus een IC met twee pinnen en de <strong>entity</strong> blok omschrijft als het ware enkel de behuizing.</p>
-</div>    
-</div>
-<div class="multiHcolumn">
-<div class="column">
-    <p>De tweede blok <strong>architecture</strong> beschrijft wat er IN de behuizing zit. Ook deze beschrijving kunnen we een naam geven: <strong>Behavioural</strong>. Alles wat er vervolgens beschreven wordt tussen de <strong>begin</strong> en <strong>end</strong> definieert het gedrag van de component.</p>
-</div>    
-<div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">invertor</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    Z <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">NOT</span> A;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;</span></span></code></pre></div>
-</div>    
-</div>
-<div class="multiHcolumn">
-<div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;</span></span></code></pre></div>
-</div>    
-<div class="column">
-    <p>Tenslotte zijn er nog de eerste twee regels van de beschrijving. De eerste regel zegt dat er een library genaamd <strong>IEEE</strong> gebruikt wordt in deze beschrijving. De tweede regel zegt dat er uit deze library de <strong>package</strong> STD_LOGIC_1164 <strong>volledig</strong> (.ALL) gebruikt wordt. Wat dit precies wilt zeggen, daar wordt later op teruggekomen.</p>
-</div>    
-</div>
-
-<div class="notices note" ><p>Het is uitermate belangrijk dat het besef blijft dat VHDL (of iedere andere HDL) louter een beschrijving geeft van een hardware design. Dit wilt zeggen dat het mogelijk moet zijn een <strong>schema</strong> te tekenen !!!</p>
-</div>
-
-<p>De beschrijving van de de component hierboven is in een schema te tekenen als een <strong>invertor</strong> of <strong>NIET-poort</strong>.</p>
-<figure><img src="../../images/drawio_new_invertor.png"/><figcaption>
-            <h4>The entity and architecture of the invertor</h4>
+<p>In deze opdracht moet je een <strong>16 bit ripple-carry adder</strong> te maken. Indien je vergeten bent hoe een full adder en een half adder eruit zien, kan je kijken naar onderstaande schema&rsquo;s. Bij een ripple-carry adder wordt de C out van de eerste adder doorgegeven aan de tweede adder. We werken in little endian.</p>
+<p>Het is <strong>niet</strong> de bedoeling dat je de + operator gebruikt van &ldquo;std_logic_unsigned&rdquo;  of &ldquo;std_logic_signed&rdquo;!</p>
+<figure><img src="../../images/half_adder.png"/><figcaption>
+            <h4>Half adder, met S = A &amp;oplus; B</h4>
         </figcaption>
 </figure>
-<h3 id="std_logic">std_logic</h3>
-<p>Omdat we de package <strong>IEEE.STD_LOGIC_1164</strong> gebruiken kunnen we het typen <strong>std_logic</strong> gebruiken. Dit is het type dat we meestal gebruiken wanneer we met signalen werken in een hardware beschrijving. <strong>std_logic</strong> kan <strong>9 verschillende waardes</strong> aannemen. Meestal gebruiken we &lsquo;0&rsquo; en &lsquo;1&rsquo;. Hieronder zijn de mogellijke waardes opgelijst met uitleg.</p>
-<!-- Meer uitleg over mogelijke types vind je in de [zelfstudie](/900_zelfstudie_vhdl/060_packages/#std_logic_1164--package). -->
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#e6db74">&#39;U&#39;</span>,  <span style="color:#75715e">-- Uninitialized : flipflop waar nog nooit in is geschreven</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;X&#39;</span>,  <span style="color:#75715e">-- Forcing Unknown</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;0&#39;</span>,  <span style="color:#75715e">-- Forcing 0 : rechtstreeks aan grond</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;1&#39;</span>,  <span style="color:#75715e">-- Forcing 1 : rechtstreeks aan voeding</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;Z&#39;</span>,  <span style="color:#75715e">-- High Impedance</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;W&#39;</span>,  <span style="color:#75715e">-- Weak Unknown</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;L&#39;</span>,  <span style="color:#75715e">-- Weak 0 : via weerstand aan grond</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;H&#39;</span>,  <span style="color:#75715e">-- Weak 1 : via weerstand aan voeding</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;-&#39;</span>,  <span style="color:#75715e">-- Don&#39;t Care</span></span></span></code></pre></div>
+<figure><img src="../../images/full_adder.png"/><figcaption>
+            <h4>Full adder</h4>
+        </figcaption>
+</figure>
+<!-- <figure><img src="../../images/ripple_carry_adder.png"/><figcaption>
+            <h4>ripple carry adder</h4>
+        </figcaption>
+</figure>
+ -->
+
+<div class="notices warning" ><p>Het is altijd een goed idee om eerst een tekening te maken voordat je begint met typen.</p>
+</div>
+
+<h2 id="testbench">Testbench</h2>
+<p>Hieronder staat een voorbeeld van een testbench. Vaak is het interesant om enkele specifieke stimuli te hebben tijdens de ontwikkeling. Indien het mogelijk is (zoals hier het geval is), is het ook een optie om simpelweg ALLE opties te verifiëren. Omdat dergelijk bestand nogal groot wordt, is hieronder een verkorte versie weergegeven. De volledige testbench kan <a href="../../hdlsrc/rca_tb.vhd">hier</a> gedownload worden.</p>
+
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#75715e">--------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- KU Leuven - ESAT/COSIC - Emerging technologies, Systems &amp; Security</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Module Name:     rca_tb - Behavioural</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Project Name:    Digitale eletronische schakelingen</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Description:     Testbench for rca</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Revision     Date       Author     Comments</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- v0.1         20140119   VlJo       Initial version</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">rca_tb</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">generic</span>(
+</span></span><span style="display:flex;"><span>        WIDTH <span style="color:#f92672">:</span> <span style="color:#66d9ef">natural</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">rca_tb</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioural</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">rca_tb</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">rca</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">generic</span>(
+</span></span><span style="display:flex;"><span>            WIDTH <span style="color:#f92672">:</span> <span style="color:#66d9ef">natural</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>        );
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">port</span>(
+</span></span><span style="display:flex;"><span>            A <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            B <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            S <span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            C <span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC</span>
+</span></span><span style="display:flex;"><span>        );
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">rca</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> A <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> B <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> S <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> C <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- STIMULI</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">PSTIM</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;00&#34;</span>;
+</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;00&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">3</span> ns;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (S <span style="color:#f92672">=</span> <span style="color:#ae81ff">x&#34;00&#34;</span>) report <span style="color:#e6db74">&#34;Error in sum&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (C <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span>) report <span style="color:#e6db74">&#34;Error in carry&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">2</span> ns;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;03&#34;</span>;
+</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;27&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">3</span> ns;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (S <span style="color:#f92672">=</span> <span style="color:#ae81ff">x&#34;2A&#34;</span>) report <span style="color:#e6db74">&#34;Error in sum&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (C <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span>) report <span style="color:#e6db74">&#34;Error in carry&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">2</span> ns;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;FF&#34;</span>;
+</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;FF&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">3</span> ns;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (S <span style="color:#f92672">=</span> <span style="color:#ae81ff">x&#34;2A&#34;</span>) report <span style="color:#e6db74">&#34;Error in sum&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (C <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span>) report <span style="color:#e6db74">&#34;Error in carry&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">2</span> ns;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- DUT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    DUT<span style="color:#f92672">:</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">rca</span> <span style="color:#66d9ef">generic</span> <span style="color:#66d9ef">map</span> (WIDTH <span style="color:#f92672">=&gt;</span> WIDTH) <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
+</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">=&gt;</span> A,
+</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">=&gt;</span> B,
+</span></span><span style="display:flex;"><span>        S <span style="color:#f92672">=&gt;</span> S,
+</span></span><span style="display:flex;"><span>        C <span style="color:#f92672">=&gt;</span> C
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioural</span>;
+</span></span></code></pre></div>
+
 
 <footer class="footline">
 	
@@ -788,123 +800,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -1016,6 +911,126 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1037,10 +1052,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../010_intro_vhdl/" title="1. Eerste project"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../200_next_step/285_generic/" title="Generic"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../010_intro_vhdl/020_nand/" title="NAND poort" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../920_cheat_sheet/" title="Cheat sheet" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
