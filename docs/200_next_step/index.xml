@@ -35,7 +35,7 @@ library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity signal_example is Port (A_vect
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/260_processen/</guid>
       <description>Een basis component die vaak voorkomt is een multiplexer.
-2-naar-1 multiplexer ... architecture Behavioral of ... ... signal rotate_left : STD_LOGIC_VECTOR(7 downto 0); signal rotate_right : STD_LOGIC_VECTOR(7 downto 0); signal MUX_select : STD_LOGIC; signal transformed : STD_LOGIC_VECTOR(7 downto 0); ... begin ... -- optie 1 transformed &amp;lt;= rotate_left when MUX_select = &amp;#39;0&amp;#39; else rotate_right; -- optie 2 with MUX_select select transformed &amp;lt;= rotate_left when &amp;#39;0&amp;#39;, rotate_right when others; -- optie 3 PMUX: process(rotate_left, rotate_right, MUX_select) begin if MUX_select = &amp;#39;1&amp;#39; then transformed &amp;lt;= rotate_right; else transformed &amp;lt;= rotate_left; end if; end process; .</description>
+2-naar-1 multiplexer ... architecture Behavioral of ... ... signal rotate_left : STD_LOGIC_VECTOR(7 downto 0); signal rotate_right : STD_LOGIC_VECTOR(7 downto 0); signal MUX_select : STD_LOGIC; signal transformed : STD_LOGIC_VECTOR(7 downto 0); ... begin ... -- optie 1 transformed &amp;lt;= rotate_left when MUX_select = &amp;#39;0&amp;#39; else rotate_right; -- optie 2 with MUX_select select transformed &amp;lt;= rotate_left when &amp;#39;0&amp;#39;, rotate_right when others; -- optie 3 PMUX: process(rotate_left, rotate_right, MUX_select) begin if MUX_select = &amp;#39;0&amp;#39; then transformed &amp;lt;= rotate_left; else transformed &amp;lt;= rotate_right; end if; end process; .</description>
     </item>
     
     <item>
@@ -46,7 +46,7 @@ library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity signal_example is Port (A_vect
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/280_generate/</guid>
       <description>Een generate is handig als je vaak VHDL-code moet herhalen. Meestal kan je dan een generate statement gebruiken om te voorkomen dat je te veel moet kopiëren en plakken.
 De generate gaat in dit voorbeeld van 0 tot 6 omdat 6+1 al 7 is, wat het laatste element van de array is.
-library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity generate_example is Port (A_vector: in std_logic_vector(7 downto 0); Y_vector: out std_logic_vector(7 downto 0)); end generate_example; architecture Behavioral of generate_example is begin GEN : for i in 0 to 6 generate Y_vector(i) &amp;lt;= A_vector(i) AND A_vector(i+1); end generate; end Behavioral; Schematische voorstelling Vivado kan een schematische voorstelling maken van de hardware beschrijving met RTL analysis elaborate design.</description>
+library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity generate_example is Port (A_vector: in std_logic_vector(7 downto 0); Y_vector: out std_logic_vector(7 downto 0)); end generate_example; architecture Behavioral of generate_example is begin GEN : for i in 0 to 6 generate Y_vector(i) &amp;lt;= A_vector(i) AND A_vector(i+1); end generate; Y_vector(7) =&amp;gt; &amp;#39;0&amp;#39;; end Behavioral; Schematische voorstelling Vivado kan een schematische voorstelling maken van de hardware beschrijving met RTL analysis elaborate design.</description>
     </item>
     
     <item>
