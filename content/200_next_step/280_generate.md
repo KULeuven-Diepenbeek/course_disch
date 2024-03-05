@@ -27,6 +27,8 @@ begin
   GEN : for i in 0 to 6 generate
     Y_vector(i) <= A_vector(i) AND A_vector(i+1);
   end generate;
+
+  Y_vector(7) => '0';
     
 end Behavioral;
 ```

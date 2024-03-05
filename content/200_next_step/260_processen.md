@@ -37,10 +37,10 @@ begin
     -- optie 3
     PMUX: process(rotate_left, rotate_right, MUX_select)
     begin
-        if MUX_select = '1' then 
-            transformed <= rotate_right;
-        else
+        if MUX_select = '0' then 
             transformed <= rotate_left;
+        else
+            transformed <= rotate_right;
         end if;
     end process;
     ...
