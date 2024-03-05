@@ -61,8 +61,8 @@ begin
         A <= x"FF";
         B <= x"FF";
         wait for 3 ns;
-        assert (S = x"2A") report "Error in sum" severity note;
-        assert (C = '0') report "Error in carry" severity note;
+        assert (S = x"FE") report "Error in sum" severity note;
+        assert (C = '1') report "Error in carry" severity note;
         wait for 2 ns;
 
         wait;
