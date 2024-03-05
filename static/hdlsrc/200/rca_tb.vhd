@@ -14,7 +14,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity rca_tb is
     generic(
-        WIDTH : natural := 8
+        WIDTH_as_set_by_the_testbench : natural := 8
     );
 end entity rca_tb;
 
@@ -71,7 +71,7 @@ begin
     -------------------------------------------------------------------------------
     -- DUT
     -------------------------------------------------------------------------------
-    DUT: component rca generic map (WIDTH => WIDTH) port map(
+    DUT: component rca generic map (WIDTH => WIDTH_as_set_by_the_testbench) port map(
         A => A,
         B => B,
         S => S,

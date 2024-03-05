@@ -12,22 +12,22 @@
     <title>Opdracht 2: Ripple carry adder :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1709632905" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1709632905" rel="stylesheet">
-    <link href="../../css/hybrid.css?1709632905" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1709632905" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1709632905" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1709632905" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1709632905" rel="stylesheet">
-    <link href="../../css/theme.css?1709632905" rel="stylesheet">
-    <link href="../../css/tabs.css?1709632905" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1709632905" rel="stylesheet">
+    <link href="../../css/nucleus.css?1709642094" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1709642094" rel="stylesheet">
+    <link href="../../css/hybrid.css?1709642094" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1709642094" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1709642094" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1709642094" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1709642094" rel="stylesheet">
+    <link href="../../css/theme.css?1709642094" rel="stylesheet">
+    <link href="../../css/tabs.css?1709642094" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1709642094" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1709632905" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1709642094" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1709632905"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1709642094"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1709632905"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1709632905"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1709642094"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1709642094"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1709632905"></script>
+<script type="text/javascript" src="../../js/search.js?1709642094"></script>
 
     
   </div>
@@ -629,6 +629,11 @@
 <h2 id="testbench">Testbench</h2>
 <p>Hieronder staat een voorbeeld van een testbench. Vaak is het interesant om enkele specifieke stimuli te hebben tijdens de ontwikkeling. Indien het mogelijk is (zoals hier het geval is), is het ook een optie om simpelweg ALLE opties te verifiëren. Omdat dergelijk bestand nogal groot wordt, is hieronder een verkorte versie weergegeven. De volledige testbench kan <a href="https://github.com/KULeuven-Diepenbeek/course_disch/tree/main/static/hdlsrc/200" target="_blank">hier</a> gedownload worden.</p>
 
+<div class="notices tip" ><p>Om een component declaratie te doen, kan je eenvoudig de <strong>entity</strong> kopiëren en de keywoorden <em>entity</em> vervangen door component.<br/><br/>
+Het omgekeerde kan uiteraard ook 😃</p>
+</div>
+
+
 
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#75715e">--------------------------------------------------------------------------------</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- KU Leuven - ESAT/COSIC - Emerging technologies, Systems &amp; Security</span>
@@ -646,7 +651,7 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">rca_tb</span> <span style="color:#66d9ef">is</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">generic</span>(
-</span></span><span style="display:flex;"><span>        WIDTH <span style="color:#f92672">:</span> <span style="color:#66d9ef">natural</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>        WIDTH_as_set_by_the_testbench <span style="color:#f92672">:</span> <span style="color:#66d9ef">natural</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">8</span>
 </span></span><span style="display:flex;"><span>    );
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">rca_tb</span>;
 </span></span><span style="display:flex;"><span>
@@ -703,7 +708,7 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- DUT</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
-</span></span><span style="display:flex;"><span>    DUT<span style="color:#f92672">:</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">rca</span> <span style="color:#66d9ef">generic</span> <span style="color:#66d9ef">map</span> (WIDTH <span style="color:#f92672">=&gt;</span> WIDTH) <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
+</span></span><span style="display:flex;"><span>    DUT<span style="color:#f92672">:</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">rca</span> <span style="color:#66d9ef">generic</span> <span style="color:#66d9ef">map</span> (WIDTH <span style="color:#f92672">=&gt;</span> WIDTH_as_set_by_the_testbench) <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
 </span></span><span style="display:flex;"><span>        A <span style="color:#f92672">=&gt;</span> A,
 </span></span><span style="display:flex;"><span>        B <span style="color:#f92672">=&gt;</span> B,
 </span></span><span style="display:flex;"><span>        S <span style="color:#f92672">=&gt;</span> S,
@@ -1065,19 +1070,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1709632905"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1709632905"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1709632905"></script>
-    <script src="../../js/jquery.sticky.js?1709632905"></script>
-    <script src="../../js/featherlight.min.js?1709632905"></script>
-    <script src="../../js/highlight.pack.js?1709632905"></script>
+    <script src="../../js/clipboard.min.js?1709642094"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1709642094"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1709642094"></script>
+    <script src="../../js/jquery.sticky.js?1709642094"></script>
+    <script src="../../js/featherlight.min.js?1709642094"></script>
+    <script src="../../js/highlight.pack.js?1709642094"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1709632905"></script>
-    <script src="../../js/learn.js?1709632905"></script>
-    <script src="../../js/hugo-learn.js?1709632905"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1709642094"></script>
+    <script src="../../js/learn.js?1709642094"></script>
+    <script src="../../js/hugo-learn.js?1709642094"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1709632905"></script>
+            <script src="../../mermaid/mermaid.js?1709642094"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
