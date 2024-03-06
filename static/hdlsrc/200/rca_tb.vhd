@@ -14,7 +14,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity rca_tb is
     generic(
-        WIDTH_as_set_by_the_testbench : natural := 8
+        WIDTH_as_set_by_the_testbench : natural := 16
     );
 end entity rca_tb;
 
@@ -32,9 +32,9 @@ architecture Behavioural of rca_tb is
         );
     end component rca;
 
-    signal A : STD_LOGIC_VECTOR(WIDTH-1 downto 0);
-    signal B : STD_LOGIC_VECTOR(WIDTH-1 downto 0);
-    signal S : STD_LOGIC_VECTOR(WIDTH-1 downto 0);
+    signal A : STD_LOGIC_VECTOR(WIDTH_as_set_by_the_testbench-1 downto 0);
+    signal B : STD_LOGIC_VECTOR(WIDTH_as_set_by_the_testbench-1 downto 0);
+    signal S : STD_LOGIC_VECTOR(WIDTH_as_set_by_the_testbench-1 downto 0);
     signal C : STD_LOGIC;
 
 begin
