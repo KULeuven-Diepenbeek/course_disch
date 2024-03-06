@@ -6,11 +6,32 @@ weight: 330
 draft: false
 ---
 
-De ALU die je moet maken voor deze opdracht ziet er zo uit. Ingangen x en y zijn 16 bits. De input status bits zijn zx (zero x) ,nx (negate x), zy (zero y), ny (negate y), f (function), no (negate output). De output status zijn zr (zero) en ng (negativee).
+De ALU die je moet maken voor deze opdracht ziet er uit zoals hieronder afgebeeld:
+
+{{% multiHcolumn %}}
+{{% column %}}
+
+* Ingangen x en y zijn 16 bits; 
+* De input status bits zijn:
+  * zx (zero x)
+  * nx (negate x)
+  * zy (zero y)
+  * ny (negate y)
+  * f (function)
+  * no (negate output)
+* De output status zijn: 
+  * zr (zero)
+  * ng (negativee).
+
+{{% /column %}}
+{{% column %}}
+![schame nand2tetris ALU](/images/ALU/ALU_inputs_outputs.png)
+{{% /column %}}
+{{% /multiHcolumn %}}
+
 
 Later zetten we de input status code juist op basis van de binnenkomende instructie en optioneel doen we iets met de output status codes.
 
-![schame nand2tetris ALU](/images/ALU/ALU_inputs_outputs.png)
 
 De opdracht is om zelf een ALU te maken die aan onderstaande waarheidstabel voldoet.
 

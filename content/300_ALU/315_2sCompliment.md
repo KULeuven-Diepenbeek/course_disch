@@ -1,5 +1,5 @@
 ---
-title: "2's Compliments"
+title: "2's Compliment"
 pre: "<i class='fas fa-book'></i> "
 chapter: false
 weight: 315
