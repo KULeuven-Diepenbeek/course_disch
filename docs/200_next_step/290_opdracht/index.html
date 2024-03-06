@@ -12,22 +12,22 @@
     <title>Opdracht 2: Ripple carry adder :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1709713606" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1709713606" rel="stylesheet">
-    <link href="../../css/hybrid.css?1709713606" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1709713606" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1709713606" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1709713606" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1709713606" rel="stylesheet">
-    <link href="../../css/theme.css?1709713606" rel="stylesheet">
-    <link href="../../css/tabs.css?1709713606" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1709713606" rel="stylesheet">
+    <link href="../../css/nucleus.css?1709714051" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1709714051" rel="stylesheet">
+    <link href="../../css/hybrid.css?1709714051" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1709714051" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1709714051" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1709714051" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1709714051" rel="stylesheet">
+    <link href="../../css/theme.css?1709714051" rel="stylesheet">
+    <link href="../../css/tabs.css?1709714051" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1709714051" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1709713606" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1709714051" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1709713606"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1709714051"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1709713606"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1709713606"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1709714051"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1709714051"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1709713606"></script>
+<script type="text/javascript" src="../../js/search.js?1709714051"></script>
 
     
   </div>
@@ -681,24 +681,24 @@ Het omgekeerde kan uiteraard ook 😃</p>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">PSTIM</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;00&#34;</span>;
-</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;00&#34;</span>;
+</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;0000&#34;</span>;
+</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;0000&#34;</span>;
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">3</span> ns;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (S <span style="color:#f92672">=</span> <span style="color:#ae81ff">x&#34;00&#34;</span>) report <span style="color:#e6db74">&#34;Error in sum&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (S <span style="color:#f92672">=</span> <span style="color:#ae81ff">x&#34;0000&#34;</span>) report <span style="color:#e6db74">&#34;Error in sum&#34;</span> <span style="color:#66d9ef">severity</span> note;
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (C <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span>) report <span style="color:#e6db74">&#34;Error in carry&#34;</span> <span style="color:#66d9ef">severity</span> note;
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">2</span> ns;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;03&#34;</span>;
-</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;27&#34;</span>;
+</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;0003&#34;</span>;
+</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;0027&#34;</span>;
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">3</span> ns;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (S <span style="color:#f92672">=</span> <span style="color:#ae81ff">x&#34;2A&#34;</span>) report <span style="color:#e6db74">&#34;Error in sum&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (S <span style="color:#f92672">=</span> <span style="color:#ae81ff">x&#34;002A&#34;</span>) report <span style="color:#e6db74">&#34;Error in sum&#34;</span> <span style="color:#66d9ef">severity</span> note;
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (C <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span>) report <span style="color:#e6db74">&#34;Error in carry&#34;</span> <span style="color:#66d9ef">severity</span> note;
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">2</span> ns;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;FF&#34;</span>;
-</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;FF&#34;</span>;
+</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;FFFF&#34;</span>;
+</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;FFFF&#34;</span>;
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">3</span> ns;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (S <span style="color:#f92672">=</span> <span style="color:#ae81ff">x&#34;FE&#34;</span>) report <span style="color:#e6db74">&#34;Error in sum&#34;</span> <span style="color:#66d9ef">severity</span> note;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (S <span style="color:#f92672">=</span> <span style="color:#ae81ff">x&#34;FFFE&#34;</span>) report <span style="color:#e6db74">&#34;Error in sum&#34;</span> <span style="color:#66d9ef">severity</span> note;
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> (C <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span>) report <span style="color:#e6db74">&#34;Error in carry&#34;</span> <span style="color:#66d9ef">severity</span> note;
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">2</span> ns;
 </span></span><span style="display:flex;"><span>
@@ -1070,19 +1070,19 @@ Het omgekeerde kan uiteraard ook 😃</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1709713606"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1709713606"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1709713606"></script>
-    <script src="../../js/jquery.sticky.js?1709713606"></script>
-    <script src="../../js/featherlight.min.js?1709713606"></script>
-    <script src="../../js/highlight.pack.js?1709713606"></script>
+    <script src="../../js/clipboard.min.js?1709714051"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1709714051"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1709714051"></script>
+    <script src="../../js/jquery.sticky.js?1709714051"></script>
+    <script src="../../js/featherlight.min.js?1709714051"></script>
+    <script src="../../js/highlight.pack.js?1709714051"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1709713606"></script>
-    <script src="../../js/learn.js?1709713606"></script>
-    <script src="../../js/hugo-learn.js?1709713606"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1709714051"></script>
+    <script src="../../js/learn.js?1709714051"></script>
+    <script src="../../js/hugo-learn.js?1709714051"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1709713606"></script>
+            <script src="../../mermaid/mermaid.js?1709714051"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

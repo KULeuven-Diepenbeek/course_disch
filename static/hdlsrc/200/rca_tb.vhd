@@ -44,24 +44,24 @@ begin
     -------------------------------------------------------------------------------
     PSTIM: process
     begin
-        A <= x"00";
-        B <= x"00";
+        A <= x"0000";
+        B <= x"0000";
         wait for 3 ns;
-        assert (S = x"00") report "Error in sum" severity note;
+        assert (S = x"0000") report "Error in sum" severity note;
         assert (C = '0') report "Error in carry" severity note;
         wait for 2 ns;
 
-        A <= x"03";
-        B <= x"27";
+        A <= x"0003";
+        B <= x"0027";
         wait for 3 ns;
-        assert (S = x"2A") report "Error in sum" severity note;
+        assert (S = x"002A") report "Error in sum" severity note;
         assert (C = '0') report "Error in carry" severity note;
         wait for 2 ns;
 
-        A <= x"FF";
-        B <= x"FF";
+        A <= x"FFFF";
+        B <= x"FFFF";
         wait for 3 ns;
-        assert (S = x"FE") report "Error in sum" severity note;
+        assert (S = x"FFFE") report "Error in sum" severity note;
         assert (C = '1') report "Error in carry" severity note;
         wait for 2 ns;
 
