@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Simulatie :: Digitale Elektronische Schakelingen</title>
+    <title>Flipflop en latches :: Digitale Elektronische Schakelingen</title>
 
     
     <link href="../../css/nucleus.css?1710229422" rel="stylesheet">
@@ -42,7 +42,7 @@
     
 
   </head>
-  <body class="" data-url="../../010_intro_vhdl/030_simulatie/">
+  <body class="" data-url="../../900_zelfstudie_vhdl/990_flipflop_latch/">
     <nav id="sidebar" class="">
 
 
@@ -169,7 +169,7 @@
   
     
     <li data-nav-id="/010_intro_vhdl/" title="1. Eerste project" class="dd-item
-        parent
+        
         
         
         ">
@@ -258,7 +258,7 @@
  
   
     
-      <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item active">
+      <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item ">
         <a href="../../010_intro_vhdl/030_simulatie/">
         <i class='fas fa-book'></i> Simulatie
         
@@ -628,7 +628,7 @@
   
     
     <li data-nav-id="/900_zelfstudie_vhdl/" title="Zelfstudie VHDL" class="dd-item
-        
+        parent
         
         
         ">
@@ -822,7 +822,7 @@
  
   
     
-      <li data-nav-id="/900_zelfstudie_vhdl/990_flipflop_latch/" title="Flipflop en latches" class="dd-item ">
+      <li data-nav-id="/900_zelfstudie_vhdl/990_flipflop_latch/" title="Flipflop en latches" class="dd-item active">
         <a href="../../900_zelfstudie_vhdl/990_flipflop_latch/">
         <i class='fas fa-book'></i> Flipflop en latches
         
@@ -947,7 +947,7 @@
             
           
           
-            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../010_intro_vhdl/'>1. Eerste project</a> > Simulatie
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../900_zelfstudie_vhdl/'>Zelfstudie VHDL</a> > Flipflop en latches
           
         
           
@@ -962,10 +962,20 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#voorbeeld-testbench-voor-een-nand-poort">Voorbeeld: testbench voor een NAND poort</a>
+    <li><a href="#d-flipflop">D-flipflop</a>
       <ul>
-        <li><a href="#maken-van-een-testbench">Maken van een testbench</a></li>
-        <li><a href="#runnen-van-een-testbench">Runnen van een testbench</a></li>
+        <li></li>
+        <li><a href="#extra-functies-voor-klokflanken">Extra functies voor klokflanken</a></li>
+      </ul>
+    </li>
+    <li><a href="#d-latch">D-latch</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#ongewenste-componenten">Ongewenste componenten</a>
+      <ul>
+        <li></li>
       </ul>
     </li>
   </ul>
@@ -985,121 +995,172 @@
           
             <h1>
               
-              Simulatie
+              Flipflop en latches
             </h1>
           
 
         
 
 
-<p>Hoe kan er nu getest worden of onze <strong>nand</strong> poort correct werkt? We zouden een ASIC kunnen maken, maar dat zou een veel te dure en tijdrovende manier zijn.</p>
-<p>Een realistischere manier is om het design te implementeren op een FPGA, maar er is nog een gemakkelijkere en nuttigere manier: <strong>testbenches</strong>.</p>
-<p>Het idee achter een testbench is dat er &ldquo;toestellen&rdquo; zijn die inputs (ook stimuli genoemd) kunnen genereren. Vervolgens kunnen de waveforms van het hele design visueel geanalyseerd worden én kan de output van een component geverifieerd worden.</p>
-<p>In dit opleidingsonderdeel <em>krijgen</em> jullie vaak de testbenches, maar het is goed om deze zelf aan te passen of uit te breiden.</p>
-<h2 id="voorbeeld-testbench-voor-een-nand-poort">Voorbeeld: testbench voor een NAND poort</h2>
-<h3 id="maken-van-een-testbench">Maken van een testbench</h3>
-<p>Met onderstaande testbench kunnen we testen of onze nand poort werkt. Er moet een nieuwe <strong>simulation source</strong> aangemaakt worden en onderstaande testbench dient hierin geplakt te worden. Merk op dat <strong>ook de testbench</strong> geschreven is in (V)HDL.</p>
-<div class="multiHcolumn">
-<div class="column">
-    <h4 id="commentaar">Commentaar</h4>
-<p>Alhoewel dit geen verplicht stuk is, is het altijd nuttig om commentaar te voorzien.</p>
-<h4 id="gebruik-packages">Gebruik packages</h4>
-<p>Deze testbench begint, net zoals de componenten, met het gebruiken van een <strong>package</strong> (STD_LOGIC_1164) uit een <strong>library</strong> (IEEE). Dit is uiteraard nodig omdat we anders geen definitie hebben van wat een STD_LOGIC type is.</p>
-<h4 id="een-lege-entitity">Een lege entitity</h4>
-<p>Vervolgens is er ook een <strong>entity</strong> block. Merk hier zeker bij op dat een testbench typisch <strong>GEEN</strong> input en/of output poorten heeft.</p>
-<h4 id="declaraties">Declaraties</h4>
-<p>In de architecture gebeuren opnieuw eerst enkele declaraties. Zowel de component als de gebruikte signalen dienen gedeclareerd te worden.</p>
-<h4 id="dut">DUT</h4>
-<p>Er wordt een component <strong>instantiatie</strong> gemaakt van de <em>nand_gate</em> in deze testbench. De naam van deze instantie is DUT, wat een acronym is van <em>Device Under Test</em>. UUT (Unit Under Test) wordt ook soms gebruikt</p>
-<h4 id="stimuli">Stimuli</h4>
-<p>Tenslotte is er nog één blok dat de stimuli beschrijft. Dit is een speciaal soort blok (een <strong>process</strong>) waar we later nog op terug komen. Wat er tussen de begin en end van een process beschreven staat, wordt sequentieel overlopen (hiermee wordt bedoeld: zoals bij een C-programma). Wees er echter van bewust dat de hele process-block <strong>TEGELIJKERTIJD</strong> loopt met de DUT.</p>
-<p>De correcte werking van de NAND poort wordt in deze testbench nagegaan door alle mogelijke logische combinaties aan te leggen aan de ingangen van nullen en enen.</p>
-</div>    
-<div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- KU Leuven - ESAT/COSIC - ES&amp;S</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Module Name:     nand_tb - Behavioural</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Project Name:    Digitale eletronische schakelingen</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Description:     Testbench for nand</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">--</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Revision     Date       Author     Comments</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- v1.0         20240118   VlJo       Initial version</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">--</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- use IEEE.NUMERIC_STD.ALL;</span>
+<h2 id="d-flipflop">D-flipflop</h2>
+<p>De D-flip-flop is het basiselement van synchrone logica. De data bit wordt opgenomen in het geheugenelement op de stijgende of dalende flank van de klok. De data bit blijft in het geheugenelement aanwezig tot de volgende stijgende of dalende flank van de klok.</p>
+<p>Engelse benamingen:</p>
+<ul>
+<li>positive/negative edge triggered D-type flip-flop</li>
+<li>rising/falling edge triggered D-type flip-flop</li>
+</ul>
+<h4 id="positieve-flank-getriggerde-d-ff-in-vhdl">Positieve flank getriggerde D-FF in VHDL</h4>
+<p>Proces met enkel de klok in de sensitivity list. Klok event komt overeen met de flank. Enkel if, geen else.</p>
+<div class="multicolumn">
+<div class="column" style="width:60%">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> ieee;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">nand_tb</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">nand_tb</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">pos_dff</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">port</span>(   d, clk<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span>        q<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">pos_dff</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioural</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">nand_tb</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">nand_gate</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">port</span>(
-</span></span><span style="display:flex;"><span>            A<span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>            B<span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>            Z<span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC</span>
-</span></span><span style="display:flex;"><span>        );
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">nand_gate</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> input_a, input_b <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> output_z <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch_pos_dff</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">pos_dff</span> <span style="color:#66d9ef">is</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- STIMULI</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">PSTIM</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p_pos_dff</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(clk)
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>        input_a <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>        input_b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span> ns;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        input_a <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-</span></span><span style="display:flex;"><span>        input_b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span> ns;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        input_a <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>        input_b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span> ns;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        input_a <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-</span></span><span style="display:flex;"><span>        input_b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span> ns;
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> clk<span style="color:#a6e22e">&#39;event</span> <span style="color:#66d9ef">and</span> clk <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>            q <span style="color:#f92672">&lt;=</span> d;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- DUT</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span>    DUT<span style="color:#f92672">:</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">nand_gate</span> <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
-</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">=&gt;</span> input_a,
-</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">=&gt;</span> input_b,
-</span></span><span style="display:flex;"><span>        Z <span style="color:#f92672">=&gt;</span> output_z
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioural</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch_pos_dff</span>;
 </span></span></code></pre></div>
-</div>    
 </div>
-<p>Om een testbench toe te voegen aan het Vivado project is het belangrijk erop te letten dat je een <strong>Simulation</strong> source toevoegd. In deze testbench kan je vervolgens bovenstaande code plakken.</p>
-<h3 id="runnen-van-een-testbench">Runnen van een testbench</h3>
-<p>Als alle code beschreven is, kan de bovenstaante simulatie uitgevoerd worden. Er zijn meerdere manieren om een simulatie te starten en deze zul je ontdekken doorheen de labs.</p>
-<p>De gemakkelijkste manier is om in de <strong>Flow Navigator</strong> (de verticale balk aan de linkerkant van het scherm) te klikken op: <strong>Run simulation</strong>. Als alles goed loop zou je (ongeveer) onderstaand scherm moeten krijgen.</p>
-<figure><img src="../../images/intro/simulation.png"/><figcaption>
-            <h4>Simulatie van de nand gate met Vivado</h4>
-        </figcaption>
+<div class="column" style="width:40%">
+<figure><img src="../../images/zelfstudie/D_flipflop_pos.png"/>
 </figure>
-<p>Je ziet hierin de inputs en de output van de DUT. De tijd verstrijkt over de X-as. Als beide inputs of één van beide inputs &lsquo;hoog&rsquo; is, is de uitgang ook &lsquo;hoog&rsquo;. Indien beide ingangen &lsquo;hoog&rsquo; zijn, is de uitgang &rsquo;laag&rsquo;.</p>
-<p>Dat is exact wat een NAND poort moet doen !! <em>(gelukkig)</em></p>
-<p>Als het design gesimuleerd wordt met een open-source simulator krijgen we een identiek resultaat.</p>
-<figure><img src="../../images/screenshots/sim_nand.png"/><figcaption>
-            <h4>Simulatie van de nand gate met GHDL en GTKWave</h4>
-        </figcaption>
+</div>
+</div>
+<h4 id="negatieve-flank-getriggerde-d-ff-in-vhdl">Negatieve flank getriggerde D-FF in VHDL</h4>
+<div class="multicolumn">
+<div class="column" style="width:60%">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> ieee;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">pos_dff</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">port</span>(   d, clk<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span>        q<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">pos_dff</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch_pos_dff</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">pos_dff</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p_pos_dff</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(clk)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> clk<span style="color:#a6e22e">&#39;event</span> <span style="color:#66d9ef">and</span> clk <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>            q <span style="color:#f92672">&lt;=</span> d;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch_pos_dff</span>;
+</span></span></code></pre></div>
+</div>
+<div class="column" style="width:40%">
+<figure><img src="../../images/zelfstudie/D_flipflop_neg.png"/>
 </figure>
+</div>
+</div>
+<h3 id="extra-functies-voor-klokflanken">Extra functies voor klokflanken</h3>
+<p>In std_logic_1164 zijn de volgende functies gedefinieerd:</p>
+<ul>
+<li>rising_edge</li>
+<li>falling_edge</li>
+</ul>
+<p><strong>Beide kolommen</strong> doen lijken funtioneel <strong>hetzelfde</strong> te doen, maar er is een subtiel verschil. Wanneer er gebruikt gemaakt wordt van het xxxx&rsquo;event keyword, wilt dat zeggen <strong>er is een verandering in de waarde van xxxx</strong>. Als dit gevolgd wordt door de test <em>clk = &lsquo;1&rsquo;</em>, wilt dat zeggen dat deze conditie waar is voor elke overgang <strong>naar &lsquo;1&rsquo;</strong> (bv: &lsquo;0&rsquo; -&gt; &lsquo;1&rsquo;, maar ook &lsquo;X&rsquo; -&gt; &lsquo;1&rsquo; en &lsquo;-&rsquo; -&gt; &lsquo;1&rsquo;)</p>
+<div class="multicolumn">
+<div class="column">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> rising_edge(clk) <span style="color:#66d9ef">then</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> falling_edge(clk) <span style="color:#66d9ef">then</span>
+</span></span></code></pre></div>
+</div>
+<div class="column">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> clk<span style="color:#a6e22e">&#39;event</span> <span style="color:#66d9ef">and</span> clk <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> clk<span style="color:#a6e22e">&#39;event</span> <span style="color:#66d9ef">and</span> clk <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span></code></pre></div>
+</div>
+</div>
+<p>Voor de twee voorbeelden die gebruik maken van functies uit STD_LOGIC_1164, wordt een bepaalde &ldquo;uitgangspositie&rdquo; verwacht.</p>
+<ul>
+<li>rising_edge() geeft <strong>true</strong> wanneer een signaal van &lsquo;0&rsquo; of &lsquo;L&rsquo; verandert naar &lsquo;1&rsquo; of &lsquo;H&rsquo;</li>
+<li>falling_edge() geeft <strong>true</strong> wanneer een signaal van &lsquo;1&rsquo; of &lsquo;H&rsquo; verandert naar &lsquo;0&rsquo; of &lsquo;L&rsquo;</li>
+</ul>
+<h2 id="d-latch">D-latch</h2>
+<p>Bij een <strong>D-latch</strong> worden de <strong>data binnengenomen</strong> gedurende de <strong>hele periode dat de klok hoog is</strong>. Een ontwerp met <strong>D-flip-flops</strong> is <strong>veel makkelijker te analyseren en managen</strong> dan een ontwerp met D-latches.</p>
+<h4 id="d-latch-in-vhdl">D-latch in VHDL</h4>
+<ul>
+<li>proces met klok en data in de sensitivity list</li>
+<li>geen klok event</li>
+<li>enkel if, geen else</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> ieee;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">dlatch</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(   d, clk<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span>            q<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">dlatch</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch_dlatch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">dlatch</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p_dlatch</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(clk, d)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> clk <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>            q <span style="color:#f92672">&lt;=</span> d;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch_dlatch</span>;
+</span></span></code></pre></div><h2 id="ongewenste-componenten">Ongewenste componenten</h2>
+<h4 id="ongewenste-latches">Ongewenste latches</h4>
+<p>Als niet alle mogelijkheden voorzien zijn, kan een combinatorisch circuit zich gedragen als een latch. Dit moet steeds vermeden worden.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> ieee;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">fout</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(   a, b<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span>            s<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            z<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">fout</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch_fout</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">fout</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p_fout</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, s)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;00&#34;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>            z <span style="color:#f92672">&lt;=</span> a;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elsif</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;01&#34;</span> <span style="color:#66d9ef">then</span> <span style="color:#75715e">--er is geen beschrijving voor s is 10 of 11</span>
+</span></span><span style="display:flex;"><span>            z <span style="color:#f92672">&lt;=</span> b;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch_fout</span>;
+</span></span></code></pre></div><h4 id="ongewenste-registers">Ongewenste registers</h4>
+<p>Indien we voor een bepaald signaal geen register willen implementeren, moet dat signaal buiten het proces geplaatst worden.</p>
+<div class="multicolumn">
+<div class="column">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">seq</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(clk)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> clk<span style="color:#a6e22e">&#39;event</span> <span style="color:#66d9ef">and</span> clk <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        j <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">and</span> b; <span style="color:#75715e">--register voor j</span>
+</span></span><span style="display:flex;"><span>        i <span style="color:#f92672">&lt;=</span> j <span style="color:#66d9ef">xor</span> k;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span></code></pre></div>
+</div>
+<div class="column">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">seq</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(clk)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> clk<span style="color:#a6e22e">&#39;event</span> <span style="color:#66d9ef">and</span> clk <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        i <span style="color:#f92672">&lt;=</span> j <span style="color:#66d9ef">xor</span> k;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>j <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">and</span> b; <span style="color:#75715e">--geen register voor j</span>
+</span></span></code></pre></div>
+</div>
+</div>
 
 
 <footer class="footline">
@@ -1188,7 +1249,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1201,9 +1261,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1253,7 +1310,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1269,9 +1325,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1516,6 +1569,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1528,6 +1582,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1657,6 +1714,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1672,6 +1730,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1712,10 +1773,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../010_intro_vhdl/025_and/" title="AND poort"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../900_zelfstudie_vhdl/980_signalen_variablen/" title="Signalen vs. variabelen"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../010_intro_vhdl/031_synthesisable/" title="Synthetiseerbaar" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../900_zelfstudie_vhdl/995_voorbeelden/" title="Voorbeelden" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

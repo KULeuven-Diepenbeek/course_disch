@@ -191,5 +191,123 @@ Ingangen x en y zijn 16 bits; De input status bits zijn: zx (zero x) nx (negate 
 -------------------------------------------------------------------------------- -- KU Leuven - ESAT/COSIC - Emerging technologies, Systems &amp;amp; Security -------------------------------------------------------------------------------- -- Module Name: alu_tb - Behavioural -- Project Name: Testbench for alu -- Description: -- -- Revision Date Author Comments -- v0.1 20240311 VlJo Initial version -- -------------------------------------------------------------------------------- library IEEE; use IEEE.</description>
     </item>
     
+    <item>
+      <title>Hardware vs software</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/910_hw_vs_sw/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/910_hw_vs_sw/</guid>
+      <description>Hardware vs software beschrijvingstaal voor hardware &amp;ne; programmeertaal programmeertaal (bv. C): hardware = processor hardware is reeds ontworpen code: beschrijft hoe hardware gebruikt moet worden code wordt gecompileerd voor een specifieke processor hardware beschrijvingstaal (bv. VHDL) hardware = ontwerp op FPGA of ASIC hardware moet ontworpen worden code: beschrijft welke hardware ontworpen moet worden code wordt gesynthetiseerd voor een specifieke FPGA of ASIC technologie Voorbeeld hardware c &amp;lt;= a and b; e &amp;lt;= c or d; betekent hetzelfde als</description>
+    </item>
+    
+    <item>
+      <title>Entiteiten en architecturen</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/920_ent_arch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/920_ent_arch/</guid>
+      <description>De VHDL code van elk bouwblok bevat een
+een lijst van de gebruikte bibliotheken, interface beschrijving: entity, functie beschrijving: architecture. Voorbeeld library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity and_or_poort is port( A: IN STD_LOGIC; B: IN STD_LOGIC; D: IN STD_LOGIC; E: OUT STD_LOGIC ); end entity and_or_poort; architecture Behavioural of and_gate is signal c: STD_LOGIC; begin c &amp;lt;= a and b; e &amp;lt;= c or d; end Behavioural; Entity De entity bevat de beschrijving van de interface.</description>
+    </item>
+    
+    <item>
+      <title>Hiërarchie</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/930_hierachie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/930_hierachie/</guid>
+      <description>het is mogelijk om een hiërarchie in te bouwen. Een bouwblok kan een instantie van een andere bouwblok bevatten.
+library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity and_or_xor_poort is port( a, b, c, d: in STD_LOGIC; e: out STD_LOGIC); end and_or_xor_poort; architecture arch of and_or_xor_poort is -- declaratie van and_or poort component and_or_poort is port( a, b, d: in STD_LOGIC; e: out STD_LOGIC); end component; signal f: STD_LOGIC; begin -- instantie van and_or poort inst_and_or_poort: component and_or_poort port map( a =&amp;gt; b, b =&amp;gt; a, d =&amp;gt; c, e =&amp;gt; f); e &amp;lt;= d xor f; end arch; Een component moet eerst gedeclareerd zijn alvorens hem te instantiëren.</description>
+    </item>
+    
+    <item>
+      <title>Libraries</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/940_libraries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/940_libraries/</guid>
+      <description>Een library kan meerdere packages bevatten.
+Een package bevat 1 of meer van onderstaande middelen.
+types constanten functies procedures component declaraties Een VHDL module kan gebruik maken van 1 of meerdere packages Voorbeeld:
+library library1; use library1.pack2.all; library library2; use library2.pack4.all; entity ... architecture... &amp;ldquo;std&amp;rdquo; library Een verwijzing naar de package &amp;ldquo;standard&amp;rdquo; in de library &amp;ldquo;std&amp;rdquo; is steeds impliciet aanwezig. Volgende twee codes zijn identiek.
+entity and_or_poort is port( a, b, d: in bit; e: out bit); end and_or_poort; architecture arch of and_or_poort is signal c: bit; begin c &amp;lt;= a and b; e &amp;lt;= c or d; end arch; library std; use std.</description>
+    </item>
+    
+    <item>
+      <title>Arrays</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/950_arrays/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/950_arrays/</guid>
+      <description>Een range kan stijgend of dalend gekozen worden:
+x(2 to 6) y(7 downto 0) We kunnen verwijzen naar individuele elementen door een index te gebruiken:
+x(4) y(7) Voorbeeld:
+entity and_or_poort is port( a_vec: in bit_vector(2 downto 0); c_vec: out bit_vector(0 to 1)); end and_or_poort; architecture arch of and_or_poort is signal c_intern: bit; begin c_intern &amp;lt;= a_vec(2) and a_vec(1); c_vec(1) &amp;lt;= c_intern or a_vec(0); c_vec(0) &amp;lt;= c_intern: end arch; Toekenning van arrays Toekenning gebeurt op basis van positie, niet op basis van index.</description>
+    </item>
+    
+    <item>
+      <title>Packages</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/960_packages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/960_packages/</guid>
+      <description>Zelf-gedefinieerde packages Per default worden zelfgemaakte bouwblokken opgeslagen in de library work. In deze library kunnen we zelf packages definiëren.
+Voorbeeld van een zelf-gedefinieerde package: package and_or_xor_pack is component and_or_poort is port( a, b, d: in bit; e: out bit); end component; end package; Als we deze package toevoegen, hoeven we de component declaratie niet meer te doen.
+library work; use work.and_or_xor_pack.all; entity and_or_xor_poort ... architecture ... -- zonder component declaratie &amp;ldquo;std_logic_1164&amp;rdquo; package De package &amp;quot; std_logic_1164&amp;quot; in library &amp;quot; ieee&amp;quot; bevat o.</description>
+    </item>
+    
+    <item>
+      <title>Processen</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/970_processen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/970_processen/</guid>
+      <description>Structuur van een proces Een proces wordt uitgevoerd wanneer een signaal in de sensitivity lijst van waarde verandert. Signalen worden geupdated aan het einde van het proces.
+Voorbeeld van een proces met een if-then-else statement: multiplexer.
+library ieee; use ieee.std_logic_1164.all; entity mux is port( a, b, s: in std_logic; z: out std_logic); end mux; architecture arch of mux is begin p1: process(a, b, s) -- a, b, s is de sensitiviy lijst begin if s = &amp;#39;1&amp;#39; then z &amp;lt;= a; else z &amp;lt;= b; end if; end process; end arch; Toekenningen in processen Volgende processen leiden tot dezelfde implementatie:</description>
+    </item>
+    
+    <item>
+      <title>Signalen vs. variabelen</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/980_signalen_variablen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/980_signalen_variablen/</guid>
+      <description>Signalen:
+nemen de nieuwe waarde aan na een vertraging, hebben een hardware equivalent, worden toegekend met &amp;quot; &amp;lt;=&amp;quot; . Variabelen:
+nemen de nieuwe waarde onmiddellijk aan, hebben géén hardware equivalent, worden toegekend met &amp;quot; :=&amp;quot; , komen enkel voor in een proces. Signalen Volgende beschrijvingen leiden tot dezelfde implementatie:
+architecture arch of vb1 is signal o1, o2, o3: std_logic; begin p: process(a, b, c, d, o1, o2, o3) begin q &amp;lt;= not o3; o1 &amp;lt;= a and b; o2 &amp;lt;= c and d; o3 &amp;lt;= o1 or o2; end process; end arch; architecture arch of vb2 is signal o1, o2, o3: std_logic; begin q &amp;lt;= not o3; o1 &amp;lt;= a and b; o2 &amp;lt;= c and d; o3 &amp;lt;= o1 or o2; end arch; architecture arch of vb3 is begin q &amp;lt;= not ((a and b) or (c and d)); end arch; Als we de tussenliggende signalen o1, o2 en o3 vergeten in de sensitivity list, is het gedrag niet meer zuiver combinatorisch.</description>
+    </item>
+    
+    <item>
+      <title>Flipflop en latches</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/990_flipflop_latch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/990_flipflop_latch/</guid>
+      <description>D-flipflop De D-flip-flop is het basiselement van synchrone logica. De data bit wordt opgenomen in het geheugenelement op de stijgende of dalende flank van de klok. De data bit blijft in het geheugenelement aanwezig tot de volgende stijgende of dalende flank van de klok.
+Engelse benamingen:
+positive/negative edge triggered D-type flip-flop rising/falling edge triggered D-type flip-flop Positieve flank getriggerde D-FF in VHDL Proces met enkel de klok in de sensitivity list.</description>
+    </item>
+    
+    <item>
+      <title>Voorbeelden</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/995_voorbeelden/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/995_voorbeelden/</guid>
+      <description>Binair-naar-onehot decoder library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity bin_to_onehot is port( binair: in std_logic_vector(2 downto 0); decimaal: out std_logic_vector(0 to 7) ); end bin_to_onehot; architecture arch of bin_to_onehot is signal binair_i: std_logic_vector(2 downto 0); signal decimaal_i: std_logic_vector(0 to 7); begin binair_i &amp;lt;= binair; decimaal &amp;lt;= decimaal_i; p: process(binair_i) begin case binair_i is when &amp;#34;000&amp;#34; =&amp;gt; decimaal_i &amp;lt;= &amp;#34;10000000&amp;#34; ; when &amp;#34;001&amp;#34; =&amp;gt; decimaal_i &amp;lt;= &amp;#34;01000000&amp;#34; ; when &amp;#34;010&amp;#34; =&amp;gt; decimaal_i &amp;lt;= &amp;#34;00100000&amp;#34; ; when &amp;#34;011&amp;#34; =&amp;gt; decimaal_i &amp;lt;= &amp;#34;00010000&amp;#34; ; when &amp;#34;100&amp;#34; =&amp;gt; decimaal_i &amp;lt;= &amp;#34;00001000&amp;#34; ; when &amp;#34;101&amp;#34; =&amp;gt; decimaal_i &amp;lt;= &amp;#34;00000100&amp;#34; ; when &amp;#34;110&amp;#34; =&amp;gt; decimaal_i &amp;lt;= &amp;#34;00000010&amp;#34; ; when others =&amp;gt; decimaal_i &amp;lt;= &amp;#34;00000001&amp;#34; ; end case; end process; end arch; BCD-naar-7-segment decoder library IEEE; use IEEE.</description>
+    </item>
+    
+    <item>
+      <title>Linear feedback shift register</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/997_lfsr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/997_lfsr/</guid>
+      <description>Als we een sequentie van getallen willen genereren, kunnen we een LFSR (linear feedback shift register) gebruiken. Een LFSR is een shift register, waarbij de inschuivende bit elke klokcyclus gelijk is aan de XOR van een aantal bits in de interne toestand. Op wikipedia staat uitgelegd welke bits er genomen moeten worden bij iedere grootte van LFSR.
+Voorbeeld 16 bit LFSR. Bron: Wikipedia library ieee; use ieee.std_logic_1164.all; entity LFSR is port( clk: in std_logic; load_data: in std_logic; reset: in std_logic; data_out: out std_logic_vector(15 downto 0)); end LFSR; architecture arch_LFSR of LFSR is signal shift_register: std_logic_vector(15 downto 0); begin p_comb_reg: process(clk) begin if clk&amp;#39;event and clk = &amp;#39;1&amp;#39; then if reset = &amp;#39;1&amp;#39; then shift_register &amp;lt;= (others =&amp;gt; &amp;#39;1&amp;#39;); --we resetten naar 1, anders loopt de LFSR vast else shift_register(0) &amp;lt;= shift_register(10) XOR shift_register(12) XOR shift_register(13) XOR shift_register(15); shift_register(15 downto 1) &amp;lt;= shift_register(14 downto 0); end if; end if; end process; data_out &amp;lt;= shift_register; end arch_LFSR; Een LFSR gebaseerd op XOR blijft stilstaan als alle bits 0 zijn.</description>
+    </item>
+    
   </channel>
 </rss>

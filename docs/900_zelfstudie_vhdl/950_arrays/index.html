@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Simulatie :: Digitale Elektronische Schakelingen</title>
+    <title>Arrays :: Digitale Elektronische Schakelingen</title>
 
     
     <link href="../../css/nucleus.css?1710229422" rel="stylesheet">
@@ -42,7 +42,7 @@
     
 
   </head>
-  <body class="" data-url="../../010_intro_vhdl/030_simulatie/">
+  <body class="" data-url="../../900_zelfstudie_vhdl/950_arrays/">
     <nav id="sidebar" class="">
 
 
@@ -169,7 +169,7 @@
   
     
     <li data-nav-id="/010_intro_vhdl/" title="1. Eerste project" class="dd-item
-        parent
+        
         
         
         ">
@@ -258,7 +258,7 @@
  
   
     
-      <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item active">
+      <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item ">
         <a href="../../010_intro_vhdl/030_simulatie/">
         <i class='fas fa-book'></i> Simulatie
         
@@ -628,7 +628,7 @@
   
     
     <li data-nav-id="/900_zelfstudie_vhdl/" title="Zelfstudie VHDL" class="dd-item
-        
+        parent
         
         
         ">
@@ -738,7 +738,7 @@
  
   
     
-      <li data-nav-id="/900_zelfstudie_vhdl/950_arrays/" title="Arrays" class="dd-item ">
+      <li data-nav-id="/900_zelfstudie_vhdl/950_arrays/" title="Arrays" class="dd-item active">
         <a href="../../900_zelfstudie_vhdl/950_arrays/">
         <i class='fas fa-book'></i> Arrays
         
@@ -947,7 +947,7 @@
             
           
           
-            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../010_intro_vhdl/'>1. Eerste project</a> > Simulatie
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../900_zelfstudie_vhdl/'>Zelfstudie VHDL</a> > Arrays
           
         
           
@@ -962,12 +962,12 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#voorbeeld-testbench-voor-een-nand-poort">Voorbeeld: testbench voor een NAND poort</a>
+    <li><a href="#toekenning-van-arrays">Toekenning van arrays</a>
       <ul>
-        <li><a href="#maken-van-een-testbench">Maken van een testbench</a></li>
-        <li><a href="#runnen-van-een-testbench">Runnen van een testbench</a></li>
+        <li></li>
       </ul>
     </li>
+    <li><a href="#aliases">Aliases</a></li>
   </ul>
 </nav>
     </div>
@@ -985,121 +985,103 @@
           
             <h1>
               
-              Simulatie
+              Arrays
             </h1>
           
 
         
 
 
-<p>Hoe kan er nu getest worden of onze <strong>nand</strong> poort correct werkt? We zouden een ASIC kunnen maken, maar dat zou een veel te dure en tijdrovende manier zijn.</p>
-<p>Een realistischere manier is om het design te implementeren op een FPGA, maar er is nog een gemakkelijkere en nuttigere manier: <strong>testbenches</strong>.</p>
-<p>Het idee achter een testbench is dat er &ldquo;toestellen&rdquo; zijn die inputs (ook stimuli genoemd) kunnen genereren. Vervolgens kunnen de waveforms van het hele design visueel geanalyseerd worden én kan de output van een component geverifieerd worden.</p>
-<p>In dit opleidingsonderdeel <em>krijgen</em> jullie vaak de testbenches, maar het is goed om deze zelf aan te passen of uit te breiden.</p>
-<h2 id="voorbeeld-testbench-voor-een-nand-poort">Voorbeeld: testbench voor een NAND poort</h2>
-<h3 id="maken-van-een-testbench">Maken van een testbench</h3>
-<p>Met onderstaande testbench kunnen we testen of onze nand poort werkt. Er moet een nieuwe <strong>simulation source</strong> aangemaakt worden en onderstaande testbench dient hierin geplakt te worden. Merk op dat <strong>ook de testbench</strong> geschreven is in (V)HDL.</p>
-<div class="multiHcolumn">
-<div class="column">
-    <h4 id="commentaar">Commentaar</h4>
-<p>Alhoewel dit geen verplicht stuk is, is het altijd nuttig om commentaar te voorzien.</p>
-<h4 id="gebruik-packages">Gebruik packages</h4>
-<p>Deze testbench begint, net zoals de componenten, met het gebruiken van een <strong>package</strong> (STD_LOGIC_1164) uit een <strong>library</strong> (IEEE). Dit is uiteraard nodig omdat we anders geen definitie hebben van wat een STD_LOGIC type is.</p>
-<h4 id="een-lege-entitity">Een lege entitity</h4>
-<p>Vervolgens is er ook een <strong>entity</strong> block. Merk hier zeker bij op dat een testbench typisch <strong>GEEN</strong> input en/of output poorten heeft.</p>
-<h4 id="declaraties">Declaraties</h4>
-<p>In de architecture gebeuren opnieuw eerst enkele declaraties. Zowel de component als de gebruikte signalen dienen gedeclareerd te worden.</p>
-<h4 id="dut">DUT</h4>
-<p>Er wordt een component <strong>instantiatie</strong> gemaakt van de <em>nand_gate</em> in deze testbench. De naam van deze instantie is DUT, wat een acronym is van <em>Device Under Test</em>. UUT (Unit Under Test) wordt ook soms gebruikt</p>
-<h4 id="stimuli">Stimuli</h4>
-<p>Tenslotte is er nog één blok dat de stimuli beschrijft. Dit is een speciaal soort blok (een <strong>process</strong>) waar we later nog op terug komen. Wat er tussen de begin en end van een process beschreven staat, wordt sequentieel overlopen (hiermee wordt bedoeld: zoals bij een C-programma). Wees er echter van bewust dat de hele process-block <strong>TEGELIJKERTIJD</strong> loopt met de DUT.</p>
-<p>De correcte werking van de NAND poort wordt in deze testbench nagegaan door alle mogelijke logische combinaties aan te leggen aan de ingangen van nullen en enen.</p>
-</div>    
-<div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- KU Leuven - ESAT/COSIC - ES&amp;S</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Module Name:     nand_tb - Behavioural</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Project Name:    Digitale eletronische schakelingen</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Description:     Testbench for nand</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">--</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Revision     Date       Author     Comments</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- v1.0         20240118   VlJo       Initial version</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">--</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- use IEEE.NUMERIC_STD.ALL;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">nand_tb</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">nand_tb</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioural</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">nand_tb</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">nand_gate</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">port</span>(
-</span></span><span style="display:flex;"><span>            A<span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>            B<span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>            Z<span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC</span>
-</span></span><span style="display:flex;"><span>        );
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">nand_gate</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> input_a, input_b <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> output_z <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>
+<p>Een range kan stijgend of dalend gekozen worden:</p>
+<ul>
+<li>x(2 to 6)</li>
+<li>y(7 downto 0)</li>
+</ul>
+<p>We kunnen verwijzen naar individuele elementen door een index te gebruiken:</p>
+<ul>
+<li>x(4)</li>
+<li>y(7)</li>
+</ul>
+<div class="multicolumn">
+    <div class="column">
+<p>Voorbeeld:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">and_or_poort</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(   a_vec<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">bit_vector</span>(<span style="color:#ae81ff">2</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            c_vec<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">bit_vector</span>(<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">1</span>));
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">and_or_poort</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">and_or_poort</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> c_intern<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- STIMULI</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">PSTIM</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>        input_a <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>        input_b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span> ns;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        input_a <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-</span></span><span style="display:flex;"><span>        input_b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span> ns;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        input_a <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>        input_b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span> ns;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        input_a <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-</span></span><span style="display:flex;"><span>        input_b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span> ns;
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- DUT</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span>    DUT<span style="color:#f92672">:</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">nand_gate</span> <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
-</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">=&gt;</span> input_a,
-</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">=&gt;</span> input_b,
-</span></span><span style="display:flex;"><span>        Z <span style="color:#f92672">=&gt;</span> output_z
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioural</span>;
-</span></span></code></pre></div>
-</div>    
+</span></span><span style="display:flex;"><span>    c_intern <span style="color:#f92672">&lt;=</span> a_vec(<span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">and</span> a_vec(<span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    c_vec(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">&lt;=</span> c_intern <span style="color:#66d9ef">or</span> a_vec(<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    c_vec(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">&lt;=</span> c_intern<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;</span></span></code></pre></div>
 </div>
-<p>Om een testbench toe te voegen aan het Vivado project is het belangrijk erop te letten dat je een <strong>Simulation</strong> source toevoegd. In deze testbench kan je vervolgens bovenstaande code plakken.</p>
-<h3 id="runnen-van-een-testbench">Runnen van een testbench</h3>
-<p>Als alle code beschreven is, kan de bovenstaante simulatie uitgevoerd worden. Er zijn meerdere manieren om een simulatie te starten en deze zul je ontdekken doorheen de labs.</p>
-<p>De gemakkelijkste manier is om in de <strong>Flow Navigator</strong> (de verticale balk aan de linkerkant van het scherm) te klikken op: <strong>Run simulation</strong>. Als alles goed loop zou je (ongeveer) onderstaand scherm moeten krijgen.</p>
-<figure><img src="../../images/intro/simulation.png"/><figcaption>
-            <h4>Simulatie van de nand gate met Vivado</h4>
-        </figcaption>
+<div class="column">
+<figure><img src="../../images/zelfstudie/arrays.png"/>
 </figure>
-<p>Je ziet hierin de inputs en de output van de DUT. De tijd verstrijkt over de X-as. Als beide inputs of één van beide inputs &lsquo;hoog&rsquo; is, is de uitgang ook &lsquo;hoog&rsquo;. Indien beide ingangen &lsquo;hoog&rsquo; zijn, is de uitgang &rsquo;laag&rsquo;.</p>
-<p>Dat is exact wat een NAND poort moet doen !! <em>(gelukkig)</em></p>
-<p>Als het design gesimuleerd wordt met een open-source simulator krijgen we een identiek resultaat.</p>
-<figure><img src="../../images/screenshots/sim_nand.png"/><figcaption>
-            <h4>Simulatie van de nand gate met GHDL en GTKWave</h4>
-        </figcaption>
+</div>
+</div>
+<h2 id="toekenning-van-arrays">Toekenning van arrays</h2>
+<div class="multicolumn">
+    <div class="column" style="width:60%">
+Toekenning gebeurt op basis van positie, niet op basis van index.
+<p>Voorbeeld:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> x<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit_vector</span>(<span style="color:#ae81ff">2</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">6</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> y<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit_vector</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">3</span>);
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">&lt;=</span> y;</span></span></code></pre></div>
+</div>
+<div class="column"style="width:30%">
+<figure><img src="../../images/zelfstudie/arrays_toekenning.png"/>
 </figure>
+</div>
+</div>
+<h4 id="voorbeelden-van-de-toekenning-van-de-individuele-elementen-van-een-samengesteld-type">Voorbeelden van de toekenning van de individuele elementen van een samengesteld type:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> y, z<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> a, b<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> byte<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit_vector</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);</span></span></code></pre></div>
+<ul>
+<li>Op basis van positie:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>z <span style="color:#f92672">&lt;=</span> (a, <span style="color:#e6db74">&#39;1&#39;</span>, b, <span style="color:#e6db74">&#39;0&#39;</span>); <span style="color:#75715e">-- z wordt dan a1b0 met a en b een waarde 0 of 1</span></span></span></code></pre></div>
+<ul>
+<li>op basis van index:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>byte <span style="color:#f92672">&lt;=</span> (<span style="color:#ae81ff">7</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;1&#39;</span>, <span style="color:#ae81ff">4</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">=&gt;</span> a, <span style="color:#ae81ff">6</span> <span style="color:#f92672">=&gt;</span> b, <span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;0&#39;</span>); <span style="color:#75715e">-- byte wordt dan 1b0aaa00</span></span></span></code></pre></div>
+<h4 id="voorbeeld-van-de-toekenning-van-een-waarde">Voorbeeld van de toekenning van een waarde:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>z <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34; 1010&#34;</span> ;</span></span></code></pre></div>
+<h4 id="voorbeelden-van-samenvoeginstructies">Voorbeelden van samenvoeginstructies:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>z <span style="color:#f92672">&lt;=</span> a <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#f92672">&amp;</span> b <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>byte <span style="color:#f92672">&lt;=</span> y <span style="color:#f92672">&amp;</span> z;</span></span></code></pre></div>
+<h4 id="voorbeelden-van-de-gedeeltelijke-toekenning-van-een-array">Voorbeelden van de gedeeltelijke toekenning van een array:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> a, z<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> b<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> byte<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit_vector</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>byte(<span style="color:#ae81ff">5</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">&lt;=</span> a;
+</span></span><span style="display:flex;"><span>z(<span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">&amp;</span> b;</span></span></code></pre></div>
+<h4 id="de-richting-van-de-deeltoekenning-moet-dezelfde-zijn-als-de-richting-van-de-declaratie">De richting van de deeltoekenning moet dezelfde zijn als de richting van de declaratie.</h4>
+<ul>
+<li>Correct voorbeeld:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> a<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> byte<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit_vector</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>byte(<span style="color:#ae81ff">5</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">&lt;=</span> a;</span></span></code></pre></div>
+<ul>
+<li>Foutief voorbeeld:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> z<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> b<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit</span>;
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>z(<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">&amp;</span> b; <span style="color:#75715e">-- dit geeft een error!</span></span></span></code></pre></div>
+<h2 id="aliases">Aliases</h2>
+<p>Aliases zijn verwijzingen naar reeds gedefinieerde signals, die de code beter begrijpbaar maken.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> adres<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit_vector</span>(<span style="color:#ae81ff">31</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">alias</span> top_adres<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">is</span> adres(<span style="color:#ae81ff">31</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">28</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">alias</span> adres_bank<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">is</span> adres(<span style="color:#ae81ff">27</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">24</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">alias</span> rij_adres<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit_vector</span>(<span style="color:#ae81ff">11</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">is</span> adres(<span style="color:#ae81ff">24</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">12</span>);</span></span></code></pre></div>
 
 
 <footer class="footline">
@@ -1188,7 +1170,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1201,9 +1182,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1253,7 +1231,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1269,9 +1246,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1516,6 +1490,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1528,6 +1503,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1593,6 +1571,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1608,6 +1587,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1712,10 +1694,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../010_intro_vhdl/025_and/" title="AND poort"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../900_zelfstudie_vhdl/940_libraries/" title="Libraries"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../010_intro_vhdl/031_synthesisable/" title="Synthetiseerbaar" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../900_zelfstudie_vhdl/960_packages/" title="Packages" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

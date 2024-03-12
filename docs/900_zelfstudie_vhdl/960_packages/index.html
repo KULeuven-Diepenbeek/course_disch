@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Simulatie :: Digitale Elektronische Schakelingen</title>
+    <title>Packages :: Digitale Elektronische Schakelingen</title>
 
     
     <link href="../../css/nucleus.css?1710229422" rel="stylesheet">
@@ -42,7 +42,7 @@
     
 
   </head>
-  <body class="" data-url="../../010_intro_vhdl/030_simulatie/">
+  <body class="" data-url="../../900_zelfstudie_vhdl/960_packages/">
     <nav id="sidebar" class="">
 
 
@@ -169,7 +169,7 @@
   
     
     <li data-nav-id="/010_intro_vhdl/" title="1. Eerste project" class="dd-item
-        parent
+        
         
         
         ">
@@ -258,7 +258,7 @@
  
   
     
-      <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item active">
+      <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item ">
         <a href="../../010_intro_vhdl/030_simulatie/">
         <i class='fas fa-book'></i> Simulatie
         
@@ -628,7 +628,7 @@
   
     
     <li data-nav-id="/900_zelfstudie_vhdl/" title="Zelfstudie VHDL" class="dd-item
-        
+        parent
         
         
         ">
@@ -759,7 +759,7 @@
  
   
     
-      <li data-nav-id="/900_zelfstudie_vhdl/960_packages/" title="Packages" class="dd-item ">
+      <li data-nav-id="/900_zelfstudie_vhdl/960_packages/" title="Packages" class="dd-item active">
         <a href="../../900_zelfstudie_vhdl/960_packages/">
         <i class='fas fa-book'></i> Packages
         
@@ -947,7 +947,7 @@
             
           
           
-            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../010_intro_vhdl/'>1. Eerste project</a> > Simulatie
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../900_zelfstudie_vhdl/'>Zelfstudie VHDL</a> > Packages
           
         
           
@@ -962,10 +962,15 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#voorbeeld-testbench-voor-een-nand-poort">Voorbeeld: testbench voor een NAND poort</a>
+    <li><a href="#zelf-gedefinieerde-packages">Zelf-gedefinieerde packages</a>
       <ul>
-        <li><a href="#maken-van-een-testbench">Maken van een testbench</a></li>
-        <li><a href="#runnen-van-een-testbench">Runnen van een testbench</a></li>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#std_logic_1164--package">&ldquo;std_logic_1164&rdquo;  package</a></li>
+    <li><a href="#std_logic_unsigned--en-std_logic_signed">&ldquo;std_logic_unsigned&rdquo;  en &ldquo;std_logic_signed&rdquo;</a>
+      <ul>
+        <li></li>
       </ul>
     </li>
   </ul>
@@ -985,121 +990,143 @@
           
             <h1>
               
-              Simulatie
+              Packages
             </h1>
           
 
         
 
 
-<p>Hoe kan er nu getest worden of onze <strong>nand</strong> poort correct werkt? We zouden een ASIC kunnen maken, maar dat zou een veel te dure en tijdrovende manier zijn.</p>
-<p>Een realistischere manier is om het design te implementeren op een FPGA, maar er is nog een gemakkelijkere en nuttigere manier: <strong>testbenches</strong>.</p>
-<p>Het idee achter een testbench is dat er &ldquo;toestellen&rdquo; zijn die inputs (ook stimuli genoemd) kunnen genereren. Vervolgens kunnen de waveforms van het hele design visueel geanalyseerd worden én kan de output van een component geverifieerd worden.</p>
-<p>In dit opleidingsonderdeel <em>krijgen</em> jullie vaak de testbenches, maar het is goed om deze zelf aan te passen of uit te breiden.</p>
-<h2 id="voorbeeld-testbench-voor-een-nand-poort">Voorbeeld: testbench voor een NAND poort</h2>
-<h3 id="maken-van-een-testbench">Maken van een testbench</h3>
-<p>Met onderstaande testbench kunnen we testen of onze nand poort werkt. Er moet een nieuwe <strong>simulation source</strong> aangemaakt worden en onderstaande testbench dient hierin geplakt te worden. Merk op dat <strong>ook de testbench</strong> geschreven is in (V)HDL.</p>
-<div class="multiHcolumn">
-<div class="column">
-    <h4 id="commentaar">Commentaar</h4>
-<p>Alhoewel dit geen verplicht stuk is, is het altijd nuttig om commentaar te voorzien.</p>
-<h4 id="gebruik-packages">Gebruik packages</h4>
-<p>Deze testbench begint, net zoals de componenten, met het gebruiken van een <strong>package</strong> (STD_LOGIC_1164) uit een <strong>library</strong> (IEEE). Dit is uiteraard nodig omdat we anders geen definitie hebben van wat een STD_LOGIC type is.</p>
-<h4 id="een-lege-entitity">Een lege entitity</h4>
-<p>Vervolgens is er ook een <strong>entity</strong> block. Merk hier zeker bij op dat een testbench typisch <strong>GEEN</strong> input en/of output poorten heeft.</p>
-<h4 id="declaraties">Declaraties</h4>
-<p>In de architecture gebeuren opnieuw eerst enkele declaraties. Zowel de component als de gebruikte signalen dienen gedeclareerd te worden.</p>
-<h4 id="dut">DUT</h4>
-<p>Er wordt een component <strong>instantiatie</strong> gemaakt van de <em>nand_gate</em> in deze testbench. De naam van deze instantie is DUT, wat een acronym is van <em>Device Under Test</em>. UUT (Unit Under Test) wordt ook soms gebruikt</p>
-<h4 id="stimuli">Stimuli</h4>
-<p>Tenslotte is er nog één blok dat de stimuli beschrijft. Dit is een speciaal soort blok (een <strong>process</strong>) waar we later nog op terug komen. Wat er tussen de begin en end van een process beschreven staat, wordt sequentieel overlopen (hiermee wordt bedoeld: zoals bij een C-programma). Wees er echter van bewust dat de hele process-block <strong>TEGELIJKERTIJD</strong> loopt met de DUT.</p>
-<p>De correcte werking van de NAND poort wordt in deze testbench nagegaan door alle mogelijke logische combinaties aan te leggen aan de ingangen van nullen en enen.</p>
-</div>    
-<div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- KU Leuven - ESAT/COSIC - ES&amp;S</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Module Name:     nand_tb - Behavioural</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Project Name:    Digitale eletronische schakelingen</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Description:     Testbench for nand</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">--</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Revision     Date       Author     Comments</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- v1.0         20240118   VlJo       Initial version</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">--</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- use IEEE.NUMERIC_STD.ALL;</span>
+<h2 id="zelf-gedefinieerde-packages">Zelf-gedefinieerde packages</h2>
+<p>Per default worden zelfgemaakte bouwblokken opgeslagen in de library work. In deze library kunnen we zelf packages definiëren.</p>
+<h4 id="voorbeeld-van-een-zelf-gedefinieerde-package">Voorbeeld van een zelf-gedefinieerde package:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">package</span> and_or_xor_pack <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">and_or_poort</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">port</span>(   a, b, d<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">bit</span>;
+</span></span><span style="display:flex;"><span>                e<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">bit</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">package</span>;</span></span></code></pre></div>
+<p>Als we deze package toevoegen, hoeven we de component declaratie niet meer te doen.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> work;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> work.and_or_xor_pack.<span style="color:#66d9ef">all</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">nand_tb</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">nand_tb</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">and_or_xor_poort</span> ...
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> ... <span style="color:#75715e">-- zonder component declaratie</span></span></span></code></pre></div>
+<h2 id="std_logic_1164--package">&ldquo;std_logic_1164&rdquo;  package</h2>
+<p>De package &quot; std_logic_1164&quot;  in library &quot; ieee&quot;  bevat o.a. de types &quot; std_ulogic&quot;  en &quot; std_logic&quot; .</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">package</span> std_logic_1164 <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#66d9ef">std_ulogic</span> <span style="color:#66d9ef">is</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;U&#39;</span>,  <span style="color:#75715e">-- Uninitialized : flipflop waar nog nooit in is geschreven</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;X&#39;</span>,  <span style="color:#75715e">-- Forcing Unknown</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;0&#39;</span>,  <span style="color:#75715e">-- Forcing 0 : rechtstreeks aan grond</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;1&#39;</span>,  <span style="color:#75715e">-- Forcing 1 : rechtstreeks aan voeding</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Z&#39;</span>,  <span style="color:#75715e">-- High Impedance</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;W&#39;</span>,  <span style="color:#75715e">-- Weak Unknown</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;L&#39;</span>,  <span style="color:#75715e">-- Weak 0 : via weerstand aan grond</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;H&#39;</span>,  <span style="color:#75715e">-- Weak 1 : via weerstand aan voeding</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;-&#39;</span>,  <span style="color:#75715e">-- Don&#39;t Care</span>
+</span></span><span style="display:flex;"><span>);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioural</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">nand_tb</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">subtype</span> <span style="color:#66d9ef">std_logic</span> <span style="color:#66d9ef">is</span> resolved <span style="color:#66d9ef">std_ulogic</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">nand_gate</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">port</span>(
-</span></span><span style="display:flex;"><span>            A<span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>            B<span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>            Z<span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC</span>
-</span></span><span style="display:flex;"><span>        );
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">nand_gate</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> input_a, input_b <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> output_z <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- STIMULI</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">PSTIM</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>        input_a <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>        input_b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span> ns;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        input_a <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-</span></span><span style="display:flex;"><span>        input_b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span> ns;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        input_a <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>        input_b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span> ns;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        input_a <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-</span></span><span style="display:flex;"><span>        input_b <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span> ns;
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- DUT</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--------------------------------</span>
-</span></span><span style="display:flex;"><span>    DUT<span style="color:#f92672">:</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">nand_gate</span> <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
-</span></span><span style="display:flex;"><span>        A <span style="color:#f92672">=&gt;</span> input_a,
-</span></span><span style="display:flex;"><span>        B <span style="color:#f92672">=&gt;</span> input_b,
-</span></span><span style="display:flex;"><span>        Z <span style="color:#f92672">=&gt;</span> output_z
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioural</span>;
-</span></span></code></pre></div>
-</div>    
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#66d9ef">std_ulogic_vector</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">array</span> (<span style="color:#66d9ef">NATURAL</span> <span style="color:#66d9ef">range</span> <span style="color:#f92672">&lt;&gt;</span>) <span style="color:#66d9ef">of</span> <span style="color:#66d9ef">std_ulogic</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#66d9ef">std_logic_vector</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">array</span> (<span style="color:#66d9ef">NATURAL</span> <span style="color:#66d9ef">range</span> <span style="color:#f92672">&lt;&gt;</span>) <span style="color:#66d9ef">of</span> <span style="color:#66d9ef">std_logic</span>;
+</span></span><span style="display:flex;"><span>...</span></span></code></pre></div>
+
+<div class="notices warning" ><p>We gebruiken <b> altijd &ldquo;std_logic&rdquo; </b> in de plaats van &ldquo;bit&rdquo;.</p>
 </div>
-<p>Om een testbench toe te voegen aan het Vivado project is het belangrijk erop te letten dat je een <strong>Simulation</strong> source toevoegd. In deze testbench kan je vervolgens bovenstaande code plakken.</p>
-<h3 id="runnen-van-een-testbench">Runnen van een testbench</h3>
-<p>Als alle code beschreven is, kan de bovenstaante simulatie uitgevoerd worden. Er zijn meerdere manieren om een simulatie te starten en deze zul je ontdekken doorheen de labs.</p>
-<p>De gemakkelijkste manier is om in de <strong>Flow Navigator</strong> (de verticale balk aan de linkerkant van het scherm) te klikken op: <strong>Run simulation</strong>. Als alles goed loop zou je (ongeveer) onderstaand scherm moeten krijgen.</p>
-<figure><img src="../../images/intro/simulation.png"/><figcaption>
-            <h4>Simulatie van de nand gate met Vivado</h4>
-        </figcaption>
+
+<h2 id="std_logic_unsigned--en-std_logic_signed">&ldquo;std_logic_unsigned&rdquo;  en &ldquo;std_logic_signed&rdquo;</h2>
+<p>In de package <strong> std_logic_unsigned </strong> (uit library <strong>ieee</strong>) worden std_logic_vectors beschouwd als positieve binaire getallen <strong> zonder tekenbit </strong>.</p>
+<p>In de package <strong> std_logic_signed </strong> (uit library <strong>ieee</strong>) worden std_logic_vectors beschouwd als getallen in <strong> 2&rsquo;s complement </strong> notatie.</p>
+<p>De volgende functies staan o.a. beschreven in de packages: +, -, *, &lt;, &lt;=, &gt;, &gt;=, =, /=, shl, shr, conv_integer</p>
+<h4 id="opteller">Opteller</h4>
+<p>We zouden een opteller kunnen bouwen a.d.h.v. half/full adders. Het voordeel van VHDL is dat we het hardware-ontwerp ook op een hoger niveau kunnen beschrijven. In het geval van de opteller kunnen we gewoon &lsquo;+&rsquo; gebruiken. Daarvoor moeten we eerst verwijzen naar de juiste &lsquo;package&rsquo; in de juiste &rsquo;library&rsquo; en moeten we groepjes van bits zien als &lsquo;arrays&rsquo;.</p>
+<p>De onderstaande manier beschijft een 4-bit opteller maken in VHDL:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> ieee;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_unsigned.<span style="color:#66d9ef">all</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">opteller</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(   a, b<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            c<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>));
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">opteller</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">opteller</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    c <span style="color:#f92672">&lt;=</span> a <span style="color:#f92672">+</span> b;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;</span></span></code></pre></div>
+
+<div class="notices warning" ><p>De lengtes van a, b en c moeten hetzelfde zijn, dus de carry-out wordt niet berekend!</p>
+</div>
+
+<p>Als we de carry-out ook willen berekenen, kunnen we de lengte van c met 1 bit vergroten, maar dan moeten we intern de lengte van a en b ook vergroten, want per syntax geldt dat de som van 2 n-bit vectoren, terug een n-bit verctor is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> ieee;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_unsigned.<span style="color:#66d9ef">all</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">opteller</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(    a, b<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            c<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">4</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>));
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">opteller</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">opteller</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> a_long, b_long<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">4</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    a_long <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">&amp;</span> a;
+</span></span><span style="display:flex;"><span>    b_long <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">&amp;</span> b;
+</span></span><span style="display:flex;"><span>    c <span style="color:#f92672">&lt;=</span> a_long <span style="color:#f92672">+</span> b_long;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;</span></span></code></pre></div>
+<h4 id="aftrekker">Aftrekker</h4>
+<div class="multicolumn">
+    <div class="column" style="width:55%">
+<p>Met behulp van de package std_logic_unsigned kunnen we ook aftrekkingen uitvoeren. De ingangen worden dan beschouwd als positieve binaire getallen zonder tekenbit. Indien het resultaat kleiner wordt dan nul, wordt er terug vanaf het maximum naar beneden geteld, alsof alle getallen zich op een cirkel bevinden. Dat komt overeen met 2&rsquo;s complement notatie. Voor optelling en aftrekking maakt het niet uit of we std_logic_unsigned of std_logic_signed gebruiken.
+Voor &gt;, &gt;=, &lt;, &lt;= maakt het wel uit.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_unsigned.<span style="color:#66d9ef">all</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">opteller</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(   a, b<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            c<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>));
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">opteller</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">opteller</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    c <span style="color:#f92672">&lt;=</span> a <span style="color:#f92672">-</span> b;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;</span></span></code></pre></div>
+</div>
+<div class="column" style="width:40%">
+<figure><img src="../../images/zelfstudie/aftrekker_cirkel.png"/>
 </figure>
-<p>Je ziet hierin de inputs en de output van de DUT. De tijd verstrijkt over de X-as. Als beide inputs of één van beide inputs &lsquo;hoog&rsquo; is, is de uitgang ook &lsquo;hoog&rsquo;. Indien beide ingangen &lsquo;hoog&rsquo; zijn, is de uitgang &rsquo;laag&rsquo;.</p>
-<p>Dat is exact wat een NAND poort moet doen !! <em>(gelukkig)</em></p>
-<p>Als het design gesimuleerd wordt met een open-source simulator krijgen we een identiek resultaat.</p>
-<figure><img src="../../images/screenshots/sim_nand.png"/><figcaption>
-            <h4>Simulatie van de nand gate met GHDL en GTKWave</h4>
-        </figcaption>
-</figure>
+</div>
+</div>
+<h4 id="optelleraftrekker">Opteller/aftrekker</h4>
+<p>We gebruiken de ingang &ldquo;op_af&rdquo; om te bepalen of we gaan optellen of aftrekken. <br/>
+Als de bit gelijk is aan 0, tellen we op. <br/> Als de bit gelijk is aan 1, trekken we af. <br/></p>
+<p>Voor de beschrijving van een MUX hebben we een process nodig. Daar komen we in de <a href="../../200_next_step/260_processen/" >les </a> nog op terug.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> ieee;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_signed.<span style="color:#66d9ef">all</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">opteller_aftrekker</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(   a, b<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            c<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            op_af<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">opteller_aftrekker</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">opteller_aftrekker</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, op_af)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> op_af <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>            c <span style="color:#f92672">&lt;=</span> a <span style="color:#f92672">+</span> b;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>            c <span style="color:#f92672">&lt;=</span> a <span style="color:#f92672">-</span> b;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;</span></span></code></pre></div>
 
 
 <footer class="footline">
@@ -1188,7 +1215,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1201,9 +1227,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1253,7 +1276,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1269,9 +1291,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1516,6 +1535,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1528,6 +1548,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1609,6 +1632,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1624,6 +1648,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1712,10 +1739,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../010_intro_vhdl/025_and/" title="AND poort"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../900_zelfstudie_vhdl/950_arrays/" title="Arrays"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../010_intro_vhdl/031_synthesisable/" title="Synthetiseerbaar" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../900_zelfstudie_vhdl/970_processen/" title="Processen" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
