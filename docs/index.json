@@ -148,10 +148,10 @@
 },
 {
 	"uri": "https://kuleuven-diepenbeek.github.io/course_disch/300_alu/330_opdracht_alu/",
-	"title": "Opdracht 4: ALU",
+	"title": "Opdracht 3: ALU",
 	"tags": [],
 	"description": "",
-	"content": "De ALU die je moet maken voor deze opdracht ziet er uit zoals hieronder afgebeeld:\nIngangen x en y zijn 16 bits; De input status bits zijn: zx (zero x) nx (negate x) zy (zero y) ny (negate y) f (function) no (negate output) De output status zijn: zr (zero) ng (negativee). Later zetten we de input status code juist op basis van de binnenkomende instructie en optioneel doen we iets met de output status codes.\nDe opdracht is om zelf een ALU te maken die aan onderstaande waarheidstabel voldoet, met de volgende entity.\nBron: nand2tetris entity alu is generic( WIDTH : natural := 16 ); port( X : IN STD_LOGIC_VECTOR(WIDTH-1 downto 0); Y : IN STD_LOGIC_VECTOR(WIDTH-1 downto 0); Z : OUT STD_LOGIC_VECTOR(WIDTH-1 downto 0); zx : IN STD_LOGIC; zy : IN STD_LOGIC; nx : IN STD_LOGIC; ny : IN STD_LOGIC; f : IN STD_LOGIC; no : IN STD_LOGIC; zr : OUT STD_LOGIC; ng : OUT STD_LOGIC ); end entity alu; Een ALU is volledig combinatorisch.\n"
+	"content": "De ALU die je moet maken voor deze opdracht ziet er uit zoals hieronder afgebeeld:\nIngangen x en y zijn 16 bits; De input status bits zijn: zx (zero x) nx (negate x) zy (zero y) ny (negate y) f (function) no (negate output) De output status zijn: zr (zero) ng (negative). Later zetten we de input status code juist op basis van de binnenkomende instructie en optioneel doen we iets met de output status codes.\nDe opdracht is om zelf een ALU te maken die aan onderstaande waarheidstabel voldoet, met de volgende entity.\nBron: nand2tetris entity alu is generic( WIDTH : natural := 16 ); port( X : IN STD_LOGIC_VECTOR(WIDTH-1 downto 0); Y : IN STD_LOGIC_VECTOR(WIDTH-1 downto 0); Z : OUT STD_LOGIC_VECTOR(WIDTH-1 downto 0); zx : IN STD_LOGIC; zy : IN STD_LOGIC; nx : IN STD_LOGIC; ny : IN STD_LOGIC; f : IN STD_LOGIC; no : IN STD_LOGIC; zr : OUT STD_LOGIC; ng : OUT STD_LOGIC ); end entity alu; Een ALU is volledig combinatorisch.\n"
 },
 {
 	"uri": "https://kuleuven-diepenbeek.github.io/course_disch/300_alu/340_testbench_alu/",

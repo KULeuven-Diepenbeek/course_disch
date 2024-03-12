@@ -40,13 +40,13 @@ Onze ALU heeft 2 ingang van 16-bit registers. Onze ALU geeft ook status codes ui
     </item>
     
     <item>
-      <title>Opdracht 4: ALU</title>
+      <title>Opdracht 3: ALU</title>
       <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/330_opdracht_alu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/330_opdracht_alu/</guid>
       <description>De ALU die je moet maken voor deze opdracht ziet er uit zoals hieronder afgebeeld:
-Ingangen x en y zijn 16 bits; De input status bits zijn: zx (zero x) nx (negate x) zy (zero y) ny (negate y) f (function) no (negate output) De output status zijn: zr (zero) ng (negativee). Later zetten we de input status code juist op basis van de binnenkomende instructie en optioneel doen we iets met de output status codes.</description>
+Ingangen x en y zijn 16 bits; De input status bits zijn: zx (zero x) nx (negate x) zy (zero y) ny (negate y) f (function) no (negate output) De output status zijn: zr (zero) ng (negative). Later zetten we de input status code juist op basis van de binnenkomende instructie en optioneel doen we iets met de output status codes.</description>
     </item>
     
     <item>
