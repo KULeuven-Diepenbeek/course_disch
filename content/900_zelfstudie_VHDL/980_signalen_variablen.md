@@ -2,7 +2,7 @@
 title: 'Signalen vs. variabelen'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
-weight: 80
+weight: 980
 draft: false
 ---
 
@@ -31,7 +31,7 @@ draft: false
 **Variabelen**:
 
 * nemen de nieuwe waarde onmiddellijk aan,
-* hebben geen hardware equivalent,
+* hebben géén hardware equivalent,
 * worden toegekend met " :=" ,
 * komen enkel voor in een proces.
 
@@ -42,7 +42,7 @@ draft: false
 </div>
 
 
-### signalen
+### Signalen
 
 Volgende beschrijvingen leiden tot **dezelfde implementatie**:
 
@@ -127,8 +127,6 @@ end arch;
 
 ### Resolutie-functie
 
-
-
 <div class="multicolumn">
     <div class="column">
 In het volgende voorbeeld worden er twee toekenningen gedaan aan hetzelfde signaal:
@@ -154,7 +152,7 @@ z <= b;
 De resolutie functie die voorzien is in het type std_logic maakt een keuze tussen a en b op basis van de waarde van a en b.
 
 {{% notice note %}}
-De resolutie-functie sluit niet uit dat de synthesetool die de code omzet in hardware een foutmelding kan geven.
+De resolutie-functie sluit niet uit dat de synthesetool (die de code omzet in hardware) een foutmelding kan geven.
 {{% /notice %}}
 
 </div>
@@ -165,9 +163,9 @@ De resolutie-functie sluit niet uit dat de synthesetool die de code omzet in har
 </div>
 </div>
 
-### variabelen
+### Variabelen
 
-Als we variabelen gebruiken i.p.v. signalen, krijgen we opnieuw dezelfde implementatie:
+Als we variabelen gebruiken in plaats van signalen, krijgen we opnieuw dezelfde implementatie:
 
 ```vhdl
 architecture arch of vb5 is
@@ -183,52 +181,7 @@ begin
 end arch;
 ```
 {{% notice warning %}}
-Voor code dat **hardware beschrijft** gebruiken we **std_logic** gebruikt. <br/>
+Voor code die **hardware beschrijft** (a.k.a. synthetiseerbare code) gebruiken we **std_logic**. <br/>
 In een testbench kunnen we wel variabelen gebruiken.
 {{% /notice %}}
 
-
-## Ongewenste registers
-
-Indien we voor een bepaald signaal geen register willen implementeren, moet dat signaal buiten het proces geplaatst worden.
-
-<div class="multicolumn">
-<div class="column">
-
-
-{{% md %}}
-
-```vhdl
-seq: process(clk)
-begin
-    if clk'event and clk = '1' then
-        j <= a and b; --register voor j
-        i <= j xor k;
-    end if;
-end process;
-```
-
-{{% /md %}}
-
-</div>
-
-<div class="column">
-
-{{% md %}}
-
-```vhdl
-seq: process(clk)
-begin
-    if clk'event and clk = '1' then
-        i <= j xor k;
-    end if;
-end process;
-
-j <= a and b; --geen register voor j
-```
-
-{{% /md %}}
-
-</div>
-
-</div>

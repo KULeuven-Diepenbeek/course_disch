@@ -2,14 +2,14 @@
 title: 'Processen'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
-weight: 70
+weight: 970
 draft: false
 ---
 
 ## Structuur van een proces
 
- Een proces wordt uitgevoerd wanneer een signaal in de sensitivity lijst van  waarde verandert. <br/>
-Signalen worden geupdated aan het einde van het proces. <br/> 
+Een proces wordt uitgevoerd wanneer een signaal in de **sensitivity lijst** van waarde verandert. Signalen worden geupdated aan het einde van het proces.
+
 Voorbeeld van een proces met een if-then-else statement: multiplexer.
 
 <div class="multicolumn">
@@ -66,7 +66,7 @@ end process;
 <div class="column" style="width:50%">
 
 {{% highlight vhdl %}}
-p1: process(b)
+p2: process(b)
 begin
     y <= b;
 end process;
@@ -75,7 +75,7 @@ end process;
 </div>
 </div>
 
-Wanneer een van de signalen in de sensitivity list van het proces verandert, wordt het proces van begin tot einde doorlopen. Wanneer het proces helemaal doorlopen is, wacht het op een nieuwe verandering van de signalen in de sensitity list. Pas wanneer het proces in deze wachtfase terechtkomt, gebeurt de eigenlijke toekenning van de signalen. Daarom overschrijft de tweede uitdrukking de eerste in process p1.
+Wanneer één van de signalen in de sensitivity list van het proces verandert, wordt het proces van begin tot einde doorlopen. Wanneer het proces helemaal doorlopen is, wacht het op een nieuwe verandering van de signalen in de sensitity list. Pas wanneer het proces in deze wachtfase terechtkomt, gebeurt de eigenlijke toekenning van de signalen. Daarom overschrijft de tweede uitdrukking de eerste in process p1.
 
 
 Volgende processen leiden **niet** tot dezelfde implementatie:
@@ -252,9 +252,9 @@ end arch_case_example;
 
 {{% /highlight %}}
 
-#### Concurrente selectieve signaaltoekenning
+#### Concurrente, selectieve signaaltoekenning
 
-with-select statement: concurrente versie van de case statement. <br/>
+Een with-select statement: concurrente versie van de case statement. <br/>
 Verschil: slechts één bestemming mogelijk. <br/>
 Zelfde regels als bij de case statement
 
@@ -305,7 +305,7 @@ end arch_example;
 
 #### Concurrente statements
 
-Concurrente statements komen voor buiten een proces.
+Concurrente statements komen voor **buiten** een proces.
 
 Voorbeelden van concurrente statements:
 
@@ -318,8 +318,7 @@ Voorbeelden van concurrente statements:
 
 #### Sequentiële statements
 
-Sequentiële statements komen steeds voor binnen een
-proces.
+Sequentiële statements komen steeds voor **binnen** een proces.
 
 Voorbeelden van sequentiële statements:
 
@@ -333,8 +332,7 @@ Voorbeelden van sequentiële statements:
 
 * Een proces met een sensitivity list mag geen wait opdracht hebben.
 * Een proces met een wait opdracht mag geen sensitivity list hebben.
-* Een wait statement is niet synthetiseerbaar en kan dus niet behoren tot
-* VHDL-code die op een FPGA geïmplementeerd wordt.
+* Een wait statement is niet synthetiseerbaar en kan dus niet behoren tot VHDL-code die op een FPGA geïmplementeerd wordt.
 * Een wait statement mag bijvoorbeeld wel in een testbench gebruikt worden.
 
 <div class="multicolumn">

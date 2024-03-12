@@ -2,7 +2,7 @@
 title: 'Packages'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
-weight: 60
+weight: 960
 draft: false
 ---
 
@@ -65,16 +65,16 @@ We gebruiken <b> altijd "std_logic" </b> in de plaats van "bit".
 
 ## "std_logic_unsigned"  en "std_logic_signed" 
 
-In de package <strong> std_logic_unsigned </strong> in de library ieee worden std_logic_vectors beschouwd als positieve binaire getallen <strong> zonder tekenbit </strong>.
+In de package <strong> std_logic_unsigned </strong> (uit library **ieee**) worden std_logic_vectors beschouwd als positieve binaire getallen <strong> zonder tekenbit </strong>.
 
-In de package <strong> std_logic_signed </strong> in de library ieee worden std_logic_vectors beschouwd als getallen in <strong> 2's complement </strong> notatie.
+In de package <strong> std_logic_signed </strong> (uit library **ieee**) worden std_logic_vectors beschouwd als getallen in <strong> 2's complement </strong> notatie.
 
 De volgende functies staan o.a. beschreven in de packages: +, -, *, <, <=, >, >=, =, /=, shl, shr, conv_integer
 
-#### opteller
+#### Opteller
 We zouden een opteller kunnen bouwen a.d.h.v. half/full adders. Het voordeel van VHDL is dat we het hardware-ontwerp ook op een hoger niveau kunnen beschrijven. In het geval van de opteller kunnen we gewoon '+' gebruiken. Daarvoor moeten we eerst verwijzen naar de juiste 'package' in de juiste 'library' en moeten we groepjes van bits zien als 'arrays'.
 
- We kunnen dus op de volgende manier een 4-bit opteller maken in VHDL:
+De onderstaande manier beschijft een 4-bit opteller maken in VHDL:
 
 {{% highlight vhdl %}}
 library ieee;
@@ -96,7 +96,7 @@ end arch;
 De lengtes van a, b en c moeten hetzelfde zijn, dus de carry-out wordt niet berekend!
 {{% /notice %}}
 
-Als we de carry-out ook willen berekenen, kunnen we de lengte van c met 1 bit vergroten, maar dan moeten we intern de lengte van a en b ook vergroten:
+Als we de carry-out ook willen berekenen, kunnen we de lengte van c met 1 bit vergroten, maar dan moeten we intern de lengte van a en b ook vergroten, want per syntax geldt dat de som van 2 n-bit vectoren, terug een n-bit verctor is:
 
 {{% highlight vhdl %}}
 library ieee;
@@ -117,15 +117,12 @@ begin
 end arch;
 {{% /highlight %}}
 
-#### aftrekker
+#### Aftrekker
 
 <div class="multicolumn">
     <div class="column" style="width:55%">
 
-Met behulp van de package std_logic_unsigned kunnen we ook aftrekkingen uitvoeren.
-De ingangen worden dan beschouwd als positieve binaire getallen zonder tekenbit.
-Als het resultaat kleiner wordt dan nul, wordt er terug vanaf het maximum naar beneden geteld, alsof alle getallen zich op een cirkel bevinden. Dat komt overeen met 2's complement notatie. 
-Voor optelling en aftrekking maakt het niet uit of we std_logic_unsigned of std_logic_signed gebruiken.
+Met behulp van de package std_logic_unsigned kunnen we ook aftrekkingen uitvoeren. De ingangen worden dan beschouwd als positieve binaire getallen zonder tekenbit. Indien het resultaat kleiner wordt dan nul, wordt er terug vanaf het maximum naar beneden geteld, alsof alle getallen zich op een cirkel bevinden. Dat komt overeen met 2's complement notatie. Voor optelling en aftrekking maakt het niet uit of we std_logic_unsigned of std_logic_signed gebruiken.
 Voor >, >=, <, <= maakt het wel uit.
 
 {{% highlight vhdl %}}
@@ -153,14 +150,10 @@ end arch;
 
 #### Opteller/aftrekker
 
+We gebruiken de ingang "op_af" om te bepalen of we gaan optellen of aftrekken. <br/>
+Als de bit gelijk is aan 0, tellen we op. <br/> Als de bit gelijk is aan 1, trekken we af. <br/>
 
-
-We gebruiken de bit "op_af"  om te bepalen of we gaan optellen of aftrekken. <br/>
-Als de bit gelijk is aan 0, tellen we op. <br/>
-
-Als de bit gelijk is aan 1, trekken we af. <br/>
-
-Voor een if-else hebben we een process nodig. Daar komen we in de <a href="../../020_next_step/060_processen/" >les </a> nog op terug.
+Voor de beschrijving van een MUX hebben we een process nodig. Daar komen we in de <a href="../../200_next_step/260_processen/" >les </a> nog op terug.
 
 
 {{% highlight vhdl %}}

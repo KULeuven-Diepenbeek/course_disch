@@ -2,7 +2,7 @@
 title: 'Hardware vs software'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
-weight: 10
+weight: 910
 draft: false
 ---
 
@@ -26,7 +26,7 @@ draft: false
 </ul>
 </ul>
 
-## voorbeeld hardware
+## Voorbeeld hardware
 
 ```vhdl
 c <= a and b;

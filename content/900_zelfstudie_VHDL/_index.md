@@ -2,7 +2,7 @@
 title: 'Zelfstudie VHDL'
 chapter: true
 weight: 900
-draft: true
+draft: false
 ---
 
 # Zelfstudie VHDL

@@ -2,7 +2,7 @@
 title: 'Arrays'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
-weight: 50
+weight: 950
 draft: false
 ---
 
@@ -45,8 +45,6 @@ end arch;
 
 ## Toekenning van arrays
 
-
-
 <div class="multicolumn">
     <div class="column" style="width:60%">
 Toekenning gebeurt op basis van positie, niet op basis van index.
@@ -77,6 +75,7 @@ signal byte: bit_vector(7 downto 0);
 {{% highlight vhdl %}}
 z <= (a, '1', b, '0'); -- z wordt dan a1b0 met a en b een waarde 0 of 1
 {{% /highlight %}}
+
 * op basis van index:
 {{% highlight vhdl %}}
 byte <= (7 => '1', 4 downto 2 => a, 6 => b, others => '0'); -- byte wordt dan 1b0aaa00
@@ -111,6 +110,7 @@ signal byte: bit_vector(7 downto 0);
 ...
 byte(5 downto 2) <= a;
 {{% /highlight %}}
+
 * Foutief voorbeeld:
 {{% highlight vhdl %}}
 signal z: bit_vector(3 downto 0);
@@ -121,7 +121,7 @@ z(0 to 1) <= '0' & b; -- dit geeft een error!
 
 ## Aliases
 
-Aliases zijn verwijzingen naar andere data objecten die de code beter begrijpbaar maken.
+Aliases zijn verwijzingen naar reeds gedefinieerde signals, die de code beter begrijpbaar maken.
 {{% highlight vhdl %}}
 signal adres: bit_vector(31 downto 0);
 alias top_adres: bit_vector(3 downto 0) is adres(31 downto 28);

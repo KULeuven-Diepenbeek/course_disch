@@ -2,7 +2,7 @@
 title: 'Libraries'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
-weight: 40
+weight: 940
 draft: false
 ---
 
@@ -17,6 +17,7 @@ Een package bevat 1 of meer van onderstaande middelen.
 <li> constanten </li>
 <li> functies </li>
 <li> procedures </li>
+<li> component declaraties </li>
 </ul>
 
 Een VHDL module kan gebruik maken van 1 of meerdere packages <br/>

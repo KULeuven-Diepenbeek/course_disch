@@ -2,7 +2,7 @@
 title: 'Flipflop en latches'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
-weight: 90
+weight: 990
 draft: false
 ---
 
@@ -105,7 +105,7 @@ In std_logic_1164 zijn de volgende functies gedefinieerd:
 * rising_edge
 * falling_edge
 
-**beide kolommen** doen funtioneel **hetzelfde**.
+**Beide kolommen** doen lijken funtioneel **hetzelfde** te doen, maar er is een subtiel verschil. Wanneer er gebruikt gemaakt wordt van het xxxx'event keyword, wilt dat zeggen **er is een verandering in de waarde van xxxx**. Als dit gevolgd wordt door de test *clk = '1'*, wilt dat zeggen dat deze conditie waar is voor elke overgang **naar '1'** (bv: '0' -> '1', maar ook 'X' -> '1' en '-' -> '1')
 
 <div class="multicolumn">
 
@@ -143,11 +143,15 @@ if clk'event and clk = '0' then
 
 </div>
 
+Voor de twee voorbeelden die gebruik maken van functies uit STD_LOGIC_1164, wordt een bepaalde "uitgangspositie" verwacht.
+
+* rising_edge() geeft **true** wanneer een signaal van '0' of 'L' verandert naar '1' of 'H'
+* falling_edge() geeft **true** wanneer een signaal van '1' of 'H' verandert naar '0' of 'L' 
 
 
 ## D-latch
 
-Bij een **D-latch** worden de **data binnengenomen** gedurende de **hele periode dat de klok hoog is**. Een ontwerp met **D-flip-flops** is **veel makkelijker te analyseren** dan een ontwerp met D-latches.
+Bij een **D-latch** worden de **data binnengenomen** gedurende de **hele periode dat de klok hoog is**. Een ontwerp met **D-flip-flops** is **veel makkelijker te analyseren en managen** dan een ontwerp met D-latches.
 
 
 #### D-latch in VHDL
@@ -179,9 +183,11 @@ begin
 end arch_dlatch;
 ```
 
+## Ongewenste componenten
+
 #### Ongewenste latches
 
-Als niet alle mogelijkheden voorzien zijn, kan  een combinatorisch circuit zich gedragen als een latch. Dit moet steeds vermeden worden.
+Als niet alle mogelijkheden voorzien zijn, kan een combinatorisch circuit zich gedragen als een latch. Dit moet steeds vermeden worden.
 
 ```vhdl
 library ieee;
@@ -208,3 +214,47 @@ end arch_fout;
 
 
 
+#### Ongewenste registers
+
+Indien we voor een bepaald signaal geen register willen implementeren, moet dat signaal buiten het proces geplaatst worden.
+
+<div class="multicolumn">
+<div class="column">
+
+
+{{% md %}}
+
+```vhdl
+seq: process(clk)
+begin
+    if clk'event and clk = '1' then
+        j <= a and b; --register voor j
+        i <= j xor k;
+    end if;
+end process;
+```
+
+{{% /md %}}
+
+</div>
+
+<div class="column">
+
+{{% md %}}
+
+```vhdl
+seq: process(clk)
+begin
+    if clk'event and clk = '1' then
+        i <= j xor k;
+    end if;
+end process;
+
+j <= a and b; --geen register voor j
+```
+
+{{% /md %}}
+
+</div>
+
+</div>

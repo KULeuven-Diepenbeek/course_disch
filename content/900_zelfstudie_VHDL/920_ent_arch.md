@@ -2,45 +2,34 @@
 title: 'Entiteiten en architecturen'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
-weight: 20
+weight: 920
 draft: false
 ---
 De VHDL code van elk bouwblok bevat een
 <ul> 
+<li> een lijst van de gebruikte bibliotheken,
 <li> interface beschrijving: entity,
 <li> functie beschrijving: architecture.
 </ul>
 
 ## Voorbeeld
 
-```vhdl
-entity and_or_poort is
-port(   a, b, d: in bit;
-        e: out bit);
-end and_or_poort;
+{{< include_file "/static/hdlsrc/900/and_or_poort.vhd" "vhdl" >}}
 
-architecture arch of and_or_poort is
-    signal c: bit;
-begin
-    c <= a and b;
-    e <= c or d;
-end arch;
-```
+## Entity
 
-## entity
-
-entity = beschrijving van de interface
+De entity bevat de beschrijving van de interface.
 
 ```vhdl
 entity and_or_poort is
-port(   a, b, d: in bit;
-        e: out bit);
+port(   a, b, d: in STD_LOGIC;
+        e: out STD_LOGIC);
 end and_or_poort;
 ```
 
-{{% figure src="/images/zelfstudie/entity.png" title="entity" %}}
+{{% figure src="/images/zelfstudie/entity.png" title="De entity" %}}
 
-### entity ports
+### Entity ports
 
 Elke poort heeft:
 <ul>
@@ -49,10 +38,10 @@ Elke poort heeft:
 <li> een mode
 <ul><li>in dit voorbeeld: in, out</li></ul>
 <li> een type
-<ul><li>in dit voorbeeld: bit</li></ul>
+<ul><li>in dit voorbeeld: STD_LOGIC</li></ul>
 </ul>
 
-#### namen in VHDL
+#### Namen in VHDL
 
 Namen voldoen aan de volgende eisen:
 
@@ -64,9 +53,9 @@ Namen voldoen aan de volgende eisen:
 
 Namen zijn niet case sensitive.
 
-#### modes van ports
+#### Modes van ports
 
-Belangrijkste modes:
+Belangrijkste modes, of *richtingen*:
 
 * in: ingang
 * out: uitgang
@@ -79,9 +68,9 @@ Belangrijkste modes:
 
 {{< highlight vhdl >}}
 entity and_or_poort is
-port(   a, b, d: in bit;
-        c: buffer bit;
-        e: out bit);
+port(   a, b, d: in STD_LOGIC;
+        c: buffer STD_LOGIC;
+        e: out STD_LOGIC);
 end and_or_poort;
 
 architecture arch of and_or_poort is
@@ -98,10 +87,8 @@ end arch;
 </div>
 </div>
 
-#### gebruik van buffer 
-Het gebruik van de mode buffer kan vermeden worden door
-een intern signaal aan te maken en dit te verbinden met de
-uitgang.
+#### Gebruik van buffer 
+Het gebruik van de mode buffer kan vermeden worden door een intern signaal aan te maken en dit te verbinden met de uitgang.
 
 Volgende twee codes zijn identiek:
 
@@ -110,9 +97,9 @@ Volgende twee codes zijn identiek:
 
 {{< highlight vhdl >}}
 entity and_or_poort is
-port(   a, b, d: in bit;
-        c: buffer bit;
-        e: out bit);
+port(   a, b, d: in STD_LOGIC;
+        c: buffer STD_LOGIC;
+        e: out STD_LOGIC);
 end and_or_poort;
 
 architecture arch of and_or_poort is
@@ -125,12 +112,12 @@ end arch;
 </div> <div class="column">
 {{< highlight vhdl >}}
 entity and_or_poort is
-port(   a, b, d: in bit;
-        c, e: out bit);
+port(   a, b, d: in STD_LOGIC;
+        c, e: out STD_LOGIC);
 end and_or_poort;
 
 architecture arch of and_or_poort is
-    signal c_intern: bit;
+    signal c_intern: STD_LOGIC;
 begin
     c_intern <= a and b;
     e <= c_intern or d;
@@ -141,7 +128,7 @@ end arch;
     </div>
 </div>
 
-## architecture
+## Architecture
 
 * De architecture beschrijft het gedrag.
 * Een architecture moet verbonden zijn met een specifieke entity.
@@ -149,7 +136,7 @@ end arch;
 
 {{< highlight vhdl >}}
 architecture arch of and_or_poort is
-    signal c: bit;
+    signal c: STD_LOGIC;
 begin
     c <= a and b;
     e <= c or d;
@@ -159,18 +146,18 @@ end arch;
 
 {{% figure src="/images/zelfstudie/and_or_schamatic.png"%}}
 
-### signals
+### Signals
 
 * Om interne data voor te stellen, worden signals gebruikt.
 * Een signal is van een bepaald type maar heeft geen mode.
 * Namen van signalen:
     * zelfde voorwaarden als namen van entity ports.
 * Voorbeeld:
-    * signal c: bit
+    * signal c: STD_LOGIC
 
 {{< highlight vhdl >}}
 architecture arch of and_or_poort is
-    signal c: bit;
+    signal c: STD_LOGIC;
 begin
     c <= a and b;
     e <= c or d;
@@ -178,7 +165,7 @@ end arch;
 {{< /highlight >}}
 
 
-## commentaar in VHDL
+## Commentaar in VHDL
 
 Je kan iets in commentaar zetten door er 2 keer een - voor te zetten.
 

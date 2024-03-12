@@ -2,70 +2,24 @@
 title: 'Voorbeelden'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
-weight: 100
+weight: 995
 draft: false
 ---
 
 
-#### Binair-naar-decimaal decoder
+#### Binair-naar-onehot decoder
 
-```vhdl
-entity bin_to_dec is
-port(   binair: in std_logic_vector(2 downto 0);
-        decimaal: out std_logic_vector(0 to 7));
-end bin_to_dec;
-
-architecture arch of bin_to_dec is
-begin
-    p: process(binair)
-    begin
-        case binair is
-            when "000"  => decimaal <= "10000000" ;
-            when "001"  => decimaal <= "01000000" ;
-            when "010"  => decimaal <= "00100000" ;
-            when "011"  => decimaal <= "00010000" ;
-            when "100"  => decimaal <= "00001000" ;
-            when "101"  => decimaal <= "00000100" ;
-            when "110"  => decimaal <= "00000010" ;
-            when others => decimaal <= "00000001" ;
-        end case;
-    end process;
-end arch;
-```
+{{< include_file "/static/hdlsrc/900/bin_to_onehot.vhd" "vhdl" >}}
 
 #### BCD-naar-7-segment decoder
 
-```vhdl
-entity bcd_to_7seg is
-    port(   bcd: in std_logic_vector(3 downto 0);
-            seg7: out std_logic_vector(1 to 7));
-end bcd_to_7seg;
+{{< include_file "/static/hdlsrc/900/bcd_to_7seg.vhd" "vhdl" >}}
 
-architecture arch of bin_to_7seg is
-begin
-p: process(bcd)
-    begin
-        case bcd is
-            when "0000"  => seg7 <= "1111110" ;
-            when "0001"  => seg7 <= "0110000" ;
-            when "0010"  => seg7 <= "1101101" ;
-            when "0011"  => seg7 <= "1111001" ;
-            when "0100"  => seg7 <= "0110011" ;
-            when "0101"  => seg7 <= "1011011" ;
-            when "0110"  => seg7 <= "1011111" ;
-            when "0111"  => seg7 <= "1110000" ;
-            when "1000"  => seg7 <= "1111111" ;
-            when "1001"  => seg7 <= "1111011" ;
-            when others => seg7 <= "-------" ;
-        end case;
-    end process;
-end arch;
-```
+
+
 
 <div  style="width:calc(100% - 300px); min-width:400px; float:left">
-
 {{% md %}}
-
 
 #### Conditionele toekenning m.b.v. with-select
 
@@ -170,7 +124,7 @@ begin
     p_comb_reg: process(clk)
     begin
         if clk'event and clk = '1' then
-            if count >= " 1001"  then
+            if count >= "1001"  then
                 count <= "0000" ;
             else
                 count <= count + 1;

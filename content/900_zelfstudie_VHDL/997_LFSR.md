@@ -2,7 +2,7 @@
 title: 'Linear feedback shift register'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
-weight: 110
+weight: 997
 draft: false
 ---
 
