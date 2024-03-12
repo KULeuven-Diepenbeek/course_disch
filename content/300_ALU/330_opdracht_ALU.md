@@ -1,5 +1,5 @@
 ---
-title: 'Opdracht 4: ALU'
+title: 'Opdracht 3: ALU'
 pre: "<i class='fas fa-pen-square'></i> "
 chapter: false
 weight: 330
@@ -21,7 +21,7 @@ De ALU die je moet maken voor deze opdracht ziet er uit zoals hieronder afgebeel
   * no (negate output)
 * De output status zijn: 
   * zr (zero)
-  * ng (negativee).
+  * ng (negative).
 
 {{% /column %}}
 {{% column %}}
