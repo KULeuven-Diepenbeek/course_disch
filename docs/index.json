@@ -189,25 +189,11 @@
 	"content": "Shift registers Er zijn verschillende types aan shift registers. Er is de keuze om serieel of parallel in te laden en de keuze om serieel of parallel uit te lezen.\nSoorten shift registers Bron: electronics-club "
 },
 {
-	"uri": "https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/pipo/",
-	"title": "PIPO",
-	"tags": [],
-	"description": "",
-	"content": "Bij parallel in, parallel out register (PIPO) komt op de ingang op de uitgang met 1 clock cyclus vertraging.\nPIPO shift register Bron: electronics-club "
-},
-{
 	"uri": "https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/siso/",
 	"title": "SISO",
 	"tags": [],
 	"description": "",
 	"content": "SISO Bij een serial in, serial out shift register komt de data erin en iedere clock cyclus wordt het 1 plaats verder geshift. Dus in onderstaand voorbeeld komt de data er na 4 clock cycli terug uit.\nSISO shift register Natuurlijk zijn er verschillende manier op dit te beschrijven in VHDL. Onderstaande beschrijving is een voorbeeld.\nlibrary IEEE; use IEEE.STD_LOGIC_1164.ALL; entity SISO_shift_register is Port (clk: in std_logic; D: in std_logic; Y: out std_logic); end SISO_shift_register; architecture Behavioral of SISO_shift_register is signal buf: std_logic_vector(3 downto 0); begin SEQ: process(clk) begin if clk\u0026#39;event and clk = \u0026#39;1\u0026#39; then buf(0) \u0026lt;= D; buf(3 downto 1) \u0026lt;= buf(2 downto 0); end if; end process; Y \u0026lt;= buf(3); end Behavioral; De volgorde dat we de buffer instellen maakt niet uit, want alles wordt tegelijk uitgevoerd in hardware.\n"
-},
-{
-	"uri": "https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/sipo/",
-	"title": "SIPO",
-	"tags": [],
-	"description": "",
-	"content": "Serial in, parallel out is een shift register dat gebruikt wordt voor data ontvangst. Meestal komt de data serieel binnen en vaak heeft de volgende stap de data parallel nodig.\nSIPO shift register Je kan zelf proberen de beschrijving te maken in VHDL\n"
 },
 {
 	"uri": "https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/piso/",
@@ -217,11 +203,25 @@
 	"content": "Een parallel in, serial out shift register wordt gebruikt als ge parallel data hebt en het serieel wil doorsturen. Hier hebben we wel een load signal nodig om de data in te laden en multiplexer om te zorgen dat de data ook in de flip-flops kan geraken.\nPISO shift register library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity PISO_shift_register is Port (clk, load: in std_logic; D_Vector: in std_logic_vector(3 downto 0); Y: out std_logic); end PISO_shift_register; architecture Behavioral of PISO_shift_register is signal buf: std_logic_vector(3 downto 0); begin SEQ: process(clk) begin if clk\u0026#39;event and clk = \u0026#39;1\u0026#39; then if load = \u0026#39;1\u0026#39; then buf \u0026lt;= D_vector; else buf(3 downto 1) \u0026lt;= buf(2 downto 0); buf(0) \u0026lt;= \u0026#39;-\u0026#39;; --in de meeste toepassingen maakt het niet uit welke bit er uit komt als de buffer leeg is end if; end if; end process; Y \u0026lt;= buf(3); end Behavioral; VHDL heeft onderstaande waardes voor std_logic \u0026lsquo;U\u0026rsquo; Uninitialized \u0026lsquo;X\u0026rsquo; Forcing Unknown \u0026lsquo;0\u0026rsquo; Forcing 0 \u0026lsquo;1\u0026rsquo; Forcing 1 \u0026lsquo;Z\u0026rsquo; High Impedance \u0026lsquo;W\u0026rsquo; Weak Unknown \u0026lsquo;L\u0026rsquo; Weak 0 \u0026lsquo;H\u0026rsquo; Weak 1 \u0026lsquo;-\u0026rsquo; Don\u0026rsquo;t Care\n"
 },
 {
+	"uri": "https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/pipo/",
+	"title": "PIPO",
+	"tags": [],
+	"description": "",
+	"content": "Bij parallel in, parallel out register (PIPO) komt op de ingang op de uitgang met 1 clock cyclus vertraging.\nPIPO shift register Bron: electronics-club "
+},
+{
+	"uri": "https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/sipo/",
+	"title": "SIPO",
+	"tags": [],
+	"description": "",
+	"content": "Serial in, parallel out is een shift register dat gebruikt wordt voor data ontvangst. Meestal komt de data serieel binnen en vaak heeft de volgende stap de data parallel nodig.\nSIPO shift register Je kan zelf proberen de beschrijving te maken in VHDL\n"
+},
+{
 	"uri": "https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/440_reset/",
 	"title": "Reset",
 	"tags": [],
 	"description": "",
-	"content": "Typisch is het gewenst om een reset ingang te hebben om alles terug naar een gekende begintoestand te brengen. Er zijn typisch 2 manieren om dit te doen, een synchrone reset of een asynchrone reset.\nAsynchrone reset Onderstaand voorbeeld is van een D flip-flop met asynchrone reset, Je ziet hier dat de reset onderdeel is van de sensitivity list. De reset staat hier als eerste in het process. Synchrone reset Onderstaand voorbeeld is van een D flip-flop met synchrone reset, Je ziet hier dat de reset geen onderdeel is van de sensitivity list. De reset staat hier na de if van de stijgende flank van de clock. library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity asynchronous_reset is Port (input, clock, reset: in std_logic; output: out std_logic); end asynchronous_reset; architecture Behavioral of asynchronous_reset is begin SEQ: process(clock,reset) begin if reset = \u0026#39;1\u0026#39; then output \u0026lt;= \u0026#39;0\u0026#39;; else if clock\u0026#39;event and clock = \u0026#39;1\u0026#39; then output \u0026lt;= input; end if; end if; end process; end Behavioral; \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;column\u0026quot;\u0026gt; library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity synchronous_reset is Port (input, clock, reset: in std_logic; output: out std_logic); end synchronous_reset; architecture Behavioral of synchronous_reset is begin SEQ: process(clock) begin if clock\u0026#39;event and clock = \u0026#39;1\u0026#39; then if reset = \u0026#39;1\u0026#39; then output \u0026lt;= \u0026#39;0\u0026#39;; else output \u0026lt;= input; end if; end if; end process; end Behavioral; \u0026lt;/div\u0026gt; Voor sequentiële processen zijn er maximaal 2 signalen (clock en eventueel reset) die in de sensitivity list staan. Bij combinatorische processen zijn het alle signalen.\n"
+	"content": "Typisch is het gewenst om een reset ingang te hebben om alles terug naar een gekende begintoestand te brengen. Er zijn typisch 2 manieren om dit te doen, een synchrone reset of een asynchrone reset.\nAsynchrone reset Onderstaand voorbeeld is van een D flip-flop met asynchrone reset. Je ziet hier dat de reset onderdeel is van de sensitivity list. De reset staat hier als eerste in het process. Synchrone reset Onderstaand voorbeeld is van een D flip-flop met synchrone reset. Je ziet hier dat de reset geen onderdeel is van de sensitivity list. De reset staat hier na de if van de stijgende flank van de clock. library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity asynchronous_reset is Port ( clock: in std_logic; reset: in std_logic; data_in: in std_logic; data_out: out std_logic ); end asynchronous_reset; architecture Behavioral of asynchronous_reset is signal clock_i: std_logic; signal reset_i: std_logic; signal data_in_i: std_logic; signal data_out_i: std_logic; begin clock_i \u0026lt;= clock; reset_i \u0026lt;= reset; data_in_i \u0026lt;= data_in; data_out \u0026lt;= data_out_i; PREG: process(reset_i, clock_i) begin if reset_i = \u0026#39;1\u0026#39; then data_out_i \u0026lt;= \u0026#39;0\u0026#39;; else if clock_i\u0026#39;event and clock_i = \u0026#39;1\u0026#39; then data_out_i \u0026lt;= data_in_i; end if; end if; end process; end Behavioral; library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity asynchronous_reset is Port ( clock: in std_logic; reset: in std_logic; data_in: in std_logic; data_out: out std_logic ); end asynchronous_reset; architecture Behavioral of asynchronous_reset is signal clock_i: std_logic; signal reset_i: std_logic; signal data_in_i: std_logic; signal data_out_i: std_logic; begin clock_i \u0026lt;= clock; reset_i \u0026lt;= reset; data_in_i \u0026lt;= data_in; data_out \u0026lt;= data_out_i; PREG: process(clock_i) begin if clock_i\u0026#39;event and clock_i = \u0026#39;1\u0026#39; then if reset_i = \u0026#39;1\u0026#39; then data_out_i \u0026lt;= \u0026#39;0\u0026#39;; else data_out_i \u0026lt;= data_in_i; end if; end if; end process; end Behavioral; Voor sequentiële processen zijn er maximaal 2 signalen (clock en eventueel reset) die in de sensitivity list staan. Bij combinatorische processen zijn het alle signalen.\n"
 },
 {
 	"uri": "https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/460_opdracht/",

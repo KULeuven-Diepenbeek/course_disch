@@ -35,7 +35,7 @@ Register Parallel in, parallel out </description>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/440_reset/</guid>
       <description>Typisch is het gewenst om een reset ingang te hebben om alles terug naar een gekende begintoestand te brengen. Er zijn typisch 2 manieren om dit te doen, een synchrone reset of een asynchrone reset.
-Asynchrone reset Onderstaand voorbeeld is van een D flip-flop met asynchrone reset, Je ziet hier dat de reset onderdeel is van de sensitivity list. De reset staat hier als eerste in het process. Synchrone reset Onderstaand voorbeeld is van een D flip-flop met synchrone reset, Je ziet hier dat de reset geen onderdeel is van de sensitivity list.</description>
+Asynchrone reset Onderstaand voorbeeld is van een D flip-flop met asynchrone reset. Je ziet hier dat de reset onderdeel is van de sensitivity list. De reset staat hier als eerste in het process. Synchrone reset Onderstaand voorbeeld is van een D flip-flop met synchrone reset.</description>
     </item>
     
     <item>
