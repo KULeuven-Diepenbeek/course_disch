@@ -56,7 +56,7 @@ Ingangen x en y zijn 16 bits; De input status bits zijn: zx (zero x) nx (negate 
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/340_testbench_alu/</guid>
       <description>De testbench om te testen of de ALU werkt kan hier gedownload worden. Deze testbench is, zoals je misschien al vermoedde, gegenereerd. Voor de verbetering van de opdracht wordt een soortgelijke testbench gebruikt.
--------------------------------------------------------------------------------- -- KU Leuven - ESAT/COSIC - Emerging technologies, Systems &amp;amp; Security -------------------------------------------------------------------------------- -- Module Name: alu_tb - Behavioural -- Project Name: Testbench for alu -- Description: -- -- Revision Date Author Comments -- v0.1 20240311 VlJo Initial version -- -------------------------------------------------------------------------------- library IEEE; use IEEE.</description>
+-------------------------------------------------------------------------------- -- KU Leuven - ESAT/COSIC - Emerging technologies, Systems &amp;amp; Security -------------------------------------------------------------------------------- -- Module Name: alu_tb - Behavioural -- Project Name: Testbench for alu -- Description: -- -- Revision Date Author Comments -- v0.1 20240312 VlJo Initial version -- -------------------------------------------------------------------------------- library IEEE; use IEEE.</description>
     </item>
     
   </channel>

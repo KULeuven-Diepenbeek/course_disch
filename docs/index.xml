@@ -188,7 +188,97 @@ Ingangen x en y zijn 16 bits; De input status bits zijn: zx (zero x) nx (negate 
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/340_testbench_alu/</guid>
       <description>De testbench om te testen of de ALU werkt kan hier gedownload worden. Deze testbench is, zoals je misschien al vermoedde, gegenereerd. Voor de verbetering van de opdracht wordt een soortgelijke testbench gebruikt.
--------------------------------------------------------------------------------- -- KU Leuven - ESAT/COSIC - Emerging technologies, Systems &amp;amp; Security -------------------------------------------------------------------------------- -- Module Name: alu_tb - Behavioural -- Project Name: Testbench for alu -- Description: -- -- Revision Date Author Comments -- v0.1 20240311 VlJo Initial version -- -------------------------------------------------------------------------------- library IEEE; use IEEE.</description>
+-------------------------------------------------------------------------------- -- KU Leuven - ESAT/COSIC - Emerging technologies, Systems &amp;amp; Security -------------------------------------------------------------------------------- -- Module Name: alu_tb - Behavioural -- Project Name: Testbench for alu -- Description: -- -- Revision Date Author Comments -- v0.1 20240312 VlJo Initial version -- -------------------------------------------------------------------------------- library IEEE; use IEEE.</description>
+    </item>
+    
+    <item>
+      <title>Intro Sequentiële logica</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/410_intro_sequentieel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/410_intro_sequentieel/</guid>
+      <description>Zoals er eerder al aangehaald worden alle componenten tegelijkertijd uitgevoerd. Net zoals op een breadboard, zijn alle componenten en poorten gelijktijdig actief. Wanneer het ontwerp complexer wordt, is het bijna onmogelijk om iets realiseren als er geen orde of volgorde is. Hiervoor is het klok-signaal ontstaan. Dit signaal speelt een soortgelijke rol zoals die van een dirigent bij een concert.
+Als we bij combinatorische logica de ingang veranderen, duurt het een zekere tijd voordat dat de uitgang (mogelijks) verandert.</description>
+    </item>
+    
+    <item>
+      <title>Registers</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/420_registers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/420_registers/</guid>
+      <description>Een register wordt typisch gebruikt om data op te slaan. Een simpel register is één waar je data in kan laden en dan de data kunt uitlezen. Wanneer het load signaal hoog is, wordt op de stijgende flank van de clock de data van de D ingang op de uitgang Q gezet.
+Register Parallel in, parallel out </description>
+    </item>
+    
+    <item>
+      <title>PIPO</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/pipo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/pipo/</guid>
+      <description>Bij parallel in, parallel out register (PIPO) komt op de ingang op de uitgang met 1 clock cyclus vertraging.
+PIPO shift register Bron: electronics-club </description>
+    </item>
+    
+    <item>
+      <title>SISO</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/siso/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/siso/</guid>
+      <description>SISO Bij een serial in, serial out shift register komt de data erin en iedere clock cyclus wordt het 1 plaats verder geshift. Dus in onderstaand voorbeeld komt de data er na 4 clock cycli terug uit.
+SISO shift register Natuurlijk zijn er verschillende manier op dit te beschrijven in VHDL. Onderstaande beschrijving is een voorbeeld.
+library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity SISO_shift_register is Port (clk: in std_logic; D: in std_logic; Y: out std_logic); end SISO_shift_register; architecture Behavioral of SISO_shift_register is signal buf: std_logic_vector(3 downto 0); begin SEQ: process(clk) begin if clk&amp;#39;event and clk = &amp;#39;1&amp;#39; then buf(0) &amp;lt;= D; buf(3 downto 1) &amp;lt;= buf(2 downto 0); end if; end process; Y &amp;lt;= buf(3); end Behavioral; De volgorde dat we de buffer instellen maakt niet uit, want alles wordt tegelijk uitgevoerd in hardware.</description>
+    </item>
+    
+    <item>
+      <title>SIPO</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/sipo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/sipo/</guid>
+      <description>Serial in, parallel out is een shift register dat gebruikt wordt voor data ontvangst. Meestal komt de data serieel binnen en vaak heeft de volgende stap de data parallel nodig.
+SIPO shift register Je kan zelf proberen de beschrijving te maken in VHDL</description>
+    </item>
+    
+    <item>
+      <title>PISO</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/piso/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/piso/</guid>
+      <description>Een parallel in, serial out shift register wordt gebruikt als ge parallel data hebt en het serieel wil doorsturen. Hier hebben we wel een load signal nodig om de data in te laden en multiplexer om te zorgen dat de data ook in de flip-flops kan geraken.
+PISO shift register library IEEE; use IEEE.STD_LOGIC_1164.ALL; entity PISO_shift_register is Port (clk, load: in std_logic; D_Vector: in std_logic_vector(3 downto 0); Y: out std_logic); end PISO_shift_register; architecture Behavioral of PISO_shift_register is signal buf: std_logic_vector(3 downto 0); begin SEQ: process(clk) begin if clk&amp;#39;event and clk = &amp;#39;1&amp;#39; then if load = &amp;#39;1&amp;#39; then buf &amp;lt;= D_vector; else buf(3 downto 1) &amp;lt;= buf(2 downto 0); buf(0) &amp;lt;= &amp;#39;-&amp;#39;; --in de meeste toepassingen maakt het niet uit welke bit er uit komt als de buffer leeg is end if; end if; end process; Y &amp;lt;= buf(3); end Behavioral; VHDL heeft onderstaande waardes voor std_logic &amp;lsquo;U&amp;rsquo; Uninitialized &amp;lsquo;X&amp;rsquo; Forcing Unknown &amp;lsquo;0&amp;rsquo; Forcing 0 &amp;lsquo;1&amp;rsquo; Forcing 1 &amp;lsquo;Z&amp;rsquo; High Impedance &amp;lsquo;W&amp;rsquo; Weak Unknown &amp;lsquo;L&amp;rsquo; Weak 0 &amp;lsquo;H&amp;rsquo; Weak 1 &amp;lsquo;-&amp;rsquo; Don&amp;rsquo;t Care</description>
+    </item>
+    
+    <item>
+      <title>Reset</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/440_reset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/440_reset/</guid>
+      <description>Typisch is het gewenst om een reset ingang te hebben om alles terug naar een gekende begintoestand te brengen. Er zijn typisch 2 manieren om dit te doen, een synchrone reset of een asynchrone reset.
+Asynchrone reset Onderstaand voorbeeld is van een D flip-flop met asynchrone reset, Je ziet hier dat de reset onderdeel is van de sensitivity list. De reset staat hier als eerste in het process. Synchrone reset Onderstaand voorbeeld is van een D flip-flop met synchrone reset, Je ziet hier dat de reset geen onderdeel is van de sensitivity list.</description>
+    </item>
+    
+    <item>
+      <title>Opdracht 3: Program counter</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/460_opdracht/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/460_opdracht/</guid>
+      <description>program counter De bedoeling van deze opdracht is om de program counter van de processor te maken. De program counter heeft 5 input signalen. data_in, clock, reset, load en inc (increment). Als output heeft het data_out. Data_in en Data_out zijn beide 16 bit vectoren. Als de reset hoog wordt moet de program counter synchroon resetten naar 0. load zorgt er voor dat, ook weer synchroon, de data van data_in wordt ingeladen.</description>
+    </item>
+    
+    <item>
+      <title>Opdracht testbench</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/470_tb_opdracht/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/470_tb_opdracht/</guid>
+      <description>Deze testbench wordt gebruikt voor de evaluatie.
+library IEEE; use IEEE.STD_LOGIC_1164.ALL; -- Uncomment the following library declaration if using -- arithmetic functions with Signed or Unsigned values --use IEEE.NUMERIC_STD.ALL; -- Uncomment the following library declaration if instantiating -- any Xilinx leaf cells in this code. --library UNISIM; --use UNISIM.VComponents.all; entity tb_counter is -- Port ( ); end tb_counter; architecture Behavioral of tb_counter is component counter is Port (clock,reset, load, inc: in std_logic; data_in : in std_logic_vector(15 downto 0); data_out : out std_logic_vector(15 downto 0) ); end component; constant clock_period : time := 10 ns; signal clock,reset, load, inc: std_logic; signal data_in : std_logic_vector(15 downto 0); signal data_out : std_logic_vector(15 downto 0); begin DUT: counter port map( data_in =&amp;gt; data_in, data_out =&amp;gt; data_out, clock =&amp;gt; clock, reset =&amp;gt; reset, load =&amp;gt; load, inc =&amp;gt; inc); CLK: process begin clock &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/2; clock &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period/2; end process; PSTIM: process begin data_in &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/8; wait for clock_period*2; data_in &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;1&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period*2; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000001&amp;#34;) report &amp;#34;increment werkt niet&amp;#34; severity failure; wait for clock_period*10; assert (data_out = &amp;#34;0000000000001011&amp;#34;) report &amp;#34;increment werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;0000111000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000111000000000&amp;#34;) report &amp;#34;load werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;0000111000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000111000000001&amp;#34;) report &amp;#34;inc na load werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1111111111111111&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;1111111111111111&amp;#34;) report &amp;#34;load werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1111110011111111&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;1111110011111111&amp;#34;) report &amp;#34;load before increment werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1111111111111111&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;1111111111111111&amp;#34;) report &amp;#34;load werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011110011&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;overflow werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;1&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;H&amp;#39;; load &amp;lt;= &amp;#39;L&amp;#39;; inc &amp;lt;= &amp;#39;L&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;L&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000001&amp;#34;) report &amp;#34;iets werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;X&amp;#39;; load &amp;lt;= &amp;#39;L&amp;#39;; inc &amp;lt;= &amp;#39;H&amp;#39;; wait for clock_period; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;1&amp;#39;; load &amp;lt;= &amp;#39;W&amp;#39;; inc &amp;lt;= &amp;#39;Z&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; wait; end process; end Behavioral; </description>
     </item>
     
     <item>
