@@ -1,7 +1,7 @@
 ---
 title: 'Opdracht testbench'
 chapter: false
-weight: 110
+weight: 470
 pre: "<i class='fas fa-book'></i> "
 draft: false
 ---

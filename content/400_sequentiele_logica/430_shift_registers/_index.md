@@ -2,7 +2,7 @@
 title: 'Shift registers'
 pre: "<i class='fas fa-book'></i> "
 chapter: true
-weight: 30
+weight: 430
 draft: false
 ---
 

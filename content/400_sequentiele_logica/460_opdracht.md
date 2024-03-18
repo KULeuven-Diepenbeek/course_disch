@@ -1,13 +1,13 @@
 ---
 title: 'Opdracht 3: Program counter'
 chapter: false
-weight: 100
+weight: 460
 pre: "<i class='fas fa-pen-square'></i> "
 draft: false
 ---
 
 ## program counter
-De bedoeling van deze opdracht is om de program counter van de processor te maken. De program counter heeft 5 input signalen. **data_in, clock, reset, load en inc (increment)**. Als output heeft het data_out. Data_in en Data_out zijn beide 16 bit vectoren. Als de reset hoog wordt moet de program counter **synchroon resetten** naar 0. **load** zorgt er voor dat ook weer **synchroon** de **data** van data_in wordt **ingeladen**. **Load heeft voorrang op increment**.
+De bedoeling van deze opdracht is om de program counter van de processor te maken. De program counter heeft 5 input signalen. **data_in, clock, reset, load en inc (increment)**. Als output heeft het data_out. Data_in en Data_out zijn beide 16 bit vectoren. Als de reset hoog wordt moet de program counter **synchroon resetten** naar 0. **load** zorgt er voor dat, ook weer **synchroon**, de **data** van data_in wordt **ingeladen**. **Load heeft voorrang op increment**.
 
 De program counter moet aan onderandere aan onderstaande specificaties voldoen:
 

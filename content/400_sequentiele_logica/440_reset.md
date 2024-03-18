@@ -2,7 +2,7 @@
 title: 'Reset'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
-weight: 40
+weight: 440
 draft: false
 ---
 

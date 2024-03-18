@@ -2,7 +2,7 @@
 title: '4. Sequentiële logica'
 chapter: true
 weight: 400
-draft: true
+draft: false
 ---
 
 # Sequentiële logica
