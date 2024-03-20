@@ -12,22 +12,22 @@
     <title>Intro Sequentiële logica :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1710794852" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1710794852" rel="stylesheet">
-    <link href="../../css/hybrid.css?1710794852" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1710794852" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1710794852" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1710794852" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1710794852" rel="stylesheet">
-    <link href="../../css/theme.css?1710794852" rel="stylesheet">
-    <link href="../../css/tabs.css?1710794852" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1710794852" rel="stylesheet">
+    <link href="../../css/nucleus.css?1710949198" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1710949198" rel="stylesheet">
+    <link href="../../css/hybrid.css?1710949198" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1710949198" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1710949198" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1710949198" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1710949198" rel="stylesheet">
+    <link href="../../css/theme.css?1710949198" rel="stylesheet">
+    <link href="../../css/tabs.css?1710949198" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1710949198" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1710794852" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1710949198" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1710794852"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1710949198"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1710794852"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1710794852"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1710949198"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1710949198"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1710794852"></script>
+<script type="text/javascript" src="../../js/search.js?1710949198"></script>
 
     
   </div>
@@ -839,9 +839,9 @@
  
   
     
-      <li data-nav-id="/400_sequentiele_logica/460_opdracht/" title="Opdracht 3: Program counter" class="dd-item ">
+      <li data-nav-id="/400_sequentiele_logica/460_opdracht/" title="Opdracht 4: Program counter" class="dd-item ">
         <a href="../../400_sequentiele_logica/460_opdracht/">
-        <i class='fas fa-pen-square'></i> Opdracht 3: Program counter
+        <i class='fas fa-pen-square'></i> Opdracht 4: Program counter
         
         </a>
     </li>
@@ -1248,7 +1248,7 @@
 <div class="multiHcolumn">
 <div class="column">
     <p>Als we bij combinatorische logica de ingang veranderen, duurt het een zekere tijd voordat dat de uitgang (mogelijks) verandert. Bij sequentiële logica gaan we wachten met de ingang in te lezen tot de stijgende flank van de clock. Als de timings van het design goed zijn dan is de ingang van een systeem altijd stabiel op het moment dat er een stijgende flank van een clock is.</p>
-<p>We gaan beginnen met een simple <strong>D flip-flop</strong> te maken. Het enige dat deze flip-flop doet is de ingang <i>onthouden</i> op de uitgang tot de volgende stijgende flank van de clock.</p>
+<p>We gaan beginnen met een simpele <strong>D flip-flop</strong> te maken. Het enige dat deze flip-flop doet is de ingang <i>onthouden</i> op de uitgang tot de volgende stijgende flank van de clock.</p>
 </div>    
 <div class="column">
       <figure><img src="../../images/D_flipflop.png"/><figcaption>
@@ -1256,10 +1256,6 @@
           </figcaption>
   </figure>
 <br/>
-  <figure><img src="../../images/wavedrom/ff.png"/><figcaption>
-              <h4>timing D flip flop</h4>
-          </figcaption>
-  </figure>
   <!-- { signal: 
     [
       {name: "Clock",  wave: '0h.l.h.l.h.l.h.l.h' },
@@ -1268,7 +1264,18 @@
 ]} -->
 </div>    
 </div>
-<p>Onderstaand vhdl is een voorbeeld van een flip-flop. Het is hier belangrijk om te zien dat bij het process alleen de clock in de sensitivity list zit.</p>
+<figure><img src="../../images/wavedrom/ff.png"/><figcaption>
+            <h4>timing D flip flop</h4>
+        </figcaption>
+</figure>
+<!-- { signal: 
+    [
+      {name: "Clock",           wave: '0h.l.h.l.h.l.h.l.h.l.h.l.' },
+      {name: 'Input',           wave: '1...0...1.......0.1......' },
+      {name: 'Output', wave: 'x1...0...1.......0...1...' },    
+    ]
+} -->
+<p>Onderstaande vhdl code is een voorbeeld van een flip-flop. Het is hier belangrijk om te zien dat bij het process alleen de clock in de sensitivity list zit.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- Revision     Date       Author     Comments</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- v0.1         20240122   VlJo       Initial version</span>
@@ -2113,19 +2120,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1710794852"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1710794852"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1710794852"></script>
-    <script src="../../js/jquery.sticky.js?1710794852"></script>
-    <script src="../../js/featherlight.min.js?1710794852"></script>
-    <script src="../../js/highlight.pack.js?1710794852"></script>
+    <script src="../../js/clipboard.min.js?1710949198"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1710949198"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1710949198"></script>
+    <script src="../../js/jquery.sticky.js?1710949198"></script>
+    <script src="../../js/featherlight.min.js?1710949198"></script>
+    <script src="../../js/highlight.pack.js?1710949198"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1710794852"></script>
-    <script src="../../js/learn.js?1710794852"></script>
-    <script src="../../js/hugo-learn.js?1710794852"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1710949198"></script>
+    <script src="../../js/learn.js?1710949198"></script>
+    <script src="../../js/hugo-learn.js?1710949198"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1710794852"></script>
+            <script src="../../mermaid/mermaid.js?1710949198"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

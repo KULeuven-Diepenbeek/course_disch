@@ -263,12 +263,12 @@ Asynchrone reset Onderstaand voorbeeld is van een D flip-flop met asynchrone res
     </item>
     
     <item>
-      <title>Opdracht 3: Program counter</title>
+      <title>Opdracht 4: Program counter</title>
       <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/460_opdracht/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/460_opdracht/</guid>
-      <description>program counter De bedoeling van deze opdracht is om de program counter van de processor te maken. De program counter heeft 5 input signalen. data_in, clock, reset, load en inc (increment). Als output heeft het data_out. Data_in en Data_out zijn beide 16 bit vectoren. Als de reset hoog wordt moet de program counter synchroon resetten naar 0. load zorgt er voor dat, ook weer synchroon, de data van data_in wordt ingeladen.</description>
+      <description>De bedoeling van deze opdracht is om de program counter van de processor te maken. De program counter heeft 5 input signalen. data_in, clock, reset, load en inc(rement). Als output heeft het data_out. Data_in en Data_out zijn beide 16-bit vectoren. Als de reset hoog wordt moet de program counter synchroon resetten naar 0x0. inc zorgt dat de program counter met 1 verhoogd wordt en load zorgt er voor dat de data van data_in synchroon wordt ingeladen.</description>
     </item>
     
     <item>
