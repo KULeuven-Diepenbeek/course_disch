@@ -38,3 +38,15 @@ Voor sequentiële processen zijn er maximaal 2 signalen (clock en eventueel rese
 <br/>
 <br/>
 ![ff_withreset.png](/images/wavedrom/ff_withreset.png)
+<!-- { signal: 
+    [
+      {name: "Clock",           wave: '0h.l.h.l.h.l.h.l.h.l.' },
+      {name: 'Input',           wave: '1.......0...1........' },
+      {name: 'Output (w.o. reset)', wave: 'x1.......0...1.......' },      
+      {},
+      {name: 'Reset',        wave: '0...1...0.....10.....' },
+      {name: 'Output',       wave: 'x1...0.......1.......' },
+      {name: 'Output',       wave: 'x1..0........10..1...' },
+]} -->
+
+  

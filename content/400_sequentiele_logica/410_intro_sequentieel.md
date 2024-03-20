@@ -13,12 +13,11 @@ Zoals er eerder al aangehaald worden alle componenten **tegelijkertijd** uitgevo
 {{% column %}}
 Als we bij combinatorische logica de ingang veranderen, duurt het een zekere tijd voordat dat de uitgang (mogelijks) verandert. Bij sequentiële logica gaan we wachten met de ingang in te lezen tot de stijgende flank van de clock. Als de timings van het design goed zijn dan is de ingang van een systeem altijd stabiel op het moment dat er een stijgende flank van een clock is.
 
-We gaan beginnen met een simple <strong>D flip-flop</strong> te maken. Het enige dat deze flip-flop doet is de ingang <i>onthouden</i> op de uitgang tot de volgende stijgende flank van de clock.
+We gaan beginnen met een simpele <strong>D flip-flop</strong> te maken. Het enige dat deze flip-flop doet is de ingang <i>onthouden</i> op de uitgang tot de volgende stijgende flank van de clock.
 {{% /column %}}
 
 {{% column %}}
   {{% figure src="/images/D_flipflop.png" title="symbool D flip flop"  %}}<br/>
-  {{% figure src="/images/wavedrom/ff.png" title="timing D flip flop"  %}}
   <!-- { signal: 
     [
       {name: "Clock",  wave: '0h.l.h.l.h.l.h.l.h' },
@@ -30,9 +29,17 @@ We gaan beginnen met een simple <strong>D flip-flop</strong> te maken. Het enige
 
 {{% /multiHcolumn %}}
 
+{{% figure src="/images/wavedrom/ff.png" title="timing D flip flop"  %}}
+<!-- { signal: 
+    [
+      {name: "Clock",           wave: '0h.l.h.l.h.l.h.l.h.l.h.l.' },
+      {name: 'Input',           wave: '1...0...1.......0.1......' },
+      {name: 'Output', wave: 'x1...0...1.......0...1...' },    
+    ]
+} -->
 
 
-Onderstaand vhdl is een voorbeeld van een flip-flop. Het is hier belangrijk om te zien dat bij het process alleen de clock in de sensitivity list zit.
+Onderstaande vhdl code is een voorbeeld van een flip-flop. Het is hier belangrijk om te zien dat bij het process alleen de clock in de sensitivity list zit.
 
 ```vhdl
 --------------------------------
