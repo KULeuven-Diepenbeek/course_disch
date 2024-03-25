@@ -1,8 +1,8 @@
 ---
-title: '5. CPU'
+title: '5. Hack CPU'
 chapter: true
 weight: 500
-draft: true
+draft: false
 ---
 
 # CPU
