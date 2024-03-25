@@ -362,16 +362,6 @@ Image courtesy: The Elements of Computing Systems - N. Nisan and S. Schocken </d
     </item>
     
     <item>
-      <title>Opdracht - firmware</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/570_firmware/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/570_firmware/</guid>
-      <description>Ten slotte zijn hier nog enkele voorbeelden waarmee het instructie geheugen geïnitialiseerd kan worden. Let er op dat je de generic map zo aanpast dat de simulator een geldig pad heeft naar deze files op jouw computer/laptop.
-// predefined symbols // A: Address Register. // D: Data Register. // M: Refers to the register in Main Memory whose address is currently stored in A. // SP: RAM address 0. // LCL: RAM address 1.</description>
-    </item>
-    
-    <item>
       <title>Opdracht - testbench</title>
       <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/560_testbench/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -379,6 +369,16 @@ Image courtesy: The Elements of Computing Systems - N. Nisan and S. Schocken </d
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/560_testbench/</guid>
       <description>Zoals bij voorgaande opdrachten, wordt ook bij deze opdracht een testbench voorzien. Aangezien de DUT (device-under-test) iets complexer is, is de gebruikte testbench ook iets complexer.
 De gewoonlijke structuur is natuurlijk wel behouden: 1) libraries, 2) entity (zonder poorten), en 3) de architecture. Tussen de architecture en de begin staan de declaraties van signalen en componenten. Tussen de begin en end staat het ontwerp. Dit ontwerp staat hiernaast weergegeven. Er is een klein stukje code dat een clock genereert en een klein stukje code dat een reset genereert.</description>
+    </item>
+    
+    <item>
+      <title>Opdracht - firmware</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/570_firmware/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/570_firmware/</guid>
+      <description>Ten slotte zijn hier nog enkele voorbeelden waarmee het instructie geheugen geïnitialiseerd kan worden. Let er op dat je de generic map zo aanpast dat de simulator een geldig pad heeft naar deze files op jouw computer/laptop.
+// predefined symbols // A: Address Register. // D: Data Register. // M: Refers to the register in Main Memory whose address is currently stored in A. // SP: RAM address 0. // LCL: RAM address 1.</description>
     </item>
     
     <item>

@@ -69,7 +69,7 @@
     <lastmod>2024-03-12T10:52:37+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/340_testbench_alu/</loc>
-    <lastmod>2024-03-11T17:14:51+01:00</lastmod>
+    <lastmod>2024-03-25T21:19:22+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/</loc>
     <lastmod>2024-03-18T21:27:01+01:00</lastmod>
@@ -102,30 +102,40 @@
     <lastmod>2024-03-20T16:40:23+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/470_tb_opdracht/</loc>
-    <lastmod>2024-03-18T21:27:01+01:00</lastmod>
+    <lastmod>2024-03-25T21:19:22+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/</loc>
-    <lastmod>2024-02-26T14:35:17+01:00</lastmod>
+    <lastmod>2024-03-25T21:19:39+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/510_intro_cpu/</loc>
+    <lastmod>2024-03-25T21:19:39+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/520_isa/</loc>
+    <lastmod>2024-03-25T21:19:39+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/521_a_instructie/</loc>
+    <lastmod>2024-03-25T21:19:39+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/522_c_instructie/</loc>
+    <lastmod>2024-03-25T21:19:39+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/523_c_instructie_comp/</loc>
+    <lastmod>2024-03-25T21:19:39+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/524_c_instructie_destination/</loc>
+    <lastmod>2024-03-25T21:19:39+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/525_c_instructie_jmp/</loc>
+    <lastmod>2024-03-25T21:19:39+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/550_opdracht/</loc>
-  </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/570_firmware/</loc>
+    <lastmod>2024-03-25T21:19:22+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/560_testbench/</loc>
+    <lastmod>2024-03-25T21:19:39+01:00</lastmod>
+  </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/570_firmware/</loc>
+    <lastmod>2024-03-25T21:19:39+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/</loc>
     <lastmod>2024-03-12T08:44:01+01:00</lastmod>

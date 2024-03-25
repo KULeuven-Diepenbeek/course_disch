@@ -12,22 +12,22 @@
     <title>Opdracht - testbench :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1711397935" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1711397935" rel="stylesheet">
-    <link href="../../css/hybrid.css?1711397935" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1711397935" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1711397935" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1711397935" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1711397935" rel="stylesheet">
-    <link href="../../css/theme.css?1711397935" rel="stylesheet">
-    <link href="../../css/tabs.css?1711397935" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1711397935" rel="stylesheet">
+    <link href="../../css/nucleus.css?1711400045" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1711400045" rel="stylesheet">
+    <link href="../../css/hybrid.css?1711400045" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1711400045" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1711400045" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1711400045" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1711400045" rel="stylesheet">
+    <link href="../../css/theme.css?1711400045" rel="stylesheet">
+    <link href="../../css/tabs.css?1711400045" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1711400045" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1711397935" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1711400045" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1711397935"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1711400045"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1711397935"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1711397935"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1711400045"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1711400045"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1711397935"></script>
+<script type="text/javascript" src="../../js/search.js?1711400045"></script>
 
     
   </div>
@@ -1083,9 +1083,9 @@
  
   
     
-      <li data-nav-id="/500_cpu/570_firmware/" title="Opdracht - firmware" class="dd-item ">
-        <a href="../../500_cpu/570_firmware/">
-        <i class='fas fa-book'></i> Opdracht - firmware
+      <li data-nav-id="/500_cpu/560_testbench/" title="Opdracht - testbench" class="dd-item active">
+        <a href="../../500_cpu/560_testbench/">
+        <i class='fas fa-book'></i> Opdracht - testbench
         
         </a>
     </li>
@@ -1104,9 +1104,9 @@
  
   
     
-      <li data-nav-id="/500_cpu/560_testbench/" title="Opdracht - testbench" class="dd-item active">
-        <a href="../../500_cpu/560_testbench/">
-        <i class='fas fa-book'></i> Opdracht - testbench
+      <li data-nav-id="/500_cpu/570_firmware/" title="Opdracht - firmware" class="dd-item ">
+        <a href="../../500_cpu/570_firmware/">
+        <i class='fas fa-book'></i> Opdracht - firmware
         
         </a>
     </li>
@@ -1637,7 +1637,8 @@ Er is een klein stukje code dat een <strong>clock</strong> genereert en een klei
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">PRESET</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
 </span></span><span style="display:flex;"><span>        reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">*</span><span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">*</span><span style="color:#ae81ff">9</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>;
 </span></span><span style="display:flex;"><span>        reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span> <span style="color:#a6e22e">PRESET</span>;
@@ -1698,14 +1699,15 @@ Er is een klein stukje code dat een <strong>clock</strong> genereert en een klei
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
 </span></span><span style="display:flex;"><span>    reset_i <span style="color:#f92672">&lt;=</span> reset;
 </span></span><span style="display:flex;"><span>    clock_i <span style="color:#f92672">&lt;=</span> clock;
-</span></span><span style="display:flex;"><span>    ADDR_i <span style="color:#f92672">&lt;=</span> ADDR;
-</span></span><span style="display:flex;"><span>    WE_i <span style="color:#f92672">&lt;=</span> WE;
-</span></span><span style="display:flex;"><span>    WDATA_i <span style="color:#f92672">&lt;=</span> WDATA;
+</span></span><span style="display:flex;"><span>    ADDR_i <span style="color:#f92672">&lt;=</span> ADDR <span style="color:#66d9ef">after</span> <span style="color:#ae81ff">1</span> ns;
+</span></span><span style="display:flex;"><span>    WE_i <span style="color:#f92672">&lt;=</span> WE <span style="color:#66d9ef">after</span> <span style="color:#ae81ff">1</span> ns;
+</span></span><span style="display:flex;"><span>    WDATA_i <span style="color:#f92672">&lt;=</span> WDATA <span style="color:#66d9ef">after</span> <span style="color:#ae81ff">1</span> ns;
 </span></span><span style="display:flex;"><span>    RDATA <span style="color:#f92672">&lt;=</span> RDATA_i;
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- COMBINATORIAL</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- RDATA_i &lt;= outgoing_data;</span>
 </span></span><span style="display:flex;"><span>    RDATA_i <span style="color:#f92672">&lt;=</span> mem(addr_int);
 </span></span><span style="display:flex;"><span>    addr_int <span style="color:#f92672">&lt;=</span> to_integer(<span style="color:#66d9ef">unsigned</span>(ADDR_i));
 </span></span><span style="display:flex;"><span>
@@ -1727,6 +1729,7 @@ Er is een klein stukje code dat een <strong>clock</strong> genereert en een klei
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">not</span> endfile(fh) <span style="color:#66d9ef">loop</span>
 </span></span><span style="display:flex;"><span>                readline(fh, v_line);
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">-- hread(v_line, v_temp);</span>
 </span></span><span style="display:flex;"><span>                read(v_line, v_temp);
 </span></span><span style="display:flex;"><span>                mem(v_pointer) <span style="color:#f92672">&lt;=</span> v_temp;
 </span></span><span style="display:flex;"><span>                v_pointer <span style="color:#f92672">:=</span> v_pointer <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
@@ -2480,22 +2483,6 @@ Er is een klein stukje code dat een <strong>clock</strong> genereert en een klei
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -2508,9 +2495,6 @@ Er is een klein stukje code dat een <strong>clock</strong> genereert en een klei
             
         
                     
-            
-        
-                    
                         
             
             
@@ -2518,6 +2502,25 @@ Er is een klein stukje code dat een <strong>clock</strong> genereert en een klei
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2715,10 +2718,10 @@ Er is een klein stukje code dat een <strong>clock</strong> genereert en een klei
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../500_cpu/570_firmware/" title="Opdracht - firmware"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../500_cpu/550_opdracht/" title="Opdracht 5: CPU"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../900_zelfstudie_vhdl/" title="Zelfstudie VHDL" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../500_cpu/570_firmware/" title="Opdracht - firmware" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2728,19 +2731,19 @@ Er is een klein stukje code dat een <strong>clock</strong> genereert en een klei
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1711397935"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1711397935"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1711397935"></script>
-    <script src="../../js/jquery.sticky.js?1711397935"></script>
-    <script src="../../js/featherlight.min.js?1711397935"></script>
-    <script src="../../js/highlight.pack.js?1711397935"></script>
+    <script src="../../js/clipboard.min.js?1711400045"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1711400045"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1711400045"></script>
+    <script src="../../js/jquery.sticky.js?1711400045"></script>
+    <script src="../../js/featherlight.min.js?1711400045"></script>
+    <script src="../../js/highlight.pack.js?1711400045"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1711397935"></script>
-    <script src="../../js/learn.js?1711397935"></script>
-    <script src="../../js/hugo-learn.js?1711397935"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1711400045"></script>
+    <script src="../../js/learn.js?1711400045"></script>
+    <script src="../../js/hugo-learn.js?1711400045"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1711397935"></script>
+            <script src="../../mermaid/mermaid.js?1711400045"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
