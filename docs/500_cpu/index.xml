@@ -1,41 +1,111 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>5. CPU on Digitale Elektronische Schakelingen</title>
+    <title>5. Hack CPU on Digitale Elektronische Schakelingen</title>
     <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/</link>
-    <description>Recent content in 5. CPU on Digitale Elektronische Schakelingen</description>
+    <description>Recent content in 5. Hack CPU on Digitale Elektronische Schakelingen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
     <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster><atom:link href="https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Een CPU maken</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/010_intro_cpu/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/510_intro_cpu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/010_intro_cpu/</guid>
-      <description>De CPU die we maken heeft onderstaand schema. Bij de ingang van de ALU, de bovenkant (register D) is ALU ingang x en de onderkant is ALU ingang Y.
-Bron: nand2tetris </description>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/510_intro_cpu/</guid>
+      <description>Zoals in het begin van deze lessenreeks reeds vermeld, is het uiteindelijke doel het maken van een processor. De voorbij labo&amp;rsquo;s hebben de basis hiervoor gelegd. De volgende componenten, die jullie reeds gemaakt hebben, dienen samengebracht te worden:
+registers multiplexers een ALU een program counter De architectuur van de Central Processing Unit (CPU) die we voor ogen hebben is reeds ontworpen. Deze maakt deel uit van de Hack computer. Deze bevat, naast de cpu, ook 2 geheugens (1 voor instructies en 1 voor data), een toetsenbord en scherm (voor in- en output, resptievelijk) en (uiteraard) een clock.</description>
+    </item>
+    
+    <item>
+      <title>ISA</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/520_isa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/520_isa/</guid>
+      <description>ISA staat voor Instruction set architecture en beschrijft hoe instructies opgebouwd moeten worden zodat de CPU deze kan uitvoeren.
+Alle instructies zijn 16 bit breed. Er is de mogelijkheid om A instructies en C instructies te doen. A instructies dienen om een waarde in register A in te laden. C instructies doen het meeste andere werk. Alle informatie kan je ook terugvinden op de site van nand2tetris.</description>
+    </item>
+    
+    <item>
+      <title>A instructie</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/521_a_instructie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/521_a_instructie/</guid>
+      <description>Indien de MSB van een 16-bit instructie &amp;lsquo;0&amp;rsquo; is, dan wilt dit zeggen dat dit een A-instructie is. De overige 15 bits dienen vervolgens in het A register geladen te worden.
+Image courtesy: The Elements of Computing Systems - N. Nisan and S. Schocken In de screenshot hieronder wordt er ingezoomd op een klein stukje in de simulatie van een programma. Op iedere rising edge van de klok wordt er gekeken of de MSB een &amp;lsquo;0&amp;rsquo; is.</description>
+    </item>
+    
+    <item>
+      <title>C instructie</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/522_c_instructie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/522_c_instructie/</guid>
+      <description>Indien de MSB van een 16-bit instructie &amp;lsquo;1&amp;rsquo; is, dan wilt dit zeggen dat dit een C-instructie is. De overige 15 bits dienen als volgt geïnterpreteerd te worden: er zijn 3 velden die gekozen worden:
+een berekening (comp) welke aanduidt welke berekening gedaan dient te worden; een bestemming (dest) welke aanduidt waar het resultaat van de berekening opgeslagen dient te worden; een wat-hierna (jump) welke aanduidt naar waar de program counter moet veranderen, na de uitvoering van deze instuctie.</description>
+    </item>
+    
+    <item>
+      <title>C instructie - compute</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/523_c_instructie_comp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/523_c_instructie_comp/</guid>
+      <description>Indien de MSB van een 16-bit instructie &amp;lsquo;1&amp;rsquo; is, dan wilt dit zeggen dat dit een C-instructie is. De overige 15 bits dienen als volgt geïnterpreteerd te worden: er zijn 3 velden die gekozen worden:
+een berekening (comp) welke aanduidt welke berekening gedaan dient te worden; een bestemming (dest) welke aanduidt waar het resultaat van de berekening opgeslagen dient te worden; een wat-hierna (jump) welke aanduidt naar waar de program counter moet veranderen, na de uitvoering van deze instuctie.</description>
+    </item>
+    
+    <item>
+      <title>C instructie - destination</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/524_c_instructie_destination/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/524_c_instructie_destination/</guid>
+      <description>Indien de MSB van een 16-bit instructie &amp;lsquo;1&amp;rsquo; is, dan wilt dit zeggen dat dit een C-instructie is. De overige 15 bits dienen als volgt geïnterpreteerd te worden: er zijn 3 velden die gekozen worden:
+een berekening (comp) welke aanduidt welke berekening gedaan dient te worden; een bestemming (dest) welke aanduidt waar het resultaat van de berekening opgeslagen dient te worden; een wat-hierna (jump) welke aanduidt naar waar de program counter moet veranderen, na de uitvoering van deze instuctie.</description>
+    </item>
+    
+    <item>
+      <title>C instructie jump</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/525_c_instructie_jmp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/525_c_instructie_jmp/</guid>
+      <description>Indien de MSB van een 16-bit instructie &amp;lsquo;1&amp;rsquo; is, dan wilt dit zeggen dat dit een C-instructie is. De overige 15 bits dienen als volgt geïnterpreteerd te worden: er zijn 3 velden die gekozen worden:
+een berekening (comp) welke aanduidt welke berekening gedaan dient te worden; een bestemming (dest) welke aanduidt waar het resultaat van de berekening opgeslagen dient te worden; een wat-hierna (jump) welke aanduidt naar waar de program counter moet veranderen, na de uitvoering van deze instuctie.</description>
     </item>
     
     <item>
       <title>Opdracht 5: CPU</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/100_opdracht/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/550_opdracht/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/100_opdracht/</guid>
-      <description>De opdracht is om een CPU te maken met de hierboven besproken functies. Het is bedoeling dat je de ALU en de program counter gebruikt die je al hebt gemaakt.
-Alles is combinatorisch behalve de registers en de program counter.
-Bron: nand2tetris </description>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/550_opdracht/</guid>
+      <description>Voor deze opdracht hebben jullie tijd tot-en-met de laatste zitting. De bedoeling is om zelf de Hack CPU te maken. Je mag, maar dit is niet verplicht, eerder gebruikte code (voor ALU, program counter, &amp;hellip;) hergebruiken.
+Image courtesy: The Elements of Computing Systems - N. Nisan and S. Schocken </description>
     </item>
     
     <item>
-      <title>Opdracht testbench</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/110_testbench/</link>
+      <title>Opdracht - firmware</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/570_firmware/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/110_testbench/</guid>
-      <description>library IEEE; use IEEE.STD_LOGIC_1164.ALL; -- Uncomment the following library declaration if using -- arithmetic functions with Signed or Unsigned values --use IEEE.NUMERIC_STD.ALL; -- Uncomment the following library declaration if instantiating -- any Xilinx leaf cells in this code. --library UNISIM; --use UNISIM.VComponents.all; entity tb_cpu is -- Port ( ); end tb_cpu; architecture Behavioral of tb_cpu is component hack_cpu is Port (instruction, inM: in std_logic_vector(15 downto 0); clock, reset: in std_logic; outM, addressM, PC: out std_logic_vector(15 downto 0); writeM: out std_logic); end component; signal instruction, inM: std_logic_vector(15 downto 0); signal clock, reset: std_logic; signal outM, addressM, PC: std_logic_vector(15 downto 0); signal writeM: std_logic; constant clock_period : time := 10 ns; begin DUT: hack_cpu port map( instruction =&amp;gt; instruction, inM =&amp;gt; inM, clock =&amp;gt; clock, reset =&amp;gt; reset, outM =&amp;gt; outM, addressM =&amp;gt; addressM, PC =&amp;gt; PC, writeM =&amp;gt; writeM); CLK: process begin clock &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/2; clock &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period/2; end process; PSTIM: process begin instruction &amp;lt;= &amp;#34;0000000000000000&amp;#34;; inM &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/4; instruction &amp;lt;= &amp;#34;0000000000000000&amp;#34;; inM &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (PC = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; instruction &amp;lt;= &amp;#34;0000000000000010&amp;#34;; --load reg A inM &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; --111accccccdddjjj instruction &amp;lt;= &amp;#34;1--0110000011000&amp;#34;; --kopie naar reg D inM &amp;lt;= &amp;#34;----------------&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; assert (outM = &amp;#34;0000000000000010&amp;#34;) report &amp;#34;A register save and load werkt niet&amp;#34; severity failure; --111accccccdddjjj instruction &amp;lt;= &amp;#34;1--0010011011000&amp;#34;; --D-A = 0 inM &amp;lt;= &amp;#34;----------------&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/8; assert (outM = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;compute werkt niet&amp;#34; severity failure; --moet voor de stijgende flank van de clock gecheckd worden.</description>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/570_firmware/</guid>
+      <description>Ten slotte zijn hier nog enkele voorbeelden waarmee het instructie geheugen geïnitialiseerd kan worden. Let er op dat je de generic map zo aanpast dat de simulator een geldig pad heeft naar deze files op jouw computer/laptop.
+// predefined symbols // A: Address Register. // D: Data Register. // M: Refers to the register in Main Memory whose address is currently stored in A. // SP: RAM address 0. // LCL: RAM address 1.</description>
+    </item>
+    
+    <item>
+      <title>Opdracht - testbench</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/560_testbench/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/560_testbench/</guid>
+      <description>Zoals bij voorgaande opdrachten, wordt ook bij deze opdracht een testbench voorzien. Aangezien de DUT (device-under-test) iets complexer is, is de gebruikte testbench ook iets complexer.
+De gewoonlijke structuur is natuurlijk wel behouden: 1) libraries, 2) entity (zonder poorten), en 3) de architecture. Tussen de architecture en de begin staan de declaraties van signalen en componenten. Tussen de begin en end staat het ontwerp. Dit ontwerp staat hiernaast weergegeven. Er is een klein stukje code dat een clock genereert en een klein stukje code dat een reset genereert.</description>
     </item>
     
   </channel>

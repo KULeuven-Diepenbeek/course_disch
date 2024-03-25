@@ -1,0 +1,2753 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="../../images/favicon.png" type="image/png">
+
+    <title>Opdracht - testbench :: Digitale Elektronische Schakelingen</title>
+
+    
+    <link href="../../css/nucleus.css?1711397935" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1711397935" rel="stylesheet">
+    <link href="../../css/hybrid.css?1711397935" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1711397935" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1711397935" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1711397935" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1711397935" rel="stylesheet">
+    <link href="../../css/theme.css?1711397935" rel="stylesheet">
+    <link href="../../css/tabs.css?1711397935" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1711397935" rel="stylesheet">
+    
+    <link href="../../css/theme-kul.css?1711397935" rel="stylesheet">
+    
+    
+
+    <script src="../../js/jquery-3.3.1.min.js?1711397935"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="../../500_cpu/560_testbench/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="https://www.kuleuven.be/kuleuven/" target="_blank">
+  <img src="../../images/style/kul.png" alt="KU Leuven" /><br/>
+</a>
+<a href="https://www.uhasselt.be/" target="_blank">
+  <img src="../../images/style/uhasselt.svg" alt="UHasselt" id="uhlogo" />
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../js/lunr.min.js?1711397935"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1711397935"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
+    
+</script>
+<script type="text/javascript" src="../../js/search.js?1711397935"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/000_intro/" title="Introductie" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../000_intro/">
+          Introductie
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/001_software/" title="Ontwikkel omgeving" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../001_software/">
+          Ontwikkel omgeving
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/001_software/010_alternatief/" title="Alternatieve omgeving" class="dd-item ">
+        <a href="../../001_software/010_alternatief/">
+        Alternatieve omgeving
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/010_intro_vhdl/" title="1. Eerste project" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../010_intro_vhdl/">
+          1. Eerste project
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/010_eerste_project/" title="Eerste project" class="dd-item ">
+        <a href="../../010_intro_vhdl/010_eerste_project/">
+        <i class='fas fa-book'></i> Eerste project
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/020_nand/" title="NAND poort" class="dd-item ">
+        <a href="../../010_intro_vhdl/020_nand/">
+        <i class='fas fa-book'></i> NAND poort
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/025_and/" title="AND poort" class="dd-item ">
+        <a href="../../010_intro_vhdl/025_and/">
+        <i class='fas fa-book'></i> AND poort
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item ">
+        <a href="../../010_intro_vhdl/030_simulatie/">
+        <i class='fas fa-book'></i> Simulatie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/031_synthesisable/" title="Synthetiseerbaar" class="dd-item ">
+        <a href="../../010_intro_vhdl/031_synthesisable/">
+        <i class='fas fa-book'></i> Synthetiseerbaar
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/040_opdracht/" title="Opdracht 1: OR gate" class="dd-item ">
+        <a href="../../010_intro_vhdl/040_opdracht/">
+        <i class='fas fa-pen-square'></i> Opdracht 1: OR gate
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/200_next_step/" title="2. Volgende stap" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../200_next_step/">
+          2. Volgende stap
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_next_step/240_vectors/" title="Vectors" class="dd-item ">
+        <a href="../../200_next_step/240_vectors/">
+        <i class='fas fa-book'></i> Vectors
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_next_step/250_signals/" title="Signals" class="dd-item ">
+        <a href="../../200_next_step/250_signals/">
+        <i class='fas fa-book'></i> Signals
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_next_step/260_processen/" title="Processen" class="dd-item ">
+        <a href="../../200_next_step/260_processen/">
+        <i class='fas fa-book'></i> Processen
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_next_step/280_generate/" title="Generate" class="dd-item ">
+        <a href="../../200_next_step/280_generate/">
+        <i class='fas fa-book'></i> Generate
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_next_step/285_generic/" title="Generic" class="dd-item ">
+        <a href="../../200_next_step/285_generic/">
+        <i class='fas fa-book'></i> Generic
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_next_step/290_opdracht/" title="Opdracht 2: Ripple carry adder" class="dd-item ">
+        <a href="../../200_next_step/290_opdracht/">
+        <i class='fas fa-pen-square'></i> Opdracht 2: Ripple carry adder
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/300_alu/" title="3. ALU" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../300_alu/">
+          3. ALU
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_alu/310_intro_alu/" title="Wat is een ALU?" class="dd-item ">
+        <a href="../../300_alu/310_intro_alu/">
+        <i class='fas fa-book'></i> Wat is een ALU?
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_alu/315_2scompliment/" title="2&#39;s Compliment" class="dd-item ">
+        <a href="../../300_alu/315_2scompliment/">
+        <i class='fas fa-book'></i> 2&#39;s Compliment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_alu/320_status_codes/" title="Status codes ALU" class="dd-item ">
+        <a href="../../300_alu/320_status_codes/">
+        <i class='fas fa-book'></i> Status codes ALU
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_alu/330_opdracht_alu/" title="Opdracht 3: ALU" class="dd-item ">
+        <a href="../../300_alu/330_opdracht_alu/">
+        <i class='fas fa-pen-square'></i> Opdracht 3: ALU
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_alu/340_testbench_alu/" title="Oprdracht - testbench ALU" class="dd-item ">
+        <a href="../../300_alu/340_testbench_alu/">
+        <i class='fas fa-book'></i> Oprdracht - testbench ALU
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/400_sequentiele_logica/" title="4. Sequentiële logica" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../400_sequentiele_logica/">
+          4. Sequentiële logica
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/410_intro_sequentieel/" title="Intro Sequentiële logica" class="dd-item ">
+        <a href="../../400_sequentiele_logica/410_intro_sequentieel/">
+        <i class='fas fa-book'></i> Intro Sequentiële logica
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/420_registers/" title="Registers" class="dd-item ">
+        <a href="../../400_sequentiele_logica/420_registers/">
+        <i class='fas fa-book'></i> Registers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/400_sequentiele_logica/430_shift_registers/" title="Shift registers" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../400_sequentiele_logica/430_shift_registers/">
+          <i class='fas fa-book'></i> Shift registers
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/430_shift_registers/siso/" title="SISO" class="dd-item ">
+        <a href="../../400_sequentiele_logica/430_shift_registers/siso/">
+        <i class='fas fa-book'></i> SISO
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/430_shift_registers/piso/" title="PISO" class="dd-item ">
+        <a href="../../400_sequentiele_logica/430_shift_registers/piso/">
+        <i class='fas fa-book'></i> PISO
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/430_shift_registers/pipo/" title="PIPO" class="dd-item ">
+        <a href="../../400_sequentiele_logica/430_shift_registers/pipo/">
+        <i class='fas fa-book'></i> PIPO
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/430_shift_registers/sipo/" title="SIPO" class="dd-item ">
+        <a href="../../400_sequentiele_logica/430_shift_registers/sipo/">
+        <i class='fas fa-vial'></i> SIPO
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/440_reset/" title="Reset" class="dd-item ">
+        <a href="../../400_sequentiele_logica/440_reset/">
+        <i class='fas fa-book'></i> Reset
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/460_opdracht/" title="Opdracht 4: Program counter" class="dd-item ">
+        <a href="../../400_sequentiele_logica/460_opdracht/">
+        <i class='fas fa-pen-square'></i> Opdracht 4: Program counter
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/470_tb_opdracht/" title="Opdracht - testbench" class="dd-item ">
+        <a href="../../400_sequentiele_logica/470_tb_opdracht/">
+        <i class='fas fa-book'></i> Opdracht - testbench
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/500_cpu/" title="5. Hack CPU" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="../../500_cpu/">
+          5. Hack CPU
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/510_intro_cpu/" title="Een CPU maken" class="dd-item ">
+        <a href="../../500_cpu/510_intro_cpu/">
+        <i class='fas fa-book'></i> Een CPU maken
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/520_isa/" title="ISA" class="dd-item ">
+        <a href="../../500_cpu/520_isa/">
+        <i class='fas fa-book'></i> ISA
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/521_a_instructie/" title="A instructie" class="dd-item ">
+        <a href="../../500_cpu/521_a_instructie/">
+        <i class='fas fa-book'></i> A instructie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/522_c_instructie/" title="C instructie" class="dd-item ">
+        <a href="../../500_cpu/522_c_instructie/">
+        <i class='fas fa-book'></i> C instructie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/523_c_instructie_comp/" title="C instructie - compute" class="dd-item ">
+        <a href="../../500_cpu/523_c_instructie_comp/">
+        <i class='fas fa-book'></i> C instructie - compute
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/524_c_instructie_destination/" title="C instructie - destination" class="dd-item ">
+        <a href="../../500_cpu/524_c_instructie_destination/">
+        <i class='fas fa-book'></i> C instructie - destination
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/525_c_instructie_jmp/" title="C instructie jump" class="dd-item ">
+        <a href="../../500_cpu/525_c_instructie_jmp/">
+        <i class='fas fa-book'></i> C instructie jump
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/550_opdracht/" title="Opdracht 5: CPU" class="dd-item ">
+        <a href="../../500_cpu/550_opdracht/">
+        <i class='fas fa-pen-square'></i> Opdracht 5: CPU
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/570_firmware/" title="Opdracht - firmware" class="dd-item ">
+        <a href="../../500_cpu/570_firmware/">
+        <i class='fas fa-book'></i> Opdracht - firmware
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/560_testbench/" title="Opdracht - testbench" class="dd-item active">
+        <a href="../../500_cpu/560_testbench/">
+        <i class='fas fa-book'></i> Opdracht - testbench
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/900_zelfstudie_vhdl/" title="Zelfstudie VHDL" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../900_zelfstudie_vhdl/">
+          Zelfstudie VHDL
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/910_hw_vs_sw/" title="Hardware vs software" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/910_hw_vs_sw/">
+        <i class='fas fa-book'></i> Hardware vs software
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/920_ent_arch/" title="Entiteiten en architecturen" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/920_ent_arch/">
+        <i class='fas fa-book'></i> Entiteiten en architecturen
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/930_hierachie/" title="Hiërarchie" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/930_hierachie/">
+        <i class='fas fa-book'></i> Hiërarchie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/940_libraries/" title="Libraries" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/940_libraries/">
+        <i class='fas fa-book'></i> Libraries
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/950_arrays/" title="Arrays" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/950_arrays/">
+        <i class='fas fa-book'></i> Arrays
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/960_packages/" title="Packages" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/960_packages/">
+        <i class='fas fa-book'></i> Packages
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/970_processen/" title="Processen" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/970_processen/">
+        <i class='fas fa-book'></i> Processen
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/980_signalen_variablen/" title="Signalen vs. variabelen" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/980_signalen_variablen/">
+        <i class='fas fa-book'></i> Signalen vs. variabelen
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/990_flipflop_latch/" title="Flipflop en latches" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/990_flipflop_latch/">
+        <i class='fas fa-book'></i> Flipflop en latches
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/995_voorbeelden/" title="Voorbeelden" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/995_voorbeelden/">
+        <i class='fas fa-book'></i> Voorbeelden
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/997_lfsr/" title="Linear feedback shift register" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/997_lfsr/">
+        <i class='fas fa-book'></i> Linear feedback shift register
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://toledo.kuleuven.be/"><i class='fa fa-university'></i> Toledo</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../500_cpu/'>5. Hack CPU</a> > Opdracht - testbench
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Opdracht - testbench
+            </h1>
+          
+
+        
+
+
+<p>Zoals bij voorgaande opdrachten, wordt ook bij deze opdracht een testbench voorzien. Aangezien de DUT (device-under-test) iets complexer is, is de gebruikte testbench ook iets complexer.</p>
+<div class="multiHcolumn">
+<div class="column">
+    <p>De gewoonlijke structuur is natuurlijk wel behouden: <strong>1)</strong> libraries, <strong>2)</strong> entity (zonder poorten), en <strong>3)</strong> de architecture. Tussen de <strong>architecture</strong> en de <strong>begin</strong> staan de declaraties van signalen en componenten. Tussen de <strong>begin</strong> en <strong>end</strong> staat het <em>ontwerp</em>. Dit ontwerp staat hiernaast weergegeven. <br/><br/>
+Er is een klein stukje code dat een <strong>clock</strong> genereert en een klein stukje code dat een <strong>reset</strong> genereert.</p>
+<div class="notices tip" ><p>Ter herinnering &hellip; alles wordt in parallel uitgevoerd. Beide stukjes code (voor clock en reset) zijn <strong>tegelijk</strong> actief.</p>
+</div>
+<p>Uiteraard is er de <strong>instantiatie van de DUT</strong>. <br/><br/></p>
+<p>Tenslotte zijn er nog twee instantiaties van <strong>mem_model</strong>. Iets wat vaker gebeurt voor complexere blokken is dat er een <em>model</em> beschreven wordt. Dit model probeert de functionaliteit na te bootsen van een effectief hardware-blokje. In dit geval wordt er gebruikt gemaakt van een model voor het geheugen. Een geheugen heeft typisch de volgende poorten:</p>
+<ul>
+<li>(clock &amp; reset)</li>
+<li>binnenkomend adres</li>
+<li>binnenkomende data</li>
+<li>binnenkomend signaal dat aanduidt of het om een lees/schrijf operatie gaat</li>
+<li>buitengaande data</li>
+</ul>
+</div>    
+<div class="column">
+    <p><img src="../../images/cpu_tb_arch.png" alt="Testbench block diagram"></p>
+</div>    
+</div>
+<p>Dit model van een geheugen is zó beschreven dat het, tijdens reset, zichzelf initialiseert met de inhoud van een bestand. Om dit te kunnen maken, wordt er gebruik gemaakt van een speciale set van instructies uit VHDL. Dit is <strong>niet-synthetiseerbare</strong> code!! Bekijk deze code zeker eens in detail.</p>
+<p>Een ander stukje niet-synthetiseerbare code is het volgende:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> addr_int <span style="color:#f92672">:</span> <span style="color:#66d9ef">integer</span> <span style="color:#66d9ef">range</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> ((<span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>DATA_DEPTH_LOG2)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+</span></span></code></pre></div><p>Dit gebruikt de operatie &ldquo;machtsverheffing&rdquo;. De maximale waarde van de integer <strong>addr_int</strong> is (2<sup>DATA_DEPTH_LOG2</sup>-1). Dit is perfect acceptabel om te gebruiken in deze situatie, maar is geen alternatief voor de implementatie van een machtsverheffing in hardware!!</p>
+
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#75715e">--------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- KU Leuven - ESAT/COSIC - Emerging technologies, Systems &amp; Security</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Module Name:     cpu_tb - Behavioural</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Project Name:    Testbench for cpu</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Description:     </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Revision     Date       Author     Comments</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- v0.1         20240314   VlJo       Initial version</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- use IEEE.NUMERIC_STD.ALL;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">cpu_tb</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">cpu_tb</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioural</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">cpu_tb</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">cpu</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">port</span>(
+</span></span><span style="display:flex;"><span>            clock <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>            reset <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>            instruction <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            inM <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            outM <span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            PC <span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            addressM <span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            writeM <span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC</span>
+</span></span><span style="display:flex;"><span>        );
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">mem_model</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">generic</span> (
+</span></span><span style="display:flex;"><span>            DATA_WIDTH <span style="color:#f92672">:</span> <span style="color:#66d9ef">natural</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">16</span>;
+</span></span><span style="display:flex;"><span>            DATA_DEPTH_LOG2 <span style="color:#f92672">:</span> <span style="color:#66d9ef">natural</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>            FNAME <span style="color:#f92672">:</span> <span style="color:#66d9ef">string</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;data.dat&#34;</span>
+</span></span><span style="display:flex;"><span>        );
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">port</span> (
+</span></span><span style="display:flex;"><span>            reset <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>            clock <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>            ADDR <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(DATA_DEPTH_LOG2<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            WE <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>            WDATA <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(DATA_WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            RDATA <span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(DATA_WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        );
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> clock <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> reset <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> instruction <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> inM <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> outM <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> PC <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> addressM <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> writeM <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constant</span> zeroes <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">:=</span> <span style="color:#ae81ff">x&#34;0000&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constant</span> clock_period <span style="color:#f92672">:</span> <span style="color:#66d9ef">time</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">10</span> ns;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- DUT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    DUT<span style="color:#f92672">:</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">cpu</span> <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
+</span></span><span style="display:flex;"><span>        clock <span style="color:#f92672">=&gt;</span> clock,
+</span></span><span style="display:flex;"><span>        reset <span style="color:#f92672">=&gt;</span> reset,
+</span></span><span style="display:flex;"><span>        instruction <span style="color:#f92672">=&gt;</span> instruction,
+</span></span><span style="display:flex;"><span>        inM <span style="color:#f92672">=&gt;</span> inM,
+</span></span><span style="display:flex;"><span>        outM <span style="color:#f92672">=&gt;</span> outM,
+</span></span><span style="display:flex;"><span>        PC <span style="color:#f92672">=&gt;</span> PC,
+</span></span><span style="display:flex;"><span>        addressM <span style="color:#f92672">=&gt;</span> addressM,
+</span></span><span style="display:flex;"><span>        writeM <span style="color:#f92672">=&gt;</span> writeM
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- SIMULATION MODELS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    dmem<span style="color:#f92672">:</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">mem_model</span> <span style="color:#66d9ef">generic</span> <span style="color:#66d9ef">map</span>(
+</span></span><span style="display:flex;"><span>        FNAME <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;/home/jvliegen/vc/github/KULeuven-Diepenbeek/course_disch_internal/cpu/firmware/empty.dat&#34;</span>
+</span></span><span style="display:flex;"><span>    ) <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
+</span></span><span style="display:flex;"><span>        reset <span style="color:#f92672">=&gt;</span> reset,
+</span></span><span style="display:flex;"><span>        clock <span style="color:#f92672">=&gt;</span> clock,
+</span></span><span style="display:flex;"><span>        ADDR <span style="color:#f92672">=&gt;</span> addressM(<span style="color:#ae81ff">9</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>),
+</span></span><span style="display:flex;"><span>        WE <span style="color:#f92672">=&gt;</span> writeM,
+</span></span><span style="display:flex;"><span>        WDATA <span style="color:#f92672">=&gt;</span> outM,
+</span></span><span style="display:flex;"><span>        RDATA <span style="color:#f92672">=&gt;</span> inM
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    imem<span style="color:#f92672">:</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">mem_model</span> <span style="color:#66d9ef">generic</span> <span style="color:#66d9ef">map</span>(
+</span></span><span style="display:flex;"><span>        FNAME <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;/home/jvliegen/vc/github/KULeuven-Diepenbeek/course_disch_internal/cpu/firmware/firmware.dat&#34;</span>
+</span></span><span style="display:flex;"><span>    ) <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
+</span></span><span style="display:flex;"><span>        reset <span style="color:#f92672">=&gt;</span> reset,
+</span></span><span style="display:flex;"><span>        clock <span style="color:#f92672">=&gt;</span> clock,
+</span></span><span style="display:flex;"><span>        ADDR <span style="color:#f92672">=&gt;</span> PC(<span style="color:#ae81ff">9</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>),
+</span></span><span style="display:flex;"><span>        WE <span style="color:#f92672">=&gt;</span> zeroes(<span style="color:#ae81ff">0</span>),
+</span></span><span style="display:flex;"><span>        WDATA <span style="color:#f92672">=&gt;</span> zeroes,
+</span></span><span style="display:flex;"><span>        RDATA <span style="color:#f92672">=&gt;</span> instruction
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- CLOCK</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">PCLK</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        clock <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>        clock <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span> <span style="color:#a6e22e">PCLK</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- RESET</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">PRESET</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span> <span style="color:#66d9ef">for</span> clock_period<span style="color:#f92672">*</span><span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>        reset <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">wait</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span> <span style="color:#a6e22e">PRESET</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioural</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- MEM MODEL</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">use</span> IEEE.NUMERIC_STD.<span style="color:#66d9ef">ALL</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_MISC.or_reduce;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">use</span> STD.textio.<span style="color:#66d9ef">all</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">use</span> ieee.std_logic_textio.<span style="color:#66d9ef">all</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">mem_model</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">generic</span> (
+</span></span><span style="display:flex;"><span>        DATA_WIDTH <span style="color:#f92672">:</span> <span style="color:#66d9ef">natural</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">16</span>;
+</span></span><span style="display:flex;"><span>        DATA_DEPTH_LOG2 <span style="color:#f92672">:</span> <span style="color:#66d9ef">natural</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>        FNAME <span style="color:#f92672">:</span> <span style="color:#66d9ef">string</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;data.dat&#34;</span>
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span> (
+</span></span><span style="display:flex;"><span>        reset <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>        clock <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>        ADDR <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(DATA_DEPTH_LOG2<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        WE <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>        WDATA <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(DATA_WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        RDATA <span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(DATA_WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">mem_model</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioural</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">mem_model</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- localised inputs</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> reset_i <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> clock_i <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> ADDR_i <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(DATA_DEPTH_LOG2<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> WE_i <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> WDATA_i <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(DATA_WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> RDATA_i <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(DATA_WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">file</span> fh <span style="color:#f92672">:</span> text;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">type</span> T_memory <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">array</span>(<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> (<span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>DATA_DEPTH_LOG2)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">of</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(DATA_WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> mem <span style="color:#f92672">:</span> T_memory;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> outgoing_data <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(DATA_WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> addr_int <span style="color:#f92672">:</span> <span style="color:#66d9ef">integer</span> <span style="color:#66d9ef">range</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> ((<span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>DATA_DEPTH_LOG2)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- (DE-)LOCALISING IN/OUTPUTS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    reset_i <span style="color:#f92672">&lt;=</span> reset;
+</span></span><span style="display:flex;"><span>    clock_i <span style="color:#f92672">&lt;=</span> clock;
+</span></span><span style="display:flex;"><span>    ADDR_i <span style="color:#f92672">&lt;=</span> ADDR;
+</span></span><span style="display:flex;"><span>    WE_i <span style="color:#f92672">&lt;=</span> WE;
+</span></span><span style="display:flex;"><span>    WDATA_i <span style="color:#f92672">&lt;=</span> WDATA;
+</span></span><span style="display:flex;"><span>    RDATA <span style="color:#f92672">&lt;=</span> RDATA_i;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- COMBINATORIAL</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    RDATA_i <span style="color:#f92672">&lt;=</span> mem(addr_int);
+</span></span><span style="display:flex;"><span>    addr_int <span style="color:#f92672">&lt;=</span> to_integer(<span style="color:#66d9ef">unsigned</span>(ADDR_i));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- MEMORY</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">PMEM</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(reset_i, clock_i)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">variable</span> v_line <span style="color:#f92672">:</span> line;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">variable</span> v_temp <span style="color:#f92672">:</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(DATA_WIDTH<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">variable</span> v_pointer <span style="color:#f92672">:</span> <span style="color:#66d9ef">integer</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> reset_i <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span> 
+</span></span><span style="display:flex;"><span>            outgoing_data <span style="color:#f92672">&lt;=</span> (<span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;0&#39;</span>);
+</span></span><span style="display:flex;"><span>            mem <span style="color:#f92672">&lt;=</span> (<span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span> (<span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;0&#39;</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- init the firmware</span>
+</span></span><span style="display:flex;"><span>            v_pointer <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>            file_open(fh, FNAME, read_mode);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">not</span> endfile(fh) <span style="color:#66d9ef">loop</span>
+</span></span><span style="display:flex;"><span>                readline(fh, v_line);
+</span></span><span style="display:flex;"><span>                read(v_line, v_temp);
+</span></span><span style="display:flex;"><span>                mem(v_pointer) <span style="color:#f92672">&lt;=</span> v_temp;
+</span></span><span style="display:flex;"><span>                v_pointer <span style="color:#f92672">:=</span> v_pointer <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">loop</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            file_close(fh);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elsif</span> rising_edge(clock_i) <span style="color:#66d9ef">then</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- write to memory</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> WE_i <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span> 
+</span></span><span style="display:flex;"><span>                mem(addr_int) <span style="color:#f92672">&lt;=</span> WDATA_i;
+</span></span><span style="display:flex;"><span>                outgoing_data <span style="color:#f92672">&lt;=</span> (<span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;0&#39;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">-- read from memory </span>
+</span></span><span style="display:flex;"><span>                outgoing_data <span style="color:#f92672">&lt;=</span> mem(addr_int);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioural</span>;
+</span></span></code></pre></div>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../500_cpu/570_firmware/" title="Opdracht - firmware"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../900_zelfstudie_vhdl/" title="Zelfstudie VHDL" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../js/clipboard.min.js?1711397935"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1711397935"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1711397935"></script>
+    <script src="../../js/jquery.sticky.js?1711397935"></script>
+    <script src="../../js/featherlight.min.js?1711397935"></script>
+    <script src="../../js/highlight.pack.js?1711397935"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1711397935"></script>
+    <script src="../../js/learn.js?1711397935"></script>
+    <script src="../../js/hugo-learn.js?1711397935"></script>
+    
+        
+            <script src="../../mermaid/mermaid.js?1711397935"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+
