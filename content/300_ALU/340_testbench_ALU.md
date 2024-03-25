@@ -1,5 +1,5 @@
 ---
-title: 'Testbench ALU'
+title: 'Oprdracht - testbench ALU'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
 weight: 340
