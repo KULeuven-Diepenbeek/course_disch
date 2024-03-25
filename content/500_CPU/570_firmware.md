@@ -1,7 +1,7 @@
 ---
 title: 'Opdracht - firmware'
 chapter: false
-weight: 560
+weight: 570
 pre: "<i class='fas fa-book'></i> "
 draft: false
 ---
