@@ -120,7 +120,8 @@ begin
     PRESET: process
     begin
         reset <= '1';
-        wait for clock_period*10;
+        wait for clock_period*9;
+        wait for clock_period/2;
         reset <= '0';
         wait;
     end process PRESET;
@@ -181,14 +182,15 @@ begin
     -------------------------------------------------------------------------------
     reset_i <= reset;
     clock_i <= clock;
-    ADDR_i <= ADDR;
-    WE_i <= WE;
-    WDATA_i <= WDATA;
+    ADDR_i <= ADDR after 1 ns;
+    WE_i <= WE after 1 ns;
+    WDATA_i <= WDATA after 1 ns;
     RDATA <= RDATA_i;
     
     -------------------------------------------------------------------------------
     -- COMBINATORIAL
     -------------------------------------------------------------------------------
+    -- RDATA_i <= outgoing_data;
     RDATA_i <= mem(addr_int);
     addr_int <= to_integer(unsigned(ADDR_i));
 
@@ -210,6 +212,7 @@ begin
 
             while not endfile(fh) loop
                 readline(fh, v_line);
+                -- hread(v_line, v_temp);
                 read(v_line, v_temp);
                 mem(v_pointer) <= v_temp;
                 v_pointer := v_pointer + 1;
