@@ -52,7 +52,7 @@ Om de instructie uit te voeren, wordt er gebruik gemaakt van de **ALU**. Deze he
 
 Omdat er soms meer geheugen nodig is om bewerkingen te kunnen doen en omdat er *randapparatuur* aanwezig is, is er nog een data geheugen (**RAM**) aanwezig. Instructies die uitgevoerd worden kunnen hun inputs hieruit halen en/of hun resultaat hiernaar schrijven. De breedte van deze RAM is dan ook 16 bits. Een eenvoudige manier om de randapparatuur te gebruiken is om deze een sectie uit het RAM geheugen toe te kennen. Aangezien er 2 *toestellen* zijn, zijn er ook 2 vast-gedefinieerde regio's hiervoor:
 
-* **0x4000-0x5FFFF** Deze ruimte in de RAM (of "werkgeheugen") is gereserveerd voor het scherm;
+* **0x4000-0x5FFF** Deze ruimte in de RAM (of "werkgeheugen") is gereserveerd voor het scherm;
 * **0x6000** Dit adres is gereserveerd voor het toetsenbord.
 
 Tenslotte, na het ophalen en uitvoeren van een instructie, dient de program counter aangepast te worden naar de volgende instructie.
