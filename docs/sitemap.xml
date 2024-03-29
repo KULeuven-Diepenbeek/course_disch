@@ -17,14 +17,23 @@
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/010_eerste_project/</loc>
     <lastmod>2024-02-26T14:35:17+01:00</lastmod>
   </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/910_zelfstudie_fsm/010_fsm/</loc>
+    <lastmod>2023-05-02T10:56:06+02:00</lastmod>
+  </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/020_nand/</loc>
     <lastmod>2024-02-26T09:57:25+01:00</lastmod>
+  </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/910_zelfstudie_fsm/020_voorbeeld_verkeerslicht/</loc>
+    <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/025_and/</loc>
     <lastmod>2024-02-26T09:57:25+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/030_simulatie/</loc>
     <lastmod>2024-02-26T09:57:25+01:00</lastmod>
+  </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/910_zelfstudie_fsm/030_voorbeeld_timer/</loc>
+    <lastmod>2023-05-02T10:56:06+02:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/010_intro_vhdl/031_synthesisable/</loc>
     <lastmod>2024-01-18T12:57:55+01:00</lastmod>
@@ -108,7 +117,7 @@
     <lastmod>2024-03-25T21:19:39+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/510_intro_cpu/</loc>
-    <lastmod>2024-03-25T21:19:39+01:00</lastmod>
+    <lastmod>2024-03-27T08:28:47+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/520_isa/</loc>
     <lastmod>2024-03-25T21:19:39+01:00</lastmod>
@@ -142,6 +151,9 @@
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/910_hw_vs_sw/</loc>
     <lastmod>2024-03-12T08:44:01+01:00</lastmod>
+  </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/910_zelfstudie_fsm/</loc>
+    <lastmod>2024-02-26T14:35:17+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/920_ent_arch/</loc>
     <lastmod>2024-03-12T08:44:01+01:00</lastmod>

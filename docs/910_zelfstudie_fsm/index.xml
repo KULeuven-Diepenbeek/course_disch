@@ -14,9 +14,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/910_zelfstudie_fsm/010_fsm/</guid>
-      <description>Een FSM is een controle structuur die zich in een eindig aantal toestanden kan bevinden. Onder invloed van ingangssignalen kan een FSM overgaan naar een andere toestand. In elke toestand wordt er een waarde toegekend aan de uitgangssignalen. De toestand wordt opgeslagen in een toestandsregister.
-Voorbeeld FSM De meest eenvoudige FSM is een teller. Er is geen enkel ingangssignaal en de uitgang is de waarde van de toestand.
-Een eerste ingangssignaal dat de telcyclus kan beïnvloeden, is een enable signaal.</description>
+      <description>Een FSM is een controle structuur die zich in een eindig aantal toestanden kan bevinden. Onder invloed van ingangssignalen kan een FSM overgaan naar één bepaalde toestand één andere toestand. In elke toestand wordt er een waarde toegekend aan de uitgangssignalen. De toestand wordt opgeslagen in een toestandsregister.
+Voorbeeld FSM De meest eenvoudige FSM is een teller. Er is geen enkel ingangssignaal en de uitgang is de waarde van de toestand.</description>
     </item>
     
     <item>

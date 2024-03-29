@@ -2,7 +2,7 @@
 title: 'Zelfstudie FSM'
 chapter: true
 weight: 910
-draft: true
+draft: false
 ---
 
 # Zelfstudie FSM
