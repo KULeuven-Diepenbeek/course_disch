@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tuning on Digitale Elektronische Schakelingen</title>
+    <link>https://kuleuven-diepenbeek.github.io/course_disch/920_tuning/</link>
+    <description>Recent content in Tuning on Digitale Elektronische Schakelingen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster><atom:link href="https://kuleuven-diepenbeek.github.io/course_disch/920_tuning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tuning</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/920_tuning/921_tuning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/920_tuning/921_tuning/</guid>
+      <description>De latency is de tijd die er nodig is tussen het starten van een operatie en het verkrijgen van het resultaat.
+De throughput is de hoeveelheid bits die een operatie verwerkt in een gegeven tijdseenheid.
+De cost is de kost van een ontwerp. Hoe meer componenten, hoe meer oppervlakte er ingenomen wordt op chip, en hoe duurder het ontwerp wordt.
+Het kritische pad is het langste combinatorische pad tussen 2 registers/flip-flops.</description>
+    </item>
+    
+  </channel>
+</rss>
