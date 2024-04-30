@@ -431,14 +431,25 @@ een lijst van de gebruikte bibliotheken, interface beschrijving: entity, functie
     
     <item>
       <title>Tuning</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/920_tuning/921_tuning/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/920_extras/921_tuning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/920_tuning/921_tuning/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/920_extras/921_tuning/</guid>
       <description>De latency is de tijd die er nodig is tussen het starten van een operatie en het verkrijgen van het resultaat.
 De throughput is de hoeveelheid bits die een operatie verwerkt in een gegeven tijdseenheid.
 De cost is de kost van een ontwerp. Hoe meer componenten, hoe meer oppervlakte er ingenomen wordt op chip, en hoe duurder het ontwerp wordt.
 Het kritische pad is het langste combinatorische pad tussen 2 registers/flip-flops.</description>
+    </item>
+    
+    <item>
+      <title>Tips &amp; Tricks</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/920_extras/922_tips_and_tricks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/920_extras/922_tips_and_tricks/</guid>
+      <description>Signaal verkorten to 1CC Soms is het handig om signalen te verkorten. Een stuursignaal kan, bijvoorbeeld, enkele clock cycles hoog zijn. De hardware echter verwacht een hoog signaal dat precies 1 clock cycle duurt.
+Van zodra je begint te denken &amp;ldquo;nu moet dit zijn en daarvoor moest dat zijn &amp;hellip; FF-tijd.
+-- entity -- architecture signal input_d : STD_LOGIC; -- begin PREG: process(clock_i) begin if rising_edge(clock_i) then input_d &amp;lt;= input_i; end if; end process; output_i &amp;lt;= input_i AND not(input_d); -- end architecture &amp;lsquo;Default&amp;rsquo; waardes bij een MUX Het is uiterst belangrijk dat bij een MUX ALLE outputs een waarde toegekend krijgen, voor elke mogelijke conditie!</description>
     </item>
     
     <item>
