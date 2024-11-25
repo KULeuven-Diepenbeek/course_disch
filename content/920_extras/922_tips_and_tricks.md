@@ -53,7 +53,6 @@ In deze twee voorbeelden is er in de beschrijving gezorgd dat **voor alle mogeli
 
 ### Power to the editor
 
-
 {{% multiHcolumn %}}
 {{% column %}}
 **VHDL** is een expliciete taal. Er moet veel code geschreven worden, als we het aantal "karakters" tellen in een beschrijving. <br/><br/>
@@ -91,3 +90,51 @@ Het loont écht de moeite om jezelf goed vertrouwd te maken met 1 editor. Dit so
 ```
 {{% /column %}}
 {{% /multiHcolumn %}}
+
+### Automating (Vivado)
+
+Zij, die deze labo's met Vivado gedaan hebben, hebben misschien al gemerkt dat deze tool niet altijd helemaal werkt zoals dat verwacht wordt. Een tip is om zo weinig mogelijk **manueel werk** te doen. Het is je misschien al opgevallen dat er een [TCL](https://en.wikipedia.org/wiki/Tcl) console is. Hiermee kan de tool ook bediend worden met commando's in plaats van met manuele muiskliks.
+
+Een project aanmaken voor het PYNQ ontwikkelbord vergt **10 muiskliks en 1 tekst-veld** manipulatie. Wanneer je naar de TCL console kijkt, zie iets (analoog aan) zoals hieronder. De regels die in het blauw staan, zijn TCL-commandos.
+
+![vivado_tcl](/images/920_extras/vivado_tcl.png)
+
+Je kan dus, als alternatief voor als een bezetene rond te klikken, ook deze commando's uitvoeren. Het resultaat is exact hetzelfde. Aangezien we al genoeg typwerk hebben, is het nog interessanter om een klein *script* te maken waarin deze commando's staan.
+
+{{< include_file "/static/hdlsrc/900/example.tcl" "tcl" >}}
+
+Als we er van uitgaan dat deze TCL-file te vinden is op: **/home/username/myscript.tcl**, dan volstaat in om in de TCL console van Vivado te typen:
+```tcl
+source /home/username/myscript.tcl
+```
+{{% notice tip %}}
+Hou de TCL console in de gaten. Je kan, voor elke actie die je in Vivado doet, de commando's die uitgevoerd worden kopiëren in het TCL script.<br/><br/>
+Die-hards kunnen zelfs beginnen programmeren, zodat je één generiek TCL-script krijgt dat parameteriseerbaar is.
+{{% /notice %}}
+
+```tcl
+# set parameters
+set pname "this_is_my_project_name"
+set srcpath "/home/jvliegen/vc/github/KULeuven-Diepenbeek/course_disch/tcl"
+set projpath "/home/jvliegen/sandbox/course_hdisch"
+set part "xc7vx485tffg1761-2"
+set board "xilinx.com:vc707:part0:1.3"
+
+# delete older versions
+cd $projpath
+exec rm -Rf $pname
+
+# create project
+create_project $pname $projpath/$pname -part $part
+set_property board_part $board [current_project]
+set_property target_language VHDL [current_project]
+
+# add VHDL source files
+set fnames [glob -directory $srcpath -- "*.vhd"]
+foreach fname $fnames {
+    add_files $fname
+}
+```
+
+
+
