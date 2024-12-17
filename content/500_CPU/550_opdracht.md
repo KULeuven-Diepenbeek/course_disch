@@ -6,7 +6,7 @@ weight: 550
 draft: false
 ---
 
-Voor deze opdracht hebben jullie tijd tot-en-met de laatste zitting. De bedoeling is om zelf de **Hack CPU** te maken. Je mag, maar dit is niet verplicht, eerder gebruikte code (voor ALU, program counter, ...) hergebruiken.
+Voor deze opdracht is het de bedoeling om zelf de **Hack CPU** te maken. Je mag, maar dit is niet verplicht, eerder gebruikte code (voor ALU, program counter, ...) hergebruiken.
 
 ![hack CPU](/images/hack_cpu.png)
 {{< image_courtesy 
