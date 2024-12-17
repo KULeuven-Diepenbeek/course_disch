@@ -7,57 +7,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
-    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster><atom:link href="https://kuleuven-diepenbeek.github.io/course_disch/300_alu/index.xml" rel="self" type="application/rss+xml" />
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
+    <atom:link href="https://kuleuven-diepenbeek.github.io/course_disch/300_alu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wat is een ALU?</title>
       <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/310_intro_alu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/310_intro_alu/</guid>
-      <description>Het doel van dit labo is om uiteindelijk een werkende microprocessor te maken, ook al is het in een simpele vorm. Het doel is om de hack processor te maken van de cursus nand2tetris. In dit OPO gaan we de beschrijving uiteraard wel maken in VHDL.
-Eén van de componenten die in iedere processor zit is een Arithmetic Logic Unit (ALU). Een ALU neemt 2 (of 1) input(s) en voert hier een bepaalde instructie mee uit.</description>
+      <description>Het doel van dit labo is om uiteindelijk een werkende microprocessor te maken, ook al is het in een simpele vorm. Het doel is om de hack processor te maken van de cursus nand2tetris. In dit OPO gaan we de beschrijving uiteraard wel maken in VHDL.&#xA;Eén van de componenten die in iedere processor zit is een Arithmetic Logic Unit (ALU). Een ALU neemt 2 (of 1) input(s) en voert hier een bepaalde instructie mee uit.</description>
     </item>
-    
     <item>
       <title>2&#39;s Compliment</title>
       <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/315_2scompliment/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/315_2scompliment/</guid>
-      <description>ℕ Gezien je voor een richting electronica gekozen hebt, gaan we er van uit dat je geen schrik hebt van binaire getallen. Hopelijk zie je dat 0b1010 hetzelfde is als 0xA, of tien zoals men in de volksmond zegt. Hieronder vind je nog een overzichtstabel voor de eerste 16 natuurlijke getallen.
-DecBinHexDecBinHexDecBinHexDecBinHex 00b00x0 40b1000x4 80b10000x8 120b11000xC 10b10x1 50b1010x5 90b10010x9 130b11010xD 20b100x2 60b1100x6 100b10100xA 140b11100xE 30b110x3 70b1110x7 110b10110xB 150b11110xF Merk op dat alle 16 mogelijkheden binair te vervatten zijn in 4 tekens (=digits).</description>
+      <description>ℕ Gezien je voor een richting electronica gekozen hebt, gaan we er van uit dat je geen schrik hebt van binaire getallen. Hopelijk zie je dat 0b1010 hetzelfde is als 0xA, of tien zoals men in de volksmond zegt. Hieronder vind je nog een overzichtstabel voor de eerste 16 natuurlijke getallen.&#xA;DecBinHexDecBinHexDecBinHexDecBinHex 00b00x0 40b1000x4 80b10000x8 120b11000xC 10b10x1 50b1010x5 90b10010x9 130b11010xD 20b100x2 60b1100x6 100b10100xA 140b11100xE 30b110x3 70b1110x7 110b10110xB 150b11110xF Merk op dat alle 16 mogelijkheden binair te vervatten zijn in 4 tekens (=digits).</description>
     </item>
-    
     <item>
       <title>Status codes ALU</title>
       <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/320_status_codes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/320_status_codes/</guid>
-      <description>De ALU gaat dus een arithmetische of logische instructie uitvoeren.
-In werkelijkheid gaat men niet rechtstreeks instructies aan een ALU geven, maar meer de status wat de ALU moet hebben.
-Onze ALU heeft 2 ingang van 16-bit registers. Onze ALU geeft ook status codes uit die we later in de processor nog gebruiken. </description>
+      <description>De ALU gaat dus een arithmetische of logische instructie uitvoeren.&#xA;In werkelijkheid gaat men niet rechtstreeks instructies aan een ALU geven, maar meer de status wat de ALU moet hebben.&#xA;Onze ALU heeft 2 ingang van 16-bit registers. Onze ALU geeft ook status codes uit die we later in de processor nog gebruiken. </description>
     </item>
-    
     <item>
       <title>Opdracht 3: ALU</title>
       <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/330_opdracht_alu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/330_opdracht_alu/</guid>
-      <description>De ALU die je moet maken voor deze opdracht ziet er uit zoals hieronder afgebeeld:
-Ingangen x en y zijn 16 bits; De input status bits zijn: zx (zero x) nx (negate x) zy (zero y) ny (negate y) f (function) no (negate output) De output status zijn: zr (zero) ng (negative). Later zetten we de input status code juist op basis van de binnenkomende instructie en optioneel doen we iets met de output status codes.</description>
+      <description>De ALU die je moet maken voor deze opdracht ziet er uit zoals hieronder afgebeeld:&#xA;Ingangen x en y zijn 16 bits; De input status bits zijn: zx (zero x) nx (negate x) zy (zero y) ny (negate y) f (function) no (negate output) De output status zijn: zr (zero) ng (negative). Later zetten we de input status code juist op basis van de binnenkomende instructie en optioneel doen we iets met de output status codes.</description>
     </item>
-    
     <item>
       <title>Oprdracht - testbench ALU</title>
       <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/340_testbench_alu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/340_testbench_alu/</guid>
-      <description>De testbench om te testen of de ALU werkt kan hier gedownload worden. Deze testbench is, zoals je misschien al vermoedde, gegenereerd. Voor de verbetering van de opdracht wordt een soortgelijke testbench gebruikt.
--------------------------------------------------------------------------------- -- KU Leuven - ESAT/COSIC - Emerging technologies, Systems &amp;amp; Security -------------------------------------------------------------------------------- -- Module Name: alu_tb - Behavioural -- Project Name: Testbench for alu -- Description: -- -- Revision Date Author Comments -- v0.1 20240312 VlJo Initial version -- -------------------------------------------------------------------------------- library IEEE; use IEEE.</description>
+      <description>De testbench om te testen of de ALU werkt kan hier gedownload worden. Deze testbench is, zoals je misschien al vermoedde, gegenereerd. Voor de verbetering van de opdracht wordt een soortgelijke testbench gebruikt.&#xA;-------------------------------------------------------------------------------- -- KU Leuven - ESAT/COSIC - Emerging technologies, Systems &amp;amp; Security -------------------------------------------------------------------------------- -- Module Name: alu_tb - Behavioural -- Project Name: Testbench for alu -- Description: -- -- Revision Date Author Comments -- v0.1 20240312 VlJo Initial version -- -------------------------------------------------------------------------------- library IEEE; use IEEE.</description>
     </item>
-    
   </channel>
 </rss>

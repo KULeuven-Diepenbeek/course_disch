@@ -1,0 +1,2976 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="../../images/favicon.png" type="image/png">
+
+    <title>Opdracht 6: CPU v2 :: Digitale Elektronische Schakelingen</title>
+
+    
+    <link href="../../css/nucleus.css?1734444549" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1734444549" rel="stylesheet">
+    <link href="../../css/hybrid.css?1734444549" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1734444549" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1734444549" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1734444549" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1734444549" rel="stylesheet">
+    <link href="../../css/theme.css?1734444549" rel="stylesheet">
+    <link href="../../css/tabs.css?1734444549" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1734444549" rel="stylesheet">
+    
+    <link href="../../css/theme-kul.css?1734444549" rel="stylesheet">
+    
+    
+
+    <script src="../../js/jquery-3.3.1.min.js?1734444549"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="../../600_mult/640_opdracht/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="https://www.kuleuven.be/kuleuven/" target="_blank">
+  <img src="../../images/style/kul.png" alt="KU Leuven" /><br/>
+</a>
+<a href="https://www.uhasselt.be/" target="_blank">
+  <img src="../../images/style/uhasselt.svg" alt="UHasselt" id="uhlogo" />
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../js/lunr.min.js?1734444549"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1734444549"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
+    
+</script>
+<script type="text/javascript" src="../../js/search.js?1734444549"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/000_intro/" title="Introductie" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../000_intro/">
+          Introductie
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/001_software/" title="Ontwikkel omgeving" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../001_software/">
+          Ontwikkel omgeving
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/001_software/010_alternatief/" title="Alternatieve omgeving" class="dd-item ">
+        <a href="../../001_software/010_alternatief/">
+        Alternatieve omgeving
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/010_intro_vhdl/" title="1. Eerste project" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../010_intro_vhdl/">
+          1. Eerste project
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/010_eerste_project/" title="Eerste project" class="dd-item ">
+        <a href="../../010_intro_vhdl/010_eerste_project/">
+        <i class='fas fa-book'></i> Eerste project
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/020_nand/" title="NAND poort" class="dd-item ">
+        <a href="../../010_intro_vhdl/020_nand/">
+        <i class='fas fa-book'></i> NAND poort
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/025_and/" title="AND poort" class="dd-item ">
+        <a href="../../010_intro_vhdl/025_and/">
+        <i class='fas fa-book'></i> AND poort
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/030_simulatie/" title="Simulatie" class="dd-item ">
+        <a href="../../010_intro_vhdl/030_simulatie/">
+        <i class='fas fa-book'></i> Simulatie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/031_synthesisable/" title="Synthetiseerbaar" class="dd-item ">
+        <a href="../../010_intro_vhdl/031_synthesisable/">
+        <i class='fas fa-book'></i> Synthetiseerbaar
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro_vhdl/040_opdracht/" title="Opdracht 1: OR gate" class="dd-item ">
+        <a href="../../010_intro_vhdl/040_opdracht/">
+        <i class='fas fa-pen-square'></i> Opdracht 1: OR gate
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/200_next_step/" title="2. Volgende stap" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../200_next_step/">
+          2. Volgende stap
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_next_step/240_vectors/" title="Vectors" class="dd-item ">
+        <a href="../../200_next_step/240_vectors/">
+        <i class='fas fa-book'></i> Vectors
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_next_step/250_signals/" title="Signals" class="dd-item ">
+        <a href="../../200_next_step/250_signals/">
+        <i class='fas fa-book'></i> Signals
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_next_step/260_processen/" title="Processen" class="dd-item ">
+        <a href="../../200_next_step/260_processen/">
+        <i class='fas fa-book'></i> Processen
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_next_step/280_generate/" title="Generate" class="dd-item ">
+        <a href="../../200_next_step/280_generate/">
+        <i class='fas fa-book'></i> Generate
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_next_step/285_generic/" title="Generic" class="dd-item ">
+        <a href="../../200_next_step/285_generic/">
+        <i class='fas fa-book'></i> Generic
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_next_step/290_opdracht/" title="Opdracht 2: Ripple carry adder" class="dd-item ">
+        <a href="../../200_next_step/290_opdracht/">
+        <i class='fas fa-pen-square'></i> Opdracht 2: Ripple carry adder
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/300_alu/" title="3. ALU" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../300_alu/">
+          3. ALU
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_alu/310_intro_alu/" title="Wat is een ALU?" class="dd-item ">
+        <a href="../../300_alu/310_intro_alu/">
+        <i class='fas fa-book'></i> Wat is een ALU?
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_alu/315_2scompliment/" title="2&#39;s Compliment" class="dd-item ">
+        <a href="../../300_alu/315_2scompliment/">
+        <i class='fas fa-book'></i> 2&#39;s Compliment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_alu/320_status_codes/" title="Status codes ALU" class="dd-item ">
+        <a href="../../300_alu/320_status_codes/">
+        <i class='fas fa-book'></i> Status codes ALU
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_alu/330_opdracht_alu/" title="Opdracht 3: ALU" class="dd-item ">
+        <a href="../../300_alu/330_opdracht_alu/">
+        <i class='fas fa-pen-square'></i> Opdracht 3: ALU
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_alu/340_testbench_alu/" title="Oprdracht - testbench ALU" class="dd-item ">
+        <a href="../../300_alu/340_testbench_alu/">
+        <i class='fas fa-book'></i> Oprdracht - testbench ALU
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/400_sequentiele_logica/" title="4. Sequentiële logica" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../400_sequentiele_logica/">
+          4. Sequentiële logica
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/410_intro_sequentieel/" title="Intro Sequentiële logica" class="dd-item ">
+        <a href="../../400_sequentiele_logica/410_intro_sequentieel/">
+        <i class='fas fa-book'></i> Intro Sequentiële logica
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/420_registers/" title="Registers" class="dd-item ">
+        <a href="../../400_sequentiele_logica/420_registers/">
+        <i class='fas fa-book'></i> Registers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/400_sequentiele_logica/430_shift_registers/" title="Shift registers" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../400_sequentiele_logica/430_shift_registers/">
+          <i class='fas fa-book'></i> Shift registers
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/430_shift_registers/siso/" title="SISO" class="dd-item ">
+        <a href="../../400_sequentiele_logica/430_shift_registers/siso/">
+        <i class='fas fa-book'></i> SISO
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/430_shift_registers/piso/" title="PISO" class="dd-item ">
+        <a href="../../400_sequentiele_logica/430_shift_registers/piso/">
+        <i class='fas fa-book'></i> PISO
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/430_shift_registers/pipo/" title="PIPO" class="dd-item ">
+        <a href="../../400_sequentiele_logica/430_shift_registers/pipo/">
+        <i class='fas fa-book'></i> PIPO
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/430_shift_registers/sipo/" title="SIPO" class="dd-item ">
+        <a href="../../400_sequentiele_logica/430_shift_registers/sipo/">
+        <i class='fas fa-vial'></i> SIPO
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/440_reset/" title="Reset" class="dd-item ">
+        <a href="../../400_sequentiele_logica/440_reset/">
+        <i class='fas fa-book'></i> Reset
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/460_opdracht/" title="Opdracht 4: Program counter" class="dd-item ">
+        <a href="../../400_sequentiele_logica/460_opdracht/">
+        <i class='fas fa-pen-square'></i> Opdracht 4: Program counter
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/470_tb_opdracht/" title="Opdracht - testbench" class="dd-item ">
+        <a href="../../400_sequentiele_logica/470_tb_opdracht/">
+        <i class='fas fa-book'></i> Opdracht - testbench
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/500_cpu/" title="5. Hack CPU" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../500_cpu/">
+          5. Hack CPU
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/510_intro_cpu/" title="Een CPU maken" class="dd-item ">
+        <a href="../../500_cpu/510_intro_cpu/">
+        <i class='fas fa-book'></i> Een CPU maken
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/520_isa/" title="ISA" class="dd-item ">
+        <a href="../../500_cpu/520_isa/">
+        <i class='fas fa-book'></i> ISA
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/521_a_instructie/" title="A instructie" class="dd-item ">
+        <a href="../../500_cpu/521_a_instructie/">
+        <i class='fas fa-book'></i> A instructie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/522_c_instructie/" title="C instructie" class="dd-item ">
+        <a href="../../500_cpu/522_c_instructie/">
+        <i class='fas fa-book'></i> C instructie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/523_c_instructie_comp/" title="C instructie - compute" class="dd-item ">
+        <a href="../../500_cpu/523_c_instructie_comp/">
+        <i class='fas fa-book'></i> C instructie - compute
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/524_c_instructie_destination/" title="C instructie - destination" class="dd-item ">
+        <a href="../../500_cpu/524_c_instructie_destination/">
+        <i class='fas fa-book'></i> C instructie - destination
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/525_c_instructie_jmp/" title="C instructie jump" class="dd-item ">
+        <a href="../../500_cpu/525_c_instructie_jmp/">
+        <i class='fas fa-book'></i> C instructie jump
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/550_opdracht/" title="Opdracht 5: CPU" class="dd-item ">
+        <a href="../../500_cpu/550_opdracht/">
+        <i class='fas fa-pen-square'></i> Opdracht 5: CPU
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/560_testbench/" title="Opdracht - testbench" class="dd-item ">
+        <a href="../../500_cpu/560_testbench/">
+        <i class='fas fa-book'></i> Opdracht - testbench
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_cpu/570_firmware/" title="Opdracht - firmware" class="dd-item ">
+        <a href="../../500_cpu/570_firmware/">
+        <i class='fas fa-book'></i> Opdracht - firmware
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/600_mult/" title="6. Multiplier" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="../../600_mult/">
+          6. Multiplier
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/600_mult/610_cijferend_mul/" title="Cijferend vermenigvuldigen" class="dd-item ">
+        <a href="../../600_mult/610_cijferend_mul/">
+        <i class='fas fa-book'></i> Cijferend vermenigvuldigen
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/600_mult/620_hwmult/" title="Hardware multiplier" class="dd-item ">
+        <a href="../../600_mult/620_hwmult/">
+        <i class='fas fa-book'></i> Hardware multiplier
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/600_mult/630_cpu_v2/" title="CPU v2" class="dd-item ">
+        <a href="../../600_mult/630_cpu_v2/">
+        <i class='fas fa-book'></i> CPU v2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/600_mult/640_opdracht/" title="Opdracht 6: CPU v2" class="dd-item active">
+        <a href="../../600_mult/640_opdracht/">
+        <i class='fas fa-pen-square'></i> Opdracht 6: CPU v2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/900_zelfstudie_vhdl/" title="Zelfstudie VHDL" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../900_zelfstudie_vhdl/">
+          Zelfstudie VHDL
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/910_hw_vs_sw/" title="Hardware vs software" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/910_hw_vs_sw/">
+        <i class='fas fa-book'></i> Hardware vs software
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/920_ent_arch/" title="Entiteiten en architecturen" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/920_ent_arch/">
+        <i class='fas fa-book'></i> Entiteiten en architecturen
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/930_hierachie/" title="Hiërarchie" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/930_hierachie/">
+        <i class='fas fa-book'></i> Hiërarchie
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/940_libraries/" title="Libraries" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/940_libraries/">
+        <i class='fas fa-book'></i> Libraries
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/950_arrays/" title="Arrays" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/950_arrays/">
+        <i class='fas fa-book'></i> Arrays
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/960_packages/" title="Packages" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/960_packages/">
+        <i class='fas fa-book'></i> Packages
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/970_processen/" title="Processen" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/970_processen/">
+        <i class='fas fa-book'></i> Processen
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/980_signalen_variablen/" title="Signalen vs. variabelen" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/980_signalen_variablen/">
+        <i class='fas fa-book'></i> Signalen vs. variabelen
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/990_flipflop_latch/" title="Flipflop en latches" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/990_flipflop_latch/">
+        <i class='fas fa-book'></i> Flipflop en latches
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/995_voorbeelden/" title="Voorbeelden" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/995_voorbeelden/">
+        <i class='fas fa-book'></i> Voorbeelden
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/900_zelfstudie_vhdl/997_lfsr/" title="Linear feedback shift register" class="dd-item ">
+        <a href="../../900_zelfstudie_vhdl/997_lfsr/">
+        <i class='fas fa-book'></i> Linear feedback shift register
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/910_zelfstudie_fsm/" title="Zelfstudie FSM" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../910_zelfstudie_fsm/">
+          Zelfstudie FSM
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/910_zelfstudie_fsm/010_fsm/" title="Finite State Machine (FSM)" class="dd-item ">
+        <a href="../../910_zelfstudie_fsm/010_fsm/">
+        <i class='fas fa-book'></i> Finite State Machine (FSM)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/910_zelfstudie_fsm/020_voorbeeld_verkeerslicht/" title="Voorbeeld verkeerslicht" class="dd-item ">
+        <a href="../../910_zelfstudie_fsm/020_voorbeeld_verkeerslicht/">
+        <i class='fas fa-book'></i> Voorbeeld verkeerslicht
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/910_zelfstudie_fsm/030_voorbeeld_timer/" title="Voorbeeld verkeerslicht timer" class="dd-item ">
+        <a href="../../910_zelfstudie_fsm/030_voorbeeld_timer/">
+        <i class='fas fa-book'></i> Voorbeeld verkeerslicht timer
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/920_extras/" title="Extras" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../920_extras/">
+          Extras
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/920_extras/921_tuning/" title="Tuning" class="dd-item ">
+        <a href="../../920_extras/921_tuning/">
+        Tuning
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/920_extras/922_tips_and_tricks/" title="Tips &amp; Tricks" class="dd-item ">
+        <a href="../../920_extras/922_tips_and_tricks/">
+        Tips &amp; Tricks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2024&amp;i=4081&amp;n=4&amp;t=01"><i class='fa fa-university'></i> ECTS Sheet</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://toledo.kuleuven.be/"><i class='fa fa-university'></i> Toledo</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../600_mult/'>6. Multiplier</a> > Opdracht 6: CPU v2
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Opdracht 6: CPU v2
+            </h1>
+          
+
+        
+
+
+<p>Voor deze opdracht wordt <strong>Hack CPU</strong> uitgebreid tot de <strong>CPU v2</strong>.</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../600_mult/630_cpu_v2/" title="CPU v2"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../900_zelfstudie_vhdl/" title="Zelfstudie VHDL" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../js/clipboard.min.js?1734444549"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1734444549"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1734444549"></script>
+    <script src="../../js/jquery.sticky.js?1734444549"></script>
+    <script src="../../js/featherlight.min.js?1734444549"></script>
+    <script src="../../js/highlight.pack.js?1734444549"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1734444549"></script>
+    <script src="../../js/learn.js?1734444549"></script>
+    <script src="../../js/hugo-learn.js?1734444549"></script>
+    
+        
+            <script src="../../mermaid/mermaid.js?1734444549"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

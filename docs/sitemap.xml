@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/000_intro/</loc>
-    <lastmod>2024-01-18T12:57:55+01:00</lastmod>
+    <lastmod>2024-12-17T15:08:54+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/001_software/010_alternatief/</loc>
     <lastmod>2024-01-18T12:57:55+01:00</lastmod>
@@ -138,13 +138,28 @@
     <lastmod>2024-03-25T21:19:39+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/550_opdracht/</loc>
-    <lastmod>2024-03-25T21:19:22+01:00</lastmod>
+    <lastmod>2024-12-17T15:08:54+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/560_testbench/</loc>
     <lastmod>2024-03-25T21:19:39+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/570_firmware/</loc>
     <lastmod>2024-03-25T21:54:13+01:00</lastmod>
+  </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/</loc>
+    <lastmod>2024-12-17T15:08:54+01:00</lastmod>
+  </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/610_cijferend_mul/</loc>
+    <lastmod>2024-12-17T15:08:54+01:00</lastmod>
+  </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/620_hwmult/</loc>
+    <lastmod>2024-12-17T15:08:54+01:00</lastmod>
+  </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/630_cpu_v2/</loc>
+    <lastmod>2024-12-17T15:08:54+01:00</lastmod>
+  </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/640_opdracht/</loc>
+    <lastmod>2024-12-17T15:08:54+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/</loc>
     <lastmod>2024-03-12T08:44:01+01:00</lastmod>
@@ -165,7 +180,7 @@
     <lastmod>2024-04-30T09:03:11+02:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/920_extras/922_tips_and_tricks/</loc>
-    <lastmod>2024-04-30T09:03:11+02:00</lastmod>
+    <lastmod>2024-11-25T09:49:51+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie_vhdl/930_hierachie/</loc>
     <lastmod>2024-03-12T08:44:01+01:00</lastmod>
