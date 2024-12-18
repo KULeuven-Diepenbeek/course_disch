@@ -14,4 +14,4 @@ Om de simulatie te starten druk je vanboven op de **run** knop.
 
 #### screenshot hoe een nand gate simuleren met EDA playground
 
-![Screenshot Vivado](/images/intro/eda_playground.png)
+![Screenshot Vivado](/images/001/eda_playground.png)
