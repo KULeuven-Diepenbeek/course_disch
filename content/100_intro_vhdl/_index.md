@@ -7,7 +7,7 @@ draft: false
 
 # Eerste project
 
-![Code](/images/intro/code.webp)
+![Code](/images/pexels/pexels-pixabay-270366.jpg)
 
 {{< image_courtesy 
   name="Pixabay"

@@ -43,7 +43,7 @@ architecture Behavioural of and_gate is
     -- (DE-)LOCALISING IN/OUTPUTS
     signal A_i : STD_LOGIC;
     signal B_i : STD_LOGIC;
-    signal Z_i : STD_LOGIC;
+    signal Z_o : STD_LOGIC;
 
     -- INTERNAL SIGNALS
     signal x : STD_LOGIC;
@@ -55,7 +55,7 @@ begin
     --------------------------------
     A_i <= A;
     B_i <= B;
-    Z <= Z_i;
+    Z <= Z_o;
 
     --------------------------------
     -- COMBINATORIAL
@@ -68,7 +68,7 @@ begin
     
     inverter_inst00: component inverter port map(
         A => X,
-        Z => Z_i     
+        Z => Z_o     
     );
 
 end Behavioural;

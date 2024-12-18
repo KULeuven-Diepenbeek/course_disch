@@ -17,7 +17,7 @@ Let er op dat je in het pad naar je Vivado project <b>geen spaties</b> hebt!! Du
 {{% /notice  %}}
 
 Nu krijgen we een omgeving die er zo uit ziet.
-![Screenshot Vivado](/images/software/screenshot_vivado.png)
+{{% figure src="/images/100/screenshot_vivado.png" title="AMD's Vivado ontwikkelomgeving" %}}
 
 ## Voeg HDL code toe
 
@@ -84,7 +84,7 @@ Het is uitermate belangrijk dat het besef blijft dat VHDL (of iedere andere HDL)
 
 De beschrijving van de de component hierboven is in een schema te tekenen als een **invertor** of **NIET-poort**.
 
-{{% figure src="/images/drawio_new_invertor.png" title="The entity and architecture of the invertor"  %}}
+{{% figure src="/images/100/drawio_new_invertor.png" title="De entity en architecture van de invertor" %}}
 
 
 ### std_logic

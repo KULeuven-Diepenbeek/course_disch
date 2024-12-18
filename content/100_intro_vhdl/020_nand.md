@@ -17,7 +17,7 @@ Uiteraard moet het gedrag van deze component ook aangepast worden. In de archite
 {{< include_file "/static/hdlsrc/100/nand_gate.vhd" "vhdl" >}}
 {{% /column %}}
 {{% column %}}
-{{% figure src="/images/drawio_new_nand.png" title="NAND gate"  %}}
+{{% figure src="/images/100/drawio_new_nand.png" title="NAND gate"  %}}
 {{% /column %}}
 {{% /multiHcolumn %}}
 
@@ -26,6 +26,8 @@ Uiteraard moet het gedrag van deze component ook aangepast worden. In de archite
 * VHDL is case-insensitive. Je mag dus hoofdletters en kleine letters verwisselen.
 * commentaar wordt vooraf gegaan van 2 min-tekens ```--```
 * Het is good-practice om niet meteen te werken met de in- en uitgangen, maar met lokale signalen. Daarom wordt in dit voorbeeld deze "vertaalslag" gemaakt.
+  * input signalen hebben het suffix **_i**
+  * output signalen hebben het suffix **_o**. Deze signalen kunnen ook binnenin de entity gebruikt worden, terwijl de poorten (met OUT direction) dit niet toelaten.
 * **commentaar kan NOOIT kwaad**
 
 {{% notice tip %}}

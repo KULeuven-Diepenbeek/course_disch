@@ -11,7 +11,7 @@ Als eerste opdracht in deze labo's gaan jullie zelf een **OR gate** maken. In pl
 {{% multiHcolumn %}}
 {{% column %}}
 De schematic voor de OR poort (voor zij die het vergeten zouden zijn) is:
-{{% figure src="/images/intro/OR_gate.png" title="OR gate"  %}}
+{{% figure src="/images/100/OR_gate.png" title="OR gate"  %}}
 
 {{% /column %}}
 {{% column %}}

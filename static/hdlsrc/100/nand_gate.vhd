@@ -18,7 +18,7 @@ architecture Behavioral of nand_gate is
     -- (DE-)LOCALISING IN/OUTPUTS
     signal A_i : STD_LOGIC;
     signal B_i : STD_LOGIC;
-    signal Z_i : STD_LOGIC;
+    signal Z_o : STD_LOGIC;
 
 begin
 
@@ -27,11 +27,11 @@ begin
     --------------------------------
     A_i <= A;
     B_i <= B;
-    Z <= Z_i;
+    Z <= Z_o;
 
     --------------------------------
     -- COMBINATORIAL
     --------------------------------
-    Z_i <= A_i nand B_i;
+    Z_o <= A_i nand B_i;
 
 end Behavioral;

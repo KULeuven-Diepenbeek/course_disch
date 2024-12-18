@@ -61,11 +61,11 @@ Als alle code beschreven is, kan de bovenstaante simulatie uitgevoerd worden. Er
 
 De gemakkelijkste manier is om in de **Flow Navigator** (de verticale balk aan de linkerkant van het scherm) te klikken op: **Run simulation**. Als alles goed loop zou je (ongeveer) onderstaand scherm moeten krijgen.
 
-{{% figure src="/images/intro/simulation.png" title="Simulatie van de nand gate met Vivado"  %}}
+{{% figure src="/images/100/simulation.png" title="Simulatie van de nand gate met Vivado"  %}}
 
 Je ziet hierin de inputs en de output van de DUT. De tijd verstrijkt over de X-as. Als beide inputs of één van beide inputs 'hoog' is, is de uitgang ook 'hoog'. Indien beide ingangen 'hoog' zijn, is de uitgang 'laag'.
 
 Dat is exact wat een NAND poort moet doen !! *(gelukkig)*
 
 Als het design gesimuleerd wordt met een open-source simulator krijgen we een identiek resultaat.
-{{% figure src="/images/screenshots/sim_nand.png" title="Simulatie van de nand gate met GHDL en GTKWave"  %}}
+{{% figure src="/images/100/sim_nand.png" title="Simulatie van de nand gate met GHDL en GTKWave"  %}}
