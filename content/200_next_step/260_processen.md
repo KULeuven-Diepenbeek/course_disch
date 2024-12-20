@@ -6,46 +6,15 @@ weight: 260
 draft: false
 ---
 
-
 Een basis component die vaak voorkomt is een multiplexer.
 
 {{% multiHcolumn %}}
 
 {{% column %}}
-{{% figure src="/images/drawio_new_mux.png" title="2-naar-1 multiplexer"  %}}
+{{% figure src="/images/200/drawio_new_mux.png" title="2-naar-1 multiplexer"  %}}
 {{% /column %}}
 {{% column %}}
-{{< highlight vhdl >}}
-...
-architecture Behavioral of ...
-    ...
-    signal rotate_left : STD_LOGIC_VECTOR(7 downto 0);
-    signal rotate_right : STD_LOGIC_VECTOR(7 downto 0);
-    signal MUX_select : STD_LOGIC;
-    signal transformed : STD_LOGIC_VECTOR(7 downto 0);
-    ...
-begin
-    ...
-    -- optie 1
-    transformed <= rotate_left when MUX_select = '0' else rotate_right;
-
-    -- optie 2
-    with MUX_select select
-        transformed <= rotate_left when '0',
-        rotate_right when others;
-
-    -- optie 3
-    PMUX: process(rotate_left, rotate_right, MUX_select)
-    begin
-        if MUX_select = '0' then 
-            transformed <= rotate_left;
-        else
-            transformed <= rotate_right;
-        end if;
-    end process;
-    ...
-end Behavioral;
-{{< /highlight >}}
+{{< include_file "/static/hdlsrc/200/mux_snippet.vhd" "vhdl" >}}
 
 {{% /column %}}
 {{% /multiHcolumn %}}

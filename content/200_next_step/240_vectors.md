@@ -21,7 +21,7 @@ signal outcome: std_logic_vector(0 to 7);
 {{% /column %}}
 {{% /multiHcolumn %}}
 
-{{% figure src="/images/drawio_new_vectors.png" title="Een vector van 8 bits, Little Endian, met LSB en MSB aanduiding"  %}}
+{{% figure src="/images/200/drawio_new_vectors.png" title="Een vector van 8 bits, Little Endian, met LSB en MSB aanduiding"  %}}
 
 Stel dat we het getal 213 willen voorstellen. Hexadecimaal wordt dit 0xD5 en in binaire notatie is dit 0b11010101. Zoals in de meeste moderne Europese talen, lezen we van links naar rechts. Het cijfer **3** in 213 geeft het aantal eenheden mee. Dit cijfer heeft het minste *gewicht* en wordt het minst beduidend genoemd. De meest rechtse bit noemen we deze bit de minst-beduidende bit, of least significant bit (**LSB**), en deze staat rechts. Deze afspraak wordt **Little endian** genoemd. Indien we de LSB links zetten, spreken we van **Big endiann**.
 
@@ -67,8 +67,8 @@ Als voorbeeld van het gebruik van vectoren wordt hieronder de code gegeven voor 
   * zijn hoofdletter-ongevoelig
   * mogen geen keyword (signal, begin, procedure, ...) zijn 
 * er bestaan verschillende manieren om toekenningen te doen: bv "0001" aan Q_i
-  * Q_i <= "0001"; -- handig voor hardcoding
-  * Q_i <= (0 => '1', others => '0'); -- handig voor langere vectoren
-  * Q_i(0) <= '1'; Q_i(1) <= '0'; Q_i(2) <= '0'; Q_i(3) <= '0'; -- handig bij ingewikkeldere designs
+  * ```Q_i <= "0001";``` -- handig voor hardcoding
+  * ```Q_i <= (0 => '1', others => '0');``` -- handig voor langere vectoren of onbekende groottes
+  * ```Q_i(0) <= '1'; Q_i(1) <= '0'; Q_i(2) <= '0'; Q_i(3) <= '0';``` -- handig bij ingewikkeldere designs
 {{% /column %}}
 {{% /multiHcolumn %}}

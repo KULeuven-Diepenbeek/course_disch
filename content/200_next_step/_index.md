@@ -7,7 +7,7 @@ draft: false
 
 # Volgende stap
 
-![Code](/images/intro/next_step.jpeg)
+![Code](/images/pexels/next_step.jpeg)
 
 {{< image_courtesy 
   name="Porapak Apichodilok"
