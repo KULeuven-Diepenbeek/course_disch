@@ -6,7 +6,7 @@ weight: 330
 draft: false
 ---
 
-De ALU die je moet maken voor deze opdracht ziet er uit zoals hieronder afgebeeld:
+De ALU die je moet maken voor deze opdracht, ziet er uit zoals hieronder afgebeeld:
 
 {{% multiHcolumn %}}
 {{% column %}}
@@ -25,21 +25,20 @@ De ALU die je moet maken voor deze opdracht ziet er uit zoals hieronder afgebeel
 
 {{% /column %}}
 {{% column %}}
-![schame nand2tetris ALU](/images/ALU/ALU_inputs_outputs.png)
+{{% figure src="/images/300/ALU_inputs_outputs.png" title="De ALU met alle in- en uitgangen" %}}
 {{% /column %}}
 {{% /multiHcolumn %}}
 
 
-Later zetten we de input status code juist op basis van de binnenkomende instructie en optioneel doen we iets met de output status codes.
-
+Later zetten we de input status codes juist op basis van de binnenkomende instructie en doen we iets met de output status codes.
 
 De opdracht is om zelf een ALU te maken die aan onderstaande waarheidstabel voldoet, met de volgende *entity*.
 
 {{% multiHcolumn %}}
 {{% column %}}
 
+{{% figure src="/images/300/screenshot_truth_table_ALU.png" title="" %}}
 
-![waarheidstabel ALU](/images/ALU/screenshot_truth_table_ALU.png)
 <div class="image_courtesy">
   Bron: 
    <a href="https://b1391bd6-da3d-477d-8c01-38cdf774495a.filesusr.com/ugd/44046b_f0eaab042ba042dcb58f3e08b46bb4d7.pdf" target="_blank">nand2tetris</a>
@@ -55,28 +54,7 @@ De opdracht is om zelf een ALU te maken die aan onderstaande waarheidstabel vold
 
 {{% /column %}}
 {{% column %}}
-```vhdl
-entity alu is
-    generic(
-        WIDTH : natural := 16
-    );
-    port(
-        X : IN STD_LOGIC_VECTOR(WIDTH-1 downto 0);
-        Y : IN STD_LOGIC_VECTOR(WIDTH-1 downto 0);
-        Z : OUT STD_LOGIC_VECTOR(WIDTH-1 downto 0);
-
-        zx : IN STD_LOGIC;
-        zy : IN STD_LOGIC;
-        nx : IN STD_LOGIC;
-        ny : IN STD_LOGIC;
-        f : IN STD_LOGIC;
-        no : IN STD_LOGIC;
-
-        zr : OUT STD_LOGIC;
-        ng : OUT STD_LOGIC
-    );
-end entity alu;
-```
+{{< include_file "/static/hdlsrc/300/alu.vhd" "vhdl" >}}
 {{% /column %}}
 {{% /multiHcolumn %}}
 

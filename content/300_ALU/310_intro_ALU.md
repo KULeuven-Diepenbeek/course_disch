@@ -8,10 +8,11 @@ draft: false
 
 Het doel van dit labo is om uiteindelijk een werkende microprocessor te maken, ook al is het in een simpele vorm. Het doel is om de [hack processor](https://en.wikipedia.org/wiki/Hack_computer)  te maken van de cursus [nand2tetris](https://www.nand2tetris.org/). In dit OPO gaan we de beschrijving uiteraard wel maken in VHDL.
 
-Eén van de componenten die in iedere processor zit is een **Arithmetic Logic Unit (ALU)**. Een ALU neemt **2 (of 1) input(s)** en voert hier een bepaalde instructie mee uit. Deze instructie kan iets logisch zijn zoals AND, OR, XOR,.. of iets wiskundig zoals plus of min. 
-![Foto ALU](/images/ALU/ALU_Principle.png)
+Eén van de componenten die in iedere processor zit is een **Arithmetic Logic Unit (ALU)**. Een ALU neemt **2 (of 1) input(s)** en voert hier een bepaalde instructie mee uit. Deze instructie kan een logische operatie zijn zoals AND, OR, XOR,.. of een wiskundige operatie zoals een optelling of een verschil. 
 
-De ALU die gebruikt wordt in de hack computer biedt de mogelijkheid om 18 verschillende instructies uit te voeren. De operatie die uitgevoerd wordt, wordt omgeschreven als *f(x,y)*.
+{{% figure src="/images/300/ALU_principle.png" title="Principe schema van een ALU" %}}
+
+De ALU die gebruikt wordt in de hack computer, biedt de mogelijkheid om 18 verschillende instructies uit te voeren. De operatie die uitgevoerd wordt, wordt omgeschreven als *f(x,y)*.
 
 
 {{% multiHcolumn %}}

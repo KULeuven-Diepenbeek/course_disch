@@ -8,7 +8,7 @@ draft: false
 
 ## &#8469;
 
-Gezien je voor een richting electronica gekozen hebt, gaan we er van uit dat je geen schrik hebt van binaire getallen. Hopelijk zie je dat **0b1010** hetzelfde is als **0xA**, of <b><i>tien</i></b> zoals men in de volksmond zegt. Hieronder vind je nog een overzichtstabel voor de eerste 16 **natuurlijke** getallen.
+Gezien je voor een ingenieurs-richting gekozen hebt, gaan we er van uit dat je geen schrik hebt van binaire getallen. Hopelijk zie je dat **0b1010** hetzelfde is als **0xA**, of <b><i>tien</i></b> zoals men in de volksmond zegt. Hieronder vind je nog een overzichtstabel voor de eerste 16 **natuurlijke** getallen.
 
 <table>
 <tr><th>Dec</th><th>Bin</th><th>Hex</th><th>Dec</th><th>Bin</th><th>Hex</th><th>Dec</th><th>Bin</th><th>Hex</th><th>Dec</th><th>Bin</th><th>Hex</th></tr>
@@ -54,16 +54,25 @@ Stel dat we de verzameling van natuurlijke getallen willen uitbreiden naar de **
     <tr><th>7</th><td>0b0111</td><td>&nbsp;</tb><th>-7</th><td>0b1001</td></tr>
 </table>
 
-In tegenstelling tot bij de natuurlijke getallen, kunnen hier **niet** de breedte verlengen door links nullen toe voegen. In het kort kan gezegd worden dat je MSB kunt herhalen aan de linkerkant.
+In tegenstelling tot bij de natuurlijke getallen, kunnen we hier **niet** de breedte verlengen door links nullen toe voegen. In het kort kan gezegd worden dat je MSB kunt herhalen aan de linkerkant.
 
-Wat is het effect van 2's complement op ? Juist, ja: 0.
+Wat is het effect van 2's complement op 0? Juist, ja: 0.
 
 Tenslotte dient er nog even gemeld te worden dat de conversie ook op een andere manier kan gebeuren: verminder het getal met 1 en voer dan een bits-gewijze inversie uit.
 
 <!-- [Wikipedia](https://en.wikipedia.org/wiki/Two%27s_complement) heeft ook goede uitleg over 2's compliment. -->
 
+## Signed vs Unsigned
+Een basis concept van electronica en programmeren is het idee van een **type**. Als een variable gedeclareerd wordt, dient hierbij een type meegegeven te worden. Een voorbeeld hiervan in C is: ```char mychar;``` Een char is een variabele van 8 bits. Indien we enkel de natuurlijke getallen in acht nemen, kunnen er 256 (=2<sup>8</sup>) verschillende positieve getallen (én 0) weergegeven worden: <span style="border-radius: 2px; white-space: nowrap; color: #5e5e5e; background: #FFF7DD; border: 1px solid #fbf0cb; padding: 0px 2px; font-family: Consolas, menlo, monospace; font-size: 92%;">0 &le; mychar &lt; 256</span>. Omdat er hier geen rekening gehouden wordt met het *teken* van het getal, noemen we dit een **unsigned** type.
+
+Indien we echter de gehele getallen in acht nemen, kunnen er 256 (=2<sup>8</sup>) verschillende positieve en negatieve getallen (én 0) weergegeven worden. Doordat de 2's complement methode gebruikt wordt, wordt het bereik: <span style="border-radius: 2px; white-space: nowrap; color: #5e5e5e; background: #FFF7DD; border: 1px solid #fbf0cb; padding: 0px 2px; font-family: Consolas, menlo, monospace; font-size: 92%;">-128 &le; mychar &lt; 127</span>. Omdat er hier wél rekening gehouden wordt met het *teken* van het getal, noemen we dit een **signed** type.
+
+Een computer ziet enkel een reeks van 1-en en 0-en. De interpretatie die eraan gegeven wordt, ligt bij de gebruiker. Het is dus van belang dat men dit wéét bij het ontwerp van hardware, of bij het schrijven van (low-end) software.
+
+De processor die in dit opleidingsonderdeel gemaakt wordt interpreteert getallen als **signed**.
+
 ## Add/sub
 
-Eén van de mogelijke ALU instructies is **f(x,y) = x-y**. Wiskundig gezien weten wechter dat: **x - y = x + (-y)**. Dus in het kort kan je stellen dat een aftrekking hetzelfde is als een optelling met de negatieve waarde.
+Eén van de mogelijke ALU instructies is **f(x,y) = x-y**. Wiskundig gezien weten wechter dat: **x - y = x + (-y)**. Dus, je kan stellen dat een aftrekking hetzelfde is als een optelling met de negatieve waarde.
 
 Hadden jullie nu net geen Ripple Carry Adder gemaakt? <b><i>#Chance-ke</i></b>.
