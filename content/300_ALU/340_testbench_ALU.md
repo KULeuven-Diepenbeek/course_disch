@@ -26,7 +26,7 @@ Om de juiste werking van de ALU te verifiëren, wordt er opnieuw gebruikt gemaak
 
 Op deze manier kan je stapsgewijs de testbench opbouwen. Geef hierbij extra aandacht aan de **randgevallen**. Als jouw implementatie 12 + 3 correct kan berekenen, is de kans groot dat 13 + 3 ook wel zal lukken. De randgevallen zijn het echter wel waard om expliciet te testen. Kan jouw ALU 0xFFFF + 0xFFFF correct berekenen? Of -1 - 1?
 
-Wanneer je denkt alle implementaties gedaan te hebben, kan je een grotere testbench los laten op jouw design. Een voorbeeld hiervan kan je  <a href="/hdlsrc/300/alu_tb.vhd" download>hier</a> downloaden. Deze testbench is, zoals je misschien al vermoedde, **gegenereerd**. Voor de verbetering van de opdracht wordt een soortgelijke testbench gebruikt.
+Wanneer je denkt alle implementaties gedaan te hebben, kan je een grotere testbench los laten op jouw design. Een voorbeeld hiervan kan je <a href="/hdlsrc/300/alu_tb.vhd" download>hier</a> downloaden. Deze testbench is, zoals je misschien al vermoedde, **gegenereerd**. Voor de verbetering van de opdracht wordt een soortgelijke testbench gebruikt.
 
 {{% multiHcolumn %}}
 {{% column %}}
