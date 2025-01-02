@@ -10,7 +10,7 @@ draft: false
 
 Er zijn verschillende types aan shift registers. Er is de keuze om serieel of parallel in te laden en de keuze om serieel of parallel uit te lezen.
 
-{{% figure src="/images/Shift-registers-groups.jpg" title="Soorten shift registers"  %}}
+{{% figure src="/images/400/Shift-registers-groups.jpg" title="Soorten shift registers"  %}}
 
 <div class="image_courtesy">
   Bron: 

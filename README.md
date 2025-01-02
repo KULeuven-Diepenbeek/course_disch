@@ -1,4 +1,4 @@
-# digsch
+# disch
 
 This is the repository to generate the lab website of the course "Digitale elektronische schakelingen"
 

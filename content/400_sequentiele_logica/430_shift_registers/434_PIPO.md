@@ -1,6 +1,6 @@
 ---
 title: 'PIPO'
-pre: "<i class='fas fa-book'></i> "
+pre: "<i class='fas fa-vial'></i> "
 chapter: false
 weight: 434
 draft: false
@@ -8,7 +8,7 @@ draft: false
 
 Bij parallel in, parallel out register (PIPO) komt op de ingang op de uitgang met 1 clock cyclus vertraging.
 
-{{% figure src="/images/PIPO-register.jpg" title="PIPO shift register"  %}}
+{{% figure src="/images/400/PIPO-register.jpg" title="PIPO shift register"  %}}
 
 <div class="image_courtesy">
   Bron: 
@@ -22,3 +22,7 @@ Bij parallel in, parallel out register (PIPO) komt op de ingang op de uitgang me
     font-style: italic;
   }
 </style>
+
+{{% notice note %}}
+Je kan zelf proberen de beschrijving te maken in VHDL
+{{% /notice %}}

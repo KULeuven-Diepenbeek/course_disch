@@ -4,3 +4,4 @@
 
 # ignores intermediate folders in themes folder
 themes/*/
+static/images_bkp/*
