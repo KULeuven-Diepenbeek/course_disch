@@ -7,7 +7,7 @@ draft: false
 
 # CPU
 
-![Code](/images/cpu.jpeg)
+![Code](/images/pexels/cpu.jpeg)
 
 {{< image_courtesy 
   name="Shawn Stutzman"

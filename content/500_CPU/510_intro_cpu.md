@@ -6,39 +6,71 @@ weight: 510
 draft: false
 ---
 
-Zoals in het begin van deze lessenreeks reeds vermeld, is het uiteindelijke doel het maken van een processor. De voorbij labo's hebben de basis hiervoor gelegd. De volgende componenten, die jullie reeds gemaakt hebben, dienen samengebracht te worden:
+Zoals in het begin van deze lessenreeks reeds vermeld, is het uiteindelijke doel het maken van een processor. De voorbij labo's is hiervoor de basis gelegd. De volgende componenten, die jullie reeds gemaakt hebben, dienen samengebracht te worden:
 
 * registers
 * multiplexers
-* een ALU
-* een program counter
+* de ALU
+* de program counter
 
-De architectuur van de Central Processing Unit (CPU) die we voor ogen hebben is reeds ontworpen. Deze maakt deel uit van de **Hack computer**. Deze bevat, naast de cpu, ook 2 geheugens (1 voor instructies en 1 voor data), een toetsenbord en scherm (voor in- en output, resptievelijk) en (uiteraard) een clock. Het blok-diagram van de CPU staat hieronder ook weergegeven. 
 
 
 Bij de ingang van de ALU, de bovenkant (register D) is ALU ingang x en de onderkant is ALU ingang Y.
 
+### Hack computer
 {{% multiHcolumn %}}
 {{% column %}}
-### Hack computer
-![hack CPU](https://upload.wikimedia.org/wikipedia/commons/7/76/Hack_Computer_Block_Diagram_2.png)
-{{% /column %}}
+<!-- ### Hack CPU
+![hack CPU](https://upload.wikimedia.org/wikipedia/commons/2/2c/Hack_Computer_CPU_Block_Diagram.png) -->
+De architectuur van de Central Processing Unit (**CPU**) die we voor ogen hebben, is reeds ontworpen en maakt deel uit van de **Hack computer**. De Hack computer heeft de volgende componenten:
 
+* de HACK CPU, 
+* 2 geheugens (1 voor instructies (ROM) en 1 voor data (RAM)), 
+* een toetsenbord (voor input),
+* een scherm (voor output), en
+* een clock
+
+Aangezien de CPU werkt met 16-bit operanden en de **bussen** ook 16 bits in parallel aan- en afvoeren, is dit een **16-bit processor**.
+{{% /column %}}
 {{% column %}}
-### Hack CPU
-![hack CPU](https://upload.wikimedia.org/wikipedia/commons/2/2c/Hack_Computer_CPU_Block_Diagram.png)
-{{% /column %}}
-{{% /multiHcolumn %}}
-
+![hack CPU](https://upload.wikimedia.org/wikipedia/commons/7/76/Hack_Computer_Block_Diagram_2.png)
 {{< image_courtesy 
   name="Rleininger"
   url="https://en.wikipedia.org/wiki/Hack_computer"
   source="Wikipedia"
   >}}
+{{% /column %}}
+{{% /multiHcolumn %}}
+
+### De Hack CPU
+{{% multiHcolumn %}}
+{{% column %}}
+![hack CPU](https://upload.wikimedia.org/wikipedia/commons/2/2c/Hack_Computer_CPU_Block_Diagram.png)
+{{< image_courtesy 
+  name="Rleininger"
+  url="https://en.wikipedia.org/wiki/Hack_computer"
+  source="Wikipedia"
+  >}}
+{{% /column %}}
+{{% column %}}
+<!-- ### Hack CPU
+![hack CPU](https://upload.wikimedia.org/wikipedia/commons/2/2c/Hack_Computer_CPU_Block_Diagram.png) -->
+De architectuur van de Central Processing Unit (**CPU**) die we voor ogen hebben, is hiernaast weergegeven. De Hack CPU heeft de volgende componenten:
+
+* een 16-bit ALU,
+* twee interne 16-bit registers: A en D,
+* twee multiplexers,
+* een program counter, en
+* controle-logica
+
+{{% /column %}}
+{{% /multiHcolumn %}}
+
+
 
 ## De nooit-eindigende lus
 
-Een computer is eigenlijk een dom beest. Hij draait rondjes, zolang hij aan staat. Het rondje dat de computer (in dit geval de **Hack computer**) maakt is het volgende:
+Een computer is eigenlijk een dom beest. Hij draait rondjes, zolang hij aan staat. Het rondje dat de Hack computer maakt is het volgende:
 
 1. Haal de instructie op
 2. Voer de instructie uit

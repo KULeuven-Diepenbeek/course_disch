@@ -8,7 +8,7 @@ draft: false
 
 Indien de **MSB** van een 16-bit instructie **'0'** is, dan wilt dit zeggen dat dit een **A-instructie** is. De overige 15 bits dienen vervolgens in het A register geladen te worden.
 
-![A instructie](/images/A_instruction.png)
+![A instructie](/images/500/A_instruction.png)
 
 {{< image_courtesy 
   name="N. Nisan and S. Schocken"
@@ -18,4 +18,4 @@ Indien de **MSB** van een 16-bit instructie **'0'** is, dan wilt dit zeggen dat 
 
 In de screenshot hieronder wordt er ingezoomd op een klein stukje in de simulatie van een programma. Op iedere **rising edge** van de klok wordt er gekeken of de MSB een '0' is. Indien dit het geval is, wordt de inhoud van **regA** aangepast. 
 
-![Simulatie van een A-instructie](/images/screenshots/521_a_instruction.png)
+![Simulatie van een A-instructie](/images/500/521_a_instruction.png)

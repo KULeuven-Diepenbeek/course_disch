@@ -6,7 +6,13 @@ pre: "<i class='fas fa-book'></i> "
 draft: false
 ---
 
-Zoals bij voorgaande opdrachten, wordt ook bij deze opdracht een testbench voorzien. Aangezien de DUT (device-under-test) iets complexer is, is de gebruikte testbench ook iets complexer. 
+Zoals bij voorgaande opdrachten, wordt ook bij deze opdracht een testbench voorzien. Aangezien de DUT (device-under-test) iets complexer is, is de gebruikte testbench ook iets complexer. Deze pagina legt uit wat er gebeurt.
+
+<center>
+<b>TL;DR</b> ... <a href="/hdlsrc/500/cpu_tb.vhd" download>hier</a> een testbench.
+</center>
+
+### Testbench
 
 {{% multiHcolumn %}}
 {{% column %}}
@@ -28,7 +34,7 @@ Tenslotte zijn er nog twee instantiaties van **mem_model**. Iets wat vaker gebeu
 
 {{% /column %}}
 {{% column %}}
-![Testbench block diagram](/images/cpu_tb_arch.png)
+![Testbench block diagram](/images/500/cpu_tb_arch.png)
 {{% /column %}}
 {{% /multiHcolumn %}}
 
