@@ -56,4 +56,4 @@ Enkele opmerkingen die gemaakt kunnen worden:
 * wat is het effect van de breedte van de inputs op de breedte van produkt?
   * een *n-bit* getal <u>plus</u> een *n-bit* getal wordt een *n+1-bit* getal
   * een *n-bit* getal <u>maal</u> een *n-bit* getal wordt een ... *2n-bit* getal
-* wat zijn het aantal verschillende uitkomsten die een partieel produkt kan hebben?
+* wat is het aantal verschillende uitkomsten dat een partieel produkt kan hebben?

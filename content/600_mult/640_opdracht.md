@@ -6,4 +6,4 @@ weight: 640
 draft: false
 ---
 
-Voor deze opdracht wordt **Hack CPU** uitgebreid tot de **CPU v2**.
+Voor deze opdracht wordt **Hack CPU** ge-upgrade tot de **CPU v2**.

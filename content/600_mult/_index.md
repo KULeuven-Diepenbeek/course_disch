@@ -7,7 +7,7 @@ draft: false
 
 # Multiplier
 
-![Code](/images/600/pexels-karolina-grabowska-5412110.jpg)
+![Code](/images/pexels/pexels-karolina-grabowska-5412110.jpg)
 
 {{< image_courtesy 
   name="Kaboompics.com"
