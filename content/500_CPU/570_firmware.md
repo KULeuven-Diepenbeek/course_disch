@@ -39,14 +39,18 @@ Een simpel programmaatje kan zijn:
 * instructie 4: ```D = D+A ``` (**0xE090**) 111 0 000010 010 000
 * instructie 5: ```A = 4```  (**0x0004**)
   * A wordt geladen omdat dit in de volgende instructie gebruikt wordt
-* instructie 6: ```Mem[A] = D``` (**0xFC08**) 111 1 110000 001 000
+* instructie 6: ```Mem[A] = D``` (**0xE308**) 111 0 001100 001 000
 * instructie 7: ```A = 0 ``` (**0x0000**)
   * A wordt geladen omdat dit in de volgende instructie gebruikt wordt
 * instructie 8: ```0; JMP``` (**0xEA87**) 111 0 101010 000 111
 {{% /column %}}
 {{% /multiHcolumn %}}
 
-Als een degelijk klein programmaatje werkt, kan je proberen om een iets complexer stukje software te runnen.
+Het resultaat van het *"simpel programmaatje"* moet er ongeveer als volgt uitzien.
+
+![simpel](/images/500/sim.png)
+
+Als een degelijk klein programma werkt, kan je proberen om een iets complexer stukje software te runnen.
 
 {{% notice tip %}}
 Er bestaan websites, zoals [deze](https://alienkevin.github.io/hack-assembler-web/) die hulp kunnen bieden bij het *assembleren*.
