@@ -48,6 +48,10 @@ Een simpel programmaatje kan zijn:
 
 Als een degelijk klein programmaatje werkt, kan je proberen om een iets complexer stukje software te runnen.
 
+{{% notice tip %}}
+Er bestaan websites, zoals [deze](https://alienkevin.github.io/hack-assembler-web/) die hulp kunnen bieden bij het *assembleren*.
+{{% /notice %}}
+
 {{% multiHcolumn %}}
 {{% column %}}
 {{< include_file "/static/hdlsrc/500/fibonaci.asm" "asm" >}}
