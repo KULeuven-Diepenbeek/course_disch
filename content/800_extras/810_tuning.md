@@ -1,6 +1,6 @@
 ---
 title: 'Tuning'
-weight: 921
+weight: 810
 draft: false
 ---
 
@@ -16,7 +16,7 @@ Het **kritische pad** is het langste combinatorische pad tussen 2 registers/flip
 
 ### Design in de Hack Processor
 
-![16-bit](/images/920_tuning/16_bit.png)
+![16-bit](/images/800/16_bit.png)
 
 De latency is 1 clock cycle. Als we aannemen dat het kritische pad de *ripple carry* is en dat de minimale klok periode 2 ns is, dan is de **latency = 2ns**.
 
@@ -27,7 +27,7 @@ Aangezien er iedere clock cycle een optelling gedaan kan worden, is <br/>
 
 ### Halvering van de breedte
 
-![8-bit](/images/920_tuning/8_bit.png)
+![8-bit](/images/800/8_bit.png)
 
 De latency is 1 clock cycle. Als we aannemen dat het kritische pad de *ripple carry* lineair mee krimpt, wordt de minimale klok periode <span style="color: red; font-weight: bold">1 ns</span> is en dan is de **latency = 1ns**.
 
@@ -38,7 +38,7 @@ Aangezien er iedere clock cycle een optelling gedaan kan worden, is <br/>
 
 ### Unrolled
 
-![Unrolled](/images/920_tuning/unrolled.png)
+![Unrolled](/images/800/unrolled.png)
 
 De latency is 1 clock cycle. Als we aannemen dat het kritische pad de *ripple carry* niet wijzigt, dan is de **latency = 2ns**.
 
@@ -49,7 +49,7 @@ Aangezien er iedere clock cycle een optelling gedaan kan worden, is <br/>
 
 ### Pipelined
 
-![Pipelined](/images/920_tuning/pipelined.png)
+![Pipelined](/images/800/pipelined.png)
 
 De latency is <span style="color: red; font-weight: bold">2 clock cycles</span>. Als we aannemen dat het kritische pad de *ripple carry* lineair mee krimpt, wordt de minimale klok periode <span style="color: red; font-weight: bold">1 ns</span> is en dan is de **latency = 2ns**.
 
@@ -60,7 +60,7 @@ Aangezien er, bij een volled pipeline, iedere clock cycle een optelling gedaan k
 
 ### Sequential
 
-![Sequential](/images/920_tuning/sequential.png)
+![Sequential](/images/800/sequential.png)
 
 De latency is <span style="color: red; font-weight: bold">2 clock cycles</span>. Als we aannemen dat het kritische pad de *ripple carry* lineair mee krimpt, wordt de minimale klok periode <span style="color: red; font-weight: bold">1 ns</span> is en dan is de **latency = 2ns**.
 

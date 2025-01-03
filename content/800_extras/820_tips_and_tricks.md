@@ -1,6 +1,6 @@
 ---
 title: 'Tips & Tricks'
-weight: 922
+weight: 820
 draft: false
 ---
 
@@ -15,10 +15,10 @@ Van zodra je begint te denken "nu moet *dit* zijn en *daarvoor* moest dat zijn .
 {{% /notice %}}
 {{% /column %}}
 {{% column %}}
-![level2CC](/images/920_extras/level2period.png)
+![level2CC](/images/800/level2period.png)
 {{% /column %}}
 {{% column %}}
-{{< include_file "/static/hdlsrc/900/level2period.vhd" "vhdl" >}}
+{{< include_file "/static/hdlsrc/800/level2period.vhd" "vhdl" >}}
 {{% /column %}}
 {{% /multiHcolumn %}}
 
@@ -34,20 +34,20 @@ Dit zijn eigenlijk twee muxen, die in één proces beschreven worden!!
 {{% /notice %}}
 {{% /column %}}
 {{% column %}}
-{{< include_file "/static/hdlsrc/900/mux_default.vhd" "vhdl" >}}
+{{< include_file "/static/hdlsrc/800/mux_default.vhd" "vhdl" >}}
 {{% /column %}}
 {{% /multiHcolumn %}}
 
 {{% multiHcolumn %}}
 {{% column %}}
-{{< include_file "/static/hdlsrc/900/mux_default_bis.vhd" "vhdl" >}}
+{{< include_file "/static/hdlsrc/800/mux_default_bis.vhd" "vhdl" >}}
 {{% /column %}}
 
 {{% column %}}
 In deze twee voorbeelden is er in de beschrijving gezorgd dat **voor alle mogelijkheden een waarde** beschikbaar is. Het eerste voorbeeld doet dit *expliciet*. Wanneer er veel uitgangen zijn, kan dit snel omslachtige worden. Het tweede voorbeeld kan dan een oplossing vormen, door eerst *default* waardes toe te kennen aan **alle** uitgangen.
 {{% /column %}}
 {{% column %}}
-{{< include_file "/static/hdlsrc/900/mux_default_tris.vhd" "vhdl" >}}
+{{< include_file "/static/hdlsrc/800/mux_default_tris.vhd" "vhdl" >}}
 {{% /column %}}
 {{% /multiHcolumn %}}
 
@@ -97,11 +97,11 @@ Zij, die deze labo's met Vivado gedaan hebben, hebben misschien al gemerkt dat d
 
 Een project aanmaken voor het PYNQ ontwikkelbord vergt **10 muiskliks en 1 tekst-veld** manipulatie. Wanneer je naar de TCL console kijkt, zie iets (analoog aan) zoals hieronder. De regels die in het blauw staan, zijn TCL-commandos.
 
-![vivado_tcl](/images/920_extras/vivado_tcl.png)
+![vivado_tcl](/images/800/vivado_tcl.png)
 
 Je kan dus, als alternatief voor als een bezetene rond te klikken, ook deze commando's uitvoeren. Het resultaat is exact hetzelfde. Aangezien we al genoeg typwerk hebben, is het nog interessanter om een klein *script* te maken waarin deze commando's staan.
 
-{{< include_file "/static/hdlsrc/900/example.tcl" "tcl" >}}
+{{< include_file "/static/hdlsrc/800/example.tcl" "tcl" >}}
 
 Als we er van uitgaan dat deze TCL-file te vinden is op: **/home/username/myscript.tcl**, dan volstaat in om in de TCL console van Vivado te typen:
 ```tcl
