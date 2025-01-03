@@ -28,14 +28,14 @@
       <link>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/630_cpu_v2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/630_cpu_v2/</guid>
-      <description>Uiteraard is het de bedoeling dat deze multiplier gebruikt kan worden in de CPU die tot hiertoe ontwikkeld is. Voor de volledigheid moet er gezegd worden dat er hiermee buiten de scoop getreden wordt van de Hack cpu.&#xA;De eenvoudigste manier om deze extra functionaliteit toe te voegen is om een tweede ALU te maken.&#xA;Enkele opmerkingen hierbij:&#xA;de x-operand is dezelfde als deze van de oorspronkelijke ALU de y-operand is dezelfde als deze van de oorspronkelijke ALU beide ALUs zijn altijd actief, ook als de andere ALU gebruikt wordt aangezien er nu twee mogelijkheden zijn voor het resultaat, moet hier een multiplexer geplaatst worden.</description>
+      <description>Uiteraard is het de bedoeling dat deze multiplier gebruikt kan worden in de CPU die tot hiertoe ontwikkeld is. Voor de volledigheid moet er gezegd worden dat er hiermee buiten de scoop getreden wordt van de Hack CPU.&#xA;Data pad De eenvoudigste manier om deze extra functionaliteit toe te voegen is om een tweede ALU te maken. Zowel de x-operand als de y-operand die aan deze tweede ALU gekoppeld worden, zijn dezelfde als deze die aan de oorspronkelijke ALU gekoppeld zijn.</description>
     </item>
     <item>
       <title>Opdracht 6: CPU v2</title>
       <link>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/640_opdracht/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/640_opdracht/</guid>
-      <description>Voor deze opdracht wordt Hack CPU uitgebreid tot de CPU v2.</description>
+      <description>Voor deze opdracht wordt Hack CPU ge-upgrade tot de CPU v2.</description>
     </item>
   </channel>
 </rss>

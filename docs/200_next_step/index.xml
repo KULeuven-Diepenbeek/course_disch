@@ -49,7 +49,7 @@
       <link>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/290_opdracht/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/290_opdracht/</guid>
-      <description>In deze opdracht moet je een 16 bit ripple-carry adder te maken. Indien je vergeten bent hoe een full adder en een half adder eruit zien, kan je kijken naar onderstaande schema&amp;rsquo;s. Bij een ripple-carry adder wordt de C out van de eerste adder doorgegeven aan de tweede adder. We werken in little endian.&#xA;Het is niet de bedoeling dat je de + operator gebruikt van &amp;ldquo;std_logic_unsigned&amp;rdquo; of &amp;ldquo;std_logic_signed&amp;rdquo;!&#xA;Half adder, met S = A &amp;amp;oplus; B Full adder Het is altijd een goed idee om eerst een tekening te maken voordat je begint met typen.</description>
+      <description>In deze opdracht moet je een 16 bit ripple-carry adder maken. Indien je vergeten bent hoe een full adder en een half adder eruit zien, kan je kijken naar onderstaande schema&amp;rsquo;s. Bij een ripple-carry adder wordt de C-out van de eerste adder doorgegeven aan de C-in van de tweede adder. We werken in little endian.&#xA;Het is niet de bedoeling dat je de + operator gebruikt van &amp;ldquo;std_logic_unsigned&amp;rdquo; of &amp;ldquo;std_logic_signed&amp;rdquo;!</description>
     </item>
   </channel>
 </rss>

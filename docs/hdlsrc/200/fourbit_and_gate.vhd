@@ -27,8 +27,8 @@ architecture Behavioural of fourbit_and_gate is
     -- (DE-)LOCALISING IN/OUTPUTS
     signal A_i : STD_LOGIC_VECTOR(3 downto 0);
     signal B_i : STD_LOGIC_VECTOR(3 downto 0);
-    signal X_i : STD_LOGIC_VECTOR(3 downto 0);
-    signal Z_i : STD_LOGIC;
+    signal X_o : STD_LOGIC_VECTOR(3 downto 0);
+    signal Z_o : STD_LOGIC;
 
 begin
 
@@ -37,18 +37,18 @@ begin
     --------------------------------
     A_i <= A;
     B_i <= B;
-    X <= X_i;
-    Z <= Z_i;
+    X <= X_o;
+    Z <= Z_o;
 
     --------------------------------
     -- COMBINATORIAL
     --------------------------------
-    Z <= A_i(0) AND A_i(1) AND A_i(2) AND A_i(3);
+    Z_o <= A_i(0) AND A_i(1) AND A_i(2) AND A_i(3);
 
-    X_i(0) <= A_i(0) AND B_i(0);
-    X_i(1) <= A_i(1) AND B_i(1);
-    X_i(2) <= A_i(2) AND B_i(2);
-    X_i(3) <= A_i(3) AND B_i(3);
+    X_o(0) <= A_i(0) AND B_i(0);
+    X_o(1) <= A_i(1) AND B_i(1);
+    X_o(2) <= A_i(2) AND B_i(2);
+    X_o(3) <= A_i(3) AND B_i(3);
 
     -- wat ook mag is:
     --X_i <= A_i AND B_i;

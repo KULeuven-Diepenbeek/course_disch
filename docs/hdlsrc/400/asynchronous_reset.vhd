@@ -15,22 +15,22 @@ architecture Behavioral of asynchronous_reset is
     signal clock_i: std_logic;
     signal reset_i: std_logic;
     signal data_in_i: std_logic;
-    signal data_out_i: std_logic;
+    signal data_out_o: std_logic;
 
 begin
 
     clock_i <= clock;
     reset_i <= reset;
     data_in_i <= data_in;
-    data_out <= data_out_i;
+    data_out <= data_out_o;
 
     PREG: process(reset_i, clock_i)
     begin
         if reset_i =  '1' then
-            data_out_i <= '0';
+            data_out_o <= '0';
         else
             if clock_i'event and clock_i = '1' then
-                data_out_i <= data_in_i;    
+                data_out_o <= data_in_i;    
             end if;
         end if;
 
