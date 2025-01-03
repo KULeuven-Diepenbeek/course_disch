@@ -143,7 +143,7 @@ end arch;
 </div>
 <div class="column" style="width:40%">
 
-{{% figure src="/images/zelfstudie/aftrekker_cirkel.png" %}}
+{{% figure src="/images/900/920_vhdl/aftrekker_cirkel.png" %}}
 
 </div>
 </div>

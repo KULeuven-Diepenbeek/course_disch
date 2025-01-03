@@ -51,7 +51,7 @@ end arch_pos_dff;
 
 <div class="column" style="width:40%">
 
-{{% figure src=/images/zelfstudie/D_flipflop_pos.png %}}
+{{% figure src=/images/900/920_vhdl/D_flipflop_pos.png %}}
 
 
 </div>
@@ -91,7 +91,7 @@ end arch_pos_dff;
 
 <div class="column" style="width:40%">
 
-{{% figure src=/images/zelfstudie/D_flipflop_neg.png %}}
+{{% figure src=/images/900/920_vhdl/D_flipflop_neg.png %}}
 
 
 </div>

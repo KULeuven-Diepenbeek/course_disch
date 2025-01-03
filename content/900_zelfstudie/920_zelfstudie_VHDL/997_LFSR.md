@@ -8,7 +8,7 @@ draft: false
 
 Als we een sequentie van **getallen** willen **genereren**, kunnen we een LFSR (linear feedback shift register) gebruiken. Een LFSR is een shift register, waarbij de inschuivende bit elke klokcyclus gelijk is aan de XOR van een aantal bits in de interne toestand. Op <a href="https://en.wikipedia.org/wiki/Linear-feedback_shift_register#Example_polynomials_for_maximal_LFSRs"> wikipedia </a> staat uitgelegd welke bits er genomen moeten worden bij iedere grootte van LFSR.
 
-{{% figure src="/images/LFSR_wiki.png" %}}
+{{% figure src="/images/900/920_vhdl/LFSR_wiki.png" %}}
 <div class="source">
 Voorbeeld 16 bit LFSR. Bron: <a href="https://en.wikipedia.org/wiki/Linear-feedback_shift_register#/media/File:LFSR-F16.svg"> Wikipedia </a>
 </div>

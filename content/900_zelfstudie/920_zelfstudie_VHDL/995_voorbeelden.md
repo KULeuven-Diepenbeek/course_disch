@@ -54,7 +54,7 @@ end arch;
 </div>
 <div style="width:300px; float:left">
 
-{{% figure src=/images/zelfstudie/mux_4_input.png %}}
+{{% figure src=/images/900/920_vhdl/mux_4_input.png %}}
 
 </div>
 
@@ -95,7 +95,7 @@ end arch;
 </div>
 <div style="width:300px; float:left">
 
-{{% figure src=/images/zelfstudie/mux_4_input.png %}}
+{{% figure src=/images/900/920_vhdl/mux_4_input.png %}}
 
 </div>
 
@@ -140,7 +140,7 @@ end arch_comb_reg;
 </div>
 <div style="width:500px; float:left">
 
-{{% figure src=/images/zelfstudie/mod_10_upcounter.png %}}
+{{% figure src=/images/900/920_vhdl/mod_10_upcounter.png %}}
 
 </div>
 </div>
@@ -187,6 +187,6 @@ end arch_cyclic_shift;
 </div>
 <div style="width:500px; float:left">
 
-{{% figure src=/images/zelfstudie/circular_shift_reg.png %}}
+{{% figure src=/images/900/920_vhdl/circular_shift_reg.png %}}
 
 </div>

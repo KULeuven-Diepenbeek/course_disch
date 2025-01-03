@@ -41,7 +41,7 @@ end arch;
 </div>
 <div class="column" style="width:40%">
 
-{{% figure src=/images/zelfstudie/mux.png %}}
+{{% figure src=/images/900/920_vhdl/mux.png %}}
 
 </div>
 </div>
@@ -178,7 +178,7 @@ Een ingang van een proces kan een uitgang van een ander proces zijn.
 </div>
 <div class="column" style="width:35%">
 
-{{% figure src=/images/zelfstudie/meerdere_processen.png %}}
+{{% figure src=/images/900/920_vhdl/meerdere_processen.png %}}
 
 </div>
 </div>

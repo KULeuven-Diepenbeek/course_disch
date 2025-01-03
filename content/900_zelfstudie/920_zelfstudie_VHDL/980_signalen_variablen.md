@@ -142,7 +142,7 @@ z <= b;
 </div>
 <div class="column">
 
-{{% figure src="/images/zelfstudie/resolutie_functie.png" %}}
+{{% figure src="/images/900/920_vhdl/resolutie_functie.png" %}}
 
 </div>
 </div>
@@ -158,7 +158,7 @@ De resolutie-functie sluit niet uit dat de synthesetool (die de code omzet in ha
 </div>
 <div class="column" style="width:50%">
 
-{{% figure src="/images/zelfstudie/resolutie_functie_tabel.png" %}}
+{{% figure src="/images/900/920_vhdl/resolutie_functie_tabel.png" %}}
 
 </div>
 </div>

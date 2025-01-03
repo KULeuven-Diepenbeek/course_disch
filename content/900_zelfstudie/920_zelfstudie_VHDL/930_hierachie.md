@@ -45,7 +45,7 @@ end arch;
 
 </div>
 <div class="column">
-    {{% figure src="/images/zelfstudie/and_or_xor.png" %}}
+    {{% figure src="/images/900/920_vhdl/and_or_xor.png" %}}
 </div>
 </div>
 

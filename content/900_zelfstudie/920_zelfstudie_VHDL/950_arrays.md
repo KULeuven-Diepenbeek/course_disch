@@ -38,7 +38,7 @@ end arch;
 </div>
 <div class="column">
 
-{{% figure src=/images/zelfstudie/arrays.png %}}
+{{% figure src=/images/900/920_vhdl/arrays.png %}}
 
 </div>
 </div>
@@ -59,7 +59,7 @@ x <= y;
 
 </div>
 <div class="column"style="width:30%">
-{{% figure src=/images/zelfstudie/arrays_toekenning.png %}}
+{{% figure src=/images/900/920_vhdl/arrays_toekenning.png %}}
 </div>
 </div>
 

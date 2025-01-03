@@ -35,7 +35,7 @@ architecture...
 </div>
 <div class="column">
 
-{{% figure src=/images/zelfstudie/packages.png %}}
+{{% figure src=/images/900/920_vhdl/packages.png %}}
 
 </div>
 </div>

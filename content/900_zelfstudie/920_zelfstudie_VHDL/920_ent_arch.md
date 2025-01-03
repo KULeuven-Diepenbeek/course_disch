@@ -27,7 +27,7 @@ port(   a, b, d: in STD_LOGIC;
 end and_or_poort;
 ```
 
-{{% figure src="/images/zelfstudie/entity.png" title="De entity" %}}
+{{% figure src="/images/900/920_vhdl/entity.png" title="De entity" %}}
 
 ### Entity ports
 
@@ -82,7 +82,7 @@ end arch;
 {{< /highlight >}}
 </div> <div class="column">
 
-{{% figure src="/images/zelfstudie/and_or_c_uitgang.png"%}}
+{{% figure src="/images/900/920_vhdl/and_or_c_uitgang.png"%}}
 
 </div>
 </div>
@@ -144,7 +144,7 @@ end arch;
 
 {{< /highlight >}}
 
-{{% figure src="/images/zelfstudie/and_or_schamatic.png"%}}
+{{% figure src="/images/900/920_vhdl/and_or_schematic.png"%}}
 
 ### Signals
 
