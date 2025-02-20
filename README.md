@@ -28,4 +28,3 @@ git clone https://github.com/matcornic/hugo-theme-learn.git
 | 7 | Ch 6 | 3/4 | 28/4 |
 | 8 | ,, | 24/4 | 5/5 |
 | 9 | FSM | 29/4 | 12/5 |
-

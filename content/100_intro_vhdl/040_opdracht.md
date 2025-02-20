@@ -29,9 +29,9 @@ end entity or_gate;
 {{% /column %}}
 {{% /multiHcolumn %}}
 
-## Opleveren
+## Inleveren
 
-Om deze opdracht op te leveren moeten jullie volgende bestanden indienen via Toledo:
+Om deze opdracht in te leveren moeten jullie volgende bestanden indienen via Toledo:
 
 * één (of meerdere) bestanden met het design
 * één bestand met de testbench

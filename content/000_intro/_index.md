@@ -15,13 +15,16 @@ De beschrijvingen die we maken in HDL kunnen gebruikt worden om FPGA's mee te **
 
 **40%** van de punten van dit opleidingsonderdeel staan op dit labo. **60%** staat op de theorie.
 
-Er zijn **6 opdrachten** die moeten ingediend worden via Toledo. 
+Er zijn **7 opdrachten** die moeten ingediend worden via Toledo. Deze opdrachten worden evenredig gequoteerd en vormen de 40% van het labo-punt.
 
+<center><b>Voor het labo is er een verplichte aanwezigheid!!</b></center>
 
+Op het theorie examen zullen er ook twee vragen komen in verband met VHDL. Voor de ene vraag dien je VHDL code te geven voor een beschrijving (eventueel met ondersteunende tekening). Voor de andere vraag krijg je VHDL code en moet je zelf een tekening maken.
 
+<!-- 
 #### zelfstudie
 
 De zelfstudie VHDL wordt verwacht gelezen te worden in de loop van de lessen. De zelfstudie FSM is niet nodig voor deze labo's.
-Er komen **vragen** van **beide zelfstudie modules** in het **theorie** examen!
+Er komen **vragen** van **beide zelfstudie modules** in het **theorie** examen! -->
 
 

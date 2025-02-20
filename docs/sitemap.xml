@@ -17,11 +17,15 @@
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/010_eerste_project/</loc>
     <lastmod>2024-12-18T12:47:29+01:00</lastmod>
   </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/010_fsm/</loc>
+  </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/910_zelfstudie_fsm/010_fsm/</loc>
     <lastmod>2025-01-03T13:31:50+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/020_nand/</loc>
     <lastmod>2024-12-18T12:47:29+01:00</lastmod>
+  </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/020_voorbeeld_verkeerslicht/</loc>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/910_zelfstudie_fsm/020_voorbeeld_verkeerslicht/</loc>
     <lastmod>2025-01-03T13:31:50+01:00</lastmod>
@@ -31,6 +35,8 @@
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/030_simulatie/</loc>
     <lastmod>2024-12-18T12:47:29+01:00</lastmod>
+  </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/030_voorbeeld_timer/</loc>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/910_zelfstudie_fsm/030_voorbeeld_timer/</loc>
     <lastmod>2025-01-03T13:31:50+01:00</lastmod>
@@ -163,6 +169,8 @@
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/640_opdracht/</loc>
     <lastmod>2025-01-03T12:50:28+01:00</lastmod>
+  </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/</loc>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/800_extras/</loc>
     <lastmod>2025-01-03T14:12:24+01:00</lastmod>
