@@ -63,7 +63,7 @@ De gemakkelijkste manier is om in de **Flow Navigator** (de verticale balk aan d
 
 {{% figure src="/images/100/simulation.png" title="Simulatie van de nand gate met Vivado"  %}}
 
-Je ziet hierin de inputs en de output van de DUT. De tijd verstrijkt over de X-as. Als beide inputs of één van beide inputs 'hoog' is, is de uitgang ook 'hoog'. Indien beide ingangen 'hoog' zijn, is de uitgang 'laag'.
+Je ziet hierin de inputs en de output van de DUT. De tijd verstrijkt over de X-as. Als beide inputs of één van beide inputs 'laag' is, is de uitgang 'hoog'. Indien beide ingangen 'hoog' zijn, is de uitgang 'laag'.
 
 Dat is exact wat een NAND poort moet doen !! *(gelukkig)*
 
