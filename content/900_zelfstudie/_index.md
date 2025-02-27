@@ -1,10 +1,10 @@
 ---
-title: 'Zelfstudie'
+title: 'VHDL - korte naslag'
 chapter: true
 weight: 920
 draft: false
 ---
 
-# Zelfstudie
+# VHDL
 
 Onderdelen van dit hoofdstuk kunnen gevraagd worden in het **theorie examen**.

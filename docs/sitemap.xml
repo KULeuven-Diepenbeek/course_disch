@@ -20,29 +20,20 @@
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/010_fsm/</loc>
     <lastmod>2025-02-20T12:50:29+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/910_zelfstudie_fsm/010_fsm/</loc>
-    <lastmod>2025-01-03T13:31:50+01:00</lastmod>
-  </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/020_nand/</loc>
     <lastmod>2024-12-18T12:47:29+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/020_voorbeeld_verkeerslicht/</loc>
     <lastmod>2025-02-20T12:50:29+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/910_zelfstudie_fsm/020_voorbeeld_verkeerslicht/</loc>
-    <lastmod>2025-01-03T13:31:50+01:00</lastmod>
-  </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/025_and/</loc>
     <lastmod>2024-12-18T12:47:29+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/030_simulatie/</loc>
-    <lastmod>2024-12-18T12:47:29+01:00</lastmod>
+    <lastmod>2025-02-21T09:17:14+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/030_voorbeeld_timer/</loc>
     <lastmod>2025-02-20T12:50:29+01:00</lastmod>
-  </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/910_zelfstudie_fsm/030_voorbeeld_timer/</loc>
-    <lastmod>2025-01-03T13:31:50+01:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/031_synthesisable/</loc>
     <lastmod>2024-12-18T12:47:29+01:00</lastmod>
@@ -185,47 +176,30 @@
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/800_extras/820_tips_and_tricks/</loc>
     <lastmod>2025-01-03T14:12:24+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/910_zelfstudie_fsm/</loc>
-    <lastmod>2025-01-03T13:31:50+01:00</lastmod>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/910_hw_vs_sw/</loc>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/920_zelfstudie_vhdl/910_hw_vs_sw/</loc>
-    <lastmod>2025-01-03T13:47:03+01:00</lastmod>
-  </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/920_zelfstudie_vhdl/920_ent_arch/</loc>
-    <lastmod>2025-01-03T13:47:03+01:00</lastmod>
-  </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/920_zelfstudie_vhdl/</loc>
-    <lastmod>2025-01-03T13:31:50+01:00</lastmod>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/920_ent_arch/</loc>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/</loc>
     <lastmod>2025-01-03T13:31:50+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/920_zelfstudie_vhdl/930_hierachie/</loc>
-    <lastmod>2025-01-03T13:47:03+01:00</lastmod>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/930_hierachie/</loc>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/920_zelfstudie_vhdl/940_libraries/</loc>
-    <lastmod>2025-01-03T13:47:03+01:00</lastmod>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/940_libraries/</loc>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/920_zelfstudie_vhdl/950_arrays/</loc>
-    <lastmod>2025-01-03T13:47:03+01:00</lastmod>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/950_arrays/</loc>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/920_zelfstudie_vhdl/960_packages/</loc>
-    <lastmod>2025-01-03T13:47:03+01:00</lastmod>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/960_packages/</loc>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/920_zelfstudie_vhdl/970_processen/</loc>
-    <lastmod>2025-01-03T13:47:03+01:00</lastmod>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/970_processen/</loc>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/920_zelfstudie_vhdl/980_signalen_variablen/</loc>
-    <lastmod>2025-01-03T13:47:03+01:00</lastmod>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/980_signalen_variablen/</loc>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/920_zelfstudie_vhdl/990_flipflop_latch/</loc>
-    <lastmod>2025-01-03T13:47:03+01:00</lastmod>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/990_flipflop_latch/</loc>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/920_zelfstudie_vhdl/995_voorbeelden/</loc>
-    <lastmod>2025-01-03T13:47:03+01:00</lastmod>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/995_voorbeelden/</loc>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/920_zelfstudie_vhdl/997_lfsr/</loc>
-    <lastmod>2025-01-03T13:47:03+01:00</lastmod>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/997_lfsr/</loc>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/</loc>
     <lastmod>2024-01-18T12:57:55+01:00</lastmod>

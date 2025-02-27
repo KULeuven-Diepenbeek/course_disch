@@ -38,5 +38,4 @@ e <= c or d;
 c <= a and b;
 ```
 
-{{% figure src="/images/900/920_vhdl/and_or_schamatic.png" title="schematische voorstelling"%}}
-
+{{% figure src="/images/900/920_vhdl/and_or_schematic.png" title="schematische voorstelling" %}}
