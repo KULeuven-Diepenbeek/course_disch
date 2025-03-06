@@ -143,11 +143,18 @@
       <description>De ALU gaat dus een arithmetische of logische instructie uitvoeren. Ongeacht de operatie die de ALU moet uitvoeren, zijn er altijd twee ingangen. Het is niet mogelijk om de Silicon even aan te passen indien er een operatie moet gebeuren die maar 1 operand heeft. De operatie die de ALU moet uitvoeren, wordt in de Hack processor gekozen aan de hand van 6 bits: de status code. De ALU heeft dus, naast 2 ingangen van 16-bit registers voor de operanden, ook 6 controle bits.</description>
     </item>
     <item>
+      <title>ALU Design</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/325_construction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/325_construction/</guid>
+      <description>Het design van de 16-bit ALU wordt hier stap-per-stap toegelicht. Voor de logische operaties wordt alles gebouwd rond de AND-gate. Voor de aritmetische operaties wordt alles gebouwd rond de ripple-carry adder.&#xA;X and Y Dit is voor de hand liggend.&#xA;f(x,y) = x and y X or Y Door gebruik te maken van de wetten van De Morgan, kan een OR-gate gebouwd worden met de AND-gate.&#xA;Als beide inputs, A en B, geïnverteerd worden, geeft de logische AND-gate een geïnverteerde OR-gate.</description>
+    </item>
+    <item>
       <title>Opdracht 3: ALU</title>
       <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/330_opdracht_alu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/330_opdracht_alu/</guid>
-      <description>De ALU die je moet maken voor deze opdracht, ziet er uit zoals hieronder afgebeeld:&#xA;Ingangen x en y zijn 16 bits; De input status bits zijn: zx (zero x) nx (negate x) zy (zero y) ny (negate y) f (function) no (negate output) De output status zijn: zr (zero) ng (negative). De ALU met alle in- en uitgangen Later zetten we de input status codes juist op basis van de binnenkomende instructie en doen we iets met de output status codes.</description>
+      <description>De ALU die je moet maken voor deze opdracht, ziet er uit zoals hieronder afgebeeld:&#xA;Ingangen x en y zijn 16 bits; De input status bits zijn: zx (zero x) nx (negate x) zy (zero y) ny (negate y) f (function) no (negate output) De output status zijn: zr (zero) ng (negative). De ALU met alle in- en uitgangen Later worden de input status codes juist gezet op basis van de binnenkomende instructie en worden de output status codes gebruikt.</description>
     </item>
     <item>
       <title>Opdracht - testbench ALU</title>
