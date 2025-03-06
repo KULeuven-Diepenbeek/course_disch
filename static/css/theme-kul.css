@@ -147,6 +147,19 @@ div.multiHcolumn div.column{
     margin: 10px 10px;
 }
 
+span.overline{
+    border-top: 2px solid black;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+span.overline_l2{
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-top: 2px solid black;
+}
+
 div.column_highlight {
     flex-basis: 0;
     flex-grow: 1;

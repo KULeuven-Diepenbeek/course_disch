@@ -73,6 +73,11 @@ De processor die in dit opleidingsonderdeel gemaakt wordt interpreteert getallen
 
 ## Add/sub
 
-Eén van de mogelijke ALU instructies is **f(x,y) = x-y**. Wiskundig gezien weten wechter dat: **x - y = x + (-y)**. Dus, je kan stellen dat een aftrekking hetzelfde is als een optelling met de negatieve waarde.
+Eén van de mogelijke ALU instructies is **f(x,y) = x-y**. Wiskundig gezien weten we echter dat: **x - y = x + (-y)**. Dus, je kan stellen dat een aftrekking hetzelfde is als een optelling met de negatieve waarde.
 
 Hadden jullie nu net geen Ripple Carry Adder gemaakt? <b><i>#Chance-ke</i></b>.
+
+<!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
+{{% notice tip %}}
+Als -y gemaakt wordt door y te inverteren en 1 op te tellen, kan je ook stellen dat <span class="overline">y</span> gelijk is aan -y-1 = -(y+1).
+{{% /notice %}}

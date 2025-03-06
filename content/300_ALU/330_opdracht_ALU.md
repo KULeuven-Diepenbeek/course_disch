@@ -30,7 +30,7 @@ De ALU die je moet maken voor deze opdracht, ziet er uit zoals hieronder afgebee
 {{% /multiHcolumn %}}
 
 
-Later zetten we de input status codes juist op basis van de binnenkomende instructie en doen we iets met de output status codes.
+Later worden de input status codes juist gezet op basis van de binnenkomende instructie en worden de output status codes gebruikt.
 
 De opdracht is om zelf een ALU te maken die aan onderstaande waarheidstabel voldoet, met de volgende *entity*.
 
