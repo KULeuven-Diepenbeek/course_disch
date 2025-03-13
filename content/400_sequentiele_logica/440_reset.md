@@ -59,13 +59,13 @@ Welke reset gebruik je nu best? Dat hangt af van de toepassing. De tabel hierond
 
 
 {{% notice tip %}}
-De vuistregel voor (beginnende) hardware designers is om een <u>asynchrone reset</u> te gebruiken waar het niet anders kan (bv. bij IP blokken van third-parties), maar waar mogelijk (en zeker voor FPGA ontwerp) wordt aangeraden om een <u>**synchrone reset**</u> te gebruiken.
+De vuistregel voor (beginnende) hardware designers is om een <u>asynchrone reset</u> **ENKEL** te gebruiken waar het niet anders kan (bv. bij IP blokken van third-parties), maar waar mogelijk (en zeker voor FPGA ontwerp) wordt aangeraden om een <u>**synchrone reset**</u> te gebruiken.
 {{% /notice %}}
 
 
 
 {{% notice warning %}}
-Voor **sequentiële** processen zijn er maximaal 2 signalen (clock en eventueel reset) die in de sensitivity list staan. Bij **combinatorische** processen zijn het alle signalen.
+Voor **sequentiële** processen zijn er maximaal 2 signalen (clock en eventueel reset) die in de sensitivity list staan. Bij **combinatorische** processen zijn het alle ingangs-signalen.
 {{% /notice %}}
 <br/>
 <br/>

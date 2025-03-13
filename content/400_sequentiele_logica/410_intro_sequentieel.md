@@ -43,4 +43,4 @@ Onderstaande vhdl code is een voorbeeld van een flip-flop. Het is hier belangrij
 
 {{< include_file "/static/hdlsrc/400/d_flipflop.vhd" "vhdl" >}}
 
-Een alternatief voor ```if clock_i'event and clock_i = '1' then``` is ```if rising_edge(clock_i) then```.
+Een alternatief voor ```if rising_edge(clock_i) then``` is ```if clock_i'event and clock_i = '1' then```.

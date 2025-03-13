@@ -32,7 +32,7 @@ Extra aandacht moet besteed worden aan de if-then(-else) structuur. Wees jezelf 
 
 **Dit zou echter geen syntax-fouten geven.** 
 
-Met een *else-beschrijving* zou er immers beschreven worden dat register B enkel mag laden als **load_A** <u>laag</u> is <u>EN</u> **load_B** <u>hoog</u> is. Dit is een perfect plausible gedrag, maar niet gedrag dat in dit voorbeeld beoogd is.
+Met een *else-beschrijving* zou er immers beschreven worden dat register B enkel mag laden als **load_A** <u>laag</u> is <u>EN</u> **load_B** <u>hoog</u> is. Dit is een perfect plausible gedrag, maar niet het gedrag dat in dit voorbeeld beoogd is.
 {{% /column %}}
 {{% column %}}
 {{< include_file "/static/hdlsrc/400/regAB.vhd" "vhdl" >}}

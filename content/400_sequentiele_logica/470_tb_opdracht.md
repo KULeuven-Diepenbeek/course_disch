@@ -6,6 +6,6 @@ pre: "<i class='fas fa-book'></i> "
 draft: false
 ---
 
-Deze testbench wordt gebruikt voor de evaluatie.
+Een variant van deze testbench wordt gebruikt voor de evaluatie.
 
 {{< include_file "/static/hdlsrc/400/tb_counter.vhd" "vhdl" >}}
