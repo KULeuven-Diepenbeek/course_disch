@@ -8,11 +8,14 @@ entity SISO_shift_register is
 end SISO_shift_register;
 
 architecture Behavioral of SISO_shift_register is
+    
     signal clock_i : STD_LOGIC;
+    signal D_i : STD_LOGIC;
     signal buf: std_logic_vector(3 downto 0);
 begin
 
     clock_i <= clock;
+    D_i <= D;
     Y <= buf(3);
 
     SEQ: process(clock_i) begin

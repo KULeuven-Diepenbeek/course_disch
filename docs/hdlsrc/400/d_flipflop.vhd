@@ -33,7 +33,7 @@ begin
     SEQ: process(clock_i)
     begin
  
-        if clock_i'event and clock_i = '1' then
+        if rising_edge(clock_i) = '1' then
             Q_o <= D_i;    
         end if;
 
