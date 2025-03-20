@@ -294,7 +294,7 @@
       <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/560_testbench/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/560_testbench/</guid>
-      <description>Zoals bij voorgaande opdrachten, wordt ook bij deze opdracht een testbench voorzien. Aangezien de DUT (device-under-test) iets complexer is, is de gebruikte testbench ook iets complexer. Deze pagina legt uit wat er gebeurt.&#xA;TL;DR ... hier een testbench. Testbench De gewoonlijke structuur is natuurlijk wel behouden: 1) libraries, 2) entity (zonder poorten), en 3) de architecture. Tussen de architecture en de begin staan de declaraties van signalen en componenten. Tussen de begin en end staat het ontwerp.</description>
+      <description>Zoals bij voorgaande opdrachten, wordt ook bij deze opdracht een testbench voorzien. Aangezien de DUT (device-under-test) iets complexer is, is de gebruikte testbench ook iets complexer. Deze pagina legt uit wat er gebeurt.&#xA;TL;DR ... hier is een testbench en de input files vind je hier en hier. Testbench De gewoonlijke structuur is natuurlijk wel behouden: 1) libraries, 2) entity (zonder poorten), en 3) de architecture. Tussen de architecture en de begin staan de declaraties van signalen en componenten.</description>
     </item>
     <item>
       <title>Opdracht - firmware</title>
