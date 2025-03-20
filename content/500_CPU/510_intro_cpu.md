@@ -6,16 +6,12 @@ weight: 510
 draft: false
 ---
 
-Zoals in het begin van deze lessenreeks reeds vermeld, is het uiteindelijke doel het maken van een processor. De voorbij labo's is hiervoor de basis gelegd. De volgende componenten, die jullie reeds gemaakt hebben, dienen samengebracht te worden:
+Zoals in het begin van deze lessenreeks reeds vermeld, is het uiteindelijke doel het maken van een processor. De voorbije labo's is hiervoor de basis gelegd. De volgende componenten, die jullie reeds gemaakt hebben, dienen samengebracht te worden:
 
 * registers
 * multiplexers
 * de ALU
 * de program counter
-
-
-
-Bij de ingang van de ALU, de bovenkant (register D) is ALU ingang x en de onderkant is ALU ingang Y.
 
 ### Hack computer
 {{% multiHcolumn %}}
@@ -66,6 +62,7 @@ De architectuur van de Central Processing Unit (**CPU**) die we voor ogen hebben
 {{% /column %}}
 {{% /multiHcolumn %}}
 
+Bij de ingang van de ALU, de bovenkant (register D) is ALU ingang x en de onderkant is ALU ingang Y.
 
 
 ## De nooit-eindigende lus
