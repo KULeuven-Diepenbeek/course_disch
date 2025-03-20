@@ -14,7 +14,7 @@
       <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/510_intro_cpu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/510_intro_cpu/</guid>
-      <description>Zoals in het begin van deze lessenreeks reeds vermeld, is het uiteindelijke doel het maken van een processor. De voorbij labo&amp;rsquo;s is hiervoor de basis gelegd. De volgende componenten, die jullie reeds gemaakt hebben, dienen samengebracht te worden:&#xA;registers multiplexers de ALU de program counter Bij de ingang van de ALU, de bovenkant (register D) is ALU ingang x en de onderkant is ALU ingang Y.&#xA;Hack computer De architectuur van de Central Processing Unit (CPU) die we voor ogen hebben, is reeds ontworpen en maakt deel uit van de Hack computer.</description>
+      <description>Zoals in het begin van deze lessenreeks reeds vermeld, is het uiteindelijke doel het maken van een processor. De voorbije labo&amp;rsquo;s is hiervoor de basis gelegd. De volgende componenten, die jullie reeds gemaakt hebben, dienen samengebracht te worden:&#xA;registers multiplexers de ALU de program counter Hack computer De architectuur van de Central Processing Unit (CPU) die we voor ogen hebben, is reeds ontworpen en maakt deel uit van de Hack computer.</description>
     </item>
     <item>
       <title>ISA</title>
