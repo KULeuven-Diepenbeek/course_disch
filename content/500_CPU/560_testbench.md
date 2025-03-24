@@ -9,7 +9,7 @@ draft: false
 Zoals bij voorgaande opdrachten, wordt ook bij deze opdracht een testbench voorzien. Aangezien de DUT (device-under-test) iets complexer is, is de gebruikte testbench ook iets complexer. Deze pagina legt uit wat er gebeurt.
 
 <center>
-<b>TL;DR</b> ... <a href="/hdlsrc/500/cpu_tb.vhd" download>hier</a> een testbench.
+<b>TL;DR</b> ... <a href="/hdlsrc/500/cpu_tb.vhd" download>hier</a> is een testbench en de input files vind je <a href="/hdlsrc/500/main.hack" download>hier</a> en <a href="/hdlsrc/500/empty.dat" download>hier</a>.
 </center>
 
 ### Testbench
