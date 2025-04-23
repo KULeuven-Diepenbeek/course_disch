@@ -382,7 +382,7 @@
 	"title": "Opdracht 6: CPU v2",
 	"tags": [],
 	"description": "",
-	"content": "Voor deze opdracht wordt Hack CPU ge-upgrade tot de CPU v2.\n"
+	"content": "Voor deze opdracht wordt de Hack CPU ge-upgrade tot de CPU v2.\nOm te testen kan je deze firmware gebruiken. In dit programma wordt 210 berekend.\nIn de simulatie kan je de machten van 2 zien in M[2].\nTestbench in Vivado "
 },
 {
 	"uri": "https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/",
