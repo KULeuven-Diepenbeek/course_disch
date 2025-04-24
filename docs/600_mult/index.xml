@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>6. Multiplier on Digitale Elektronische Schakelingen</title>
+    <link>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/</link>
+    <description>Recent content in 6. Multiplier on Digitale Elektronische Schakelingen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
+    <atom:link href="https://kuleuven-diepenbeek.github.io/course_disch/600_mult/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cijferend vermenigvuldigen</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/610_cijferend_mul/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/610_cijferend_mul/</guid>
+      <description>Weet je nog? Cijfer-rekenen op de lagere school? Misschien had je nooit gedacht dat je dit nog ooit nodig had, maar nu zit je hier &amp;#x1f609;.&#xA;Voor zij die het zich niet meer helemaal herinneren is hier een snelle opfrissing. De 123 heet de vermenigvuldiger en de 45 het het vermenigvuldigtal. Het protocol:&#xA;begin met het meest linkse karakter van het vermenigvuldigtal (rood) vermenigvuldig dit, van links naar rechts, met ieder karakter van de de vermendigvuldiger noteer het partiële produkt schuif 1 karakter naar rechts in het vermenigvuldigtal (blauw) herhaal stap 2.</description>
+    </item>
+    <item>
+      <title>Hardware multiplier</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/620_hwmult/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/620_hwmult/</guid>
+      <description>Het is altijd een goed idee om een probleem op te splitsen in kleinere probleempjes. De aanpak die in de vorige sectie uitgelegd is, kan opgedeeld worden in 3 fasen. Deze 3 fases zijn eenvoudiger om te vertalen naar hardware.&#xA;Met deze analyse zou je in staat moeten zijn om een hardware multiplier te maken. De entity van de multiplier is hieronder weergegeven.&#xA;entity multiplier is generic ( G_WIDTH : natural := 4 ); port( A : in STD_LOGIC_VECTOR(G_WIDTH-1 downto 0); B : in STD_LOGIC_VECTOR(G_WIDTH-1 downto 0); Z : out STD_LOGIC_VECTOR(2*G_WIDTH-1 downto 0) ); end entity multiplier; </description>
+    </item>
+    <item>
+      <title>CPU v2</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/630_cpu_v2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/630_cpu_v2/</guid>
+      <description>Uiteraard is het de bedoeling dat deze multiplier gebruikt kan worden in de CPU die tot hiertoe ontwikkeld is. Voor de volledigheid moet er gezegd worden dat er hiermee buiten de scoop getreden wordt van de Hack CPU.&#xA;Data pad De eenvoudigste manier om deze extra functionaliteit toe te voegen is om een tweede ALU te maken. Zowel de x-operand als de y-operand die aan deze tweede ALU gekoppeld worden, zijn dezelfde als deze die aan de oorspronkelijke ALU gekoppeld zijn.</description>
+    </item>
+    <item>
+      <title>Opdracht 6: CPU v2</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/640_opdracht/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/640_opdracht/</guid>
+      <description>Voor deze opdracht wordt de Hack CPU ge-upgrade tot de CPU v2.&#xA;Om te testen kan je deze firmware gebruiken. In dit programma wordt 210 berekend.&#xA;In de simulatie kan je de machten van 2 zien in M[2].&#xA;Testbench in Vivado </description>
+    </item>
+  </channel>
+</rss>
