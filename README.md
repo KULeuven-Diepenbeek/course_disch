@@ -27,3 +27,4 @@ git clone https://github.com/matcornic/hugo-theme-learn.git
 | 8 | ,, | - | 5/5 |
 | 9 | FSM | 24/4 | 12/5 |
 | 10 | extra | 30/4 | 12/5 |
+
