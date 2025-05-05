@@ -1,0 +1,6 @@
+    ...
+
+    GENERATE_LABEL_DAT_JE_ZELF_MAG_KIEZEN: for i in 0 to 3 generate
+        y(i) <= x(i*2) and x(i*2+1)
+    end generate GENERATE_LABEL_DAT_JE_ZELF_MAG_KIEZEN;
+    ...

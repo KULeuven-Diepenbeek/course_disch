@@ -12,22 +12,22 @@
     <title>Generate :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1745501702" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1745501702" rel="stylesheet">
-    <link href="../../css/hybrid.css?1745501702" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1745501702" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1745501702" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1745501702" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1745501702" rel="stylesheet">
-    <link href="../../css/theme.css?1745501702" rel="stylesheet">
-    <link href="../../css/tabs.css?1745501702" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1745501702" rel="stylesheet">
+    <link href="../../css/nucleus.css?1746445841" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1746445841" rel="stylesheet">
+    <link href="../../css/hybrid.css?1746445841" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1746445841" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1746445841" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1746445841" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1746445841" rel="stylesheet">
+    <link href="../../css/theme.css?1746445841" rel="stylesheet">
+    <link href="../../css/tabs.css?1746445841" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1746445841" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1745501702" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1746445841" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1745501702"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1746445841"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1745501702"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1745501702"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1746445841"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1746445841"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1745501702"></script>
+<script type="text/javascript" src="../../js/search.js?1746445841"></script>
 
     
   </div>
@@ -1819,7 +1819,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1842,35 +1850,55 @@
         
 
 
-<p>Een generate is handig als je vaak VHDL-code moet herhalen. Meestal kan je dan een generate statement gebruiken om te voorkomen dat je te veel moet kopiëren en plakken.</p>
-<p>De generate gaat in dit voorbeeld van 0 tot 6 omdat 6+1 al 7 is, wat het laatste element van de array is.</p>
-
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">generate_example</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Port</span> (A_vector<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
-</span></span><span style="display:flex;"><span>        Y_vector<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">std_logic_vector</span>(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>));
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">generate_example</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">Behavioral</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">generate_example</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  GEN <span style="color:#f92672">:</span> <span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">6</span> <span style="color:#66d9ef">generate</span>
-</span></span><span style="display:flex;"><span>    Y_vector(i) <span style="color:#f92672">&lt;=</span> A_vector(i) <span style="color:#66d9ef">AND</span> A_vector(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">generate</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  Y_vector(<span style="color:#ae81ff">7</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">Behavioral</span>;
-</span></span></code></pre></div>
-<figure><img src="../../images/200/screenshot_generate.png"/><figcaption>
-            <h4>Schematische voorstelling</h4>
+<p>De meeste designs hebben ergens wel een bus, of een signaal dat een vector is. Daarom kan het ook vaak voorkomen dat VHDL-code nogal veel herhalingen heeft. Neem bijvoorbeeld het design hier onder, waarbij er een and gedaan wordt voor elke input-paar. Rechts zie je een beschrijving hiervan in VHDL.</p>
+<div class="multiHcolumn">
+<div class="column">
+    <figure><img src="../../images/200/generate_1.png"/><figcaption>
+            <h4>Design voor for-generate</h4>
         </figcaption>
 </figure>
+</div>    
+<div class="column">
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    y(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">&lt;=</span> x(<span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">and</span> x(<span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    y(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">&lt;=</span> x(<span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">and</span> x(<span style="color:#ae81ff">3</span>);
+</span></span><span style="display:flex;"><span>    y(<span style="color:#ae81ff">2</span>) <span style="color:#f92672">&lt;=</span> x(<span style="color:#ae81ff">4</span>) <span style="color:#66d9ef">and</span> x(<span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>    y(<span style="color:#ae81ff">3</span>) <span style="color:#f92672">&lt;=</span> x(<span style="color:#ae81ff">6</span>) <span style="color:#66d9ef">and</span> x(<span style="color:#ae81ff">7</span>);
+</span></span><span style="display:flex;"><span>    ...
+</span></span></code></pre></div>
+</div>    
+</div>
+<p>Zolang dat het aantal bits in deze X-vector behapbaar blijft, kan je dat volledig uitschrijven. Als deze vector te breed wordt, dan begint het pijnlijk te worden. In VHDL wordt hieraan tegemoet gekomen mbv een <strong>for-generate</strong>. Deze constructie bespaart aanzienlijk veel <em>&ldquo;beschrijf werkt&rdquo;</em> zonder aan de functionaliteit te komen. <br/><br/><strong>Het uiteindelijke design verandert niet omdat een for-generate gebruikt wordt.</strong></p>
+
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">GENERATE_LABEL_DAT_JE_ZELF_MAG_KIEZEN</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">3</span> <span style="color:#66d9ef">generate</span>
+</span></span><span style="display:flex;"><span>        y(i) <span style="color:#f92672">&lt;=</span> x(i<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">and</span> x(i<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">generate</span> <span style="color:#a6e22e">GENERATE_LABEL_DAT_JE_ZELF_MAG_KIEZEN</span>;
+</span></span><span style="display:flex;"><span>    ...
+</span></span></code></pre></div>
+<!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
+
+<div class="notices tip" ><p>Het kan, voor beginnende VHDL-gebruikers soms verwarrend zijn hoe deze indices gebruikt moeten worden. Een goede tip is om de eerste 2-3 instanties volledig uit te schrijven. Hiermee kan het patroon van de indices gemakkelijker herkend worden.</p>
+</div>
+
+<h4 id="componenten-instantiëren-mbv-een-for-generate">Componenten instantiëren mbv een for-generate</h4>
+<p>Ook het instantiëren van een component kan gebeuren met een for-generate. Indien men het bovenstaande voorbeeld willen beschrijven met de AND-poort uit het vorige hoofdstuk, kan dit als volgt:</p>
+
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">GEN_AND</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">3</span> <span style="color:#66d9ef">generate</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        and_gate_inst<span style="color:#f92672">:</span> <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">and_gate</span> <span style="color:#66d9ef">port</span> <span style="color:#66d9ef">map</span>(
+</span></span><span style="display:flex;"><span>                A <span style="color:#f92672">=&gt;</span> x(i<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>),
+</span></span><span style="display:flex;"><span>                B <span style="color:#f92672">=&gt;</span> x(i<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>),
+</span></span><span style="display:flex;"><span>                Z <span style="color:#f92672">=&gt;</span> y(i)
+</span></span><span style="display:flex;"><span>            );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">generate</span> <span style="color:#a6e22e">GEN_AND</span>;
+</span></span><span style="display:flex;"><span>    ...
+</span></span></code></pre></div>
 
 <div class="notices note" ><p>Vivado kan een schematische voorstelling maken van de hardware beschrijving met RTL analysis elaborate design.</p>
 </div>
@@ -3094,19 +3122,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1745501702"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1745501702"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1745501702"></script>
-    <script src="../../js/jquery.sticky.js?1745501702"></script>
-    <script src="../../js/featherlight.min.js?1745501702"></script>
-    <script src="../../js/highlight.pack.js?1745501702"></script>
+    <script src="../../js/clipboard.min.js?1746445841"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1746445841"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1746445841"></script>
+    <script src="../../js/jquery.sticky.js?1746445841"></script>
+    <script src="../../js/featherlight.min.js?1746445841"></script>
+    <script src="../../js/highlight.pack.js?1746445841"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1745501702"></script>
-    <script src="../../js/learn.js?1745501702"></script>
-    <script src="../../js/hugo-learn.js?1745501702"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1746445841"></script>
+    <script src="../../js/learn.js?1746445841"></script>
+    <script src="../../js/hugo-learn.js?1746445841"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1745501702"></script>
+            <script src="../../mermaid/mermaid.js?1746445841"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
