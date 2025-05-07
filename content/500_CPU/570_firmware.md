@@ -56,11 +56,19 @@ Als een degelijk klein programma werkt, kan je proberen om een iets complexer st
 Er bestaan websites, zoals [deze](https://alienkevin.github.io/hack-assembler-web/) die hulp kunnen bieden bij het *assembleren*.
 {{% /notice %}}
 
+### Fibonacci
+
+Het programma hieronder produceert de getallen van de Fibonacci reeks, kleiner dan 10'000. De firmware kan je  <a href="/hdlsrc/500/fibonacci.hack" download>hier</a> downloaden.
+
 {{% multiHcolumn %}}
 {{% column %}}
-{{< include_file "/static/hdlsrc/500/fibonaci.asm" "asm" >}}
+{{< include_file "/static/hdlsrc/500/fibonacci.asm" "asm" >}}
 {{% /column %}}
 {{% column %}}
-{{< include_file "/static/hdlsrc/500/fibonaci.hack" "bin" >}}
+{{< include_file "/static/hdlsrc/500/fibonacci.hack" "bin" >}}
 {{% /column %}}
 {{% /multiHcolumn %}}
+
+Het resultaat van het *"Fibonacci programma"* moet er ongeveer als volgt uitzien.
+
+![simpel](/images/500/fib.png)
