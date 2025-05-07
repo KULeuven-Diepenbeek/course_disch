@@ -12,22 +12,22 @@
     <title>Opdracht - firmware :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1746445841" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1746445841" rel="stylesheet">
-    <link href="../../css/hybrid.css?1746445841" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1746445841" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1746445841" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1746445841" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1746445841" rel="stylesheet">
-    <link href="../../css/theme.css?1746445841" rel="stylesheet">
-    <link href="../../css/tabs.css?1746445841" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1746445841" rel="stylesheet">
+    <link href="../../css/nucleus.css?1746613447" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1746613447" rel="stylesheet">
+    <link href="../../css/hybrid.css?1746613447" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1746613447" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1746613447" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1746613447" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1746613447" rel="stylesheet">
+    <link href="../../css/theme.css?1746613447" rel="stylesheet">
+    <link href="../../css/tabs.css?1746613447" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1746613447" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1746445841" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1746613447" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1746445841"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1746613447"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1746445841"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1746445841"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1746613447"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1746613447"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1746445841"></script>
+<script type="text/javascript" src="../../js/search.js?1746613447"></script>
 
     
   </div>
@@ -1819,7 +1819,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#fibonacci">Fibonacci</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1919,128 +1927,112 @@
 <div class="notices tip" ><p>Er bestaan websites, zoals <a href="https://alienkevin.github.io/hack-assembler-web/" target="_blank">deze</a> die hulp kunnen bieden bij het <em>assembleren</em>.</p>
 </div>
 
+<h3 id="fibonacci">Fibonacci</h3>
+<p>Het programma hieronder produceert de getallen van de Fibonacci reeks, kleiner dan 10'000. De firmware kan je  <a href="../../hdlsrc/500/fibonacci.hack" download>hier</a> downloaden.</p>
 <div class="multiHcolumn">
 <div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-asm" data-lang="asm"><span style="display:flex;"><span><span style="color:#75715e">// predefined symbols
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//   A: Address Register.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//   D: Data Register.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//   M: Refers to the register in Main Memory whose address is currently stored in A.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//   SP: RAM address 0.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//   LCL: RAM address 1.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//   ARG: RAM address 2.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//   THIS: RAM address 3.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//   THAT: RAM address 4.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//   R0-R15: Addresses of 16 RAM Registers, mapped from 0 to 15.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//   SCREEN: Base address of the Screen Map in Main Memory, which is equal to 16384.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//   KBD: Keyboard Register address in Main Memory, which is equal to 24576.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// set the maximum value to which the sequence has to go  
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-asm" data-lang="asm"><span style="display:flex;"><span><span style="color:#75715e">// set the maximum value to which the sequence has to go  
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@10000</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">A</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R15</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@4</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// init
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// initialize the registers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@1</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R2</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@2</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">START_L</span>)
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// start loop phase 1
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R1</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@1</span>               
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@2</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span><span style="color:#960050;background-color:#1e0010">+</span><span style="color:#66d9ef">M</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R2</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span><span style="color:#960050;background-color:#1e0010">+</span><span style="color:#66d9ef">M</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R3</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@3</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// check if MAX is reached
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R15</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// check if 1000 is reached
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@4</span>               
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D-M</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">INFINITE_LOOP</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#75715e">;JGE
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// start loop phase 2
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R2</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@41</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span>, <span style="color:#66d9ef">jgt</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// start loop phase 2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@2</span>               
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@3</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span><span style="color:#960050;background-color:#1e0010">+</span><span style="color:#66d9ef">M</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R3</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span><span style="color:#960050;background-color:#1e0010">+</span><span style="color:#66d9ef">M</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R1</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@1</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// check if MAX is reached
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R15</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// check if 1000 is reached
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@4</span>               
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D-M</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">INFINITE_LOOP</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#75715e">;JGE
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// start loop phase 3
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R3</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@41</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span>, <span style="color:#66d9ef">jgt</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// start loop phase 3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@3</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@1</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span><span style="color:#960050;background-color:#1e0010">+</span><span style="color:#66d9ef">M</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R1</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span><span style="color:#960050;background-color:#1e0010">+</span><span style="color:#66d9ef">M</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R2</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@2</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// check if MAX is reached
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R15</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// check if 1000 is reached
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@4</span>               
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D-M</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">INFINITE_LOOP</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#75715e">;JGE
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">START_L</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@41</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span>, <span style="color:#66d9ef">jgt</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// jump back to loop phase 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@8</span>
 </span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">0</span><span style="color:#75715e">;JMP
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// infinite loop to catch end
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">INFINITE_LOOP</span>)
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">INFINITE_LOOP</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// infinite loop to catch end       (INFINITE_LOOP)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@41</span>
 </span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">0</span><span style="color:#75715e">;JMP
 </span></span></span></code></pre></div>
 </div>    
 <div class="column">
-    <pre tabindex="0"><code class="language-bin" data-lang="bin">0010011100010000 - 0x2710
-1110110000010000 - 0xEC10
-0000000000001111 - 0x000F
-1110001100001000 - 0xE308
-0000000000000001 - 0x0001
-1110101010001000 - 0xEA88
-0000000000000010 - 0x0002
-1110111111001000 - 0xEFC8
-1110101010010000 - 0xEA90
-0000000000000001 - 0x0001
-1111000010010000 - 0xF090
-0000000000000010 - 0x0002
-1111000010010000 - 0xF090
-0000000000000011 - 0x0003
-1110001100001000 - 0xE308
-0000000000001111 - 0x000F
-1111010011010000 - 0xF4D0
-0000000000101011 - 0x002B
-1110001100000011 - 0xE303
-1110101010010000 - 0xEA90
-0000000000000010 - 0x0002
-1111000010010000 - 0xF090
-0000000000000011 - 0x0003
-1111000010010000 - 0xF090
-0000000000000001 - 0x0001
-1110001100001000 - 0xE308
-0000000000001111 - 0x000F
-1111010011010000 - 0xF4D0
-0000000000101011 - 0x002B
-1110001100000011 - 0xE303
-1110101010010000 - 0xEA90
-0000000000000011 - 0x0003
-1111000010010000 - 0xF090
-0000000000000001 - 0x0001
-1111000010010000 - 0xF090
-0000000000000010 - 0x0002
-1110001100001000 - 0xE308
-0000000000001111 - 0x000F
-1111010011010000 - 0xF4D0
-0000000000101011 - 0x002B
-1110001100000011 - 0xE303
-0000000000001000 - 0x0008
-1110101010000111 - 0xEA87
-0000000000101011 - 0x002B
-1110101010000111 - 0xEA87
+    <pre tabindex="0"><code class="language-bin" data-lang="bin">0010011100010000 - @10000           // set the maximum value to which the sequence has to go  
+1110110000010000 - D=A
+0000000000000100 - @4
+1110001100001000 - M=D
+0000000000000001 - @1               // init
+1110101010001000 - M=0
+0000000000000010 - @2
+1110111111001000 - M=1
+0000000000000001 - @1               // start loop phase 1               (START_L)
+1111110000010000 - D=M
+0000000000000010 - @2
+1111000010010000 - D=D+M
+0000000000000011 - @3
+1110001100001000 - M=D
+0000000000000100 - @4               // check if 1000 is reached
+1111010011010000 - D=D-M
+0000000000101001 - @41
+1110001100010001 - D=D, jgt
+0000000000000010 - @2               // start loop phase 2
+1111110000010000 - D=M
+0000000000000011 - @3
+1111000010010000 - D=D+M
+0000000000000001 - @1
+1110001100001000 - M=D
+0000000000000100 - @4               // check if 1000 is reached
+1111010011010000 - D=D-M
+0000000000101001 - @41
+1110001100010001 - D=D, jgt
+0000000000000011 - @3               // start loop phase 3
+1111110000010000 - D=M
+0000000000000001 - @1
+1111000010010000 - D=D+M
+0000000000000010 - @2
+1110001100001000 - M=D
+0000000000000100 - @4               // check if 1000 is reached
+1111010011010000 - D=D-M
+0000000000101001 - @41
+1110001100010001 - D=D, jgt
+0000000000001000 - @8
+1110000000000111 - 0;JMP
+0000000000101001 - @41              // infinite loop to catch end       (INFINITE_LOOP)
+1110000000000111 - 0;JMP
 </code></pre>
 </div>    
 </div>
+<p>Het resultaat van het <em>&ldquo;Fibonacci programma&rdquo;</em> moet er ongeveer als volgt uitzien.</p>
+<p><img src="../../images/500/fib.png" alt="simpel"></p>
 
 
 <footer class="footline">
@@ -3260,19 +3252,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1746445841"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1746445841"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1746445841"></script>
-    <script src="../../js/jquery.sticky.js?1746445841"></script>
-    <script src="../../js/featherlight.min.js?1746445841"></script>
-    <script src="../../js/highlight.pack.js?1746445841"></script>
+    <script src="../../js/clipboard.min.js?1746613447"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1746613447"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1746613447"></script>
+    <script src="../../js/jquery.sticky.js?1746613447"></script>
+    <script src="../../js/featherlight.min.js?1746613447"></script>
+    <script src="../../js/highlight.pack.js?1746613447"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1746445841"></script>
-    <script src="../../js/learn.js?1746445841"></script>
-    <script src="../../js/hugo-learn.js?1746445841"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1746613447"></script>
+    <script src="../../js/learn.js?1746613447"></script>
+    <script src="../../js/hugo-learn.js?1746613447"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1746445841"></script>
+            <script src="../../mermaid/mermaid.js?1746613447"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -92,7 +92,7 @@ begin
     );
 
     imem: component mem_model generic map(
-        FNAME => "/home/jvliegen/vc/github/KULeuven-Diepenbeek/course_disch_internal/cpu/firmware/firmware.dat"
+        FNAME => "/home/jvliegen/vc/github/KULeuven-Diepenbeek/course_disch_internal/cpu/firmware/main.hack"
     ) port map(
         reset => reset,
         clock => clock,
