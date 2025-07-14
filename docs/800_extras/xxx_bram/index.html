@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>2&#39;s Compliment :: Digitale Elektronische Schakelingen</title>
+    <title>BRAM :: Digitale Elektronische Schakelingen</title>
 
     
     <link href="../../css/nucleus.css?1751614644" rel="stylesheet">
@@ -42,7 +42,7 @@
     
 
   </head>
-  <body class="" data-url="../../300_alu/315_2scompliment/">
+  <body class="" data-url="../../800_extras/xxx_bram/">
     <nav id="sidebar" class="">
 
 
@@ -489,7 +489,7 @@
   
     
     <li data-nav-id="/300_alu/" title="3. ALU" class="dd-item
-        parent
+        
         
         
         ">
@@ -536,7 +536,7 @@
  
   
     
-      <li data-nav-id="/300_alu/315_2scompliment/" title="2&#39;s Compliment" class="dd-item active">
+      <li data-nav-id="/300_alu/315_2scompliment/" title="2&#39;s Compliment" class="dd-item ">
         <a href="../../300_alu/315_2scompliment/">
         <i class='fas fa-book'></i> 2&#39;s Compliment
         
@@ -1411,7 +1411,7 @@
   
     
     <li data-nav-id="/800_extras/" title="Extras" class="dd-item
-        
+        parent
         
         
         ">
@@ -1437,7 +1437,7 @@
  
   
     
-      <li data-nav-id="/800_extras/xxx_bram/" title="BRAM" class="dd-item ">
+      <li data-nav-id="/800_extras/xxx_bram/" title="BRAM" class="dd-item active">
         <a href="../../800_extras/xxx_bram/">
         <i class='fas fa-book'></i> BRAM
         
@@ -1827,7 +1827,7 @@
             
           
           
-            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../300_alu/'>3. ALU</a> > 2's Compliment
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../800_extras/'>Extras</a> > BRAM
           
         
           
@@ -1842,10 +1842,14 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#8469">ℕ</a></li>
-    <li><a href="#8484">ℤ</a></li>
-    <li><a href="#signed-vs-unsigned">Signed vs Unsigned</a></li>
-    <li><a href="#addsub">Add/sub</a></li>
+    <li>
+      <ul>
+        <li><a href="#doel-van-dit-hoofdstuk">Doel van dit hoofdstuk</a></li>
+        <li><a href="#bram">BRAM</a></li>
+        <li><a href="#bram-maken-in-vivado">BRAM maken in Vivado</a></li>
+        <li><a href="#delay-bram">delay BRAM</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -1863,72 +1867,40 @@
           
             <h1>
               
-              2&#39;s Compliment
+              BRAM
             </h1>
           
 
         
 
 
-<h2 id="8469">ℕ</h2>
-<p>Gezien je voor een ingenieurs-richting gekozen hebt, gaan we er van uit dat je geen schrik hebt van binaire getallen. Hopelijk zie je dat <strong>0b1010</strong> hetzelfde is als <strong>0xA</strong>, of <b><i>tien</i></b> zoals men in de volksmond zegt. Hieronder vind je nog een overzichtstabel voor de eerste 16 <strong>natuurlijke</strong> getallen.</p>
-<table>
-<tr><th>Dec</th><th>Bin</th><th>Hex</th><th>Dec</th><th>Bin</th><th>Hex</th><th>Dec</th><th>Bin</th><th>Hex</th><th>Dec</th><th>Bin</th><th>Hex</th></tr>
-<tr>
-    <th>0</th><td>0b0</td><td>0x0</td>
-    <th>4</th><td>0b100</td><td>0x4</td>
-    <th>8</th><td>0b1000</td><td>0x8</td>
-    <th>12</th><td>0b1100</td><td>0xC</td>
-</tr>
-<tr>
-    <th>1</th><td>0b1</td><td>0x1</td>
-    <th>5</th><td>0b101</td><td>0x5</td>
-    <th>9</th><td>0b1001</td><td>0x9</td>
-    <th>13</th><td>0b1101</td><td>0xD</td>
-</tr>
-<tr>
-    <th>2</th><td>0b10</td><td>0x2</td>
-    <th>6</th><td>0b110</td><td>0x6</td>
-    <th>10</th><td>0b1010</td><td>0xA</td>
-    <th>14</th><td>0b1110</td><td>0xE</td>
-</tr>
-<tr>
-    <th>3</th><td>0b11</td><td>0x3</td>
-    <th>7</th><td>0b111</td><td>0x7</td>
-    <th>11</th><td>0b1011</td><td>0xB</td>
-    <th>15</th><td>0b1111</td><td>0xF</td>
-</tr>
-</table>
-<p>Merk op dat alle 16 mogelijkheden binair te vervatten zijn in 4 tekens (=digits). In het geval dat de voorstelling korter is dan 4 digits, kunnen we altijd 0-en toevegen <strong>aan de linkerkant</strong>.</p>
-<h2 id="8484">ℤ</h2>
-<p>Stel dat we de verzameling van natuurlijke getallen willen uitbreiden naar de <strong>gehele</strong> getallen, hebben we ook negatieve getallen nodig. De meest gebruikte manier om negatieve getallen weer te geven is met behulp van <strong>2&rsquo;s compliment</strong>. De conversie naar 2&rsquo;s complement kan bekomen worden door <u>de binaire voorstelling te inverteren en dan 1 bit op te tellen</u>. Merk op dat de terugomzetting van 2&rsquo;s complement bekomen kan worden met <strong>dezelfde</strong> conversietechiek.</p>
-<table>
-    <tr><th>Decimaal</th><th>Binair</th><td>&nbsp;</td><th>Decimaal</th><th>Binair</th></tr>
-    <tr><th>1</th><td>0b0001</td><td>&nbsp;</tb><th>-1</th><td>0b1111</td></tr>
-    <tr><th>2</th><td>0b0010</td><td>&nbsp;</tb><th>-2</th><td>0b1110</td></tr>
-    <tr><th>3</th><td>0b0011</td><td>&nbsp;</tb><th>-3</th><td>0b1101</td></tr>
-    <tr><th>4</th><td>0b0100</td><td>&nbsp;</tb><th>-4</th><td>0b1100</td></tr>
-    <tr><th>5</th><td>0b0101</td><td>&nbsp;</tb><th>-5</th><td>0b1011</td></tr>
-    <tr><th>6</th><td>0b0110</td><td>&nbsp;</tb><th>-6</th><td>0b1010</td></tr>
-    <tr><th>7</th><td>0b0111</td><td>&nbsp;</tb><th>-7</th><td>0b1001</td></tr>
-</table>
-<p>In tegenstelling tot bij de natuurlijke getallen, kunnen we hier <strong>niet</strong> de breedte verlengen door links nullen toe voegen. In het kort kan gezegd worden dat je MSB kunt herhalen aan de linkerkant.</p>
-<p>Wat is het effect van 2&rsquo;s complement op 0? Juist, ja: 0.</p>
-<p>Tenslotte dient er nog even gemeld te worden dat de conversie ook op een andere manier kan gebeuren: verminder het getal met 1 en voer dan een bits-gewijze inversie uit.</p>
-<!-- [Wikipedia](https://en.wikipedia.org/wiki/Two%27s_complement) heeft ook goede uitleg over 2's compliment. -->
-<h2 id="signed-vs-unsigned">Signed vs Unsigned</h2>
-<p>Een basis concept van electronica en programmeren is het idee van een <strong>type</strong>. Als een variable gedeclareerd wordt, dient hierbij een type meegegeven te worden. Een voorbeeld hiervan in C is: <code>char mychar;</code> Een char is een variabele van 8 bits. Indien we enkel de natuurlijke getallen in acht nemen, kunnen er 256 (=2<sup>8</sup>) verschillende positieve getallen (én 0) weergegeven worden: <span style="border-radius: 2px; white-space: nowrap; color: #5e5e5e; background: #FFF7DD; border: 1px solid #fbf0cb; padding: 0px 2px; font-family: Consolas, menlo, monospace; font-size: 92%;">0 ≤ mychar &lt; 256</span>. Omdat er hier geen rekening gehouden wordt met het <em>teken</em> van het getal, noemen we dit een <strong>unsigned</strong> type.</p>
-<p>Indien we echter de gehele getallen in acht nemen, kunnen er 256 (=2<sup>8</sup>) verschillende positieve en negatieve getallen (én 0) weergegeven worden. Doordat de 2&rsquo;s complement methode gebruikt wordt, wordt het bereik: <span style="border-radius: 2px; white-space: nowrap; color: #5e5e5e; background: #FFF7DD; border: 1px solid #fbf0cb; padding: 0px 2px; font-family: Consolas, menlo, monospace; font-size: 92%;">-128 ≤ mychar &lt; 127</span>. Omdat er hier wél rekening gehouden wordt met het <em>teken</em> van het getal, noemen we dit een <strong>signed</strong> type.</p>
-<p>Een computer ziet enkel een reeks van 1-en en 0-en. De interpretatie die eraan gegeven wordt, ligt bij de gebruiker. Het is dus van belang dat men dit wéét bij het ontwerp van hardware, of bij het schrijven van (low-end) software.</p>
-<p>De processor die in dit opleidingsonderdeel gemaakt wordt interpreteert getallen als <strong>signed</strong>.</p>
-<h2 id="addsub">Add/sub</h2>
-<p>Eén van de mogelijke ALU instructies is <strong>f(x,y) = x-y</strong>. Wiskundig gezien weten we echter dat: <strong>x - y = x + (-y)</strong>. Dus, je kan stellen dat een aftrekking hetzelfde is als een optelling met de negatieve waarde.</p>
-<p>Hadden jullie nu net geen Ripple Carry Adder gemaakt? <b><i>#Chance-ke</i></b>.</p>
-<!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
-
-<div class="notices tip" ><p>Als -y gemaakt wordt door y te inverteren en 1 op te tellen, kan je ook stellen dat <span class="overline">y</span> gelijk is aan -y-1 = -(y+1).</p>
-</div>
-
+<h3 id="doel-van-dit-hoofdstuk">Doel van dit hoofdstuk</h3>
+<p>In dit hoofdstuk staat uitleg hoe je de CPU kan verbinden met Block ram om uiteindelijk ook werkelijk instructies aan de CPU te geven en de uitkomsten van bewerkingen ook te kunnen opslaan.</p>
+<figure><img src="../../images/CPU_gebruiken/Uitbereiding_CPU.png"/><figcaption>
+            <h4>Doel van dit hoofdstuk</h4>
+        </figcaption>
+</figure>
+<h3 id="bram">BRAM</h3>
+<p>Zowel aan de linker als rechterkant maken we gebruiken van Block RAM (random access memory) afgekort als BRAM. Dit is geheugen dat in een FPGA zit dat we kunnen gebruiken voor data in op te slaan. Het zou ook mogelijk zijn om DDR (double data rate) RAM te gebruiken dat wordt door computers vaak gebruikt en zit ook vaak op hetzelfde bordje als een FPGA, maar dat is veel moeilijk te gebruiken.</p>
+<h3 id="bram-maken-in-vivado">BRAM maken in Vivado</h3>
+<p>Onder project manger klik op <strong>IP catalog</strong>. Zoek dan op BRAM en selecteer <strong>Block Memory Generator</strong>.
+Nu krijg je een scherm waar je instellingen kan doen aan de IP block, je kan bijvoorbeeld de grote en breedte aanpassen.</p>
+<p>Je kan de IP block uitklappen om dan in de eerste file te kijken wat de ingangen en uitgangen zijn om aan te sluiten.</p>
+<p>BRAM heeft bijvoorbeeld onderstaande IO:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">ENTITY</span> <span style="color:#a6e22e">blk_mem_gen_0</span> <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">PORT</span> (
+</span></span><span style="display:flex;"><span>    clka <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>; <span style="color:#75715e">--clock</span>
+</span></span><span style="display:flex;"><span>    ena <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC</span>; <span style="color:#75715e">-- zet poort A aan</span>
+</span></span><span style="display:flex;"><span>    wea <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">DOWNTO</span> <span style="color:#ae81ff">0</span>); <span style="color:#75715e">-- schrijf naar poort A</span>
+</span></span><span style="display:flex;"><span>    addra <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">3</span> <span style="color:#66d9ef">DOWNTO</span> <span style="color:#ae81ff">0</span>); <span style="color:#75715e">-- welk aderess</span>
+</span></span><span style="display:flex;"><span>    dina <span style="color:#f92672">:</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">DOWNTO</span> <span style="color:#ae81ff">0</span>); <span style="color:#75715e">-- de data dat geschreven moet worden</span>
+</span></span><span style="display:flex;"><span>    douta <span style="color:#f92672">:</span> <span style="color:#66d9ef">OUT</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">15</span> <span style="color:#66d9ef">DOWNTO</span> <span style="color:#ae81ff">0</span>) <span style="color:#75715e">-- data dat wordt gelezen</span>
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> <span style="color:#a6e22e">blk_mem_gen_0</span>;    
+</span></span></code></pre></div><p>In het IP kan je ook &ldquo;load init file&rdquo; aanzetten. Als je dan een file maakt door op edit te drukken kan je bij de radix 16 invullen en bij de vector in waarde in hexadecimaal. Deze kan je later nog makelijk aanpassen.
+Als je dit hebt gedaan is er een &ldquo;coefficient file&rdquo; bijgekomen in het project en onder memory initialization kan je met behulp van spaties instructies scheiden.</p>
+<h3 id="delay-bram">delay BRAM</h3>
+<p>Let op dat het BRAM 2 clock cyclussen vertraging heeft en de rest van de CPU verwacht 1. Een manier toevoegen om de CPU te pauzeren als er van het geheugen wordt gelezen zou een goede oplossing zijn.</p>
 
 
 <footer class="footline">
@@ -2241,7 +2213,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2254,26 +2225,6 @@
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -2291,8 +2242,21 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -2891,6 +2855,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2903,6 +2868,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -2919,6 +2885,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3151,10 +3120,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../300_alu/310_intro_alu/" title="Wat is een ALU?"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../800_extras/" title="Extras"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../300_alu/320_status_codes/" title="Status codes ALU" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../800_extras/810_tuning/" title="Tuning" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

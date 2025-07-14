@@ -2,225 +2,228 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/000_intro/</loc>
+    <loc>http://localhost:1313/course_disch/000_intro/</loc>
     <lastmod>2025-02-20T12:50:29+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/001_software/010_alternatief/</loc>
+    <loc>http://localhost:1313/course_disch/001_software/010_alternatief/</loc>
     <lastmod>2024-12-18T12:32:21+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/001_software/</loc>
+    <loc>http://localhost:1313/course_disch/001_software/</loc>
     <lastmod>2024-01-18T12:57:55+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/</loc>
+    <loc>http://localhost:1313/course_disch/100_intro_vhdl/</loc>
     <lastmod>2024-12-18T12:47:29+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/010_eerste_project/</loc>
+    <loc>http://localhost:1313/course_disch/800_extras/xxx_bram/</loc>
+    <lastmod>2025-01-03T14:12:24+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/course_disch/100_intro_vhdl/010_eerste_project/</loc>
     <lastmod>2024-12-18T12:47:29+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/710_fsm/</loc>
+    <loc>http://localhost:1313/course_disch/700_fsm/710_fsm/</loc>
     <lastmod>2025-04-18T14:36:50+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/020_nand/</loc>
+    <loc>http://localhost:1313/course_disch/100_intro_vhdl/020_nand/</loc>
     <lastmod>2024-12-18T12:47:29+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/720_voorbeeld_verkeerslicht/</loc>
+    <loc>http://localhost:1313/course_disch/700_fsm/720_voorbeeld_verkeerslicht/</loc>
     <lastmod>2025-04-18T14:36:50+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/025_and/</loc>
+    <loc>http://localhost:1313/course_disch/100_intro_vhdl/025_and/</loc>
     <lastmod>2024-12-18T12:47:29+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/030_simulatie/</loc>
+    <loc>http://localhost:1313/course_disch/100_intro_vhdl/030_simulatie/</loc>
     <lastmod>2025-02-21T09:17:14+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/730_voorbeeld_timer/</loc>
+    <loc>http://localhost:1313/course_disch/700_fsm/730_voorbeeld_timer/</loc>
     <lastmod>2025-04-18T14:36:50+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/031_synthesisable/</loc>
+    <loc>http://localhost:1313/course_disch/100_intro_vhdl/031_synthesisable/</loc>
     <lastmod>2024-12-18T12:47:29+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/040_opdracht/</loc>
+    <loc>http://localhost:1313/course_disch/100_intro_vhdl/040_opdracht/</loc>
     <lastmod>2025-02-20T12:50:29+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/</loc>
+    <loc>http://localhost:1313/course_disch/200_next_step/</loc>
     <lastmod>2024-12-20T09:31:39+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/240_vectors/</loc>
+    <loc>http://localhost:1313/course_disch/200_next_step/240_vectors/</loc>
     <lastmod>2024-12-20T09:31:39+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/250_signals/</loc>
+    <loc>http://localhost:1313/course_disch/200_next_step/250_signals/</loc>
     <lastmod>2024-12-20T09:31:39+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/260_processen/</loc>
+    <loc>http://localhost:1313/course_disch/200_next_step/260_processen/</loc>
     <lastmod>2024-12-20T09:31:39+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/280_generate/</loc>
+    <loc>http://localhost:1313/course_disch/200_next_step/280_generate/</loc>
     <lastmod>2025-05-05T13:50:23+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/285_generic/</loc>
+    <loc>http://localhost:1313/course_disch/200_next_step/285_generic/</loc>
     <lastmod>2024-12-20T09:31:39+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/200_next_step/290_opdracht/</loc>
+    <loc>http://localhost:1313/course_disch/200_next_step/290_opdracht/</loc>
     <lastmod>2024-12-20T09:31:39+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/</loc>
+    <loc>http://localhost:1313/course_disch/300_alu/</loc>
     <lastmod>2025-01-03T14:12:58+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/310_intro_alu/</loc>
+    <loc>http://localhost:1313/course_disch/300_alu/310_intro_alu/</loc>
     <lastmod>2024-12-20T11:27:24+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/315_2scompliment/</loc>
+    <loc>http://localhost:1313/course_disch/300_alu/315_2scompliment/</loc>
     <lastmod>2025-03-06T11:06:11+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/320_status_codes/</loc>
+    <loc>http://localhost:1313/course_disch/300_alu/320_status_codes/</loc>
     <lastmod>2024-12-20T11:27:24+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/325_construction/</loc>
+    <loc>http://localhost:1313/course_disch/300_alu/325_construction/</loc>
     <lastmod>2025-03-06T11:06:11+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/330_opdracht_alu/</loc>
+    <loc>http://localhost:1313/course_disch/300_alu/330_opdracht_alu/</loc>
     <lastmod>2025-03-06T11:06:11+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/340_testbench_alu/</loc>
+    <loc>http://localhost:1313/course_disch/300_alu/340_testbench_alu/</loc>
     <lastmod>2025-01-02T14:52:03+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/</loc>
+    <loc>http://localhost:1313/course_disch/400_sequentiele_logica/</loc>
     <lastmod>2024-03-18T21:27:01+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/410_intro_sequentieel/</loc>
+    <loc>http://localhost:1313/course_disch/400_sequentiele_logica/410_intro_sequentieel/</loc>
     <lastmod>2025-03-13T06:16:38+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/420_registers/</loc>
+    <loc>http://localhost:1313/course_disch/400_sequentiele_logica/420_registers/</loc>
     <lastmod>2025-03-13T06:16:38+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/</loc>
+    <loc>http://localhost:1313/course_disch/400_sequentiele_logica/430_shift_registers/</loc>
     <lastmod>2025-01-02T13:26:01+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/431_siso/</loc>
+    <loc>http://localhost:1313/course_disch/400_sequentiele_logica/430_shift_registers/431_siso/</loc>
     <lastmod>2025-03-13T06:16:38+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/433_piso/</loc>
+    <loc>http://localhost:1313/course_disch/400_sequentiele_logica/430_shift_registers/433_piso/</loc>
     <lastmod>2025-01-02T13:26:01+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/434_pipo/</loc>
+    <loc>http://localhost:1313/course_disch/400_sequentiele_logica/430_shift_registers/434_pipo/</loc>
     <lastmod>2025-01-02T13:26:01+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/430_shift_registers/435_sipo/</loc>
+    <loc>http://localhost:1313/course_disch/400_sequentiele_logica/430_shift_registers/435_sipo/</loc>
     <lastmod>2025-01-02T13:26:01+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/440_reset/</loc>
+    <loc>http://localhost:1313/course_disch/400_sequentiele_logica/440_reset/</loc>
     <lastmod>2025-03-13T06:16:38+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/450_morereg/</loc>
+    <loc>http://localhost:1313/course_disch/400_sequentiele_logica/450_morereg/</loc>
     <lastmod>2025-03-13T06:16:38+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/460_opdracht/</loc>
+    <loc>http://localhost:1313/course_disch/400_sequentiele_logica/460_opdracht/</loc>
     <lastmod>2025-03-13T06:16:38+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/470_tb_opdracht/</loc>
+    <loc>http://localhost:1313/course_disch/400_sequentiele_logica/470_tb_opdracht/</loc>
     <lastmod>2025-03-13T06:16:38+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/</loc>
+    <loc>http://localhost:1313/course_disch/500_cpu/</loc>
     <lastmod>2025-01-02T14:52:39+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/510_intro_cpu/</loc>
+    <loc>http://localhost:1313/course_disch/500_cpu/510_intro_cpu/</loc>
     <lastmod>2025-03-20T10:39:38+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/520_isa/</loc>
+    <loc>http://localhost:1313/course_disch/500_cpu/520_isa/</loc>
     <lastmod>2025-01-02T14:52:39+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/521_a_instructie/</loc>
+    <loc>http://localhost:1313/course_disch/500_cpu/521_a_instructie/</loc>
     <lastmod>2025-01-02T14:52:39+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/522_c_instructie/</loc>
+    <loc>http://localhost:1313/course_disch/500_cpu/522_c_instructie/</loc>
     <lastmod>2025-01-02T14:52:39+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/523_c_instructie_comp/</loc>
+    <loc>http://localhost:1313/course_disch/500_cpu/523_c_instructie_comp/</loc>
     <lastmod>2025-01-02T14:52:39+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/524_c_instructie_destination/</loc>
+    <loc>http://localhost:1313/course_disch/500_cpu/524_c_instructie_destination/</loc>
     <lastmod>2025-01-02T14:52:39+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/525_c_instructie_jmp/</loc>
+    <loc>http://localhost:1313/course_disch/500_cpu/525_c_instructie_jmp/</loc>
     <lastmod>2025-01-02T14:52:39+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/550_opdracht/</loc>
+    <loc>http://localhost:1313/course_disch/500_cpu/550_opdracht/</loc>
     <lastmod>2025-01-03T12:50:28+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/560_testbench/</loc>
+    <loc>http://localhost:1313/course_disch/500_cpu/560_testbench/</loc>
     <lastmod>2025-03-24T11:39:34+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/570_firmware/</loc>
+    <loc>http://localhost:1313/course_disch/500_cpu/570_firmware/</loc>
     <lastmod>2025-05-07T12:24:02+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/</loc>
+    <loc>http://localhost:1313/course_disch/600_mult/</loc>
     <lastmod>2025-01-03T12:50:28+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/610_cijferend_mul/</loc>
+    <loc>http://localhost:1313/course_disch/600_mult/610_cijferend_mul/</loc>
     <lastmod>2025-01-03T12:50:28+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/620_hwmult/</loc>
+    <loc>http://localhost:1313/course_disch/600_mult/620_hwmult/</loc>
     <lastmod>2024-12-17T15:08:54+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/630_cpu_v2/</loc>
+    <loc>http://localhost:1313/course_disch/600_mult/630_cpu_v2/</loc>
     <lastmod>2025-01-03T12:50:28+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/600_mult/640_opdracht/</loc>
+    <loc>http://localhost:1313/course_disch/600_mult/640_opdracht/</loc>
     <lastmod>2025-04-23T11:07:19+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/</loc>
+    <loc>http://localhost:1313/course_disch/700_fsm/</loc>
     <lastmod>2025-02-20T12:50:29+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/740_opdracht/</loc>
+    <loc>http://localhost:1313/course_disch/700_fsm/740_opdracht/</loc>
     <lastmod>2025-04-18T14:36:50+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/800_extras/</loc>
+    <loc>http://localhost:1313/course_disch/800_extras/</loc>
     <lastmod>2025-01-03T14:12:24+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/800_extras/810_tuning/</loc>
+    <loc>http://localhost:1313/course_disch/800_extras/810_tuning/</loc>
     <lastmod>2025-01-03T14:12:24+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/800_extras/820_tips_and_tricks/</loc>
+    <loc>http://localhost:1313/course_disch/800_extras/820_tips_and_tricks/</loc>
     <lastmod>2025-01-03T14:12:24+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/910_hw_vs_sw/</loc>
+    <loc>http://localhost:1313/course_disch/900_zelfstudie/910_hw_vs_sw/</loc>
     <lastmod>2025-02-27T14:44:31+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/920_ent_arch/</loc>
+    <loc>http://localhost:1313/course_disch/900_zelfstudie/920_ent_arch/</loc>
     <lastmod>2025-02-27T14:44:31+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/</loc>
+    <loc>http://localhost:1313/course_disch/900_zelfstudie/</loc>
     <lastmod>2025-02-27T14:44:31+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/930_hierachie/</loc>
+    <loc>http://localhost:1313/course_disch/900_zelfstudie/930_hierachie/</loc>
     <lastmod>2025-02-27T14:44:31+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/940_libraries/</loc>
+    <loc>http://localhost:1313/course_disch/900_zelfstudie/940_libraries/</loc>
     <lastmod>2025-02-27T14:44:31+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/950_arrays/</loc>
+    <loc>http://localhost:1313/course_disch/900_zelfstudie/950_arrays/</loc>
     <lastmod>2025-02-27T14:44:31+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/960_packages/</loc>
+    <loc>http://localhost:1313/course_disch/900_zelfstudie/960_packages/</loc>
     <lastmod>2025-02-27T14:44:31+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/970_processen/</loc>
+    <loc>http://localhost:1313/course_disch/900_zelfstudie/970_processen/</loc>
     <lastmod>2025-02-27T14:44:31+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/980_signalen_variablen/</loc>
+    <loc>http://localhost:1313/course_disch/900_zelfstudie/980_signalen_variablen/</loc>
     <lastmod>2025-02-27T14:44:31+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/990_flipflop_latch/</loc>
+    <loc>http://localhost:1313/course_disch/900_zelfstudie/990_flipflop_latch/</loc>
     <lastmod>2025-02-27T14:44:31+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/995_voorbeelden/</loc>
+    <loc>http://localhost:1313/course_disch/900_zelfstudie/995_voorbeelden/</loc>
     <lastmod>2025-02-27T14:44:31+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/900_zelfstudie/997_lfsr/</loc>
+    <loc>http://localhost:1313/course_disch/900_zelfstudie/997_lfsr/</loc>
     <lastmod>2025-02-27T14:44:31+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/</loc>
+    <loc>http://localhost:1313/course_disch/</loc>
     <lastmod>2024-01-18T12:57:55+01:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/tags/</loc>
+    <loc>http://localhost:1313/course_disch/tags/</loc>
   </url>
 </urlset>

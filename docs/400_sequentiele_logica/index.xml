@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>4. Sequentiële logica on Digitale Elektronische Schakelingen</title>
-    <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/</link>
+    <link>http://localhost:1313/course_disch/400_sequentiele_logica/</link>
     <description>Recent content in 4. Sequentiële logica on Digitale Elektronische Schakelingen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
     <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
-    <atom:link href="https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/course_disch/400_sequentiele_logica/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Intro Sequentiële logica</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/410_intro_sequentieel/</link>
+      <link>http://localhost:1313/course_disch/400_sequentiele_logica/410_intro_sequentieel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/410_intro_sequentieel/</guid>
+      <guid>http://localhost:1313/course_disch/400_sequentiele_logica/410_intro_sequentieel/</guid>
       <description>Zoals er eerder al aangehaald worden alle componenten tegelijkertijd uitgevoerd. Net zoals op een breadboard, zijn alle componenten en poorten gelijktijdig actief. Wanneer het ontwerp complexer wordt, is het bijna onmogelijk om iets realiseren als er geen orde of volgorde is. Hiervoor is het klok-signaal ontstaan. Dit signaal speelt een soortgelijke rol zoals die van een dirigent bij een concert.&#xA;Als we bij combinatorische logica de ingang veranderen, duurt het een zekere tijd voordat dat de uitgang (mogelijks) verandert.</description>
     </item>
     <item>
       <title>Registers</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/420_registers/</link>
+      <link>http://localhost:1313/course_disch/400_sequentiele_logica/420_registers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/420_registers/</guid>
+      <guid>http://localhost:1313/course_disch/400_sequentiele_logica/420_registers/</guid>
       <description>Een register wordt typisch gebruikt om data op te slaan. Een simpel register is een groep van D flipflops waar je data in kan laden en vervolgens data uit kan lezen. Op een stijgende flank van de clock zal, indien het load signaal hoog is, de data van de D ingang op de uitgang Q gezet.&#xA;Register Parallel in, parallel out </description>
     </item>
     <item>
       <title>Reset</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/440_reset/</link>
+      <link>http://localhost:1313/course_disch/400_sequentiele_logica/440_reset/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/440_reset/</guid>
+      <guid>http://localhost:1313/course_disch/400_sequentiele_logica/440_reset/</guid>
       <description>Bij het maken van een hardware ontwerp dat registers bevat, is het noodzakelijk om de begintoestand te kennen: wat is de initiele waarde? De tekstboek manier om dit te bekomen is door gebruik te maken van een reset signaal. Het actief worden van dit signaal zorgt ervoor dat de hele schakeling in een gekende begintoestand komt. Er zijn typisch 2 manieren om dit te doen: met een synchrone reset of met een asynchrone reset.</description>
     </item>
     <item>
       <title>Meerdere registers</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/450_morereg/</link>
+      <link>http://localhost:1313/course_disch/400_sequentiele_logica/450_morereg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/450_morereg/</guid>
+      <guid>http://localhost:1313/course_disch/400_sequentiele_logica/450_morereg/</guid>
       <description>Het aantal ontwerpen dat je ooit zal maken dat minder dan 2 registers heeft, zal eerder beperkt zijn. Het beschrijven van registers neemt nogal wat regels HDL code in beslag. Stel dat er 2 registers in een design zijn: regA en regB. Een VHDL beschrijving van dit design zal ergens onderstaande twee stukken code bevatten.&#xA;PREGA: process(clock_i) begin if rising_edge(clock_i) then if reset_i = &amp;#39;1&amp;#39; then regA &amp;lt;= (others =&amp;gt; &amp;#39;0&amp;#39;); else if load_A = &amp;#39;1&amp;#39; then regA &amp;lt;= regA_in; end if; end if; end if; end process; PREGB: process(clock_i) begin if rising_edge(clock_i) then if reset_i = &amp;#39;1&amp;#39; then regB &amp;lt;= (others =&amp;gt; &amp;#39;0&amp;#39;); else if load_B = &amp;#39;1&amp;#39; then regB &amp;lt;= regB_in; end if; end if; end if; end process; Beide registers hebben een synchrone, actief hoge reset.</description>
     </item>
     <item>
       <title>Opdracht 4: Program counter</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/460_opdracht/</link>
+      <link>http://localhost:1313/course_disch/400_sequentiele_logica/460_opdracht/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/460_opdracht/</guid>
+      <guid>http://localhost:1313/course_disch/400_sequentiele_logica/460_opdracht/</guid>
       <description>De bedoeling van deze opdracht is om de program counter van de processor te maken. De program counter heeft 5 input signalen. data_in, clock, reset, load en inc(rement). Als output heeft het data_out. Data_in en Data_out zijn beide 16-bit vectoren. Als de reset hoog wordt, moet de program counter synchroon resetten naar 0x0. inc zorgt dat de program counter met 1 verhoogd wordt en load zorgt er voor dat de data van data_in synchroon wordt ingeladen.</description>
     </item>
     <item>
       <title>Opdracht - testbench</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/470_tb_opdracht/</link>
+      <link>http://localhost:1313/course_disch/400_sequentiele_logica/470_tb_opdracht/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/400_sequentiele_logica/470_tb_opdracht/</guid>
+      <guid>http://localhost:1313/course_disch/400_sequentiele_logica/470_tb_opdracht/</guid>
       <description>Een variant van deze testbench wordt gebruikt voor de evaluatie.&#xA;library IEEE; use IEEE.STD_LOGIC_1164.ALL; -- NOTE: de entity van de testbench heeft géén poorten entity tb_counter is end tb_counter; architecture Behavioral of tb_counter is -- COMPONENT DECLARATIE component counter is port ( clock: in std_logic; reset: in std_logic; load: in std_logic; inc: in std_logic; data_in : in std_logic_vector(15 downto 0); data_out : out std_logic_vector(15 downto 0) ); end component; signal clock: std_logic; signal reset: std_logic; signal load: std_logic; signal inc: std_logic; signal data_in : std_logic_vector(15 downto 0); signal data_out : std_logic_vector(15 downto 0); constant clock_period : time := 10 ns; begin DUT: component counter port map( clock =&amp;gt; clock, reset =&amp;gt; reset, load =&amp;gt; load, inc =&amp;gt; inc, data_in =&amp;gt; data_in, data_out =&amp;gt; data_out); PCLK: process begin clock &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period/2; clock &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period/2; end process; PSTIM: process begin data_in &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period*8; data_in &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;1&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period*2; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;0000000000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000001&amp;#34;) report &amp;#34;increment werkt niet&amp;#34; severity failure; wait for clock_period*10; assert (data_out = &amp;#34;0000000000001011&amp;#34;) report &amp;#34;increment werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;0000111000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000111000000000&amp;#34;) report &amp;#34;load werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;0000111000000000&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000111000000001&amp;#34;) report &amp;#34;inc na load werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1111111111111111&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;1111111111111111&amp;#34;) report &amp;#34;load werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1111110011111111&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;1111110011111111&amp;#34;) report &amp;#34;load before increment werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1111111111111111&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;0&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;1111111111111111&amp;#34;) report &amp;#34;load werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011110011&amp;#34;; reset &amp;lt;= &amp;#39;0&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;overflow werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;1&amp;#39;; load &amp;lt;= &amp;#39;1&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;H&amp;#39;; load &amp;lt;= &amp;#39;L&amp;#39;; inc &amp;lt;= &amp;#39;L&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;L&amp;#39;; load &amp;lt;= &amp;#39;0&amp;#39;; inc &amp;lt;= &amp;#39;1&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000001&amp;#34;) report &amp;#34;iets werkt niet&amp;#34; severity failure; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;X&amp;#39;; load &amp;lt;= &amp;#39;L&amp;#39;; inc &amp;lt;= &amp;#39;H&amp;#39;; wait for clock_period; data_in &amp;lt;= &amp;#34;1100110011111111&amp;#34;; reset &amp;lt;= &amp;#39;1&amp;#39;; load &amp;lt;= &amp;#39;W&amp;#39;; inc &amp;lt;= &amp;#39;Z&amp;#39;; wait for clock_period; assert (data_out = &amp;#34;0000000000000000&amp;#34;) report &amp;#34;reset werkt niet&amp;#34; severity failure; wait; end process; end Behavioral; </description>
     </item>
   </channel>

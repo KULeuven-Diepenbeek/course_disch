@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>3. ALU on Digitale Elektronische Schakelingen</title>
-    <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/</link>
+    <link>http://localhost:1313/course_disch/300_alu/</link>
     <description>Recent content in 3. ALU on Digitale Elektronische Schakelingen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
     <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
-    <atom:link href="https://kuleuven-diepenbeek.github.io/course_disch/300_alu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/course_disch/300_alu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wat is een ALU?</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/310_intro_alu/</link>
+      <link>http://localhost:1313/course_disch/300_alu/310_intro_alu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/310_intro_alu/</guid>
+      <guid>http://localhost:1313/course_disch/300_alu/310_intro_alu/</guid>
       <description>Het doel van dit labo is om uiteindelijk een werkende microprocessor te maken, ook al is het in een simpele vorm. Het doel is om de hack processor te maken van de cursus nand2tetris. In dit OPO gaan we de beschrijving uiteraard wel maken in VHDL.&#xA;Eén van de componenten die in iedere processor zit is een Arithmetic Logic Unit (ALU). Een ALU neemt 2 (of 1) input(s) en voert hier een bepaalde instructie mee uit.</description>
     </item>
     <item>
       <title>2&#39;s Compliment</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/315_2scompliment/</link>
+      <link>http://localhost:1313/course_disch/300_alu/315_2scompliment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/315_2scompliment/</guid>
+      <guid>http://localhost:1313/course_disch/300_alu/315_2scompliment/</guid>
       <description>ℕ Gezien je voor een ingenieurs-richting gekozen hebt, gaan we er van uit dat je geen schrik hebt van binaire getallen. Hopelijk zie je dat 0b1010 hetzelfde is als 0xA, of tien zoals men in de volksmond zegt. Hieronder vind je nog een overzichtstabel voor de eerste 16 natuurlijke getallen.&#xA;DecBinHexDecBinHexDecBinHexDecBinHex 00b00x0 40b1000x4 80b10000x8 120b11000xC 10b10x1 50b1010x5 90b10010x9 130b11010xD 20b100x2 60b1100x6 100b10100xA 140b11100xE 30b110x3 70b1110x7 110b10110xB 150b11110xF Merk op dat alle 16 mogelijkheden binair te vervatten zijn in 4 tekens (=digits).</description>
     </item>
     <item>
       <title>Status codes ALU</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/320_status_codes/</link>
+      <link>http://localhost:1313/course_disch/300_alu/320_status_codes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/320_status_codes/</guid>
+      <guid>http://localhost:1313/course_disch/300_alu/320_status_codes/</guid>
       <description>De ALU gaat dus een arithmetische of logische instructie uitvoeren. Ongeacht de operatie die de ALU moet uitvoeren, zijn er altijd twee ingangen. Het is niet mogelijk om de Silicon even aan te passen indien er een operatie moet gebeuren die maar 1 operand heeft. De operatie die de ALU moet uitvoeren, wordt in de Hack processor gekozen aan de hand van 6 bits: de status code. De ALU heeft dus, naast 2 ingangen van 16-bit registers voor de operanden, ook 6 controle bits.</description>
     </item>
     <item>
       <title>ALU Design</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/325_construction/</link>
+      <link>http://localhost:1313/course_disch/300_alu/325_construction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/325_construction/</guid>
+      <guid>http://localhost:1313/course_disch/300_alu/325_construction/</guid>
       <description>Het design van de 16-bit ALU wordt hier stap-per-stap toegelicht. Voor de logische operaties wordt alles gebouwd rond de AND-gate. Voor de aritmetische operaties wordt alles gebouwd rond de ripple-carry adder.&#xA;X and Y Dit is voor de hand liggend.&#xA;f(x,y) = x and y X or Y Door gebruik te maken van de wetten van De Morgan, kan een OR-gate gebouwd worden met de AND-gate.&#xA;Als beide inputs, A en B, geïnverteerd worden, geeft de logische AND-gate een geïnverteerde OR-gate.</description>
     </item>
     <item>
       <title>Opdracht 3: ALU</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/330_opdracht_alu/</link>
+      <link>http://localhost:1313/course_disch/300_alu/330_opdracht_alu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/330_opdracht_alu/</guid>
+      <guid>http://localhost:1313/course_disch/300_alu/330_opdracht_alu/</guid>
       <description>De ALU die je moet maken voor deze opdracht, ziet er uit zoals hieronder afgebeeld:&#xA;Ingangen x en y zijn 16 bits; De input status bits zijn: zx (zero x) nx (negate x) zy (zero y) ny (negate y) f (function) no (negate output) De output status zijn: zr (zero) ng (negative). De ALU met alle in- en uitgangen Later worden de input status codes juist gezet op basis van de binnenkomende instructie en worden de output status codes gebruikt.</description>
     </item>
     <item>
       <title>Opdracht - testbench ALU</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/340_testbench_alu/</link>
+      <link>http://localhost:1313/course_disch/300_alu/340_testbench_alu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/340_testbench_alu/</guid>
+      <guid>http://localhost:1313/course_disch/300_alu/340_testbench_alu/</guid>
       <description>Om de juiste werking van de ALU te verifiëren, wordt er opnieuw gebruikt gemaakt van een testbench. Het is een goed idee om tijdens het ontwikkelen van de ALU meteen de functionaliteit te testen. Hiervoor kunnen er heel gericht bepaalde instructies ingesteld worden. Om bijvoorbeeld 12 + 3 te doen weet je dat inputs de volgende moeten zijn:&#xA;X wordt 12 Y wordt 3 de instructie voor de optelling is zx is &amp;lsquo;0&amp;rsquo; nx is &amp;lsquo;0&amp;rsquo; zy is &amp;lsquo;0&amp;rsquo; ny is &amp;lsquo;0&amp;rsquo; f is &amp;lsquo;1&amp;rsquo; no is &amp;lsquo;0&amp;rsquo; PSTIM: process begin X &amp;lt;= x&amp;#34;C&amp;#34;; Y &amp;lt;= x&amp;#34;3&amp;#34;; zx &amp;lt;= &amp;#39;0&amp;#39;; zy &amp;lt;= &amp;#39;0&amp;#39;; nx &amp;lt;= &amp;#39;0&amp;#39;; ny &amp;lt;= &amp;#39;0&amp;#39;; f &amp;lt;= &amp;#39;1&amp;#39;; no &amp;lt;= &amp;#39;0&amp;#39;; wait; end process; Op deze manier kan je stapsgewijs de testbench opbouwen.</description>
     </item>
   </channel>
