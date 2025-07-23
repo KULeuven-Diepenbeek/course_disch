@@ -21,15 +21,20 @@ Uiteraard moet het gedrag van deze component ook aangepast worden. In de archite
 {{% /column %}}
 {{% /multiHcolumn %}}
 
+<!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
+{{% notice tip %}}
+VHDL beschikt ook over het **keyword** "nand". Een extra component maken is dus niet verplicht.
+{{% /notice %}}
+
 ### Nog enkele bijkomende opmerkingen:
 
-* VHDL is case-insensitive. Je mag dus hoofdletters en kleine letters verwisselen.
+* VHDL is **case-insensitive**. Je mag dus hoofdletters en kleine letters verwisselen.
 * commentaar wordt vooraf gegaan van 2 min-tekens ```--```
 * Het is good-practice om niet meteen te werken met de in- en uitgangen, maar met lokale signalen. Daarom wordt in dit voorbeeld deze "vertaalslag" gemaakt.
   * input signalen hebben het suffix **_i**
   * output signalen hebben het suffix **_o**. Deze signalen kunnen ook binnenin de entity gebruikt worden, terwijl de poorten (met OUT direction) dit niet toelaten.
 * **commentaar kan NOOIT kwaad**
 
-{{% notice tip %}}
+{{% notice note %}}
 Voor deze simpele voorbeelden lijkt het banaal om de link met de discrete component (en de bijhorende schematic) te leggen. Een goede designer verliest echter het volledige schema **NOOIT** uit het oog.
 {{% /notice  %}}
