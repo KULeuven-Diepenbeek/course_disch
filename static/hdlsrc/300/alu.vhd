@@ -1,20 +1,15 @@
 entity alu is
-    generic(
-        WIDTH : natural := 16
-    );
     port(
-        X : IN STD_LOGIC_VECTOR(WIDTH-1 downto 0);
-        Y : IN STD_LOGIC_VECTOR(WIDTH-1 downto 0);
-        Z : OUT STD_LOGIC_VECTOR(WIDTH-1 downto 0);
-
-        zx : IN STD_LOGIC;
-        zy : IN STD_LOGIC;
-        nx : IN STD_LOGIC;
-        ny : IN STD_LOGIC;
-        f : IN STD_LOGIC;
-        no : IN STD_LOGIC;
-
-        zr : OUT STD_LOGIC;
-        ng : OUT STD_LOGIC
+        operator1 : in std_logic_vector(C_WIDTH-1 downto 0);
+        operator2 : in std_logic_vector(C_WIDTH-1 downto 0);
+        ALUOp : in std_logic_vector(2 downto 0);
+        arith_logic_b : in STD_LOGIC;
+        signed_unsigned_b : in STD_LOGIC;
+        result : out std_logic_vector(C_WIDTH-1 downto 0);
+        zero : out std_logic;
+        equal : out std_logic;
+        carryOut : out std_logic;
+        x_lt_y_u : out std_logic;
+        x_lt_y_s : out std_logic
     );
 end entity alu;

@@ -1,30 +1,34 @@
+
 ...
-        X <= x"329a";
-        Y <= x"ae51";
-        zx <= '0';
-        zy <= '1';
-        nx <= '0';
-        ny <= '1';
-        f <= '0';
-        no <= '1';
-        wait for 1 ns;
-        if (Z /= x"cd65") then
-            report "Error in outcome (not x)" severity note;
-            v_incorrect_z := v_incorrect_z + 1;
+        -- apply stimuli
+        operator1 <= x"e9db2c09"; -- 3923454985
+        operator2 <= x"789795be"; -- 2023200190
+        ALUOp <= "100";
+        arith_logic_b <= '0';
+        signed_unsigned_b <= '0';
+        wait for 2 ns;
+        -- check outputs
+        if result /= x"6272c1c7" then
+            bad_checks := bad_checks + 1;
         else
-            v_correct_z := v_correct_z + 1;
+            good_checks := good_checks + 1;
         end if;
-        if (zr /= '0') then
-            report "Error in zero flag (not x)" severity note;
-            v_incorrect_zr := v_incorrect_zr + 1;
+        if zero /= '0' then
+            bad_checks := bad_checks + 1;
         else
-            v_correct_zr := v_correct_zr + 1;
+            good_checks := good_checks + 1;
         end if;
-        if (ng /= '1') then
-            report "Error in negative flag (not x)" severity note;
-            v_incorrect_ng := v_incorrect_ng + 1;
+        if equal /= '0' then
+            bad_checks := bad_checks + 1;
         else
-            v_correct_ng := v_correct_ng + 1;
+            good_checks := good_checks + 1;
         end if;
-        wait for 1 ns;
+        if carryOut /= '1' then
+            bad_checks := bad_checks + 1;
+        else
+            good_checks := good_checks + 1;
+        end if;
+        wait for 2 ns;
+...
+        report "DISCH_GRADING (good, bad, total): " & integer'image(good_checks) & " " & integer'image(bad_checks) & " " & integer'image(good_checks + bad_checks) & "" severity note;
 ...

@@ -63,13 +63,23 @@ Tenslotte dient er nog even gemeld te worden dat de conversie ook op een andere 
 <!-- [Wikipedia](https://en.wikipedia.org/wiki/Two%27s_complement) heeft ook goede uitleg over 2's compliment. -->
 
 ## Signed vs Unsigned
-Een basis concept van electronica en programmeren is het idee van een **type**. Als een variable gedeclareerd wordt, dient hierbij een type meegegeven te worden. Een voorbeeld hiervan in C is: ```char mychar;``` Een char is een variabele van 8 bits. Indien we enkel de natuurlijke getallen in acht nemen, kunnen er 256 (=2<sup>8</sup>) verschillende positieve getallen (én 0) weergegeven worden: <span style="border-radius: 2px; white-space: nowrap; color: #5e5e5e; background: #FFF7DD; border: 1px solid #fbf0cb; padding: 0px 2px; font-family: Consolas, menlo, monospace; font-size: 92%;">0 &le; mychar &lt; 256</span>. Omdat er hier geen rekening gehouden wordt met het *teken* van het getal, noemen we dit een **unsigned** type.
 
-Indien we echter de gehele getallen in acht nemen, kunnen er 256 (=2<sup>8</sup>) verschillende positieve en negatieve getallen (én 0) weergegeven worden. Doordat de 2's complement methode gebruikt wordt, wordt het bereik: <span style="border-radius: 2px; white-space: nowrap; color: #5e5e5e; background: #FFF7DD; border: 1px solid #fbf0cb; padding: 0px 2px; font-family: Consolas, menlo, monospace; font-size: 92%;">-128 &le; mychar &lt; 127</span>. Omdat er hier wél rekening gehouden wordt met het *teken* van het getal, noemen we dit een **signed** type.
+{{% multiHcolumn %}}
+{{% column %}}
+Een basis concept van programmeren is het idee van een **type**. Als een variable gedeclareerd wordt, dient hierbij een type meegegeven te worden. Een voorbeeld hiervan in C is: ```char mychar;``` Een char is een variabele van 8 bits. Indien we enkel de natuurlijke getallen in acht nemen, kunnen er 256 (=2<sup>8</sup>) verschillende positieve getallen (én 0) weergegeven worden: <span style="border-radius: 2px; white-space: nowrap; color: #5e5e5e; background: #FFF7DD; border: 1px solid #fbf0cb; padding: 0px 2px; font-family: Consolas, menlo, monospace; font-size: 92%;">0 &le; mychar &lt; 256</span>. Omdat er hier geen rekening gehouden wordt met het *teken* van het getal, noemen we dit een **unsigned** type.
 
-Een computer ziet enkel een reeks van 1-en en 0-en. De interpretatie die eraan gegeven wordt, ligt bij de gebruiker. Het is dus van belang dat men dit wéét bij het ontwerp van hardware, of bij het schrijven van (low-end) software.
+Indien we echter de gehele getallen in acht nemen, kunnen er 256 (=2<sup>8</sup>) verschillende positieve en negatieve getallen (én 0) weergegeven worden. Doordat de 2's complement methode gebruikt wordt, wordt het bereik: <span style="border-radius: 2px; white-space: nowrap; color: #5e5e5e; background: #FFF7DD; border: 1px solid #fbf0cb; padding: 0px 2px; font-family: Consolas, menlo, monospace; font-size: 92%;">-128 &le; mychar &lt; 128</span>. Omdat er hier wél rekening gehouden wordt met het *teken* van het getal, noemen we dit een **signed** type.
 
-De processor die in dit opleidingsonderdeel gemaakt wordt interpreteert getallen als **signed**.
+Ook in VHDL bestaan de types **signed** en **unsigned**. Deze kunnen gebruikt worden nadat de package **NUMERIC_STD** uit de **IEEE** library toegevoegd wordt. Zowel de types **signed** als **unsigned** worden gemaakt door een array te maken van **STD_LOGIC** waardes. Het voordeel hiervan is dat vergelijkingen (&lt;, &ge;, ...) correct uitgevoerd worden.
+
+{{% /column %}}
+{{% column %}}
+{{< include_file "/static/hdlsrc/300/signed_unsigned_2.vhd" "vhdl" >}}
+{{% /column %}}
+{{% /multiHcolumn %}}
+
+Een computer (of een hardware dezign) ziet enkel een reeks van 1-en en 0-en. De interpretatie die eraan gegeven wordt, ligt bij de gebruiker. Het is dus van belang dat men dit wéét bij het ontwerp van hardware, of bij het schrijven van (low-end) software.
+
 
 ## Add/sub
 
@@ -77,7 +87,3 @@ Eén van de mogelijke ALU instructies is **f(x,y) = x-y**. Wiskundig gezien wete
 
 Hadden jullie nu net geen Ripple Carry Adder gemaakt? <b><i>#Chance-ke</i></b>.
 
-<!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
-{{% notice tip %}}
-Als -y gemaakt wordt door y te inverteren en 1 op te tellen, kan je ook stellen dat <span class="overline">y</span> gelijk is aan -y-1 = -(y+1).
-{{% /notice %}}

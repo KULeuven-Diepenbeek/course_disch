@@ -6,10 +6,16 @@ weight: 320
 draft: false
 ---
 
-De ALU gaat dus een arithmetische of logische instructie uitvoeren. Ongeacht de operatie die de ALU moet uitvoeren, zijn er **altijd** twee ingangen. Het is niet mogelijk om de *Silicon* even aan te passen indien er een operatie moet gebeuren die maar 1 operand heeft. De operatie die de ALU moet uitvoeren, wordt in de Hack processor gekozen aan de hand van 6 bits: de **status code**. De ALU heeft dus, naast **2 ingangen van 16-bit registers** voor de operanden, ook 6 controle bits.
+De ALU gaat dus een arithmetische of logische instructie uitvoeren. Ongeacht de operatie die de ALU moet uitvoeren, zijn er **altijd** twee ingangen. Het is niet mogelijk om de *Silicon* even aan te passen indien er een operatie moet gebeuren die maar 1 operand heeft. De operatie die de ALU moet uitvoeren, wordt in de Hack processor gekozen aan de hand van 3 bits: **ALUop**. De ALU heeft dus, naast **twee 32-bit ingangen** voor de operanden, ook **één 3-bit ingang**. Tenslotte zijn er nog 2 ingangen die aanduiden of de ALU logisch of arithmetisch moet werken; en of de ALU signed of unsigned moet werken.
 
-Tenslotte wordt ter typisch ook verwacht van de ALU dat deze wat extra informatie deelt over de uitgevoerde operatie. De processor die ontwikkeld wordt in de labo verwacht dat de ALU 2 status codes deelt: 1) is het resultaat van de operatie 0x0 (**zr-flag**), en 2) is het resultaat van de operatie negatief (**ng-flag**).
+De ALU zal de bewerking uitvoeren die er gevraagd wordt. Naast het resultaat, geeft de ALU ook nog extra informatie. De extraatjes zijn:
 
-Onze ALU geeft ook status codes uit die we later in de processor nog gebruiken.
+* is het resultaat van de uitgevoerde bewerking gelijk aan 0
+* zijn de twee operanden gelijk aan elkaar
+* de carry-out waarde van de laatste full adder van de RCA
+* is x kleiner dan y, als we uitgaan van *unsigned* getallen
+* is x kleiner dan y, als we uitgaan van *signed* getallen
 
-{{% figure src="/images/300/ALU_principle_better.png" title="" %}}
+Deze extra informatie worden vlaggen (flags) genoemd. Een andere vaak gebruikte naam hiervoor zijn *status codes*.
+
+{{% figure src="/images/300/ALU_entity.png" title="" %}}
