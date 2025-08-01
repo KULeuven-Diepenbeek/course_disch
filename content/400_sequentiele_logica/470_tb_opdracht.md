@@ -8,4 +8,4 @@ draft: false
 
 Een variant van deze testbench wordt gebruikt voor de evaluatie.
 
-{{< include_file "/static/hdlsrc/400/tb_counter.vhd" "vhdl" >}}
+{{< include_file "/static/hdlsrc/400/program_counter_tb.vhd" "vhdl" >}}
