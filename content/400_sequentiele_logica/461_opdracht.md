@@ -17,14 +17,14 @@ Een register file is een onderdeel van een processor dat eigenlijk niet veel mee
 * de reg file beschikt over 2 lees-poorten
   * src1 & data1
   * src2 & data2
-* de reg file beschikt over 1 schrijf-poorten
+* de reg file beschikt over 1 schrijf-poort
   * dest, data & we
 {{% /column %}}
 {{% column %}}
 {{% figure src="/images/400/regfile.png" title="Blokschema van de register file"  %}}
 {{% /column %}}
 {{% column %}}
-{{% figure src="/images/400/wavedrom.png" title="Blokschema van de register file"  %}}
+{{% figure src="/images/400/wavedrom.png" title="Waveform van de register file"  %}}
 {{% /column %}}
 {{% /multiHcolumn %}}
 
@@ -55,8 +55,18 @@ Een register file is een onderdeel van een processor dat eigenlijk niet veel mee
   {name: 'data2',        wave: '2......|.3..', data: ['0x0','A0']},
 ]}
 -->
+
 * **Voor de lees-poorten** wordt de **src_x** input gebruikt om de inhoud van het overeenkomende registeraan de **data_x** uitgang te zetten. Beide leespoorten werken onafhankelijk van elkaar.
 * **Voor de schrijf-poort** wordt de inhoud op de **data** input gekopieerd naar het register dat aangeduid wordt met ingang **dest** op voorwaarde dat de **write enable** hoog is.
+
+{{% multiHcolumn %}}
+{{% column %}}
+{{% figure src="/images/400/regfile_ent.png" title="Entity van de register file"  %}}
+{{% /column %}}
+{{% column %}}
+{{< include_file "/static/hdlsrc/400/regfile.vhd" "vhdl" >}}
+{{% /column %}}
+{{% /multiHcolumn %}}
 
 ### Don't Panic!
 
