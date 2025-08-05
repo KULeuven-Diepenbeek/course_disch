@@ -11,8 +11,8 @@ Om de juiste werking van de ALU te verifiëren, wordt er opnieuw gebruikt gemaak
 {{% column %}}
 Om 12 + 3 te doen weet je dat inputs de volgende moeten zijn:
 
-* operator1 wordt 12
-* operator2 wordt 3
+* operand1 wordt 12
+* operand2 wordt 3
 * de instructie voor de optelling is 
     * ALUOp is "100"
     * signed_unsigned_b is '0'
@@ -21,8 +21,9 @@ Om 12 + 3 te doen weet je dat inputs de volgende moeten zijn:
 De uitgangen van de ALU moeten de volgende zijn:
 
 * result moet 15 zijn ( x"0000000F")
-* de zero-vlag moet '0' zijn
 * de equal-vlag moet '0' zijn
+* de x_lt_y_u-vlag moet '0' zijn
+* de x_lt_y_s-vlag moet '0' zijn
 
 Op deze manier kan je stapsgewijs de testbench opbouwen. Geef hierbij extra aandacht aan de **randgevallen**. Als jouw implementatie 12 + 3 correct kan berekenen, is de kans groot dat 13 + 3 ook wel zal lukken. De randgevallen zijn het echter wel waard om expliciet te testen. Kan jouw ALU 0xFFFFFFFF + 0xFFFFFFFF correct berekenen? Of -1 - (-1)?
 {{% /column %}}

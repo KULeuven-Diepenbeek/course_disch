@@ -1,19 +1,13 @@
 
 ...
-        -- apply stimuli
-        operator1 <= x"e9db2c09"; -- 3923454985
-        operator2 <= x"789795be"; -- 2023200190
-        ALUOp <= "100";
+        operand1 <= x"8ffb9e07"; -- 2415631879
+        operand2 <= x"fdcea5ee"; -- 4258178542
+        ALUOp <= "000";
         arith_logic_b <= '0';
         signed_unsigned_b <= '0';
         wait for 2 ns;
         -- check outputs
-        if result /= x"6272c1c7" then
-            bad_checks := bad_checks + 1;
-        else
-            good_checks := good_checks + 1;
-        end if;
-        if zero /= '0' then
+        if result /= x"8dca8406" then
             bad_checks := bad_checks + 1;
         else
             good_checks := good_checks + 1;
@@ -23,7 +17,12 @@
         else
             good_checks := good_checks + 1;
         end if;
-        if carryOut /= '1' then
+        if x_lt_y_u /= '1' then
+            bad_checks := bad_checks + 1;
+        else
+            good_checks := good_checks + 1;
+        end if;
+        if x_lt_y_s /= '1' then
             bad_checks := bad_checks + 1;
         else
             good_checks := good_checks + 1;
