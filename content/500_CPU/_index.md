@@ -1,5 +1,5 @@
 ---
-title: '5. Hack CPU'
+title: '5. RISC-V-like CPU'
 chapter: true
 weight: 500
 draft: false
