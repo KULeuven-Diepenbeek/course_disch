@@ -3,7 +3,7 @@ title: 'Opdracht - firmware'
 chapter: false
 weight: 570
 pre: "<i class='fas fa-book'></i> "
-draft: false
+draft: true
 ---
 
 Ten slotte zijn hier nog enkele voorbeelden waarmee het **instructie geheugen** geïnitialiseerd kan worden. Let er op dat je de **generic map** zo aanpast dat de simulator een geldig pad heeft naar deze files op jouw computer/laptop.

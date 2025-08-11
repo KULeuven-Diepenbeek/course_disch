@@ -3,7 +3,7 @@ title: 'A instructie'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
 weight: 521
-draft: false
+draft: true
 ---
 
 Indien de **MSB** van een 16-bit instructie **'0'** is, dan wilt dit zeggen dat dit een **A-instructie** is. De overige 15 bits dienen vervolgens in het A register geladen te worden.

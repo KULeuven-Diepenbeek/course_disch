@@ -3,7 +3,7 @@ title: 'C instructie - compute'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
 weight: 523
-draft: false
+draft: true
 ---
 
 Indien de **MSB** van een 16-bit instructie **'1'** is, dan wilt dit zeggen dat dit een **C-instructie** is. De overige 15 bits dienen als volgt geïnterpreteerd te worden: er zijn 3 velden die geïnterpreteerd worden: 
