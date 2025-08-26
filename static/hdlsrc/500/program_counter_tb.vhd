@@ -1,179 +1,278 @@
+--------------------------------------------------------------------------------
+-- KU Leuven - ESAT/COSIC - Emerging technologies, Systems & Security
+--------------------------------------------------------------------------------
+-- Module Name:     program_counter_tb - Behavioural
+-- Project Name:    Testbench for program_counter
+-- Description:     
+--
+-- Revision     Date       Author     Comments
+-- v0.1         20250826   VlJo       Initial version
+--
+--------------------------------------------------------------------------------
 library IEEE;
-    use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_1164.ALL;
+-- use IEEE.NUMERIC_STD.ALL;
 
--- NOTE: de entity van de testbench heeft géén poorten
 entity program_counter_tb is
-end program_counter_tb;
+end entity program_counter_tb;
 
-architecture Behavioral of tb_counter is
+architecture Behavioural of program_counter_tb is
 
-    -- COMPONENT DECLARATIE
     component program_counter is
         port (
-            clock: in std_logic;
-            reset: in std_logic;
-            load: in std_logic;
-            inc: in std_logic;
-            data_in : in std_logic_vector(31 downto 0);
+            clock : in STD_LOGIC;
+            reset : in STD_LOGIC;
+            abs_rel_b: in std_logic;
+            immediate_four_b: in std_logic;
+            rs1 : in std_logic_vector(31 downto 0);
+            immediate : in std_logic_vector(31 downto 0);
             data_out : out std_logic_vector(31 downto 0)
         );
-    end component;
+    end component program_counter;
 
-    signal clock: std_logic;
-    signal reset: std_logic;
-    signal load: std_logic;
-    signal inc: std_logic;
-    signal data_in : std_logic_vector(31 downto 0);
-    signal data_out : std_logic_vector(31 downto 0);
-    
+    signal clock_i : STD_LOGIC;
+    signal reset_i : STD_LOGIC;
+    signal abs_rel_b_i : STD_LOGIC;
+    signal immediate_four_b_i : STD_LOGIC;
+    signal rs1_i : STD_LOGIC_VECTOR(31 downto 0);
+    signal immediate_i : STD_LOGIC_VECTOR(31 downto 0);
+    signal data_out_o : STD_LOGIC_VECTOR(31 downto 0);
+
     constant clock_period : time := 10 ns;
 
 begin
 
-    DUT: component program_counter port map(   
-        clock => clock,
-        reset => reset,
-        load => load,
-        inc => inc,
-        data_in => data_in,
-        data_out => data_out);
+    -------------------------------------------------------------------------------
+    -- STIMULI
+    -------------------------------------------------------------------------------
+    PSTIM: process
+        variable good_checks : natural;
+        variable bad_checks : natural;
+    begin
+        abs_rel_b_i <= '0';
+        immediate_four_b_i <= '0';
+        rs1_i <= (others => '0');
+        immediate_i <= (others => '0');
+        wait until clock_i = '1';
+        wait until clock_i = '0';
+        wait until reset_i = '0';
+        if data_out_o /= x"00000000" then
+            bad_checks := bad_checks + 1;
+        else
+            good_checks := good_checks + 1;
+        end if;
+
+        wait for clock_period;
+        if data_out_o /= x"00000004" then
+            bad_checks := bad_checks + 1;
+        else
+            good_checks := good_checks + 1;
+        end if;
+    
+        wait for clock_period;
+        if data_out_o /= x"00000008" then
+            bad_checks := bad_checks + 1;
+        else
+            good_checks := good_checks + 1;
+        end if;
+
+        wait for clock_period*5;
+        if data_out_o /= x"0000001C" then
+            bad_checks := bad_checks + 1;
+        else
+            good_checks := good_checks + 1;
+        end if;
+
+        immediate_four_b_i <= '1';
+        immediate_i <= (4 => '1', others => '0');
+        wait for clock_period;
+        if data_out_o /= x"0000002C" then
+            bad_checks := bad_checks + 1;
+            report("DISCH_GRADING - Abnormal behavior detected");
+        else
+            good_checks := good_checks + 1;
+        end if;
+
+        immediate_four_b_i <= '0';
+        wait for clock_period;
+        if data_out_o /= x"00000030" then
+            bad_checks := bad_checks + 1;
+            report("DISCH_GRADING - Abnormal behavior detected");
+        else
+            good_checks := good_checks + 1;
+        end if;
+
+        wait for clock_period;
+        if data_out_o /= x"00000034" then
+            bad_checks := bad_checks + 1;
+            report("DISCH_GRADING - Abnormal behavior detected");
+        else
+            good_checks := good_checks + 1;
+        end if;
+
+        immediate_four_b_i <= '1';
+        immediate_i <= x"80000000";
+        wait for clock_period;
+        if data_out_o /= x"80000034" then
+            bad_checks := bad_checks + 1;
+            report("DISCH_GRADING - Abnormal behavior detected");
+        else
+            good_checks := good_checks + 1;
+        end if;
+
+        immediate_four_b_i <= '0';
+        wait for clock_period;
+        if data_out_o /= x"80000038" then
+            bad_checks := bad_checks + 1;
+            report("DISCH_GRADING - Abnormal behavior detected");
+        else
+            good_checks := good_checks + 1;
+        end if;
+
+        wait for clock_period;
+        if data_out_o /= x"8000003C" then
+            bad_checks := bad_checks + 1;
+            report("DISCH_GRADING - Abnormal behavior detected");
+        else
+            good_checks := good_checks + 1;
+        end if;
+
+        abs_rel_b_i <= '1';
+        immediate_i <= x"00000004";
+        wait for clock_period;
+        if data_out_o /= x"00000004" then
+            bad_checks := bad_checks + 1;
+            report("DISCH_GRADING - Abnormal behavior detected");
+        else
+            good_checks := good_checks + 1;
+        end if;
 
 
-    PCLK: process begin
-        clock <= '0';
+        immediate_four_b_i <= '1';
+        immediate_i <= x"80000000";
+        wait for clock_period;
+        if data_out_o /= x"80000000" then
+            bad_checks := bad_checks + 1;
+            report("DISCH_GRADING - Abnormal behavior detected");
+        else
+            good_checks := good_checks + 1;
+        end if;
+
+        immediate_four_b_i <= '0';
+        wait for clock_period;
+        if data_out_o /= x"80000000" then
+            bad_checks := bad_checks + 1;
+            report("DISCH_GRADING - Abnormal behavior detected");
+        else
+            good_checks := good_checks + 1;
+        end if;
+
+        wait for clock_period;
+        if data_out_o /= x"80000000" then
+            bad_checks := bad_checks + 1;
+            report("DISCH_GRADING - Abnormal behavior detected");
+        else
+            good_checks := good_checks + 1;
+        end if;
+
+        rs1_i <= x"80000000";
+        wait for clock_period;
+        if data_out_o /= x"00000000" then
+            bad_checks := bad_checks + 1;
+            report("DISCH_GRADING - Abnormal behavior detected");
+        else
+            good_checks := good_checks + 1;
+        end if;
+        
+        
+        rs1_i <= x"5EADBEEF";
+        wait for clock_period;
+        if data_out_o /= x"DEADBEEF" then
+            bad_checks := bad_checks + 1;
+            report("DISCH_GRADING - Abnormal behavior detected");
+        else
+            good_checks := good_checks + 1;
+        end if;
+
+        rs1_i <= x"00000002";
+        immediate_i <= x"00000002";
+        wait for clock_period;
+        if data_out_o /= x"00000004" then
+            bad_checks := bad_checks + 1;
+            report("DISCH_GRADING - Abnormal behavior detected");
+        else
+            good_checks := good_checks + 1;
+        end if;
+
+        wait until reset_i = '1';
+
+        if data_out_o /= x"00000004" then
+            bad_checks := bad_checks + 1;
+            report("DISCH_GRADING - Abnormal behavior detected");
+        else
+            good_checks := good_checks + 1;
+        end if;
+
+        wait until clock_i = '1';
+        if data_out_o /= x"00000004" then
+            bad_checks := bad_checks + 1;
+            report("DISCH_GRADING - Abnormal behavior detected");
+        else
+            good_checks := good_checks + 1;
+        end if;
+        
+        wait for 1 ns;
+        if data_out_o /= x"00000000" then
+            bad_checks := bad_checks + 1;
+            report("DISCH_GRADING - Abnormal behavior detected");
+        else
+            good_checks := good_checks + 1;
+        end if;
+
+        report "DISCH_GRADING (good, bad, total): " & integer'image(good_checks) & " " & integer'image(bad_checks) & " " & integer'image(good_checks + bad_checks) & "" severity note;
+        
+        wait;
+    end process;
+
+
+    -------------------------------------------------------------------------------
+    -- DUT
+    -------------------------------------------------------------------------------
+    DUT: component program_counter port map(
+        clock => clock_i,
+        reset => reset_i,
+        abs_rel_b => abs_rel_b_i,
+        immediate_four_b => immediate_four_b_i,
+        rs1 => rs1_i,
+        immediate => immediate_i,
+        data_out => data_out_o
+    );
+
+
+    -------------------------------------------------------------------------------
+    -- CLOCK
+    -------------------------------------------------------------------------------
+    PCLK: process
+    begin
+        clock_i <= '1';
         wait for clock_period/2;
-        clock <= '1';
-        wait for clock_period/2; 
-    end process;                
+        clock_i <= '0';
+        wait for clock_period/2;
+    end process PCLK;
 
 
-    PSTIM: process begin
-        data_in <= x"00000000";
-        reset <= '0';
-        load <= '0';
-        inc <= '0';
-        
-        wait for clock_period*8;
-        
-        data_in <= x"00000000";
-        reset <= '1';
-        load <= '0';
-        inc <= '0';
-        wait for clock_period*2;
-        assert (data_out = x"00000000") report "reset werkt niet" severity failure;
-        
-        data_in <= x"00000000";
-        reset <= '0';
-        load <= '0';
-        inc <= '1';
-        wait for clock_period;
-        
-        assert (data_out = x"00000001") report "increment werkt niet" severity failure;
-        
-        wait for clock_period*10;
-        
-        assert (data_out = x"0000000B") report "increment werkt niet" severity failure;
-        
-        data_in <= x"00000E00";
-        reset <= '0';
-        load <= '1';
-        inc <= '0';    
-        
-        wait for clock_period;    
-        
-        assert (data_out = x"00000E00") report "load werkt niet" severity failure;
-        
-        
-        data_in <= x"00000E00";
-        reset <= '0';
-        load <= '0';
-        inc <= '1';      
-        
-        wait for clock_period;    
-        
-        assert (data_out = x"00000E01") report "inc na load werkt niet" severity failure;
-        
-        data_in <= x"FFFFFFFF";
-        reset <= '0';
-        load <= '1';
-        inc <= '0';  
-        
-        wait for clock_period;    
-        
-        assert (data_out = x"FFFFFFFF") report "load werkt niet" severity failure;      
-    
-        data_in <= x"FFFFFCFF";
-        reset <= '0';
-        load <= '1';
-        inc <= '1';  
-        
-        wait for clock_period;
-        
-        assert (data_out = x"FFFFFCFF") report "load before increment werkt niet" severity failure;
-        
-        data_in <= x"FFFFFFFF";
-        reset <= '0';
-        load <= '1';
-        inc <= '0';  
-        
-        wait for clock_period;    
-        
-        assert (data_out = x"FFFFFFFF") report "load werkt niet" severity failure;      
-    
-        data_in <= x"FFFFFFFF";
-        reset <= '0';
-        load <= '0';
-        inc <= '1';  
-        
-        wait for clock_period;
+    -------------------------------------------------------------------------------
+    -- RESET
+    -------------------------------------------------------------------------------
+    PRST: process
+    begin
+        reset_i <= '1';
+        wait for clock_period*9;
+        wait for clock_period/2;
+        reset_i <= '0';
+        wait for clock_period*25;
+        reset_i <= '1';
+        wait;
+    end process PRST;
 
-        assert (data_out = x"00000000") report "overflow werkt niet" severity failure;
-
-        data_in <= x"FEDCBA98";
-        reset <= '1';
-        load <= '1';
-        inc <= '1';  
-        
-        wait for clock_period;
-        
-        assert (data_out = x"00000000") report "reset werkt niet" severity failure;   
-        
-        data_in <= x"FEDCBA98";
-        reset <= 'H';
-        load <= 'L';
-        inc <= 'L';  
-        
-        wait for clock_period;
-        
-        assert (data_out = x"00000000") report "reset werkt niet" severity failure;         
-        
-        data_in <= x"FEDCBA98";
-        reset <= 'L';
-        load <= '0';
-        inc <= '1';  
-        
-        wait for clock_period;
-        
-        assert (data_out = "0000000000000001") report "iets werkt niet" severity failure;                
-        
-        data_in <= x"FEDCBA98";
-        reset <= 'X';
-        load <= 'L';
-        inc <= 'H';  
-        
-        wait for clock_period;
-        
-        data_in <= x"FEDCBA98";
-        reset <= '1';
-        load <= 'W';
-        inc <= 'Z';  
-        
-        wait for clock_period;
-        
-        assert (data_out = x"00000000") report "reset werkt niet" severity failure;              
-        
-        wait;        
-        
-    end process;                
-
-end Behavioral;
+end Behavioural;
