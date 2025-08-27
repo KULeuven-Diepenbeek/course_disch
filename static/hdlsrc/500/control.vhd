@@ -28,7 +28,7 @@ entity control is
         alu_op : out STD_LOGIC_VECTOR(2 downto 0);
         alu_arith_logic_b : out STD_LOGIC;
         alu_signed_unsigned_b : out STD_LOGIC;
-        r_instr : out STD_LOGIC
+        second_operand_selector : out STD_LOGIC
     );
 end entity control;
 
@@ -51,7 +51,7 @@ architecture Behavioural of control is
     signal alu_op_o : STD_LOGIC_VECTOR(2 downto 0);
     signal alu_arith_logic_b_o : STD_LOGIC;
     signal alu_signed_unsigned_b_o : STD_LOGIC;
-    signal r_instr_o : STD_LOGIC;
+    signal second_operand_selector_o : STD_LOGIC;
     
     -- Instruction decoding
     signal funct7 : STD_LOGIC_VECTOR(6 downto 0);
@@ -61,6 +61,7 @@ architecture Behavioural of control is
     signal opcode : STD_LOGIC_VECTOR(6 downto 0);
 
     -- Classification
+    signal r_instr : STD_LOGIC;
     signal b_instr : STD_LOGIC;
     signal i_instr_alu : STD_LOGIC;
     signal i_instr_jump : STD_LOGIC;
@@ -93,7 +94,7 @@ begin
     alu_op <= alu_op_o;
     alu_arith_logic_b <= alu_arith_logic_b_o;
     alu_signed_unsigned_b <= alu_signed_unsigned_b_o;
-    r_instr <= r_instr_o;
+    second_operand_selector <= second_operand_selector_o;
     
 
     -------------------------------------------------------------------------------
@@ -111,18 +112,21 @@ begin
     -------------------------------------------------------------------------------
     -- Classification
     -------------------------------------------------------------------------------
-    r_instr_o <= '1' when opcode = "0110011" else '0';
+    r_instr <= '1' when opcode = "0110011" else '0';
     i_instr_alu <= '1' when opcode = "0010011" else '0';
     b_instr <= '1' when opcode = "1100011" else '0';
     j_instr <= '1' when opcode = "1101111" else '0';
     i_instr_jump <= '1' when opcode = "1100111" else '0';
 
 
+    second_operand_selector_o <= i_instr_alu;
+
+
     -------------------------------------------------------------------------------
     -- Next PC
     -------------------------------------------------------------------------------
     abs_rel_b_o <= i_instr_jump;
-    immediate_four_b_o <= b_instr or j_instr or i_instr_jump;
+    immediate_four_b_o <= (b_instr and conditional_jump) or j_instr or i_instr_jump;
 
     prepadding_Itype <= (others => inst_i(inst_i'high));
     immediate_Itype <= prepadding_Itype & imm;
@@ -156,7 +160,7 @@ begin
     end process;
 
 
-    regfile_we_o <= (r_instr_o or i_instr_alu) and not(b_instr);
+    regfile_we_o <= (r_instr or i_instr_alu) and not(b_instr);
 
     PMUX_R_I: process(funct3, funct7)
     begin
@@ -178,7 +182,7 @@ begin
             when "001" => 
                 alu_op_o <= "110";      -- sll R-type and I-alu-type
             when "101" => 
-                alu_op_o <= "110";      -- srx R-type and I-alu-type
+                alu_op_o <= "111";      -- srx R-type and I-alu-type
                 if funct7 = "0100000" then 
                     alu_arith_logic_b_o <= '1';
                 end if;
