@@ -33,4 +33,4 @@ In de tekening ontbreekt 1 sprong. Welke?
 {{% /column %}}
 {{% /multiHcolumn %}}
 
-De processor die gemaakt wordt, moet dit soort **jumps** ook kunnen faciliteren. Dit wordt gedaan door de program counter niet, na elke instructie, te verhogen met 0x4; maar door (wanneer nodig) een volledige load te doen van de 32 bits van de PC.
+De processor die gemaakt wordt, moet dit soort **jumps** ook kunnen faciliteren. Dit wordt gedaan door de program counter niet, na elke instructie, te verhogen met 0x4; maar door (wanneer nodig) een andere offset op te tellen of zelfs een volledige load te doen van de 32 bits van de PC.
