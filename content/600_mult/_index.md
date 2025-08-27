@@ -2,7 +2,7 @@
 title: '6. Multiplier'
 chapter: true
 weight: 600
-draft: false
+draft: true
 ---
 
 # Multiplier

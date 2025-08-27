@@ -12,22 +12,22 @@
     <title>ALU Design :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1751614644" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1751614644" rel="stylesheet">
-    <link href="../../css/hybrid.css?1751614644" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1751614644" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1751614644" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1751614644" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1751614644" rel="stylesheet">
-    <link href="../../css/theme.css?1751614644" rel="stylesheet">
-    <link href="../../css/tabs.css?1751614644" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1751614644" rel="stylesheet">
+    <link href="../../css/nucleus.css?1752827532" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1752827532" rel="stylesheet">
+    <link href="../../css/hybrid.css?1752827532" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1752827532" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1752827532" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1752827532" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1752827532" rel="stylesheet">
+    <link href="../../css/theme.css?1752827532" rel="stylesheet">
+    <link href="../../css/tabs.css?1752827532" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1752827532" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1751614644" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1752827532" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1751614644"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1752827532"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1751614644"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1751614644"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1752827532"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1752827532"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1751614644"></script>
+<script type="text/javascript" src="../../js/search.js?1752827532"></script>
 
     
   </div>
@@ -1844,15 +1844,9 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#x-and-y">X and Y</a></li>
-        <li><a href="#x-or-y">X or Y</a></li>
-        <li><a href="#x-y-x-y">X, Y, !X, !Y</a></li>
-        <li><a href="#x--y">X + Y</a></li>
-        <li><a href="#x---y-y---x">X - Y, Y - X</a></li>
-        <li><a href="#-x--y-0-x-1-y-1--1-1-x1-y1">-X, -Y, 0, X-1, Y-1, -1, 1, X+1, Y+1</a></li>
+        <li><a href="#shifting">Shifting</a></li>
       </ul>
     </li>
-    <li><a href="#alu-design">ALU design</a></li>
   </ul>
 </nav>
     </div>
@@ -1877,140 +1871,58 @@
         
 
 
-<p>Het design van de 16-bit ALU wordt hier stap-per-stap toegelicht. Voor de logische operaties wordt alles gebouwd rond de <strong>AND-gate</strong>. Voor de aritmetische operaties wordt alles gebouwd rond de <strong>ripple-carry adder</strong>.</p>
-<h3 id="x-and-y">X and Y</h3>
+<p>Voordat er begonnen kan worden aan de beschrijving van de ALU, moet eerst het hardware ontwerp gemaakt worden.</p>
 <div class="multiHcolumn">
 <div class="column">
-    <p>Dit is voor de hand liggend.</p>
-<ul>
-<li>f(x,y) = x <strong>and</strong> y</li>
-</ul>
+    <figure><img src="../../images/300/ALUdesign.png"/>
+</figure>
 </div>    
 <div class="column">
-    <figure><img src="../../images/300/ALUdesign_1.png"/>
+    <p>In wezen gebeurt hier niets spectaculairs. Alle mogelijks gevraagde bewerkingen worden allemaal berekend. Met behulp van een multiplexer wordt het gewenste resultaat uitgefilterd aan de uitgang aangelegd.</p>
+<p>De basis-logische poorten, <span style="background-color: #d5e8d4">gearceerd in groen</span>, zijn reeds besproken in het eerste hoofdstuk.</p>
+<p>De ripple-carry adders voor het berekenen van de som en het verschil, <span style="background-color: #fff2cc">gearceerd in geel</span>, zijn het resultaat van de opdracht van hoofdstuk 2.</p>
+<p>De <em>vergelijkers</em> (of comparatoren), <span style="background-color: #f8cecc">gearceerd in rood</span>, kunnen beschreven worden aan de hand van een demultiplexer zoals die gezien is in hoofdstuk 2.</p>
+</div>    
+</div>
+<h3 id="shifting">Shifting</h3>
+<p>Voor het <em>shiften</em> kan een extra woordje uitleg misschien wel helpen. Vaak kan het een hulp zijn om <u><em>&ldquo;er een tekeningetje bij te maken&rdquo;</em></u>. Neem, bijvoorbeeld, een shift-left-3 operatie.</p>
+<div class="multiHcolumn">
+<div class="column">
+    <p>Het gewenste resultaat is dat <strong>my_vector</strong> verschoven wordt met 3 plaatsen. De waarde die ingeschoven moet worden is &lsquo;0&rsquo;. Er zijn verschillende manieren om dit te beschrijven.</p>
+<p><strong>Expliciet</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>my_shifted_vector(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>my_shifted_vector(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>my_shifted_vector(<span style="color:#ae81ff">2</span>) <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>my_shifted_vector(<span style="color:#ae81ff">3</span>) <span style="color:#f92672">&lt;=</span> my_vector(<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>my_shifted_vector(<span style="color:#ae81ff">4</span>) <span style="color:#f92672">&lt;=</span> my_vector(<span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>my_shifted_vector(<span style="color:#ae81ff">5</span>) <span style="color:#f92672">&lt;=</span> my_vector(<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>my_shifted_vector(<span style="color:#ae81ff">6</span>) <span style="color:#f92672">&lt;=</span> my_vector(<span style="color:#ae81ff">3</span>);
+</span></span><span style="display:flex;"><span>my_shifted_vector(<span style="color:#ae81ff">7</span>) <span style="color:#f92672">&lt;=</span> my_vector(<span style="color:#ae81ff">4</span>);
+</span></span></code></pre></div>
+<p><strong>One-liner</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>my_shifted_vector <span style="color:#f92672">&lt;=</span> my_vector(<span style="color:#ae81ff">4</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;000&#34;</span>;
+</span></span></code></pre></div>
+<p><strong>Generisch</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>zeroes <span style="color:#f92672">&lt;=</span> (<span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;0&#39;</span>);
+</span></span><span style="display:flex;"><span>my_shifted_vector <span style="color:#f92672">&lt;=</span> my_vector(<span style="color:#ae81ff">7</span><span style="color:#f92672">-</span><span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">&amp;</span> zeroes(<span style="color:#ae81ff">3</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span></code></pre></div>
+</div>    
+<div class="column">
+    <figure><img src="../../images/300/ALU_shift.png"/>
 </figure>
 </div>    
 </div>
-<h3 id="x-or-y">X or Y</h3>
-<div class="multiHcolumn">
-<div class="column">
-    <p>Door gebruik te maken van de wetten van De Morgan, kan een <strong>OR-gate</strong> gebouwd worden met de AND-gate.</p>
-<div class="multiHcolumn">
-    <div class="column">
-    <p><img src="../../images/300/demorgan.png" alt="De_Morgan"></p>
-</div>    
-<div class="column">
-    <p>Als beide inputs, A en B, geïnverteerd worden, geeft de logische AND-gate een geïnverteerde OR-gate.</p>
-</div>    
-</div>
-<ul>
-<li>f(x,y) = <span class=overline_l2><span class=overline>x</span> <strong>and</strong> <span class=overline>y</span></span></li>
-</ul>
-</div>    
-<div class="column">
-    <figure><img src="../../images/300/ALUdesign_2.png"/>
-</figure>
-</div>    
-</div>
-<h3 id="x-y-x-y">X, Y, !X, !Y</h3>
-<div class="multiHcolumn">
-<div class="column">
-    <p>Om de uitgang op één van de waardes aan de ingang te zetten, zijn er twee opties: <br/>Z = X <strong>or</strong> 0x0000, of Z = X <strong>and</strong> 0xFFFF.<br/>In beide gevallen gaat er een mogelijkheid moeten zijn om een <em>vaste</em> input te kiezen.</p>
-<p>Aangezien er reeds een mogelijkheid is om de ingangen te inverteren, gaat deze aanpassing ook de mogelijkheid bieden om de uitgang op de geïnverteerde waarde van één van de waardes aan de ingang te zetten.</p>
-<div class="multiHcolumn">
-    <div class="column">
-    <ul>
-<li>f(x,y) = x = x <strong>and</strong> <span class=overline>0x0</span></li>
-<li>f(x,y) = y = <span class=overline>0x0</span> <strong>and</strong> y</li>
-</ul>
-</div>    
-<div class="column">
-    <ul>
-<li>f(x,y) = <span class=overline>x</span> = <span class=overline_l2>x <strong>and</strong> <span class=overline>0x0</span></span></li>
-<li>f(x,y) = <span class=overline>y</span> = <span class=overline_l2> <span class=overline>0x0</span> <strong>and</strong> y</span></li>
-</ul>
-</div>    
-</div>
-</div>    
-<div class="column">
-    <figure><img src="../../images/300/ALUdesign_3.png"/>
-</figure>
-</div>    
-</div>
-<h3 id="x--y">X + Y</h3>
-<div class="multiHcolumn">
-<div class="column">
-    <p>Dit is voor de hand liggend.</p>
-<ul>
-<li>f(x,y) = x <strong>+</strong> y</li>
-</ul>
-</div>    
-<div class="column">
-    <figure><img src="../../images/300/ALUdesign_4.png"/>
-</figure>
-</div>    
-</div>
-<h3 id="x---y-y---x">X - Y, Y - X</h3>
-<div class="multiHcolumn">
-<div class="column">
-    <p>Om x-y te berekenen, zou het mooi zijn als de weergegeven architectuur zou passen. <strong>#spoiler:</strong> dat kan &#x1f603; De belangrijkste regel die hiervoor gebuikt wordt is -y =  <span class=overline>y</span> +1</p>
-<ul>
-<li>x+<span class=overline>y</span> = x + (-y-1) = x - (y+1)</li>
-</ul>
-<p>Indien de uitgang nu geïnverteerd wordt, wilt dat <strong>opnieuw</strong> zeggen dat de waarde negatief en met 1 verminderd wordt.</p>
-<ul>
-<li><span class="overline_l2">x+<span class=overline>y</span></span> = -1 * [ x - (y+1) ] -1 = -x + (y+1) -1 = -x + y = y - x</li>
-</ul>
-<p>Uiteraard kunnen x en y omgewisseld worden. Dit geeft volgende opties:</p>
-<ul>
-<li>f(x,y) = x <strong>-</strong> y</li>
-<li>f(x,y) = y <strong>-</strong> x</li>
-</ul>
-</div>    
-<div class="column">
-    <figure><img src="../../images/300/ALUdesign_5.png"/>
-</figure>
-</div>    
-</div>
-<h3 id="-x--y-0-x-1-y-1--1-1-x1-y1">-X, -Y, 0, X-1, Y-1, -1, 1, X+1, Y+1</h3>
-<div class="multiHcolumn">
-<div class="column">
-    <p>Als de waarde van het <em>positieve getal</em> in van de aftrekking op 0x0 gezet wordt, kan de negatieve waarde van het andere getal berekend worden.</p>
-<p>Beide waardes op 0x0 zetten, zal er uiteraard voor zorgen dat de som 0x0 blijft.</p>
-<p>Indien x verminderd wordt met <span class="overline">0x0</span>, wordt er van de waarde van x eigenlijk 1 afgetrokken.</p>
-<p>Deze vermindering met 1 doen op de waarde 0x0, geeft altijd -1.</p>
+<p>Indien het gewenste resultaat is dat <strong>my_vector</strong> verschoven wordt met 3 plaatsen naar rechts, met behoud van het teken; dan dient de <em>sign-bit</em> gekopieerd en ingeschoven te worden. Hiervoor kan een nieuwe vector gemaakt worden die volledige bestaat uit <em>kopies</em> van de tekenbit.</p>
+
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>padding <span style="color:#f92672">&lt;=</span> (<span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span> my_vector(<span style="color:#ae81ff">7</span>));
+</span></span><span style="display:flex;"><span>my_shifted_vector <span style="color:#f92672">&lt;=</span> padding(<span style="color:#ae81ff">3</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">&amp;</span> my_vector(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">3</span>);
+</span></span></code></pre></div>
 <!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
-<div class="notices note" ><p>Je kan zelf verifiëren dat <span class="overline">-1 + (-1)</span> altijd 1 geeft.</p>
+
+<div class="notices tip" ><p>Merk op dat bovenstaande beschrijving uitgaat van een declaratie (x downto y). Indien je liever werkt met (x to y), moet je de indices aanpassen.</p>
 </div>
-<p>Tenslotte kan <span class="overline">x</span> + <span class="overline">0</span> = (-x-1)+(-1) = (-x-2), ook geïnverteerd worden wat resulteert in <span class="overline">-x-2</span> = -(-x-2) -1 = x+2-1 = x+1.</p>
-<ul>
-<li>f(x,y) = <strong>-</strong> y</li>
-<li>f(x,y) = <strong>-</strong> x</li>
-<li>f(x,y) = <strong>0</strong></li>
-<li>f(x,y) = x <strong>-</strong> 1</li>
-<li>f(x,y) = y <strong>-</strong> 1</li>
-<li>f(x,y) = <strong>-1</strong></li>
-<li>f(x,y) = <strong>1</strong></li>
-<li>f(x,y) = x <strong>+</strong> 1</li>
-<li>f(x,y) = y <strong>+</strong> 1</li>
-</ul>
-</div>    
-<div class="column">
-    <figure><img src="../../images/300/ALUdesign_6.png"/>
-</figure>
-</div>    
-</div>
-<h2 id="alu-design">ALU design</h2>
-<p>Hoog tijd om de vruchten te plukken van het design werk. Alle 18 operaties die vermeld staan aan het begin van dit hoofdstuk, kunnen gemaakt worden met de hierboven beschreven methode. Het uiteindelijke design van de ALU is hieronder weergegeven.</p>
-<figure><img src="../../images/300/ALUdesign_7.png"/>
-</figure>
-<p>De benodigheden zijn dus:</p>
-<ul>
-<li><strong>16x</strong> zes 2-naar-1 multiplexer</li>
-<li><strong>16x</strong> 3 invertor</li>
-<li><strong>1x</strong> 16-bit AND-gate</li>
-<li><strong>1x</strong> 16-bit ripple-carry adder</li>
-</ul>
+
 
 
 <footer class="footline">
@@ -3246,19 +3158,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1751614644"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1751614644"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1751614644"></script>
-    <script src="../../js/jquery.sticky.js?1751614644"></script>
-    <script src="../../js/featherlight.min.js?1751614644"></script>
-    <script src="../../js/highlight.pack.js?1751614644"></script>
+    <script src="../../js/clipboard.min.js?1752827532"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1752827532"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1752827532"></script>
+    <script src="../../js/jquery.sticky.js?1752827532"></script>
+    <script src="../../js/featherlight.min.js?1752827532"></script>
+    <script src="../../js/highlight.pack.js?1752827532"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1751614644"></script>
-    <script src="../../js/learn.js?1751614644"></script>
-    <script src="../../js/hugo-learn.js?1751614644"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1752827532"></script>
+    <script src="../../js/learn.js?1752827532"></script>
+    <script src="../../js/hugo-learn.js?1752827532"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1751614644"></script>
+            <script src="../../mermaid/mermaid.js?1752827532"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

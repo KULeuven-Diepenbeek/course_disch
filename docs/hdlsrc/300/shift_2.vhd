@@ -1,0 +1,1 @@
+my_shifted_vector <= my_vector(4 downto 0) & "000";

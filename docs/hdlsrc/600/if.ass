@@ -1,0 +1,7 @@
+  138:	01000293          	addi t0,zero,16
+  13c:	00531463          	bne	t1,t0,144 <do_something_else>
+/* this is do_something */
+  140:	00628333          	add	t1,t0,t1
+
+00000144 <do_something_else>:
+  144:	006282b3          	add	t0,t0,t1

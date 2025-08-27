@@ -12,22 +12,22 @@
     <title>Opdracht 4: Program counter :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1751614644" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1751614644" rel="stylesheet">
-    <link href="../../css/hybrid.css?1751614644" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1751614644" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1751614644" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1751614644" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1751614644" rel="stylesheet">
-    <link href="../../css/theme.css?1751614644" rel="stylesheet">
-    <link href="../../css/tabs.css?1751614644" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1751614644" rel="stylesheet">
+    <link href="../../css/nucleus.css?1754387068" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1754387068" rel="stylesheet">
+    <link href="../../css/hybrid.css?1754387068" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1754387068" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1754387068" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1754387068" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1754387068" rel="stylesheet">
+    <link href="../../css/theme.css?1754387068" rel="stylesheet">
+    <link href="../../css/tabs.css?1754387068" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1754387068" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1751614644" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1754387068" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1751614644"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1754387068"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1751614644"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1751614644"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1754387068"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1754387068"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1751614644"></script>
+<script type="text/javascript" src="../../js/search.js?1754387068"></script>
 
     
   </div>
@@ -578,8 +578,8 @@
  
   
     
-      <li data-nav-id="/300_alu/325_construction/" title="ALU Design" class="dd-item ">
-        <a href="../../300_alu/325_construction/">
+      <li data-nav-id="/300_alu/325_design/" title="ALU Design" class="dd-item ">
+        <a href="../../300_alu/325_design/">
         <i class='fas fa-book'></i> ALU Design
         
         </a>
@@ -884,6 +884,27 @@
       <li data-nav-id="/400_sequentiele_logica/460_opdracht/" title="Opdracht 4: Program counter" class="dd-item active">
         <a href="../../400_sequentiele_logica/460_opdracht/">
         <i class='fas fa-pen-square'></i> Opdracht 4: Program counter
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_sequentiele_logica/461_opdracht/" title="Opdracht 4: Register file" class="dd-item ">
+        <a href="../../400_sequentiele_logica/461_opdracht/">
+        <i class='fas fa-pen-square'></i> Opdracht 4: Register file
         
         </a>
     </li>
@@ -1437,27 +1458,6 @@
  
   
     
-      <li data-nav-id="/800_extras/xxx_bram/" title="BRAM" class="dd-item ">
-        <a href="../../800_extras/xxx_bram/">
-        <i class='fas fa-book'></i> BRAM
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
       <li data-nav-id="/800_extras/810_tuning/" title="Tuning" class="dd-item ">
         <a href="../../800_extras/810_tuning/">
         Tuning
@@ -1863,12 +1863,12 @@
         
 
 
-<p>De bedoeling van deze opdracht is om de <strong>program counter</strong> van de processor te maken. De program counter heeft 5 input signalen. <strong>data_in, clock, reset, load en inc(rement)</strong>. Als output heeft het <strong>data_out</strong>. Data_in en Data_out zijn beide 16-bit vectoren. Als de reset hoog wordt, moet de program counter <strong>synchroon resetten</strong> naar 0x0. <strong>inc</strong> zorgt dat de program counter met 1 verhoogd wordt en <strong>load</strong> zorgt er voor dat de <strong>data</strong> van data_in <strong>synchroon</strong> wordt <strong>ingeladen</strong>. <strong>Load heeft voorrang op increment</strong>.</p>
+<p>De bedoeling van deze opdracht is om de <strong>program counter</strong> van de processor te maken. De program counter heeft 5 input signalen. <strong>data_in, clock, reset, load en inc(rement)</strong>. Als output heeft het <strong>data_out</strong>. Data_in en Data_out zijn beide 32-bit vectoren. Als de reset hoog wordt, moet de program counter <strong>synchroon resetten</strong> naar 0x0. <strong>inc</strong> zorgt dat de program counter met 4 verhoogd wordt en <strong>load</strong> zorgt ervoor dat de <strong>data</strong> van data_in <strong>synchroon</strong> wordt <strong>ingeladen</strong>. <strong>Load heeft voorrang op increment</strong>.</p>
 <p>De program counter moet dus aan onderstaande specificaties voldoen:</p>
 <ul>
 <li>Als <strong>reset</strong> 1 is, wordt er <strong>synchroon gereset</strong> (<em>synchrone, actief hoge reset</em>)</li>
 <li>Als reset, load en inc 0 zijn blijft de uitgang zijn waarde <strong>behouden</strong></li>
-<li>Als <strong>increment</strong> 1 is, dan wordt de program counter met <strong>1 verhoogd</strong></li>
+<li>Als <strong>increment</strong> 1 is, dan wordt de program counter met <strong>4 verhoogd</strong></li>
 <li>Als <strong>load</strong> 1 is, dan wordt de inputdata de <strong>gesampled</strong></li>
 <li>De <strong>load</strong> heeft voorang op <strong>inc</strong></li>
 </ul>
@@ -2498,22 +2498,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -2530,6 +2514,9 @@
             
         
                     
+            
+        
+                    
                         
             
             
@@ -2542,9 +2529,6 @@
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -2641,54 +2625,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
                         
             
@@ -2865,6 +2801,70 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -3105,7 +3105,7 @@
 			<a class="nav nav-prev" href="../../400_sequentiele_logica/450_morereg/" title="Meerdere registers"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../400_sequentiele_logica/470_tb_opdracht/" title="Opdracht - testbench" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../400_sequentiele_logica/461_opdracht/" title="Opdracht 4: Register file" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3115,19 +3115,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1751614644"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1751614644"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1751614644"></script>
-    <script src="../../js/jquery.sticky.js?1751614644"></script>
-    <script src="../../js/featherlight.min.js?1751614644"></script>
-    <script src="../../js/highlight.pack.js?1751614644"></script>
+    <script src="../../js/clipboard.min.js?1754387068"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1754387068"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1754387068"></script>
+    <script src="../../js/jquery.sticky.js?1754387068"></script>
+    <script src="../../js/featherlight.min.js?1754387068"></script>
+    <script src="../../js/highlight.pack.js?1754387068"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1751614644"></script>
-    <script src="../../js/learn.js?1751614644"></script>
-    <script src="../../js/hugo-learn.js?1751614644"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1754387068"></script>
+    <script src="../../js/learn.js?1754387068"></script>
+    <script src="../../js/hugo-learn.js?1754387068"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1751614644"></script>
+            <script src="../../mermaid/mermaid.js?1754387068"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
