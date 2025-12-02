@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>5. RISC-V-like CPU on Digitale Elektronische Schakelingen</title>
-    <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/</link>
+    <link>http://localhost:1313/course_disch/500_cpu/</link>
     <description>Recent content in 5. RISC-V-like CPU on Digitale Elektronische Schakelingen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
     <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
-    <atom:link href="https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/course_disch/500_cpu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Een CPU maken</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/510_intro_cpu/</link>
+      <link>http://localhost:1313/course_disch/500_cpu/510_intro_cpu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/510_intro_cpu/</guid>
+      <guid>http://localhost:1313/course_disch/500_cpu/510_intro_cpu/</guid>
       <description>Zoals in het begin van deze lessenreeks reeds vermeld, is het uiteindelijke doel het maken van een processor. In de voorbije labo&amp;rsquo;s is hiervoor de basis gelegd.&#xA;Een processor kan, met een beetje fantasie, gezien worden als een chef-kok die een recept maakt. De chef volgt het recept stap voor stap.&#xA;Schuif een latje of blaadje naar onder voor de volgende regel van het recept te bepalen, lees de volgende regel in het recept, probeer te ontcijferen wat deze instructie wilt zeggen, en voer de instructie uit.</description>
     </item>
     <item>
       <title>Program counter</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/520_pc/</link>
+      <link>http://localhost:1313/course_disch/500_cpu/520_pc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/520_pc/</guid>
+      <guid>http://localhost:1313/course_disch/500_cpu/520_pc/</guid>
       <description>De program counter is als vingertje van een kind dat leert lezen. Het duidt aan waar het gebleven is, welke regel er gelezen moet worden. Dit is ook de functie van de program counter (PC). De PC duidt aan welke instructie er momenteel uitgevoerd wordt. Wanneer de instructie uitgevoerd is, moet de vinger een plaats verschoven worden.&#xA;De program counter houdt de regelnummer naar de juiste instructie bij. Deze staat opgeslagen in een 32-bit breed register.</description>
     </item>
     <item>
       <title>Integratie</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/530_integrate/</link>
+      <link>http://localhost:1313/course_disch/500_cpu/530_integrate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/530_integrate/</guid>
+      <guid>http://localhost:1313/course_disch/500_cpu/530_integrate/</guid>
       <description>Met het laatste ontbrekende bouwblokje (de program counter (PC)) geïmplementeerd, is het tijd om alles te integreren.&#xA;Een RISC-V processor heeft verschillende types van instructies. Om de zaken niet nodeloos complex te maken, wordt er voor deze implementatie enkel naar R-type (een deel van) de I-type instructies gekeken.&#xA;Een I-type instructie (althans het deel van de I-types die in scoop ligt) voert een ALU operatie uit met 1 register en 1 argument Een R-type instructie voert een ALU operatie uit met 2 registers Hier zijn 4 assembly instructies.</description>
     </item>
     <item>
       <title>Opdracht 5: Processor</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/550_opdracht/</link>
+      <link>http://localhost:1313/course_disch/500_cpu/550_opdracht/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/550_opdracht/</guid>
+      <guid>http://localhost:1313/course_disch/500_cpu/550_opdracht/</guid>
       <description>Voor deze opdracht is het de bedoeling om zelf de processor te maken. Je mag, maar dit is niet verplicht, eerder gebruikte code (voor ALU, program counter, &amp;hellip;) hergebruiken.&#xA;entity processor is port( clock : in STD_LOGIC; reset : in STD_LOGIC; pc : out STD_LOGIC_VECTOR(31 downto 0); inst : in STD_LOGIC_VECTOR(31 downto 0) ); end entity processor; De controle blok kan hier gedownload worden. Hieronder vind je een woordje uitleg over de poorten van de controle blok.</description>
     </item>
     <item>
       <title>Opdracht - testbench</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/560_testbench/</link>
+      <link>http://localhost:1313/course_disch/500_cpu/560_testbench/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/500_cpu/560_testbench/</guid>
+      <guid>http://localhost:1313/course_disch/500_cpu/560_testbench/</guid>
       <description>Zoals bij voorgaande opdrachten, wordt ook bij deze opdracht een testbench voorzien. Een blokdiagramma van de testbench ziet er als volgt uit en kan hier worden gedownload.&#xA;Het &amp;ldquo;programma&amp;rdquo; zorgt ervoor dat het begin van de Fibonnacci reeks berekend wordt in de eerste 8 registers.&#xA;Je kan in de simulator de Radix aanpassen. Hierdoor kan de weergave op &amp;ldquo;Unsigned decimal&amp;rdquo; zetten.</description>
     </item>
   </channel>

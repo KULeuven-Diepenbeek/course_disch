@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>6. B-instructies on Digitale Elektronische Schakelingen</title>
-    <link>https://kuleuven-diepenbeek.github.io/course_disch/600_binst/</link>
+    <link>http://localhost:1313/course_disch/600_binst/</link>
     <description>Recent content in 6. B-instructies on Digitale Elektronische Schakelingen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
     <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
-    <atom:link href="https://kuleuven-diepenbeek.github.io/course_disch/600_binst/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/course_disch/600_binst/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jumps</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/600_binst/610_jumps/</link>
+      <link>http://localhost:1313/course_disch/600_binst/610_jumps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/600_binst/610_jumps/</guid>
+      <guid>http://localhost:1313/course_disch/600_binst/610_jumps/</guid>
       <description>Tot hiertoe liep het programma gelijk een recept in de keuken. Iedere stap werd één-voor-één uitgevoerd. Iets geavanceerdere software (met de nadruk op iets) breken met dit principe. Af en toe wordt er een sprong uitgevoerd. Dit is zelfs al het geval bij een simpele if-constructie.&#xA;if (a_certain_variable == 16) { do_something(); } else { do_something_else(); } 138:&#x9;01000293 addi t0,zero,16 13c:&#x9;00531463 bne&#x9;t1,t0,144 &amp;lt;do_something_else&amp;gt; /* this is do_something */ 140:&#x9;00628333 add&#x9;t1,t0,t1 00000144 &amp;lt;do_something_else&amp;gt;: 144:&#x9;006282b3 add&#x9;t0,t0,t1 In dit voorbeeld wordt er een conditionele jump gedaan.</description>
     </item>
     <item>
       <title>Details</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/600_binst/620_details/</link>
+      <link>http://localhost:1313/course_disch/600_binst/620_details/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/600_binst/620_details/</guid>
+      <guid>http://localhost:1313/course_disch/600_binst/620_details/</guid>
       <description>Voordat je (ongetwijfeld met vol enthousiasme) een Vivado project maakt en code begint te schijven, blijft het belangrijk om eerst een design te maken!!&#xA;Hiernaast wordt de volledige set van instructie voor de RISC-V weergeven. Om precies te zijn, dit is de volledige set van instructie voor de basis RISC-V 32i (RV32i) instructies.&#xA;In deze lijst zijn er 8 instructies die een effect hebben op de program counter. De eerste 6 gemarkeerde instructies zijn de conditional branch instructies: beq, bne, blt, bge, bltu en bgeu.</description>
     </item>
   </channel>

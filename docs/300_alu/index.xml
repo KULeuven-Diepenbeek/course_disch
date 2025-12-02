@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>3. ALU on Digitale Elektronische Schakelingen</title>
-    <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/</link>
+    <link>http://localhost:1313/course_disch/300_alu/</link>
     <description>Recent content in 3. ALU on Digitale Elektronische Schakelingen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
     <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
-    <atom:link href="https://kuleuven-diepenbeek.github.io/course_disch/300_alu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/course_disch/300_alu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wat is een ALU?</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/310_intro_alu/</link>
+      <link>http://localhost:1313/course_disch/300_alu/310_intro_alu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/310_intro_alu/</guid>
+      <guid>http://localhost:1313/course_disch/300_alu/310_intro_alu/</guid>
       <description>Het doel van dit labo is om uiteindelijk een werkende RISC-V processor te maken, ook al is het in een simpele vorm. In dit OPO gaan we de beschrijving uiteraard wel maken in VHDL.&#xA;Eén van de componenten die in iedere processor zit is een Arithmetic Logic Unit (ALU). Een ALU neemt 2 (of 1) input(s) en voert hier een bepaalde instructie mee uit. Deze instructie kan een logische operatie zijn zoals AND, OR, XOR,.</description>
     </item>
     <item>
       <title>2&#39;s Compliment</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/315_2scompliment/</link>
+      <link>http://localhost:1313/course_disch/300_alu/315_2scompliment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/315_2scompliment/</guid>
+      <guid>http://localhost:1313/course_disch/300_alu/315_2scompliment/</guid>
       <description>ℕ Gezien je voor een ingenieurs-richting gekozen hebt, gaan we er van uit dat je geen schrik hebt van binaire getallen. Hopelijk zie je dat 0b1010 hetzelfde is als 0xA, of tien zoals men in de volksmond zegt. Hieronder vind je nog een overzichtstabel voor de eerste 16 natuurlijke getallen.&#xA;DecBinHexDecBinHexDecBinHexDecBinHex 00b00x0 40b1000x4 80b10000x8 120b11000xC 10b10x1 50b1010x5 90b10010x9 130b11010xD 20b100x2 60b1100x6 100b10100xA 140b11100xE 30b110x3 70b1110x7 110b10110xB 150b11110xF Merk op dat alle 16 mogelijkheden binair te vervatten zijn in 4 tekens (=digits).</description>
     </item>
     <item>
       <title>Status codes ALU</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/320_status_codes/</link>
+      <link>http://localhost:1313/course_disch/300_alu/320_status_codes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/320_status_codes/</guid>
+      <guid>http://localhost:1313/course_disch/300_alu/320_status_codes/</guid>
       <description>De ALU gaat dus een arithmetische of logische instructie uitvoeren. Ongeacht de operatie die de ALU moet uitvoeren, zijn er altijd twee ingangen. De operatie die uitgevoerd moet worden, wordt aangeduid aan de hand van 3 bits: ALUop. De ALU heeft dus, naast twee 32-bit ingangen voor de operanden, ook één 3-bit ingang. Tenslotte zijn er nog 2 ingangen die aanduiden of de ALU logisch of arithmetisch moet werken; en of de ALU signed of unsigned moet werken.</description>
     </item>
     <item>
       <title>ALU Design</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/325_design/</link>
+      <link>http://localhost:1313/course_disch/300_alu/325_design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/325_design/</guid>
+      <guid>http://localhost:1313/course_disch/300_alu/325_design/</guid>
       <description>Voordat er begonnen kan worden aan de beschrijving van de ALU, moet eerst het hardware ontwerp gemaakt worden.&#xA;In wezen gebeurt hier niets spectaculairs. Alle mogelijks gevraagde bewerkingen worden allemaal berekend. Met behulp van een multiplexer wordt het gewenste resultaat uitgefilterd aan de uitgang aangelegd.&#xA;De basis-logische poorten, gearceerd in groen, zijn reeds besproken in het eerste hoofdstuk.&#xA;De ripple-carry adders voor het berekenen van de som en het verschil, gearceerd in geel, zijn het resultaat van de opdracht van hoofdstuk 2.</description>
     </item>
     <item>
       <title>Opdracht 3: ALU</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/330_opdracht_alu/</link>
+      <link>http://localhost:1313/course_disch/300_alu/330_opdracht_alu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/330_opdracht_alu/</guid>
+      <guid>http://localhost:1313/course_disch/300_alu/330_opdracht_alu/</guid>
       <description>De ALU die je moet maken voor deze opdracht, ziet er uit zoals afgebeeld en de entity wordt ook gegeven.&#xA;De ALU met alle in- en uitgangen entity alu is port( operand1 : in std_logic_vector(31 downto 0); operand2 : in std_logic_vector(31 downto 0); ALUOp : in std_logic_vector(2 downto 0); arith_logic_b : in STD_LOGIC; signed_unsigned_b : in STD_LOGIC; result : out std_logic_vector(31 downto 0); equal : out std_logic; x_lt_y_u : out std_logic; x_lt_y_s : out std_logic ); end entity alu; Een ALU is volledig combinatorisch.</description>
     </item>
     <item>
       <title>Opdracht - testbench ALU</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/340_testbench_alu/</link>
+      <link>http://localhost:1313/course_disch/300_alu/340_testbench_alu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/300_alu/340_testbench_alu/</guid>
+      <guid>http://localhost:1313/course_disch/300_alu/340_testbench_alu/</guid>
       <description>Om de juiste werking van de ALU te verifiëren, wordt er opnieuw gebruikt gemaakt van een testbench. Het is een goed idee om tijdens het ontwikkelen van de ALU meteen de functionaliteit te testen. Hiervoor kunnen er heel gericht bepaalde instructies ingesteld worden. Bijvoorbeeld:&#xA;Om 12 + 3 te doen weet je dat inputs de volgende moeten zijn:&#xA;operand1 wordt 12 operand2 wordt 3 de instructie voor de optelling is ALUOp is &amp;ldquo;100&amp;rdquo; signed_unsigned_b is &amp;lsquo;0&amp;rsquo; arith_logic_b is &amp;lsquo;0&amp;rsquo; De uitgangen van de ALU moeten de volgende zijn:</description>
     </item>
   </channel>
