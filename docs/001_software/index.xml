@@ -2,19 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ontwikkel omgeving on Digitale Elektronische Schakelingen</title>
-    <link>http://localhost:1313/course_disch/001_software/</link>
+    <link>https://kuleuven-diepenbeek.github.io/course_disch/001_software/</link>
     <description>Recent content in Ontwikkel omgeving on Digitale Elektronische Schakelingen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
     <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
-    <atom:link href="http://localhost:1313/course_disch/001_software/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kuleuven-diepenbeek.github.io/course_disch/001_software/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Alternatieve omgeving</title>
-      <link>http://localhost:1313/course_disch/001_software/010_alternatief/</link>
+      <title>Versiebeheer</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/001_software/010_versiebeheer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>http://localhost:1313/course_disch/001_software/010_alternatief/</guid>
-      <description>Alternatief voor thuis Als het niet mogellijk is om Vivado te installaren op je eigen laptop, dan kan je de site EDA playground om toch thuis verder te kunnen werken. Je kan hierop inloggen met je Google account (van UHasselt). Zorg dat je bij testbench + design VHDL hebt geselecteerd. Nu kan je de code in de testbench (links) en het design (rechts) zetten. Als de code er in zit moet je ook de top entity van het design aangeven, deze naam moet je bij Top entity invulllen.</description>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/001_software/010_versiebeheer/</guid>
+      <description>Er worden masaal veel documenten geproduceerd, geëditeerd en gedeeld. Dit geldt ook voor programma-code. Zoals hiervoor vermeld, is HDL-code niets meer dan simpele tekstdocumenten, analoog aan een C- of python-bestand. Om door het bos de bomen nog te zien, is er software beschikbaar om hiermee om te gaan. De meest gekende software hiervoor is ongetwijfeld: Git. Het gebruik van Git wordt gedoceerd als onderdeel van Electronic Engineering Skills (4952). Aangezien Git gebruikt wordt binnen dit opleidingsonderdeel, volgt hier een primer van nodige principes voor deze labo-reeks.</description>
+    </item>
+    <item>
+      <title>Virtual Private Network</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/001_software/011_vpn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/001_software/011_vpn/</guid>
+      <description>De Forgejo-server die gebruikt wordt voor deze labo&amp;rsquo;s is enkel toegankelijk vanop een Virtual Private Network (VPN). Om hiermee te kunnen verbinden is voor ieder van jullie een set configuratie bestanden klaargemaakt. Er moeten nog wel enkele kleine stukjes software geïnstalleerd worden op jullie eigen machines.&#xA;tl;dr install OpenVPN install MobaXterm install TightVNC OpenVPN De (open source) software die gebruikt wordt voor de VPN verbinding is OpenVPN. Deze software kan je downloaden vanop hun website.</description>
     </item>
   </channel>
 </rss>

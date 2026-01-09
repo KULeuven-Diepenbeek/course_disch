@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head><script src="/course_disch/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=course_disch/livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.123.7">
@@ -12,22 +12,22 @@
     <title>Ontwikkel omgeving :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../css/nucleus.css?1757594543" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1757594543" rel="stylesheet">
-    <link href="../css/hybrid.css?1757594543" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1757594543" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1757594543" rel="stylesheet">
-    <link href="../css/auto-complete.css?1757594543" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1757594543" rel="stylesheet">
-    <link href="../css/theme.css?1757594543" rel="stylesheet">
-    <link href="../css/tabs.css?1757594543" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1757594543" rel="stylesheet">
+    <link href="../css/nucleus.css?1767965809" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1767965809" rel="stylesheet">
+    <link href="../css/hybrid.css?1767965809" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1767965809" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1767965809" rel="stylesheet">
+    <link href="../css/auto-complete.css?1767965809" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1767965809" rel="stylesheet">
+    <link href="../css/theme.css?1767965809" rel="stylesheet">
+    <link href="../css/tabs.css?1767965809" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1767965809" rel="stylesheet">
     
-    <link href="../css/theme-kul.css?1757594543" rel="stylesheet">
+    <link href="../css/theme-kul.css?1767965809" rel="stylesheet">
     
     
 
-    <script src="../js/jquery-3.3.1.min.js?1757594543"></script>
+    <script src="../js/jquery-3.3.1.min.js?1767965809"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1757594543"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1757594543"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1767965809"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1767965809"></script>
 <script type="text/javascript">
     
-        var baseurl = "http:\/\/localhost:1313\/course_disch\/";
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1757594543"></script>
+<script type="text/javascript" src="../js/search.js?1767965809"></script>
 
     
   </div>
@@ -140,9 +140,30 @@
  
   
     
-      <li data-nav-id="/001_software/010_alternatief/" title="Alternatieve omgeving" class="dd-item ">
-        <a href="../001_software/010_alternatief/">
-        Alternatieve omgeving
+      <li data-nav-id="/001_software/010_versiebeheer/" title="Versiebeheer" class="dd-item ">
+        <a href="../001_software/010_versiebeheer/">
+        Versiebeheer
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/001_software/011_vpn/" title="Virtual Private Network" class="dd-item ">
+        <a href="../001_software/011_vpn/">
+        Virtual Private Network
         
         </a>
     </li>
@@ -1683,11 +1704,12 @@
 <p>De FPGA-markt wordt gedomineerd door 2 grote fabrikanten van FPGA&rsquo;s: <a href="https://www.amd.com/en.html" target="_blank">AMD</a> en <a href="https://www.intel.com/content/www/us/en/products/programmable.html" target="_blank">Intel</a>. Beide spelers samen leveren meer dan 85% van alle FPGAs wereldwijd. Het simuleren en configureren van FPGAs gebeurt in een speciale ontwikkelomgeving: <a href="https://fpgasoftware.intel.com/" target="_blank">Quartus</a> voor Intel FPGA&rsquo;s en <a href="https://www.xilinx.com/support/download.html" target="_blank">Vivado</a> (vroeger <a href="https://www.xilinx.com/products/design-tools/ise-design-suite.html" target="_blank">ISE</a>) voor AMD FPGA&rsquo;s.</p>
 <p>Ter info &hellip; de originele FPGA producenten waren <strong>Xilinx</strong> en <strong>Altera</strong>. AMD nam Xilinx over (2022) en Intel nam Altera over (2015).</p>
 <h2 id="vivado">Vivado</h2>
-<p>De HDL-code voor dit opleidingsonderdeel wordt geschreven in Vivado. Vivado is de omgeving van AMD en wordt gebruik voor de huidige families van FPGAs. Je kan de software downloaden van de site van <a href="https://www.xilinx.com/support/download.html" target="_blank">AMD</a>. Je moet wel een (gratis) account aanmaken om de software te kunnen downloaden. Deze software is enkel beschikbaar voor Windows en Linux.</p>
+<p>Omdat HDL-code typisch simpele tekstbestanden zijn, kunnen deze geschreven worden in elke editor. De design software van de fabrikanten laat toe om naadloos gebruik te maken van hun simulator. De HDL-code voor dit opleidingsonderdeel wordt daarom geschreven in <strong>Vivado</strong>. Vivado is de omgeving van AMD en wordt gebruik voor de huidige families van FPGAs. Je kan de software downloaden van de site van <a href="https://www.xilinx.com/support/download.html" target="_blank">AMD</a>. Je moet wel een (gratis) account aanmaken om de software te kunnen downloaden. Deze software is enkel beschikbaar voor Windows en Linux.</p>
 
 <div class="notices warning" ><p>Vivado vereist veel opslagruimte om te installeren <strong>&gt;100 GB</strong>. Door minder types van FPGA&rsquo;s te ondersteunen kan hier wel wat bij bespaard worden!</p>
 </div>
 
+<p>Aangezien deze design software nogal een aanslag is (of kan zijn) op jullie eigen laptops, is er een alternatieve manier beschikbaar gemaakt.</p>
 
 
 
@@ -1765,6 +1787,22 @@
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2786,7 +2824,7 @@
 			<a class="nav nav-prev" href="../000_intro/" title="Introductie"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../001_software/010_alternatief/" title="Alternatieve omgeving" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../001_software/010_versiebeheer/" title="Versiebeheer" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2796,19 +2834,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1757594543"></script>
-    <script src="../js/perfect-scrollbar.min.js?1757594543"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1757594543"></script>
-    <script src="../js/jquery.sticky.js?1757594543"></script>
-    <script src="../js/featherlight.min.js?1757594543"></script>
-    <script src="../js/highlight.pack.js?1757594543"></script>
+    <script src="../js/clipboard.min.js?1767965809"></script>
+    <script src="../js/perfect-scrollbar.min.js?1767965809"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1767965809"></script>
+    <script src="../js/jquery.sticky.js?1767965809"></script>
+    <script src="../js/featherlight.min.js?1767965809"></script>
+    <script src="../js/highlight.pack.js?1767965809"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1757594543"></script>
-    <script src="../js/learn.js?1757594543"></script>
-    <script src="../js/hugo-learn.js?1757594543"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1767965809"></script>
+    <script src="../js/learn.js?1767965809"></script>
+    <script src="../js/hugo-learn.js?1767965809"></script>
     
         
-            <script src="../mermaid/mermaid.js?1757594543"></script>
+            <script src="../mermaid/mermaid.js?1767965809"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
