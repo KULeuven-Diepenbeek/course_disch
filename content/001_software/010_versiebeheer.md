@@ -57,22 +57,71 @@ Er bestaan een aantal git-gebaseerde VCS-en die gratis beschikbaar zijn ([Github
 
 De **Forgejo**-server is bedoeld voor *intern* gebruik. Om deze af te schermen van de buitenwereld, is de server enkel toegangkelijk via een **Virtual Private Network (VPN)** ([meer op Wikipedia](https://en.wikipedia.org/wiki/Virtual_private_network)). Door een verbinding te maken met de **OpenVPN** server, komt jouw toestel terecht in een virtueel netwerk. Vanop dat virtuele netwerk, is de Forgejo server bereikbaar via de link: [http://vcs.esands.vpn](http://vcs.esands.vpn).
 
+<!-- ---------------------------------------------------------------------- -->
 {{% multiHcolumn %}}
 {{% column %}}
 ![VPN](/images/001/setup_simple.png)
+
+Na OpenVPN te installeren ([link](https://openvpn.net/client/)), moeten de nodige configuratiebestanden aangeboden worden. Deze worden per email verzonden en bestaan uit:
+
+* een configuratie bestand (**client.ovpn**)
+* een persoonlijke sleutel (**cert_client.key**)
+* een certificaat voor deze sleutel (**cert_client.crt**)
+* een certificaat voor de sleutel van de CA (**ca.crt**)
+* een sleutel voor de TLS authenticatie (**ta.key**)
+
 {{% /column %}}
 {{% column %}}
 ![forgejo](/images/001/vcs.png)
 {{% /column %}}
 {{% /multiHcolumn %}}
 
+<!-- ---------------------------------------------------------------------- -->
 
-## Some pointers
+{{% multiHcolumn %}}
+{{% column %}}
+![password](/images/001/forgejo_1.png)
+{{% /column %}}
+{{% column %}}
+#### Nieuw wachtwoord
 
-Wanneer jullie voor de eerste keer inloggen, zullen jullie verplicht worden om een nieuw **wachtwoord** in te stellen.
+Wanneer jullie voor de eerste keer inloggen (met het wachtwoord dat tijdens de les vernoemd wordt), zullen jullie verplicht worden om een nieuw **wachtwoord** in te stellen.
+
+Kies het nieuwe wachtwoord verstandig, want het gaat nodig zijn voor de interactie met de vcs.
+{{% /column %}}
+{{% /multiHcolumn %}}
+
+<!-- ---------------------------------------------------------------------- -->
+
+{{% multiHcolumn %}}
+{{% column %}}
+#### Gecreëerde repositories
 
 Voor ieder van jullie is er een set van repositories gemaakt. Deze repositories zijn **private**
 
-Waneer de deadline van een assignment bereikt is, wordt het **eigenaarsschap** van deze repo overgedragen naar de docenten. Jullie blijven wel ten allen tijden **leesrechten** behouden.
+Wanneer de **deadline** van een assignment bereikt is, wordt het **eigenaarsschap** van deze repo overgedragen naar de docenten. Jullie blijven wel ten allen tijden **leesrechten** behouden.
 
-![repos](/images/001/forgejo_repos.png)
+Let er dus zeker op dat je jouw *oplossing* tijdig naar de git repository pusht.
+
+Voor iedere assignment is er een aparte repository gemaakt. Deze repositories hebben al een deel folders en bestanden waarvan je kan vertrekken. **Deze structuur moet ten allen tijde behouden blijven.**
+
+{{% /column %}}
+{{% column %}}
+![password](/images/001/forgejo_2.png)
+{{% /column %}}
+{{% /multiHcolumn %}}
+
+<!-- ---------------------------------------------------------------------- -->
+
+{{% multiHcolumn %}}
+{{% column %}}
+![password](/images/001/forgejo_3.png)
+{{% /column %}}
+{{% column %}}
+#### Doe een checkout
+
+Om een lokale copy te bekomen van de repository, moet er een checkout gedaan worden. Gebruik hiervoor de URL die zichtbaar is in de repo.
+{{% /column %}}
+{{% /multiHcolumn %}}
+
+
