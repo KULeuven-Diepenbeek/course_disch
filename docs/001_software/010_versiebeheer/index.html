@@ -12,22 +12,22 @@
     <title>Versiebeheer :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1768205021" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1768205021" rel="stylesheet">
-    <link href="../../css/hybrid.css?1768205021" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1768205021" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1768205021" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1768205021" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1768205021" rel="stylesheet">
-    <link href="../../css/theme.css?1768205021" rel="stylesheet">
-    <link href="../../css/tabs.css?1768205021" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1768205021" rel="stylesheet">
+    <link href="../../css/nucleus.css?1768220314" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1768220314" rel="stylesheet">
+    <link href="../../css/hybrid.css?1768220314" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1768220314" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1768220314" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1768220314" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1768220314" rel="stylesheet">
+    <link href="../../css/theme.css?1768220314" rel="stylesheet">
+    <link href="../../css/tabs.css?1768220314" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1768220314" rel="stylesheet">
     
-    <link href="../../css/theme-kul.css?1768205021" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1768220314" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1768205021"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1768220314"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1768205021"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1768205021"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1768220314"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1768220314"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1768205021"></script>
+<script type="text/javascript" src="../../js/search.js?1768220314"></script>
 
     
   </div>
@@ -161,9 +161,9 @@
  
   
     
-      <li data-nav-id="/001_software/011_vpn/" title="Virtual Private Network" class="dd-item ">
-        <a href="../../001_software/011_vpn/">
-        Virtual Private Network
+      <li data-nav-id="/001_software/011_alternatief/" title="Alternatieve omgeving" class="dd-item ">
+        <a href="../../001_software/011_alternatief/">
+        Alternatieve omgeving
         
         </a>
     </li>
@@ -1697,7 +1697,6 @@
   <ul>
     <li><a href="#waarom">Waarom?</a></li>
     <li><a href="#hoe">Hoe?</a></li>
-    <li><a href="#some-pointers">Some pointers</a></li>
   </ul>
 </nav>
     </div>
@@ -1777,19 +1776,57 @@ Van zodra je de invite aanvaard hebt (nadat je bent ingelogd op GitHub), wordt e
 </div>
 <h2 id="hoe">Hoe?</h2>
 <p>De <strong>Forgejo</strong>-server is bedoeld voor <em>intern</em> gebruik. Om deze af te schermen van de buitenwereld, is de server enkel toegangkelijk via een <strong>Virtual Private Network (VPN)</strong> (<a href="https://en.wikipedia.org/wiki/Virtual_private_network" target="_blank">meer op Wikipedia</a>). Door een verbinding te maken met de <strong>OpenVPN</strong> server, komt jouw toestel terecht in een virtueel netwerk. Vanop dat virtuele netwerk, is de Forgejo server bereikbaar via de link: <a href="http://vcs.esands.vpn" target="_blank">http://vcs.esands.vpn</a>.</p>
+<!-- ---------------------------------------------------------------------- -->
 <div class="multiHcolumn">
 <div class="column">
     <p><img src="../../images/001/setup_simple.png" alt="VPN"></p>
+<p>Na OpenVPN te installeren (<a href="https://openvpn.net/client/" target="_blank">link</a>), moeten de nodige configuratiebestanden aangeboden worden. Deze worden per email verzonden en bestaan uit:</p>
+<ul>
+<li>een configuratie bestand (<strong>client.ovpn</strong>)</li>
+<li>een persoonlijke sleutel (<strong>cert_client.key</strong>)</li>
+<li>een certificaat voor deze sleutel (<strong>cert_client.crt</strong>)</li>
+<li>een certificaat voor de sleutel van de CA (<strong>ca.crt</strong>)</li>
+<li>een sleutel voor de TLS authenticatie (<strong>ta.key</strong>)</li>
+</ul>
 </div>    
 <div class="column">
     <p><img src="../../images/001/vcs.png" alt="forgejo"></p>
 </div>    
 </div>
-<h2 id="some-pointers">Some pointers</h2>
-<p>Wanneer jullie voor de eerste keer inloggen, zullen jullie verplicht worden om een nieuw <strong>wachtwoord</strong> in te stellen.</p>
+<!-- ---------------------------------------------------------------------- -->
+<div class="multiHcolumn">
+<div class="column">
+    <p><img src="../../images/001/forgejo_1.png" alt="password"></p>
+</div>    
+<div class="column">
+    <h4 id="nieuw-wachtwoord">Nieuw wachtwoord</h4>
+<p>Wanneer jullie voor de eerste keer inloggen (met het wachtwoord dat tijdens de les vernoemd wordt), zullen jullie verplicht worden om een nieuw <strong>wachtwoord</strong> in te stellen.</p>
+<p>Kies het nieuwe wachtwoord verstandig, want het gaat nodig zijn voor de interactie met de vcs.</p>
+</div>    
+</div>
+<!-- ---------------------------------------------------------------------- -->
+<div class="multiHcolumn">
+<div class="column">
+    <h4 id="gecreëerde-repositories">Gecreëerde repositories</h4>
 <p>Voor ieder van jullie is er een set van repositories gemaakt. Deze repositories zijn <strong>private</strong></p>
-<p>Waneer de deadline van een assignment bereikt is, wordt het <strong>eigenaarsschap</strong> van deze repo overgedragen naar de docenten. Jullie blijven wel ten allen tijden <strong>leesrechten</strong> behouden.</p>
-<p><img src="../../images/001/forgejo_repos.png" alt="repos"></p>
+<p>Wanneer de <strong>deadline</strong> van een assignment bereikt is, wordt het <strong>eigenaarsschap</strong> van deze repo overgedragen naar de docenten. Jullie blijven wel ten allen tijden <strong>leesrechten</strong> behouden.</p>
+<p>Let er dus zeker op dat je jouw <em>oplossing</em> tijdig naar de git repository pusht.</p>
+<p>Voor iedere assignment is er een aparte repository gemaakt. Deze repositories hebben al een deel folders en bestanden waarvan je kan vertrekken. <strong>Deze structuur moet ten allen tijde behouden blijven.</strong></p>
+</div>    
+<div class="column">
+    <p><img src="../../images/001/forgejo_2.png" alt="password"></p>
+</div>    
+</div>
+<!-- ---------------------------------------------------------------------- -->
+<div class="multiHcolumn">
+<div class="column">
+    <p><img src="../../images/001/forgejo_3.png" alt="password"></p>
+</div>    
+<div class="column">
+    <h4 id="doe-een-checkout">Doe een checkout</h4>
+<p>Om een lokale copy te bekomen van de repository, moet er een checkout gedaan worden. Gebruik hiervoor de URL die zichtbaar is in de repo.</p>
+</div>    
+</div>
 
 
 <footer class="footline">
@@ -2900,7 +2937,7 @@ Van zodra je de invite aanvaard hebt (nadat je bent ingelogd op GitHub), wordt e
 			<a class="nav nav-prev" href="../../001_software/" title="Ontwikkel omgeving"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../001_software/011_vpn/" title="Virtual Private Network" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../001_software/011_alternatief/" title="Alternatieve omgeving" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2910,19 +2947,19 @@ Van zodra je de invite aanvaard hebt (nadat je bent ingelogd op GitHub), wordt e
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1768205021"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1768205021"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1768205021"></script>
-    <script src="../../js/jquery.sticky.js?1768205021"></script>
-    <script src="../../js/featherlight.min.js?1768205021"></script>
-    <script src="../../js/highlight.pack.js?1768205021"></script>
+    <script src="../../js/clipboard.min.js?1768220314"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1768220314"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1768220314"></script>
+    <script src="../../js/jquery.sticky.js?1768220314"></script>
+    <script src="../../js/featherlight.min.js?1768220314"></script>
+    <script src="../../js/highlight.pack.js?1768220314"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1768205021"></script>
-    <script src="../../js/learn.js?1768205021"></script>
-    <script src="../../js/hugo-learn.js?1768205021"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1768220314"></script>
+    <script src="../../js/learn.js?1768220314"></script>
+    <script src="../../js/hugo-learn.js?1768220314"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1768205021"></script>
+            <script src="../../mermaid/mermaid.js?1768220314"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

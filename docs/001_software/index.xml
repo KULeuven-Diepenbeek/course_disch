@@ -17,11 +17,11 @@
       <description>Er worden masaal veel documenten geproduceerd, geëditeerd en gedeeld. Dit geldt ook voor programma-code. Zoals hiervoor vermeld, is HDL-code niets meer dan simpele tekstdocumenten, analoog aan een C- of python-bestand. Om door het bos de bomen nog te zien, is er software beschikbaar om hiermee om te gaan. De meest gekende software hiervoor is ongetwijfeld: Git. Het gebruik van Git wordt gedoceerd als onderdeel van Electronic Engineering Skills (4952). Aangezien Git gebruikt wordt binnen dit opleidingsonderdeel, volgt hier een primer van nodige principes voor deze labo-reeks.</description>
     </item>
     <item>
-      <title>Virtual Private Network</title>
-      <link>https://kuleuven-diepenbeek.github.io/course_disch/001_software/011_vpn/</link>
+      <title>Alternatieve omgeving</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/001_software/011_alternatief/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>https://kuleuven-diepenbeek.github.io/course_disch/001_software/011_vpn/</guid>
-      <description>De Forgejo-server die gebruikt wordt voor deze labo&amp;rsquo;s is enkel toegankelijk vanop een Virtual Private Network (VPN). Om hiermee te kunnen verbinden is voor ieder van jullie een set configuratie bestanden klaargemaakt. Er moeten nog wel enkele kleine stukjes software geïnstalleerd worden op jullie eigen machines.&#xA;tl;dr install OpenVPN install MobaXterm install TightVNC OpenVPN De (open source) software die gebruikt wordt voor de VPN verbinding is OpenVPN. Deze software kan je downloaden vanop hun website.</description>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/001_software/011_alternatief/</guid>
+      <description>Als het niet mogelijk is om zelf Vivado te installeren op de jouw laptop, wordt er een alternatieve omgeving aangeboden. Hiervoor dien je wel enkele kleine stukjes software geïnstalleerd worden op jullie eigen machines.&#xA;tl;dr install MobaXterm or Putty install TightVNC Er is een server beschikbaar gemaakt waarop Vivado v2020.2 geïnstalleerd is. Deze server is digitalE(.esands.vpn) en is bereikbaar via 10.185.158.204 (of via de hostname zelf). Net als voor de Forgejo server te bereiken dient er een eerst een connectie gemaakt te worden met de VPN server.</description>
     </item>
   </channel>
 </rss>
