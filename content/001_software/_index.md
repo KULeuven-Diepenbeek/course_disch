@@ -15,8 +15,10 @@ Ter info ... de originele FPGA producenten waren **Xilinx** en **Altera**. AMD n
 
 ## Vivado
 
-De HDL-code voor dit opleidingsonderdeel wordt geschreven in Vivado. Vivado is de omgeving van AMD en wordt gebruik voor de huidige families van FPGAs. Je kan de software downloaden van de site van [AMD](https://www.xilinx.com/support/download.html). Je moet wel een (gratis) account aanmaken om de software te kunnen downloaden. Deze software is enkel beschikbaar voor Windows en Linux.
+Omdat HDL-code typisch simpele tekstbestanden zijn, kunnen deze geschreven worden in elke editor. De design software van de fabrikanten laat toe om naadloos gebruik te maken van hun simulator. De HDL-code voor dit opleidingsonderdeel wordt daarom geschreven in **Vivado**. Vivado is de omgeving van AMD en wordt gebruik voor de huidige families van FPGAs. Je kan de software downloaden van de site van [AMD](https://www.xilinx.com/support/download.html). Je moet wel een (gratis) account aanmaken om de software te kunnen downloaden. Deze software is enkel beschikbaar voor Windows en Linux.
 
 {{% notice warning %}}
 Vivado vereist veel opslagruimte om te installeren **>100 GB**. Door minder types van FPGA's te ondersteunen kan hier wel wat bij bespaard worden!
 {{% /notice %}}
+
+Aangezien deze design software nogal een aanslag is (of kan zijn) op jullie eigen laptops, is er een alternatieve manier beschikbaar gemaakt.
