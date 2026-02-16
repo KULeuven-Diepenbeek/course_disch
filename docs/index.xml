@@ -35,7 +35,7 @@
       <link>https://kuleuven-diepenbeek.github.io/course_disch/001_software/011_alternatief/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
       <guid>https://kuleuven-diepenbeek.github.io/course_disch/001_software/011_alternatief/</guid>
-      <description>Als het niet mogelijk is om zelf Vivado te installeren op de jouw laptop, wordt er een alternatieve omgeving aangeboden. Hiervoor dien je wel enkele kleine stukjes software geïnstalleerd worden op jullie eigen machines.&#xA;tl;dr install MobaXterm or Putty install TightVNC Er is een server beschikbaar gemaakt waarop Vivado v2020.2 geïnstalleerd is. Deze server is digitalE(.esands.vpn) en is bereikbaar via 10.185.158.204 (of via de hostname zelf). Net als voor de Forgejo server te bereiken dient er een eerst een connectie gemaakt te worden met de VPN server.</description>
+      <description>Als het niet mogelijk is om zelf Vivado te installeren op de jouw laptop, wordt er een alternatieve omgeving aangeboden. Hiervoor dien je wel enkele kleine stukjes software geïnstalleerd worden op jullie eigen machines.&#xA;tl;dr installeer MobaXterm of Putty installeer TightVNC-client Er is een server beschikbaar gemaakt waarop Vivado v2020.2 geïnstalleerd is. Deze server is digitalE(.esands.vpn) en is bereikbaar via 10.185.158.204 (of via de hostname zelf). Net als voor de Forgejo server te bereiken dient er een eerst een connectie gemaakt te worden met de VPN server.</description>
     </item>
     <item>
       <title>NAND poort</title>
