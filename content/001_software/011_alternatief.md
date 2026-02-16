@@ -10,7 +10,7 @@ Als het niet mogelijk is om zelf Vivado te installeren op de jouw laptop, wordt 
 <div style="float: right; margin-right: 50px;">
 <h2> tl;dr</h2>
 <ul>
-<li> installeer <a href="https://mobaxterm.mobatek.net/download.html">MobaXterm</a> or <a href="https://putty.org/index.html">Putty</a>
+<li> installeer <a href="https://mobaxterm.mobatek.net/download.html">MobaXterm</a> of <a href="https://putty.org/index.html">Putty</a>
 <li> installeer <a href="https://www.tightvnc.com/download.php">TightVNC-client</a>
 </ul>
 </div>
