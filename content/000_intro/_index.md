@@ -15,7 +15,7 @@ De beschrijvingen die gemaakt wordt in een HDL kan gebruikt worden om FPGA's mee
 
 **40%** van de punten van dit opleidingsonderdeel staan op dit labo. **60%** staat op de theorie.
 
-Er zijn een aantal **opdrachten** die moeten ingediend worden via Toledo. Deze opdrachten worden evenwaardig gequoteerd en vormen de 40% van het labo-punt.
+Er zijn een aantal **opdrachten** die moeten ingediend worden via Forgejo. Deze opdrachten worden evenwaardig gequoteerd en vormen de 40% van het labo-punt.
 
 <center><b>Voor het labo is er een verplichte aanwezigheid!!</b></center>
 
