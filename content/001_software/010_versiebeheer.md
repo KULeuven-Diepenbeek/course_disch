@@ -118,6 +118,8 @@ Voor iedere assignment is er een aparte repository gemaakt. Deze repositories he
 ![password](/images/001/forgejo_3.png)
 {{% /column %}}
 {{% column %}}
+
+
 #### Doe een checkout
 
 Om een lokale copy te bekomen van de repository, moet er een checkout gedaan worden. Gebruik hiervoor de URL die zichtbaar is in de repo.
@@ -125,3 +127,6 @@ Om een lokale copy te bekomen van de repository, moet er een checkout gedaan wor
 {{% /multiHcolumn %}}
 
 
+#### Public key magic
+
+Met de lokale checkout van de repo, kan je de ontwikkeling doen in een editor naar keuzen. Van zodra je de wijzingingen in de repo *commit* en *pushed* naar de server moet je jezelf opnieuw aanmelden (login+passwd). Dit kan omslachtig worden. Door gebruik te maken van publieke sleutel crypto kan je vermijden. Hiervoor moet je een sleutel-paar genereren. De publieke sleutel kan je vervolgens opladen naar de "toegestane sleutels" in de settings van jouw forgejo-account.

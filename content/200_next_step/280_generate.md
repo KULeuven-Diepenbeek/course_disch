@@ -33,6 +33,6 @@ Ook het instantiëren van een component kan gebeuren met een for-generate. Indie
 {{< include_file "/static/hdlsrc/200/generate_3.vhd" "vhdl" >}}
 
 
-{{% notice note %}}
-Vivado kan een schematische voorstelling maken van de hardware beschrijving met RTL analysis elaborate design.
-{{% /notice %}}
+<!-- {{% notice note %}} -->
+<!-- Vivado kan een schematische voorstelling maken van de hardware beschrijving met RTL analysis elaborate design. -->
+<!-- {{% /notice %}} -->

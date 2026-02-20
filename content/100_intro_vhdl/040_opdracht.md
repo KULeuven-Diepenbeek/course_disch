@@ -29,20 +29,6 @@ end entity or_gate;
 {{% /column %}}
 {{% /multiHcolumn %}}
 
-## Inleveren
+## Opleveren
 
-Om deze opdracht in te leveren moeten jullie volgende bestanden indienen via Toledo:
-
-* één (of meerdere) bestanden met het design
-* één bestand met de testbench
-* **[OPTIONEEL]** een markdown file met nodige uitleg
-
-Deze laatste is misschien nog niet nuttig voor deze opdracht, maar mogelijks wel voor latere opdrachten. Deze file geeft je de mogelijkheid om extra info mee te sturen.
-
-{{% notice warning %}}
-Laad enkel de bovenvernomende bestanden op in Toledo. Het is **NIET** de bedoeling om een **volledig Vivado project** te zippen en in te dienen !!
-{{% /notice %}}
-
-{{% notice tip %}}
-De VHDL broncode van de voorbeelden uit dit hoofdstuk kun je vinden op [GitHub](https://github.com/KULeuven-Diepenbeek/course_disch/tree/main/static/hdlsrc/100).
-{{% /notice %}}
+Om deze opdracht op te leveren moet je gebruik maken van de Forgejo-server. Behoud hierbij de folderstructuur van de aangeleverde boilerplate code. Mogelijks bijkomende opmerkingen mogen in de README.md geschreven worden.

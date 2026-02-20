@@ -6,7 +6,7 @@ weight: 290
 draft: false
 ---
 
-In deze opdracht moet je een **16 bit ripple-carry adder** maken. Indien je vergeten bent hoe een full adder en een half adder eruit zien, kan je kijken naar onderstaande schema's. Bij een ripple-carry adder wordt de C-out van de eerste adder doorgegeven aan de C-in van de tweede adder. We werken in little endian.
+In deze opdracht moet je een **16 bit ripple-carry adder** maken. Indien je vergeten bent hoe een full adder en een half adder eruit zien, kan je kijken naar onderstaande schema's. Bij een ripple-carry adder wordt de C-out van de eerste adder doorgegeven aan de C-in van de tweede adder. Er wordt gewerkt met little endian.
 
 Het is **niet** de bedoeling dat je de + operator gebruikt van "std_logic_unsigned"  of "std_logic_signed"!
 
@@ -26,12 +26,8 @@ Het is altijd een goed idee om eerst een tekening te maken voordat je begint met
 
 ## Opleveren
 
-Om deze opdracht op te leveren moeten jullie volgende bestanden indienen via Toledo:
+Om deze opdracht op te leveren moet je gebruik maken van de Forgejo-server. Behoud hierbij de folderstructuur van de aangeleverde boilerplate code. Mogelijks bijkomende opmerkingen mogen in de README.md geschreven worden.
 
-* één of meerdere bestanden met het design
-* **[OPTIONEEL]** een markdown file met nodige uitleg
-
-Merk op dat er **GEEN** testbench mee opgeladen dient te worden.
 
 ## Testbench
 
