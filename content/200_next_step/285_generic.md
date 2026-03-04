@@ -10,7 +10,7 @@ Sommige studenten hebben misschien al door dat de componenten tot hiertoe niet g
 
 {{% figure src="/images/200/generic_and.png" title="Generic AND voorstelling"  %}}
 
-Je kan deze AND poort beschrijven met onderstaand code. De variable N wordt gebruikt als het aantal inputs.
+Je kan deze AND poort beschrijven met onderstaand code. De variable N wordt gebruikt als het aantal inputs. 
 
 {{< include_file "/static/hdlsrc/200/nbit_and.vhd" "vhdl" >}}
 

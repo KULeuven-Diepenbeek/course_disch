@@ -4,6 +4,23 @@ This is the repository to generate the lab website of the course "Digitale elekt
 
 ## Theme
 
+The theme that is used in these course-websites is: Hugo Theme KUL(https://github.com/KULeuven-Diepenbeek/hugo-theme-kul/)
+
+Installing it is simple:
+
+```bash
+cd themes
+git clone git@github.com:KULeuven-Diepenbeek/hugo-theme-kul.git
+```
+
+Next, there is a rename of the config file. This is due to an update of Hugo. Current version it is tested with is hugo v0.157
+> git mv config.toml hugo.toml
+
+Update the theme selection in hugo.toml
+> theme = "hugo-theme-kul"
+
+**NO LONGER USED**
+
 The theme that is used in these course-websites is: Hugo Theme Learn (https://themes.gohugo.io/hugo-theme-learn/)
 
 Installing it is simple:
