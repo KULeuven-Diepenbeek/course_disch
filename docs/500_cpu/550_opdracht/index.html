@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.157.0">
     <meta name="description" content="">
 <meta name="author" content="map[email:&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; name:Nele Mentens and Jo Vliegen]">
 
@@ -12,22 +12,25 @@
     <title>Opdracht 5: Processor :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1771583587" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/hybrid.css?1771583587" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1771583587" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1771583587" rel="stylesheet">
-    <link href="../../css/theme.css?1771583587" rel="stylesheet">
-    <link href="../../css/tabs.css?1771583587" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1771583587" rel="stylesheet">
-    
-    <link href="../../css/theme-kul.css?1771583587" rel="stylesheet">
-    
+    <link href="../../css/nucleus.css?1772609435" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/hybrid.css?1772609435" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1772609435" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1772609435" rel="stylesheet">
+    <link href="../../css/devselector.css?1772609435" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1772609435" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1771583587"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1772609435"></script>
+    <script src="../../js/devselector.js?1772609435"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -40,7 +43,6 @@
       
     </style>
     
-
   </head>
   <body class="" data-url="../../500_cpu/550_opdracht/">
     <nav id="sidebar" class="">
@@ -63,20 +65,22 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1771583587"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1771583587"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1772609435"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1772609435"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1771583587"></script>
+<script type="text/javascript" src="../../js/search.js?1772609435"></script>
 
     
   </div>
-  
 
     <div class="highlightable">
+
+      
+      
     <ul class="topics">
 
         
@@ -1692,9 +1696,7 @@
                 </div>
                 
                     <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents"></nav>
-    </div>
+  <div class="wrapper toc"><nav id="TableOfContents"></nav></div>
 </div>
 
                 
@@ -1715,14 +1717,25 @@
 
         
 
+        
 
+
+
+
+
+<article class='content'>
 <p>Voor deze opdracht is het de bedoeling om zelf de <strong>processor</strong> te maken. Je mag, maar dit is niet verplicht, eerder gebruikte code (voor ALU, program counter, &hellip;) hergebruiken.</p>
 <div class="multiHcolumn">
 <div class="column">
-    <p><img src="../../images/500/processor_blockdiagram_v3.png" alt="RISC-V"></p>
+    <p><figure>
+	<a href="../../images/500/processor_blockdiagram_v3.png" data-featherlight="image">
+		<img src="../../images/500/processor_blockdiagram_v3.png"  alt="RISC-V" >
+	</a>
+</figure>
+</p>
 </div>    
 <div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">processor</span> <span style="color:#66d9ef">is</span>
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">processor</span> <span style="color:#66d9ef">is</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(
 </span></span><span style="display:flex;"><span>        clock <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
 </span></span><span style="display:flex;"><span>        reset <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
@@ -1735,90 +1748,91 @@
 </div>
 <p>De controle blok kan <a href="../../hdlsrc/500/control.vhd" download>hier</a> gedownload worden. Hieronder vind je een woordje uitleg over de poorten van de controle blok.</p>
 <table>
-<thead>
-<tr>
-<th>Poort naam</th>
-<th>Dimensie en richting</th>
-<th>Bron / Doel</th>
-<th>Uitleg</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>inst</td>
-<td>32-bit input</td>
-<td>van IMEM</td>
-<td>de instructie die uitgevoerd moet worden</td>
-</tr>
-<tr>
-<td>alu_equal</td>
-<td>1-bit input</td>
-<td>van ALU</td>
-<td>de vlag die aangeeft dat de twee operanden gelijk zijn</td>
-</tr>
-<tr>
-<td>alu_x_lt_y_s</td>
-<td>1-bit input</td>
-<td>van ALU</td>
-<td>de vlag die aangeeft dat de x kleiner is dan y (als er uitgegaan wordt van signed getallen</td>
-</tr>
-<tr>
-<td>alu_x_lt_y_u</td>
-<td>1-bit input</td>
-<td>van ALU</td>
-<td>de vlag die aangeeft dat de x kleiner is dan y (als er uitgegaan wordt van unsigned getallen</td>
-</tr>
-<tr>
-<td>abs_rel_b</td>
-<td>1-bit output</td>
-<td>naar PC</td>
-<td>controle-signaal dat aanduidt of er absolute (&lsquo;1&rsquo;) of relatieve sprong (&lsquo;0&rsquo;) is</td>
-</tr>
-<tr>
-<td>immediate_four_b</td>
-<td>1-bit output</td>
-<td>naar PC</td>
-<td>controle-signaal dat aanduidt of de relatieve sprong immediate (&lsquo;1&rsquo;) of 0x4 (&lsquo;0&rsquo;) gebruikt als tweede operand</td>
-</tr>
-<tr>
-<td>immediate</td>
-<td>32-bit output</td>
-<td>naar PC en ALU</td>
-<td>data die: <ul><li>de grootte van de relatieve sprong immediate aangeeft (PC)</li><li>de tweede operand aanbiedt (ALU)</td>
-</tr>
-<tr>
-<td>regfile_we</td>
-<td>1-bit output</td>
-<td>naar register file</td>
-<td>controle-signaal dat de write-enable stuurt van de register file</td>
-</tr>
-<tr>
-<td>alu_op</td>
-<td>3-bit output</td>
-<td>naar ALU</td>
-<td>controle-signaal de operatie van de ALU kiest</td>
-</tr>
-<tr>
-<td>alu_arith_logic_b</td>
-<td>1-bit output</td>
-<td>naar ALU</td>
-<td>controle-signaal dat het onderscheid maakt tussen een arithmetische (&lsquo;1&rsquo;) en een logische (&lsquo;0&rsquo;) operatie</td>
-</tr>
-<tr>
-<td>alu_signed_unsigned_b</td>
-<td>1-bit output</td>
-<td>naar ALU</td>
-<td>controle-signaal dat het onderscheid maakt tussen een signed (&lsquo;1&rsquo;) en een unsigned (&lsquo;0&rsquo;) operatie</td>
-</tr>
-<tr>
-<td>second_operand_selector</td>
-<td>1-bit output</td>
-<td>naar multiplexer</td>
-<td>controle-signaal dat de selectie maakt van de MUX (&lsquo;1&rsquo; voor de 32-bit immediate bus ; &lsquo;0&rsquo; voor de tweede data uitgang van register file), die de tweede operand bepaalt van de ALU</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Poort naam</th>
+          <th>Dimensie en richting</th>
+          <th>Bron / Doel</th>
+          <th>Uitleg</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>inst</td>
+          <td>32-bit input</td>
+          <td>van IMEM</td>
+          <td>de instructie die uitgevoerd moet worden</td>
+      </tr>
+      <tr>
+          <td>alu_equal</td>
+          <td>1-bit input</td>
+          <td>van ALU</td>
+          <td>de vlag die aangeeft dat de twee operanden gelijk zijn</td>
+      </tr>
+      <tr>
+          <td>alu_x_lt_y_s</td>
+          <td>1-bit input</td>
+          <td>van ALU</td>
+          <td>de vlag die aangeeft dat de x kleiner is dan y (als er uitgegaan wordt van signed getallen</td>
+      </tr>
+      <tr>
+          <td>alu_x_lt_y_u</td>
+          <td>1-bit input</td>
+          <td>van ALU</td>
+          <td>de vlag die aangeeft dat de x kleiner is dan y (als er uitgegaan wordt van unsigned getallen</td>
+      </tr>
+      <tr>
+          <td>abs_rel_b</td>
+          <td>1-bit output</td>
+          <td>naar PC</td>
+          <td>controle-signaal dat aanduidt of er absolute (&lsquo;1&rsquo;) of relatieve sprong (&lsquo;0&rsquo;) is</td>
+      </tr>
+      <tr>
+          <td>immediate_four_b</td>
+          <td>1-bit output</td>
+          <td>naar PC</td>
+          <td>controle-signaal dat aanduidt of de relatieve sprong immediate (&lsquo;1&rsquo;) of 0x4 (&lsquo;0&rsquo;) gebruikt als tweede operand</td>
+      </tr>
+      <tr>
+          <td>immediate</td>
+          <td>32-bit output</td>
+          <td>naar PC en ALU</td>
+          <td>data die: <ul><li>de grootte van de relatieve sprong immediate aangeeft (PC)</li><li>de tweede operand aanbiedt (ALU)</td>
+      </tr>
+      <tr>
+          <td>regfile_we</td>
+          <td>1-bit output</td>
+          <td>naar register file</td>
+          <td>controle-signaal dat de write-enable stuurt van de register file</td>
+      </tr>
+      <tr>
+          <td>alu_op</td>
+          <td>3-bit output</td>
+          <td>naar ALU</td>
+          <td>controle-signaal de operatie van de ALU kiest</td>
+      </tr>
+      <tr>
+          <td>alu_arith_logic_b</td>
+          <td>1-bit output</td>
+          <td>naar ALU</td>
+          <td>controle-signaal dat het onderscheid maakt tussen een arithmetische (&lsquo;1&rsquo;) en een logische (&lsquo;0&rsquo;) operatie</td>
+      </tr>
+      <tr>
+          <td>alu_signed_unsigned_b</td>
+          <td>1-bit output</td>
+          <td>naar ALU</td>
+          <td>controle-signaal dat het onderscheid maakt tussen een signed (&lsquo;1&rsquo;) en een unsigned (&lsquo;0&rsquo;) operatie</td>
+      </tr>
+      <tr>
+          <td>second_operand_selector</td>
+          <td>1-bit output</td>
+          <td>naar multiplexer</td>
+          <td>controle-signaal dat de selectie maakt van de MUX (&lsquo;1&rsquo; voor de 32-bit immediate bus ; &lsquo;0&rsquo; voor de tweede data uitgang van register file), die de tweede operand bepaalt van de ALU</td>
+      </tr>
+  </tbody>
 </table>
 
+</article>
 
 <footer class="footline">
 	
@@ -2941,23 +2955,31 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1771583587"></script>
-    <script src="../../js/jquery.sticky.js?1771583587"></script>
-    <script src="../../js/featherlight.min.js?1771583587"></script>
-    <script src="../../js/highlight.pack.js?1771583587"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1771583587"></script>
-    <script src="../../js/learn.js?1771583587"></script>
-    <script src="../../js/hugo-learn.js?1771583587"></script>
-    
-        
-            <script src="../../mermaid/mermaid.js?1771583587"></script>
-        
-        <script>
-            mermaid.initialize({ startOnLoad: true });
-        </script>
+    <script src="../../js/clipboard.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1772609435"></script>
+    <script src="../../js/jquery.sticky.js?1772609435"></script>
+    <script src="../../js/featherlight.min.js?1772609435"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1772609435"></script>
+    <script src="../../js/learn.js?1772609435"></script>
+    <script src="../../js/hugo-learn.js?1772609435"></script>
+    <script src="../../js/mermaid.min.js?1772609435"></script>
+    <script>
+    window.MathJax = {
+      chtml: {
+        scale: 1,                      
+        minScale: .5,                  
+        matchFontHeight: true,         
+        mtextInheritFont: false,       
+        merrorInheritFont: true,       
+        mathmlSpacing: false,          
+        skipAttributes: {},            
+        exFactor: .5,                  
+        displayAlign: 'center',        
+        displayIndent: '0'             
+      }
+    };
+    </script>
     
     
 

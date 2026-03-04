@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.157.0">
     <meta name="description" content="">
 <meta name="author" content="map[email:&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; name:Nele Mentens and Jo Vliegen]">
 
@@ -12,22 +12,25 @@
     <title>Packages :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1771583587" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/hybrid.css?1771583587" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1771583587" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1771583587" rel="stylesheet">
-    <link href="../../css/theme.css?1771583587" rel="stylesheet">
-    <link href="../../css/tabs.css?1771583587" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1771583587" rel="stylesheet">
-    
-    <link href="../../css/theme-kul.css?1771583587" rel="stylesheet">
-    
+    <link href="../../css/nucleus.css?1772609435" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/hybrid.css?1772609435" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1772609435" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1772609435" rel="stylesheet">
+    <link href="../../css/devselector.css?1772609435" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1772609435" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1771583587"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1772609435"></script>
+    <script src="../../js/devselector.js?1772609435"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -40,7 +43,6 @@
       
     </style>
     
-
   </head>
   <body class="" data-url="../../900_zelfstudie/960_packages/">
     <nav id="sidebar" class="">
@@ -63,20 +65,22 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1771583587"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1771583587"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1772609435"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1772609435"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1771583587"></script>
+<script type="text/javascript" src="../../js/search.js?1772609435"></script>
 
     
   </div>
-  
 
     <div class="highlightable">
+
+      
+      
     <ul class="topics">
 
         
@@ -1692,8 +1696,7 @@
                 </div>
                 
                     <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
+  <div class="wrapper toc"><nav id="TableOfContents">
   <ul>
     <li><a href="#zelf-gedefinieerde-packages">Zelf-gedefinieerde packages</a>
       <ul>
@@ -1707,8 +1710,7 @@
       </ul>
     </li>
   </ul>
-</nav>
-    </div>
+</nav></div>
 </div>
 
                 
@@ -1729,25 +1731,31 @@
 
         
 
+        
 
+
+
+
+
+<article class='content'>
 <h2 id="zelf-gedefinieerde-packages">Zelf-gedefinieerde packages</h2>
 <p>Per default worden zelfgemaakte bouwblokken opgeslagen in de library work. In deze library kunnen we zelf packages definiëren.</p>
 <h4 id="voorbeeld-van-een-zelf-gedefinieerde-package">Voorbeeld van een zelf-gedefinieerde package:</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">package</span> and_or_xor_pack <span style="color:#66d9ef">is</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">package</span> and_or_xor_pack <span style="color:#66d9ef">is</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">component</span> <span style="color:#a6e22e">and_or_poort</span> <span style="color:#66d9ef">is</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">port</span>(   a, b, d<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">bit</span>;
 </span></span><span style="display:flex;"><span>                e<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">bit</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">component</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">package</span>;</span></span></code></pre></div>
 <p>Als we deze package toevoegen, hoeven we de component declaratie niet meer te doen.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> work;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> work;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> work.and_or_xor_pack.<span style="color:#66d9ef">all</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">and_or_xor_poort</span> ...
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> ... <span style="color:#75715e">-- zonder component declaratie</span></span></span></code></pre></div>
 <h2 id="std_logic_1164--package">&ldquo;std_logic_1164&rdquo;  package</h2>
 <p>De package &quot; std_logic_1164&quot;  in library &quot; ieee&quot;  bevat o.a. de types &quot; std_ulogic&quot;  en &quot; std_logic&quot; .</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">package</span> std_logic_1164 <span style="color:#66d9ef">is</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">package</span> std_logic_1164 <span style="color:#66d9ef">is</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#66d9ef">std_ulogic</span> <span style="color:#66d9ef">is</span> (
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;U&#39;</span>,  <span style="color:#75715e">-- Uninitialized : flipflop waar nog nooit in is geschreven</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;X&#39;</span>,  <span style="color:#75715e">-- Forcing Unknown</span>
@@ -1778,7 +1786,7 @@
 <h4 id="opteller">Opteller</h4>
 <p>We zouden een opteller kunnen bouwen a.d.h.v. half/full adders. Het voordeel van VHDL is dat we het hardware-ontwerp ook op een hoger niveau kunnen beschrijven. In het geval van de opteller kunnen we gewoon &lsquo;+&rsquo; gebruiken. Daarvoor moeten we eerst verwijzen naar de juiste &lsquo;package&rsquo; in de juiste &rsquo;library&rsquo; en moeten we groepjes van bits zien als &lsquo;arrays&rsquo;.</p>
 <p>De onderstaande manier beschijft een 4-bit opteller maken in VHDL:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> ieee;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> ieee;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_unsigned.<span style="color:#66d9ef">all</span>;
 </span></span><span style="display:flex;"><span>
@@ -1796,7 +1804,7 @@
 </div>
 
 <p>Als we de carry-out ook willen berekenen, kunnen we de lengte van c met 1 bit vergroten, maar dan moeten we intern de lengte van a en b ook vergroten, want per syntax geldt dat de som van 2 n-bit vectoren, terug een n-bit verctor is:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> ieee;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> ieee;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_unsigned.<span style="color:#66d9ef">all</span>;
 </span></span><span style="display:flex;"><span>
@@ -1817,7 +1825,7 @@
     <div class="column" style="width:55%">
 <p>Met behulp van de package std_logic_unsigned kunnen we ook aftrekkingen uitvoeren. De ingangen worden dan beschouwd als positieve binaire getallen zonder tekenbit. Indien het resultaat kleiner wordt dan nul, wordt er terug vanaf het maximum naar beneden geteld, alsof alle getallen zich op een cirkel bevinden. Dat komt overeen met 2&rsquo;s complement notatie. Voor optelling en aftrekking maakt het niet uit of we std_logic_unsigned of std_logic_signed gebruiken.
 Voor &gt;, &gt;=, &lt;, &lt;= maakt het wel uit.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_unsigned.<span style="color:#66d9ef">all</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">opteller</span> <span style="color:#66d9ef">is</span>
@@ -1831,7 +1839,7 @@ Voor &gt;, &gt;=, &lt;, &lt;= maakt het wel uit.</p>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;</span></span></code></pre></div>
 </div>
 <div class="column" style="width:40%">
-<figure><img src="../../images/900/920_vhdl/aftrekker_cirkel.png"/>
+<figure><img src="../../images/900/920_vhdl/aftrekker_cirkel.png">
 </figure>
 </div>
 </div>
@@ -1839,7 +1847,7 @@ Voor &gt;, &gt;=, &lt;, &lt;= maakt het wel uit.</p>
 <p>We gebruiken de ingang &ldquo;op_af&rdquo; om te bepalen of we gaan optellen of aftrekken. <br/>
 Als de bit gelijk is aan 0, tellen we op. <br/> Als de bit gelijk is aan 1, trekken we af. <br/></p>
 <p>Voor de beschrijving van een MUX hebben we een process nodig. Daar komen we in de <a href="../../200_next_step/260_processen/" >les </a> nog op terug.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> ieee;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> ieee;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_1164.<span style="color:#66d9ef">all</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> ieee.std_logic_signed.<span style="color:#66d9ef">all</span>;
 </span></span><span style="display:flex;"><span>
@@ -1861,6 +1869,7 @@ Als de bit gelijk is aan 0, tellen we op. <br/> Als de bit gelijk is aan 1, trek
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;</span></span></code></pre></div>
 
+</article>
 
 <footer class="footline">
 	
@@ -2983,23 +2992,31 @@ Als de bit gelijk is aan 0, tellen we op. <br/> Als de bit gelijk is aan 1, trek
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1771583587"></script>
-    <script src="../../js/jquery.sticky.js?1771583587"></script>
-    <script src="../../js/featherlight.min.js?1771583587"></script>
-    <script src="../../js/highlight.pack.js?1771583587"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1771583587"></script>
-    <script src="../../js/learn.js?1771583587"></script>
-    <script src="../../js/hugo-learn.js?1771583587"></script>
-    
-        
-            <script src="../../mermaid/mermaid.js?1771583587"></script>
-        
-        <script>
-            mermaid.initialize({ startOnLoad: true });
-        </script>
+    <script src="../../js/clipboard.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1772609435"></script>
+    <script src="../../js/jquery.sticky.js?1772609435"></script>
+    <script src="../../js/featherlight.min.js?1772609435"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1772609435"></script>
+    <script src="../../js/learn.js?1772609435"></script>
+    <script src="../../js/hugo-learn.js?1772609435"></script>
+    <script src="../../js/mermaid.min.js?1772609435"></script>
+    <script>
+    window.MathJax = {
+      chtml: {
+        scale: 1,                      
+        minScale: .5,                  
+        matchFontHeight: true,         
+        mtextInheritFont: false,       
+        merrorInheritFont: true,       
+        mathmlSpacing: false,          
+        skipAttributes: {},            
+        exFactor: .5,                  
+        displayAlign: 'center',        
+        displayIndent: '0'             
+      }
+    };
+    </script>
     
     
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.157.0">
     <meta name="description" content="">
 <meta name="author" content="map[email:&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; name:Nele Mentens and Jo Vliegen]">
 
@@ -12,22 +12,25 @@
     <title>Opdracht - testbench ALU :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1771583587" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/hybrid.css?1771583587" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1771583587" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1771583587" rel="stylesheet">
-    <link href="../../css/theme.css?1771583587" rel="stylesheet">
-    <link href="../../css/tabs.css?1771583587" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1771583587" rel="stylesheet">
-    
-    <link href="../../css/theme-kul.css?1771583587" rel="stylesheet">
-    
+    <link href="../../css/nucleus.css?1772609435" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/hybrid.css?1772609435" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1772609435" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1772609435" rel="stylesheet">
+    <link href="../../css/devselector.css?1772609435" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1772609435" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1771583587"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1772609435"></script>
+    <script src="../../js/devselector.js?1772609435"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -40,7 +43,6 @@
       
     </style>
     
-
   </head>
   <body class="" data-url="../../300_alu/340_testbench_alu/">
     <nav id="sidebar" class="">
@@ -63,20 +65,22 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1771583587"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1771583587"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1772609435"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1772609435"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1771583587"></script>
+<script type="text/javascript" src="../../js/search.js?1772609435"></script>
 
     
   </div>
-  
 
     <div class="highlightable">
+
+      
+      
     <ul class="topics">
 
         
@@ -1692,9 +1696,7 @@
                 </div>
                 
                     <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents"></nav>
-    </div>
+  <div class="wrapper toc"><nav id="TableOfContents"></nav></div>
 </div>
 
                 
@@ -1715,7 +1717,13 @@
 
         
 
+        
 
+
+
+
+
+<article class='content'>
 <p>Om de juiste werking van de ALU te verifiëren, wordt er opnieuw gebruikt gemaakt van een testbench. Het is een goed idee om tijdens het ontwikkelen van de ALU meteen de functionaliteit te testen. Hiervoor kunnen er heel gericht bepaalde instructies ingesteld worden. Bijvoorbeeld:</p>
 <div class="multiHcolumn">
 <div class="column">
@@ -1741,7 +1749,7 @@
 <p>Op deze manier kan je stapsgewijs de testbench opbouwen. Geef hierbij extra aandacht aan de <strong>randgevallen</strong>. Als jouw implementatie 12 + 3 correct kan berekenen, is de kans groot dat 13 + 3 ook wel zal lukken. De randgevallen zijn het echter wel waard om expliciet te testen. Kan jouw ALU 0xFFFFFFFF + 0xFFFFFFFF correct berekenen? Of -1 - (-1)?</p>
 </div>    
 <div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>    <span style="color:#a6e22e">PSTIM</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>    <span style="color:#a6e22e">PSTIM</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
 </span></span><span style="display:flex;"><span>        operand1 <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;0000000C&#34;</span>;
 </span></span><span style="display:flex;"><span>        operand2 <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;00000003&#34;</span>;
@@ -1784,7 +1792,7 @@
 <p>Wanneer je denkt alle implementaties gedaan te hebben, kan je een grotere testbench los laten op jouw design. Een voorbeeld hiervan kan je <a href="../../hdlsrc/300/alu_tb.vhd" download>hier</a> downloaden. Deze testbench is, zoals je misschien al vermoedde, <strong>gegenereerd</strong>. Voor de verbetering van de opdracht wordt een soortgelijke testbench gebruikt.</p>
 <div class="multiHcolumn">
 <div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>...
 </span></span><span style="display:flex;"><span>        operand1 <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;8ffb9e07&#34;</span>; <span style="color:#75715e">-- 2415631879</span>
 </span></span><span style="display:flex;"><span>        operand2 <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;fdcea5ee&#34;</span>; <span style="color:#75715e">-- 4258178542</span>
@@ -1824,13 +1832,13 @@
 <p>Na 2 ns wordt elke uitgange vergeleken en wordt ofwel de <strong>good_checks</strong> teller ofwel de <strong>bad_checks</strong> teller verhoogd. Op het einde van de testbench worden deze tellers en hun som in de <em>console</em> geprint om een overzicht te krijgen.</p>
 </div>    
 </div>
-<figure><img src="../../images/300/testbench_outcome.png"/><figcaption>
-            <h4>Voorbeeld van de rapportering</h4>
-        </figcaption>
+<figure><img src="../../images/300/testbench_outcome.png"><figcaption>
+      <h4>Voorbeeld van de rapportering</h4>
+    </figcaption>
 </figure>
 <!-- 
 
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.NUMERIC_STD.<span style="color:#66d9ef">ALL</span>;
 </span></span><span style="display:flex;"><span>
@@ -39406,6 +39414,7 @@
 </div>
 
 
+</article>
 
 <footer class="footline">
 	
@@ -40528,23 +40537,31 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1771583587"></script>
-    <script src="../../js/jquery.sticky.js?1771583587"></script>
-    <script src="../../js/featherlight.min.js?1771583587"></script>
-    <script src="../../js/highlight.pack.js?1771583587"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1771583587"></script>
-    <script src="../../js/learn.js?1771583587"></script>
-    <script src="../../js/hugo-learn.js?1771583587"></script>
-    
-        
-            <script src="../../mermaid/mermaid.js?1771583587"></script>
-        
-        <script>
-            mermaid.initialize({ startOnLoad: true });
-        </script>
+    <script src="../../js/clipboard.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1772609435"></script>
+    <script src="../../js/jquery.sticky.js?1772609435"></script>
+    <script src="../../js/featherlight.min.js?1772609435"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1772609435"></script>
+    <script src="../../js/learn.js?1772609435"></script>
+    <script src="../../js/hugo-learn.js?1772609435"></script>
+    <script src="../../js/mermaid.min.js?1772609435"></script>
+    <script>
+    window.MathJax = {
+      chtml: {
+        scale: 1,                      
+        minScale: .5,                  
+        matchFontHeight: true,         
+        mtextInheritFont: false,       
+        merrorInheritFont: true,       
+        mathmlSpacing: false,          
+        skipAttributes: {},            
+        exFactor: .5,                  
+        displayAlign: 'center',        
+        displayIndent: '0'             
+      }
+    };
+    </script>
     
     
 

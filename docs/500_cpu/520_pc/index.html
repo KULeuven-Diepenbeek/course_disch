@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.157.0">
     <meta name="description" content="">
 <meta name="author" content="map[email:&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; name:Nele Mentens and Jo Vliegen]">
 
@@ -12,22 +12,25 @@
     <title>Program counter :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1771583587" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/hybrid.css?1771583587" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1771583587" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1771583587" rel="stylesheet">
-    <link href="../../css/theme.css?1771583587" rel="stylesheet">
-    <link href="../../css/tabs.css?1771583587" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1771583587" rel="stylesheet">
-    
-    <link href="../../css/theme-kul.css?1771583587" rel="stylesheet">
-    
+    <link href="../../css/nucleus.css?1772609435" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/hybrid.css?1772609435" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1772609435" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1772609435" rel="stylesheet">
+    <link href="../../css/devselector.css?1772609435" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1772609435" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1771583587"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1772609435"></script>
+    <script src="../../js/devselector.js?1772609435"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -40,7 +43,6 @@
       
     </style>
     
-
   </head>
   <body class="" data-url="../../500_cpu/520_pc/">
     <nav id="sidebar" class="">
@@ -63,20 +65,22 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1771583587"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1771583587"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1772609435"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1772609435"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1771583587"></script>
+<script type="text/javascript" src="../../js/search.js?1772609435"></script>
 
     
   </div>
-  
 
     <div class="highlightable">
+
+      
+      
     <ul class="topics">
 
         
@@ -1692,8 +1696,7 @@
                 </div>
                 
                     <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
+  <div class="wrapper toc"><nav id="TableOfContents">
   <ul>
     <li>
       <ul>
@@ -1702,8 +1705,7 @@
       </ul>
     </li>
   </ul>
-</nav>
-    </div>
+</nav></div>
 </div>
 
                 
@@ -1724,11 +1726,17 @@
 
         
 
+        
 
+
+
+
+
+<article class='content'>
 <p>De program counter is als vingertje van een kind dat leert lezen. Het duidt aan waar het gebleven is, welke regel er gelezen moet worden. Dit is ook de functie van de program counter (PC). De PC duidt aan welke instructie er momenteel uitgevoerd wordt. Wanneer de instructie uitgevoerd is, moet de <em>vinger</em> een plaats verschoven worden.</p>
 <div class="multiHcolumn">
 <div class="column">
-    <figure><img src="../../images/500/program_counter.png"/>
+    <figure><img src="../../images/500/program_counter.png">
 </figure>
 </div>    
 <div class="column">
@@ -1744,7 +1752,7 @@
 <p>De processor werkt echter met een 32-bit bus. Dit wilt zeggen dat er <strong>altijd</strong> 32 bits (of 4 bytes) gelezen en/of geschreven worden. Aangezien een de breedte van 1 instructie ook 32 bits is, komt dit dus overeen met 1 overdracht over de bus. Dit wilt echter ook zeggen dat de volgende instructie 4 <em>addressen</em> verder staat.</p>
 </div>    
 <div class="column">
-    <figure><img src="../../images/500/imem.png"/>
+    <figure><img src="../../images/500/imem.png">
 </figure>
 </div>    
 </div>
@@ -1766,7 +1774,7 @@
 </ul>
 </div>    
 <div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">program_counter</span> <span style="color:#66d9ef">is</span>
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">program_counter</span> <span style="color:#66d9ef">is</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(
 </span></span><span style="display:flex;"><span>        clock <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
 </span></span><span style="display:flex;"><span>        reset <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
@@ -1791,6 +1799,7 @@
 </div>
 
 
+</article>
 
 <footer class="footline">
 	
@@ -2913,23 +2922,31 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1771583587"></script>
-    <script src="../../js/jquery.sticky.js?1771583587"></script>
-    <script src="../../js/featherlight.min.js?1771583587"></script>
-    <script src="../../js/highlight.pack.js?1771583587"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1771583587"></script>
-    <script src="../../js/learn.js?1771583587"></script>
-    <script src="../../js/hugo-learn.js?1771583587"></script>
-    
-        
-            <script src="../../mermaid/mermaid.js?1771583587"></script>
-        
-        <script>
-            mermaid.initialize({ startOnLoad: true });
-        </script>
+    <script src="../../js/clipboard.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1772609435"></script>
+    <script src="../../js/jquery.sticky.js?1772609435"></script>
+    <script src="../../js/featherlight.min.js?1772609435"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1772609435"></script>
+    <script src="../../js/learn.js?1772609435"></script>
+    <script src="../../js/hugo-learn.js?1772609435"></script>
+    <script src="../../js/mermaid.min.js?1772609435"></script>
+    <script>
+    window.MathJax = {
+      chtml: {
+        scale: 1,                      
+        minScale: .5,                  
+        matchFontHeight: true,         
+        mtextInheritFont: false,       
+        merrorInheritFont: true,       
+        mathmlSpacing: false,          
+        skipAttributes: {},            
+        exFactor: .5,                  
+        displayAlign: 'center',        
+        displayIndent: '0'             
+      }
+    };
+    </script>
     
     
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.157.0">
     <meta name="description" content="">
 <meta name="author" content="map[email:&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; name:Nele Mentens and Jo Vliegen]">
 
@@ -12,22 +12,25 @@
     <title>Simulatie :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1771583586" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1771583586" rel="stylesheet">
-    <link href="../../css/hybrid.css?1771583586" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1771583586" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1771583586" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1771583586" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1771583586" rel="stylesheet">
-    <link href="../../css/theme.css?1771583586" rel="stylesheet">
-    <link href="../../css/tabs.css?1771583586" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1771583586" rel="stylesheet">
-    
-    <link href="../../css/theme-kul.css?1771583586" rel="stylesheet">
-    
+    <link href="../../css/nucleus.css?1772609435" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/hybrid.css?1772609435" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1772609435" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1772609435" rel="stylesheet">
+    <link href="../../css/devselector.css?1772609435" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1772609435" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1771583586"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1772609435"></script>
+    <script src="../../js/devselector.js?1772609435"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -40,7 +43,6 @@
       
     </style>
     
-
   </head>
   <body class="" data-url="../../100_intro_vhdl/030_simulatie/">
     <nav id="sidebar" class="">
@@ -63,20 +65,22 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1771583586"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1771583586"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1772609435"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1772609435"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1771583586"></script>
+<script type="text/javascript" src="../../js/search.js?1772609435"></script>
 
     
   </div>
-  
 
     <div class="highlightable">
+
+      
+      
     <ul class="topics">
 
         
@@ -1692,8 +1696,7 @@
                 </div>
                 
                     <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
+  <div class="wrapper toc"><nav id="TableOfContents">
   <ul>
     <li><a href="#voorbeeld-testbench-voor-een-nand-poort">Voorbeeld: testbench voor een NAND poort</a>
       <ul>
@@ -1702,8 +1705,7 @@
       </ul>
     </li>
   </ul>
-</nav>
-    </div>
+</nav></div>
 </div>
 
                 
@@ -1724,7 +1726,13 @@
 
         
 
+        
 
+
+
+
+
+<article class='content'>
 <p>Hoe kan er nu getest worden of onze <strong>nand</strong> poort correct werkt? We zouden een ASIC kunnen maken, maar dat zou een veel te dure en tijdrovende manier zijn.</p>
 <p>Een realistischere manier is om het design te implementeren op een FPGA, maar er is nog een gemakkelijkere en nuttigere manier: <strong>testbenches</strong>.</p>
 <p>Het idee achter een testbench is dat er &ldquo;toestellen&rdquo; zijn die inputs (ook stimuli genoemd) kunnen genereren. Vervolgens kunnen de waveforms van het hele design visueel geanalyseerd worden én kan de output van een component geverifieerd worden.</p>
@@ -1749,7 +1757,7 @@
 <p>De correcte werking van de NAND poort wordt in deze testbench nagegaan door alle mogelijke logische combinaties aan te leggen aan de ingangen van nullen en enen.</p>
 </div>    
 <div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- KU Leuven - ESAT/COSIC - ES&amp;S</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">--------------------------------</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- Module Name:     nand_tb - Behavioural</span>
@@ -1822,18 +1830,19 @@
 <h3 id="runnen-van-een-testbench">Runnen van een testbench</h3>
 <p>Als alle code beschreven is, kan de bovenstaante simulatie uitgevoerd worden. Er zijn meerdere manieren om een simulatie te starten en deze zul je ontdekken doorheen de labs.</p>
 <p>De gemakkelijkste manier is om in de <strong>Flow Navigator</strong> (de verticale balk aan de linkerkant van het scherm) te klikken op: <strong>Run simulation</strong>. Als alles goed loop zou je (ongeveer) onderstaand scherm moeten krijgen.</p>
-<figure><img src="../../images/100/simulation.png"/><figcaption>
-            <h4>Simulatie van de nand gate met Vivado</h4>
-        </figcaption>
+<figure><img src="../../images/100/simulation.png"><figcaption>
+      <h4>Simulatie van de nand gate met Vivado</h4>
+    </figcaption>
 </figure>
 <p>Je ziet hierin de inputs en de output van de DUT. De tijd verstrijkt over de X-as. Als beide inputs of één van beide inputs &rsquo;laag&rsquo; is, is de uitgang &lsquo;hoog&rsquo;. Indien beide ingangen &lsquo;hoog&rsquo; zijn, is de uitgang &rsquo;laag&rsquo;.</p>
 <p>Dat is exact wat een NAND poort moet doen !! <em>(gelukkig)</em></p>
 <p>Als het design gesimuleerd wordt met een open-source simulator krijgen we een identiek resultaat.</p>
-<figure><img src="../../images/100/sim_nand.png"/><figcaption>
-            <h4>Simulatie van de nand gate met GHDL en GTKWave</h4>
-        </figcaption>
+<figure><img src="../../images/100/sim_nand.png"><figcaption>
+      <h4>Simulatie van de nand gate met GHDL en GTKWave</h4>
+    </figcaption>
 </figure>
 
+</article>
 
 <footer class="footline">
 	
@@ -2956,23 +2965,31 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1771583587"></script>
-    <script src="../../js/jquery.sticky.js?1771583587"></script>
-    <script src="../../js/featherlight.min.js?1771583587"></script>
-    <script src="../../js/highlight.pack.js?1771583587"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1771583587"></script>
-    <script src="../../js/learn.js?1771583587"></script>
-    <script src="../../js/hugo-learn.js?1771583587"></script>
-    
-        
-            <script src="../../mermaid/mermaid.js?1771583587"></script>
-        
-        <script>
-            mermaid.initialize({ startOnLoad: true });
-        </script>
+    <script src="../../js/clipboard.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1772609435"></script>
+    <script src="../../js/jquery.sticky.js?1772609435"></script>
+    <script src="../../js/featherlight.min.js?1772609435"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1772609435"></script>
+    <script src="../../js/learn.js?1772609435"></script>
+    <script src="../../js/hugo-learn.js?1772609435"></script>
+    <script src="../../js/mermaid.min.js?1772609435"></script>
+    <script>
+    window.MathJax = {
+      chtml: {
+        scale: 1,                      
+        minScale: .5,                  
+        matchFontHeight: true,         
+        mtextInheritFont: false,       
+        merrorInheritFont: true,       
+        mathmlSpacing: false,          
+        skipAttributes: {},            
+        exFactor: .5,                  
+        displayAlign: 'center',        
+        displayIndent: '0'             
+      }
+    };
+    </script>
     
     
 

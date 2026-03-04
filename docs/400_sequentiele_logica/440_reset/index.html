@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.157.0">
     <meta name="description" content="">
 <meta name="author" content="map[email:&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; name:Nele Mentens and Jo Vliegen]">
 
@@ -12,22 +12,25 @@
     <title>Reset :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1771583587" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/hybrid.css?1771583587" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1771583587" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1771583587" rel="stylesheet">
-    <link href="../../css/theme.css?1771583587" rel="stylesheet">
-    <link href="../../css/tabs.css?1771583587" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1771583587" rel="stylesheet">
-    
-    <link href="../../css/theme-kul.css?1771583587" rel="stylesheet">
-    
+    <link href="../../css/nucleus.css?1772609435" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/hybrid.css?1772609435" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1772609435" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1772609435" rel="stylesheet">
+    <link href="../../css/devselector.css?1772609435" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1772609435" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1771583587"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1772609435"></script>
+    <script src="../../js/devselector.js?1772609435"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -40,7 +43,6 @@
       
     </style>
     
-
   </head>
   <body class="" data-url="../../400_sequentiele_logica/440_reset/">
     <nav id="sidebar" class="">
@@ -63,20 +65,22 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1771583587"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1771583587"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1772609435"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1772609435"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1771583587"></script>
+<script type="text/javascript" src="../../js/search.js?1772609435"></script>
 
     
   </div>
-  
 
     <div class="highlightable">
+
+      
+      
     <ul class="topics">
 
         
@@ -1692,9 +1696,7 @@
                 </div>
                 
                     <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents"></nav>
-    </div>
+  <div class="wrapper toc"><nav id="TableOfContents"></nav></div>
 </div>
 
                 
@@ -1715,7 +1717,13 @@
 
         
 
+        
 
+
+
+
+
+<article class='content'>
 <p>Bij het maken van een hardware ontwerp dat registers bevat, is het noodzakelijk om de <em>begintoestand</em> te kennen: wat is de initiele waarde? De tekstboek manier om dit te bekomen is door gebruik te maken van een <strong>reset</strong> signaal. Het <em>actief</em> worden van dit signaal zorgt ervoor dat de hele schakeling in een  <strong>gekende begintoestand</strong> komt. Er zijn typisch 2 manieren om dit te doen: met een <strong>synchrone</strong> reset of met een <strong>asynchrone</strong> reset.</p>
 <div class="multiHcolumn">
 <div class="column">
@@ -1733,7 +1741,7 @@ Onderstaand voorbeeld is van een D flip-flop met asynchrone reset. Je ziet hier 
     
 
 
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">asynchronous_reset</span> <span style="color:#66d9ef">is</span>
@@ -1778,7 +1786,7 @@ Onderstaand voorbeeld is van een D flip-flop met asynchrone reset. Je ziet hier 
     
 
 
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> IEEE;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> IEEE.STD_LOGIC_1164.<span style="color:#66d9ef">ALL</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">synchronous_reset</span> <span style="color:#66d9ef">is</span>
@@ -1836,38 +1844,44 @@ Onderstaand voorbeeld is van een D flip-flop met asynchrone reset. Je ziet hier 
   ]
 } 
 -->
-<p><img src="../../images/400/ff_withreset.png" alt="ff_withreset.png"></p>
+<p><figure>
+	<a href="../../images/400/ff_withreset.png" data-featherlight="image">
+		<img src="../../images/400/ff_withreset.png"  alt="ff_withreset.png" >
+	</a>
+	
+</figure>
+</p>
 <p>Welke reset gebruik je nu best? Dat hangt af van de toepassing. De tabel hieronder vergelijkt enkele belangrijkte criteria.</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th>Asynchrone reset</th>
-<th>Synchrone reset</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Voorspelbaarheid</td>
-<td><div style="color: #AF0000">Kan op ieder moment komen, dus ook dicht bij klokflanken.</div></td>
-<td><div style="color: #00AF00">Voorspelbaar (bv. bij een stijgende klokflank)</div></td>
-</tr>
-<tr>
-<td>Glitches &hellip;</td>
-<td><div style="color: #AF0000">kunnen een catastrofaal effect hebben omdat ze vals-positief kunnen geven.</div></td>
-<td><div style="color: #00AF00">worden (tot op zeker hoogte) opgevangen</div></td>
-</tr>
-<tr>
-<td>Timing &hellip;</td>
-<td><div style="color: #00AF00">is gemakklijker om te halen aangezien de reset niet meegenomen wordt in de timing-analyse.</div></td>
-<td><div style="color: #AF0000">is moeilijker om te behalen want de reset signalen kunnen een hoge fan-out hebben.</div></td>
-</tr>
-<tr>
-<td>De afwezigheid van de klok &hellip;</td>
-<td><div style="color: #00AF00">heeft géén impact.</div></td>
-<td><div style="color: #AF0000">zorgt dat een reset niet gezien wordt.</div></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th></th>
+          <th>Asynchrone reset</th>
+          <th>Synchrone reset</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Voorspelbaarheid</td>
+          <td><div style="color: #AF0000">Kan op ieder moment komen, dus ook dicht bij klokflanken.</div></td>
+          <td><div style="color: #00AF00">Voorspelbaar (bv. bij een stijgende klokflank)</div></td>
+      </tr>
+      <tr>
+          <td>Glitches &hellip;</td>
+          <td><div style="color: #AF0000">kunnen een catastrofaal effect hebben omdat ze vals-positief kunnen geven.</div></td>
+          <td><div style="color: #00AF00">worden (tot op zeker hoogte) opgevangen</div></td>
+      </tr>
+      <tr>
+          <td>Timing &hellip;</td>
+          <td><div style="color: #00AF00">is gemakklijker om te halen aangezien de reset niet meegenomen wordt in de timing-analyse.</div></td>
+          <td><div style="color: #AF0000">is moeilijker om te behalen want de reset signalen kunnen een hoge fan-out hebben.</div></td>
+      </tr>
+      <tr>
+          <td>De afwezigheid van de klok &hellip;</td>
+          <td><div style="color: #00AF00">heeft géén impact.</div></td>
+          <td><div style="color: #AF0000">zorgt dat een reset niet gezien wordt.</div></td>
+      </tr>
+  </tbody>
 </table>
 
 <div class="notices tip" ><p>De vuistregel voor (beginnende) hardware designers is om een <u>asynchrone reset</u> <strong>ENKEL</strong> te gebruiken waar het niet anders kan (bv. bij IP blokken van third-parties), maar waar mogelijk (en zeker voor FPGA ontwerp) wordt aangeraden om een <u><strong>synchrone reset</strong></u> te gebruiken.</p>
@@ -1880,6 +1894,7 @@ Onderstaand voorbeeld is van een D flip-flop met asynchrone reset. Je ziet hier 
 <br/>
 <br/></p>
 
+</article>
 
 <footer class="footline">
 	
@@ -3002,23 +3017,31 @@ Onderstaand voorbeeld is van een D flip-flop met asynchrone reset. Je ziet hier 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1771583587"></script>
-    <script src="../../js/jquery.sticky.js?1771583587"></script>
-    <script src="../../js/featherlight.min.js?1771583587"></script>
-    <script src="../../js/highlight.pack.js?1771583587"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1771583587"></script>
-    <script src="../../js/learn.js?1771583587"></script>
-    <script src="../../js/hugo-learn.js?1771583587"></script>
-    
-        
-            <script src="../../mermaid/mermaid.js?1771583587"></script>
-        
-        <script>
-            mermaid.initialize({ startOnLoad: true });
-        </script>
+    <script src="../../js/clipboard.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1772609435"></script>
+    <script src="../../js/jquery.sticky.js?1772609435"></script>
+    <script src="../../js/featherlight.min.js?1772609435"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1772609435"></script>
+    <script src="../../js/learn.js?1772609435"></script>
+    <script src="../../js/hugo-learn.js?1772609435"></script>
+    <script src="../../js/mermaid.min.js?1772609435"></script>
+    <script>
+    window.MathJax = {
+      chtml: {
+        scale: 1,                      
+        minScale: .5,                  
+        matchFontHeight: true,         
+        mtextInheritFont: false,       
+        merrorInheritFont: true,       
+        mathmlSpacing: false,          
+        skipAttributes: {},            
+        exFactor: .5,                  
+        displayAlign: 'center',        
+        displayIndent: '0'             
+      }
+    };
+    </script>
     
     
 

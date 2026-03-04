@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.157.0">
     <meta name="description" content="">
 <meta name="author" content="map[email:&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; name:Nele Mentens and Jo Vliegen]">
 
@@ -12,22 +12,25 @@
     <title>Signalen vs. variabelen :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1771583587" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/hybrid.css?1771583587" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1771583587" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1771583587" rel="stylesheet">
-    <link href="../../css/theme.css?1771583587" rel="stylesheet">
-    <link href="../../css/tabs.css?1771583587" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1771583587" rel="stylesheet">
-    
-    <link href="../../css/theme-kul.css?1771583587" rel="stylesheet">
-    
+    <link href="../../css/nucleus.css?1772609435" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/hybrid.css?1772609435" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1772609435" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1772609435" rel="stylesheet">
+    <link href="../../css/devselector.css?1772609435" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1772609435" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1771583587"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1772609435"></script>
+    <script src="../../js/devselector.js?1772609435"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -40,7 +43,6 @@
       
     </style>
     
-
   </head>
   <body class="" data-url="../../900_zelfstudie/980_signalen_variablen/">
     <nav id="sidebar" class="">
@@ -63,20 +65,22 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1771583587"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1771583587"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1772609435"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1772609435"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1771583587"></script>
+<script type="text/javascript" src="../../js/search.js?1772609435"></script>
 
     
   </div>
-  
 
     <div class="highlightable">
+
+      
+      
     <ul class="topics">
 
         
@@ -1692,8 +1696,7 @@
                 </div>
                 
                     <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
+  <div class="wrapper toc"><nav id="TableOfContents">
   <ul>
     <li>
       <ul>
@@ -1703,8 +1706,7 @@
       </ul>
     </li>
   </ul>
-</nav>
-    </div>
+</nav></div>
 </div>
 
                 
@@ -1725,7 +1727,13 @@
 
         
 
+        
 
+
+
+
+
+<article class='content'>
 <div class="multicolumn">
 <div class="column">
 <p><strong>Signalen</strong>:</p>
@@ -1749,7 +1757,7 @@
 <p>Volgende beschrijvingen leiden tot <strong>dezelfde implementatie</strong>:</p>
 <div class="multicolumn">
 <div class="column">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb1</span> <span style="color:#66d9ef">is</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb1</span> <span style="color:#66d9ef">is</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> o1, o2, o3<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, c, d, o1, o2, o3)
@@ -1763,7 +1771,7 @@
 </span></span></code></pre></div>
 </div>
 <div class="column">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb2</span> <span style="color:#66d9ef">is</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb2</span> <span style="color:#66d9ef">is</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> o1, o2, o3<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
 </span></span><span style="display:flex;"><span>    q <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">not</span> o3;
@@ -1774,7 +1782,7 @@
 </span></span></code></pre></div>
 </div>
 <div class="column">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb3</span> <span style="color:#66d9ef">is</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb3</span> <span style="color:#66d9ef">is</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
 </span></span><span style="display:flex;"><span>    q <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">not</span> ((a <span style="color:#66d9ef">and</span> b) <span style="color:#66d9ef">or</span> (c <span style="color:#66d9ef">and</span> d));
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;
@@ -1782,7 +1790,7 @@
 </div>
 </div>
 <p>Als we de tussenliggende signalen o1, o2 en o3 vergeten in de sensitivity list, is het gedrag niet meer zuiver combinatorisch. Volgend proces leidt dus <strong>niet</strong> tot dezelfde implementatie als de vorige voorbeelden:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb4</span> <span style="color:#66d9ef">is</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb4</span> <span style="color:#66d9ef">is</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> o1, o2, o3<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, c, d)
@@ -1798,13 +1806,13 @@
 <div class="multicolumn">
     <div class="column">
 In het volgende voorbeeld worden er twee toekenningen gedaan aan hetzelfde signaal:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> a, b, z<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> a, b, z<span style="color:#f92672">:</span> <span style="color:#66d9ef">std_logic</span>;
 </span></span><span style="display:flex;"><span>...
 </span></span><span style="display:flex;"><span>z <span style="color:#f92672">&lt;=</span> a;
 </span></span><span style="display:flex;"><span>z <span style="color:#f92672">&lt;=</span> b;</span></span></code></pre></div>
 </div>
 <div class="column">
-<figure><img src="../../images/900/920_vhdl/resolutie_functie.png"/>
+<figure><img src="../../images/900/920_vhdl/resolutie_functie.png">
 </figure>
 </div>
 </div>
@@ -1817,13 +1825,13 @@ De resolutie functie die voorzien is in het type std_logic maakt een keuze tusse
 
 </div>
 <div class="column" style="width:50%">
-<figure><img src="../../images/900/920_vhdl/resolutie_functie_tabel.png"/>
+<figure><img src="../../images/900/920_vhdl/resolutie_functie_tabel.png">
 </figure>
 </div>
 </div>
 <h3 id="variabelen">Variabelen</h3>
 <p>Als we variabelen gebruiken in plaats van signalen, krijgen we opnieuw dezelfde implementatie:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb5</span> <span style="color:#66d9ef">is</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vb5</span> <span style="color:#66d9ef">is</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">p</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(a, b, c, d)
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">variable</span> o1, o2, o3;
@@ -1840,6 +1848,7 @@ In een testbench kunnen we wel variabelen gebruiken.</p>
 </div>
 
 
+</article>
 
 <footer class="footline">
 	
@@ -2962,23 +2971,31 @@ In een testbench kunnen we wel variabelen gebruiken.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1771583587"></script>
-    <script src="../../js/jquery.sticky.js?1771583587"></script>
-    <script src="../../js/featherlight.min.js?1771583587"></script>
-    <script src="../../js/highlight.pack.js?1771583587"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1771583587"></script>
-    <script src="../../js/learn.js?1771583587"></script>
-    <script src="../../js/hugo-learn.js?1771583587"></script>
-    
-        
-            <script src="../../mermaid/mermaid.js?1771583587"></script>
-        
-        <script>
-            mermaid.initialize({ startOnLoad: true });
-        </script>
+    <script src="../../js/clipboard.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1772609435"></script>
+    <script src="../../js/jquery.sticky.js?1772609435"></script>
+    <script src="../../js/featherlight.min.js?1772609435"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1772609435"></script>
+    <script src="../../js/learn.js?1772609435"></script>
+    <script src="../../js/hugo-learn.js?1772609435"></script>
+    <script src="../../js/mermaid.min.js?1772609435"></script>
+    <script>
+    window.MathJax = {
+      chtml: {
+        scale: 1,                      
+        minScale: .5,                  
+        matchFontHeight: true,         
+        mtextInheritFont: false,       
+        merrorInheritFont: true,       
+        mathmlSpacing: false,          
+        skipAttributes: {},            
+        exFactor: .5,                  
+        displayAlign: 'center',        
+        displayIndent: '0'             
+      }
+    };
+    </script>
     
     
 

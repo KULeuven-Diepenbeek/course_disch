@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.157.0">
     <meta name="description" content="">
 <meta name="author" content="map[email:&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; name:Nele Mentens and Jo Vliegen]">
 
@@ -12,22 +12,25 @@
     <title>ALU Design :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1771583586" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1771583586" rel="stylesheet">
-    <link href="../../css/hybrid.css?1771583586" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1771583586" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1771583586" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1771583586" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1771583586" rel="stylesheet">
-    <link href="../../css/theme.css?1771583586" rel="stylesheet">
-    <link href="../../css/tabs.css?1771583586" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1771583586" rel="stylesheet">
-    
-    <link href="../../css/theme-kul.css?1771583586" rel="stylesheet">
-    
+    <link href="../../css/nucleus.css?1772609435" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/hybrid.css?1772609435" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1772609435" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1772609435" rel="stylesheet">
+    <link href="../../css/devselector.css?1772609435" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1772609435" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1771583586"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1772609435"></script>
+    <script src="../../js/devselector.js?1772609435"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -40,7 +43,6 @@
       
     </style>
     
-
   </head>
   <body class="" data-url="../../300_alu/325_design/">
     <nav id="sidebar" class="">
@@ -63,20 +65,22 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1771583586"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1771583586"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1772609435"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1772609435"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1771583586"></script>
+<script type="text/javascript" src="../../js/search.js?1772609435"></script>
 
     
   </div>
-  
 
     <div class="highlightable">
+
+      
+      
     <ul class="topics">
 
         
@@ -1692,8 +1696,7 @@
                 </div>
                 
                     <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
+  <div class="wrapper toc"><nav id="TableOfContents">
   <ul>
     <li>
       <ul>
@@ -1702,8 +1705,7 @@
       </ul>
     </li>
   </ul>
-</nav>
-    </div>
+</nav></div>
 </div>
 
                 
@@ -1724,11 +1726,17 @@
 
         
 
+        
 
+
+
+
+
+<article class='content'>
 <p>Voordat er begonnen kan worden aan de beschrijving van de ALU, moet eerst het hardware ontwerp gemaakt worden.</p>
 <div class="multiHcolumn">
 <div class="column">
-    <figure><img src="../../images/300/ALUdesign.png"/>
+    <figure><img src="../../images/300/ALUdesign.png">
 </figure>
 </div>    
 <div class="column">
@@ -1744,7 +1752,7 @@
 <div class="column">
     <p>Het gewenste resultaat is dat <strong>my_vector</strong> verschoven wordt met 3 plaatsen. De waarde die ingeschoven moet worden is &lsquo;0&rsquo;. Er zijn verschillende manieren om dit te beschrijven.</p>
 <p><strong>Expliciet</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>my_shifted_vector(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>my_shifted_vector(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
 </span></span><span style="display:flex;"><span>my_shifted_vector(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
 </span></span><span style="display:flex;"><span>my_shifted_vector(<span style="color:#ae81ff">2</span>) <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
 </span></span><span style="display:flex;"><span>my_shifted_vector(<span style="color:#ae81ff">3</span>) <span style="color:#f92672">&lt;=</span> my_vector(<span style="color:#ae81ff">0</span>);
@@ -1754,22 +1762,22 @@
 </span></span><span style="display:flex;"><span>my_shifted_vector(<span style="color:#ae81ff">7</span>) <span style="color:#f92672">&lt;=</span> my_vector(<span style="color:#ae81ff">4</span>);
 </span></span></code></pre></div>
 <p><strong>One-liner</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>my_shifted_vector <span style="color:#f92672">&lt;=</span> my_vector(<span style="color:#ae81ff">4</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;000&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>my_shifted_vector <span style="color:#f92672">&lt;=</span> my_vector(<span style="color:#ae81ff">4</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;000&#34;</span>;
 </span></span></code></pre></div>
 <p><strong>Generisch</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>zeroes <span style="color:#f92672">&lt;=</span> (<span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;0&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>zeroes <span style="color:#f92672">&lt;=</span> (<span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;0&#39;</span>);
 </span></span><span style="display:flex;"><span>my_shifted_vector <span style="color:#f92672">&lt;=</span> my_vector(<span style="color:#ae81ff">7</span><span style="color:#f92672">-</span><span style="color:#ae81ff">3</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">&amp;</span> zeroes(<span style="color:#ae81ff">3</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
 </span></span></code></pre></div>
 </div>    
 <div class="column">
-    <figure><img src="../../images/300/ALU_shift.png"/>
+    <figure><img src="../../images/300/ALU_shift.png">
 </figure>
 </div>    
 </div>
 <p>Indien het gewenste resultaat is dat <strong>my_vector</strong> verschoven wordt met 3 plaatsen naar rechts, met behoud van het teken; dan dient de <em>sign-bit</em> gekopieerd en ingeschoven te worden. Hiervoor kan een nieuwe vector gemaakt worden die volledige bestaat uit <em>kopies</em> van de tekenbit.</p>
 
 
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>padding <span style="color:#f92672">&lt;=</span> (<span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span> my_vector(<span style="color:#ae81ff">7</span>));
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>padding <span style="color:#f92672">&lt;=</span> (<span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span> my_vector(<span style="color:#ae81ff">7</span>));
 </span></span><span style="display:flex;"><span>my_shifted_vector <span style="color:#f92672">&lt;=</span> padding(<span style="color:#ae81ff">3</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">&amp;</span> my_vector(<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">3</span>);
 </span></span></code></pre></div>
 <!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
@@ -1780,56 +1788,57 @@
 <p>De beschrijvingen hierboven leiden tot het correct berekenen van het gewenste resultaat. Dit wordt <strong>het datapad</strong> genoemd. Het deel van het ontwerp dat ervoor zorgt dat de juiste uitkomsten verschijnen en alle <em>controle</em> signalen juist staan, heet <strong>het controlepad</strong>.</p>
 <h3 id="controle-pad">Controle pad</h3>
 <table>
-<thead>
-<tr>
-<th>ALUop</th>
-<th>Resultaat</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>000</td>
-<td>x &amp; y</td>
-</tr>
-<tr>
-<td>001</td>
-<td>x | y</td>
-</tr>
-<tr>
-<td>010</td>
-<td>x ^ y</td>
-</tr>
-<tr>
-<td>011</td>
-<td>x &lt; y ? 1 : 0 (signed)</td>
-</tr>
-<tr>
-<td>011</td>
-<td>x &lt; y ? 1 : 0 (unsigned)</td>
-</tr>
-<tr>
-<td>100</td>
-<td>x + y</td>
-</tr>
-<tr>
-<td>101</td>
-<td>x - y</td>
-</tr>
-<tr>
-<td>110</td>
-<td>x &lt;&lt; y</td>
-</tr>
-<tr>
-<td>111</td>
-<td>x &gt;&gt; y (met tekenbehoud)</td>
-</tr>
-<tr>
-<td>111</td>
-<td>x &gt;&gt; y (zonder tekenbehoud)</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>ALUop</th>
+          <th>Resultaat</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>000</td>
+          <td>x &amp; y</td>
+      </tr>
+      <tr>
+          <td>001</td>
+          <td>x | y</td>
+      </tr>
+      <tr>
+          <td>010</td>
+          <td>x ^ y</td>
+      </tr>
+      <tr>
+          <td>011</td>
+          <td>x &lt; y ? 1 : 0 (signed)</td>
+      </tr>
+      <tr>
+          <td>011</td>
+          <td>x &lt; y ? 1 : 0 (unsigned)</td>
+      </tr>
+      <tr>
+          <td>100</td>
+          <td>x + y</td>
+      </tr>
+      <tr>
+          <td>101</td>
+          <td>x - y</td>
+      </tr>
+      <tr>
+          <td>110</td>
+          <td>x &lt;&lt; y</td>
+      </tr>
+      <tr>
+          <td>111</td>
+          <td>x &gt;&gt; y (met tekenbehoud)</td>
+      </tr>
+      <tr>
+          <td>111</td>
+          <td>x &gt;&gt; y (zonder tekenbehoud)</td>
+      </tr>
+  </tbody>
 </table>
 
+</article>
 
 <footer class="footline">
 	
@@ -2952,23 +2961,31 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1771583587"></script>
-    <script src="../../js/jquery.sticky.js?1771583587"></script>
-    <script src="../../js/featherlight.min.js?1771583587"></script>
-    <script src="../../js/highlight.pack.js?1771583587"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1771583587"></script>
-    <script src="../../js/learn.js?1771583587"></script>
-    <script src="../../js/hugo-learn.js?1771583587"></script>
-    
-        
-            <script src="../../mermaid/mermaid.js?1771583587"></script>
-        
-        <script>
-            mermaid.initialize({ startOnLoad: true });
-        </script>
+    <script src="../../js/clipboard.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1772609435"></script>
+    <script src="../../js/jquery.sticky.js?1772609435"></script>
+    <script src="../../js/featherlight.min.js?1772609435"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1772609435"></script>
+    <script src="../../js/learn.js?1772609435"></script>
+    <script src="../../js/hugo-learn.js?1772609435"></script>
+    <script src="../../js/mermaid.min.js?1772609435"></script>
+    <script>
+    window.MathJax = {
+      chtml: {
+        scale: 1,                      
+        minScale: .5,                  
+        matchFontHeight: true,         
+        mtextInheritFont: false,       
+        merrorInheritFont: true,       
+        mathmlSpacing: false,          
+        skipAttributes: {},            
+        exFactor: .5,                  
+        displayAlign: 'center',        
+        displayIndent: '0'             
+      }
+    };
+    </script>
     
     
 

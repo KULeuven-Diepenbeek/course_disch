@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.157.0">
     <meta name="description" content="">
 <meta name="author" content="map[email:&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; name:Nele Mentens and Jo Vliegen]">
 
@@ -12,22 +12,25 @@
     <title>Wat is een ALU? :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1771583586" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1771583586" rel="stylesheet">
-    <link href="../../css/hybrid.css?1771583586" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1771583586" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1771583586" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1771583586" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1771583586" rel="stylesheet">
-    <link href="../../css/theme.css?1771583586" rel="stylesheet">
-    <link href="../../css/tabs.css?1771583586" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1771583586" rel="stylesheet">
-    
-    <link href="../../css/theme-kul.css?1771583586" rel="stylesheet">
-    
+    <link href="../../css/nucleus.css?1772609435" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/hybrid.css?1772609435" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1772609435" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1772609435" rel="stylesheet">
+    <link href="../../css/devselector.css?1772609435" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1772609435" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1771583586"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1772609435"></script>
+    <script src="../../js/devselector.js?1772609435"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -40,7 +43,6 @@
       
     </style>
     
-
   </head>
   <body class="" data-url="../../300_alu/310_intro_alu/">
     <nav id="sidebar" class="">
@@ -63,20 +65,22 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1771583586"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1771583586"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1772609435"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1772609435"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1771583586"></script>
+<script type="text/javascript" src="../../js/search.js?1772609435"></script>
 
     
   </div>
-  
 
     <div class="highlightable">
+
+      
+      
     <ul class="topics">
 
         
@@ -1692,9 +1696,7 @@
                 </div>
                 
                     <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents"></nav>
-    </div>
+  <div class="wrapper toc"><nav id="TableOfContents"></nav></div>
 </div>
 
                 
@@ -1715,12 +1717,18 @@
 
         
 
+        
 
+
+
+
+
+<article class='content'>
 <p>Het doel van dit labo is om uiteindelijk een werkende RISC-V processor te maken, ook al is het in een simpele vorm. In dit OPO gaan we de beschrijving uiteraard wel maken in VHDL.</p>
 <p>Eén van de componenten die in iedere processor zit is een <strong>Arithmetic Logic Unit (ALU)</strong>. Een ALU neemt <strong>2 (of 1) input(s)</strong> en voert hier een bepaalde instructie mee uit. Deze instructie kan een logische operatie zijn zoals AND, OR, XOR,.. of een wiskundige operatie zoals een optelling of een verschil.</p>
-<figure><img src="../../images/300/ALU_principle.png"/><figcaption>
-            <h4>Principe schema van een ALU</h4>
-        </figcaption>
+<figure><img src="../../images/300/ALU_principle.png"><figcaption>
+      <h4>Principe schema van een ALU</h4>
+    </figcaption>
 </figure>
 <p>De ALU die gebruikt wordt in de RISC-V processor, biedt de mogelijkheid om 10 verschillende instructies uit te voeren. De operatie die uitgevoerd wordt, wordt omgeschreven als <em>f(x,y)</em>.</p>
 <div class="multiHcolumn">
@@ -1749,6 +1757,7 @@
 </div>
 <!-- Wie goed telt, ziet dat er 18 verschillende instructies mogelijk zijn. Om 18 instructies binair weer te geven hebben we 5 bits nodig ( &#8968;log<sub>2</sub>18&#8969; = 5 ). -->
 
+</article>
 
 <footer class="footline">
 	
@@ -2868,23 +2877,31 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1771583587"></script>
-    <script src="../../js/jquery.sticky.js?1771583587"></script>
-    <script src="../../js/featherlight.min.js?1771583587"></script>
-    <script src="../../js/highlight.pack.js?1771583587"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1771583587"></script>
-    <script src="../../js/learn.js?1771583587"></script>
-    <script src="../../js/hugo-learn.js?1771583587"></script>
-    
-        
-            <script src="../../mermaid/mermaid.js?1771583587"></script>
-        
-        <script>
-            mermaid.initialize({ startOnLoad: true });
-        </script>
+    <script src="../../js/clipboard.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1772609435"></script>
+    <script src="../../js/jquery.sticky.js?1772609435"></script>
+    <script src="../../js/featherlight.min.js?1772609435"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1772609435"></script>
+    <script src="../../js/learn.js?1772609435"></script>
+    <script src="../../js/hugo-learn.js?1772609435"></script>
+    <script src="../../js/mermaid.min.js?1772609435"></script>
+    <script>
+    window.MathJax = {
+      chtml: {
+        scale: 1,                      
+        minScale: .5,                  
+        matchFontHeight: true,         
+        mtextInheritFont: false,       
+        merrorInheritFont: true,       
+        mathmlSpacing: false,          
+        skipAttributes: {},            
+        exFactor: .5,                  
+        displayAlign: 'center',        
+        displayIndent: '0'             
+      }
+    };
+    </script>
     
     
 

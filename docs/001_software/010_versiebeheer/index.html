@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.157.0">
     <meta name="description" content="">
 <meta name="author" content="map[email:&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; name:Nele Mentens and Jo Vliegen]">
 
@@ -12,22 +12,25 @@
     <title>Versiebeheer :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1771583586" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1771583586" rel="stylesheet">
-    <link href="../../css/hybrid.css?1771583586" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1771583586" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1771583586" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1771583586" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1771583586" rel="stylesheet">
-    <link href="../../css/theme.css?1771583586" rel="stylesheet">
-    <link href="../../css/tabs.css?1771583586" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1771583586" rel="stylesheet">
-    
-    <link href="../../css/theme-kul.css?1771583586" rel="stylesheet">
-    
+    <link href="../../css/nucleus.css?1772609435" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/hybrid.css?1772609435" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1772609435" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1772609435" rel="stylesheet">
+    <link href="../../css/devselector.css?1772609435" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1772609435" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1771583586"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1772609435"></script>
+    <script src="../../js/devselector.js?1772609435"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -40,7 +43,6 @@
       
     </style>
     
-
   </head>
   <body class="" data-url="../../001_software/010_versiebeheer/">
     <nav id="sidebar" class="">
@@ -63,20 +65,22 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1771583586"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1771583586"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1772609435"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1772609435"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1771583586"></script>
+<script type="text/javascript" src="../../js/search.js?1772609435"></script>
 
     
   </div>
-  
 
     <div class="highlightable">
+
+      
+      
     <ul class="topics">
 
         
@@ -1692,8 +1696,7 @@
                 </div>
                 
                     <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
+  <div class="wrapper toc"><nav id="TableOfContents">
   <ul>
     <li><a href="#waarom">Waarom?</a></li>
     <li><a href="#hoe">Hoe?</a>
@@ -1702,8 +1705,7 @@
       </ul>
     </li>
   </ul>
-</nav>
-    </div>
+</nav></div>
 </div>
 
                 
@@ -1724,7 +1726,13 @@
 
         
 
+        
 
+
+
+
+
+<article class='content'>
 <p>Er worden masaal veel documenten geproduceerd, geëditeerd en gedeeld. Dit geldt ook voor programma-code. Zoals hiervoor vermeld, is <strong>HDL-code</strong> niets meer dan simpele tekstdocumenten, analoog aan een C- of python-bestand. Om door het bos de bomen nog te zien, is er software beschikbaar om hiermee om te gaan. De meest gekende software hiervoor is ongetwijfeld: <strong>Git</strong>. Het gebruik van <strong>Git</strong> wordt gedoceerd als onderdeel van <em>Electronic Engineering Skills (4952)</em>. Aangezien Git gebruikt wordt binnen dit opleidingsonderdeel, volgt hier een <em>primer</em> van nodige principes voor deze labo-reeks.</p>
 <!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
 
@@ -1774,7 +1782,12 @@ Van zodra je de invite aanvaard hebt (nadat je bent ingelogd op GitHub), wordt e
 <div class="column">
     <p>Alhoewel deze voordelen al lang zijn ingeburgerd bij de <strong>software ontwikkelaars</strong>, blijven de <strong>hardware ontwikkelaars</strong> achterop hinken. Door jullie over de leercurve te helpen en bij te staan om de voordelen hiervan in te zien, wordt er getracht dit bij te benen.</p>
 <p>Voor het gebruik van de labo&rsquo;s is er een <a href="https://forgejo.org/" target="_blank">Forgejo</a> server opgezet.</p>
-<p><img src="../../images/001/forgejo.png" alt="Forgejo logo"></p>
+<p><figure>
+	<a href="../../images/001/forgejo.png" data-featherlight="image">
+		<img src="../../images/001/forgejo.png"  alt="Forgejo logo" >
+	</a>
+</figure>
+</p>
 <p>Er bestaan een aantal git-gebaseerde VCS-en die gratis beschikbaar zijn (<a href="http://www.github.com" target="_blank">Github</a>, <a href="https://about.gitlab.com/" target="_blank">GitLab</a>, <a href="https://bitbucket.org/" target="_blank">Bitbucket</a>, &hellip;). De keuze om <em>self-hosted</em> aan de slag te gaan komt voornamelijk voort uit het aanbieden van open-source alternatieven voor de commerciële producten.</p>
 </div>    
 </div>
@@ -1783,7 +1796,12 @@ Van zodra je de invite aanvaard hebt (nadat je bent ingelogd op GitHub), wordt e
 <!-- ---------------------------------------------------------------------- -->
 <div class="multiHcolumn">
 <div class="column">
-    <p><img src="../../images/001/setup_simple.png" alt="VPN"></p>
+    <p><figure>
+	<a href="../../images/001/setup_simple.png" data-featherlight="image">
+		<img src="../../images/001/setup_simple.png"  alt="VPN" >
+	</a>
+</figure>
+</p>
 <p>Na OpenVPN te installeren (<a href="https://openvpn.net/client/" target="_blank">link</a>), moeten de nodige configuratiebestanden aangeboden worden. Deze worden per email verzonden en bestaan uit:</p>
 <ul>
 <li>een configuratie bestand (<strong>client.ovpn</strong>)</li>
@@ -1794,13 +1812,23 @@ Van zodra je de invite aanvaard hebt (nadat je bent ingelogd op GitHub), wordt e
 </ul>
 </div>    
 <div class="column">
-    <p><img src="../../images/001/vcs.png" alt="forgejo"></p>
+    <p><figure>
+	<a href="../../images/001/vcs.png" data-featherlight="image">
+		<img src="../../images/001/vcs.png"  alt="forgejo" >
+	</a>
+</figure>
+</p>
 </div>    
 </div>
 <!-- ---------------------------------------------------------------------- -->
 <div class="multiHcolumn">
 <div class="column">
-    <p><img src="../../images/001/forgejo_1.png" alt="password"></p>
+    <p><figure>
+	<a href="../../images/001/forgejo_1.png" data-featherlight="image">
+		<img src="../../images/001/forgejo_1.png"  alt="password" >
+	</a>
+</figure>
+</p>
 </div>    
 <div class="column">
     <h4 id="nieuw-wachtwoord">Nieuw wachtwoord</h4>
@@ -1818,13 +1846,23 @@ Van zodra je de invite aanvaard hebt (nadat je bent ingelogd op GitHub), wordt e
 <p>Voor iedere assignment is er een aparte repository gemaakt. Deze repositories hebben al een deel folders en bestanden waarvan je kan vertrekken. <strong>Deze structuur moet ten allen tijde behouden blijven.</strong></p>
 </div>    
 <div class="column">
-    <p><img src="../../images/001/forgejo_2.png" alt="password"></p>
+    <p><figure>
+	<a href="../../images/001/forgejo_2.png" data-featherlight="image">
+		<img src="../../images/001/forgejo_2.png"  alt="password" >
+	</a>
+</figure>
+</p>
 </div>    
 </div>
 <!-- ---------------------------------------------------------------------- -->
 <div class="multiHcolumn">
 <div class="column">
-    <p><img src="../../images/001/forgejo_3.png" alt="password"></p>
+    <p><figure>
+	<a href="../../images/001/forgejo_3.png" data-featherlight="image">
+		<img src="../../images/001/forgejo_3.png"  alt="password" >
+	</a>
+</figure>
+</p>
 </div>    
 <div class="column">
     <h4 id="doe-een-checkout">Doe een checkout</h4>
@@ -1834,6 +1872,7 @@ Van zodra je de invite aanvaard hebt (nadat je bent ingelogd op GitHub), wordt e
 <h4 id="public-key-magic">Public key magic</h4>
 <p>Met de lokale checkout van de repo, kan je de ontwikkeling doen in een editor naar keuzen. Van zodra je de wijzingingen in de repo <em>commit</em> en <em>pushed</em> naar de server moet je jezelf opnieuw aanmelden (login+passwd). Dit kan omslachtig worden. Door gebruik te maken van publieke sleutel crypto kan je vermijden. Hiervoor moet je een sleutel-paar genereren. De publieke sleutel kan je vervolgens opladen naar de &ldquo;toegestane sleutels&rdquo; in de settings van jouw forgejo-account.</p>
 
+</article>
 
 <footer class="footline">
 	
@@ -2953,23 +2992,31 @@ Van zodra je de invite aanvaard hebt (nadat je bent ingelogd op GitHub), wordt e
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1771583586"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1771583586"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1771583586"></script>
-    <script src="../../js/jquery.sticky.js?1771583586"></script>
-    <script src="../../js/featherlight.min.js?1771583586"></script>
-    <script src="../../js/highlight.pack.js?1771583586"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1771583586"></script>
-    <script src="../../js/learn.js?1771583586"></script>
-    <script src="../../js/hugo-learn.js?1771583586"></script>
-    
-        
-            <script src="../../mermaid/mermaid.js?1771583586"></script>
-        
-        <script>
-            mermaid.initialize({ startOnLoad: true });
-        </script>
+    <script src="../../js/clipboard.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1772609435"></script>
+    <script src="../../js/jquery.sticky.js?1772609435"></script>
+    <script src="../../js/featherlight.min.js?1772609435"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1772609435"></script>
+    <script src="../../js/learn.js?1772609435"></script>
+    <script src="../../js/hugo-learn.js?1772609435"></script>
+    <script src="../../js/mermaid.min.js?1772609435"></script>
+    <script>
+    window.MathJax = {
+      chtml: {
+        scale: 1,                      
+        minScale: .5,                  
+        matchFontHeight: true,         
+        mtextInheritFont: false,       
+        merrorInheritFont: true,       
+        mathmlSpacing: false,          
+        skipAttributes: {},            
+        exFactor: .5,                  
+        displayAlign: 'center',        
+        displayIndent: '0'             
+      }
+    };
+    </script>
     
     
 

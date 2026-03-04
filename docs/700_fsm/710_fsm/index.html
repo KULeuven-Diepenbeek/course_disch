@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.157.0">
     <meta name="description" content="">
 <meta name="author" content="map[email:&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; name:Nele Mentens and Jo Vliegen]">
 
@@ -12,22 +12,25 @@
     <title>Finite State Machine (FSM) :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1771583587" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/hybrid.css?1771583587" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1771583587" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1771583587" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1771583587" rel="stylesheet">
-    <link href="../../css/theme.css?1771583587" rel="stylesheet">
-    <link href="../../css/tabs.css?1771583587" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1771583587" rel="stylesheet">
-    
-    <link href="../../css/theme-kul.css?1771583587" rel="stylesheet">
-    
+    <link href="../../css/nucleus.css?1772609435" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/hybrid.css?1772609435" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1772609435" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1772609435" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1772609435" rel="stylesheet">
+    <link href="../../css/devselector.css?1772609435" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1772609435" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1772609435" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1771583587"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1772609435"></script>
+    <script src="../../js/devselector.js?1772609435"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -40,7 +43,6 @@
       
     </style>
     
-
   </head>
   <body class="" data-url="../../700_fsm/710_fsm/">
     <nav id="sidebar" class="">
@@ -63,20 +65,22 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1771583587"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1771583587"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1772609435"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1772609435"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1771583587"></script>
+<script type="text/javascript" src="../../js/search.js?1772609435"></script>
 
     
   </div>
-  
 
     <div class="highlightable">
+
+      
+      
     <ul class="topics">
 
         
@@ -1692,8 +1696,7 @@
                 </div>
                 
                     <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
+  <div class="wrapper toc"><nav id="TableOfContents">
   <ul>
     <li>
       <ul>
@@ -1714,8 +1717,7 @@
     </li>
     <li><a href="#fsm-in-vhdl">FSM in VHDL</a></li>
   </ul>
-</nav>
-    </div>
+</nav></div>
 </div>
 
                 
@@ -1736,27 +1738,33 @@
 
         
 
+        
 
+
+
+
+
+<article class='content'>
 <p>Een FSM is een <strong>controle structuur</strong> die zich in een <strong>eindig aantal toestanden</strong> kan bevinden. Onder invloed van ingangssignalen kan een FSM overgaan naar één bepaalde toestand één andere toestand. In elke toestand wordt er een waarde toegekend aan de uitgangssignalen. De toestand wordt opgeslagen in een toestandsregister.</p>
 <div class="multiHcolumn">
 <div class="column">
-    <figure><img src="../../images/700/FSM_block.png"/>
+    <figure><img src="../../images/700/FSM_block.png">
 </figure>
 </div>    
 <div class="column">
-    <figure><img src="../../images/700/FSM_schematic.png"/>
+    <figure><img src="../../images/700/FSM_schematic.png">
 </figure>
 </div>    
 </div>
 <h3 id="voorbeeld-fsm">Voorbeeld FSM</h3>
 <p>De meest <strong>eenvoudige FSM</strong> is een <strong>teller</strong>. Er is geen enkel ingangssignaal en de uitgang is de waarde van de toestand.</p>
-<figure><img src="../../images/700/FSM_teller.png"/>
+<figure><img src="../../images/700/FSM_teller.png">
 </figure>
 <p>Een eerste ingangssignaal dat de telcyclus kan beïnvloeden, is een <strong>enable</strong> signaal.</p>
-<figure><img src="../../images/700/FSM_teller_en.png"/>
+<figure><img src="../../images/700/FSM_teller_en.png">
 </figure>
 <p>Een ander ingangssignaal zou een <strong>up/down (UD)</strong> signaal kunnen zijn.</p>
-<figure><img src="../../images/700/FSM_teller_UD.png"/>
+<figure><img src="../../images/700/FSM_teller_UD.png">
 </figure>
 
 <div class="notices warning" ><p>Werkelijke toestandsdiagrammen kunnen heel wat complexer zijn.</p>
@@ -1781,7 +1789,7 @@
 <li>Datapad opsplitsen in registers en combinatorische blokken.</li>
 <li>Controle implementeren als FSM.</li>
 </ul>
-<figure><img src="../../images/700/data_controle_pad.png"/>
+<figure><img src="../../images/700/data_controle_pad.png">
 </figure>
 <h3 id="het-datapad">Het datapad</h3>
 <div class="multiHcolumn">
@@ -1806,14 +1814,14 @@
 <p>Combinatorische blokken kunnen snel ontworpen worden op basis van Booleaanse vergelijkingen.</p>
 </div>    
 <div class="column">
-    <figure><img src="../../images/700/data_pad.png"/>
+    <figure><img src="../../images/700/data_pad.png">
 </figure>
 </div>    
 </div>
 <h3 id="het-controlepad">Het Controlepad</h3>
 <div class="multiHcolumn">
 <div class="column">
-    <figure><img src="../../images/700/controle_pad.png"/>
+    <figure><img src="../../images/700/controle_pad.png">
 </figure>
 </div>    
 <div class="column">
@@ -1876,13 +1884,13 @@ nemen)</li>
 </ul>
 <div class="multiHcolumn">
 <div class="column">
-    <figure><img src="../../images/700/FSM_block.png"/>
+    <figure><img src="../../images/700/FSM_block.png">
 </figure>
-<figure><img src="../../images/700/FSM_block_diagram.png"/>
+<figure><img src="../../images/700/FSM_block_diagram.png">
 </figure>
 </div>    
 <div class="column">
-    <figure><img src="../../images/700/FSM_schematic.png"/>
+    <figure><img src="../../images/700/FSM_schematic.png">
 </figure>
 </div>    
 </div>
@@ -1898,15 +1906,15 @@ nemen)</li>
 </ul>
 <div class="multiHcolumn">
 <div class="column">
-    <figure><img src="../../images/700/moore_FSM.png"/><figcaption>
-            <h4>Moore FSM</h4>
-        </figcaption>
+    <figure><img src="../../images/700/moore_FSM.png"><figcaption>
+      <h4>Moore FSM</h4>
+    </figcaption>
 </figure>
 </div>    
 <div class="column">
-    <figure><img src="../../images/700/mealy_FSM.png"/><figcaption>
-            <h4>Mealy FSM</h4>
-        </figcaption>
+    <figure><img src="../../images/700/mealy_FSM.png"><figcaption>
+      <h4>Mealy FSM</h4>
+    </figcaption>
 </figure>
 </div>    
 </div>
@@ -1931,11 +1939,12 @@ nemen)</li>
 </ul>
 <h2 id="fsm-in-vhdl">FSM in VHDL</h2>
 <p>Definieer de toestand als een opsommingstype en maak twee signalen aan van dit type. Deze signalen vormen de ingang en de uitgang van het state register.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> my_state <span style="color:#66d9ef">is</span> (rst_state, green_state, yellow_state, red_state);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> my_state <span style="color:#66d9ef">is</span> (rst_state, green_state, yellow_state, red_state);
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> next_state, state<span style="color:#f92672">:</span> my_state;
 </span></span></code></pre></div><p>Ontwerp de next state functie, het state register en de
 output functie in drie verschillende processen. Voorzie alle mogelijkheden in de next state functie en de output functie, anders ontstaan er latches in deze bouwblokken.</p>
 
+</article>
 
 <footer class="footline">
 	
@@ -3055,23 +3064,31 @@ output functie in drie verschillende processen. Voorzie alle mogelijkheden in de
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1771583587"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1771583587"></script>
-    <script src="../../js/jquery.sticky.js?1771583587"></script>
-    <script src="../../js/featherlight.min.js?1771583587"></script>
-    <script src="../../js/highlight.pack.js?1771583587"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1771583587"></script>
-    <script src="../../js/learn.js?1771583587"></script>
-    <script src="../../js/hugo-learn.js?1771583587"></script>
-    
-        
-            <script src="../../mermaid/mermaid.js?1771583587"></script>
-        
-        <script>
-            mermaid.initialize({ startOnLoad: true });
-        </script>
+    <script src="../../js/clipboard.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1772609435"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1772609435"></script>
+    <script src="../../js/jquery.sticky.js?1772609435"></script>
+    <script src="../../js/featherlight.min.js?1772609435"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1772609435"></script>
+    <script src="../../js/learn.js?1772609435"></script>
+    <script src="../../js/hugo-learn.js?1772609435"></script>
+    <script src="../../js/mermaid.min.js?1772609435"></script>
+    <script>
+    window.MathJax = {
+      chtml: {
+        scale: 1,                      
+        minScale: .5,                  
+        matchFontHeight: true,         
+        mtextInheritFont: false,       
+        merrorInheritFont: true,       
+        mathmlSpacing: false,          
+        skipAttributes: {},            
+        exFactor: .5,                  
+        displayAlign: 'center',        
+        displayIndent: '0'             
+      }
+    };
+    </script>
     
     
 
