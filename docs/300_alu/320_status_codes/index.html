@@ -12,22 +12,22 @@
     <title>Status codes ALU :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1772609435" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1772609435" rel="stylesheet">
-    <link href="../../css/hybrid.css?1772609435" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1772609435" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1772609435" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1772609435" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1772609435" rel="stylesheet">
-    <link href="../../css/theme.css?1772609435" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1772609435" rel="stylesheet">
-    <link href="../../css/devselector.css?1772609435" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1772609435" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1772609435" rel="stylesheet">
+    <link href="../../css/nucleus.css?1772782513" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1772782513" rel="stylesheet">
+    <link href="../../css/hybrid.css?1772782513" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1772782513" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1772782513" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1772782513" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1772782513" rel="stylesheet">
+    <link href="../../css/theme.css?1772782513" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1772782513" rel="stylesheet">
+    <link href="../../css/devselector.css?1772782513" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1772782513" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1772782513" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1772609435"></script>
-    <script src="../../js/devselector.js?1772609435"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1772782513"></script>
+    <script src="../../js/devselector.js?1772782513"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1772609435"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1772609435"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1772782513"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1772782513"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1772609435"></script>
+<script type="text/javascript" src="../../js/search.js?1772782513"></script>
 
     
   </div>
@@ -1725,9 +1725,15 @@
 
 <article class='content'>
 <p>De ALU gaat dus een arithmetische of logische instructie uitvoeren. Ongeacht de operatie die de ALU moet uitvoeren, zijn er <strong>altijd</strong> twee ingangen. De operatie die uitgevoerd moet worden, wordt aangeduid aan de hand van 3 bits: <strong>ALUop</strong>. De ALU heeft dus, naast <strong>twee 32-bit ingangen</strong> voor de operanden, ook <strong>één 3-bit ingang</strong>. Tenslotte zijn er nog 2 ingangen die aanduiden of de ALU logisch of arithmetisch moet werken; en of de ALU signed of unsigned moet werken.</p>
-<p>De ALU zal de bewerking uitvoeren die er gevraagd wordt. Naast het resultaat, geeft de ALU ook nog extra informatie. De extraatjes zijn:</p>
 <ul>
+<li><strong>arith_logic_b</strong> wordt in rekening gebracht bij ALUOp=&ldquo;111&rdquo;. Bij een wiskundige operatie (&lsquo;1&rsquo;) gebeurt de shift-right-operatie <strong>mét</strong> tekenbehoud, bij een logische operatie (&lsquo;0&rsquo;) gebeurt de shift-right-operatie <strong>zonder</strong> tekenbehoud.</li>
+<li><strong>signed_unsigned_b</strong> wordt in rekening gebracht bij ALUOp=&ldquo;011&rdquo;. Bij een signed operatie (&lsquo;1&rsquo;) worden de waardes van x en y geïnterpreteerd als <strong>two&rsquo;s complement</strong> notatie, bij een unsigned operatie (&lsquo;0&rsquo;) worden de waardes als natuurlijke getallen geïnterpreteerd.</li>
+</ul>
+<p>De ALU zal de bewerking uitvoeren die er gevraagd wordt. Naast het resultaat, geeft de ALU ook nog extra informatie. De &ldquo;extraatjes&rdquo; zijn:</p>
+<ul>
+<li>is het resultaat gelijk aan 0</li>
 <li>zijn de twee operanden gelijk aan elkaar</li>
+<li>de carry out bit van de RCA (ook wel de <em>Overflow-bit</em> genoemd)</li>
 <li>is x kleiner dan y, als we uitgaan van <em>unsigned</em> getallen</li>
 <li>is x kleiner dan y, als we uitgaan van <em>signed</em> getallen</li>
 </ul>
@@ -2858,15 +2864,15 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1772609435"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1772609435"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1772609435"></script>
-    <script src="../../js/jquery.sticky.js?1772609435"></script>
-    <script src="../../js/featherlight.min.js?1772609435"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1772609435"></script>
-    <script src="../../js/learn.js?1772609435"></script>
-    <script src="../../js/hugo-learn.js?1772609435"></script>
-    <script src="../../js/mermaid.min.js?1772609435"></script>
+    <script src="../../js/clipboard.min.js?1772782513"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1772782513"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1772782513"></script>
+    <script src="../../js/jquery.sticky.js?1772782513"></script>
+    <script src="../../js/featherlight.min.js?1772782513"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1772782513"></script>
+    <script src="../../js/learn.js?1772782513"></script>
+    <script src="../../js/hugo-learn.js?1772782513"></script>
+    <script src="../../js/mermaid.min.js?1772782513"></script>
     <script>
     window.MathJax = {
       chtml: {
