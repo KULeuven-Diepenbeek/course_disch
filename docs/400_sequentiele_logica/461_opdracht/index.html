@@ -12,22 +12,22 @@
     <title>Opdracht 4: Register file :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1773065125" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1773065125" rel="stylesheet">
-    <link href="../../css/hybrid.css?1773065125" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1773065125" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1773065125" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1773065125" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1773065125" rel="stylesheet">
-    <link href="../../css/theme.css?1773065125" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1773065125" rel="stylesheet">
-    <link href="../../css/devselector.css?1773065125" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1773065125" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1773065125" rel="stylesheet">
+    <link href="../../css/nucleus.css?1773065633" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1773065633" rel="stylesheet">
+    <link href="../../css/hybrid.css?1773065633" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1773065633" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1773065633" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1773065633" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1773065633" rel="stylesheet">
+    <link href="../../css/theme.css?1773065633" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1773065633" rel="stylesheet">
+    <link href="../../css/devselector.css?1773065633" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1773065633" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1773065633" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1773065125"></script>
-    <script src="../../js/devselector.js?1773065125"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1773065633"></script>
+    <script src="../../js/devselector.js?1773065633"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1773065125"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1773065125"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1773065633"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1773065633"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1773065125"></script>
+<script type="text/javascript" src="../../js/search.js?1773065633"></script>
 
     
   </div>
@@ -1779,8 +1779,8 @@
     <p>Na het maken van de ALU in de vorige opdracht, moet er voor opdracht 4 een <strong>Register file</strong> gemaakt worden.</p>
 <p>Een register file is een onderdeel van een processor dat eigenlijk niet veel meer bevat dan <strong>een set registers</strong>. De specificaties van de register file voor deze opdracht zijn als volgt:</p>
 <ul>
-<li>de data-breedte is 32 bits</li>
-<li>er zijn 8 registers in de register file</li>
+<li>de data-breedte is 32 bits, in te stellen mbv de generic <strong>G_WIDTH</strong></li>
+<li>het aantal registers wordt bepaald door de generic <strong>G_REGCOUNT_LOG2</strong> en er zijn <b>2<sup>G_REGCOUNT_LOG2</sup></b> registers in de register file.</li>
 <li>de reg file beschikt over 2 lees-poorten
 <ul>
 <li>src1 &amp; data1</li>
@@ -1807,6 +1807,11 @@
 </figure>
 </div>    
 </div>
+<!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
+
+<div class="notices tip" ><p>In VHDL kan een machtsverheffing gedaan worden (voor indices en metadata) door de operator ** te gebruiken. Bv 2**3 wordt vertaald naar 8</p>
+</div>
+
 <!--
 {signal: [
   {name: 'clock',        wave: 'p......|....'},
@@ -1866,9 +1871,7 @@
 <p>Het zou kunnen dat het bovenstaande schema er nogal &ldquo;druk en overweldigend&rdquo; uitziet &hellip; en dat is perfect ok. Dit is ook nog maar de 4 opdracht die er gemaakt moet worden. Als een probleem te groot lijkt, helpt het vaak om het op te delen in kleindere problemen die gemakkelijker te overwinnen zijn.</p>
 <div class="multiHcolumn">
 <div class="column">
-    <figure><img src="../../images/400/regfile.png"><figcaption>
-      <h4>Blokschema van de register file</h4>
-    </figcaption>
+    <figure><img src="../../images/400/regfile.png">
 </figure>
 </div>    
 <div class="column">
@@ -1886,15 +1889,16 @@
 </div>
 <div class="multiHcolumn">
 <div class="column">
+    <p>Het volledige ontwerp.</p>
 </div>    
 <div class="column">
-    <p>De tweede leespoort, is gewoon een kopie van de eerste leespoort.</p>
+    <p>De tweede leespoort, is een kopie (inclusief multiplexer) van de eerste leespoort.</p>
 </div>    
 <div class="column">
     <p>De tweede leespoort weglaten is een gemakkelijke tussenstap.</p>
 </div>    
 <div class="column">
-    <p>De n-1 registers zijn allemaal gelijkaardig aan het n<sup>e</sup> register.</p>
+    <p>De 2<sup>G_REGCOUNT_LOG2</sup> registers zijn allemaal gelijkaardig aan met enkel een verschil in het <em>we</em> signaal.</p>
 </div>    
 </div>
 
@@ -3053,15 +3057,15 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1773065125"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1773065125"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1773065125"></script>
-    <script src="../../js/jquery.sticky.js?1773065125"></script>
-    <script src="../../js/featherlight.min.js?1773065125"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1773065125"></script>
-    <script src="../../js/learn.js?1773065125"></script>
-    <script src="../../js/hugo-learn.js?1773065125"></script>
-    <script src="../../js/mermaid.min.js?1773065125"></script>
+    <script src="../../js/clipboard.min.js?1773065633"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1773065633"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1773065633"></script>
+    <script src="../../js/jquery.sticky.js?1773065633"></script>
+    <script src="../../js/featherlight.min.js?1773065633"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1773065633"></script>
+    <script src="../../js/learn.js?1773065633"></script>
+    <script src="../../js/hugo-learn.js?1773065633"></script>
+    <script src="../../js/mermaid.min.js?1773065633"></script>
     <script>
     window.MathJax = {
       chtml: {
