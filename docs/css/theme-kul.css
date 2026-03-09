@@ -234,6 +234,14 @@ div.centeredColumn75 {
     margin-right: auto;
 }
 
+div.mark {
+    background-color: var(--MAIN-SECTION-HIGHLIGHT-BG-color);
+    color: var(--MAIN-SECTION-HIGHLIGHT-color);
+    font-weight: bold;
+    display: inline-block;
+    padding: 0px 5px;
+}
+
 /* end VlJo */
 
 

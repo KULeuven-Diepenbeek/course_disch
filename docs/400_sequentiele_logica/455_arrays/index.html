@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Opdracht 7: Finite State Machine :: Digitale Elektronische Schakelingen</title>
+    <title>Arrays :: Digitale Elektronische Schakelingen</title>
 
     
     <link href="../../css/nucleus.css?1773064069" rel="stylesheet">
@@ -44,7 +44,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../../700_fsm/740_opdracht/">
+  <body class="" data-url="../../400_sequentiele_logica/455_arrays/">
     <nav id="sidebar" class="">
 
 
@@ -674,7 +674,7 @@
   
     
     <li data-nav-id="/400_sequentiele_logica/" title="4. Sequentiële logica" class="dd-item
-        
+        parent
         
         
         ">
@@ -927,7 +927,7 @@
  
   
     
-      <li data-nav-id="/400_sequentiele_logica/455_arrays/" title="Arrays" class="dd-item ">
+      <li data-nav-id="/400_sequentiele_logica/455_arrays/" title="Arrays" class="dd-item active">
         <a href="../../400_sequentiele_logica/455_arrays/">
         <i class='fas fa-book'></i> Arrays
         
@@ -1213,7 +1213,7 @@
   
     
     <li data-nav-id="/700_fsm/" title="7. Finite State Machines" class="dd-item
-        parent
+        
         
         
         ">
@@ -1302,7 +1302,7 @@
  
   
     
-      <li data-nav-id="/700_fsm/740_opdracht/" title="Opdracht 7: Finite State Machine" class="dd-item active">
+      <li data-nav-id="/700_fsm/740_opdracht/" title="Opdracht 7: Finite State Machine" class="dd-item ">
         <a href="../../700_fsm/740_opdracht/">
         <i class='fas fa-pen-square'></i> Opdracht 7: Finite State Machine
         
@@ -1726,7 +1726,7 @@
             
           
           
-            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../700_fsm/'>7. Finite State Machines</a> > Opdracht 7: Finite State Machine
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../400_sequentiele_logica/'>4. Sequentiële logica</a> > Arrays
           
         
           
@@ -1738,7 +1738,11 @@
                 </div>
                 
                     <div class="progress">
-  <div class="wrapper toc"><nav id="TableOfContents"></nav></div>
+  <div class="wrapper toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#zelf-types-maken">Zelf types maken</a></li>
+  </ul>
+</nav></div>
 </div>
 
                 
@@ -1753,7 +1757,7 @@
           
             <h1>
               
-              Opdracht 7: Finite State Machine
+              Arrays
             </h1>
           
 
@@ -1766,49 +1770,63 @@
 
 
 <article class='content'>
-<p>Voor deze opdracht dien je zelf een FSM te beschrijven. De controle is een versimpelde versie van een muziek speler.</p>
-<p>Na power-up komt de FSM in de <strong>sReset</strong> state. Ook als de gebruiker het <strong>reset</strong> signal indrukt, gaat de FSM naar deze state, ongeacht van de huidige toestand. Deze state is slechts 1 klokcyclus actief en gaat meteen naar de <strong>sStop</strong> state. De controle blijft in deze toestand totdat de <strong>btn_play</strong> button ingedrukt wordt. In de <strong>sPlay</strong> state kan er overgegaan worden naar de <strong>sPause</strong> state en terug door opnieuw gebruik te maken van de <strong>btn_play</strong> button. Zowel in <strong>sPlay</strong> als is <strong>sPause</strong> kan er overgegaan worden naar <strong>sStop</strong> als de gebruiker de <strong>btn_stop</strong> button indrukt.</p>
-<p>Om de complexiteit te beperken zijn er maar 4 stuur-uitgangen. Deze vormen een one-hot encoding van de huidige state.</p>
-<p>Het state-diagram en de entity staan hieronder afgebeeld.</p>
+<p>Zoals wellicht geweten, is het bij het programmeren van software mogelijk om een array te maken. Als, bijvoorbeeld in C, je een <em>groep</em> van 10 characters hebt, kun je hiervoor een array maken. Elke index van de groep wijst hierbij naar één enkel element van het hetzelfde type. Toekenningen gebeuren ook op een index-gebaseerde manier</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-C" data-lang="C"><span style="display:flex;"><span>  <span style="color:#66d9ef">char</span> groep_van_chars[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  groep_van_chars[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x36</span>;
+</span></span></code></pre></div><p>VHDL is een <strong>strongly typed</strong> taal. Dit wil zeggen dat iedere object één, welgedefinieerd type heeft. Zo zagen we al <strong>STD_LOGIC</strong>. Een object (signal, port, variable, &hellip;) van het type <strong>STD_LOGIC</strong> kan de volgende waardes hebben:</p>
+<ul>
+<li><strong>U</strong> (Uninitialized): Default waarde bij de start van een simulatie.</li>
+<li><strong>X</strong> (Forcing Unknown): Resultaat van een conflict van meerdere drivers.</li>
+<li><strong>0</strong> (Forcing Low): <em>Sterke</em> logische 0.</li>
+<li><strong>1</strong> (Forcing High): <em>Sterke</em> logische 1.</li>
+<li><strong>Z</strong> (High Impedance): Hoog-impedant</li>
+<li><strong>W</strong> (Weak Unknown): Weak signaal, ongekende waarde.</li>
+<li><strong>L</strong> (Weak Low): Weak 0 (b.v., pull-down).</li>
+<li><strong>H</strong> (Weak High): Weak 1 (b.v., pull-up).</li>
+<li><strong>-</strong> (Don&rsquo;t Care): Gebruik om de synthese tool mogelijkheden te geven tot optimalisatie.</li>
+</ul>
+<p><strong>STD_LOGIC_VECTOR</strong> is een type dat ook al gebruikt is in deze labo-reeks. Het is gedefinieerd in de <strong>IEEE</strong> standaard <strong>STD_LOGIC_1164</strong> als een array van STD_LOGIC&rsquo;s.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-VHDL" data-lang="VHDL"><span style="display:flex;"><span>    <span style="color:#66d9ef">type</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span> <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">array</span> (<span style="color:#66d9ef">NATURAL</span> <span style="color:#66d9ef">range</span> <span style="color:#f92672">&lt;&gt;</span>) <span style="color:#66d9ef">of</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span></code></pre></div><h2 id="zelf-types-maken">Zelf types maken</h2>
+<p>Soms voelt het als een nadeel dat VHDL stronly typed is, maar dat kan ook in het voordeel gedraaid worden. Als er bijvoorbeeld nodig is aan 2D-type (en dat is er niet, by default), kan dat zélf gemaakt worden.</p>
 <div class="multiHcolumn">
 <div class="column">
-    <p><figure>
-	<a href="../../images/700/fsm-Page-1.drawio.png" data-featherlight="image">
-		<img src="../../images/700/fsm-Page-1.drawio.png"  alt="State diagram" >
-	</a>
-</figure>
-</p>
-</div>    
-<div class="column">
-    <p><figure>
-	<a href="../../images/700/fsm-entity.drawio.png" data-featherlight="image">
-		<img src="../../images/700/fsm-entity.drawio.png"  alt="Entity" >
-	</a>
-</figure>
-</p>
-</div>    
-<div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">muziek_speler_controle</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(
-</span></span><span style="display:flex;"><span>        clock <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        reset <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        btn_stop <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        btn_play <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        inReset <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        inStop <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        inPlay <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        inPause <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">STD_LOGIC</span>
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">muziek_speler_controle</span>;
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-VHDL" data-lang="VHDL"><span style="display:flex;"><span>    <span style="color:#75715e">-- A new type for an array of SLV&#39;s</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">type</span> T_memory <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">array</span> (<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">63</span>) <span style="color:#66d9ef">of</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(<span style="color:#ae81ff">31</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
 </span></span></code></pre></div>
+</div>    
+<div class="column">
+    <p>Deze lijn VHDL-code <strong>definieert een nieuw type: T_memory</strong>. Het type is een array met 64 posities van STD_LOGIC_VECTORs met lengte 32.</p>
 </div>    
 </div>
 <!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
 
-<div class="notices tip" ><p>Let er op dat het signaal van een button eerst laag moet worden vóórdat er een nieuw signal geïnterpreteerd kan worden!!</p>
+<div class="notices info" ><p>Merk op dat de STD_LOGIC_VECTOR gedefinieerd is met <strong>downto</strong> terwijl de array gedefinieerd is met <strong>to</strong>. Dit is echter geen must en het mogelijk om andere combinaties te maken.</p>
 </div>
 
-<p><a href="../../hdlsrc/700/muziek_speler_controle_tb.vhd" download>Hier</a> vind je een testbench.</p>
+<div class="multiHcolumn">
+<div class="column">
+    <p>Deze lijn VHDL-code <strong>definieert een signaal van het type T_memory</strong>. Het type is een array met 64 posities van STD_LOGIC_VECTORs met lengte 32.</p>
+</div>    
+<div class="column">
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-VHDL" data-lang="VHDL"><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> mijn_DISCH_geheugen<span style="color:#f92672">:</span> T_memory;
+</span></span></code></pre></div>
+</div>    
+</div>
+<hr/>
+<div class="multiHcolumn">
+<div class="column">
+    <p>Net zoals in software, kan een element uit een array geselecteerd worden mbv indices. Let hierbij op dat er <em>ronde</em> haakjes gebruikt worden <div class="mark"> ( ) </div> en geen <em>vierkante</em> haakjes <div class="mark"> [ ] </div>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-VHDL" data-lang="VHDL"><span style="display:flex;"><span>    mijn_DISCH_geheugen(<span style="color:#ae81ff">5</span>) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">x&#34;FEDCBA98&#34;</span>;
+</span></span></code></pre></div>
+</div>    
+<div class="column">
+    <p>Het is ook mogelijk om alle indices tegelijkertijd aan te spreken.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-VHDL" data-lang="VHDL"><span style="display:flex;"><span>    mijn_DISCH_geheugen <span style="color:#f92672">&lt;=</span> (<span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">x&#34;FEDCBA98&#34;</span>);
+</span></span></code></pre></div>
+</div>    
+</div>
 
 </article>
 
@@ -2250,6 +2268,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2264,6 +2283,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2304,105 +2326,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -2484,6 +2407,109 @@
                     
 
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
                         
             
             
@@ -2620,7 +2646,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2633,9 +2658,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2685,7 +2707,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2704,9 +2725,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2952,10 +2970,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../700_fsm/730_voorbeeld_timer/" title="Voorbeeld verkeerslicht timer"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../400_sequentiele_logica/453_latches/" title="Latches"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../800_extras/" title="Extras" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../400_sequentiele_logica/461_opdracht/" title="Opdracht 4: Register file" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

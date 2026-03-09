@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Opdracht 7: Finite State Machine :: Digitale Elektronische Schakelingen</title>
+    <title>Latches :: Digitale Elektronische Schakelingen</title>
 
     
     <link href="../../css/nucleus.css?1773064069" rel="stylesheet">
@@ -44,7 +44,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../../700_fsm/740_opdracht/">
+  <body class="" data-url="../../400_sequentiele_logica/453_latches/">
     <nav id="sidebar" class="">
 
 
@@ -674,7 +674,7 @@
   
     
     <li data-nav-id="/400_sequentiele_logica/" title="4. Sequentiële logica" class="dd-item
-        
+        parent
         
         
         ">
@@ -906,7 +906,7 @@
  
   
     
-      <li data-nav-id="/400_sequentiele_logica/453_latches/" title="Latches" class="dd-item ">
+      <li data-nav-id="/400_sequentiele_logica/453_latches/" title="Latches" class="dd-item active">
         <a href="../../400_sequentiele_logica/453_latches/">
         <i class='fas fa-book'></i> Latches
         
@@ -1213,7 +1213,7 @@
   
     
     <li data-nav-id="/700_fsm/" title="7. Finite State Machines" class="dd-item
-        parent
+        
         
         
         ">
@@ -1302,7 +1302,7 @@
  
   
     
-      <li data-nav-id="/700_fsm/740_opdracht/" title="Opdracht 7: Finite State Machine" class="dd-item active">
+      <li data-nav-id="/700_fsm/740_opdracht/" title="Opdracht 7: Finite State Machine" class="dd-item ">
         <a href="../../700_fsm/740_opdracht/">
         <i class='fas fa-pen-square'></i> Opdracht 7: Finite State Machine
         
@@ -1726,7 +1726,7 @@
             
           
           
-            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../700_fsm/'>7. Finite State Machines</a> > Opdracht 7: Finite State Machine
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../400_sequentiele_logica/'>4. Sequentiële logica</a> > Latches
           
         
           
@@ -1738,7 +1738,11 @@
                 </div>
                 
                     <div class="progress">
-  <div class="wrapper toc"><nav id="TableOfContents"></nav></div>
+  <div class="wrapper toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#onbedoelde-latches">Onbedoelde latches</a></li>
+  </ul>
+</nav></div>
 </div>
 
                 
@@ -1753,7 +1757,7 @@
           
             <h1>
               
-              Opdracht 7: Finite State Machine
+              Latches
             </h1>
           
 
@@ -1766,49 +1770,91 @@
 
 
 <article class='content'>
-<p>Voor deze opdracht dien je zelf een FSM te beschrijven. De controle is een versimpelde versie van een muziek speler.</p>
-<p>Na power-up komt de FSM in de <strong>sReset</strong> state. Ook als de gebruiker het <strong>reset</strong> signal indrukt, gaat de FSM naar deze state, ongeacht van de huidige toestand. Deze state is slechts 1 klokcyclus actief en gaat meteen naar de <strong>sStop</strong> state. De controle blijft in deze toestand totdat de <strong>btn_play</strong> button ingedrukt wordt. In de <strong>sPlay</strong> state kan er overgegaan worden naar de <strong>sPause</strong> state en terug door opnieuw gebruik te maken van de <strong>btn_play</strong> button. Zowel in <strong>sPlay</strong> als is <strong>sPause</strong> kan er overgegaan worden naar <strong>sStop</strong> als de gebruiker de <strong>btn_stop</strong> button indrukt.</p>
-<p>Om de complexiteit te beperken zijn er maar 4 stuur-uitgangen. Deze vormen een one-hot encoding van de huidige state.</p>
-<p>Het state-diagram en de entity staan hieronder afgebeeld.</p>
+<!-- { signal: 
+    [
+      {name: "Clock",           wave: '0h.l.h.l.h.l.h.l.h.l.h.l.' },
+      {name: 'Input',           wave: '1...0...1.......0.1......' },
+      {name: 'Output (register)',          wave: 'x1...0...1.......0...1...' },    
+      {name: 'Output (latch)',          wave: 'x1...0...1.......0.1.....' },    
+    ]
+} -->
+<p>Naast een <strong>register</strong> is het ook mogelijk om een <strong>latch</strong> te hebben. Allebei hebben ze een <strong>geheugenwerking</strong> en werken ze <strong>ten opzichte van een clock</strong>. Toch is er een belangrijk verschil.</p>
+<figure><img src="../../images/400/wavedrom_reg_vs_latch.png"><figcaption>
+      <h4>Register vs Latch</h4>
+    </figcaption>
+</figure>
 <div class="multiHcolumn">
 <div class="column">
-    <p><figure>
-	<a href="../../images/700/fsm-Page-1.drawio.png" data-featherlight="image">
-		<img src="../../images/700/fsm-Page-1.drawio.png"  alt="State diagram" >
-	</a>
-</figure>
-</p>
+    <p>Een <strong>register</strong> zal op een stijgende (of dalende) <strong>klokflank</strong> een sample nemen van de input.</p>
 </div>    
 <div class="column">
-    <p><figure>
-	<a href="../../images/700/fsm-entity.drawio.png" data-featherlight="image">
-		<img src="../../images/700/fsm-entity.drawio.png"  alt="Entity" >
-	</a>
-</figure>
-</p>
+    <p>Een <strong>latch</strong> zal tijdens de positieve (of negatieve) <strong>halve klok periode</strong> een sample nemen van de input.</p>
+</div>    
+</div>
+<p>Alhoewel een latch wel de bedoeling kan zijn bij het design van een aSIC, bij het design voor een FPGA zijn Latches <strong>absoluut te vermijden</strong>. De tools kunnen heel slecht om (timing gewijs) met latches en meestal zijn ze ook niet gewenst.</p>
+<h2 id="onbedoelde-latches">Onbedoelde latches</h2>
+<p>Helaas zijn er een aantal constructies waarbij er een latch gemaakt wordt zonder dat de designer dit wenst.</p>
+<div class="multiHcolumn">
+<div class="column">
+    <p>Deze VHDL code probeert een beschrijving te geven van een multiplexer.</p>
+<p>De sensitivy list is echter niet compleet. Als de input <strong>rotate_right</strong> verandert, wordt de output (transformed) echter niet aangepast.</p>
 </div>    
 <div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">muziek_speler_controle</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(
-</span></span><span style="display:flex;"><span>        clock <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        reset <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        btn_stop <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        btn_play <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        inReset <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        inStop <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        inPlay <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        inPause <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">STD_LOGIC</span>
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">muziek_speler_controle</span>;
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>    <span style="color:#a6e22e">PMUX</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(rotate_left, MUX_select)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> MUX_select <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#66d9ef">then</span> 
+</span></span><span style="display:flex;"><span>            transformed <span style="color:#f92672">&lt;=</span> rotate_left;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> 
+</span></span><span style="display:flex;"><span>            transformed <span style="color:#f92672">&lt;=</span> rotate_right;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span> <span style="color:#a6e22e">PMUX</span>;
+</span></span></code></pre></div>
+</div>    
+</div>
+<div class="multiHcolumn">
+<div class="column">
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>    <span style="color:#a6e22e">PMUX</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(rotate_left, rotate_right, MUX_select)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> MUX_select <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#66d9ef">then</span> 
+</span></span><span style="display:flex;"><span>            transformed <span style="color:#f92672">&lt;=</span> rotate_left;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> MUX_select <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>            transformed <span style="color:#f92672">&lt;=</span> rotate_right;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span> <span style="color:#a6e22e">PMUX</span>;
+</span></span></code></pre></div>
+</div>    
+<div class="column">
+    <p>Deze VHDL code probeert een beschrijving te geven van een multiplexer.</p>
+<p>De sensitivy list is correct, maar <strong>niet alle</strong> keuze opties zijn beschreven.</p>
+<!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
+<div class="notices note" ><p>Wat ontbreekt?</p>
+</div>
+</div>    
+</div>
+<div class="multiHcolumn">
+<div class="column">
+    <p>In dit voorbeeld is de sensitivy list volledig <strong>en</strong> zijn alle opties van result(0) gecovered.</p>
+<!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
+<div class="notices note" ><p>Wat is de waarde van <strong>even</strong> in het geval dat result(0) 1 is?</p>
+</div>
+</div>    
+<div class="column">
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span>    <span style="color:#a6e22e">PEVENODD</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(result)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> result(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#66d9ef">then</span> 
+</span></span><span style="display:flex;"><span>            even <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> 
+</span></span><span style="display:flex;"><span>            odd <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span> <span style="color:#a6e22e">PEVENODD</span>;
 </span></span></code></pre></div>
 </div>    
 </div>
 <!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
 
-<div class="notices tip" ><p>Let er op dat het signaal van een button eerst laag moet worden vóórdat er een nieuw signal geïnterpreteerd kan worden!!</p>
+<div class="notices warning" ><p>Even voor de zekerheid &hellip; <strong>latches moeten vermeden worden</strong></p>
 </div>
 
-<p><a href="../../hdlsrc/700/muziek_speler_controle_tb.vhd" download>Hier</a> vind je een testbench.</p>
 
 </article>
 
@@ -2250,6 +2296,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2264,6 +2311,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2409,21 +2459,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2441,85 +2476,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2612,30 +2570,10 @@
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -2680,11 +2618,42 @@
             
         
                     
+            
+        
+                    
                         
             
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2705,8 +2674,85 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2952,10 +2998,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../700_fsm/730_voorbeeld_timer/" title="Voorbeeld verkeerslicht timer"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../400_sequentiele_logica/450_morereg/" title="Meerdere registers"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../800_extras/" title="Extras" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../400_sequentiele_logica/455_arrays/" title="Arrays" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
