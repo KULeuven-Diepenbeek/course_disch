@@ -17,7 +17,7 @@ Voor deze opdracht is het de bedoeling om zelf de **processor** te maken. Je mag
 {{% /column %}}
 {{% /multiHcolumn %}}
 
-De controle blok kan <a href="/hdlsrc/500/control.vhd" download>hier</a> gedownload worden. Hieronder vind je een woordje uitleg over de poorten van de controle blok.
+<!-- Hieronder vind je een woordje uitleg over de poorten van de controle blok.
 
 | Poort naam | Dimensie en richting | Bron / Doel | Uitleg |
 |---|---|---|---|
@@ -32,4 +32,4 @@ De controle blok kan <a href="/hdlsrc/500/control.vhd" download>hier</a> gedownl
 | alu_op | 3-bit output | naar ALU | controle-signaal de operatie van de ALU kiest |
 | alu_arith_logic_b | 1-bit output | naar ALU | controle-signaal dat het onderscheid maakt tussen een arithmetische ('1') en een logische ('0') operatie |
 | alu_signed_unsigned_b | 1-bit output | naar ALU | controle-signaal dat het onderscheid maakt tussen een signed ('1') en een unsigned ('0') operatie |
-| second_operand_selector | 1-bit output | naar multiplexer | controle-signaal dat de selectie maakt van de MUX ('1' voor de 32-bit immediate bus ; '0' voor de tweede data uitgang van register file), die de tweede operand bepaalt van de ALU |
+| second_operand_selector | 1-bit output | naar multiplexer | controle-signaal dat de selectie maakt van de MUX ('1' voor de 32-bit immediate bus ; '0' voor de tweede data uitgang van register file), die de tweede operand bepaalt van de ALU | -->
