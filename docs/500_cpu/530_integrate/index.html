@@ -12,22 +12,22 @@
     <title>Integratie :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1773308863" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1773308863" rel="stylesheet">
-    <link href="../../css/hybrid.css?1773308863" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1773308863" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1773308863" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1773308863" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1773308863" rel="stylesheet">
-    <link href="../../css/theme.css?1773308863" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1773308863" rel="stylesheet">
-    <link href="../../css/devselector.css?1773308863" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1773308863" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1773308863" rel="stylesheet">
+    <link href="../../css/nucleus.css?1773410578" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1773410578" rel="stylesheet">
+    <link href="../../css/hybrid.css?1773410578" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1773410578" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1773410578" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1773410578" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1773410578" rel="stylesheet">
+    <link href="../../css/theme.css?1773410578" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1773410578" rel="stylesheet">
+    <link href="../../css/devselector.css?1773410578" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1773410578" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1773410578" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1773308863"></script>
-    <script src="../../js/devselector.js?1773308863"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1773410578"></script>
+    <script src="../../js/devselector.js?1773410578"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1773308863"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1773308863"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1773410578"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1773410578"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1773308863"></script>
+<script type="text/javascript" src="../../js/search.js?1773410578"></script>
 
     
   </div>
@@ -1099,27 +1099,6 @@
 
             
           
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/500_cpu/560_testbench/" title="Opdracht - testbench" class="dd-item ">
-        <a href="../../500_cpu/560_testbench/">
-        <i class='fas fa-book'></i> Opdracht - testbench
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
         
         </ul>
       
@@ -1738,7 +1717,12 @@
                 </div>
                 
                     <div class="progress">
-  <div class="wrapper toc"><nav id="TableOfContents"></nav></div>
+  <div class="wrapper toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#voorbeeld-van-een-programma">Voorbeeld van een &ldquo;programma&rdquo;</a></li>
+    <li><a href="#assembly-instructie">Assembly instructie</a></li>
+  </ul>
+</nav></div>
 </div>
 
                 
@@ -1769,41 +1753,43 @@
 <p>Met het laatste ontbrekende bouwblokje (de program counter (PC)) geïmplementeerd, is het tijd om alles te integreren.</p>
 <figure><img src="../../images/500/processor_blockdiagram_v2.png">
 </figure>
-<p>Een RISC-V processor heeft verschillende types van instructies. Om de zaken niet nodeloos complex te maken, wordt er voor deze implementatie enkel naar R-type (een deel van) de I-type instructies gekeken.</p>
+<p>Een RISC-V processor heeft verschillende types van instructies. Om de zaken niet nodeloos complex te maken, wordt er voor deze implementatie enkel naar R-type, (een deel van de) I-type en (een deel van de) S-type instructies gekeken.</p>
 <ul>
 <li>Een <strong>I-type</strong> instructie (althans het deel van de I-types die in scoop ligt) voert een ALU operatie uit met <u>1 register en 1 argument</u></li>
 <li>Een <strong>R-type</strong> instructie voert een ALU operatie uit met <u>2 registers</u></li>
+<li>Een <strong>S-type</strong> instructie slaat een 32-bit waarde (of een deel ervan) op in extern geheugen</li>
 </ul>
+<h2 id="voorbeeld-van-een-programma">Voorbeeld van een &ldquo;programma&rdquo;</h2>
 <p>Hier zijn 4 assembly instructies. Hoe deze uitgevoerd worden door de processor wordt hieronder uitgelegd.</p>
 <div class="multiHcolumn">
 <div class="column">
     <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-armasm" data-lang="armasm"><span style="display:flex;"><span>0x0:    addi <span style="color:#a6e22e">x1</span>, <span style="color:#a6e22e">x0</span>, <span style="color:#960050;background-color:#1e0010">1</span>
 </span></span><span style="display:flex;"><span>0x4:    addi <span style="color:#a6e22e">x2</span>, <span style="color:#a6e22e">x0</span>, <span style="color:#960050;background-color:#1e0010">1</span>
 </span></span><span style="display:flex;"><span>0x8:    add <span style="color:#a6e22e">x3</span>, <span style="color:#a6e22e">x2</span>, <span style="color:#a6e22e">x1</span>
-</span></span><span style="display:flex;"><span>0xC:    add <span style="color:#a6e22e">x4</span>, <span style="color:#a6e22e">x3</span>, <span style="color:#a6e22e">x2</span>
+</span></span><span style="display:flex;"><span>0xC:    add <span style="color:#a6e22e">x0</span>, <span style="color:#a6e22e">x0</span>, <span style="color:#a6e22e">x0</span>
 </span></span></code></pre></div>
 </div>    
 <div class="column">
     <ol>
-<li>Tel 1 op bij register 0 (x0) en sla het resultaat op in register 1 (x1)</li>
-<li>Tel 1 op bij register 0 (x0) en sla het resultaat op in register 2 (x2)</li>
-<li>Tel de inhouden van registers 2 (x2) en 1 (x1) op en sla de som op in register 3 (x3)</li>
-<li>Tel de inhouden van registers 3 (x3) en 2 (x2) op en sla de som op in register 4 (x4)</li>
+<li>Tel <strong>1</strong> op bij register 0 (<strong>x0</strong>) en sla het resultaat op in register 1 (<strong>x1</strong>)</li>
+<li>Tel <strong>1</strong> op bij register 0 (<strong>x0</strong>) en sla het resultaat op in register 2 (<strong>x2</strong>)</li>
+<li>Tel de inhouden van registers 2 (<strong>x2</strong>) en 1 (<strong>x1</strong>) op en sla de som op in register 3 (<strong>x3</strong>)</li>
+<li>Tel de inhouden van registers 0 (<strong>x0</strong>) en 0 (<strong>x0</strong>) op en sla de som op in register 0 (<strong>x0</strong>) (Dit is een <em>NOP</em>)</li>
 </ol>
 </div>    
 </div>
 <p>De <strong>PC</strong> start op 0x0. Deze waarde wordt aan het <strong>instructie geheugen</strong> gegeven en deze stuurt de instructie <code>addi x1, x0, 1</code> terug. De <strong>control</strong> blok ontleedt de instructie en maakt de bijpassende controle-signalen:</p>
 <ul>
-<li>de selectie-signalen van de register file voor beide operanden</li>
-<li>de keuze van de operatie van de ALU</li>
+<li>de selectie-signalen van de register file voor beide operanden (<strong>src1</strong> en <strong>src2</strong>)</li>
+<li>de keuze van de operatie van de ALU (<strong>ALUOp</strong>)</li>
 <li>de keuze voor de tweede operand die naar de ALU gaat</li>
 <li>de aansturing van de <em>write-enable</em> van de register file</li>
-<li>de aansturing van de register selectie voor de opslag van het resultaat</li>
+<li>de aansturing van de register selectie voor de opslag van het resultaat (<strong>dest</strong>)</li>
 <li>de correcte instructie voor de PC</li>
 </ul>
 <p>Hierdoor geeft de <strong>register file</strong> de juiste waardes, ontvangt de <strong>ALU</strong> de correcte operanden om de instructie op uit te voeren en wordt het resultaat op de juiste plaats weggeschreven.</p>
 <p>De tabel hieronder illustreert hoe de waardes veranderen in de implementatie.</p>
-<figure><img src="../../images/500/table.png">
+<figure><img src="../../images/500/assembly_demo.gif">
 </figure>
 <p>In simulatie ziet er dit ongeveer als volgt uit:
 <figure>
@@ -1817,6 +1803,16 @@
 <div class="notices note" ><p>De inhoud van register 0 (x0) MAG nooit overschreven worden en zal altijd de waarde 0x0 hebben.</p>
 </div>
 
+<h2 id="assembly-instructie">Assembly instructie</h2>
+<p>Tenslotte is er nog 1 <em>laagje</em> dat bekeken moet worden. De instructie <code>add x3, x1, x2</code> is een regel assembly code. De processor begrijp echter enkel <strong>machine-language</strong>.</p>
+<p><figure>
+	<a href="../../images/500/parse.png" data-featherlight="image">
+		<img src="../../images/500/parse.png"  alt="Simulation" >
+	</a>
+	
+</figure>
+</p>
+<p>Experimenteer er <a href="https://luplab.gitlab.io/rvcodecjs/#q=add&#43;x3,&#43;x1,&#43;x2&amp;abi=false&amp;isa=AUTO" target="_blank">hier</a> op los.</p>
 
 </article>
 
@@ -2564,22 +2560,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -2973,15 +2953,15 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1773308863"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1773308863"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1773308863"></script>
-    <script src="../../js/jquery.sticky.js?1773308863"></script>
-    <script src="../../js/featherlight.min.js?1773308863"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1773308863"></script>
-    <script src="../../js/learn.js?1773308863"></script>
-    <script src="../../js/hugo-learn.js?1773308863"></script>
-    <script src="../../js/mermaid.min.js?1773308863"></script>
+    <script src="../../js/clipboard.min.js?1773410578"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1773410578"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1773410578"></script>
+    <script src="../../js/jquery.sticky.js?1773410578"></script>
+    <script src="../../js/featherlight.min.js?1773410578"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1773410578"></script>
+    <script src="../../js/learn.js?1773410578"></script>
+    <script src="../../js/hugo-learn.js?1773410578"></script>
+    <script src="../../js/mermaid.min.js?1773410578"></script>
     <script>
     window.MathJax = {
       chtml: {
