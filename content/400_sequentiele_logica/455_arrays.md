@@ -44,13 +44,13 @@ Soms voelt het als een nadeel dat VHDL stronly typed is, maar dat kan ook in het
 ```
 {{% /column %}}
 {{% column %}}
-Deze lijn VHDL-code **definieert een nieuw type: T_memory**. Het type is een array met 64 posities van STD_LOGIC_VECTORs met lengte 32.
+Deze lijn VHDL-code **definieert een nieuw type: T_memory**. Het type is een array met 64 posities van STD_LOGIC_VECTORs met lengte 32.<br/>De plaats in het VHDL bestand waar deze typedef moet komen is **tussen de architecture en de begin**.
 {{% /column %}}
 {{% /multiHcolumn %}}
 
 <!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
 {{% notice info %}}
-Merk op dat de STD_LOGIC_VECTOR gedefinieerd is met **downto** terwijl de array gedefinieerd is met **to**. Dit is echter geen must en het mogelijk om andere combinaties te maken.
+Merk op dat de STD_LOGIC_VECTOR gedefinieerd is met **downto** terwijl de array gedefinieerd is met **to**. Dit is echter geen must en het is mogelijk om andere combinaties te maken.
 {{% /notice %}}
 
 
@@ -69,7 +69,7 @@ Deze lijn VHDL-code **definieert een signaal van het type T_memory**. Het type i
 <hr/>
 {{% multiHcolumn %}}
 {{% column %}}
-Net zoals in software, kan een element uit een array geselecteerd worden mbv indices. Let hierbij op dat er *ronde* haakjes gebruikt worden <div class="mark"> ( ) </div> en geen *vierkante* haakjes <div class="mark"> [ ] </div>.
+Net zoals in software, kan een element uit een array geselecteerd worden mbv indices. Deze indices *moeten* van het type **integer** zijn. Let hierbij op dat er *ronde* haakjes gebruikt worden <div class="mark"> ( ) </div> en geen *vierkante* haakjes <div class="mark"> [ ] </div>.
 
 ```VHDL
     mijn_DISCH_geheugen(5) <= x"FEDCBA98";

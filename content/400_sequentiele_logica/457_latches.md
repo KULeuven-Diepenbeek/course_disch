@@ -2,7 +2,7 @@
 title: 'Latches'
 pre: "<i class='fas fa-book'></i> "
 chapter: false
-weight: 453
+weight: 457
 draft: false
 ---
 
@@ -28,7 +28,7 @@ Een **latch** zal tijdens de positieve (of negatieve) **halve klok periode** een
 {{% /column %}}
 {{% /multiHcolumn %}}
 
-Alhoewel een latch wel de bedoeling kan zijn bij het design van een aSIC, bij het design voor een FPGA zijn Latches **absoluut te vermijden**. De tools kunnen heel slecht om (timing gewijs) met latches en meestal zijn ze ook niet gewenst. 
+Alhoewel een latch wel de bedoeling kan zijn bij het design van een ASIC, bij het design voor een FPGA zijn Latches **absoluut te vermijden**. De tools kunnen heel slecht om (timing gewijs) met latches en meestal zijn ze ook niet gewenst. 
 
 ## Onbedoelde latches
 
@@ -81,5 +81,5 @@ Wat is de waarde van **even** in het geval dat result(0) 1 is?
 
 <!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
 {{% notice warning %}}
-Even voor de zekerheid ... **latches moeten vermeden worden**
+Even voor de zekerheid ... **latches moeten vermeden worden bij FPGA design**
 {{% /notice %}}

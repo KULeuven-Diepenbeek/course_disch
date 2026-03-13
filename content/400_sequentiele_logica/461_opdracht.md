@@ -12,8 +12,8 @@ Na het maken van de ALU in de vorige opdracht, moet er voor opdracht 4 een **Reg
 
 Een register file is een onderdeel van een processor dat eigenlijk niet veel meer bevat dan **een set registers**. De specificaties van de register file voor deze opdracht zijn als volgt:
 
-* de data-breedte is 32 bits
-* er zijn 8 registers in de register file
+* de data-breedte is 32 bits, in te stellen mbv de generic **G_WIDTH**
+* het aantal registers wordt bepaald door de generic **G_REGCOUNT_LOG2** en er zijn <b>2<sup>G_REGCOUNT_LOG2</sup></b> registers in de register file.
 * de reg file beschikt over 2 lees-poorten
   * src1 & data1
   * src2 & data2
@@ -27,6 +27,11 @@ Een register file is een onderdeel van een processor dat eigenlijk niet veel mee
 {{% figure src="/images/400/wavedrom.png" title="Waveform van de register file"  %}}
 {{% /column %}}
 {{% /multiHcolumn %}}
+
+<!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
+{{% notice tip %}}
+In VHDL kan een machtsverheffing gedaan worden (voor indices en metadata) door de operator ** te gebruiken. Bv 2**3 wordt vertaald naar 8
+{{% /notice %}}
 
 
 
@@ -74,7 +79,7 @@ Het zou kunnen dat het bovenstaande schema er nogal "druk en overweldigend" uitz
 
 {{% multiHcolumn %}}
 {{% column %}}
-{{% figure src="/images/400/regfile.png" title="Blokschema van de register file"  %}}
+{{% figure src="/images/400/regfile.png" %}}
 {{% /column %}}
 {{% column %}}
 {{% figure src="/images/400/regfile_alpha.png" %}}
@@ -89,14 +94,15 @@ Het zou kunnen dat het bovenstaande schema er nogal "druk en overweldigend" uitz
 
 {{% multiHcolumn %}}
 {{% column %}}
+Het volledige ontwerp.
 {{% /column %}}
 {{% column %}}
-De tweede leespoort, is gewoon een kopie van de eerste leespoort.
+De tweede leespoort, is een kopie (inclusief multiplexer) van de eerste leespoort.
 {{% /column %}}
 {{% column %}}
 De tweede leespoort weglaten is een gemakkelijke tussenstap.
 {{% /column %}}
 {{% column %}}
-De n-1 registers zijn allemaal gelijkaardig aan het n<sup>e</sup> register.
+De 2<sup>G_REGCOUNT_LOG2</sup> registers zijn allemaal gelijkaardig aan met enkel een verschil in het *we* signaal.
 {{% /column %}}
 {{% /multiHcolumn %}}
