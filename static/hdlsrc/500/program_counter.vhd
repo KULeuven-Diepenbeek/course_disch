@@ -2,6 +2,7 @@ entity program_counter is
     port(
         clock : in STD_LOGIC;
         reset : in STD_LOGIC;
+        ce : in STD_LOGIC;
         abs_rel_b: in std_logic;
         immediate_four_b: in std_logic;
         rs1 : in std_logic_vector(31 downto 0);

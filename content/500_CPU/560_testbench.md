@@ -3,19 +3,28 @@ title: 'Opdracht - testbench'
 chapter: false
 weight: 560
 pre: "<i class='fas fa-book'></i> "
-draft: true
+draft: false
 ---
 
-Zoals bij voorgaande opdrachten, wordt ook bij deze opdracht een testbench voorzien. Een blokdiagramma van de testbench ziet er als volgt uit en kan <a href="/hdlsrc/500/processor_tb.vhd" download>hier</a> worden gedownload.
+Zoals bij voorgaande opdrachten, wordt ook bij deze opdracht een testbench voorzien.
 
-{{% figure src="/images/500/testbench.png" title="" %}}
 
-Het *"programma"* zorgt ervoor dat het begin van de Fibonnacci reeks berekend wordt in de eerste 8 registers.
+{{% multiHcolumn %}}
+{{% column %}}
+{{% figure src="/images/500/kr.gif" title="" %}}
+{{% /column %}}
+{{% column %}}
+Het **"programma"** dat in de firmware staat zorgt dat er een waarde in een register geschreven wordt en dat dit horizontaal heen en weer loopt. Het programma is op zo een manier geschreven dat het bestaat uit 64 instructies. Dit heeft tot effect dat enkel de 8 LSBs van de 32-bit program counter bepalen welke instructie uitgevoerd wordt. 
 
-{{% figure src="/images/500/simulation_fib.png" title="" %}}
+Daardoor zal, bij de overgang van 1111'1100 naar 1'0000'0000, het programma in een oneindige loop komen.
 
-<!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
-{{% notice tip %}}
-Je kan in de simulator de **Radix** aanpassen. Hierdoor kan de weergave op "Unsigned decimal" zetten.
-{{% /notice %}}
+Wanneer dit programma gesimuleerd wordt, zien de waveforms er uit zoals in onderstaande figuure. Het programma zelf staat, louter ter info, onderaan deze pagina en is geschreven in **assembly**.
+{{% /column %}}
+{{% /multiHcolumn %}}
+
+{{% figure src="/images/500/simulation_kr.png" title="" %}}
+
+{{< include_file "/static/hdlsrc/500/knight_rider.S" "S" >}}
+
+
 

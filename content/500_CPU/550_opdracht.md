@@ -6,14 +6,25 @@ weight: 540
 draft: false
 ---
 
-Voor deze opdracht is het de bedoeling om zelf de **processor** te maken. Je mag, maar dit is niet verplicht, eerder gebruikte code (voor ALU, program counter, ...) hergebruiken.
+Voor deze opdracht is het de bedoeling om zelf de **processor** te maken. Je kan eerder gebruikte code (voor ALU, program counter, ...) hergebruiken. 
 
 {{% multiHcolumn %}}
 {{% column %}}
-![RISC-V](/images/500/processor_blockdiagram_v3.png)
+![RISC-V](/images/500/processor_blockdiagram_v4.png)
 {{% /column %}}
 {{% column %}}
 {{< include_file "/static/hdlsrc/500/entity.vhd" "vhdl" >}}
+{{% /column %}}
+{{% /multiHcolumn %}}
+
+Om te testen of de processor correct werkt, gebruiken we deze in een **microcontroller**. De code hiervan krijgen jullie gegeven.
+
+{{% multiHcolumn %}}
+{{% column %}}
+![RISC-V](/images/500/microcontroller.png)
+{{% /column %}}
+{{% column %}}
+{{< include_file "/static/hdlsrc/500/microcontroller.vhd" "vhdl" >}}
 {{% /column %}}
 {{% /multiHcolumn %}}
 

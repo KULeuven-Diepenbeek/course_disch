@@ -66,3 +66,12 @@ Tenslotte is er nog 1 *laagje* dat bekeken moet worden. De instructie ```add x3,
 ![Simulation](/images/500/parse.png)
 
 Experimenteer er [hier](https://luplab.gitlab.io/rvcodecjs/#q=add+x3,+x1,+x2&abi=false&isa=AUTO) op los.
+
+## Chip enable
+
+Om de processor te laten werken (of even stil te zetten), wordt er een **chip enable** (ce) signaal toegevoegd.
+
+<!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
+{{% notice tip %}}
+Denk zelf na waar je dit signaal moet integreren om het gewenste effect te krijgen.
+{{% /notice %}}
