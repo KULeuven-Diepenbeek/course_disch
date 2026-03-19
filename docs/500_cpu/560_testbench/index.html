@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Wat is een ALU? :: Digitale Elektronische Schakelingen</title>
+    <title>Opdracht - testbench :: Digitale Elektronische Schakelingen</title>
 
     
     <link href="../../css/nucleus.css?1773906249" rel="stylesheet">
@@ -44,7 +44,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../../300_alu/310_intro_alu/">
+  <body class="" data-url="../../500_cpu/560_testbench/">
     <nav id="sidebar" class="">
 
 
@@ -514,7 +514,7 @@
   
     
     <li data-nav-id="/300_alu/" title="3. ALU" class="dd-item
-        parent
+        
         
         
         ">
@@ -540,7 +540,7 @@
  
   
     
-      <li data-nav-id="/300_alu/310_intro_alu/" title="Wat is een ALU?" class="dd-item active">
+      <li data-nav-id="/300_alu/310_intro_alu/" title="Wat is een ALU?" class="dd-item ">
         <a href="../../300_alu/310_intro_alu/">
         <i class='fas fa-book'></i> Wat is een ALU?
         
@@ -998,7 +998,7 @@
   
     
     <li data-nav-id="/500_cpu/" title="5. RISC-V-like CPU" class="dd-item
-        
+        parent
         
         
         ">
@@ -1108,7 +1108,7 @@
  
   
     
-      <li data-nav-id="/500_cpu/560_testbench/" title="Opdracht - testbench" class="dd-item ">
+      <li data-nav-id="/500_cpu/560_testbench/" title="Opdracht - testbench" class="dd-item active">
         <a href="../../500_cpu/560_testbench/">
         <i class='fas fa-book'></i> Opdracht - testbench
         
@@ -1726,7 +1726,7 @@
             
           
           
-            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../300_alu/'>3. ALU</a> > Wat is een ALU?
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../500_cpu/'>5. RISC-V-like CPU</a> > Opdracht - testbench
           
         
           
@@ -1753,7 +1753,7 @@
           
             <h1>
               
-              Wat is een ALU?
+              Opdracht - testbench
             </h1>
           
 
@@ -1766,38 +1766,92 @@
 
 
 <article class='content'>
-<p>Het doel van dit labo is om uiteindelijk een werkende RISC-V processor te maken, ook al is het in een simpele vorm. In dit OPO gaan we de beschrijving uiteraard wel maken in VHDL.</p>
-<p>Eén van de componenten die in iedere processor zit is een <strong>Arithmetic Logic Unit (ALU)</strong>. Een ALU neemt <strong>2 (of 1) input(s)</strong> en voert hier een bepaalde instructie mee uit. Deze instructie kan een logische operatie zijn zoals AND, OR, XOR,.. of een wiskundige operatie zoals een optelling of een verschil.</p>
-<figure><img src="../../images/300/ALU_principle.png"><figcaption>
-      <h4>Principe schema van een ALU</h4>
-    </figcaption>
-</figure>
-<p>De ALU die gebruikt wordt in de RISC-V processor, biedt de mogelijkheid om 10 verschillende instructies uit te voeren. De operatie die uitgevoerd wordt, wordt omgeschreven als <em>f(x,y)</em>.</p>
+<p>Zoals bij voorgaande opdrachten, wordt ook bij deze opdracht een testbench voorzien.</p>
 <div class="multiHcolumn">
 <div class="column">
-    <h3 id="aritmetische-operaties">Aritmetische operaties</h3>
-<table>
-<tr><th>f(x,y) = </th><th>Omschrijving</th></tr>
-<tr><td>&nbsp; &nbsp; x+y</td><td>&nbsp; &nbsp; Het resultaat is de som van x en y</td></tr>
-<tr><td>&nbsp; &nbsp; x-y</td><td>&nbsp; &nbsp; Het resultaat is het verschil van x en y</td></tr>
-</table>
+    <figure><img src="../../images/500/kr.gif">
+</figure>
 </div>    
 <div class="column">
-    <h3 id="logische-operaties">Logische operaties</h3>
-<table>
-<tr><th>f(x,y) = </th><th>Omschrijving</th></tr>
-<tr><td>&nbsp; &nbsp; x&y</td><td>&nbsp; &nbsp; Het resultaat is <u>x AND y</u></td></tr>
-<tr><td>&nbsp; &nbsp; x|y</td><td>&nbsp; &nbsp; Het resultaat is <u>x OR y</u></td></tr>
-<tr><td>&nbsp; &nbsp; x^y</td><td>&nbsp; &nbsp; Het resultaat is <u>x XOR y</u></td></tr>
-<tr><td>&nbsp; &nbsp; x&lt;&lt;y</td><td>&nbsp; &nbsp; Het resultaat is <u>x</u>, y posities naar links geschoven en aangevuld met 0-en</td></tr>
-<tr><td>&nbsp; &nbsp; x&gt;&gt;y</td><td>&nbsp; &nbsp; Het resultaat is <u>x</u>, y posities naar rechts geschoven en aangevuld met 0-en</td></tr>
-<tr><td>&nbsp; &nbsp; x&gt;&gt;y</td><td>&nbsp; &nbsp; Het resultaat is <u>x</u>, y posities naar rechts geschoven (mét tekenbehoud)</td></tr>
-<tr><td>&nbsp; &nbsp; (x&lt;y)</td><td>&nbsp; &nbsp; Het resultaat is <u>1</u> als x&lt;y, anders <u>0</u></td></tr>
-<tr><td>&nbsp; &nbsp; (x&lt;y)<sub>U</sub></td><td>&nbsp; &nbsp; Het resultaat is <u>1</u> als x&lt;y, anders <u>0</u>. X en y worden gezien als <b>unsigned</b></td></tr>
-</table>
+    <p>Het <strong>&ldquo;programma&rdquo;</strong> dat in de firmware staat zorgt dat er een waarde in een register geschreven wordt en dat dit horizontaal heen en weer loopt. Het programma is op zo een manier geschreven dat het bestaat uit 64 instructies. Dit heeft tot effect dat enkel de 8 LSBs van de 32-bit program counter bepalen welke instructie uitgevoerd wordt.</p>
+<p>Daardoor zal, bij de overgang van 1111'1100 naar 1'0000'0000, het programma in een oneindige loop komen.</p>
+<p>Wanneer dit programma gesimuleerd wordt, zien de waveforms er uit zoals in onderstaande figuure. Het programma zelf staat, louter ter info, onderaan deze pagina en is geschreven in <strong>assembly</strong>.</p>
 </div>    
 </div>
-<!-- Wie goed telt, ziet dat er 18 verschillende instructies mogelijk zijn. Om 18 instructies binair weer te geven hebben we 5 bits nodig ( &#8968;log<sub>2</sub>18&#8969; = 5 ). -->
+<figure><img src="../../images/500/simulation_kr.png">
+</figure>
+
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-S" data-lang="S"><span style="display:flex;"><span>.global start
+</span></span><span style="display:flex;"><span>.section .init, <span style="color:#e6db74">&#34;ax&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>start<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    addi x1, x0, <span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    slli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    slli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    slli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    slli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    slli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    slli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    slli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    slli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    slli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    slli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    slli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    slli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    slli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    slli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    slli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    srai x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    srli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    srli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    srli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    srli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    srli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    srli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    srli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    srli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    srli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    srli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    srli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    srli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    srli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    srli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>    srli x1, x1, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    sw x1, <span style="color:#ae81ff">0</span>(x0)
+</span></span><span style="display:flex;"><span>end<span style="color:#f92672">:</span>
+</span></span></code></pre></div>
 
 </article>
 
@@ -2127,7 +2181,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2140,7 +2193,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -2157,9 +2209,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2470,6 +2519,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2482,6 +2532,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2547,6 +2600,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2565,6 +2619,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2938,10 +2995,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../300_alu/" title="3. ALU"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../500_cpu/550_opdracht/" title="Opdracht 5: Processor"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../300_alu/315_2scompliment/" title="2&#39;s Compliment" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../600_binst/" title="6. B-instructies" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
