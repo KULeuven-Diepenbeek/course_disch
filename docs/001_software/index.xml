@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ontwikkel omgeving on Digitale Elektronische Schakelingen</title>
-    <link>http://localhost:1313/course_disch/001_software/</link>
+    <link>https://kuleuven-diepenbeek.github.io/course_disch/001_software/</link>
     <description>Recent content in Ontwikkel omgeving on Digitale Elektronische Schakelingen</description>
     <generator>Hugo</generator>
     <language>nl-be</language>
     <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
     <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
-    <atom:link href="http://localhost:1313/course_disch/001_software/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kuleuven-diepenbeek.github.io/course_disch/001_software/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Versiebeheer</title>
-      <link>http://localhost:1313/course_disch/001_software/010_versiebeheer/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/001_software/010_versiebeheer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>http://localhost:1313/course_disch/001_software/010_versiebeheer/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/001_software/010_versiebeheer/</guid>
       <description>&lt;p&gt;Er worden masaal veel documenten geproduceerd, geëditeerd en gedeeld. Dit geldt ook voor programma-code. Zoals hiervoor vermeld, is &lt;strong&gt;HDL-code&lt;/strong&gt; niets meer dan simpele tekstdocumenten, analoog aan een C- of python-bestand. Om door het bos de bomen nog te zien, is er software beschikbaar om hiermee om te gaan. De meest gekende software hiervoor is ongetwijfeld: &lt;strong&gt;Git&lt;/strong&gt;. Het gebruik van &lt;strong&gt;Git&lt;/strong&gt; wordt gedoceerd als onderdeel van &lt;em&gt;Electronic Engineering Skills (4952)&lt;/em&gt;. Aangezien Git gebruikt wordt binnen dit opleidingsonderdeel, volgt hier een &lt;em&gt;primer&lt;/em&gt; van nodige principes voor deze labo-reeks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Alternatieve omgeving</title>
-      <link>http://localhost:1313/course_disch/001_software/011_alternatief/</link>
+      <link>https://kuleuven-diepenbeek.github.io/course_disch/001_software/011_alternatief/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
-      <guid>http://localhost:1313/course_disch/001_software/011_alternatief/</guid>
+      <guid>https://kuleuven-diepenbeek.github.io/course_disch/001_software/011_alternatief/</guid>
       <description>&lt;p&gt;Als het niet mogelijk is om zelf Vivado te installeren op de jouw laptop, wordt er een alternatieve omgeving aangeboden. Hiervoor dien je wel enkele kleine stukjes software geïnstalleerd worden op jullie eigen machines.&lt;/p&gt;&#xA;&lt;div style=&#34;float: right; margin-right: 50px;&#34;&gt;&#xA;&lt;h2&gt; tl;dr&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt; installeer &lt;a href=&#34;https://mobaxterm.mobatek.net/download.html&#34;&gt;MobaXterm&lt;/a&gt; of &lt;a href=&#34;https://putty.org/index.html&#34;&gt;Putty&lt;/a&gt;&#xA;&lt;li&gt; installeer &lt;a href=&#34;https://www.tightvnc.com/download.php&#34;&gt;TightVNC-client&lt;/a&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;&lt;figure&gt;&#xA;&#x9;&lt;a href=&#34;../images/001/setup.png&#34; data-featherlight=&#34;image&#34;&gt;&#xA;&#x9;&#x9;&lt;img src=&#34;../images/001/setup.png&#34;  alt=&#34;Setup&#34; &gt;&#xA;&#x9;&lt;/a&gt;&#xA;&#x9;&#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Er is een server beschikbaar gemaakt waarop Vivado v2020.2 geïnstalleerd is. Deze server is &lt;strong&gt;digitalE&lt;/strong&gt;(.esands.vpn) en is bereikbaar via 10.185.158.204 (of via de hostname zelf). Net als voor de Forgejo server te bereiken dient er een eerst een connectie gemaakt te worden met de &lt;strong&gt;VPN server&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
