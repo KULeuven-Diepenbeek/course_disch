@@ -26,5 +26,4 @@ Wanneer dit programma gesimuleerd wordt, zien de waveforms er uit zoals in onder
 
 {{< include_file "/static/hdlsrc/500/knight_rider.S" "S" >}}
 
-
-
+{{< youtube a_1sW6NEQq0 >}}

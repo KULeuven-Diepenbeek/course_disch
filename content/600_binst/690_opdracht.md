@@ -19,3 +19,4 @@ In deze opdracht wordt de processor uitgebreid tot een (quasi) volledige RISCV32
 {{% /multiHcolumn %}}
 
 
+{{< youtube LSVpixT2L-Y >}}
