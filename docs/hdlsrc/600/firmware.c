@@ -13,7 +13,7 @@ void main(void) {
 
     int i;
 
-    for (i=0;i<10;i++) {
+    for (i=0;i<(1<<5);i++) {
         GPIO_LEDS = i;
     }   
 

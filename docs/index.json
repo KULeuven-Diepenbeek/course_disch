@@ -403,7 +403,7 @@
 	"title": "Opdracht 6: RISCV32i",
 	"tags": [],
 	"description": "",
-	"content": "In deze opdracht wordt de processor uitgebreid tot een (quasi) volledige RISCV32i.\nFirmware #include \u0026lt;stdio.h\u0026gt; #define GPIO_BUTTONS_BASEADDRESS 0x80000000 #define GPIO_LEDS_BASEADDRESS 0x80000004 #define GPIO_SWITCHES_BASEADDRESS 0x80000008 #define GPIO_BUTTONS (*(volatile unsigned int*)GPIO_BUTTONS_BASEADDRESS) #define GPIO_LEDS (*(volatile unsigned int*)GPIO_LEDS_BASEADDRESS) #define GPIO_SWITCHES (*(volatile unsigned int*)GPIO_SWITCHES_BASEADDRESS) void main(void) { int i; for (i=0;i\u0026lt;10;i++) { GPIO_LEDS = i; } GPIO_LEDS = 0x00000000; for (i=0;i\u0026lt;100;i++) { while (GPIO_BUTTONS == 0); // wait for button press GPIO_LEDS = GPIO_SWITCHES; while (GPIO_BUTTONS != 0); // wait for button release } GPIO_LEDS = 0xAAAAAAAA; while(1); } "
+	"content": "In deze opdracht wordt de processor uitgebreid tot een (quasi) volledige RISCV32i.\nFirmware #include \u0026lt;stdio.h\u0026gt; #define GPIO_BUTTONS_BASEADDRESS 0x80000000 #define GPIO_LEDS_BASEADDRESS 0x80000004 #define GPIO_SWITCHES_BASEADDRESS 0x80000008 #define GPIO_BUTTONS (*(volatile unsigned int*)GPIO_BUTTONS_BASEADDRESS) #define GPIO_LEDS (*(volatile unsigned int*)GPIO_LEDS_BASEADDRESS) #define GPIO_SWITCHES (*(volatile unsigned int*)GPIO_SWITCHES_BASEADDRESS) void main(void) { int i; for (i=0;i\u0026lt;(1\u0026lt;\u0026lt;5);i++) { GPIO_LEDS = i; } GPIO_LEDS = 0x00000000; for (i=0;i\u0026lt;100;i++) { while (GPIO_BUTTONS == 0); // wait for button press GPIO_LEDS = GPIO_SWITCHES; while (GPIO_BUTTONS != 0); // wait for button release } GPIO_LEDS = 0xAAAAAAAA; while(1); } "
 },
 {
 	"uri": "https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/",
