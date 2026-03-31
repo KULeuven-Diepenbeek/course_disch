@@ -1,11 +1,11 @@
 ---
-title: '6. B-instructies'
+title: '6. RISBJU-instructies'
 chapter: true
 weight: 600
 draft: false
 ---
 
-# B-instructies
+# RISBJU-instructies
 
 ![Code](/images/pexels/pexels-jill-wellington-1638660-40815.jpg)
 

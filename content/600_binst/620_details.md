@@ -33,17 +33,18 @@ Indien er geen jump is, is de waarde van de program counter de som:
 
 Met dit inzicht, een blaadje papier met een potlood (en een gom), enkele tassen koffie of thee (of water), kan een design gemaakt worden. Bijvoorbeeld:
 
-{{% multiHcolumn %}}
+{{% figure src="/images/600/PC_design.png" title="" %}}
+
+<!-- {{% multiHcolumn %}}
 {{% column %}}
 {{% figure src="/images/600/PC_design_2.png" title="" %}}
 {{% /column %}}
 {{% column %}}
-{{% figure src="/images/600/PC_design.png" title="" %}}
-{{% /column %}}
-{{% column %}}
 {{% figure src="/images/600/PC_design_3.png" title="" %}}
 {{% /column %}}
-{{% /multiHcolumn %}}
+{{% column %}}
+{{% /column %}}
+{{% /multiHcolumn %}} -->
 
 
 
@@ -67,9 +68,9 @@ Ongeacht de keuze van het design, ziet de entity voor de program counter er (qua
 Merk ook op dat de **immediate** ingang geen rol speel bij een **absolute jump**
 {{% /notice %}}
 
-Een testbench voor de program counter kan je hieronder vinden of <a href="/hdlsrc/500/program_counter_tb.vhd" download>hier</a>  downloaden. Op het einde van de simulatie wordt er een resultaat afgedrukt, zoals in het voorbeeld hieronder.
+<!-- Een testbench voor de program counter kan je hieronder vinden of <a href="/hdlsrc/500/program_counter_tb.vhd" download>hier</a>  downloaden. Op het einde van de simulatie wordt er een resultaat afgedrukt, zoals in het voorbeeld hieronder.
 
 {{% figure src="/images/600/pc_tb.png" title="" %}}
 
 
-{{< include_file "/static/hdlsrc/500/program_counter_tb.vhd" "vhdl" >}}
+{{< include_file "/static/hdlsrc/500/program_counter_tb.vhd" "vhdl" >}} -->

@@ -6,7 +6,7 @@ weight: 610
 draft: false
 ---
 
-Tot hiertoe *liep* het programma gelijk een recept in de keuken. Iedere stap werd één-voor-één uitgevoerd. Iets geavanceerdere software (met de nadruk op *iets*) breken met dit principe. Af en toe wordt er een sprong uitgevoerd. Dit is zelfs al het geval bij een simpele if-constructie.
+Tot hiertoe *liep* het programma gelijk een recept in de keuken. Iedere stap werd één-voor-één uitgevoerd. Iets geavanceerdere software (met de nadruk op *iets*) breekt met dit principe: af en toe wordt er een sprong uitgevoerd. Dit is zelfs al het geval bij een simpele if-constructie.
 
 {{% multiHcolumn %}}
 {{% column %}}
