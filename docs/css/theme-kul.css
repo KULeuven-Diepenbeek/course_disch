@@ -141,6 +141,13 @@ div.multiHcolumn {
     align-items: center;
 }
 
+div.multiHcolumnT {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: top;
+}
+
 div.multiHcolumn div.column{
     flex-basis: 0;
     flex-grow: 1;
