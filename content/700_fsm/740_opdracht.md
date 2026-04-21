@@ -1,34 +1,50 @@
 ---
-title: 'Opdracht 7: Finite State Machine'
+title: 'Opdracht 7: FSM'
 pre: "<i class='fas fa-pen-square'></i> "
 chapter: false
 weight: 740
 draft: false
 ---
 
-Voor deze opdracht dien je zelf een FSM te beschrijven. De controle is een versimpelde versie van een muziek speler. 
+Voor deze opdracht dien je zelf een **Moore-FSM** te beschrijven. 
 
-Na power-up komt de FSM in de **sReset** state. Ook als de gebruiker het **reset** signal indrukt, gaat de FSM naar deze state, ongeacht van de huidige toestand. Deze state is slechts 1 klokcyclus actief en gaat meteen naar de **sStop** state. De controle blijft in deze toestand totdat de **btn_play** button ingedrukt wordt. In de **sPlay** state kan er overgegaan worden naar de **sPause** state en terug door opnieuw gebruik te maken van de **btn_play** button. Zowel in **sPlay** als is **sPause** kan er overgegaan worden naar **sStop** als de gebruiker de **btn_stop** button indrukt.
+Er is een datapad ontworpen dat de een lift aanstuurt. De signalen die het controlepad moet aansturen zijn: **move_up**, **move_down**, **close_doors** en **open_doors**. Alle vier deze signalen zijn van het type **STD_LOGIC**. Instructies die gegeven worden, mogen (alle vier) maar 1 klok-periode **hoog** blijven.
 
-Om de complexiteit te beperken zijn er maar 4 stuur-uitgangen. Deze vormen een one-hot encoding van de huidige state.
-
-Het state-diagram en de entity staan hieronder afgebeeld.
 
 {{% multiHcolumn %}}
 {{% column %}}
-![State diagram](/images/700/fsm-Page-1.drawio.png)
+
+Om de sturing te organiseren zijn een ook een deel ingangs-signalen.
+
+* **door_are_open**: Dit signaal is hoog als de deuren VOLLEDIG open zijn.
+* **safe_to_ride**: Dit signaal is hoog als de deuren dicht zijn **en** de deuren worden niet aangestuurd om te openen.
+
+Tenslotte zijn er ook nog twee ingangs-vectoren. Beide vectoren zijn one-hot-geëncodeerd (Dit wilt zeggen dat er hoogstens 1 bit '1' kan zijn.)
+
+* **floor_request**: Deze vector geeft aan naar welke verdieping de lift zich moet begeven.
+* **carriage_at_floor**: Deze vector geeft aan naar welke verdieping de lift zich begeeft.
 {{% /column %}}
 {{% column %}}
-![Entity](/images/700/fsm-entity.drawio.png)
-{{% /column %}}
-{{% column %}}
-{{< include_file "/static/hdlsrc/700/fsm.vhd" "vhdl" >}}
+```vhdl
+entity fsm is
+    generic(
+        number_of_floors : natural := 16
+    );
+    port(
+        clock : in STD_LOGIC;
+        reset : in STD_LOGIC;
+        floor_request : in STD_LOGIC_VECTOR(number_of_floors-1 downto 0);
+        carriage_at_floor : in STD_LOGIC_VECTOR(number_of_floors-1 downto 0);
+        safe_to_ride : in STD_LOGIC;
+        doors_are_open: in STD_LOGIC;
+        move_up : out STD_LOGIC;
+        move_down : out STD_LOGIC;
+        open_doors : out STD_LOGIC;
+        close_doors : out STD_LOGIC
+    );
+end entity fsm;
+```
 {{% /column %}}
 {{% /multiHcolumn %}}
 
-<!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
-{{% notice tip %}}
-Let er op dat het signaal van een button eerst laag moet worden vóórdat er een nieuw signal geïnterpreteerd kan worden!!
-{{% /notice %}}
-
-<a href="/hdlsrc/700/muziek_speler_controle_tb.vhd" download>Hier</a> vind je een testbench.
+De breedte van de twee laatst vernoemde vectoren is in te stellen mbv een generic.
