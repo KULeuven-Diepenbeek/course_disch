@@ -9,25 +9,25 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Opdracht 7: Finite State Machine :: Digitale Elektronische Schakelingen</title>
+    <title>Opdracht 7: FSM :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1776772815" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1776772815" rel="stylesheet">
-    <link href="../../css/hybrid.css?1776772815" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1776772815" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1776772815" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1776772815" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1776772815" rel="stylesheet">
-    <link href="../../css/theme.css?1776772815" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1776772815" rel="stylesheet">
-    <link href="../../css/devselector.css?1776772815" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1776772815" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1776772815" rel="stylesheet">
+    <link href="../../css/nucleus.css?1776774761" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1776774761" rel="stylesheet">
+    <link href="../../css/hybrid.css?1776774761" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1776774761" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1776774761" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1776774761" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1776774761" rel="stylesheet">
+    <link href="../../css/theme.css?1776774761" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1776774761" rel="stylesheet">
+    <link href="../../css/devselector.css?1776774761" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1776774761" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1776774761" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1776772815"></script>
-    <script src="../../js/devselector.js?1776772815"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1776774761"></script>
+    <script src="../../js/devselector.js?1776774761"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1776772815"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1776772815"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1776774761"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1776774761"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1776772815"></script>
+<script type="text/javascript" src="../../js/search.js?1776774761"></script>
 
     
   </div>
@@ -1365,9 +1365,9 @@
  
   
     
-      <li data-nav-id="/700_fsm/740_opdracht/" title="Opdracht 7: Finite State Machine" class="dd-item active">
+      <li data-nav-id="/700_fsm/740_opdracht/" title="Opdracht 7: FSM" class="dd-item active">
         <a href="../../700_fsm/740_opdracht/">
-        <i class='fas fa-pen-square'></i> Opdracht 7: Finite State Machine
+        <i class='fas fa-pen-square'></i> Opdracht 7: FSM
         
         </a>
     </li>
@@ -1789,7 +1789,7 @@
             
           
           
-            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../700_fsm/'>7. Finite State Machines</a> > Opdracht 7: Finite State Machine
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../700_fsm/'>7. Finite State Machines</a> > Opdracht 7: FSM
           
         
           
@@ -1816,7 +1816,7 @@
           
             <h1>
               
-              Opdracht 7: Finite State Machine
+              Opdracht 7: FSM
             </h1>
           
 
@@ -1829,49 +1829,43 @@
 
 
 <article class='content'>
-<p>Voor deze opdracht dien je zelf een FSM te beschrijven. De controle is een versimpelde versie van een muziek speler.</p>
-<p>Na power-up komt de FSM in de <strong>sReset</strong> state. Ook als de gebruiker het <strong>reset</strong> signal indrukt, gaat de FSM naar deze state, ongeacht van de huidige toestand. Deze state is slechts 1 klokcyclus actief en gaat meteen naar de <strong>sStop</strong> state. De controle blijft in deze toestand totdat de <strong>btn_play</strong> button ingedrukt wordt. In de <strong>sPlay</strong> state kan er overgegaan worden naar de <strong>sPause</strong> state en terug door opnieuw gebruik te maken van de <strong>btn_play</strong> button. Zowel in <strong>sPlay</strong> als is <strong>sPause</strong> kan er overgegaan worden naar <strong>sStop</strong> als de gebruiker de <strong>btn_stop</strong> button indrukt.</p>
-<p>Om de complexiteit te beperken zijn er maar 4 stuur-uitgangen. Deze vormen een one-hot encoding van de huidige state.</p>
-<p>Het state-diagram en de entity staan hieronder afgebeeld.</p>
+<p>Voor deze opdracht dien je zelf een <strong>Moore-FSM</strong> te beschrijven.</p>
+<p>Er is een datapad ontworpen dat de een lift aanstuurt. De signalen die het controlepad moet aansturen zijn: <strong>move_up</strong>, <strong>move_down</strong>, <strong>close_doors</strong> en <strong>open_doors</strong>. Alle vier deze signalen zijn van het type <strong>STD_LOGIC</strong>. Instructies die gegeven worden, mogen (alle vier) maar 1 klok-periode <strong>hoog</strong> blijven.</p>
 <div class="multiHcolumn">
 <div class="column">
-    <p><figure>
-	<a href="../../images/700/fsm-Page-1.drawio.png" data-featherlight="image">
-		<img src="../../images/700/fsm-Page-1.drawio.png"  alt="State diagram" >
-	</a>
-</figure>
-</p>
+    <p>Om de sturing te organiseren zijn een ook een deel ingangs-signalen.</p>
+<ul>
+<li><strong>door_are_open</strong>: Dit signaal is hoog als de deuren VOLLEDIG open zijn.</li>
+<li><strong>safe_to_ride</strong>: Dit signaal is hoog als de deuren dicht zijn <strong>en</strong> de deuren worden niet aangestuurd om te openen.</li>
+</ul>
+<p>Tenslotte zijn er ook nog twee ingangs-vectoren. Beide vectoren zijn one-hot-geëncodeerd (Dit wilt zeggen dat er hoogstens 1 bit &lsquo;1&rsquo; kan zijn.)</p>
+<ul>
+<li><strong>floor_request</strong>: Deze vector geeft aan naar welke verdieping de lift zich moet begeven.</li>
+<li><strong>carriage_at_floor</strong>: Deze vector geeft aan naar welke verdieping de lift zich begeeft.</li>
+</ul>
 </div>    
 <div class="column">
-    <p><figure>
-	<a href="../../images/700/fsm-entity.drawio.png" data-featherlight="image">
-		<img src="../../images/700/fsm-entity.drawio.png"  alt="Entity" >
-	</a>
-</figure>
-</p>
-</div>    
-<div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">muziek_speler_controle</span> <span style="color:#66d9ef">is</span>
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">fsm</span> <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">generic</span>(
+</span></span><span style="display:flex;"><span>        number_of_floors <span style="color:#f92672">:</span> <span style="color:#66d9ef">natural</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">16</span>
+</span></span><span style="display:flex;"><span>    );
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(
 </span></span><span style="display:flex;"><span>        clock <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
 </span></span><span style="display:flex;"><span>        reset <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        btn_stop <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        btn_play <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        inReset <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        inStop <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        inPlay <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">STD_LOGIC</span>;
-</span></span><span style="display:flex;"><span>        inPause <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">STD_LOGIC</span>
+</span></span><span style="display:flex;"><span>        floor_request <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(number_of_floors<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        carriage_at_floor <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC_VECTOR</span>(number_of_floors<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">downto</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        safe_to_ride <span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>        doors_are_open<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>        move_up <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>        move_down <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>        open_doors <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">STD_LOGIC</span>;
+</span></span><span style="display:flex;"><span>        close_doors <span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">STD_LOGIC</span>
 </span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">muziek_speler_controle</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">fsm</span>;
 </span></span></code></pre></div>
 </div>    
 </div>
-<!-- Different types for notices are: info (yellow), tip (green), warning (red), note (blue)-->
-
-<div class="notices tip" ><p>Let er op dat het signaal van een button eerst laag moet worden vóórdat er een nieuw signal geïnterpreteerd kan worden!!</p>
-</div>
-
-<p><a href="../../hdlsrc/700/muziek_speler_controle_tb.vhd" download>Hier</a> vind je een testbench.</p>
+<p>De breedte van de twee laatst vernoemde vectoren is in te stellen mbv een generic.</p>
 
 </article>
 
@@ -3076,15 +3070,15 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1776772815"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1776772815"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1776772815"></script>
-    <script src="../../js/jquery.sticky.js?1776772815"></script>
-    <script src="../../js/featherlight.min.js?1776772815"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1776772815"></script>
-    <script src="../../js/learn.js?1776772815"></script>
-    <script src="../../js/hugo-learn.js?1776772815"></script>
-    <script src="../../js/mermaid.min.js?1776772815"></script>
+    <script src="../../js/clipboard.min.js?1776774761"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1776774761"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1776774761"></script>
+    <script src="../../js/jquery.sticky.js?1776774761"></script>
+    <script src="../../js/featherlight.min.js?1776774761"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1776774761"></script>
+    <script src="../../js/learn.js?1776774761"></script>
+    <script src="../../js/hugo-learn.js?1776774761"></script>
+    <script src="../../js/mermaid.min.js?1776774761"></script>
     <script>
     window.MathJax = {
       chtml: {
