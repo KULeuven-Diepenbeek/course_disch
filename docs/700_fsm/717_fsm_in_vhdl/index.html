@@ -9,25 +9,25 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Voorbeeld verkeerslicht :: Digitale Elektronische Schakelingen</title>
+    <title>FSM in VHDL :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1774964014" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1774964014" rel="stylesheet">
-    <link href="../../css/hybrid.css?1774964014" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1774964014" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1774964014" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1774964014" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1774964014" rel="stylesheet">
-    <link href="../../css/theme.css?1774964014" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1774964014" rel="stylesheet">
-    <link href="../../css/devselector.css?1774964014" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1774964014" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1774964014" rel="stylesheet">
+    <link href="../../css/nucleus.css?1776772815" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1776772815" rel="stylesheet">
+    <link href="../../css/hybrid.css?1776772815" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1776772815" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1776772815" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1776772815" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1776772815" rel="stylesheet">
+    <link href="../../css/theme.css?1776772815" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1776772815" rel="stylesheet">
+    <link href="../../css/devselector.css?1776772815" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1776772815" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1776772815" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1774964014"></script>
-    <script src="../../js/devselector.js?1774964014"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1776772815"></script>
+    <script src="../../js/devselector.js?1776772815"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -44,7 +44,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../../700_fsm/720_voorbeeld_verkeerslicht/">
+  <body class="" data-url="../../700_fsm/717_fsm_in_vhdl/">
     <nav id="sidebar" class="">
 
 
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1774964014"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1774964014"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1776772815"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1776772815"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1774964014"></script>
+<script type="text/javascript" src="../../js/search.js?1776772815"></script>
 
     
   </div>
@@ -1323,9 +1323,9 @@
  
   
     
-      <li data-nav-id="/700_fsm/720_voorbeeld_verkeerslicht/" title="Voorbeeld verkeerslicht" class="dd-item active">
-        <a href="../../700_fsm/720_voorbeeld_verkeerslicht/">
-        <i class='fas fa-book'></i> Voorbeeld verkeerslicht
+      <li data-nav-id="/700_fsm/715_fsm_in_hw/" title="FSM in HW" class="dd-item ">
+        <a href="../../700_fsm/715_fsm_in_hw/">
+        <i class='fas fa-book'></i> FSM in HW
         
         </a>
     </li>
@@ -1344,9 +1344,9 @@
  
   
     
-      <li data-nav-id="/700_fsm/730_voorbeeld_timer/" title="Voorbeeld verkeerslicht timer" class="dd-item ">
-        <a href="../../700_fsm/730_voorbeeld_timer/">
-        <i class='fas fa-book'></i> Voorbeeld verkeerslicht timer
+      <li data-nav-id="/700_fsm/717_fsm_in_vhdl/" title="FSM in VHDL" class="dd-item active">
+        <a href="../../700_fsm/717_fsm_in_vhdl/">
+        <i class='fas fa-book'></i> FSM in VHDL
         
         </a>
     </li>
@@ -1789,7 +1789,7 @@
             
           
           
-            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../700_fsm/'>7. Finite State Machines</a> > Voorbeeld verkeerslicht
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../700_fsm/'>7. Finite State Machines</a> > FSM in VHDL
           
         
           
@@ -1801,16 +1801,7 @@
                 </div>
                 
                     <div class="progress">
-  <div class="wrapper toc"><nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#voorbeeld-moore-fsm-verkeerslichten">Voorbeeld Moore FSM: verkeerslichten</a></li>
-        <li><a href="#states">States</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
+  <div class="wrapper toc"><nav id="TableOfContents"></nav></div>
 </div>
 
                 
@@ -1825,7 +1816,7 @@
           
             <h1>
               
-              Voorbeeld verkeerslicht
+              FSM in VHDL
             </h1>
           
 
@@ -1838,113 +1829,78 @@
 
 
 <article class='content'>
-<h3 id="voorbeeld-moore-fsm-verkeerslichten">Voorbeeld Moore FSM: verkeerslichten</h3>
-<div class="multiHcolumn">
+<p>Om een beschrijving te maken van de behandelde FSM in VHDL, wordt er weer gebruikt gemaakt van een <em>opsommingstype</em>. Vervolgens worden er 2 signalen aangemaakt van dit nieuw-gemaakte type:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> T_demo_fsm_states <span style="color:#66d9ef">is</span> (sReset, sGroen, sOranje, sRood);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> current_state, next_state<span style="color:#f92672">:</span> T_demo_fsm_states;
+</span></span></code></pre></div><div class="multiHcolumn">
 <div class="column">
-    <ul>
-<li>In rst_state zijn alle uitgangen laag (geen enkel licht brandt).</li>
-<li>In green_state is de green uitgang hoog en de rest laag (het groen licht brandt).</li>
-<li>In yellow_state is de yellow uitgang hoog en de rest laag (het oranje licht brandt).</li>
-<li>In red_state is de red uitgang hoog en de rest laag (het rood licht brandt).</li>
-<li>We kiezen ervoor om enkel vanuit red_state de mogelijkheid te voorzien om naar rst_state te gaan.</li>
+    <p>Met deze twee signalen gedefinieerd en gedeclareerd, is het terug business-as-usual. Er is een tekening van het ontwerp, dus rest er enkel nog om hier een beschrijving van te maken.</p>
+<ul>
+<li>register voor het <strong>state-register</strong>: ✔</li>
+<li>multiplexer voor de <strong>output functie</strong>: ✔</li>
+<li>combinatorisch voor de <strong>next-state functie</strong>: ✔</li>
 </ul>
-<h4 id="fsm-schematisch">FSM schematisch:</h4>
-<figure><img src="../../images/700/FSM_verkeerslicht_schematisch.png">
-</figure>
 </div>    
 <div class="column">
-    <figure><img src="../../images/700/FSM_verkeerslicht.png">
+    <figure><img src="../../images/700/moore_FSM.png"><figcaption>
+      <h4>Moore FSM</h4>
+    </figcaption>
 </figure>
 </div>    
 </div>
-<h3 id="states">States</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> my_state <span style="color:#66d9ef">is</span> (rst_state, green_state, yellow_state, red_state);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">signal</span> next_state, state<span style="color:#f92672">:</span> my_state;
-</span></span></code></pre></div><h4 id="next-state-functie">Next state functie</h4>
-<div class="multiHcolumn">
+<div class="multiHcolumnT">
 <div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">p_next</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(state, rst)
+    <h3 id="next-state-function">Next state function</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">PFSM_NSF</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(current_state, halt)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> state <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> rst_state <span style="color:#f92672">=&gt;</span>   <span style="color:#66d9ef">if</span> rst <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
-</span></span><span style="display:flex;"><span>                                next_state <span style="color:#f92672">&lt;=</span> rst_state;
-</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">else</span>
-</span></span><span style="display:flex;"><span>                                next_state <span style="color:#f92672">&lt;=</span> green_state;
-</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> green_state <span style="color:#f92672">=&gt;</span> next_state <span style="color:#f92672">&lt;=</span> yellow_state;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> yellow_state <span style="color:#f92672">=&gt;</span>next_state <span style="color:#f92672">&lt;=</span> red_state;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> red_state <span style="color:#f92672">=&gt;</span>   <span style="color:#66d9ef">if</span> rst <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
-</span></span><span style="display:flex;"><span>                                next_state <span style="color:#f92672">&lt;=</span> rst_state;
-</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">else</span>
-</span></span><span style="display:flex;"><span>                                next_state <span style="color:#f92672">&lt;=</span> green_state;
-</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> <span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span>      next_state <span style="color:#f92672">&lt;=</span> rst_state;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> current_state <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> sGroen <span style="color:#f92672">=&gt;</span>
+</span></span><span style="display:flex;"><span>            next_state <span style="color:#f92672">&lt;=</span> sOranje;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> sOranje <span style="color:#f92672">=&gt;</span>
+</span></span><span style="display:flex;"><span>            next_state <span style="color:#f92672">&lt;=</span> sRood;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> <span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> halt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span> 
+</span></span><span style="display:flex;"><span>                next_state <span style="color:#f92672">&lt;=</span> sReset; 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span> 
+</span></span><span style="display:flex;"><span>                next_state <span style="color:#f92672">&lt;=</span> sGroen; 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">case</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
 </span></span></code></pre></div>
 </div>    
 <div class="column">
-    <figure><img src="../../images/700/next_state.png">
-</figure>
-</div>    
-</div>
-<h4 id="state-register">State register</h4>
-<div class="multiHcolumn">
-<div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">p_reg</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(clk)
+    <h3 id="state-register">State register</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">PFSM_REG</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(clock_i)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> clk<span style="color:#a6e22e">&#39;event</span> <span style="color:#66d9ef">and</span> clk <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span>
-</span></span><span style="display:flex;"><span>        state <span style="color:#f92672">&lt;=</span> next_state;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> rising_edge(clock_i) <span style="color:#66d9ef">then</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> reset_i <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1&#39;</span> <span style="color:#66d9ef">then</span> 
+</span></span><span style="display:flex;"><span>            current_state <span style="color:#f92672">&lt;=</span> sIdle;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>            current_state <span style="color:#f92672">&lt;=</span> next_state;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">if</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
 </span></span></code></pre></div>
 </div>    
 <div class="column">
-    <figure><img src="../../images/700/state_register.png">
-</figure>
-</div>    
-</div>
-<h4 id="output-functie">Output functie</h4>
-<div class="multiHcolumn">
-<div class="column">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">p_out</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(state)
+    <h3 id="output-function">Output function</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#a6e22e">PFSM_OF</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">process</span>(current_state)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> state <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> rst_state <span style="color:#f92672">=&gt;</span>
-</span></span><span style="display:flex;"><span>            red <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>            yellow <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>            green <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> green_state <span style="color:#f92672">=&gt;</span>
-</span></span><span style="display:flex;"><span>            red <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>            yellow <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>            green <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> yellow_state <span style="color:#f92672">=&gt;</span>
-</span></span><span style="display:flex;"><span>            red <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>            yellow <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-</span></span><span style="display:flex;"><span>            green <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> red_state <span style="color:#f92672">=&gt;</span>
-</span></span><span style="display:flex;"><span>            red <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
-</span></span><span style="display:flex;"><span>            yellow <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>            green <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> <span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span>
-</span></span><span style="display:flex;"><span>            red <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>            yellow <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-</span></span><span style="display:flex;"><span>            green <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    groen_o <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    oranje_o <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    rood_o <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> current_state <span style="color:#66d9ef">is</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> sRood <span style="color:#f92672">=&gt;</span>    rood_o <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> sOranje <span style="color:#f92672">=&gt;</span>  oranje_o <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> sGroen <span style="color:#f92672">=&gt;</span>   groen_o <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">when</span> <span style="color:#66d9ef">others</span> <span style="color:#f92672">=&gt;</span>   groen_o <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>; 
+</span></span><span style="display:flex;"><span>                         oranje_o <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>; 
+</span></span><span style="display:flex;"><span>                         rood_o <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;1&#39;</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">case</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">process</span>;
 </span></span></code></pre></div>
 </div>    
-<div class="column">
-    <figure><img src="../../images/700/output_functie.png">
-</figure>
-</div>    
 </div>
-
-<div class="notices note" ><p>Opdracht: <br/>
-Pas de FSM voor de aansturing van verkeerslichten aan zodat er vanuit elke toestand naar rst_state kan worden gesprongen. Teken het nieuwe toestandsdiagramma. Schrijf de nieuwe next state functie (de output functie verandert niet)</p>
-</div>
-
-
 </article>
 
 <footer class="footline">
@@ -2836,6 +2792,22 @@ Pas de FSM voor de aansturing van verkeerslichten aan zodat er vanuit elke toest
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -2855,22 +2827,6 @@ Pas de FSM voor de aansturing van verkeerslichten aan zodat er vanuit elke toest
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -3135,10 +3091,10 @@ Pas de FSM voor de aansturing van verkeerslichten aan zodat er vanuit elke toest
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../700_fsm/710_fsm/" title="Finite State Machine (FSM)"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../700_fsm/715_fsm_in_hw/" title="FSM in HW"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../700_fsm/730_voorbeeld_timer/" title="Voorbeeld verkeerslicht timer" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../700_fsm/740_opdracht/" title="Opdracht 7: Finite State Machine" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3148,15 +3104,15 @@ Pas de FSM voor de aansturing van verkeerslichten aan zodat er vanuit elke toest
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1774964014"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1774964014"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1774964014"></script>
-    <script src="../../js/jquery.sticky.js?1774964014"></script>
-    <script src="../../js/featherlight.min.js?1774964014"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1774964014"></script>
-    <script src="../../js/learn.js?1774964014"></script>
-    <script src="../../js/hugo-learn.js?1774964014"></script>
-    <script src="../../js/mermaid.min.js?1774964014"></script>
+    <script src="../../js/clipboard.min.js?1776772815"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1776772815"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1776772815"></script>
+    <script src="../../js/jquery.sticky.js?1776772815"></script>
+    <script src="../../js/featherlight.min.js?1776772815"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1776772815"></script>
+    <script src="../../js/learn.js?1776772815"></script>
+    <script src="../../js/hugo-learn.js?1776772815"></script>
+    <script src="../../js/mermaid.min.js?1776772815"></script>
     <script>
     window.MathJax = {
       chtml: {

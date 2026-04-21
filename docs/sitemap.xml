@@ -14,9 +14,6 @@
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/010_eerste_project/</loc>
     <lastmod>2025-07-14T16:12:45+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/710_fsm/</loc>
-    <lastmod>2025-04-18T14:36:50+02:00</lastmod>
-  </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/001_software/010_versiebeheer/</loc>
     <lastmod>2026-02-20T11:33:00+01:00</lastmod>
   </url><url>
@@ -26,17 +23,11 @@
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/020_nand/</loc>
     <lastmod>2025-07-23T09:09:51+02:00</lastmod>
   </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/720_voorbeeld_verkeerslicht/</loc>
-    <lastmod>2025-04-18T14:36:50+02:00</lastmod>
-  </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/025_and/</loc>
     <lastmod>2025-07-23T09:09:51+02:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/030_simulatie/</loc>
     <lastmod>2025-02-21T09:17:14+01:00</lastmod>
-  </url><url>
-    <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/730_voorbeeld_timer/</loc>
-    <lastmod>2025-04-18T14:36:50+02:00</lastmod>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/100_intro_vhdl/031_synthesisable/</loc>
     <lastmod>2024-12-18T12:47:29+01:00</lastmod>
@@ -178,6 +169,13 @@
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/</loc>
     <lastmod>2025-02-20T12:50:29+01:00</lastmod>
+  </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/710_fsm/</loc>
+    <lastmod>2025-04-18T14:36:50+02:00</lastmod>
+  </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/715_fsm_in_hw/</loc>
+  </url><url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/717_fsm_in_vhdl/</loc>
   </url><url>
     <loc>https://kuleuven-diepenbeek.github.io/course_disch/700_fsm/740_opdracht/</loc>
     <lastmod>2025-04-18T14:36:50+02:00</lastmod>
