@@ -55,7 +55,7 @@ PFSM_REG: process(clock_i)
 begin
     if rising_edge(clock_i) then 
         if reset_i = '1' then 
-            current_state <= sIdle;
+            current_state <= sReset;
         else
             current_state <= next_state;
         end if;
