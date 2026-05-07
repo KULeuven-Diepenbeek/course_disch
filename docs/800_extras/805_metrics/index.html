@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Libraries :: Digitale Elektronische Schakelingen</title>
+    <title>Metrics :: Digitale Elektronische Schakelingen</title>
 
     
     <link href="../../css/nucleus.css?1778148173" rel="stylesheet">
@@ -44,7 +44,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../../900_zelfstudie/940_libraries/">
+  <body class="" data-url="../../800_extras/805_metrics/">
     <nav id="sidebar" class="">
 
 
@@ -1394,7 +1394,7 @@
   
     
     <li data-nav-id="/800_extras/" title="Extras" class="dd-item
-        
+        parent
         
         
         ">
@@ -1420,7 +1420,7 @@
  
   
     
-      <li data-nav-id="/800_extras/805_metrics/" title="Metrics" class="dd-item ">
+      <li data-nav-id="/800_extras/805_metrics/" title="Metrics" class="dd-item active">
         <a href="../../800_extras/805_metrics/">
         Metrics
         
@@ -1491,7 +1491,7 @@
   
     
     <li data-nav-id="/900_zelfstudie/" title="VHDL - korte naslag" class="dd-item
-        parent
+        
         
         
         ">
@@ -1580,7 +1580,7 @@
  
   
     
-      <li data-nav-id="/900_zelfstudie/940_libraries/" title="Libraries" class="dd-item active">
+      <li data-nav-id="/900_zelfstudie/940_libraries/" title="Libraries" class="dd-item ">
         <a href="../../900_zelfstudie/940_libraries/">
         <i class='fas fa-book'></i> Libraries
         
@@ -1810,7 +1810,7 @@
             
           
           
-            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../900_zelfstudie/'>VHDL - korte naslag</a> > Libraries
+            <a href='../../'>Digitale elektronische schakelingen</a> > <a href='../../800_extras/'>Extras</a> > Metrics
           
         
           
@@ -1824,7 +1824,8 @@
                     <div class="progress">
   <div class="wrapper toc"><nav id="TableOfContents">
   <ul>
-    <li><a href="#std-library">&ldquo;std&rdquo; library</a></li>
+    <li><a href="#kritisch-pad-critical-path">Kritisch pad (critical path)</a></li>
+    <li><a href="#latency">Latency</a></li>
   </ul>
 </nav></div>
 </div>
@@ -1841,7 +1842,7 @@
           
             <h1>
               
-              Libraries
+              Metrics
             </h1>
           
 
@@ -1854,79 +1855,61 @@
 
 
 <article class='content'>
-<div class="multicolumn">
-    <div class="column">
-<p>Een library kan meerdere packages bevatten.</p>
-<p>Een package bevat 1 of meer van onderstaande middelen.</p>
-<ul>
-<li> types </li>
-<li> constanten </li>
-<li> functies </li>
-<li> procedures </li>
-<li> component declaraties </li>
-</ul>
-<p>Een VHDL module kan gebruik maken van 1 of meerdere packages <br/>
-Voorbeeld:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> library1;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> library1.pack2.<span style="color:#66d9ef">all</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">library</span> library2;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> library2.pack4.<span style="color:#66d9ef">all</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> ...
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span>...</span></span></code></pre></div>
-</div>
-<div class="column">
-<figure><img src="../../images/900/920_vhdl/packages.png">
+<p>Om elektronische ontwerpen te vergelijken is er een <strong>metric</strong> nodig. Vooralleer die besproken worden, wordt er eerst wat opfrissing gedaan.</p>
+<h2 id="kritisch-pad-critical-path">Kritisch pad (critical path)</h2>
+<blockquote>
+<p>Het kritische pad is het langste combinatorische pad tussen 2 registers/flip-flops.</p>
+</blockquote>
+<p>Wat zou het kritische pad zijn in onderstaande ripple-carry adder?</p>
+<p><figure>
+	<a href="../../images/800/adder.png" data-featherlight="image">
+		<img src="../../images/800/adder.png"  alt="Ripple Carray Adder" >
+	</a>
+	
 </figure>
+</p>
+<div class="multiHcolumn">
+<div class="column">
+    <p>Het langste pad dat gevonden kan worden is dat van de <em>&ldquo;rimpelende carry&rdquo;</em>.</p>
+<ul>
+<li>deze ontstaat bij de eerste adder</li>
+<li>loopt door iedere andere adder</li>
+</ul>
+<p>De meest beduidende bit van de RCA is dus pas bekend van zodra deze carry aankomt en verwerkt is in de laatste adder. De opteller kan niet sneller werken zonder zichzelf voor de voet te lopen.</p>
+</div>    
+<div class="column">
+    <p><figure>
+	<a href="../../images/800/clocks.png" data-featherlight="image">
+		<img src="../../images/800/clocks.png"  alt="Different clocks" >
+	</a>
+</figure>
+</p>
+</div>    
 </div>
+<div class="multiHcolumn">
+<div class="column">
+    <p><figure>
+	<a href="../../images/800/adder_with_cp.png" data-featherlight="image">
+		<img src="../../images/800/adder_with_cp.png"  alt="Ripple Carray Adder" >
+	</a>
+</figure>
+</p>
+</div>    
+<div class="column">
+    <p>Het langst mogelijke kritische pad in deze RCA is:</p>
+<ul>
+<li>de poortvertraging van 1 AND poort</li>
+<li><strong>PLUS</strong> n-1 keren de poortvertragingen van de AND poort plus de XOR poort</li>
+</ul>
+<p>Stel dat de totale som van alle poortvertragingen (+ overhead<sup>1</sup> ) 2 ns is, dan heeft dit een impact op de <strong>minimale klok-period</strong>. Het heeft bijgevolg dus rechtstreeks impact op de <strong>maximale klokfrequentie</strong>.</p>
+</div>    
 </div>
-<h2 id="std-library">&ldquo;std&rdquo; library</h2>
-<p>Een verwijzing naar de package &ldquo;standard&rdquo; in de library &ldquo;std&rdquo; is steeds impliciet aanwezig. <br/>
-Volgende twee codes zijn identiek.</p>
-<div class="multicolumn">
-    <div class="column" style="width: 40%">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">and_or_poort</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(   a, b, d<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">bit</span>;
-</span></span><span style="display:flex;"><span>            e<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">bit</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">and_or_poort</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">and_or_poort</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> c<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>    c <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">and</span> b;
-</span></span><span style="display:flex;"><span>    e <span style="color:#f92672">&lt;=</span> c <span style="color:#66d9ef">or</span> d;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;</span></span></code></pre></div>
-</div>
-<div class="column" style="width: 60%">    
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">library</span> std;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> std.standard.<span style="color:#66d9ef">all</span>; <span style="color:#75715e">-- geeft aan wat we precies willen gebruiken van deze package</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">entity</span> <span style="color:#a6e22e">and_or_poort</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">port</span>(   a, b, d<span style="color:#f92672">:</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">bit</span>;
-</span></span><span style="display:flex;"><span>            e<span style="color:#f92672">:</span> <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">bit</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">and_or_poort</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">architecture</span> <span style="color:#a6e22e">arch</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">and_or_poort</span> <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">signal</span> c<span style="color:#f92672">:</span> <span style="color:#66d9ef">bit</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">begin</span>
-</span></span><span style="display:flex;"><span>    c <span style="color:#f92672">&lt;=</span> a <span style="color:#66d9ef">and</span> b;
-</span></span><span style="display:flex;"><span>    e <span style="color:#f92672">&lt;=</span> c <span style="color:#66d9ef">or</span> d;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">arch</span>;</span></span></code></pre></div>
-</div>
-</div>
-<p>Een stuk code van de standard package.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vhdl" data-lang="vhdl"><span style="display:flex;"><span><span style="color:#66d9ef">package</span> STANDARD <span style="color:#66d9ef">is</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--opsomming types</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">type</span> <span style="color:#66d9ef">BOOLEAN</span> <span style="color:#66d9ef">is</span> (FALSE, TRUE);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">type</span> <span style="color:#66d9ef">BIT</span> <span style="color:#66d9ef">is</span> (<span style="color:#e6db74">&#39;0&#39;</span>, <span style="color:#e6db74">&#39;1&#39;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">type</span> <span style="color:#66d9ef">CHARACTER</span> <span style="color:#66d9ef">is</span> ( <span style="color:#75715e">-- opsomming ASCII characters);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">type</span> <span style="color:#66d9ef">INTEGER</span> <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">range</span> <span style="color:#75715e">-- implementation defined;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--arrays: samengestelde types waarvan de range moet ingesteld worden</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">type</span> <span style="color:#66d9ef">STRING</span> <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">array</span> (<span style="color:#66d9ef">POSITIVE</span> <span style="color:#66d9ef">range</span> <span style="color:#f92672">&lt;&gt;</span>) <span style="color:#66d9ef">of</span> <span style="color:#66d9ef">CHARACTER</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">type</span> <span style="color:#66d9ef">BIT_VECTOR</span> <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">array</span> (<span style="color:#66d9ef">NATURAL</span> <span style="color:#66d9ef">range</span> <span style="color:#f92672">&lt;&gt;</span>) <span style="color:#66d9ef">of</span> <span style="color:#66d9ef">BIT</span>;
-</span></span><span style="display:flex;"><span>    ...
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#a6e22e">STANDARD</span>;</span></span></code></pre></div>
+<blockquote>
+<p><sup>1</sup> Met overhead wordt bedoeld dat ook setup-en-hold tijd in rekening gebracht moet worden alsook de routing.</p>
+</blockquote>
+<h2 id="latency">Latency</h2>
+<p><strong>Latency</strong> is de tijd die nodig is tussen het aanbieden van een input en het ontvangen van een output. De latency kan uitgedrukt worden in <strong>aantal klok-cycli</strong>. Wanneer de maximale klokfrequentie gekend is, kan de latency simpel in &ldquo;tijd&rdquo; omgezet worden.</p>
+
 </article>
 
 <footer class="footline">
@@ -2865,6 +2848,75 @@ Volgende twee codes zijn identiek.</p>
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -2921,42 +2973,6 @@ Volgende twee codes zijn identiek.</p>
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -2977,42 +2993,6 @@ Volgende twee codes zijn identiek.</p>
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -3133,10 +3113,10 @@ Volgende twee codes zijn identiek.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../900_zelfstudie/930_hierachie/" title="Hiërarchie"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../800_extras/" title="Extras"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../900_zelfstudie/950_arrays/" title="Arrays" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../800_extras/810_tuning/" title="Tuning" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

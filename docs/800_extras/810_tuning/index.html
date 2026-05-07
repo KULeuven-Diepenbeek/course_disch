@@ -12,22 +12,22 @@
     <title>Tuning :: Digitale Elektronische Schakelingen</title>
 
     
-    <link href="../../css/nucleus.css?1777549599" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1777549599" rel="stylesheet">
-    <link href="../../css/hybrid.css?1777549599" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1777549599" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1777549599" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1777549599" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1777549599" rel="stylesheet">
-    <link href="../../css/theme.css?1777549599" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1777549599" rel="stylesheet">
-    <link href="../../css/devselector.css?1777549599" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1777549599" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1777549599" rel="stylesheet">
+    <link href="../../css/nucleus.css?1778148173" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1778148173" rel="stylesheet">
+    <link href="../../css/hybrid.css?1778148173" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1778148173" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1778148173" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1778148173" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1778148173" rel="stylesheet">
+    <link href="../../css/theme.css?1778148173" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1778148173" rel="stylesheet">
+    <link href="../../css/devselector.css?1778148173" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1778148173" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1778148173" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1777549599"></script>
-    <script src="../../js/devselector.js?1777549599"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1778148173"></script>
+    <script src="../../js/devselector.js?1778148173"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1777549599"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1777549599"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1778148173"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1778148173"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_disch\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1777549599"></script>
+<script type="text/javascript" src="../../js/search.js?1778148173"></script>
 
     
   </div>
@@ -1420,6 +1420,27 @@
  
   
     
+      <li data-nav-id="/800_extras/805_metrics/" title="Metrics" class="dd-item ">
+        <a href="../../800_extras/805_metrics/">
+        Metrics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
       <li data-nav-id="/800_extras/810_tuning/" title="Tuning" class="dd-item active">
         <a href="../../800_extras/810_tuning/">
         Tuning
@@ -1805,7 +1826,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#design-in-de-hack-processor">Design in de Hack Processor</a></li>
+        <li><a href="#design-in-de-risc-v-processor">Design in de RISC-V processor</a></li>
         <li><a href="#halvering-van-de-breedte">Halvering van de breedte</a></li>
         <li><a href="#unrolled">Unrolled</a></li>
         <li><a href="#pipelined">Pipelined</a></li>
@@ -1847,7 +1868,7 @@
 <p>De <strong>cost</strong> is de kost van een ontwerp. Hoe meer componenten, hoe meer oppervlakte er ingenomen wordt op chip, en hoe duurder het ontwerp wordt.</p>
 <p>Het <strong>kritische pad</strong> is het langste combinatorische pad tussen 2 registers/flip-flops.</p>
 <hr/>
-<h3 id="design-in-de-hack-processor">Design in de Hack Processor</h3>
+<h3 id="design-in-de-risc-v-processor">Design in de RISC-V processor</h3>
 <p><figure>
 	<a href="../../images/800/16_bit.png" data-featherlight="image">
 		<img src="../../images/800/16_bit.png"  alt="16-bit" >
@@ -1857,7 +1878,7 @@
 </p>
 <p>De latency is 1 clock cycle. Als we aannemen dat het kritische pad de <em>ripple carry</em> is en dat de minimale klok periode 2 ns is, dan is de <strong>latency = 2ns</strong>.</p>
 <p>Aangezien er iedere clock cycle een optelling gedaan kan worden, is <br/>
-<strong>de througput = 8 Gbps</strong> (= 16 bits / 1CC = 16 bits / 2 ns = 16 / (2 * 10<sup>-9</sup>) bits/s = 8 x 10<sup>9</sup> bits / s )</p>
+<strong>de througput = 16 Gbps</strong> (= 32 bits / 1CC = 32 bits / 2 ns = 32 / (2 * 10<sup>-9</sup>) bits/s = 16 x 10<sup>9</sup> bits / s )</p>
 <hr/>
 <h3 id="halvering-van-de-breedte">Halvering van de breedte</h3>
 <p><figure>
@@ -1869,7 +1890,7 @@
 </p>
 <p>De latency is 1 clock cycle. Als we aannemen dat het kritische pad de <em>ripple carry</em> lineair mee krimpt, wordt de minimale klok periode <span style="color: red; font-weight: bold">1 ns</span> is en dan is de <strong>latency = 1ns</strong>.</p>
 <p>Aangezien er iedere clock cycle een optelling gedaan kan worden, is <br/>
-<strong>de througput = 8 Gbps</strong> (= 8 bits / 1CC = 8 bits / 1 ns = 8 x 10<sup>9</sup> bits / s )</p>
+<strong>de througput = 16 Gbps</strong> (= 16 bits / 1CC = 16 bits / 1 ns = 16 x 10<sup>9</sup> bits / s )</p>
 <hr/>
 <h3 id="unrolled">Unrolled</h3>
 <p><figure>
@@ -1881,7 +1902,7 @@
 </p>
 <p>De latency is 1 clock cycle. Als we aannemen dat het kritische pad de <em>ripple carry</em> niet wijzigt, dan is de <strong>latency = 2ns</strong>.</p>
 <p>Aangezien er iedere clock cycle een optelling gedaan kan worden, is <br/>
-<strong>de througput = 8 Gbps</strong> (= 16 bits / 1CC = 16 bits / 2 ns = 16 / (2 * 10<sup>-9</sup>) bits/s = 8 x 10<sup>9</sup> bits / s )</p>
+<strong>de througput = 16 Gbps</strong> (= 32 bits / 1CC = 32 bits / 2 ns = 32 / (2 * 10<sup>-9</sup>) bits/s = 16 x 10<sup>9</sup> bits / s )</p>
 <hr/>
 <h3 id="pipelined">Pipelined</h3>
 <p><figure>
@@ -1893,7 +1914,7 @@
 </p>
 <p>De latency is <span style="color: red; font-weight: bold">2 clock cycles</span>. Als we aannemen dat het kritische pad de <em>ripple carry</em> lineair mee krimpt, wordt de minimale klok periode <span style="color: red; font-weight: bold">1 ns</span> is en dan is de <strong>latency = 2ns</strong>.</p>
 <p>Aangezien er, bij een volled pipeline, iedere clock cycle een optelling gedaan kan worden, is <br/>
-<strong>de througput = 16 Gbps</strong> (= 16 bits / 1CC = 16 bits / 1 ns = 16 / (1 * 10<sup>-9</sup>) bits/s)</p>
+<strong>de througput = 32 Gbps</strong> (= 32 bits / 1CC = 32 bits / 1 ns = 32 / (1 * 10<sup>-9</sup>) bits/s)</p>
 <hr/>
 <h3 id="sequential">Sequential</h3>
 <p><figure>
@@ -1905,7 +1926,7 @@
 </p>
 <p>De latency is <span style="color: red; font-weight: bold">2 clock cycles</span>. Als we aannemen dat het kritische pad de <em>ripple carry</em> lineair mee krimpt, wordt de minimale klok periode <span style="color: red; font-weight: bold">1 ns</span> is en dan is de <strong>latency = 2ns</strong>.</p>
 <p>Aangezien er iedere <span style="color: red; font-weight: bold">2 clock cycles</span> een optelling gedaan kan worden, is <br/>
-<strong>de througput = 8 Gbps</strong> (= 16 bits / 2CC = 16 bits / 2 ns = 16 / (2 * 10<sup>-9</sup>) bits/s = 8 x 10<sup>9</sup> bits / s )</p>
+<strong>de througput = 16 Gbps</strong> (= 32 bits / 2CC = 32 bits / 2 ns = 32 / (2 * 10<sup>-9</sup>) bits/s = 16 x 10<sup>9</sup> bits / s )</p>
 <hr/>
 <h2 id="samenvatting">Samenvatting</h2>
 <table>
@@ -1946,22 +1967,22 @@
       </tr>
       <tr>
           <td>Throughput [Gbps]</td>
-          <td>8</td>
-          <td>8</td>
-          <td>8</td>
-          <td><strong>16</strong></td>
-          <td>8</td>
+          <td>16</td>
+          <td>16</td>
+          <td>16</td>
+          <td><strong>32</strong></td>
+          <td>16</td>
       </tr>
       <tr>
           <td>Aantal FF</td>
+          <td>3x32 + 2x1 = 98</td>
           <td>3x16 + 2x1 = 50</td>
-          <td>3x8 + 2x1 = 26</td>
-          <td>3x16 + 2x1 = 50</td>
-          <td>(3x16 + 2x1) + (3x8 + 1x1) = <strong>75</strong></td>
-          <td>2x16 + 2x1 + 2x8 = 50</td>
+          <td>3x32 + 2x1 = 98</td>
+          <td>(3x32 + 2x1) + (3x16 + 1x1) = <strong>147</strong></td>
+          <td>2x32 + 2x1 + 2x16 = 98</td>
       </tr>
       <tr>
-          <td>Kan 16-bit optelling</td>
+          <td>Kan 32-bit optelling</td>
           <td>✓</td>
           <td>✗</td>
           <td>✓</td>
@@ -1987,7 +2008,7 @@
   </tbody>
 </table>
 <ul>
-<li>De resultaten van de 8-bit versie zijn louter voor de volledigheid;</li>
+<li>De resultaten van de 16-bit versie zijn louter voor de volledigheid;</li>
 <li>Unrolled geeft geen meerwaarde in dit geval</li>
 <li>Pipelined geeft betere throughput en klok snelheid, ten kosten van extra oppervlakte</li>
 <li>Sequential geeft betere klok snelheid, ten kosten van extra controle-logica</li>
@@ -2949,6 +2970,25 @@
             
                 
                     
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -3184,7 +3224,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../800_extras/" title="Extras"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../800_extras/805_metrics/" title="Metrics"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="../../800_extras/820_tips_and_tricks/" title="Tips &amp; Tricks" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -3197,15 +3237,15 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1777549599"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1777549599"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1777549599"></script>
-    <script src="../../js/jquery.sticky.js?1777549599"></script>
-    <script src="../../js/featherlight.min.js?1777549599"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1777549599"></script>
-    <script src="../../js/learn.js?1777549599"></script>
-    <script src="../../js/hugo-learn.js?1777549599"></script>
-    <script src="../../js/mermaid.min.js?1777549599"></script>
+    <script src="../../js/clipboard.min.js?1778148173"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1778148173"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1778148173"></script>
+    <script src="../../js/jquery.sticky.js?1778148173"></script>
+    <script src="../../js/featherlight.min.js?1778148173"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1778148173"></script>
+    <script src="../../js/learn.js?1778148173"></script>
+    <script src="../../js/hugo-learn.js?1778148173"></script>
+    <script src="../../js/mermaid.min.js?1778148173"></script>
     <script>
     window.MathJax = {
       chtml: {
