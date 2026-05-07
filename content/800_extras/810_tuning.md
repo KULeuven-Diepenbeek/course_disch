@@ -14,14 +14,14 @@ Het **kritische pad** is het langste combinatorische pad tussen 2 registers/flip
 
 <hr/>
 
-### Design in de Hack Processor
+### Design in de RISC-V processor
 
 ![16-bit](/images/800/16_bit.png)
 
 De latency is 1 clock cycle. Als we aannemen dat het kritische pad de *ripple carry* is en dat de minimale klok periode 2 ns is, dan is de **latency = 2ns**.
 
 Aangezien er iedere clock cycle een optelling gedaan kan worden, is <br/>
-**de througput = 8 Gbps** (= 16 bits / 1CC = 16 bits / 2 ns = 16 / (2 * 10<sup>-9</sup>) bits/s = 8 x 10<sup>9</sup> bits / s )
+**de througput = 16 Gbps** (= 32 bits / 1CC = 32 bits / 2 ns = 32 / (2 * 10<sup>-9</sup>) bits/s = 16 x 10<sup>9</sup> bits / s )
 
 <hr/>
 
@@ -32,7 +32,7 @@ Aangezien er iedere clock cycle een optelling gedaan kan worden, is <br/>
 De latency is 1 clock cycle. Als we aannemen dat het kritische pad de *ripple carry* lineair mee krimpt, wordt de minimale klok periode <span style="color: red; font-weight: bold">1 ns</span> is en dan is de **latency = 1ns**.
 
 Aangezien er iedere clock cycle een optelling gedaan kan worden, is <br/>
-**de througput = 8 Gbps** (= 8 bits / 1CC = 8 bits / 1 ns = 8 x 10<sup>9</sup> bits / s )
+**de througput = 16 Gbps** (= 16 bits / 1CC = 16 bits / 1 ns = 16 x 10<sup>9</sup> bits / s )
 
 <hr/>
 
@@ -43,7 +43,7 @@ Aangezien er iedere clock cycle een optelling gedaan kan worden, is <br/>
 De latency is 1 clock cycle. Als we aannemen dat het kritische pad de *ripple carry* niet wijzigt, dan is de **latency = 2ns**.
 
 Aangezien er iedere clock cycle een optelling gedaan kan worden, is <br/>
-**de througput = 8 Gbps** (= 16 bits / 1CC = 16 bits / 2 ns = 16 / (2 * 10<sup>-9</sup>) bits/s = 8 x 10<sup>9</sup> bits / s )
+**de througput = 16 Gbps** (= 32 bits / 1CC = 32 bits / 2 ns = 32 / (2 * 10<sup>-9</sup>) bits/s = 16 x 10<sup>9</sup> bits / s )
 
 <hr/>
 
@@ -54,7 +54,7 @@ Aangezien er iedere clock cycle een optelling gedaan kan worden, is <br/>
 De latency is <span style="color: red; font-weight: bold">2 clock cycles</span>. Als we aannemen dat het kritische pad de *ripple carry* lineair mee krimpt, wordt de minimale klok periode <span style="color: red; font-weight: bold">1 ns</span> is en dan is de **latency = 2ns**.
 
 Aangezien er, bij een volled pipeline, iedere clock cycle een optelling gedaan kan worden, is <br/>
-**de througput = 16 Gbps** (= 16 bits / 1CC = 16 bits / 1 ns = 16 / (1 * 10<sup>-9</sup>) bits/s)
+**de througput = 32 Gbps** (= 32 bits / 1CC = 32 bits / 1 ns = 32 / (1 * 10<sup>-9</sup>) bits/s)
 
 <hr/>
 
@@ -65,7 +65,7 @@ Aangezien er, bij een volled pipeline, iedere clock cycle een optelling gedaan k
 De latency is <span style="color: red; font-weight: bold">2 clock cycles</span>. Als we aannemen dat het kritische pad de *ripple carry* lineair mee krimpt, wordt de minimale klok periode <span style="color: red; font-weight: bold">1 ns</span> is en dan is de **latency = 2ns**.
 
 Aangezien er iedere <span style="color: red; font-weight: bold">2 clock cycles</span> een optelling gedaan kan worden, is <br/>
-**de througput = 8 Gbps** (= 16 bits / 2CC = 16 bits / 2 ns = 16 / (2 * 10<sup>-9</sup>) bits/s = 8 x 10<sup>9</sup> bits / s )
+**de througput = 16 Gbps** (= 32 bits / 2CC = 32 bits / 2 ns = 32 / (2 * 10<sup>-9</sup>) bits/s = 16 x 10<sup>9</sup> bits / s )
 
 <hr/>
 
@@ -76,13 +76,13 @@ Aangezien er iedere <span style="color: red; font-weight: bold">2 clock cycles</
 | T<sub>min</sub> [ns] | 2  | 1  | 2 | 1 | 1 |
 | Latency [CC] | 1  | 1  | 1 | 2 | 2 |
 | Latency [ns] | 2  | **1**  | 2 | 2 | 2 |
-| Throughput [Gbps] | 8 | 8 | 8 | **16** | 8 |
-| Aantal FF | 3x16 + 2x1 = 50 | 3x8 + 2x1 = 26 | 3x16 + 2x1 = 50 | (3x16 + 2x1) + (3x8 + 1x1) = **75** | 2x16 + 2x1 + 2x8 = 50 |
-| Kan 16-bit optelling | &#x2713; | &#x2717;| &#x2713; | &#x2713; | &#x2713; |
+| Throughput [Gbps] | 16 | 16 | 16 | **32** | 16 |
+| Aantal FF | 3x32 + 2x1 = 98 | 3x16 + 2x1 = 50 | 3x32 + 2x1 = 98 | (3x32 + 2x1) + (3x16 + 1x1) = **147** | 2x32 + 2x1 + 2x16 = 98 |
+| Kan 32-bit optelling | &#x2713; | &#x2717;| &#x2713; | &#x2713; | &#x2713; |
 | Extra controle pad | &#x2717; | &#x2717;| &#x2717; | &#x2713; | &#x2713; |
 | F<sub>max</sub> [MHz] | 500  | 1000  | 500 | 1000 | 1000 |
 
-* De resultaten van de 8-bit versie zijn louter voor de volledigheid;
+* De resultaten van de 16-bit versie zijn louter voor de volledigheid;
 * Unrolled geeft geen meerwaarde in dit geval
 * Pipelined geeft betere throughput en klok snelheid, ten kosten van extra oppervlakte
 * Sequential geeft betere klok snelheid, ten kosten van extra controle-logica
